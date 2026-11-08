@@ -21,6 +21,11 @@ import themePlugin from "@fullcalendar/react/themes/classic";
 import timeGridPlugin from "@fullcalendar/react/timegrid";
 import { useLocale } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import {
+  toExclusiveEnd,
+  toInclusiveEnd,
+  validateEventDates,
+} from "./event-dates";
 import CalendarEventItem from "./event-item";
 import CalendarEventModal from "./event-modal";
 import {
@@ -32,34 +37,49 @@ import {
 import type { CalendarEvent, EventFormData } from "./types";
 import CalendarViewSelect from "./view-selector";
 
-const INITIAL_EVENTS: CalendarEvent[] = [
-  {
-    id: "1",
-    title: "Event Conf.",
-    start: new Date().toISOString().split("T")[0],
-    extendedProps: { calendar: "Danger" },
-  },
-  {
-    id: "2",
-    title: "Meeting",
-    start: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-    extendedProps: { calendar: "Success" },
-  },
-  {
-    id: "3",
-    title: "Workshop",
-    start: new Date(Date.now() + 172800000).toISOString().split("T")[0],
-    end: new Date(Date.now() + 259200000).toISOString().split("T")[0],
-    extendedProps: { calendar: "Primary" },
-  },
-];
+function initialEvents(now: string): CalendarEvent[] {
+  return [
+    {
+      id: "1",
+      title: "Event Conf.",
+      start: now.split("T")[0],
+      extendedProps: { calendar: "Danger" },
+    },
+    {
+      id: "2",
+      title: "Meeting",
+      start: new Date(Date.parse(now) + 86400000).toISOString().split("T")[0],
+      extendedProps: { calendar: "Success" },
+    },
+    {
+      id: "3",
+      title: "Workshop",
+      start: new Date(Date.parse(now) + 172800000).toISOString().split("T")[0],
+      end: new Date(Date.parse(now) + 259200000).toISOString().split("T")[0],
+      extendedProps: { calendar: "Primary" },
+    },
+  ];
+}
 
-export default function Calendar() {
+export default function Calendar({ initialNow }: { initialNow: string }) {
+  const [calendarClock, setCalendarClock] = useState({
+    now: initialNow,
+    timeZone: "UTC",
+  });
+  useEffect(() => {
+    const update = () =>
+      setCalendarClock({ now: new Date().toISOString(), timeZone: "local" });
+    update();
+    const timer = window.setInterval(update, 60000);
+    return () => window.clearInterval(timer);
+  }, []);
   const locale = useLocale();
   const isRtlLayout = isRtl(locale as Locale);
   const { theme } = useTheme();
 
-  const [events, setEvents] = useState<CalendarEvent[]>(INITIAL_EVENTS);
+  const [events, setEvents] = useState<CalendarEvent[]>(() =>
+    initialEvents(initialNow),
+  );
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
     null,
   );
@@ -101,7 +121,9 @@ export default function Calendar() {
 
     setSelectedEvent(null);
     setSelectedStartDate(startStr);
-    setSelectedEndDate(endStr);
+    setSelectedEndDate(
+      selectInfo.allDay && endStr > startStr ? toInclusiveEnd(endStr) : endStr,
+    );
     setIsEventModalOpen(true);
   };
 
@@ -121,6 +143,7 @@ export default function Calendar() {
       title: event.title,
       start: event.startStr,
       end: event.endStr,
+      allDay: event.allDay,
       extendedProps: { calendar: event.extendedProps?.calendar || "Primary" },
     });
     setSelectedStartDate(startStr);
@@ -129,6 +152,7 @@ export default function Calendar() {
   };
 
   const handleSaveEvent = (formData: EventFormData) => {
+    if (validateEventDates(formData.start, formData.end)) return;
     const titleVal =
       formData.title.trim() || (selectedEvent ? "Event" : "New Event");
     const startDateVal = formData.start;
@@ -143,7 +167,8 @@ export default function Calendar() {
                 ...ev,
                 title: titleVal,
                 start: startDateVal,
-                end: endDateVal || startDateVal,
+                end: toExclusiveEnd(endDateVal || startDateVal),
+                allDay: true,
                 extendedProps: { calendar: levelVal },
               }
             : ev,
@@ -154,7 +179,7 @@ export default function Calendar() {
         id: Date.now().toString(),
         title: titleVal,
         start: startDateVal,
-        end: endDateVal || startDateVal,
+        end: toExclusiveEnd(endDateVal || startDateVal),
         allDay: true,
         extendedProps: { calendar: levelVal },
       };
@@ -195,6 +220,9 @@ export default function Calendar() {
         ref={calendarContainerRef}
       >
         <FullCalendar
+          now={calendarClock.now}
+          timeZone={calendarClock.timeZone}
+          initialDate={initialNow}
           key={isRtlLayout ? "rtl" : "ltr"}
           ref={calendarRef}
           className="gap-0!"

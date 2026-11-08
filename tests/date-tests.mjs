@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {validateEventDates,toExclusiveEnd,toInclusiveEnd} from '../src/components/main/calendar/event-dates.ts';
+assert.ok(validateEventDates('2026-11-20','2026-11-10'));
+assert.ok(validateEventDates('','2026-11-10'));
+assert.ok(validateEventDates('2026-02-30','2026-03-01'));
+assert.equal(validateEventDates('2026-11-20','2026-11-20'),null);
+assert.equal(validateEventDates('2026-11-20',''),null);
+assert.equal(toExclusiveEnd('2026-12-31'),'2027-01-01');
+assert.equal(toInclusiveEnd('2027-01-01'),'2026-12-31');
+assert.equal(toExclusiveEnd('2028-02-28'),'2028-02-29');
+console.log('8 date assertions passed');

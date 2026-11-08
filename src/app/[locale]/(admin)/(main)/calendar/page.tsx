@@ -14,7 +14,7 @@ export default function page() {
   return (
     <div>
       <PageBreadcrumb pageTitle="Calendar" />
-      <Calendar />
+      <Calendar initialNow={new Date().toISOString()} />
     </div>
   );
 }

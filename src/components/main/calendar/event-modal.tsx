@@ -15,6 +15,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import flatpickr from "flatpickr";
 import React, { useEffect, useRef, useState } from "react";
 import { CloseIcon } from "./icons";
+import { toInclusiveEnd, validateEventDates } from "./event-dates";
 import type { CalendarEvent, EventFormData } from "./types";
 
 export interface CalendarEventModalProps {
@@ -54,6 +55,7 @@ export default function CalendarEventModal({
     }
   };
 
+  const [dateError, setDateError] = useState<string | null>(null);
   const [eventTitle, setEventTitle] = useState("");
   const [eventStartDate, setEventStartDate] = useState("");
   const [eventEndDate, setEventEndDate] = useState("");
@@ -83,6 +85,7 @@ export default function CalendarEventModal({
       initialEndDate,
       isOpen: isModalOpen,
     });
+    setDateError(null);
     if (selectedEvent) {
       setEventTitle((selectedEvent.title as string) || "");
       const startStr =
@@ -98,7 +101,11 @@ export default function CalendarEventModal({
             ? selectedEvent.end.toISOString().split("T")[0]
             : "";
       setEventStartDate(startStr);
-      setEventEndDate(endStr || startStr);
+      setEventEndDate(
+        selectedEvent.allDay && endStr > startStr
+          ? toInclusiveEnd(endStr)
+          : endStr || startStr,
+      );
       setEventLevel(selectedEvent.extendedProps?.calendar || "Primary");
     } else {
       setEventTitle("");
@@ -139,7 +146,11 @@ export default function CalendarEventModal({
           dateFormat: "Y-m-d",
           defaultDate: initialDatesRef.current.eventStartDate || undefined,
           monthSelectorType: "static",
-          static: true,
+          static: false,
+          appendTo: startDateInputRef.current?.closest(
+            "[role=dialog]",
+          ) as HTMLElement,
+          position: "auto center",
           clickOpens: true,
           prevArrow: prevArrowSvg,
           nextArrow: nextArrowSvg,
@@ -155,7 +166,11 @@ export default function CalendarEventModal({
           dateFormat: "Y-m-d",
           defaultDate: initialDatesRef.current.eventEndDate || undefined,
           monthSelectorType: "static",
-          static: true,
+          static: false,
+          appendTo: startDateInputRef.current?.closest(
+            "[role=dialog]",
+          ) as HTMLElement,
+          position: "auto center",
           clickOpens: true,
           prevArrow: prevArrowSvg,
           nextArrow: nextArrowSvg,
@@ -201,6 +216,10 @@ export default function CalendarEventModal({
     const endDateVal = eventEndDate || startDateVal;
     const levelVal = eventLevel || "Primary";
 
+    const error = validateEventDates(startDateVal, endDateVal);
+    setDateError(error);
+    if (error) return;
+
     onSave({
       title: titleVal,
       start: startDateVal,
@@ -213,7 +232,7 @@ export default function CalendarEventModal({
     <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="overflow-visible border-none bg-transparent p-0 shadow-none sm:max-w-175"
+        className="max-h-[calc(100dvh-2rem)] overflow-y-auto border-none bg-transparent p-0 shadow-none sm:max-w-175"
       >
         <Card className="relative w-full rounded-3xl border border-gray-200 bg-white p-6 shadow-theme-lg sm:p-11 dark:border-gray-800 dark:bg-[#1E2635]">
           {/* Top-end circular close button (Figma large design) */}
@@ -318,12 +337,24 @@ export default function CalendarEventModal({
               <Input
                 ref={endDateInputRef}
                 id="event-end-date"
+                aria-invalid={!!dateError}
+                aria-describedby={dateError ? "event-date-error" : undefined}
                 placeholder="dd/mm/yyyy"
                 value={eventEndDate}
                 onChange={(e) => setEventEndDate(e.target.value)}
                 className="h-11 rounded-[10px]"
               />
             </div>
+
+            {dateError && (
+              <p
+                id="event-date-error"
+                role="alert"
+                className="text-sm text-red-500 dark:text-red-400"
+              >
+                {dateError}
+              </p>
+            )}
 
             {/* Action buttons (Small: 2 columns full-width, Large: right-aligned) */}
             <div className="grid grid-cols-2 gap-3 pt-2 sm:flex sm:justify-end sm:pt-4">
