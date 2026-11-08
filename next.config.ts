@@ -35,36 +35,6 @@ const nextConfig: NextConfig = {
         destination: "/buttons",
         permanent: true,
       },
-      {
-        source: "/modals",
-        destination: "/dialogs",
-        permanent: true,
-      },
-      {
-        source: "/text-generator",
-        destination: "/ai-chat/text",
-        permanent: true,
-      },
-      {
-        source: "/image-generator",
-        destination: "/ai-chat/image",
-        permanent: true,
-      },
-      {
-        source: "/code-generator",
-        destination: "/ai-chat/code",
-        permanent: true,
-      },
-      {
-        source: "/video-generator",
-        destination: "/ai-chat/video",
-        permanent: true,
-      },
-      {
-        source: "/ai-settings",
-        destination: "/ai-settings/account",
-        permanent: true,
-      },
     ];
   },
 };

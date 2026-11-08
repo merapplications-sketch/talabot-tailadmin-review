@@ -140,7 +140,8 @@
       "minAgo": "{count} min ago",
       "hrAgo": "{count} hr ago",
       "viewAll": "View All Notifications"
-    }
+    },
+    "toggleTheme": "Toggle color theme"
   },
   "userDropdown": {
     "editProfile": "Edit profile",

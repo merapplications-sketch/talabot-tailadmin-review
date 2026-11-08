@@ -11,7 +11,13 @@ export default function SelectInput() {
   return (
     <Field>
       <FieldLabel>Select Input</FieldLabel>
-      <Select>
+      <Select
+        items={{
+          "option-1": "Option 1",
+          "option-2": "Option 2",
+          "option-3": "Option 3",
+        }}
+      >
         <SelectTrigger>
           <SelectValue placeholder="Select Option" />
         </SelectTrigger>

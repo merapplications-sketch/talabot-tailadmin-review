@@ -19,11 +19,12 @@ import { Link } from "@/i18n/navigation";
 import { BellIcon, DotIcon, XIcon } from "@/icons";
 import { cn, getInitials } from "@/utils";
 import { useTranslations } from "next-intl";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { notifications } from "./data";
 
 export default function NotificationDropdown() {
   const t = useTranslations("header.notifications");
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [notifying, setNotifying] = useState(true);
 
@@ -39,6 +40,7 @@ export default function NotificationDropdown() {
       <DropdownMenuTrigger
         render={
           <Button
+            ref={triggerRef}
             variant="outline"
             size="icon-lg"
             className="relative"
@@ -58,9 +60,17 @@ export default function NotificationDropdown() {
       />
 
       <DropdownMenuContent
+        finalFocus={triggerRef}
+        onKeyDown={(event) => {
+          if (event.key === "Escape" && !event.defaultPrevented) {
+            event.preventDefault();
+            event.stopPropagation();
+            setIsOpen(false);
+          }
+        }}
         align="end"
         sideOffset={12}
-        className="w-87.5 overflow-hidden p-3 sm:w-90.25 dark:bg-[#1E2635]"
+        className="w-87.5 max-w-[calc(100vw-2rem)] overflow-hidden p-3 sm:w-90.25 dark:bg-[#1E2635]"
       >
         <div className="flex items-center justify-between pb-3">
           <h5 className="text-title-sm font-semibold text-gray-800 dark:text-gray-200">

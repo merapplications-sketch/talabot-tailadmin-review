@@ -10,7 +10,6 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from "@/components/ui/input-group";
-import { Link } from "@/i18n/navigation";
 import { EyeCloseIcon, EyeIcon } from "@/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -107,12 +106,9 @@ export default function SignInFormFields() {
             Keep me logged in
           </FieldLabel>
         </Field>
-        <Link
-          href="/reset-password"
-          className="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400"
-        >
-          Forgot password?
-        </Link>
+        <span className="text-sm text-gray-500 dark:text-gray-400">
+          Password recovery is not included in this Free demo.
+        </span>
       </div>
 
       <div>
@@ -128,4 +124,3 @@ export default function SignInFormFields() {
     </form>
   );
 }
-
