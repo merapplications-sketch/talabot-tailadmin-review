@@ -16,6 +16,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - name: Align Babel peer requirement for vinext adapter only
+        run: npm install --save-dev '@babel/core@^7.29.0' --no-audit --no-fund
       - name: Generate isolated Cloudflare adapter configuration
         run: npx --yes vinext init --platform=cloudflare --name talabot-tailadmin-review --cdn-cache=none --data-cache=none --image-optimization=none
       - name: Build Cloudflare vinext output
