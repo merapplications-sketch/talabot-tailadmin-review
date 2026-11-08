@@ -11,6 +11,8 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Record pinned upstream
         run: |
           git merge-base --is-ancestor 1ef305c5b1332c899c5ffdeb72b56235d42d6d00 HEAD
