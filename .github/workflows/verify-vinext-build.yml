@@ -1,0 +1,35 @@
+name: TailAdmin vinext adapter build verification
+on:
+  push:
+    branches: [review/cloudflare-vinext]
+  workflow_dispatch:
+jobs:
+  vinext-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Generate isolated Cloudflare adapter configuration
+        run: npx --yes vinext init --platform=cloudflare --name talabot-tailadmin-review --cdn-cache=none --data-cache=none --image-optimization=none
+      - name: Build Cloudflare vinext output
+        run: npm run build:vinext
+      - name: Archive adapter-only changes and build output
+        if: always()
+        run: |
+          git diff > vinext-adapter.patch || true
+          git status --short > vinext-worktree-status.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vinext-adapter-diagnostics
+          path: |
+            vinext-adapter.patch
+            vinext-worktree-status.txt
+          retention-days: 7
