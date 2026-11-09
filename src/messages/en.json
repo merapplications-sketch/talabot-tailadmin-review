@@ -994,7 +994,7 @@
     "invalidRange": "End date must be on or after start date.",
     "moreFilters": "More filters",
     "activeFilters": "Selected filters — press to remove",
-    "results": "{count} orders",
+    "results": "{count, plural, one {# order} other {# orders}}",
     "sort": "Sort",
     "newest": "Newest first",
     "oldest": "Oldest first",

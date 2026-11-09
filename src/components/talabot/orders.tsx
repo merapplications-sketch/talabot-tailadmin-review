@@ -325,10 +325,10 @@ export function OrdersList() {
           <p role="status" data-testid="result-count" className="text-sm">
             {t("results", { count: filtered.length })}
           </p>
-          <label className="min-w-0 text-sm">
+          <label className="w-full min-w-0 text-sm sm:w-56">
             {t("sort")}
             <select
-              className={input}
+              className={`${input} pr-10`}
               aria-label={t("sort")}
               value={params.get("sort") || "newest"}
               onChange={(e) => update({ sort: e.target.value })}
