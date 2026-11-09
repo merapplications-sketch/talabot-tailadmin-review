@@ -194,22 +194,24 @@ export function OrdersList() {
   }
   return (
     <div
-      className="space-y-6 text-gray-800 dark:text-gray-200"
+      className="space-y-4 text-gray-800 dark:text-gray-200"
       data-testid="orders-list"
     >
       <div>
         <h1 className="mb-2 text-title-sm font-semibold">{t("title")}</h1>
-        <Notice />
+        <p role="status" data-testid="result-count" className="text-sm">
+          {t("results", { count: filtered.length })}
+        </p>
       </div>
       <section className={panel} aria-label={t("filters")}>
         <form
-          className="flex flex-wrap items-end gap-3"
+          className="tp-order-search flex items-end gap-3"
           onSubmit={(e) => {
             e.preventDefault();
             update({ q: draft.trim() });
           }}
         >
-          <label className="min-w-0 flex-1 basis-64 text-sm">
+          <label className="min-w-0 flex-1 text-sm">
             {t("search")}
             <input
               className={input}
@@ -235,78 +237,91 @@ export function OrdersList() {
             </button>
           ))}
         </div>
-        <div className="tp-filter-grid mt-4 grid gap-3">
-          <label className="text-sm">
-            {t("period")}
-            <select
-              className={input}
-              aria-label={t("period")}
-              value={params.get("period") || "all"}
-              onChange={(e) => {
+        <details className="tp-secondary-filters mt-3">
+          <summary className="cursor-pointer py-2 text-sm font-medium text-brand-500">
+            <span>{t("moreFilters")}</span> · {t(params.get("period") || "all")}{" "}
+            · {t(params.get("sort") || "newest")}
+          </summary>
+          <div className="tp-filter-grid mt-4 grid gap-3">
+            <label className="text-sm">
+              {t("period")}
+              <select
+                className={input}
+                aria-label={t("period")}
+                value={params.get("period") || "all"}
+                onChange={(e) => {
+                  setRangeError(false);
+                  update({ period: e.target.value, start: "", end: "" });
+                }}
+              >
+                {["all", "today", "week", "month", "custom"].map((k) => (
+                  <option key={k} value={k}>
+                    {t(k)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          {params.get("period") === "custom" && (
+            <form
+              className="mt-4 flex flex-wrap items-end gap-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const f = new FormData(e.currentTarget),
+                  start = String(f.get("start")),
+                  end = String(f.get("end"));
+                if (start > end) {
+                  setRangeError(true);
+                  return;
+                }
                 setRangeError(false);
-                update({ period: e.target.value, start: "", end: "" });
+                update({ start, end });
               }}
             >
-              {["all", "today", "week", "month", "custom"].map((k) => (
-                <option key={k} value={k}>
-                  {t(k)}
-                </option>
-              ))}
+              <label className="min-w-0 text-sm">
+                {t("start")}
+                <input
+                  key={"s" + qs}
+                  className={input}
+                  type="date"
+                  name="start"
+                  required
+                  defaultValue={params.get("start") || sampleDate}
+                />
+              </label>
+              <label className="min-w-0 text-sm">
+                {t("end")}
+                <input
+                  key={"e" + qs}
+                  className={input}
+                  type="date"
+                  name="end"
+                  required
+                  defaultValue={params.get("end") || sampleDate}
+                />
+              </label>
+              <Button variant="outline" type="submit">
+                {t("apply")}
+              </Button>
+              {rangeError && (
+                <p role="alert" className="w-full text-red-500">
+                  {t("invalidRange")}
+                </p>
+              )}
+            </form>
+          )}
+          <label className="w-full min-w-0 text-sm sm:w-56">
+            {t("sort")}
+            <select
+              className={`${input} pr-10`}
+              aria-label={t("sort")}
+              value={params.get("sort") || "newest"}
+              onChange={(e) => update({ sort: e.target.value })}
+            >
+              <option value="newest">{t("newest")}</option>
+              <option value="oldest">{t("oldest")}</option>
             </select>
           </label>
-        </div>
-        {params.get("period") === "custom" && (
-          <form
-            className="mt-4 flex flex-wrap items-end gap-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const f = new FormData(e.currentTarget),
-                start = String(f.get("start")),
-                end = String(f.get("end"));
-              if (start > end) {
-                setRangeError(true);
-                return;
-              }
-              setRangeError(false);
-              update({ start, end });
-            }}
-          >
-            <label className="min-w-0 text-sm">
-              {t("start")}
-              <input
-                key={"s" + qs}
-                className={input}
-                type="date"
-                name="start"
-                required
-                defaultValue={params.get("start") || sampleDate}
-              />
-            </label>
-            <label className="min-w-0 text-sm">
-              {t("end")}
-              <input
-                key={"e" + qs}
-                className={input}
-                type="date"
-                name="end"
-                required
-                defaultValue={params.get("end") || sampleDate}
-              />
-            </label>
-            <Button variant="outline" type="submit">
-              {t("apply")}
-            </Button>
-            {rangeError && (
-              <p role="alert" className="w-full text-red-500">
-                {t("invalidRange")}
-              </p>
-            )}
-          </form>
-        )}
-        <details className="mt-5">
-          <summary className="cursor-pointer py-2 text-sm font-medium text-brand-500">
-            {t("moreFilters")}
-          </summary>
           <div className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {select("status", [...orderStatuses])}
             {select("merchant", merchants)}
@@ -316,7 +331,7 @@ export function OrdersList() {
           </div>
         </details>
         <div
-          className="mt-4 flex flex-wrap gap-2"
+          className="tp-active-filters flex flex-wrap gap-2"
           aria-label={t("activeFilters")}
         >
           {[
@@ -355,22 +370,7 @@ export function OrdersList() {
               </button>
             ))}
         </div>
-        <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-          <p role="status" data-testid="result-count" className="text-sm">
-            {t("results", { count: filtered.length })}
-          </p>
-          <label className="w-full min-w-0 text-sm sm:w-56">
-            {t("sort")}
-            <select
-              className={`${input} pr-10`}
-              aria-label={t("sort")}
-              value={params.get("sort") || "newest"}
-              onChange={(e) => update({ sort: e.target.value })}
-            >
-              <option value="newest">{t("newest")}</option>
-              <option value="oldest">{t("oldest")}</option>
-            </select>
-          </label>
+        <div className="mt-2 flex flex-wrap items-end justify-between gap-2">
           <Button
             variant="outline"
             onClick={() => {
@@ -483,10 +483,10 @@ export function OrdersList() {
                 </p>
                 <dl className="mt-5 space-y-3 text-sm">
                   {[
-                    [t("customer"), o.customer],
                     [t("pickup"), o.pickup],
                     [t("delivery"), o.deliveryZone],
                     [t("driver"), o.driver || t("unassigned")],
+                    [t("customer"), o.customer],
                     [t("total"), money(o.total)],
                   ].map(([k, v]) => (
                     <div
@@ -519,6 +519,7 @@ export function OrdersList() {
           </div>
         </>
       )}
+      <Notice />
       <nav
         aria-label={t("pagination")}
         className="flex flex-wrap items-center justify-between gap-4"

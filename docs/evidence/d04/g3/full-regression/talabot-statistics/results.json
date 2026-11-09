@@ -1,0 +1,106 @@
+{
+  "browser": "134.0.6998.35",
+  "mobile": "Chromium emulation, not real Safari",
+  "results": [
+    {
+      "name": "phone",
+      "viewport": [
+        430,
+        932
+      ],
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "viewport": [
+        430,
+        932
+      ],
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "viewport": [
+        320,
+        640
+      ],
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "viewport": [
+        320,
+        640
+      ],
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "viewport": [
+        932,
+        430
+      ],
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "viewport": [
+        932,
+        430
+      ],
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "viewport": [
+        844,
+        300
+      ],
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "viewport": [
+        844,
+        300
+      ],
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "theme": "light",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "theme": "dark",
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "period filter",
+    "custom invalid/valid",
+    "target independent",
+    "weekday/hour filter",
+    "incomplete profit",
+    "RU/TG render"
+  ],
+  "errors": [],
+  "failed": []
+}

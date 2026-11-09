@@ -353,7 +353,36 @@ body:has(.talabot-polish) {
 .dark
   .tp-status:not([data-status="delivered"]):not([data-status="cancelled"]):not(
     [data-status="rejected"]
-  ):not([data-status="pending"]):not([data-status="preparing"]):not([data-status="pickedup"]) {
+  ):not([data-status="pending"]):not([data-status="preparing"]):not(
+    [data-status="pickedup"]
+  ) {
   background: #2c2c2c;
   color: #b5b5b5;
+}
+
+/* D-04: existing controls, less space before first order. */
+.tp-active-filters:empty {
+  display: none;
+}
+.tp-active-filters:not(:empty) {
+  margin-block-start: 12px;
+}
+.tp-secondary-filters summary {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 639px) {
+  .tp-quick {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-block-end: 4px;
+  }
+  .tp-quick button {
+    flex-shrink: 0;
+  }
+  .tp-order-search {
+    gap: 8px;
+  }
+  .tp-order-search button {
+    padding-inline: 12px;
+  }
 }
