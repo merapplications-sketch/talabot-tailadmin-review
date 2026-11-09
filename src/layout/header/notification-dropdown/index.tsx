@@ -90,7 +90,12 @@ export default function NotificationDropdown() {
 
         <DropdownMenuSeparator className="my-0 shrink-0" />
 
-        <ScrollArea className="h-96 min-h-0 shrink">
+        {/* Bind the viewport to the final flex size, not a percentage height
+            that can retain its pre-rotation size in mobile layout. */}
+        <ScrollArea
+          className="h-96 min-h-0 shrink overflow-hidden"
+          viewportClassName="absolute inset-0 size-auto overscroll-contain"
+        >
           <div className="flex flex-col pe-2">
             {notifications.map((item) => (
               <Fragment key={item.id}>
