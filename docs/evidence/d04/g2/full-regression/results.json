@@ -1,0 +1,105 @@
+{
+  "base": "http://localhost:3041",
+  "results": [
+    {
+      "suite": "talabot-orders-wording.mjs",
+      "exitCode": 0,
+      "durationMs": 116
+    },
+    {
+      "suite": "date-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 136
+    },
+    {
+      "suite": "forms-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 185
+    },
+    {
+      "suite": "talabot-orders-data.cjs",
+      "exitCode": 0,
+      "durationMs": 341
+    },
+    {
+      "suite": "talabot-directory-data.cjs",
+      "exitCode": 0,
+      "durationMs": 368
+    },
+    {
+      "suite": "talabot-analytics-data.cjs",
+      "exitCode": 0,
+      "durationMs": 388
+    },
+    {
+      "suite": "talabot-input-nav.cjs",
+      "exitCode": 0,
+      "durationMs": 8218
+    },
+    {
+      "suite": "talabot-orders-filters.cjs",
+      "exitCode": 0,
+      "durationMs": 7637
+    },
+    {
+      "suite": "talabot-orders-followup.cjs",
+      "exitCode": 0,
+      "durationMs": 19431
+    },
+    {
+      "suite": "talabot-orders.cjs",
+      "exitCode": 0,
+      "durationMs": 43952
+    },
+    {
+      "suite": "talabot-design.cjs",
+      "exitCode": 0,
+      "durationMs": 61214
+    },
+    {
+      "suite": "talabot-pages-focused.cjs",
+      "exitCode": 0,
+      "durationMs": 24065
+    },
+    {
+      "suite": "talabot-directories.cjs",
+      "exitCode": 0,
+      "durationMs": 49443
+    },
+    {
+      "suite": "talabot-statistics.cjs",
+      "exitCode": 0,
+      "durationMs": 45131
+    },
+    {
+      "suite": "notification-clipping.cjs",
+      "exitCode": 0,
+      "durationMs": 9262
+    },
+    {
+      "suite": "window-followup.cjs",
+      "exitCode": 0,
+      "durationMs": 14183
+    },
+    {
+      "suite": "safari-followup-acceptance.cjs",
+      "exitCode": 0,
+      "durationMs": 11711
+    },
+    {
+      "suite": "safari-followup-regression.cjs",
+      "exitCode": 0,
+      "durationMs": 4455
+    },
+    {
+      "suite": "visual-review.cjs",
+      "exitCode": 0,
+      "durationMs": 87164
+    },
+    {
+      "suite": "talabot-pages-visual.cjs",
+      "exitCode": 0,
+      "durationMs": 114497
+    }
+  ]
+}

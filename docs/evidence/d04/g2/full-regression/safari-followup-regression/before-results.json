@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Two visible date fields after title rerender",
+    "actual": 2,
+    "pass": true
+  },
+  {
+    "name": "Focused mobile title at least 16px",
+    "actual": 16,
+    "pass": true
+  },
+  {
+    "name": "Notification footer reachable landscape",
+    "actual": {
+      "bounds": {
+        "x": 18,
+        "y": 331.984375,
+        "width": 335,
+        "height": 40
+      },
+      "hit": true
+    },
+    "pass": true
+  }
+]

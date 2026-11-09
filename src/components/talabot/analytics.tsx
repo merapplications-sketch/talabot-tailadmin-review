@@ -331,7 +331,7 @@ export default function AnalyticsDashboard() {
         </Card>
       </div>
       <div className="col-span-12 xl:col-span-7">
-        <Card title={t("performance")}>
+        <Card title={t("performance")} id="performance-summary">
           <Choices
             label={t("performance")}
             values={["completed", "sales"].map((v) => ({
@@ -366,33 +366,7 @@ export default function AnalyticsDashboard() {
         </Card>
       </div>
       <div className="col-span-12 xl:col-span-5">
-        <Card title={t("target")} id="monthly-target">
-          <Note>{t("example")}</Note>
-          <div className="max-h-45 overflow-hidden">
-            <Chart
-              options={targetOptions}
-              series={[
-                Math.min(100, (targetCompleted / data.EXAMPLE_TARGET) * 100),
-              ]}
-              type="radialBar"
-              height={330}
-            />
-          </div>
-          <Note>{t("independent")}</Note>
-          <DataTable
-            headers={[t("completed"), t("goal"), t("remaining")]}
-            rows={[
-              [
-                fmt(targetCompleted),
-                fmt(data.EXAMPLE_TARGET),
-                fmt(Math.max(0, data.EXAMPLE_TARGET - targetCompleted)),
-              ],
-            ]}
-          />
-        </Card>
-      </div>
-      <div className="col-span-12">
-        <Card title={t("finance")}>
+        <Card title={t("finance")} id="finance-summary">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {(
               [
@@ -621,6 +595,32 @@ export default function AnalyticsDashboard() {
                   .join(" · "),
               ];
             })}
+          />
+        </Card>
+      </div>
+      <div className="col-span-12 xl:col-span-5">
+        <Card title={t("target")} id="monthly-target">
+          <Note>{t("example")}</Note>
+          <div className="max-h-45 overflow-hidden">
+            <Chart
+              options={targetOptions}
+              series={[
+                Math.min(100, (targetCompleted / data.EXAMPLE_TARGET) * 100),
+              ]}
+              type="radialBar"
+              height={330}
+            />
+          </div>
+          <Note>{t("independent")}</Note>
+          <DataTable
+            headers={[t("completed"), t("goal"), t("remaining")]}
+            rows={[
+              [
+                fmt(targetCompleted),
+                fmt(data.EXAMPLE_TARGET),
+                fmt(Math.max(0, data.EXAMPLE_TARGET - targetCompleted)),
+              ],
+            ]}
           />
         </Card>
       </div>
