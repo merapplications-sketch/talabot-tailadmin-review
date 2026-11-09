@@ -58,7 +58,7 @@ if (!origin)
   });
   await p.getByRole("button", { name: "Close", exact: true }).last().click();
   await p.setViewportSize({ width: 844, height: 390 });
-  const nb = p.getByLabel("Notifications", { exact: true });
+  const nb = p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]');
   if (!(await nb.isVisible())) {
     const buttons = await p.getByRole("button").all();
     console.log(

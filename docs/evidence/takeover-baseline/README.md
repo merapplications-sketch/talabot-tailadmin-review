@@ -23,3 +23,11 @@ The all-suite run exposed two obsolete expectations, corrected without changing 
 
 `tests/full-regression.cjs` runs all 20 existing suites with bounded per-suite execution and individual logs; it continues after failures so coverage is visible. It requires an explicit synthetic BASE_URL.
 - Three legacy window/Safari-named scripts referenced old accessible names `Toggle notifications` / `Close notifications`. Current translations and component expose `Notifications` / `Close`; newer clipping tests already used them. Exact selectors updated, all geometry/visibility/date assertions retained. These scripts still run Chromium, despite historical filenames.
+
+## Final all-suite result
+
+All 20 existing admin suites PASS after correcting obsolete test expectations and rerunning only failed suites. Original run: 15 pass, 5 stale-test failures. Full evidence: `full-regression/initial-results.json`, per-suite logs, `rerun/`, `final-results.json`. Window suite final: 9 checks, zero errors. Initial and rerun outcomes remain separate. New gallery/operations suites are separate task evidence, not counted in these 20.
+
+The window test also now identifies the header dropdown trigger specifically (desktop sidebar has the same accessible label), and asserts the implemented View All Notifications destination `/notifications` instead of old `/`. All touch-scroll/geometry/focus/rotation checks retained.
+
+A preliminary full run against Next start encountered redirect loops at initial navigation; all browser suites then ran against the actual vinext target and passed. This is not evidence of Next server runtime parity. Deployment target remains vinext/Workers.

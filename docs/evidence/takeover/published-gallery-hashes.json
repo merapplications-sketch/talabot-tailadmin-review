@@ -1,0 +1,217 @@
+[
+  {
+    "path": "images/accounts-1440-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-1440-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-1440-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-1440-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-390-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-390-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-390-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/accounts-390-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-1440-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-1440-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-1440-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-1440-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-390-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-390-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-390-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/metrics-390-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-1440-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-1440-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-1440-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-1440-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-390-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-390-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-390-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/notifications-390-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-1440-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-1440-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-1440-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-1440-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-390-dark-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-390-dark-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-390-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/orders-390-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/accounts-1440-dark-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/accounts-390-light-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/image-fallbacks-390-light.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/metrics-1440-dark-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/metrics-390-light-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/notifications-1440-dark-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/notifications-390-light-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/orders-1440-dark-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/orders-390-light-full.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/orders-card-390-light-after.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  },
+  {
+    "path": "images/live/orders-card-390-light-before.png",
+    "httpSuccess": true,
+    "hashMatch": true
+  }
+]

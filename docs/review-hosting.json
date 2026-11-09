@@ -1,0 +1,19 @@
+{
+  "scope": "Synthetic review only. Original Cloudflare review worker and production unchanged.",
+  "gallery": {
+    "project_id": "appgprj_6af2123f746c8191b60f1ff199e6864a",
+    "url": "https://talabot-admin-review-gallery.alwarikahtan.chatgpt.site/",
+    "version": 2,
+    "version_id": "appgprj_6af2123f746c8191b60f1ff199e6864a~appgver_17143d53bc70819184f597e274076822",
+    "source_commit": "e215037f9731546c72d9bd44c4d6ee5b0f9e8dac",
+    "audience": "public"
+  },
+  "interactive": {
+    "project_id": "appgprj_6af212facee08191bb930ea01e1e56e0",
+    "url": "https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/operations-review",
+    "version": 1,
+    "version_id": "appgprj_6af212facee08191bb930ea01e1e56e0~appgver_743aabf1cf088191affa0ab78e1d13c8",
+    "source_commit": "16f571e85f84790bc8fbec1641440839c810d436",
+    "audience": "public"
+  }
+}

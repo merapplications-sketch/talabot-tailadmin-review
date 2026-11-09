@@ -114,13 +114,13 @@ const assert = require("assert/strict");
     if (mobile) {
       if (
         !(await p
-          .getByLabel("Notifications", { exact: true })
+          .locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]')
           .isVisible())
       )
         await p
           .getByRole("button", { name: "Toggle application menu" })
           .click();
-      await p.getByLabel("Notifications", { exact: true }).click();
+      await p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]').click();
       const area = p.locator(
         "[data-slot=dropdown-menu-content] [data-slot=scroll-area-viewport]",
       );

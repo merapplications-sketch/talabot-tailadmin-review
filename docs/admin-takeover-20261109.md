@@ -41,3 +41,11 @@ Cloudflare connector PUT for new isolated Worker returned 403 No access to the s
 
 ## Next work / decisions
 Owner visual review before generalization. Confirm campaign placements/funding/eligibility, points policy, authoritative financial schemas and server role matrix before operational integration. Next UI iteration: multi-item category/menu management, richer finance reconciliation filters and production-contract-driven role actions. No shared server contract was changed, so there is no backend contract update to send to the programmer.
+
+## Published version identifiers
+- Original gallery Site version 2: source e215037f9731546c72d9bd44c4d6ee5b0f9e8dac; successful deployment appgdep_6af214bb7ec88191af1e059c9a8f01fd. Added a direct link to the new operational review without changing any original image.
+- Interactive review Site version 1: source 16f571e85f84790bc8fbec1641440839c810d436; successful deployment appgdep_6af213e9e58c8191bcb6f5e4a705c1c2. Post-publication source differences are verification/docs and a static-link lint rationale, not generalized visual changes.
+- Published asset verification completed: all 43 HTTPS PNG responses match the original manifest SHA256. Evidence: docs/evidence/takeover/published-gallery-hashes.json. Python urllib requests received 403; standard curl requests succeeded, and Chrome opened the gallery and viewer. No authentication or access control changed to run the checks.
+
+## Full regression final result
+All 20 existing admin suites PASS in aggregate after targeted reruns of five stale harness cases. Original failures and corrected reruns are retained in docs/evidence/takeover-baseline/full-regression/final-results.json. Corrections assert implemented routes instead of retired placeholders, approved singular grammar, and current exact notification accessible names; geometry, behavior and error assertions remain intact. This includes the 117 route/locale/viewport matrix, 52 isolated-review checks, notifications and calendar cases. The new 72-combination operations tests and gallery checks are additional, not counted in the 20. No operational HTTP/backend tests are claimed.

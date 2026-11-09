@@ -89,7 +89,7 @@ fs.mkdirSync(out, { recursive: true });
     { width: 390, height: 844 },
   ]) {
     await p.setViewportSize(size);
-    await p.getByLabel("Notifications", { exact: true }).click();
+    await p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]').click();
     await p.waitForTimeout(300);
     const popup = p.locator("[data-slot=dropdown-menu-content]");
     const area = popup.locator("[data-slot=scroll-area-viewport]");
@@ -167,7 +167,7 @@ fs.mkdirSync(out, { recursive: true });
     await p.waitForTimeout(200);
     assert(
       await p
-        .getByLabel("Notifications", { exact: true })
+        .locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]')
         .evaluate((e) => e === document.activeElement),
     );
     results.push({
@@ -179,7 +179,7 @@ fs.mkdirSync(out, { recursive: true });
     });
   }
   // Rotation while open must recalculate the available space.
-  await p.getByLabel("Notifications", { exact: true }).click();
+  await p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]').click();
   await p.setViewportSize({ width: 844, height: 300 });
   await p.waitForTimeout(300);
   assert(
@@ -193,21 +193,22 @@ fs.mkdirSync(out, { recursive: true });
   await p.waitForTimeout(200);
   assert(
     await p
-      .getByLabel("Notifications", { exact: true })
+      .locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]')
       .evaluate((e) => e === document.activeElement),
   );
   results.push("open rotation / Escape / focus");
   await p.setViewportSize({ width: 1280, height: 800 });
-  await p.getByLabel("Notifications", { exact: true }).click();
+  await p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]').click();
   await p.waitForTimeout(250);
   await p.screenshot({ path: out + "/notifications-desktop.png" });
   await p.getByRole("button", { name: "Close", exact: true }).click();
   await p.getByRole("button", { name: /toggle color theme/i }).click();
-  await p.getByLabel("Notifications", { exact: true }).click();
+  await p.locator('button[data-slot="dropdown-menu-trigger"][aria-label="Notifications"]').click();
   await p.waitForTimeout(250);
   await p.screenshot({ path: out + "/notifications-desktop-dark.png" });
   await p.getByText("View All Notifications", { exact: true }).click();
-  await p.waitForURL((url) => url.pathname === "/");
+  await p.waitForURL((url) => url.pathname === "/notifications");
+  await p.getByRole("heading", { name: "Notifications", exact: true }).waitFor();
   results.push("desktop light/dark and footer link activation");
   fs.writeFileSync(
     out + "/results.json",

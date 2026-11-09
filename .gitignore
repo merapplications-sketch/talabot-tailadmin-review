@@ -43,3 +43,6 @@ next-env.d.ts
 /dist/
 .vinext/
 .cloudflare/
+
+# Generated local browser captures (curated evidence is in docs/evidence)
+/qa/
