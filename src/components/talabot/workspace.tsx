@@ -83,10 +83,10 @@ function Shell({
   const t = useTranslations("workspace");
   return (
     <div className="space-y-6 text-gray-800 dark:text-gray-200">
-      <PreviewNotice />
       <h1 className="text-title-sm font-semibold">{title}</h1>
-      <p className="text-sm text-gray-500 dark:text-gray-400">{t("notice")}</p>
       {children}
+      <p className="text-sm text-gray-500 dark:text-gray-400">{t("notice")}</p>
+      <PreviewNotice />
     </div>
   );
 }
@@ -344,7 +344,7 @@ export function DirectoryPage({ kind, id }: { kind: Directory; id?: string }) {
         </Link>
         {entity && (
           <>
-            <section className={panel}>
+            <section className={panel} data-testid="directory-identity">
               <div className="tp-identity">
                 <IdentityImage
                   name={entity.name}
@@ -437,7 +437,7 @@ export function DirectoryPage({ kind, id }: { kind: Directory; id?: string }) {
   return (
     <Shell title={nav(kind)}>
       <section className={panel}>
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <label>
             {t("search")}
             <input

@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "columns": 2,
+      "overflow": false,
+      "summaryNavigation": "orders"
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "columns": 2,
+      "overflow": false,
+      "summaryNavigation": "orders"
+    },
+    {
+      "viewport": [
+        932,
+        430
+      ],
+      "columns": 2,
+      "overflow": false,
+      "summaryNavigation": "orders"
+    },
+    {
+      "viewport": [
+        844,
+        300
+      ],
+      "columns": 2,
+      "overflow": false,
+      "summaryNavigation": "orders"
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "columns": 4,
+      "overflow": false,
+      "summaryNavigation": "orders"
+    },
+    {
+      "manualLanguage": "ru",
+      "persisted": true
+    },
+    {
+      "locale": "ru-RU",
+      "browserDetection": true,
+      "cookieOverride": true
+    },
+    {
+      "locale": "tg-TJ",
+      "browserDetection": true,
+      "cookieOverride": true
+    },
+    {
+      "locale": "fr-FR",
+      "browserDetection": true,
+      "cookieOverride": true
+    }
+  ],
+  "errors": [],
+  "browser": "134.0.6998.35",
+  "realSafari": false
+}
