@@ -106,7 +106,7 @@ export default function OperationsReview() {
               value={locale}
               onChange={(e) => {
                 document.cookie = `NEXT_LOCALE=${e.target.value};path=/;max-age=31536000;SameSite=Lax`;
-                router.replace(`/operations-review${window.location.search}`, {
+                router.replace(`/review/operations${window.location.search}`, {
                   locale: e.target.value as "en" | "ru" | "tg",
                 });
               }}

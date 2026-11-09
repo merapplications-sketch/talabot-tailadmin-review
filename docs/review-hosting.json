@@ -10,10 +10,13 @@
   },
   "interactive": {
     "project_id": "appgprj_6af212facee08191bb930ea01e1e56e0",
-    "url": "https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/operations-review",
-    "version": 1,
-    "version_id": "appgprj_6af212facee08191bb930ea01e1e56e0~appgver_743aabf1cf088191affa0ab78e1d13c8",
-    "source_commit": "16f571e85f84790bc8fbec1641440839c810d436",
-    "audience": "public"
+    "url": "https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/",
+    "version": 2,
+    "version_id": "appgprj_6af212facee08191bb930ea01e1e56e0~appgver_2cee33161d288191836a4087839afe1f",
+    "source_commit": "a5beb108cbcf9916c60fe3d902486c18f1d1edf8",
+    "audience": "public",
+    "prototype_path": "/review/operations",
+    "comparison_path": "/restoration-review/",
+    "deployment_id": "appgdep_6af21abde3d48191bb0bca638bd33346"
   }
 }

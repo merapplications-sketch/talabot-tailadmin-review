@@ -1,0 +1,115 @@
+{
+  results: [
+    {
+      mobile: true,
+      test: 'reversed dates rejected; visible input marked invalid',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'save and reopen same-day event retains both 2026-11-20 dates',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'reopen modal and rerender retains exactly two date inputs',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'notification content scrolls to end and closes landscape',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'reversed dates rejected; visible input marked invalid',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'save and reopen same-day event retains both 2026-11-20 dates',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'reopen modal and rerender retains exactly two date inputs',
+      pass: true
+    }
+  ],
+  errors: []
+}
+tests/safari-followup-acceptance.cjs 0
+BUTTONS [
+  { label: 'Toggle Sidebar', text: '' },
+  { label: 'Toggle application menu', text: '' },
+  { label: 'Previous Month', text: '' },
+  { label: 'Next Month', text: '' },
+  { label: 'Add Event +', text: 'Add Event +' },
+  { label: null, text: 'Month' },
+  { label: null, text: 'Event Conf.' },
+  { label: null, text: 'Meeting' },
+  { label: null, text: 'Workshop' },
+  { label: null, text: 'Orders' },
+  { label: null, text: 'Notifications' },
+  { label: null, text: 'Finance' }
+]
+MENU Notifications · Example
+D
+DEMO-1103 Delivery issue Demo Bistro
+Example
+5 min ago
+D
+DEMO-1106 Cancellation review Demo Bistro
+Example
+8 min ago
+D
+DEMO-1110 Delivery issue Demo Kitchen
+Example
+11 min ago
+D
+DEMO-1113 Cancellation review Demo Kitchen
+Example
+14 min ago
+D
+DEMO-1117 Delivery issue Demo Market
+Example
+17 min ago
+D
+DEMO-1120 Cancellation review Demo Market
+Example
+20 min ago
+D
+DEMO-1124 Delivery issue Demo Bistro
+Example
+23 min ago
+D
+DEMO-1127 Cancellation review Demo Bistro
+Example
+26 min ago
+D
+DEMO-1131 Delivery issue Demo Kitchen
+Example
+29 min ago
+D
+DEMO-1134 Cancellation review Demo Kitchen
+Example
+32 min ago
+View All Notifications
+[
+  {
+    name: 'Two visible date fields after title rerender',
+    actual: 2,
+    pass: true
+  },
+  {
+    name: 'Focused mobile title at least 16px',
+    actual: 16,
+    pass: true
+  },
+  {
+    name: 'Notification footer reachable landscape',
+    actual: { bounds: [Object], hit: true },
+    pass: true
+  }
+]
+tests/safari-followup-regression.cjs 0

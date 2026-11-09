@@ -1,0 +1,155 @@
+{
+  "base": "http://127.0.0.1:3021",
+  "results": [
+    {
+      "suite": "date-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 109,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "forms-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 186,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-orders-wording.mjs",
+      "exitCode": 0,
+      "durationMs": 121,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-orders-data.cjs",
+      "exitCode": 0,
+      "durationMs": 376,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-directory-data.cjs",
+      "exitCode": 0,
+      "durationMs": 356,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-analytics-data.cjs",
+      "exitCode": 0,
+      "durationMs": 415,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-design.cjs",
+      "exitCode": 0,
+      "durationMs": 68592,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-input-nav.cjs",
+      "exitCode": 0,
+      "durationMs": 4957,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-orders.cjs",
+      "exitCode": 0,
+      "durationMs": 37967,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-orders-filters.cjs",
+      "exitCode": 0,
+      "durationMs": 6575,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-orders-followup.cjs",
+      "exitCode": 0,
+      "durationMs": 16608,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-directories.cjs",
+      "exitCode": 0,
+      "durationMs": 44511,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-pages-focused.cjs",
+      "exitCode": 0,
+      "durationMs": 23821,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-pages-visual.cjs",
+      "exitCode": 0,
+      "durationMs": 103969,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "talabot-statistics.cjs",
+      "exitCode": 0,
+      "durationMs": 52995,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "visual-review.cjs",
+      "exitCode": 0,
+      "durationMs": 78834,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "notification-clipping.cjs",
+      "exitCode": 0,
+      "durationMs": 9057,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "window-followup.cjs",
+      "exitCode": 0,
+      "durationMs": 13228,
+      "error": null,
+      "initialExitCode": 0
+    },
+    {
+      "suite": "safari-followup-acceptance.cjs",
+      "exitCode": 0,
+      "durationMs": 38104,
+      "error": null,
+      "initialExitCode": 1,
+      "verification": "Targeted rerun PASS with BASE_URL=http://localhost:3021, preventing proxy use for local server; no application or test logic change."
+    },
+    {
+      "suite": "safari-followup-regression.cjs",
+      "exitCode": 0,
+      "durationMs": 38232,
+      "error": null,
+      "initialExitCode": 2,
+      "verification": "Targeted rerun PASS with BASE_URL=http://localhost:3021, preventing proxy use for local server; no application or test logic change."
+    }
+  ],
+  "aggregate": {
+    "suites": 20,
+    "passed": 20,
+    "failed": 0,
+    "initialPassed": 18,
+    "initialFailed": 2,
+    "browser": "Chromium 134, not physical Safari"
+  }
+}

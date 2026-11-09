@@ -1,0 +1,21 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "locale": "en-US",
+  "theme": "light",
+  "browser": "Chromium 134; not physical Safari",
+  "referenceURL": "https://talabot-tailadmin-review.yaarobalwari.workers.dev/",
+  "beforeURL": "https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/operations-review",
+  "afterCapture": "local corrected source at /",
+  "identicalPixelsToReference": true,
+  "files": {
+    "before": "3f1e573c6f30b8df243bf7307159326ee02da542481a886631991f1e0de13adf",
+    "after": "d3efaa503396b1a91a356ef508efde19b1b48af8c2d9cf4f48498c56060e0ca0",
+    "reference": "d3efaa503396b1a91a356ef508efde19b1b48af8c2d9cf4f48498c56060e0ca0"
+  },
+  "publishedRootURL": "https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/",
+  "publishedPixelsMatchReference": true,
+  "publishedAfterSHA256": "d3efaa503396b1a91a356ef508efde19b1b48af8c2d9cf4f48498c56060e0ca0"
+}

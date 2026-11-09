@@ -1,0 +1,10 @@
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: /Add Event/ }).first()[22m
+
+    at /workspace/scratch/d301f10bb459/repo/tests/safari-followup-regression.cjs:37:6 {
+  log: [
+    "  - waiting for getByRole('button', { name: /Add Event/ }).first()"
+  ],
+  name: 'TimeoutError'
+}

@@ -7,11 +7,11 @@ const fs=require('node:fs');
  const base=process.env.BASE_URL||'http://127.0.0.1:3022';
  async function open(path){await page.goto(base+path,{waitUntil:'networkidle'});await page.locator('.op-main[aria-busy=false]').waitFor();}
  for(const locale of ['en','ru','tg'])for(const theme of ['light','dark'])for(const [width,height] of [[390,844],[1440,1000]]){
-  await page.setViewportSize({width,height});await open(`/${locale}/operations-review`);await page.evaluate(theme=>{localStorage.setItem('theme-mode',theme);},theme);await page.reload({waitUntil:'networkidle'});await page.locator('.op-main[aria-busy=false]').waitFor();
+  await page.setViewportSize({width,height});await open(`/${locale}/review/operations`);await page.evaluate(theme=>{localStorage.setItem('theme-mode',theme);},theme);await page.reload({waitUntil:'networkidle'});await page.locator('.op-main[aria-busy=false]').waitFor();
   for(let i=0;i<6;i++){await page.locator('.op-tabs button').nth(i).click();assert.equal(await page.locator('.op-desktop tbody tr').count()>0,true);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${locale}/${theme}/${width}/${i} overflow`);}
   checks.push({locale,theme,width,modules:6,overflow:false});await page.screenshot({path:`${out}/${locale}-${theme}-${width}.png`,fullPage:true});
  }
- await context.clearCookies();await page.setViewportSize({width:390,height:844});await open('/operations-review');
+ await context.clearCookies();await page.setViewportSize({width:390,height:844});await open('/review/operations');
  await page.getByLabel('Search ID or name').fill('DEMO-M02');assert.equal(await page.locator('.op-mobile article').count(),1);
  await page.getByLabel('Sort by name').selectOption('desc');await page.reload({waitUntil:'networkidle'});assert.equal(await page.getByLabel('Search ID or name').inputValue(),'DEMO-M02');assert.equal(await page.getByLabel('Sort by name').inputValue(),'desc');
  await page.locator('.op-mobile button').click();assert.equal(await page.locator('.op-detail h2').evaluate(el=>document.activeElement===el),true);await page.goBack();await page.locator('.op-detail').waitFor({state:'hidden'});assert.equal(await page.getByLabel('Search ID or name').inputValue(),'DEMO-M02');await page.locator('.op-mobile button').click();await page.getByRole('button',{name:'Close details'}).click();await page.locator('.op-detail').waitFor({state:'hidden'});assert.equal(await page.getByLabel('Search ID or name').inputValue(),'DEMO-M02');

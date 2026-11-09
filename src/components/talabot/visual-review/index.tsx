@@ -413,7 +413,7 @@ export function VisualReview() {
           <a className="vr-button" href="/review-gallery/index.html">
             {c.gallery}
           </a>
-          <Link className="vr-button" href="/operations-review">
+          <Link className="vr-button" href="/review/operations">
             {c.operations}
           </Link>
         </div>

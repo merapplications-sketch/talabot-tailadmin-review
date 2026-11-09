@@ -1,0 +1,11 @@
+{
+  "test": "tests/restoration-entry.cjs",
+  "exitCode": 0,
+  "checks": [
+    "EN/RU/TG old entry redirects to original root",
+    "no Operations Review content at original root",
+    "mobile width 390 without horizontal overflow",
+    "prototype retained at /review/operations"
+  ],
+  "browser": "Chromium 134"
+}

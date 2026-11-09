@@ -1,5 +1,10 @@
-import OperationsReview from "@/components/talabot/operations-review";
-export const metadata = { title: "TALABOT — Operations review" };
-export default function Page() {
-  return <OperationsReview />;
+import { redirect } from "@/i18n/navigation";
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  redirect({ href: "/", locale });
 }
