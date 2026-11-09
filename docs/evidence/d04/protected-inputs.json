@@ -1,0 +1,37 @@
+[
+  {
+    "path": "src/app/globals.css",
+    "unchanged": true,
+    "sha256": "53bbe92f3abc48d1ba933c4ed15a04030eb9231ba4ef407b04dcf419c81f67c5"
+  },
+  {
+    "path": "public/images/logo/talabot-original.png",
+    "unchanged": true,
+    "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367"
+  },
+  {
+    "path": "src/components/talabot/orders-data.ts",
+    "unchanged": true,
+    "sha256": "9ae0c54f54020dcce28af7be73f9b86609dd0edc87d0891186bbe62770f69ed5"
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "unchanged": true,
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c"
+  },
+  {
+    "path": "src/components/talabot/directories-data.ts",
+    "unchanged": true,
+    "sha256": "e2f658006f0b04214511eeec121d74802dc7a27d7eb70bad9dceb8a5d86a202d"
+  },
+  {
+    "path": "package.json",
+    "unchanged": true,
+    "sha256": "39241ef320e45b3e8ae5a06a0a04184d3103e7c724152f73c97d9f681dde1b8b"
+  },
+  {
+    "path": "package-lock.json",
+    "unchanged": true,
+    "sha256": "7909efd89b29612783ae42bd51c7e3b5cd9f99b624928db9fbf0b50fc65c287e"
+  }
+]

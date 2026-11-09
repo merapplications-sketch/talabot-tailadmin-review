@@ -1,0 +1,175 @@
+{
+  "browser": "134.0.6998.35",
+  "mobile": "Chromium touch emulation, not Safari",
+  "checks": [
+    "Search ID, empty state, status filter, custom date validation and application",
+    "Page 2 + oldest preserved, standalone details, clipboard real write/read, expandable amounts, back scroll restored",
+    "20 viewport/theme/route combinations, RU/TG at 320px, invalid query defaults",
+    "Unknown order recovery; home Orders card navigation; home intact"
+  ],
+  "views": [
+    {
+      "name": "phone",
+      "width": 430,
+      "height": 932,
+      "theme": "light",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "width": 430,
+      "height": 932,
+      "theme": "light",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "width": 430,
+      "height": 932,
+      "theme": "dark",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "width": 430,
+      "height": 932,
+      "theme": "dark",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "height": 640,
+      "theme": "light",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "height": 640,
+      "theme": "light",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "height": 640,
+      "theme": "dark",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "height": 640,
+      "theme": "dark",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "width": 932,
+      "height": 430,
+      "theme": "light",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "width": 932,
+      "height": 430,
+      "theme": "light",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "width": 932,
+      "height": 430,
+      "theme": "dark",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "landscape",
+      "width": 932,
+      "height": 430,
+      "theme": "dark",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "width": 844,
+      "height": 300,
+      "theme": "light",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "width": 844,
+      "height": 300,
+      "theme": "light",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "width": 844,
+      "height": 300,
+      "theme": "dark",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "width": 844,
+      "height": 300,
+      "theme": "dark",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "route": "/orders",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "route": "/orders/DEMO-1104",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "writes": []
+}

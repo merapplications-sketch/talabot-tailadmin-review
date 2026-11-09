@@ -157,39 +157,59 @@ html.dark body:has(.talabot-polish) {
   height: 16px;
   flex-shrink: 0;
 }
+/* D-04 shared semantic tokens; order states keep their existing labels/icons. */
+body:has(.talabot-polish) {
+  --tp-success-bg: #ecfdf3;
+  --tp-success-text: #067647;
+  --tp-error-bg: #fef3f2;
+  --tp-error-text: #b42318;
+  --tp-pending-bg: #fffaeb;
+  --tp-pending-text: #93370d;
+  --tp-preparing-bg: #fff0e8;
+  --tp-preparing-text: #b54708;
+  --tp-transit-bg: #f4ebff;
+  --tp-transit-text: #6941c6;
+  --tp-neutral-bg: #f2f2f2;
+  --tp-neutral-text: #666;
+}
+html.dark body:has(.talabot-polish) {
+  --tp-success-bg: #123027;
+  --tp-success-text: #75e0a7;
+  --tp-error-bg: #3b1d1b;
+  --tp-error-text: #fda29b;
+  --tp-pending-bg: #362a13;
+  --tp-pending-text: #fec84b;
+  --tp-preparing-bg: #38251c;
+  --tp-preparing-text: #ffab85;
+  --tp-transit-bg: #302044;
+  --tp-transit-text: #d6bbfb;
+  --tp-neutral-bg: #2c2c2c;
+  --tp-neutral-text: #b5b5b5;
+}
+.tp-status {
+  background: var(--tp-neutral-bg);
+  color: var(--tp-neutral-text);
+}
 .tp-status[data-status="delivered"] {
-  background: #ecfdf3;
-  color: #067647;
+  background: var(--tp-success-bg);
+  color: var(--tp-success-text);
 }
 .tp-status[data-status="cancelled"],
 .tp-status[data-status="rejected"] {
-  background: #fef3f2;
-  color: #b42318;
+  background: var(--tp-error-bg);
+  color: var(--tp-error-text);
 }
 .tp-status[data-status="pending"] {
-  background: #fffaeb;
-  color: #93370d;
+  background: var(--tp-pending-bg);
+  color: var(--tp-pending-text);
 }
 .tp-status[data-status="preparing"] {
-  background: #fff0e8;
-  color: #b54708;
+  background: var(--tp-preparing-bg);
+  color: var(--tp-preparing-text);
 }
-.dark .tp-status[data-status="delivered"] {
-  background: #123027;
-  color: #75e0a7;
-}
-.dark .tp-status[data-status="cancelled"],
-.dark .tp-status[data-status="rejected"] {
-  background: #3b1d1b;
-  color: #fda29b;
-}
-.dark .tp-status[data-status="pending"] {
-  background: #362a13;
-  color: #fec84b;
-}
-.dark .tp-status[data-status="preparing"] {
-  background: #38251c;
-  color: #ffab85;
+.tp-status[data-status="pickedup"] {
+  background: var(--tp-transit-bg);
+  color: var(--tp-transit-text);
 }
 .tp-quick {
   display: flex;
@@ -333,7 +353,7 @@ body:has(.talabot-polish) {
 .dark
   .tp-status:not([data-status="delivered"]):not([data-status="cancelled"]):not(
     [data-status="rejected"]
-  ):not([data-status="pending"]):not([data-status="preparing"]) {
+  ):not([data-status="pending"]):not([data-status="preparing"]):not([data-status="pickedup"]) {
   background: #2c2c2c;
   color: #b5b5b5;
 }
