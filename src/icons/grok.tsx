@@ -9,7 +9,7 @@ export function GrokIcon({ className, ...props }: IconProps) {
       height={18}
       viewBox="0 0 18 18"
       fill="none"
-      className={cn("text-[#344054] dark:text-[#98A2B3]", className)}
+      className={cn("text-[#404040] dark:text-[#b5b5b5]", className)}
       {...props}
     >
       <g clipPath="url(#clip0_6807_3764)" fill="currentColor">

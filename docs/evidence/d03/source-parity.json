@@ -1,0 +1,97 @@
+[
+  {
+    "path": "src/app/[locale]/(admin)/layout.tsx",
+    "sha256": "2257a84bd77a786ad4934d54855af1a88a579ad4453771a922b9665ffe209668",
+    "identical": true
+  },
+  {
+    "path": "src/components/main/dashboard/ecommerce/monthly-sales-chart/index.tsx",
+    "sha256": "7d7f5dea68865dcf8ea084fdba0c65571c3f6a76c4b87c75af702eb366e5daa6",
+    "identical": true
+  },
+  {
+    "path": "src/components/main/dashboard/ecommerce/monthly-target/index.tsx",
+    "sha256": "d134bf20f40f2da95623c15a6dc8501fb705bafc29b69e4a28001a67416c772d",
+    "identical": true
+  },
+  {
+    "path": "src/components/main/dashboard/ecommerce/statistics-chart/index.tsx",
+    "sha256": "b7045145284d89544119fcd015daf152b0c8f474c6bd06f4b4ba0382f0438d09",
+    "identical": true
+  },
+  {
+    "path": "src/components/others/charts/bar/one.tsx",
+    "sha256": "16d8a86bd64f2fa0a26926ce75c74a212929f50fa6704331f0b2723e680b6b2e",
+    "identical": true
+  },
+  {
+    "path": "src/components/others/charts/line/one.tsx",
+    "sha256": "58b8af82ddeb42a80786aaf613bc903a63d1fc4b1b1f203f9d1075f563bafa39",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "sha256": "bd5f470b1c0ede8217b47cca93b66506f3341e1315fbec181f9d7e202f8e172c",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/orders.tsx",
+    "sha256": "d1c89d2c78732b512eedffe9b4871bdbb7cbedbf230977fad6b29585dfb8b69f",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/visual-review/index.tsx",
+    "sha256": "e5f8442f27cc42aed2ef0c128ebc977ea215a81296f651c8965c5a32baa20c65",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/workspace.tsx",
+    "sha256": "f63846cfc796409531a1ee620efb5f9be82ca90ba8894d596f69ca1ea9bdcb1b",
+    "identical": true
+  },
+  {
+    "path": "src/context/theme-context.tsx",
+    "sha256": "43a79200e5e506fbe2d87e6ff9887d03ef3cb46ca4dfe95ab9edd9aaf523da17",
+    "identical": true
+  },
+  {
+    "path": "src/hooks/use-mobile.ts",
+    "sha256": "8000ad5537990e5ea16c0d73bec8d1a0cc1ad52792d267a6f37c09bca571891f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flux.tsx",
+    "sha256": "dc253969a234ef241d298a27216be81f8ff7df9ea978cb85bb0c8645fd17687e",
+    "identical": true
+  },
+  {
+    "path": "src/icons/gpt.tsx",
+    "sha256": "fd1190e26f8df30787eabcb6d83539bdd6cca379db0ffeb229a349ec9401f6d1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/grok.tsx",
+    "sha256": "1ed2f24a908d272f28aaa0c432c7941b1df1557a505c7a0625f2a1bc46194cc0",
+    "identical": true
+  },
+  {
+    "path": "src/icons/ideogram.tsx",
+    "sha256": "e1249fb0db1aaa36abf1772dfe76c50e74fee9fabd0a534fcd7382a7c8b3df5d",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/polish.css",
+    "sha256": "f126196695ecba1a37b0c30c6f40e6f788baa5a67df2ab55918d49a5c6aaf43f",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/identity.tsx",
+    "sha256": "5ec65d89cc05bad9d2de1c3e12858a11d134b8f78bdcb00889847edb36fd89e9",
+    "identical": true
+  },
+  {
+    "path": "src/app/[locale]/review/image-cases/page.tsx",
+    "sha256": "1ab79d8ef44f04867dc67c0c8797ed8e03693afeea9d8059e2979162b770be9e",
+    "identical": true
+  }
+]

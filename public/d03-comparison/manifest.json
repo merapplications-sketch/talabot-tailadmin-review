@@ -1,0 +1,332 @@
+{
+  "browser": "Chromium 134; not physical Safari",
+  "locale": "en",
+  "before": "28176ba43661335ef2ebbaa0e209940f29905325; original public Site",
+  "after": "review/d03-integrated-visuals-20261110; actual integrated routes",
+  "files": [
+    {
+      "file": "home-1440-dark-after.png",
+      "sha256": "fb8fa89973c6038517a0780340039b679052a5d4bdf1fecfd93e4d1003a1ef42",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "home-1440-dark-before.png",
+      "sha256": "1336e17062e34bdc365d05f2918b0c1d0f3d826e9d976f7502f78cf7a88a6837",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "home-1440-light-after.png",
+      "sha256": "13d9ed954cdb574cb33bb7765814406ccc8d8d4bd83e1ff746705ba980cb1a90",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "home-1440-light-before.png",
+      "sha256": "f760874fb84117be49c24da968252979e880f7a77df3c0b6f68cfb260ee68e1c",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "home-390-dark-after.png",
+      "sha256": "4ef77f9049ba497739c49bc0dd2e4efbfe932ad567c40ec55ce2bd3f90ca84da",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "home-390-dark-before.png",
+      "sha256": "938e8b0001701f6f3f5d74f241a0dc7d167c020b04f107a4f43173671a98cadc",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "home-390-light-after.png",
+      "sha256": "54bb0999cb2a11e4d650356694688972ddebef4c6ad0aa6fd9e3fb813cc2c5ca",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "home-390-light-before.png",
+      "sha256": "d3efaa503396b1a91a356ef508efde19b1b48af8c2d9cf4f48498c56060e0ca0",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "notifications-1440-dark-after.png",
+      "sha256": "7da3eeec1511b2615cd7399b2b6f6956d1b1079cbcd3ecafd3e3a1e6e3a6306f",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "notifications-1440-dark-before.png",
+      "sha256": "2363b8f0182725baa7d5dfba92015c8fe67d3fe6018b60aa53b8b9c337869f99",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "notifications-1440-light-after.png",
+      "sha256": "f6b2f4ed3f7d4475d74dd9b3f702676224c8133dc716dd657dc3879d6f0b555a",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "notifications-1440-light-before.png",
+      "sha256": "8d8afcfdd0e4744bcbd33467534d7889f9aa7a42867a4285c6dbbf7a39b8b3c3",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "notifications-390-dark-after.png",
+      "sha256": "56949140cc9a3202787227ad200ef0dd92734ecad9dd1c168691a6bb5d2e70b2",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "notifications-390-dark-before.png",
+      "sha256": "a088115cfff06cb2d941c87f8caf4d1000181929551275986ee96e4c0bf2904f",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "notifications-390-light-after.png",
+      "sha256": "80c8f19caf2280ef3999389f70fffbac304ec3b6755727dc824063ffcab14f7e",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "notifications-390-light-before.png",
+      "sha256": "4ca7acac5bb6667a440a638749dd1b5fa662eed9b94e10c8fe7cf3268ab75390",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-1440-dark-after.png",
+      "sha256": "2d4f48626baf3ea228c5174733911ef71c475fa4a77a9b418ee91da7aefc17a4",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-1440-dark-before.png",
+      "sha256": "c502022134c53c4ff33ede4fe4852ee9b79f0ee660893f824082031734c8f99b",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-1440-light-after.png",
+      "sha256": "899de4650c287bf7925d8b7e70b29a7ed5b4d9bf583845c5a3015637e215aedf",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-1440-light-before.png",
+      "sha256": "f2705b1b5ff87d65012f7b9493bece8b1bc7fb3ae2502a0c9336e9faaed66119",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-390-dark-after.png",
+      "sha256": "26690ce6f4109280bd69dc0ba990d6018171d048e84daa14a3b97cd9a0823578",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-390-dark-before.png",
+      "sha256": "374471dc414c85d2866544e0f9a8d40d5a1c1e8bc46645959972f68512d4e8c3",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-390-light-after.png",
+      "sha256": "72eab62afe002041ff6ca8fdd4a8b3940040a336dba469a94e5d59f448a104f8",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-390-light-before.png",
+      "sha256": "b12f3adee3cb9d7867d8e4c89de30a04209478131bb3b2b5f6de469d52c611e8",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-card-390-dark-after.png",
+      "sha256": "7e702ef12fb07a5d256d241379cb1d08c25e9c163defaf5d29887b2cc65b4977",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-card-390-dark-before.png",
+      "sha256": "cfdaaa04e8dae8675c795a4b88e1e6f3642152dae2c0d729167b741f572098ce",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "orders-card-390-light-after.png",
+      "sha256": "cd4a86eba3f2a78c5d3307ec8b8044621545c032ae52a6a2d764c50d7441e757",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "orders-card-390-light-before.png",
+      "sha256": "99622f4242a0fdc555ceb75d7f8d8c5593ac31384fb80fbde991fbc529850a2b",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "restaurants-1440-dark-after.png",
+      "sha256": "09194f310668b4577cbccdf515ae8b6fb30e124dab36dd6172e2cdc667970acf",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "restaurants-1440-dark-before.png",
+      "sha256": "d7ef19d3b62a0f8733503ffbe8957b01f50cd2a7709038771d6dbd1a5479f3b0",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "restaurants-1440-light-after.png",
+      "sha256": "c01e5b3cdcac139223eb52a6cf806dc5ece3e654cccd51e978403882adc60d3c",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "restaurants-1440-light-before.png",
+      "sha256": "bf0e8eba5b65b2fcd736780a7734f311b274c9aab2071b266a978491012be015",
+      "size": [
+        1440,
+        1000
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "restaurants-390-dark-after.png",
+      "sha256": "2ce8a6151425e2ef8f86ab6f00905d85e001b62fde749cf72e2fb3504d37a527",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "restaurants-390-dark-before.png",
+      "sha256": "b80222fe95c274aec12f067559bb38a423ba983f09fb0d88fbfbda53647243d0",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    },
+    {
+      "file": "restaurants-390-light-after.png",
+      "sha256": "2e19cd8f295bd2afeaf0f69bb4c874c3b4880bbe6f52916b8d8f9ce872946135",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "after"
+    },
+    {
+      "file": "restaurants-390-light-before.png",
+      "sha256": "ed9d729260a38768dfdcab88a2e33074a18bf23a150e826dd7fc5d4dda5f7393",
+      "size": [
+        390,
+        844
+      ],
+      "stage": "before"
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 build:vinext
+> vite build
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./config/svg-components" without a file extension (vite.config.ts:2:31). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[vinext] next.config option "webpack" is only partially supported. vinext preserves resolve.alias, resolve.extensions, MDX loader settings, next-intl message catalog loaders, and instrumentation-client route manifests, but other webpack customization is ignored
+[1/5] analyze client references...
+vite v8.3.0 building rsc environment for production...
+transforming...
+✓ 732 modules transformed.
+rendering chunks...
+[plugin rsc:virtual:vite-rsc/assets-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:virtual:vite-rsc/assets-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin vinext:action-owner-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (vinext:action-owner-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+✓ built in 2.16s
+[2/5] analyze server references...
+vite v8.3.0 building ssr environment for production...
+transforming...
+✓ 1356 modules transformed.
+rendering chunks...
+[plugin rsc:virtual:vite-rsc/assets-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:virtual:vite-rsc/assets-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+✓ built in 2.68s
+[3/5] build rsc environment...
+vite v8.3.0 building rsc environment for production...
+transforming...
+✓ 724 modules transformed.
+rendering chunks...
+computing gzip size...
+.cloudflare/output/v0/workers/default/bundle/__vinext_cacheability_manifest.js                                                                                                0.02 kB
+.cloudflare/output/v0/workers/default/bundle/__vinext_cacheability_request_projection.js                                                                                      0.02 kB
+.cloudflare/output/v0/workers/default/bundle/__vinext_pregenerated_concrete_paths.js                                                                                          0.05 kB
+.cloudflare/output/v0/workers/default/bundle/.vite/manifest.json                                                                                                             54.09 kB │ gzip:  4.90 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/css/CnssUrTZ.css                                                                                                  325.05 kB │ gzip: 44.48 kB
+.cloudflare/output/v0/workers/default/bundle/index.js                                                                                                                         0.06 kB │ gzip:  0.08 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/cacheability-limits-BTpP4ZoO.js                                                                                     0.11 kB │ gzip:  0.13 kB │ map:     0.99 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CPpPMFcP.js                                                                                                    0.18 kB │ gzip:  0.17 kB │ map:     0.52 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/work-unit-async-storage-DfLYVwR3.js                                                                                 0.19 kB │ gzip:  0.17 kB │ map:     1.24 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/cache-headers-Bf1cIlap.js                                                                                           0.19 kB │ gzip:  0.18 kB │ map:     1.13 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-D30g_pQw.js                                                                                                    0.22 kB │ gzip:  0.20 kB │ map:     1.72 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/layout-BMtiw20J.js                                                                                                  0.22 kB │ gzip:  0.20 kB │ map:     1.16 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/theme-context-TJMDX28w.js                                                                                           0.23 kB │ gzip:  0.21 kB │ map:     3.02 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/layout-CFYvTKDa.js                                                                                                  0.27 kB │ gzip:  0.19 kB │ map:     0.49 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/framework~index-BLG_Er0Y.js                                                                                         0.29 kB │ gzip:  0.20 kB │ map:     0.63 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/config-lWHTERIw.js                                                                                                  0.34 kB │ gzip:  0.25 kB │ map:     0.85 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/orders-BM7Op0pO.js                                                                                                  0.36 kB │ gzip:  0.22 kB │ map:    28.03 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/isolate-shared-promise-vOKFLH4M.js                                                                                  0.36 kB │ gzip:  0.28 kB │ map:     2.47 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/client-trace-metadata-DUR2PiYt.js                                                                                   0.40 kB │ gzip:  0.25 kB │ map:     5.86 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CH3iN2QT.js                                                                                                    0.40 kB │ gzip:  0.28 kB │ map:    31.19 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/revalidation-request-B_-zXHEw.js                                                                                    0.40 kB │ gzip:  0.30 kB │ map:     2.51 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/base-path-DhuerTYQ.js                                                                                               0.42 kB │ gzip:  0.28 kB │ map:     3.18 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/asset-prefix-DG5zdfn4.js                                                                                            0.44 kB │ gzip:  0.29 kB │ map:     7.48 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-Dz32hOFT.js                                                                                                    0.45 kB │ gzip:  0.31 kB │ map:    11.01 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CbFVvq0I.js                                                                                                    0.50 kB │ gzip:  0.28 kB │ map:     0.66 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CoMRypy2.js                                                                                                    0.51 kB │ gzip:  0.28 kB │ map:     0.69 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-Dd6imnJC.js                                                                                                    0.51 kB │ gzip:  0.29 kB │ map:     0.67 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DE8U14pp.js                                                                                                    0.52 kB │ gzip:  0.30 kB │ map:     0.70 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-fCvxlSm-.js                                                                                                    0.52 kB │ gzip:  0.29 kB │ map:     0.71 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-D3yEHl8j.js                                                                                                    0.52 kB │ gzip:  0.30 kB │ map:     0.71 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BT9NqH2j.js                                                                                                    0.52 kB │ gzip:  0.30 kB │ map:     0.70 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BubB-ckg.js                                                                                                    0.52 kB │ gzip:  0.29 kB │ map:     0.70 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-1n9epaEf.js                                                                                                    0.54 kB │ gzip:  0.30 kB │ map:     0.83 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-C3mFwE_M.js                                                                                                    0.55 kB │ gzip:  0.31 kB │ map:     0.85 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CsgILhOk.js                                                                                                    0.55 kB │ gzip:  0.35 kB │ map:     2.47 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-NaNR_GxO.js                                                                                                    0.55 kB │ gzip:  0.35 kB │ map:     2.55 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/prerender-cache-life-header-DM4MWPHN.js                                                                             0.55 kB │ gzip:  0.34 kB │ map:     2.15 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BMuwy98G.js                                                                                                    0.56 kB │ gzip:  0.32 kB │ map:     0.86 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DmzLvTUq.js                                                                                                    0.56 kB │ gzip:  0.32 kB │ map:     0.87 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DNOeBSyB.js                                                                                                    0.56 kB │ gzip:  0.32 kB │ map:     0.87 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/parse-cookie-zxGDcAe2.js                                                                                            0.56 kB │ gzip:  0.36 kB │ map:     2.91 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-CVipC6SJ.js                                                                                                    0.56 kB │ gzip:  0.32 kB │ map:     0.86 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DqDJI_ZH.js                                                                                                    0.56 kB │ gzip:  0.32 kB │ map:     0.86 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/als-registry-Ca9CZnfN.js                                                                                            0.58 kB │ gzip:  0.35 kB │ map:     0.29 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/workspace-BJ4Z5bJ6.js                                                                                               0.64 kB │ gzip:  0.27 kB │ map:    29.14 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/request-context-BFN7CXZa.js                                                                                         0.65 kB │ gzip:  0.42 kB │ map:     3.77 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/dist-QeNPfzR4.js                                                                                                    0.68 kB │ gzip:  0.43 kB │ map:     4.59 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/config-headers-BuQWUtmd.js                                                                                          0.68 kB │ gzip:  0.44 kB │ map:     9.33 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/grid-shape-CV4L_xiy.js                                                                                              0.69 kB │ gzip:  0.37 kB │ map:     1.28 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/server-DNnEitDT.js                                                                                                  0.70 kB │ gzip:  0.44 kB │ map:     7.52 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/rolldown-runtime-XKyaHtl9.js                                                                                        0.72 kB │ gzip:  0.42 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DwCoz0Ag.js                                                                                                    0.73 kB │ gzip:  0.45 kB │ map:    27.23 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/implicit-tags-ak7gjSvG.js                                                                                           0.76 kB │ gzip:  0.47 kB │ map:     3.83 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/component-card-BZ8fMQ7w.js                                                                                          0.77 kB │ gzip:  0.38 kB │ map:     1.73 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/dist-Bk_6Kxep.js                                                                                                    0.79 kB │ gzip:  0.45 kB │ map:     3.08 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/isr-decision-C7KjG92S.js                                                                                            0.82 kB │ gzip:  0.42 kB │ map:     4.67 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/navigation-errors-CJ5oAG9d.js                                                                                       0.84 kB │ gzip:  0.49 kB │ map:     6.36 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/utils-JoVumalc.js                                                                                                   0.84 kB │ gzip:  0.40 kB │ map:    11.45 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BPvryWa4.js                                                                                                    0.85 kB │ gzip:  0.48 kB │ map:     4.99 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DF00MOGg.js                                                                                                    0.85 kB │ gzip:  0.48 kB │ map:     7.31 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/root-params-6-qY6OMJ.js                                                                                             0.85 kB │ gzip:  0.50 kB │ map:     6.54 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/worker-prerender-discovery-BT4f2Tcd.js                                                                              0.89 kB │ gzip:  0.52 kB │ map:     4.47 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/framework~index~page~page~page~page~page~page~page~page~page~page~page~page~page~page~page~~lejfj3op-Bj3yr5eN.js    0.96 kB │ gzip:  0.57 kB │ map:     2.80 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-static-generation-BX8cz43B.js                                                                                   0.97 kB │ gzip:  0.55 kB │ map:     2.25 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/navigation-context-state-BFy1o-cr.js                                                                                0.99 kB │ gzip:  0.48 kB │ map:     6.79 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/http-error-responses-B2gV-Vqb.js                                                                                    1.01 kB │ gzip:  0.47 kB │ map:     6.09 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-breadcrumb-j4ArKSU5.js                                                                                         1.12 kB │ gzip:  0.58 kB │ map:     2.44 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DpdJFJBN.js                                                                                                    1.18 kB │ gzip:  0.50 kB │ map:    33.13 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/cdn-cache-DbH-iF4X.js                                                                                               1.34 kB │ gzip:  0.74 kB │ map:     8.23 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-C36OvsUX.js                                                                                                    1.41 kB │ gzip:  0.62 kB │ map:    12.72 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/layout-Bf6HD_hD.js                                                                                                  1.55 kB │ gzip:  0.75 kB │ map:     3.33 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DBbCRWai.js                                                                                                    1.59 kB │ gzip:  0.57 kB │ map:    26.13 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-prerender-static-params-BUcoXe3B.js                                                                             1.72 kB │ gzip:  0.76 kB │ map:     7.96 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-DHs-nXOU.js                                                                                                    1.72 kB │ gzip:  0.75 kB │ map:     4.30 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-segment-state-DlZunaTL.js                                                                                  1.74 kB │ gzip:  0.80 kB │ map:    10.61 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BiVKo7ye.js                                                                                                    1.75 kB │ gzip:  0.83 kB │ map:     5.68 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/middleware-request-headers-Cc1A0QOW.js                                                                              1.85 kB │ gzip:  0.86 kB │ map:    10.51 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BTa62OaR.js                                                                                                    1.88 kB │ gzip:  0.94 kB │ map:     3.82 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-octCWudb.js                                                                                                    2.10 kB │ gzip:  0.74 kB │ map:     6.58 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/worker-image-optimization-CjZJPp_c.js                                                                               2.13 kB │ gzip:  1.05 kB │ map:    10.49 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/route-pattern-BLvVlmk6.js                                                                                           2.23 kB │ gzip:  0.87 kB │ map:    13.29 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/ppr-fallback-shell-Bsn4mtxE.js                                                                                      2.25 kB │ gzip:  1.01 kB │ map:    13.00 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-Dcq4WjO8.js                                                                                                    2.34 kB │ gzip:  0.67 kB │ map:     5.73 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-prerender-endpoints-BklZB-Bh.js                                                                                 2.62 kB │ gzip:  1.06 kB │ map:     8.81 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/headers-CvYMroku.js                                                                                                 2.78 kB │ gzip:  1.17 kB │ map:    21.82 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/thenable-params-5ZJepzCX.js                                                                                         2.83 kB │ gzip:  1.10 kB │ map:    14.25 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/navigation-cCKrcT70.js                                                                                              2.91 kB │ gzip:  1.44 kB │ map:     9.00 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-cache-render-CZMw4Gzg.js                                                                                   2.97 kB │ gzip:  1.33 kB │ map:    10.75 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/button-BAnCwhq-.js                                                                                                  3.30 kB │ gzip:  1.12 kB │ map:     5.59 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/isr-cache-BGlm7D4f.js                                                                                               3.46 kB │ gzip:  1.70 kB │ map:    24.01 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-mounted-slots-header-D1MIH2KG.js                                                                                3.70 kB │ gzip:  1.58 kB │ map:    29.10 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-rsc-cache-busting-tLgMZMyp.js                                                                                   3.71 kB │ gzip:  1.54 kB │ map:    26.00 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/metadata-routes-Co3fVXwC.js                                                                                         4.20 kB │ gzip:  1.55 kB │ map:    23.78 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/request-pipeline-C5rFz56T.js                                                                                        4.27 kB │ gzip:  1.77 kB │ map:    40.50 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/cache-handler-DWYjYkKq.js                                                                                           4.48 kB │ gzip:  1.67 kB │ map:    19.39 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-tracing-DX8P7Vpn.js                                                                                        4.63 kB │ gzip:  2.30 kB │ map:    17.93 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/unified-request-context-D683AAmc.js                                                                                 4.89 kB │ gzip:  1.97 kB │ map:    23.66 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/middleware-response-headers-CRYHGnoF.js                                                                             5.68 kB │ gzip:  2.28 kB │ map:    31.32 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/framework~index~page~page~page~page~page~page~layout~page~page~page~page~page~page~page~pag~op3iifko-CcOTYhCj.js    5.85 kB │ gzip:  2.41 kB │ map:    24.02 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-k6BwagRK.js                                                                                                    5.95 kB │ gzip:  0.88 kB │ map:    19.13 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/getConfig-Bc2q1sNJ.js                                                                                               6.12 kB │ gzip:  2.67 kB │ map:    21.59 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-aAjFg9kk.js                                                                                                    6.21 kB │ gzip:  1.39 kB │ map:    15.40 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/icons-aDUzI_iO.js                                                                                                   6.29 kB │ gzip:  2.09 kB │ map:    14.61 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/file-based-metadata-B5KdD9Gl.js                                                                                     6.78 kB │ gzip:  2.52 kB │ map:    32.06 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/response-stage-policy-Dw5hNKW0.js                                                                                   6.89 kB │ gzip:  2.40 kB │ map:    32.73 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-rsc-response-stage-Bh8Xaqrz.js                                                                                  7.66 kB │ gzip:  2.69 kB │ map:    23.05 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-cache-tjrvIpNS.js                                                                                          8.25 kB │ gzip:  2.87 kB │ map:    65.06 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/prerender-work-unit-setup-xkq4B5ib.js                                                                               8.33 kB │ gzip:  3.37 kB │ map:    53.46 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-route-handler-dispatch-BQG6WtyV.js                                                                              8.67 kB │ gzip:  3.17 kB │ map:   139.17 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/rsc-completion-metadata-Bjlmocnc.js                                                                                 9.03 kB │ gzip:  3.35 kB │ map:    51.42 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/text-stream-DDiXD4ga.js                                                                                             9.39 kB │ gzip:  3.30 kB │ map:    36.38 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-cache-finalizer-Bq4ymQVp.js                                                                                9.89 kB │ gzip:  3.44 kB │ map:    36.39 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/headers-XKORyjjY.js                                                                                                10.15 kB │ gzip:  3.55 kB │ map:    58.76 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-elements-CzR8wqwu.js                                                                                           10.40 kB │ gzip:  3.43 kB │ map:    42.15 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/cacheability-request-BS0TwvZn.js                                                                                   10.89 kB │ gzip:  3.79 kB │ map:    44.07 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-AOSqlGBW.js                                                                                                   10.98 kB │ gzip:  2.24 kB │ map:    91.22 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-page-execution-CrWOhFsk.js                                                                                     12.77 kB │ gzip:  4.59 kB │ map:    62.46 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/metadata-route-response-CjObN9ap.js                                                                                12.80 kB │ gzip:  4.54 kB │ map:    47.24 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/client-build-files-JtXltOfk.js                                                                                     12.89 kB │ gzip:  5.24 kB │ map:    68.93 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/_virtual_vinext-next-image-rsc-FP9KYBYR.js                                                                         13.46 kB │ gzip:  4.19 kB │ map:    89.29 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/page-BJEA3YfC.js                                                                                                   16.24 kB │ gzip:  3.82 kB │ map:    61.64 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/config-matchers-CHRBaF-K.js                                                                                        21.36 kB │ gzip:  8.33 kB │ map:   112.68 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-route-handler-execution-83jV61hL.js                                                                            21.63 kB │ gzip:  7.26 kB │ map:    87.04 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/utils-RNxGBoak.js                                                                                                  21.67 kB │ gzip:  7.32 kB │ map:   110.12 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/en-Vj-a9kgS.js                                                                                                     24.23 kB │ gzip:  8.57 kB │ map:    48.68 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/fetch-cache-D5SZqABt.js                                                                                            24.93 kB │ gzip:  8.69 kB │ map:   117.12 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/tg-DQ_xHIfD.js                                                                                                     29.39 kB │ gzip: 10.08 kB │ map:    53.84 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/ru-BJu7PimP.js                                                                                                     29.47 kB │ gzip: 10.38 kB │ map:    53.91 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/app-action-request-C1saqG5U.js                                                                                     34.14 kB │ gzip: 13.31 kB │ map:   126.85 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/framework~index~page~page~page~page~page~page~layout~page~page~page~page~page~page~page~pag~pfoinnqs-c2E9T7v-.js   56.52 kB │ gzip: 17.23 kB │ map:    16.78 kB
+.cloudflare/output/v0/workers/default/bundle/_next/static/worker-entry-bGDL_wqk.js                                                                                          394.29 kB │ gzip: 96.78 kB │ map: 1,314.16 kB
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0msrc/app/[locale]/not-found.tsx is dynamically imported by \0virtual:vinext-rsc-entry but also statically imported by \0virtual:vinext-rsc-entry, dynamic import will not move module into another chunk.
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0msrc/app/[locale]/layout.tsx is dynamically imported by \0virtual:vinext-rsc-entry but also statically imported by \0virtual:vinext-rsc-entry, dynamic import will not move module into another chunk.
+
+[plugin rsc:inject-async-local-storage] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:inject-async-local-storage) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin rsc:inject-async-local-storage] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:inject-async-local-storage) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin rsc:virtual:vite-rsc/assets-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:virtual:vite-rsc/assets-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin vinext:action-owner-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (vinext:action-owner-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+✓ built in 2.98s
+[4/5] build client environment...
+vite v8.3.0 building client environment for production...
+`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
+transforming...
+✓ 1388 modules transformed.
+rendering chunks...
+computing gzip size...
+.cloudflare/output/v0/workers/default/assets/.vite/vinext-client-reference-sources.json    2.38 kB │ gzip:   0.70 kB
+.cloudflare/output/v0/workers/default/assets/vinext-client-entry-manifest.json            30.98 kB │ gzip:   2.42 kB
+.cloudflare/output/v0/workers/default/assets/.vite/manifest.json                          33.97 kB │ gzip:   4.23 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/css/B9utuTI-.css                 5.31 kB │ gzip:   1.67 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/css/uBpuMP6Z.css                 6.92 kB │ gzip:   1.79 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/css/um8TwWsU.css                 8.85 kB │ gzip:   2.29 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/css/CnssUrTZ.css               325.05 kB │ gzip:  44.48 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/aqHEWCDu.js               0.06 kB │ gzip:   0.07 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BIpjPngc.js               0.09 kB │ gzip:   0.11 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BFpWHAnu.js               0.10 kB │ gzip:   0.11 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/D3q_WA5U.js               0.10 kB │ gzip:   0.11 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DLvAicft.js               0.10 kB │ gzip:   0.11 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DQUfuE6B.js               0.11 kB │ gzip:   0.12 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B_EucO5O.js               0.13 kB │ gzip:   0.12 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BxQVJ7u5.js               0.14 kB │ gzip:   0.13 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/D302bbFJ.js               0.14 kB │ gzip:   0.13 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DGpVfV72.js               0.16 kB │ gzip:   0.14 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/D-zWpGG3.js               0.17 kB │ gzip:   0.15 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Kd_oXk3k.js               0.18 kB │ gzip:   0.14 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CH_ehK6o.js               0.18 kB │ gzip:   0.15 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DbG-CCK5.js               0.18 kB │ gzip:   0.16 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CBD8IA57.js               0.22 kB │ gzip:   0.18 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BySalmsy.js               0.26 kB │ gzip:   0.19 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CL4xlhHg.js               0.27 kB │ gzip:   0.22 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Dipv9EGE.js               0.29 kB │ gzip:   0.18 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Arf_fccI.js               0.30 kB │ gzip:   0.17 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BNvb3tTT.js               0.36 kB │ gzip:   0.23 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/1eenOGoU.js               0.38 kB │ gzip:   0.25 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BGXDts_u.js               0.41 kB │ gzip:   0.32 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/xfXNejHX.js               0.42 kB │ gzip:   0.29 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/mxTtiGj9.js               0.43 kB │ gzip:   0.28 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C4_tikiH.js               0.46 kB │ gzip:   0.32 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CQSdCNnx.js               0.50 kB │ gzip:   0.22 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BW1lFw7s.js               0.50 kB │ gzip:   0.32 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DU2ddOEI.js               0.54 kB │ gzip:   0.31 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B_2_78EZ.js               0.56 kB │ gzip:   0.31 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DGVHX9di.js               0.60 kB │ gzip:   0.39 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BG79fB52.js               0.62 kB │ gzip:   0.37 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DOQmOxJ9.js               0.63 kB │ gzip:   0.38 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Bn6egabz.js               0.64 kB │ gzip:   0.41 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BKKU9nuw.js               0.68 kB │ gzip:   0.39 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Hkggggsa.js               0.74 kB │ gzip:   0.40 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CcyWYbDU.js               0.75 kB │ gzip:   0.45 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DRmmm7l5.js               0.82 kB │ gzip:   0.48 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DGUBdyRs.js               0.89 kB │ gzip:   0.54 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DXX-NTee.js               0.98 kB │ gzip:   0.57 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DPNflS5z.js               0.98 kB │ gzip:   0.51 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B2LcZXjJ.js               1.00 kB │ gzip:   0.57 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BQ9j2qCZ.js               1.11 kB │ gzip:   0.60 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/-ZcZP58Z.js               1.40 kB │ gzip:   0.62 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Bpn-Rjv7.js               1.57 kB │ gzip:   0.59 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CPGyssPO.js               1.63 kB │ gzip:   0.78 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DHh8NnmW.js               1.86 kB │ gzip:   0.61 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/462zfovF.js               1.86 kB │ gzip:   0.72 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BHDuvj-Q.js               1.91 kB │ gzip:   0.81 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CXExWaEL.js               2.02 kB │ gzip:   1.08 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/D7lOu-EX.js               2.07 kB │ gzip:   1.06 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Cq5r7HIC.js               2.09 kB │ gzip:   0.75 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DMKINrSW.js               2.19 kB │ gzip:   1.02 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BhV2hZLw.js               2.28 kB │ gzip:   1.04 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C2j7Imj-.js               2.33 kB │ gzip:   1.10 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/NvLO2Uze.js               2.47 kB │ gzip:   1.13 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CpCMTX49.js               2.66 kB │ gzip:   1.17 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B-02pXx2.js               3.01 kB │ gzip:   1.09 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/3cS9uR6l.js               3.02 kB │ gzip:   0.97 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DPPe4j_3.js               3.06 kB │ gzip:   1.36 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BInRPbsM.js               3.32 kB │ gzip:   1.54 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Cvnsj5QQ.js               3.54 kB │ gzip:   1.11 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/4ZvjtOwG.js               3.59 kB │ gzip:   1.55 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Bv7Ej2Sx.js               4.36 kB │ gzip:   1.98 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DBai8pP9.js               4.43 kB │ gzip:   1.94 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B2WPyELO.js               4.47 kB │ gzip:   1.21 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C_0z-1CO.js               4.51 kB │ gzip:   1.12 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DEkvFEoo.js               4.84 kB │ gzip:   1.81 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/btpZKAgA.js               5.13 kB │ gzip:   1.91 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DmdI8h4W.js               6.07 kB │ gzip:   2.54 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CrYzUIgF.js               6.52 kB │ gzip:   1.57 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/dmBmJiNe.js               6.60 kB │ gzip:   2.87 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BQSSagAr.js               6.85 kB │ gzip:   2.12 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C_DQwdH8.js               7.12 kB │ gzip:   1.76 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/_16BFN1q.js               7.15 kB │ gzip:   2.75 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/D__NmMLZ.js               9.22 kB │ gzip:   0.77 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DC_jbtU_.js               9.36 kB │ gzip:   3.36 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/FQfg1ea9.js              11.09 kB │ gzip:   4.30 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BEJgeVIe.js              11.31 kB │ gzip:   3.91 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C-lyQtfF.js              13.20 kB │ gzip:   4.97 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Buk4ZLYE.js              15.26 kB │ gzip:   4.67 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DYGNCxCN.js              16.46 kB │ gzip:   5.01 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BHhtelUl.js              16.96 kB │ gzip:   4.91 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DJFjeZpT.js              17.12 kB │ gzip:   4.77 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BZOlvQ1E.js              17.57 kB │ gzip:   6.70 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C23UO-X6.js              21.67 kB │ gzip:   5.23 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BcvK_qgj.js              21.72 kB │ gzip:   7.32 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C069lvj-.js              22.24 kB │ gzip:   7.77 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BASFdDEb.js              22.47 kB │ gzip:   7.44 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/0wcaVwTA.js              37.69 kB │ gzip:  10.53 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CXUY1ISB.js              37.76 kB │ gzip:  14.66 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CoEWVem1.js              40.28 kB │ gzip:  12.27 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/zk6pzzIr.js              40.78 kB │ gzip:  14.15 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BGl6j6dR.js              43.83 kB │ gzip:  13.33 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CN1Iujdk.js              43.85 kB │ gzip:  15.42 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/CFnYsL3B.js              43.89 kB │ gzip:  12.90 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/v9MG4LZd.js              45.19 kB │ gzip:  14.49 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B_ePglMO.js              46.75 kB │ gzip:  14.93 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B4qUCSKP.js              61.56 kB │ gzip:  18.85 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/C2C1An0C.js              68.21 kB │ gzip:  18.44 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/Bs08CvtM.js             110.02 kB │ gzip:  32.49 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/DKWrBzOs.js             120.71 kB │ gzip:  36.65 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/BYcdHXRa.js             149.93 kB │ gzip:  45.55 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B0PXqnjO.js             219.27 kB │ gzip:  68.42 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/B4YVIbtG.js             328.65 kB │ gzip:  90.27 kB
+.cloudflare/output/v0/workers/default/assets/_next/static/chunks/81CYEcNA.js             925.82 kB │ gzip: 264.78 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.33s
+[5/5] build ssr environment...
+vite v8.3.0 building ssr environment for production...
+transforming...
+✓ 1356 modules transformed.
+rendering chunks...
+computing gzip size...
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/css/B9utuTI-.css                         5.31 kB │ gzip:   1.67 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/css/uBpuMP6Z.css                         6.92 kB │ gzip:   1.79 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/css/um8TwWsU.css                         8.85 kB │ gzip:   2.29 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/navigation-server-DmqWub9W.js            0.04 kB │ gzip:   0.06 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/separator-oPcTjn4z.js                    0.12 kB │ gzip:   0.13 kB │ map:     0.84 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/app-nav-failure-handler-BW2-CIfV.js      0.13 kB │ gzip:   0.13 kB │ map:     2.81 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useRender-DNfQCzrw.js                    0.16 kB │ gzip:   0.16 kB │ map:     0.58 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/isElementDisabled-KSuuBj8D.js            0.16 kB │ gzip:   0.15 kB │ map:     0.51 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/serializeValue-B_EucO5O.js               0.18 kB │ gzip:   0.16 kB │ map:     0.65 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/react-client-DnF7x9Zr.js                 0.19 kB │ gzip:   0.18 kB │ map:     0.64 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/getFiniteAnimations-D302bbFJ.js          0.20 kB │ gzip:   0.17 kB │ map:     0.82 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useOnMount-IcRyb_-S.js                   0.23 kB │ gzip:   0.20 kB │ map:     0.88 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/FieldItemContext-BA4aN4A6.js             0.23 kB │ gzip:   0.21 kB │ map:     0.77 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/getHighlightReason-CizTDYGU.js           0.25 kB │ gzip:   0.20 kB │ map:     1.01 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/visuallyHidden-CmQ9ItcI.js               0.25 kB │ gzip:   0.21 kB │ map:     0.88 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/DirectionContext-DtOI7Y2F.js             0.25 kB │ gzip:   0.21 kB │ map:     0.79 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/NextIntlClientProvider-C7xjhOCU.js       0.26 kB │ gzip:   0.22 kB │ map:     0.70 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/static.edge-CQperz17.js                  0.26 kB │ gzip:   0.20 kB │ map:     0.71 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/empty-kEob8IBj.js                        0.28 kB │ gzip:   0.23 kB │ map:     1.11 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useRefWithInit-6fSbNISE.js               0.29 kB │ gzip:   0.23 kB │ map:     1.04 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/hybrid-client-route-owner-B18IO3ei.js    0.31 kB │ gzip:   0.24 kB │ map:    29.87 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/addEventListener-CSZnEnKu.js             0.33 kB │ gzip:   0.25 kB │ map:     2.26 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/ToolbarRootContext-BFRbjlCD.js           0.33 kB │ gzip:   0.26 kB │ map:     1.24 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useControlled-B10i-Ctb.js                0.34 kB │ gzip:   0.27 kB │ map:     4.00 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/shared-Arf_fccI.js                       0.34 kB │ gzip:   0.21 kB │ map:     1.98 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useValueChanged-li6DjKja.js              0.35 kB │ gzip:   0.27 kB │ map:     1.11 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useHoverShared-DjvUQSJk.js               0.42 kB │ gzip:   0.28 kB │ map:     1.85 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/DirectionProvider-C4WJHvF0.js            0.42 kB │ gzip:   0.29 kB │ map:     1.38 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/languages-Bgvp9ckw.js                    0.43 kB │ gzip:   0.29 kB │ map:     1.56 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/theme-toggler-DNn2eQbG.js                0.46 kB │ gzip:   0.32 kB │ map:     0.99 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/logo-BRe_VtoU.js                         0.47 kB │ gzip:   0.37 kB │ map:     1.20 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/deployment-id-CAXJbs5W.js                0.47 kB │ gzip:   0.31 kB │ map:     2.19 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/jsx-runtime-LKYXHABd.js                  0.48 kB │ gzip:   0.34 kB │ map:     2.20 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useTimeout-8YBuMCcp.js                   0.51 kB │ gzip:   0.31 kB │ map:     1.72 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-CneYV5tA.js                        0.55 kB │ gzip:   0.27 kB │ map:     2.17 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/Button-CD-E8UV9.js                       0.56 kB │ gzip:   0.36 kB │ map:     1.79 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/toggle-switch-input-CCiSS3bd.js          0.57 kB │ gzip:   0.36 kB │ map:     1.47 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/layout-segment-context-DKN8n9QT.js       0.58 kB │ gzip:   0.39 kB │ map:     3.45 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/app-prefetch-fetch-queue-Da8BERJ4.js     0.59 kB │ gzip:   0.40 kB │ map:     8.48 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useBaseUiId-Bgy52UQg.js                  0.59 kB │ gzip:   0.39 kB │ map:     4.08 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/divider-iYUK4dIS.js                      0.60 kB │ gzip:   0.36 kB │ map:     1.28 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/default-radio-buttons-CC9AttII.js        0.62 kB │ gzip:   0.38 kB │ map:     1.48 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/shadowDom-C9Vwh2mW.js                    0.62 kB │ gzip:   0.38 kB │ map:     2.77 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/default-checkbox-BW8lw_On.js             0.66 kB │ gzip:   0.38 kB │ map:     1.62 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/dist-QeNPfzR4.js                         0.68 kB │ gzip:   0.43 kB │ map:     4.59 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useAriaLabelledBy-B7koimRA.js            0.69 kB │ gzip:   0.46 kB │ map:     3.73 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/notification-state-B-CL2zOE.js           0.70 kB │ gzip:   0.43 kB │ map:     1.93 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/rolldown-runtime-XKyaHtl9.js             0.72 kB │ gzip:   0.42 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/scrollEdges-DFQUAzA6.js                  0.75 kB │ gzip:   0.48 kB │ map:     3.61 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/streamed-icons-Bjxs8xAA.js               0.78 kB │ gzip:   0.50 kB │ map:     2.82 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/card-CBqumGVt.js                         0.85 kB │ gzip:   0.46 kB │ map:     3.11 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/reason-parts-DUzCZgCt.js                 0.86 kB │ gzip:   0.49 kB │ map:     4.26 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/date-picker-input-CtaUwxQZ.js            0.93 kB │ gzip:   0.55 kB │ map:     2.17 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/time-select-input-BYFbOImW.js            0.94 kB │ gzip:   0.56 kB │ map:     2.20 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/CompositeItem-ojRizNcl.js                0.98 kB │ gzip:   0.59 kB │ map:     3.61 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/password-input-C1U7rRNH.js               1.00 kB │ gzip:   0.52 kB │ map:     2.45 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/identity-BijQ0Sie.js                     1.00 kB │ gzip:   0.61 kB │ map:     3.23 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/client-page-root-DteCFfn7.js             1.02 kB │ gzip:   0.60 kB │ map:     7.54 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/event-Bku9qd_G.js                        1.03 kB │ gzip:   0.56 kB │ map:     5.00 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/app-router-scroll-state-Chjrq4uf.js      1.13 kB │ gzip:   0.60 kB │ map:     5.99 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/page-DnoDWU0E.js                         1.15 kB │ gzip:   0.62 kB │ map:     2.71 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/with-selector-BRHgIA9-.js                1.18 kB │ gzip:   0.60 kB │ map:     8.07 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/labeled-radio-buttons-DLpqCIUh.js        1.32 kB │ gzip:   0.55 kB │ map:     2.86 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/labeled-checkbox-DOHqybt9.js             1.34 kB │ gzip:   0.54 kB │ map:     3.03 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/default-file-input-Clby2SXh.js           1.38 kB │ gzip:   0.67 kB │ map:     2.51 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/copy-input-BL2JMvKj.js                   1.54 kB │ gzip:   0.80 kB │ map:     3.53 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/theme-context-DUGoRyFU.js                1.55 kB │ gzip:   0.70 kB │ map:     4.64 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/phone-input-end-CKZz7BpR.js              1.58 kB │ gzip:   0.68 kB │ map:     3.36 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/phone-input-start-DvkRA_O9.js            1.59 kB │ gzip:   0.68 kB │ map:     3.37 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/store-C7RLuSLv.js                        1.63 kB │ gzip:   0.64 kB │ map:     6.25 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/navigation-context-state-CO1Xk_hI.js     1.67 kB │ gzip:   0.68 kB │ map:     8.22 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/tooltip-RoPeKo01.js                      1.81 kB │ gzip:   0.89 kB │ map:    14.48 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/one-iqXMje8h.js                          1.85 kB │ gzip:   1.02 kB │ map:     5.39 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/multiple-select-input-DlA7UMFV.js        1.94 kB │ gzip:   0.93 kB │ map:     5.34 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/not-found-C0uZ-Mke.js                    1.94 kB │ gzip:   0.84 kB │ map:     3.90 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/button-group-CwIZ8nFl.js                 1.96 kB │ gzip:   0.78 kB │ map:     5.57 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/textarea--Sjg6ZI1.js                     2.03 kB │ gzip:   0.71 kB │ map:     2.60 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/directories-data-D7lOu-EX.js             2.12 kB │ gzip:   1.10 kB │ map:     7.51 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/composite-iwKhg6tj.js                    2.16 kB │ gzip:   0.81 kB │ map:     7.95 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/danger-DyZwBia_.js                       2.17 kB │ gzip:   0.98 kB │ map:     5.63 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/analytics-data-DMKINrSW.js               2.25 kB │ gzip:   1.07 kB │ map:     8.63 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/navigation-errors-CQYdyXv1.js            2.28 kB │ gzip:   1.03 kB │ map:     9.47 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/floating-ui.utils.dom-Cfd2cQXC.js        2.34 kB │ gzip:   1.09 kB │ map:     9.84 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/navigation-CecLz0-E.js                   2.50 kB │ gzip:   1.19 kB │ map:     8.18 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/app-router-scroll-BDL9QzrO.js            2.55 kB │ gzip:   1.16 kB │ map:    10.83 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useButton-B5__XjEn.js                    2.58 kB │ gzip:   1.22 kB │ map:    16.26 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useRegisterFieldControl--6XMbdgV.js      2.64 kB │ gzip:   1.26 kB │ map:    15.84 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/button-CdT3h04x.js                       3.10 kB │ gzip:   1.03 kB │ map:     4.33 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/dialog-BOEtuyPY.js                       3.15 kB │ gzip:   1.18 kB │ map:     7.66 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/one-CkKPinoK.js                          3.19 kB │ gzip:   1.49 kB │ map:     8.41 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useTransitionStatus-BV7OfIIX.js          3.25 kB │ gzip:   1.47 kB │ map:    20.95 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/dynamic-3XOqPKq9.js                      3.25 kB │ gzip:   1.45 kB │ map:    22.47 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/CompositeList-CW8Q3pgM.js                3.51 kB │ gzip:   1.57 kB │ map:    17.85 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/field-BFpNAvyp.js                        3.54 kB │ gzip:   1.33 kB │ map:    10.97 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-five-mXYlNFch.js                   3.60 kB │ gzip:   1.15 kB │ map:     8.88 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/ItemIndicator-BcomiIfS.js                3.81 kB │ gzip:   1.69 kB │ map:    18.72 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/react-dom-BRJCdz-1.js                    3.94 kB │ gzip:   1.45 kB │ map:    14.00 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/input-C5714aRn.js                        4.13 kB │ gzip:   1.70 kB │ map:    13.82 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-one-hDYhO9Cc.js                    4.21 kB │ gzip:   1.26 kB │ map:    11.03 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/address-BGo-acIq.js                      4.29 kB │ gzip:   1.59 kB │ map:    12.39 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useRenderElement-rGUUqmh4.js             4.52 kB │ gzip:   2.01 kB │ map:    34.46 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-four-B4tO_bjZ.js                   4.53 kB │ gzip:   1.26 kB │ map:    11.16 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/badge-hOH9pMUp.js                        4.59 kB │ gzip:   1.18 kB │ map:     8.88 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/switch-BFHXkLb9.js                       4.65 kB │ gzip:   2.13 kB │ map:    18.66 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/security-XPUGmU8W.js                     4.77 kB │ gzip:   1.81 kB │ map:    13.67 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/sign-in-CwSMTQHn.js                      4.99 kB │ gzip:   1.90 kB │ map:    14.01 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/composite-wnaRglL_.js                    5.39 kB │ gzip:   2.33 kB │ map:    29.98 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/avatar-BowWsA8-.js                       5.42 kB │ gzip:   2.06 kB │ map:    21.46 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/copy-DmdI8h4W.js                         6.12 kB │ gzip:   2.59 kB │ map:     8.44 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/error-boundary-CwyGeG32.js               6.33 kB │ gzip:   2.03 kB │ map:    24.65 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/input-group-Cod9UP4L.js                  6.81 kB │ gzip:   1.69 kB │ map:    10.43 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/checkbox-B3rowcMj.js                     6.99 kB │ gzip:   3.08 kB │ map:    32.28 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/sign-up-Dnp_YFlc.js                      7.01 kB │ gzip:   2.22 kB │ map:    19.63 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/DialogTitle-B9lf5HJc.js                  7.37 kB │ gzip:   2.88 kB │ map:    38.58 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/react-CQmtu_zT.js                        7.64 kB │ gzip:   2.95 kB │ map:    30.51 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-three-C4OjAY74.js                 10.89 kB │ gzip:   3.35 kB │ map:    32.68 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/app-elements-EdYp9wvz.js                10.96 kB │ gzip:   3.43 kB │ map:    48.04 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/analytics-BmUzrgUS.js                   11.22 kB │ gzip:   3.88 kB │ map:    35.27 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/radio-group-C8mS31my.js                 11.57 kB │ gzip:   4.69 kB │ map:    68.35 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/BaseLink-CRkeoOGN.js                    11.75 kB │ gzip:   4.87 kB │ map:    94.60 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/personal-information-z5WDMi62.js        11.97 kB │ gzip:   3.32 kB │ map:    33.70 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/scroll-area-CVsY2ELN.js                 13.46 kB │ gzip:   5.15 kB │ map:    76.92 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/workspace-CgwkVJRs.js                   15.40 kB │ gzip:   4.75 kB │ map:    48.86 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/visual-review-BCV0HAec.js               16.62 kB │ gzip:   5.10 kB │ map:    64.42 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/table-two-DW6y2f7v.js                   17.09 kB │ gzip:   4.90 kB │ map:    67.16 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/preview-k72znBbl.js                     17.25 kB │ gzip:   5.06 kB │ map:    54.17 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/orders-DhbPIKXI.js                      17.25 kB │ gzip:   4.84 kB │ map:    47.45 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/utils-RNxGBoak.js                       21.67 kB │ gzip:   7.32 kB │ map:   110.13 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/dropzone-input-LsRUAseO.js              22.23 kB │ gzip:   7.78 kB │ map:    86.65 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/layout-BWgwWfH_.js                      22.93 kB │ gzip:   7.69 kB │ map:    99.40 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/select-1llLkvb8.js                      31.95 kB │ gzip:  10.64 kB │ map:   139.16 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/getPseudoElementBounds-VfYuHtzL.js      34.80 kB │ gzip:  13.64 kB │ map:   217.74 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useTable-BZTiiIjn.js                    37.18 kB │ gzip:  11.05 kB │ map:   209.18 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/useScrollLock-C3NiKmI5.js               37.45 kB │ gzip:  13.11 kB │ map:   223.73 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/icons-BHE6SvUG.js                       37.79 kB │ gzip:  10.61 kB │ map:    73.64 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/react-Dx1KUrX6.js                       40.45 kB │ gzip:  12.35 kB │ map:   150.05 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/combobox-select-input-PAO3jidc.js       41.37 kB │ gzip:  14.41 kB │ map:   220.23 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/operations-review-BQE7Z_1F.js           43.93 kB │ gzip:  13.40 kB │ map:   105.96 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/image-De6eiCnw.js                       45.76 kB │ gzip:  14.73 kB │ map:   215.88 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/dropdown-C9tVK3_r.js                    47.39 kB │ gzip:  15.24 kB │ map:   234.77 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/esm-CYsLhvSL.js                         50.21 kB │ gzip:  14.51 kB │ map:   176.07 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/navigation-MfPaCzYz.js                  58.84 kB │ gzip:  17.52 kB │ map:   311.98 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/schemas-iJSIWkjm.js                    120.37 kB │ gzip:  36.55 kB │ map:   747.85 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/index.js                                            309.48 kB │ gzip:  97.41 kB │ map:   900.89 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/calendar-BvOcNVIl.js                   328.88 kB │ gzip:  90.45 kB │ map: 1,665.42 kB
+.cloudflare/output/v0/workers/default/bundle/ssr/_next/static/react-apexcharts.esm-BTQqSg-y.js       925.82 kB │ gzip: 264.81 kB │ map: 3,366.00 kB
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../a33b43cfdcd7/repo/node_modules/vinext/dist/shims/slot.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../a33b43cfdcd7/repo/node_modules/vinext/dist/server/app-route-tree.js, ../../a33b43cfdcd7/repo/node_modules/vinext/dist/server/app-ssr-entry.js, ../../a33b43cfdcd7/repo/node_modules/vinext/dist/shims/client-page-root.js, dynamic import will not move module into another chunk.
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../a33b43cfdcd7/repo/node_modules/vinext/dist/shims/default-global-error.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../a33b43cfdcd7/repo/node_modules/vinext/dist/server/app-ssr-entry.js, ../../a33b43cfdcd7/repo/node_modules/vinext/dist/shims/error-boundary.js, dynamic import will not move module into another chunk.
+
+[plugin rsc:inject-async-local-storage] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:inject-async-local-storage) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin rsc:inject-async-local-storage] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:inject-async-local-storage) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+[plugin rsc:virtual:vite-rsc/assets-manifest] [33m[SOURCEMAP_BROKEN] [0mSourcemap is likely to be incorrect: a plugin (rsc:virtual:vite-rsc/assets-manifest) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+✓ built in 3.29s
+
+  Route (app)
+  ┌ ƒ /:locale                   
+  ├ ƒ /:locale/alerts            
+  ├ ƒ /:locale/avatars           
+  ├ ƒ /:locale/badge             
+  ├ ƒ /:locale/bar-chart         
+  ├ ƒ /:locale/basic-tables      
+  ├ ƒ /:locale/blank             
+  ├ ƒ /:locale/buttons           
+  ├ ƒ /:locale/calendar          
+  ├ ƒ /:locale/customers         
+  ├ ƒ /:locale/customers/:id     
+  ├ ƒ /:locale/drivers           
+  ├ ƒ /:locale/drivers/:id       
+  ├ ƒ /:locale/error-404         
+  ├ ƒ /:locale/finance           
+  ├ ƒ /:locale/finance/:id       
+  ├ ƒ /:locale/form-elements     
+  ├ ƒ /:locale/images            
+  ├ ƒ /:locale/line-chart        
+  ├ ƒ /:locale/notifications     
+  ├ ƒ /:locale/notifications/:id 
+  ├ ƒ /:locale/operations-review 
+  ├ ƒ /:locale/orders            
+  ├ ƒ /:locale/orders/:id        
+  ├ ƒ /:locale/profile           
+  ├ ƒ /:locale/reports           
+  ├ ƒ /:locale/reports/:id       
+  ├ ƒ /:locale/restaurants       
+  ├ ƒ /:locale/restaurants/:id   
+  ├ ƒ /:locale/review/image-cases
+  ├ ƒ /:locale/review/operations 
+  ├ ƒ /:locale/settings          
+  ├ ƒ /:locale/signin            
+  ├ ƒ /:locale/signup            
+  ├ ƒ /:locale/videos            
+  └ ƒ /:locale/visual-review     
+
+  ƒ Dynamic
+
+  Build complete.
+

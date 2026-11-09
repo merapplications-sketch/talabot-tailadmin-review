@@ -1,0 +1,74 @@
+{
+  "note": "Interrupted runs before final isolated QA; not an acceptance result.",
+  "recordedResults": {
+    "base": "http://localhost:3021",
+    "results": [
+      {
+        "suite": "date-tests.mjs",
+        "exitCode": 0,
+        "durationMs": 112,
+        "error": null
+      },
+      {
+        "suite": "forms-tests.mjs",
+        "exitCode": 0,
+        "durationMs": 178,
+        "error": null
+      },
+      {
+        "suite": "talabot-orders-wording.mjs",
+        "exitCode": 0,
+        "durationMs": 89,
+        "error": null
+      },
+      {
+        "suite": "talabot-orders-data.cjs",
+        "exitCode": 0,
+        "durationMs": 241,
+        "error": null
+      },
+      {
+        "suite": "talabot-directory-data.cjs",
+        "exitCode": 0,
+        "durationMs": 275,
+        "error": null
+      },
+      {
+        "suite": "talabot-analytics-data.cjs",
+        "exitCode": 0,
+        "durationMs": 314,
+        "error": null
+      },
+      {
+        "suite": "talabot-design.cjs",
+        "exitCode": 0,
+        "durationMs": 57520,
+        "error": null
+      },
+      {
+        "suite": "talabot-input-nav.cjs",
+        "exitCode": 0,
+        "durationMs": 5400,
+        "error": null
+      },
+      {
+        "suite": "talabot-orders.cjs",
+        "exitCode": 0,
+        "durationMs": 42031,
+        "error": null
+      },
+      {
+        "suite": "talabot-orders-filters.cjs",
+        "exitCode": 0,
+        "durationMs": 7094,
+        "error": null
+      },
+      {
+        "suite": "talabot-orders-followup.cjs",
+        "exitCode": 0,
+        "durationMs": 19659,
+        "error": null
+      }
+    ]
+  }
+}

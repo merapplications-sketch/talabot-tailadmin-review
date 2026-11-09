@@ -19,6 +19,18 @@ const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
 const input =
   "mt-2 block min-h-11 w-full min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base text-gray-800 focus:outline-brand-500 dark:border-gray-700 dark:text-gray-200 dark:[color-scheme:dark]";
+import {
+  IdentityImage,
+  demoMerchantImage,
+  demoPersonImage,
+} from "./integrated-review/identity";
+import {
+  CheckCircleIcon,
+  XIcon,
+  TruckDeliveryIcon,
+  BoxIcon,
+  ClockIcon,
+} from "@/icons";
 import { entities } from "./directories-data";
 const STORE = "talabot-orders-return-v1";
 function useFormat() {
@@ -30,9 +42,9 @@ function useFormat() {
         currency: "TJS",
       }).format(c / 100),
     date: (s: string) =>
-      new Intl.DateTimeFormat(locale, {
+      new Intl.DateTimeFormat(locale === "tg" ? "en-GB" : locale, {
         timeZone: "Asia/Dushanbe",
-        month: "short",
+        month: locale === "tg" ? "2-digit" : "short",
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
@@ -42,10 +54,19 @@ function useFormat() {
 }
 function Status({ value }: { value: OrderStatus }) {
   const t = useTranslations("talabotOrders");
+  const Icon =
+    value === "delivered"
+      ? CheckCircleIcon
+      : value === "cancelled" || value === "rejected"
+        ? XIcon
+        : value === "pickedup"
+          ? TruckDeliveryIcon
+          : value === "ready"
+            ? BoxIcon
+            : ClockIcon;
   return (
-    <span
-      className={`inline-flex max-w-full rounded-lg px-2.5 py-1 text-xs font-medium ${value === "delivered" ? "bg-green-50 text-green-700 dark:bg-green-500/15 dark:text-green-400" : value === "cancelled" || value === "rejected" ? "bg-red-50 text-red-700 dark:bg-red-500/15 dark:text-red-400" : "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300"}`}
-    >
+    <span className="tp-status" data-status={value}>
+      <Icon aria-hidden="true" />
       {t(`status.${value}`)}
     </span>
   );
@@ -202,7 +223,19 @@ export function OrdersList() {
             {t("search")}
           </Button>
         </form>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="tp-quick" data-testid="order-quick-filters">
+          {["all", "pending", "preparing", "delivered"].map((value) => (
+            <button
+              type="button"
+              key={value}
+              aria-pressed={(params.get("status") || "all") === value}
+              onClick={() => update({ status: value === "all" ? "" : value })}
+            >
+              {value === "all" ? t("all") : t(`status.${value}`)}
+            </button>
+          ))}
+        </div>
+        <div className="tp-filter-grid mt-4 grid gap-3">
           <label className="text-sm">
             {t("period")}
             <select
@@ -221,8 +254,6 @@ export function OrdersList() {
               ))}
             </select>
           </label>
-          {select("status", [...orderStatuses])}
-          {select("merchant", merchants)}
         </div>
         {params.get("period") === "custom" && (
           <form
@@ -277,6 +308,8 @@ export function OrdersList() {
             {t("moreFilters")}
           </summary>
           <div className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {select("status", [...orderStatuses])}
+            {select("merchant", merchants)}
             {select("driver", [...drivers, "unassigned"])}
             {select("pickup", zones)}
             {select("delivery", zones)}
@@ -391,7 +424,13 @@ export function OrdersList() {
                     </td>
                     <td className="px-4 py-5">{o.customer}</td>
                     <td className="px-4 py-5">
-                      {o.merchant}
+                      <div className="tp-identity">
+                        <IdentityImage
+                          name={o.merchant}
+                          src={demoMerchantImage}
+                        />
+                        <span>{o.merchant}</span>
+                      </div>
                       <p className="mt-1 text-xs text-gray-500">
                         {t(o.store ? "store" : "restaurant")}
                       </p>
@@ -402,7 +441,16 @@ export function OrdersList() {
                         → {o.deliveryZone}
                       </span>
                     </td>
-                    <td className="px-4 py-5">{o.driver || t("unassigned")}</td>
+                    <td className="px-4 py-5">
+                      <div className="tp-identity">
+                        <IdentityImage
+                          name={o.driver || t("unassigned")}
+                          person
+                          src={o.driver ? demoPersonImage : undefined}
+                        />
+                        <span>{o.driver || t("unassigned")}</span>
+                      </div>
+                    </td>
                     <td className="px-4 py-5">
                       <Status value={o.status} />
                       <p className="mt-2 text-xs text-gray-500">
@@ -426,7 +474,10 @@ export function OrdersList() {
                   <h2 className="text-lg font-semibold">{o.id}</h2>
                   <Status value={o.status} />
                 </div>
-                <p className="mt-4 font-medium">{o.merchant}</p>
+                <div className="tp-identity mt-3">
+                  <IdentityImage name={o.merchant} src={demoMerchantImage} />
+                  <p className="font-medium">{o.merchant}</p>
+                </div>
                 <p className="mt-1 text-sm text-gray-500">
                   {date(o.created)} · {t(o.store ? "store" : "restaurant")}
                 </p>
@@ -443,7 +494,20 @@ export function OrdersList() {
                       key={k}
                     >
                       <dt className="text-gray-500 dark:text-gray-400">{k}</dt>
-                      <dd className="break-words">{v}</dd>
+                      <dd className="break-words">
+                        {k === t("driver") ? (
+                          <span className="tp-identity">
+                            <IdentityImage
+                              name={v}
+                              person
+                              src={o.driver ? demoPersonImage : undefined}
+                            />
+                            <span>{v}</span>
+                          </span>
+                        ) : (
+                          v
+                        )}
+                      </dd>
                     </div>
                   ))}
                 </dl>

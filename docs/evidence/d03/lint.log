@@ -1,0 +1,32 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 lint
+> eslint .
+
+
+/workspace/scratch/d301f10bb459/repo/scripts/gallery-review-worker.mjs
+  4:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/workspace/scratch/d301f10bb459/repo/src/components/others/auth/sign-in/form.tsx
+  37:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/src/components/others/auth/sign-up/form.tsx
+  41:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/src/components/talabot/integrated-review/identity.tsx
+  59:9  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/workspace/scratch/d301f10bb459/repo/src/components/talabot/visual-review/index.tsx
+   79:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  356:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  395:21  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination                       @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/d301f10bb459/repo/tests/safari-followup-acceptance.cjs
+  4:7  warning  'path' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/tests/safari-followup-regression.cjs
+   4:7   warning  'path' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  63:11  warning  'buttons' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 10 problems (0 errors, 10 warnings)
+

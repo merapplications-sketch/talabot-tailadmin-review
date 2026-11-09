@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/"
+    },
+    {
+      "route": "/orders?q=DEMO-1104",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/orders?q=DEMO-1104"
+    },
+    {
+      "route": "/restaurants",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/restaurants"
+    },
+    {
+      "route": "/notifications",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/notifications"
+    },
+    {
+      "route": "/ru",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/ru"
+    },
+    {
+      "route": "/tg",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/tg"
+    },
+    {
+      "route": "/d03-comparison/",
+      "status": 200,
+      "url": "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/d03-comparison/"
+    }
+  ],
+  "errors": [],
+  "realSafari": false
+}

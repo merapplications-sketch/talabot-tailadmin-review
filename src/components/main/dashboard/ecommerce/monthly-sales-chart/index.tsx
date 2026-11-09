@@ -81,7 +81,7 @@ export default function MonthlySalesChart() {
       },
     },
     grid: {
-      borderColor: theme === "dark" ? "#1E2640" : "#F3F4F6",
+      borderColor: theme === "dark" ? "#404040" : "#f2f2f2",
       strokeDashArray: 0,
       padding: {
         left: -10,

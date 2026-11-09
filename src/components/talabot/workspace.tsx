@@ -15,6 +15,12 @@ import {
   merchants as historicalMerchants,
 } from "./analytics-data";
 import { useReadNotices } from "./notification-state";
+import {
+  IdentityImage,
+  demoMerchantImage,
+  demoPersonImage,
+} from "./integrated-review/identity";
+import { copy as visualCopy } from "./visual-review/copy";
 import { PreviewNotice } from "./preview";
 const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
@@ -22,7 +28,16 @@ const input =
   "mt-2 block min-h-11 w-full min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base dark:border-gray-700 dark:[color-scheme:dark]";
 const button =
   "inline-flex min-h-11 items-center rounded-lg border border-gray-300 px-4 py-2 disabled:opacity-40 dark:border-gray-700";
-type Row = { id: string; name: string; values: string[]; href: string };
+type Row = {
+  id: string;
+  name: string;
+  values: string[];
+  href: string;
+  identity?: "merchant" | "person";
+  event?: string;
+  unread?: boolean;
+  updated?: string;
+};
 function useListing() {
   const params = useSearchParams(),
     router = useRouter(),
@@ -137,7 +152,40 @@ function Grid({
                 key={r.id}
                 className="border-t border-gray-200 dark:border-gray-800"
               >
-                <td className="p-4 font-medium">{r.name}</td>
+                <td className="p-4 font-medium">
+                  <div className="tp-identity">
+                    {r.identity && (
+                      <IdentityImage
+                        name={r.name}
+                        person={r.identity === "person"}
+                        src={
+                          r.identity === "person"
+                            ? demoPersonImage
+                            : demoMerchantImage
+                        }
+                      />
+                    )}
+                    <span>
+                      {r.event && (
+                        <span className="block">
+                          {r.unread && (
+                            <span
+                              className="tp-unread"
+                              aria-label={t("unread")}
+                            />
+                          )}
+                          {r.event}
+                        </span>
+                      )}
+                      {r.name}
+                      {r.updated && (
+                        <small className="block text-gray-500">
+                          {r.updated}
+                        </small>
+                      )}
+                    </span>
+                  </div>
+                </td>
                 {r.values.map((v, i) => (
                   <td key={i} className="p-4">
                     {v}
@@ -160,8 +208,36 @@ function Grid({
       </div>
       <div className="grid gap-4 md:grid-cols-2 xl:hidden">
         {rows.map((r) => (
-          <article className={panel} key={r.id}>
-            <h2 className="mb-5 text-lg font-semibold break-words">{r.name}</h2>
+          <article
+            className={`${panel} ${r.event ? "tp-event" : ""}`}
+            data-unread={r.unread}
+            key={r.id}
+          >
+            {r.event && (
+              <h3 className="tp-event-heading mb-3">
+                {r.unread && (
+                  <span className="tp-unread" aria-label={t("unread")} />
+                )}
+                {r.event}
+              </h3>
+            )}
+            <div className="tp-identity mb-4">
+              {r.identity && (
+                <IdentityImage
+                  name={r.name}
+                  person={r.identity === "person"}
+                  src={
+                    r.identity === "person"
+                      ? demoPersonImage
+                      : demoMerchantImage
+                  }
+                />
+              )}
+              <h2 className="text-lg font-semibold break-words">{r.name}</h2>
+            </div>
+            {r.updated && (
+              <p className="mb-3 text-sm text-gray-500">{r.updated}</p>
+            )}
             <dl className="space-y-3">
               {r.values.map((v, i) => (
                 <div className="flex flex-wrap justify-between gap-2" key={i}>
@@ -269,7 +345,17 @@ export function DirectoryPage({ kind, id }: { kind: Directory; id?: string }) {
         {entity && (
           <>
             <section className={panel}>
-              <h2 className="text-lg font-semibold">{entity.name}</h2>
+              <div className="tp-identity">
+                <IdentityImage
+                  name={entity.name}
+                  person={kind !== "restaurants"}
+                  large
+                  src={
+                    kind === "restaurants" ? demoMerchantImage : demoPersonImage
+                  }
+                />
+                <h2 className="text-lg font-semibold">{entity.name}</h2>
+              </div>
               <p className="mt-4 text-gray-500">{t("missing")}</p>
               <p className="mt-4">
                 {t("area")}:{" "}
@@ -399,6 +485,10 @@ export function DirectoryPage({ kind, id }: { kind: Directory; id?: string }) {
           rows={filtered.slice((page - 1) * 8, page * 8).map((e) => ({
             id: e.id,
             name: e.name,
+            identity:
+              kind === "restaurants"
+                ? ("merchant" as const)
+                : ("person" as const),
             values: [
               String(e.orders.length),
               [
@@ -600,6 +690,8 @@ export function AnalyticsPage({
   );
 }
 export function NotificationsPage({ id }: { id?: string }) {
+  const locale = useLocale();
+  const c = visualCopy[locale as keyof typeof visualCopy] || visualCopy.en;
   const t = useTranslations("workspace"),
     nav = useTranslations("talabot"),
     st = useTranslations("talabotOrders"),
@@ -626,13 +718,31 @@ export function NotificationsPage({ id }: { id?: string }) {
           <section className={panel}>
             {item ? (
               <>
-                <h2 className="text-lg font-semibold">
-                  {t("notification")} · {item.order.id}
-                </h2>
+                <div className="tp-identity">
+                  <IdentityImage
+                    name={item.order.merchant}
+                    src={demoMerchantImage}
+                    large
+                  />
+                  <div>
+                    <h2 className="text-lg font-semibold">
+                      {t("notification")} · {item.order.id}
+                    </h2>
+                    <p>
+                      {nav(
+                        item.order.status === "cancelled"
+                          ? "cancellationReview"
+                          : "deliveryIssue",
+                      )}
+                    </p>
+                  </div>
+                </div>
                 <p className="my-4">
                   {item.order.merchant} · {st(`status.${item.order.status}`)}
                 </p>
-                <p className="mb-4">{item.order.updated}</p>
+                <p className="mb-4">
+                  {c.noticeTime}: {item.order.updated}
+                </p>
                 <button
                   className={button}
                   disabled={read.includes(id)}
@@ -682,6 +792,13 @@ export function NotificationsPage({ id }: { id?: string }) {
               rows={filtered.slice((page - 1) * 8, page * 8).map((n) => ({
                 id: n.id,
                 name: n.order.id,
+                event: nav(
+                  n.order.status === "cancelled"
+                    ? "cancellationReview"
+                    : "deliveryIssue",
+                ),
+                unread: !read.includes(n.id),
+                updated: `${c.noticeTime}: ${n.order.updated}`,
                 values: [
                   n.order.merchant,
                   t(read.includes(n.id) ? "read" : "unread"),

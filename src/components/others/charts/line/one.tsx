@@ -48,7 +48,7 @@ export default function LineChartOne() {
       legend: {
         show: false,
       },
-      colors: ["#465FFF"],
+      colors: ["#F36831"],
       chart: {
         fontFamily: "Outfit, sans-serif",
         height: 310,
@@ -71,7 +71,7 @@ export default function LineChartOne() {
       markers: {
         size: 0,
         colors: ["#ffffff"],
-        strokeColors: ["#465FFF"],
+        strokeColors: ["#F36831"],
         strokeWidth: 2,
         hover: {
           size: 5,
@@ -79,7 +79,7 @@ export default function LineChartOne() {
       },
       grid: {
         position: "back",
-        borderColor: theme === "dark" ? "#1E2640" : "#F3F4F6",
+        borderColor: theme === "dark" ? "#404040" : "#f2f2f2",
         strokeDashArray: 0,
         xaxis: {
           lines: {
@@ -108,14 +108,14 @@ export default function LineChartOne() {
             w.globals?.categoryLabels?.[dataPointIndex] ??
             w.config.xaxis?.categories?.[dataPointIndex] ??
             "";
-          const colors = w.config.colors ?? ["#465FFF"];
+          const colors = w.config.colors ?? ["#F36831"];
           const seriesList =
             (w.config.series as unknown as TooltipSeriesItem[]) ?? [];
 
           const rows = seriesList
             .map((s, idx) => {
               const val = chartSeries[idx]?.[dataPointIndex];
-              const color = colors[idx] ?? "#465FFF";
+              const color = colors[idx] ?? "#F36831";
               const formattedVal =
                 typeof val === "number" ? val.toLocaleString() : (val ?? "");
               return `

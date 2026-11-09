@@ -5,6 +5,7 @@ import {
   PreviewProvider,
   MobileNavigation,
 } from "@/components/talabot/preview";
+import "@/components/talabot/integrated-review/polish.css";
 import AppHeader from "@/layout/app-layout/header";
 import AppSidebar from "@/layout/app-layout/sidebar";
 
@@ -15,7 +16,7 @@ export default function AdminLayout({
 }) {
   return (
     <PreviewProvider>
-      <SidebarProvider>
+      <SidebarProvider className="talabot-polish">
         <AppSidebar />
 
         <SidebarInset>

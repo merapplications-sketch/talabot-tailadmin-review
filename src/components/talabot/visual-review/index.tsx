@@ -1,5 +1,11 @@
 "use client";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useTheme } from "@/context/theme-context";
@@ -50,12 +56,15 @@ export function ReviewAvatar({
   large?: boolean;
   logo?: boolean;
 }) {
-  const [failed, setFailed] = useState(false);
-  const imageRef = useRef<HTMLImageElement>(null);
-  useEffect(() => {
-    const image = imageRef.current;
-    setFailed(Boolean(src && image?.complete && image.naturalWidth === 0));
-  }, [src]);
+  const [failedSource, setFailedSource] = useState<string>();
+  const failed = Boolean(src && src === failedSource);
+  const imageRef = useCallback(
+    (image: HTMLImageElement | null) => {
+      if (src && image?.complete && image.naturalWidth === 0)
+        setFailedSource(src);
+    },
+    [src],
+  );
   return (
     <span
       className="vr-avatar"
@@ -73,7 +82,7 @@ export function ReviewAvatar({
           alt=""
           width={large ? 80 : 48}
           height={large ? 80 : 48}
-          onError={() => setFailed(true)}
+          onError={() => setFailedSource(src)}
         />
       ) : (
         <span aria-hidden="true">
@@ -272,8 +281,8 @@ export function VisualReview() {
       currency: "TJS",
     }).format(v);
   const date = (v: string) =>
-    new Intl.DateTimeFormat(locale, {
-      month: "short",
+    new Intl.DateTimeFormat(locale === "tg" ? "en-GB" : locale, {
+      month: locale === "tg" ? "2-digit" : "short",
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",

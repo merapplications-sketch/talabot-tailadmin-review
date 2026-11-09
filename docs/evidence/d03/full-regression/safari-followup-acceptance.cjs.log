@@ -1,0 +1,40 @@
+{
+  results: [
+    {
+      mobile: true,
+      test: 'reversed dates rejected; visible input marked invalid',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'save and reopen same-day event retains both 2026-11-20 dates',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'reopen modal and rerender retains exactly two date inputs',
+      pass: true
+    },
+    {
+      mobile: true,
+      test: 'notification content scrolls to end and closes landscape',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'reversed dates rejected; visible input marked invalid',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'save and reopen same-day event retains both 2026-11-20 dates',
+      pass: true
+    },
+    {
+      mobile: false,
+      test: 'reopen modal and rerender retains exactly two date inputs',
+      pass: true
+    }
+  ],
+  errors: []
+}

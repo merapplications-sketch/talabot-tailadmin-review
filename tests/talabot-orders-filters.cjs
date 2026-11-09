@@ -23,6 +23,7 @@ const { chromium } = require("playwright"),
   await p.getByRole("link", { name: "Back to orders" }).click();
   await p.getByTestId("orders-list").waitFor();
   await p.waitForLoadState("networkidle");
+  await p.getByText("More filters", { exact: true }).click();
   await p
     .getByLabel("Restaurant / store", { exact: true })
     .selectOption("Demo Bistro");
@@ -32,7 +33,8 @@ const { chromium } = require("playwright"),
   assert.equal(await p.getByTestId("result-count").innerText(), "12 orders");
   await p.getByRole("button", { name: "Reset filters" }).click();
   await p.waitForURL("**/orders");
-  await p.getByText("More filters", { exact: true }).click();
+  if (!(await p.getByLabel("Pickup area", { exact: true }).isVisible()))
+    await p.getByText("More filters", { exact: true }).click();
   await p.getByLabel("Pickup area", { exact: true }).selectOption("Sino");
   await p.waitForURL(/pickup=Sino/);
   assert.equal(await p.getByTestId("result-count").innerText(), "9 orders");

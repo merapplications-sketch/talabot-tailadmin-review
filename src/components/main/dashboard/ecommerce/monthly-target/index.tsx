@@ -35,7 +35,7 @@ export default function MonthlyTarget() {
           size: "80%",
         },
         track: {
-          background: theme === "dark" ? "#1E2640" : "#E4E7EC",
+          background: theme === "dark" ? "#404040" : "#E4E7EC",
           strokeWidth: "100%",
           margin: 5, // margin is in pixels
         },
@@ -47,7 +47,7 @@ export default function MonthlyTarget() {
             fontSize: "36px",
             fontWeight: "600",
             offsetY: -35,
-            color: theme === "dark" ? "#FFFFFF" : "#1D2939",
+            color: theme === "dark" ? "#FFFFFF" : "#262626",
             formatter: function (val: number) {
               return val + "%";
             },

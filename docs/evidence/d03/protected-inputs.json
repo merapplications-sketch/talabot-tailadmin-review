@@ -1,0 +1,46 @@
+[
+  {
+    "file": "package.json",
+    "unchanged": true
+  },
+  {
+    "file": "package-lock.json",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/talabot/analytics-data.ts",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/talabot/orders-data.ts",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/talabot/directories-data.ts",
+    "unchanged": true
+  },
+  {
+    "file": "src/layout/app-layout/sidebar/index.tsx",
+    "unchanged": true
+  },
+  {
+    "file": "src/components/talabot/preview.tsx",
+    "unchanged": true
+  },
+  {
+    "file": "public/images/logo/talabot-original.png",
+    "unchanged": true
+  },
+  {
+    "file": "src/layout/header/notification-dropdown/index.tsx",
+    "unchanged": true
+  },
+  {
+    "file": "src/layout/header/notification-dropdown/types.ts",
+    "unchanged": true
+  },
+  {
+    "file": "src/layout/header/notification-dropdown/data.ts",
+    "unchanged": true
+  }
+]

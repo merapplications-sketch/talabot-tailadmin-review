@@ -1,0 +1,1270 @@
+{
+  "results": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 320,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "route": "/line-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/orders?q=DEMO-1104",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/drivers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/customers",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/notifications",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/restaurants/1",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/review/image-cases",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/bar-chart",
+      "pass": true
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/line-chart",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "extraChecks": [
+    "quick filters + search + back",
+    "OS auto mode + saved dark reload"
+  ],
+  "realSafari": false
+}

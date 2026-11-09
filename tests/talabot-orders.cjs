@@ -47,6 +47,7 @@ fs.mkdirSync(out, { recursive: true });
   await p.getByTestId("empty-orders").waitFor();
   await p.getByRole("button", { name: "Reset filters" }).click();
   await p.waitForURL("**/orders");
+  await p.getByText("More filters", { exact: true }).click();
   await p.getByLabel("Status", { exact: true }).selectOption("delivered");
   await p.waitForURL(/status=delivered/);
   assert.equal(await p.getByTestId("result-count").innerText(), "5 orders");

@@ -9,7 +9,7 @@ export function GptIcon({ className, ...props }: IconProps) {
       height={18}
       viewBox="0 0 18 18"
       fill="none"
-      className={cn("text-[#1D2939] dark:text-white", className)}
+      className={cn("text-[#262626] dark:text-white", className)}
       {...props}
     >
       <path

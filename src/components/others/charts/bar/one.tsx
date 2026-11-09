@@ -14,7 +14,7 @@ export default function BarChartOne() {
   const { theme } = useTheme();
 
   const options: ApexOptions = {
-    colors: ["#465FFF"],
+    colors: ["#F36831"],
     chart: {
       fontFamily: "Outfit, sans-serif",
       type: "bar",
@@ -91,7 +91,7 @@ export default function BarChartOne() {
       },
     },
     grid: {
-      borderColor: theme === "dark" ? "#1E2640" : "#F3F4F6",
+      borderColor: theme === "dark" ? "#404040" : "#f2f2f2",
       strokeDashArray: 0,
       padding: {
         left: -10,
@@ -124,7 +124,7 @@ export default function BarChartOne() {
           },
           {
             offset: 100,
-            color: "#465FFF",
+            color: "#F36831",
             opacity: 1,
           },
         ],

@@ -1,0 +1,411 @@
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (6930:20) [33m[UNRESOLVED_IMPORT] [0mCould not resolve 'esbuild' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:6930:21 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m6930 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m|[0m[38;5;249m|[0m[38;5;249m=[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"esbuild"[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                        ────┬────  
+ [38;5;240m     │[0m                            ╰────── Module not found, treating it as an external dependency
+[38;5;246m──────╯[0m
+
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (30658:54) [33m[UNRESOLVED_IMPORT] [0mCould not resolve 'esbuild' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+       [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:30658:55 [38;5;246m][0m
+       [38;5;246m│[0m
+ [38;5;246m30658 │[0m [38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249mE[0m[38;5;249ms[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mC[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mI[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"esbuild"[38;5;249m)[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m      │[0m                                                       ────┬────  
+ [38;5;240m      │[0m                                                           ╰────── Module not found, treating it as an external dependency
+[38;5;246m───────╯[0m
+
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (36615:69) [33m[UNRESOLVED_IMPORT] [0mCould not resolve '@vitejs/devtools/config' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+       [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:36615:70 [38;5;246m][0m
+       [38;5;246m│[0m
+ [38;5;246m36615 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249mD[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249mT[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249mE[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249me[0m[38;5;249mD[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249mT[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"@vitejs/devtools/config"[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m      │[0m                                                                         ────────────┬────────────  
+ [38;5;240m      │[0m                                                                                     ╰────────────── Module not found, treating it as an external dependency
+[38;5;246m───────╯[0m
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/index.mjs:67:42). Use `import.meta.filename` instead
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/chunk-U6NEESU5-BzWFpRaS.mjs:4:60). Use `import.meta.filename` instead
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/open-PCXX3ZDZ-BXBWVkHI.mjs:14:42). Use `import.meta.filename` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[vinext] next.config option "webpack" is only partially supported. vinext preserves resolve.alias, resolve.extensions, MDX loader settings, next-intl message catalog loaders, and instrumentation-client route manifests, but other webpack customization is ignored
+Unable to fetch the `Request.cf` object! Falling back to a default placeholder...
+TimeoutError: The operation was aborted due to timeout
+    at new DOMException (node:internal/per_context/domexception:76:18)
+    at Timeout._onTimeout (node:internal/abort_controller:210:9)
+    at listOnTimeout (node:internal/timers:685:17)
+    at process.processTimers (node:internal/timers:618:7)
+    at /workspace/scratch/a33b43cfdcd7/repo/node_modules/undici/index.js:157:7
+    at async setupCf (/workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:78793:17)
+    at async #assembleConfig (/workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:139502:21)
+    at async #assembleAndUpdateConfigInternal (/workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:139913:21)
+    at async #assembleAndUpdateConfig (/workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:139895:7)
+    at async /workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:138784:7
+    at async Mutex.runWith (/workspace/scratch/a33b43cfdcd7/repo/node_modules/miniflare/dist/src/index.js:81026:16)
+11:43:26 PM [vite] (rsc) warning: client component dependency is inconsistently optimized. It's recommended to add the dependency to 'optimizeDeps.exclude'.
+  Plugin: rsc:use-client
+  File: /workspace/scratch/a33b43cfdcd7/repo/node_modules/@base-ui/react/direction-provider/DirectionProvider.mjs?v=c6788833
+11:43:26 PM [vite] (rsc) warning: client component dependency is inconsistently optimized. It's recommended to add the dependency to 'optimizeDeps.exclude'.
+  Plugin: rsc:use-client
+  File: /workspace/scratch/a33b43cfdcd7/repo/node_modules/@base-ui/react/internals/direction-context/DirectionContext.mjs?v=c6788833
+11:43:27 PM [vite] (rsc) warning: client component dependency is inconsistently optimized. It's recommended to add the dependency to 'optimizeDeps.exclude'.
+  Plugin: rsc:use-client
+  File: /workspace/scratch/a33b43cfdcd7/repo/node_modules/next-intl/dist/esm/development/shared/NextIntlClientProvider.js?v=c6788833
+error when starting dev server:
+Error: Another vinext dev server is already running.
+
+- Local:        http://127.0.0.1:3021
+- PID:          30
+- Dir:          /workspace/scratch/d301f10bb459/repo
+
+You can access the existing server at http://127.0.0.1:3021,
+or run `kill 30` to stop it and start a new one.
+    at server.listen (file:///workspace/scratch/d301f10bb459/qa-vite.config.mjs.timestamp-1794253394840-7753b157bc01b8.mjs:17038:28)
+    at CAC.<anonymous> (file:///workspace/scratch/a33b43cfdcd7/repo/node_modules/vite/dist/node/cli.js:725:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+eval() is not supported in this environment. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+[vite] program reload
+11:44:08 PM [vite] (client) page reload public/d03-comparison/index.html
+11:44:24 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:44:33 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:44:41 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+
+11:44:50 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:44:59 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:45:07 PM [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:45:12 PM [vite] (rsc) hmr update /src/app/globals.css
+11:45:12 PM [vite] (client) hmr update /src/app/globals.css?direct
+11:45:12 PM [vite] (rsc) hmr update /src/app/globals.css
+11:45:12 PM [vite] (client) hmr update /src/app/globals.css?direct
+ Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>
+      <PageInvoker>
+        <AwaitAppRenderDependencies>
+          <Suspense>
+            <OrdersList>
+              <div className="space-y-6 ..." data-testid="orders-list">
+                <div>
+                <section>
+                <div className="hidden ove...">
+                  <table className="w-full tex..." data-testid="orders-table">
+                    <caption>
+                    <thead>
+                    <tbody className="divide-y d...">
+                      <tr>
+                        <td className="px-4 py-5">
+                          <p>
+                          <p className="mt-1 text-xs text-gray-500">
++                           M11 8 16:10
+-                           Nov 8, 16:10
+                        ...
+                ...
+                ...
+
+ > throwOnHydrationMismatch ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > prepareToHydrateHostInstance ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:5643:20
+ > completeWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:13009:14
+ > runWithFiberInDEV ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:19004:40
+ > renderRootSync ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18985:10
+ > performWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:18015:10
+ > performSyncWorkOnRoot ../../a33b43cfdcd7/repo/node_modules/react-dom/cjs/react-dom-client.development.js:20680:6
+
+11:45:12 PM [vite] (rsc) hmr update /src/app/globals.css
+11:45:12 PM [vite] (client) hmr update /src/app/globals.css?direct
+11:45:12 PM [vite] (rsc) hmr update /src/app/globals.css
+11:45:12 PM [vite] (client) hmr update /src/app/globals.css?direct

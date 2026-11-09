@@ -128,7 +128,7 @@ function Plot({
 }) {
   const { theme } = useTheme();
   const options: ApexOptions = {
-    colors: ["#F36831", "#98A2B3"],
+    colors: ["#F36831", "#a3a3a3"],
     chart: {
       background: "transparent",
       fontFamily: "Outfit, sans-serif",
@@ -160,7 +160,7 @@ function Plot({
         formatter: (v) => (Number.isInteger(v) ? String(v) : v.toFixed(1)),
       },
     },
-    grid: { borderColor: theme === "dark" ? "#1E2640" : "#F3F4F6" },
+    grid: { borderColor: theme === "dark" ? "#404040" : "#f2f2f2" },
     tooltip: {
       y: {
         formatter: (v) =>
@@ -242,7 +242,7 @@ export default function AnalyticsDashboard() {
         startAngle: -90,
         endAngle: 90,
         hollow: { size: "80%" },
-        track: { background: "#98A2B333" },
+        track: { background: "#a3a3a333" },
         dataLabels: {
           name: { show: false },
           value: {

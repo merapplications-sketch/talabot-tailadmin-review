@@ -1,0 +1,237 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n',
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n',
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n',
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n',
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n',
++   "Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n" +
++     '\n' +
++     "- A server/client branch `if (typeof window !== 'undefined')`.\n" +
++     "- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n" +
++     "- Date formatting in a user's locale which doesn't match the server.\n" +
++     '- External changing data without sending a snapshot of it along with the HTML.\n' +
++     '- Invalid HTML tag nesting.\n' +
++     '\n' +
++     'It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n' +
++     '\n' +
++     'https://react.dev/link/hydration-mismatch\n' +
++     '\n' +
++     '  ...\n' +
++     '    <BfcacheSlotBoundary id="page:/tg/o..." content={<Context>}>\n' +
++     '      <PageInvoker>\n' +
++     '        <AwaitAppRenderDependencies>\n' +
++     '          <Suspense>\n' +
++     '            <OrdersList>\n' +
++     '              <div className="space-y-6 ..." data-testid="orders-list">\n' +
++     '                <div>\n' +
++     '                <section>\n' +
++     '                <div className="hidden ove...">\n' +
++     '                  <table className="w-full tex..." data-testid="orders-table">\n' +
++     '                    <caption>\n' +
++     '                    <thead>\n' +
++     '                    <tbody className="divide-y d...">\n' +
++     '                      <tr>\n' +
++     '                        <td className="px-4 py-5">\n' +
++     '                          <p>\n' +
++     '                          <p className="mt-1 text-xs text-gray-500">\n' +
++     '+                           M11 8 16:10\n' +
++     '-                           Nov 8, 16:10\n' +
++     '                        ...\n' +
++     '                ...\n' +
++     '                ...\n'
++ ]
+- []
+
+    at /workspace/scratch/d301f10bb459/repo/tests/d03-integrated.cjs:7:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+tests/d03-integrated.cjs 1
+PASS date-tests.mjs
+PASS forms-tests.mjs
+PASS talabot-orders-wording.mjs
+PASS talabot-orders-data.cjs
+PASS talabot-directory-data.cjs
+PASS talabot-analytics-data.cjs
+PASS talabot-design.cjs
+PASS talabot-input-nav.cjs
+PASS talabot-orders.cjs
+PASS talabot-orders-filters.cjs
+PASS talabot-orders-followup.cjs

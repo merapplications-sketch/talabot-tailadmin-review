@@ -9,7 +9,7 @@ export function FluxIcon({ className, ...props }: IconProps) {
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("text-[#1D2939] dark:text-white/90", className)}
+      className={cn("text-[#262626] dark:text-white/90", className)}
       {...props}
     >
       <path
