@@ -20,6 +20,7 @@ import type { CalendarEvent, EventFormData } from "./types";
 
 export interface CalendarEventModalProps {
   open?: boolean;
+  finalFocus?: React.RefObject<HTMLElement | null>;
   onOpenChange?: (open: boolean) => void;
   isOpen?: boolean;
   onClose?: () => void;
@@ -39,6 +40,7 @@ const EVENT_COLORS = [
 
 export default function CalendarEventModal({
   open,
+  finalFocus,
   onOpenChange,
   isOpen,
   onClose,
@@ -249,6 +251,7 @@ export default function CalendarEventModal({
   return (
     <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
       <DialogContent
+        finalFocus={finalFocus}
         showCloseButton={false}
         className="max-h-[calc(100dvh-2rem)] overflow-y-auto border-none bg-transparent p-0 shadow-none sm:max-w-175"
       >

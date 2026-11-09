@@ -70,9 +70,10 @@ export default function NotificationDropdown() {
         }}
         align="end"
         sideOffset={12}
+        collisionAvoidance={{ side: "shift", align: "shift" }}
         className="w-87.5 max-w-[calc(100vw-2rem)] overflow-hidden p-3 sm:w-90.25 dark:bg-[#1E2635]"
       >
-        <div className="flex items-center justify-between pb-3">
+        <div className="flex shrink-0 items-center justify-between pb-3">
           <h5 className="text-title-sm font-semibold text-gray-800 dark:text-gray-200">
             {t("title")}
           </h5>
@@ -87,9 +88,9 @@ export default function NotificationDropdown() {
           </Button>
         </div>
 
-        <DropdownMenuSeparator className="my-0" />
+        <DropdownMenuSeparator className="my-0 shrink-0" />
 
-        <ScrollArea className="h-96">
+        <ScrollArea className="h-96 min-h-0 shrink">
           <div className="flex flex-col pe-2">
             {notifications.map((item) => (
               <Fragment key={item.id}>
@@ -127,7 +128,7 @@ export default function NotificationDropdown() {
           size="default"
           nativeButton={false}
           render={<Link href="/" />}
-          className="mt-3 w-full"
+          className="mt-3 w-full shrink-0"
           onClick={() => setIsOpen(false)}
         >
           {t("viewAll")}

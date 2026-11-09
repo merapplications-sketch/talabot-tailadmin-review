@@ -90,6 +90,7 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
   const [isMobile, setIsMobile] = useState(false);
 
   const calendarRef = useRef<CalendarRef>(null);
+  const editorReturnFocus = useRef<HTMLElement | null>(null);
   const calendarContainerRef = useRef<HTMLDivElement>(null);
   const [isEventModalOpen, setIsEventModalOpen] = useState(false);
 
@@ -99,6 +100,7 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
   };
 
   const handleOpenAddModal = () => {
+    editorReturnFocus.current = document.activeElement as HTMLElement;
     const currentDate = new Date();
     const yyyy = currentDate.getFullYear();
     const mm = String(currentDate.getMonth() + 1).padStart(2, "0");
@@ -112,6 +114,7 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
   };
 
   const handleDateSelect = (selectInfo: DateSelectInfo) => {
+    editorReturnFocus.current = document.activeElement as HTMLElement;
     const startStr = selectInfo.startStr
       ? selectInfo.startStr.split("T")[0]
       : "";
@@ -134,6 +137,18 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
       clickInfo.jsEvent?.preventDefault();
       return;
     }
+
+    // FullCalendar owns the day-list lifecycle. Use its close control so its
+    // state, document listeners and focus trap are released before editing.
+    const dayList = clickInfo.el.closest<HTMLElement>(".calendar-day-popover");
+    editorReturnFocus.current = dayList
+      ? (calendarContainerRef.current?.querySelector<HTMLElement>(
+          `[aria-controls="${CSS.escape(dayList.id)}"]`,
+        ) ?? null)
+      : clickInfo.el;
+    dayList
+      ?.querySelector<HTMLButtonElement>(".calendar-day-popover-close")
+      ?.click();
 
     const startStr = event.startStr ? event.startStr.split("T")[0] : "";
     const endStr = event.endStr ? event.endStr.split("T")[0] : startStr;
@@ -508,8 +523,8 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
           rowEventClass="bg-transparent! border-0! px-1! py-0.5! shadow-none! hover:shadow-none! focus:outline-none"
           rowEventInnerClass="p-0! border-0! bg-transparent!"
           popoverFormat={{ month: "short", day: "numeric", year: "numeric" }}
-          popoverClass="z-99999! w-72 max-w-[calc(100vw-32px)] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-theme-lg dark:border-gray-800 dark:bg-gray-900"
-          popoverCloseClass="absolute end-3 top-2.5 flex size-7 cursor-pointer items-center justify-center rounded-lg text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 focus:outline-none dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white"
+          popoverClass="calendar-day-popover z-99999! w-72 max-w-[calc(100vw-32px)] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-theme-lg dark:border-gray-800 dark:bg-gray-900"
+          popoverCloseClass="calendar-day-popover-close absolute end-3 top-2.5 flex size-7 cursor-pointer items-center justify-center rounded-lg text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600 focus:outline-none dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white"
           popoverCloseContent={() => <CloseIcon className="size-4" />}
           datesSet={(arg) => {
             setCurrentView(arg.view.type);
@@ -540,6 +555,7 @@ export default function Calendar({ initialNow }: { initialNow: string }) {
 
       <CalendarEventModal
         open={isEventModalOpen}
+        finalFocus={editorReturnFocus}
         onOpenChange={setIsEventModalOpen}
         selectedEvent={selectedEvent}
         initialStartDate={selectedStartDate}

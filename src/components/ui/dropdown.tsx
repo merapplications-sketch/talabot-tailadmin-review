@@ -23,13 +23,19 @@ function DropdownMenuContent({
   side = "bottom",
   sideOffset = 8,
   anchor,
+  collisionAvoidance,
   className,
   positionerClassName,
   ...props
 }: MenuPrimitive.Popup.Props &
   Pick<
     MenuPrimitive.Positioner.Props,
-    "align" | "alignOffset" | "side" | "sideOffset" | "anchor"
+    | "align"
+    | "alignOffset"
+    | "side"
+    | "sideOffset"
+    | "anchor"
+    | "collisionAvoidance"
   > & {
     positionerClassName?: string;
   }) {
@@ -42,6 +48,7 @@ function DropdownMenuContent({
         side={side}
         sideOffset={sideOffset}
         anchor={anchor}
+        collisionAvoidance={collisionAvoidance}
       >
         <MenuPrimitive.Popup
           data-slot="dropdown-menu-content"
