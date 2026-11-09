@@ -10,7 +10,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import {
   BellIcon,
   BoxIcon,
@@ -43,11 +43,16 @@ export const usePreview = () => useContext(PreviewContext);
 
 export function PreviewProvider({ children }: { children: React.ReactNode }) {
   const t = useTranslations("talabot");
+  const router = useRouter();
   const [destination, setDestination] = useState<Destination | null>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
   return (
     <PreviewContext.Provider
       value={(next) => {
+        if (next === "orders") {
+          router.push("/orders");
+          return;
+        }
         returnFocus.current = document.activeElement as HTMLElement;
         setDestination(next);
       }}
@@ -228,11 +233,16 @@ export function PreviewSidebar({ showContent }: { showContent: boolean }) {
             key={key}
             type="button"
             aria-label={t(key)}
+            aria-current={
+              key === "orders" && pathname.startsWith("/orders")
+                ? "page"
+                : undefined
+            }
             onClick={() => {
               setOpenMobile(false);
               requestAnimationFrame(() => show(key));
             }}
-            className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-start text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/5"
+            className={`flex w-full items-center gap-3 rounded-lg px-3 py-3 text-start text-sm hover:bg-gray-100 dark:hover:bg-white/5 ${key === "orders" && pathname.startsWith("/orders") ? "text-brand-500" : "text-gray-700 dark:text-gray-300"}`}
           >
             <Icon className="size-6 shrink-0" />
             {showContent && t(key)}
@@ -297,7 +307,12 @@ export function MobileNavigation({
             key={key}
             type="button"
             onClick={() => show(key)}
-            className="flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-1 py-2 text-xs text-gray-500 dark:text-gray-400"
+            aria-current={
+              key === "orders" && pathname.startsWith("/orders")
+                ? "page"
+                : undefined
+            }
+            className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-1 py-2 text-xs ${key === "orders" && pathname.startsWith("/orders") ? "text-brand-500" : "text-gray-500 dark:text-gray-400"}`}
           >
             <Icon className="size-5" />
             {t(key)}
