@@ -1,0 +1,52 @@
+[
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "sha256": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108",
+    "matches": [
+      "source",
+      "G6 regression",
+      "final matrix",
+      "Site checkout"
+    ]
+  },
+  {
+    "path": "src/components/talabot/integrated-review/order-status.tsx",
+    "sha256": "651eefa765184be8373830adf8f4e6ae73472c8710f40ae8a8ce7ff9a8a7c56a",
+    "matches": [
+      "source",
+      "G6 regression",
+      "final matrix",
+      "Site checkout"
+    ]
+  },
+  {
+    "path": "src/components/talabot/integrated-review/polish.css",
+    "sha256": "9669caa24c22a56016110e6ea6349cc00c2b9e4699c717946e15bc26433f1fe7",
+    "matches": [
+      "source",
+      "G6 regression",
+      "final matrix",
+      "Site checkout"
+    ]
+  },
+  {
+    "path": "src/components/talabot/orders.tsx",
+    "sha256": "23285a3dbcda574f861ea0724844e122116ea37b559f3de9f9db85486b64765e",
+    "matches": [
+      "source",
+      "G6 regression",
+      "final matrix",
+      "Site checkout"
+    ]
+  },
+  {
+    "path": "src/components/talabot/workspace.tsx",
+    "sha256": "3913d6fbafca91dc9d52c5d197e7400fd7187cec8cb8f4f307812b6cfc136f60",
+    "matches": [
+      "source",
+      "G6 regression",
+      "final matrix",
+      "Site checkout"
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (6930:20) [33m[UNRESOLVED_IMPORT] [0mCould not resolve 'esbuild' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:6930:21 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m6930 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m|[0m[38;5;249m|[0m[38;5;249m=[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"esbuild"[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                        ────┬────  
+ [38;5;240m     │[0m                            ╰────── Module not found, treating it as an external dependency
+[38;5;246m──────╯[0m
+
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (30658:54) [33m[UNRESOLVED_IMPORT] [0mCould not resolve 'esbuild' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+       [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:30658:55 [38;5;246m][0m
+       [38;5;246m│[0m
+ [38;5;246m30658 │[0m [38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249mE[0m[38;5;249ms[0m[38;5;249mb[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mC[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mI[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"esbuild"[38;5;249m)[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m      │[0m                                                       ────┬────  
+ [38;5;240m      │[0m                                                           ╰────── Module not found, treating it as an external dependency
+[38;5;246m───────╯[0m
+
+../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js (36615:69) [33m[UNRESOLVED_IMPORT] [0mCould not resolve '@vitejs/devtools/config' in ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js
+       [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../a33b43cfdcd7/repo/node_modules/vite/dist/node/chunks/node.js:36615:70 [38;5;246m][0m
+       [38;5;246m│[0m
+ [38;5;246m36615 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249ms[0m[38;5;249mD[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249mT[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249mE[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249md[0m[38;5;249m,[0m[38;5;249m [0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mm[0m[38;5;249ma[0m[38;5;249ml[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249me[0m[38;5;249mD[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249mT[0m[38;5;249mo[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249ms[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mg[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m([0m"@vitejs/devtools/config"[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m      │[0m                                                                         ────────────┬────────────  
+ [38;5;240m      │[0m                                                                                     ╰────────────── Module not found, treating it as an external dependency
+[38;5;246m───────╯[0m
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/index.mjs:67:42). Use `import.meta.filename` instead
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/chunk-U6NEESU5-BzWFpRaS.mjs:4:60). Use `import.meta.filename` instead
+  - `__filename` (../../a33b43cfdcd7/repo/node_modules/@cloudflare/vite-plugin/dist/open-PCXX3ZDZ-BXBWVkHI.mjs:14:42). Use `import.meta.filename` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+[vinext] next.config option "webpack" is only partially supported. vinext preserves resolve.alias, resolve.extensions, MDX loader settings, next-intl message catalog loaders, and instrumentation-client route manifests, but other webpack customization is ignored
+error when starting dev server:
+Error: Another vinext dev server is already running.
+
+- Local:        http://127.0.0.1:3041
+- PID:          13
+- Dir:          /workspace/scratch/d301f10bb459/d04-qa
+
+You can access the existing server at http://127.0.0.1:3041,
+or run `kill 13` to stop it and start a new one.
+    at server.listen (file:///workspace/scratch/d301f10bb459/qa-vite.config.mjs.timestamp-1794260675975-2dc0a308d1f93.mjs:17038:28)
+    at CAC.<anonymous> (file:///workspace/scratch/a33b43cfdcd7/repo/node_modules/vite/dist/node/cli.js:725:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

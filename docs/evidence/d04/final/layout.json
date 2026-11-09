@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "height": 640,
+      "theme": "light",
+      "phase": 6,
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "theme": "dark",
+      "phase": 6,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "phase": 6,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "phase": 6,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "phase": 6,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "phase": 6,
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "realSafari": false
+}

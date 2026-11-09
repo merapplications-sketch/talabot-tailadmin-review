@@ -1,0 +1,17 @@
+{
+  "baseline": "0883c1ea779ae6b9316a4f1eb0c0682f3bd6a93a",
+  "globalsByteIdentical": true,
+  "primary": "#F36831",
+  "preparingLight": [
+    "#FFF0E8",
+    "#B54708"
+  ],
+  "preparingDark": [
+    "#38251C",
+    "#FFAB85"
+  ],
+  "logoByteIdentical": true,
+  "logoSha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367",
+  "cancelledColourAbsentFromSource": true,
+  "runtimeColourAssertion": "Passed in final 6/6 layout checks"
+}

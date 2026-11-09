@@ -1,0 +1,614 @@
+[
+  {
+    "file": "details-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "a44adfca3fc969464258d4a71c9f3b61d0ee6e331215c33f9f1bee84e98284a7",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "2af2d5e111229830e794e4af9d5563936b8f663e150980e2451da4d229c72425",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "d60034f2e24ea0d5114bc420ef17936dbe4043ad122f221309e16da599d42a12",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "1481c8480e754f29739a599b3d906c4a9c4eb8127fc062aec61248d488f2eea8",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-320-dark-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "ae16a64af186df575eaca13bafabc33829b4a5e5526377a4e70656fa6fdc2fa5",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-320-dark-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "ddfd51e9ec44ea6b49c73566c55121c2742a9cc06644e8e5f79079fff51e142f",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-320-light-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "717951b5afc83094cc111796e31efabe8b1ce551bab11a51f7fa2964ce8257c5",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-320-light-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "58286632e21d9ff5313c37be5e446379f3eea9393014554502fb8d8d0566bf3a",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "6935a35a5211c293b5a25aa759d1a993eb7ac7b68e0800d075c09c931c800528",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "932db986674dda73a5467ade9dcdd8a3b9623d211e0a772d12f1003ba410fe82",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "a328bbadfd517d7b04b49955588ca1c4984d31d6c55e54e22debcbc34ea1792f",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "details-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "5ccf2eb837e22657de5cb7892fd6fe603ba976f8d8996c345d9c4e7925f55a97",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "f08121ec3c245bc8635e842df4157e155b895752996e1316ffe208d28a7b0cbd",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "3e858ece9e6f137583fecd1a2c5c8c1e6d67a26ec26c86278cebbd7b109d23da",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "4636f2e36b275401edeb531756cfa619be88bb6a602aabf28fcd9338ac313248",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "0744b739785aa3064ce8307b6ab6719d24c2693c60db2521d78872625a97d0da",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-320-dark-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "336d74d101db357b88920a9d8eb7520d054a96706e0d22b0588b90a0805397bd",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-320-dark-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "59b14b900324384b24dde4985032885403001673660c9d4028db580d5a8605a8",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-320-light-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "28e6ead0615455dc09416e7bd06e093c3f59c08871cc60ac25f520be2fb8a8d8",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-320-light-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "926e5ccfe7a46b33d878aea467d7fd5cd2c6c9e15e53426f4485ec1ea231005c",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "a5abbe29c790d8a1dfe945f8da4febe8b3c8b9a357d1aaccc22b89dbccfb92b3",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "de8d7f7a26f52a9551dea351196938b3c6802862da482f39af71a55761229657",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "5507321396184cb3f190f6272a23627b5018f2149ff8d87937387ee5eda40753",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "drivers-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "8989439ff3b9fda1d4b3045f137bef40b97b285c99406221010eb2463972daaa",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "06d6933328a86041ed56da479871c18df8b5ddff3421daee607127056342b941",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "5e59b4843cf79a06f13531d385dc8a63934540d7290ac8d334095f97560757c8",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "fc34cbe615edf78caa475174359b6f8ca4fffce67ccd24fe0562795a0a908e12",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "2da0a8b46d19e313595cf1c47efb93adb6f08ad7d4d29af525b49170b1ffef79",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-320-dark-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "7267aab3ec2fa6fa9cc5c34b64e5c2764447b68c5b16977c470c0bd06aaa47b7",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-320-dark-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "7267aab3ec2fa6fa9cc5c34b64e5c2764447b68c5b16977c470c0bd06aaa47b7",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-320-light-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "a8721dd5ac735a5b16e0238a27389db5f5e72e8b39c68d33fb9eb08c02b80e42",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-320-light-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "a8721dd5ac735a5b16e0238a27389db5f5e72e8b39c68d33fb9eb08c02b80e42",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "4ef77f9049ba497739c49bc0dd2e4efbfe932ad567c40ec55ce2bd3f90ca84da",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "4ef77f9049ba497739c49bc0dd2e4efbfe932ad567c40ec55ce2bd3f90ca84da",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "54bb0999cb2a11e4d650356694688972ddebef4c6ad0aa6fd9e3fb813cc2c5ca",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "54bb0999cb2a11e4d650356694688972ddebef4c6ad0aa6fd9e3fb813cc2c5ca",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "557d50fde926a4de527b4c97112d613aa710f962e1f431f94dbac1e5dd38f834",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "c2a3d49632ad1e5d5a1cc1c0992afcda79a1210c268a72bb53946ed4846ff5dc",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "0c482f95d7588d7fa351b73f00dbb09ab1ddd69904faa124c30eb1c210c607c6",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "276a0f4372179e03efdf0b7efc355f61aba70d4100f5ac141a006178ff8ea349",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "5a913f208d60d77ab650213b0f3c50fd2e1d7ac04f47127f4bb177ca0552b977",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "a7db24e0855739a2ae25a3f5d0b4d19b9dac83ac395ffffc26cdc94138ad7540",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "6203cac70d5bd15380ff5313f1c180448deee1b09e86f1948c1ef3f482d125c5",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "home-performance-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "fcccfa3ed26871fd33bfad8201fee2316f28fd4f58af7b3d641c814c675e6edc",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "46d97a87355cce1d7f599b619bc3c5e5447cf35f7e4d4d49c4c56a09c5b6463a",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "4c54af4748a4086e6c7067a146ebe9a75cf8045d65fd5db2290c65550ad71849",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "c3e3765c6951f06ff2fc8ce70237dffc945683d25f769c3c0f79919574c2d66b",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "737cc26b1caec528ce976368db22c76de6d5f73925b4c9e62f3b776ea6c19f72",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-320-dark-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "a5ed52deebf8820a92f6bd0388a3c5d04aef65e1f5778dee8d649d8d91d36842",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-320-dark-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "c368470f48826373685022b1b0256be4311af72e33df78e10a248c48e4101d66",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-320-light-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "075ced91061840b8adc70419f96358c81d0d7a10d2627c56c58540819a195623",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-320-light-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "07e67026fd631df0f9d95672a1728bcc8a6171b1691259da0e5a47527badd830",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "be025013f416c0d320a109b25393b22ec98210f93f2c5d500a393d47c25d9a96",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "26690ce6f4109280bd69dc0ba990d6018171d048e84daa14a3b97cd9a0823578",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "fcce340c09f875f3e61937a44cda444a829b6d84d345d8c709a63b1f4bb8a05c",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "orders-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "3acbadaec9ee4915af23380e06e670c302c949a9ae079c3ebe934ad284ef6ee3",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-1440-dark-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "c4b398997b2ff36ca67af707b5963f3a6fcacf06ae18ca58cda58e0b94c73cfc",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-1440-dark-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "d2940fdf3b5c790f0cff310086b8c45956579527eacd0e5b7aaf1f7711108770",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-1440-light-after.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "a490385395a6afa5532f25aa4debe3b020f2201c762d64f20b2ec01bae71620e",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-1440-light-before.png",
+    "width": 1440,
+    "height": 1000,
+    "sha256": "d9e11a3223a1681463e3cc15738e328cbb7e841273d9552f40282601ac0d7656",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-320-dark-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "232bc815129bec906952aa96e732a26735c146068ae825292932f26c8311049b",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-320-dark-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "31cb91cf5e7b377803583218145066c45e14057c1d6a9bd47fdedd9e42767e43",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-320-light-after.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "44b0556d1f52251db3ff7b4ce01ccfe141a534d461482ae8a868da2575ac1d83",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-320-light-before.png",
+    "width": 320,
+    "height": 844,
+    "sha256": "296e61d72c1c183126b581b3c5febe7628413b6601d324c7e799bcc1591c583a",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-390-dark-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "e9660f8a9e404a3308e695fcfc797f1d52ea31a50ca1ca084e3d55ef9e795b13",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-390-dark-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "19c0c67698545855fdfb1cbcbe402a01304cfe5b9ad0b42703d5a25fef0f97fd",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-390-light-after.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "59f21de098e77ba03a959042bb66fd0778e4b4e98c4cc6a0acab45ade1e1c500",
+    "source": "D04 integrated app",
+    "commit": "c757fceb84df5ec861f0bce1dc91ccae35a4af72",
+    "browser": "Chromium; not actual Safari"
+  },
+  {
+    "file": "reports-390-light-before.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "83d3a66fb677bc01de42b27292a9a82452fe47168f60013781d87e1b49da5d8a",
+    "source": "D03 public preview",
+    "commit": "4d904a0d24c77f10f09c202c7276f21b33ef2afc",
+    "browser": "Chromium; not actual Safari"
+  }
+]

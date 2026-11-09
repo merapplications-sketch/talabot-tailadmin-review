@@ -1,0 +1,26 @@
+page.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
+    at /workspace/scratch/d301f10bb459/d04-focus/tests/d04-matrix.cjs:109:24 {
+  log: [
+    '  - taking page screenshot',
+    '  - waiting for fonts to load...',
+    '  - fonts loaded'
+  ],
+  name: 'TimeoutError'
+}
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "http://localhost:3050/", waiting until "networkidle"[22m
+
+    at /workspace/scratch/d301f10bb459/d04-focus/tests/d04-layout.cjs:25:15 {
+  log: [
+    '  - navigating to "http://localhost:3050/", waiting until "networkidle"'
+  ],
+  name: 'TimeoutError'
+}
+tests/d04-matrix.cjs 1
+tests/d04-layout.cjs 1

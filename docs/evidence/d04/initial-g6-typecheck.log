@@ -1,0 +1,1 @@
+src/components/talabot/analytics.tsx(174,22): error TS18048: 'options' is possibly 'undefined'.

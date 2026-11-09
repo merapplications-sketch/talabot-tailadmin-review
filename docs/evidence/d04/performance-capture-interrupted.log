@@ -1,0 +1,10 @@
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/", waiting until "networkidle"[22m
+
+    at /tmp/d04-performance-capture.cjs:2:488 {
+  log: [
+    '  - navigating to "https://talabot-admin-d03-integrated-review.alwarikahtan.chatgpt.site/", waiting until "networkidle"'
+  ],
+  name: 'TimeoutError'
+}

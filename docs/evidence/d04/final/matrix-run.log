@@ -1,0 +1,4 @@
+PASS D04 layout 6 6
+tests/d04-layout.cjs 0
+PASS D04 270 route/locale/theme/viewport checks, images, filters and theme persistence
+tests/d04-matrix.cjs 0
