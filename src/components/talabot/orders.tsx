@@ -13,7 +13,6 @@ import {
   filterOrders,
   sampleDate,
   type PreviewOrder,
-  type OrderStatus,
 } from "./orders-data";
 const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
@@ -24,13 +23,7 @@ import {
   demoMerchantImage,
   demoPersonImage,
 } from "./integrated-review/identity";
-import {
-  CheckCircleIcon,
-  XIcon,
-  TruckDeliveryIcon,
-  BoxIcon,
-  ClockIcon,
-} from "@/icons";
+import { OrderStatusBadge as Status } from "./integrated-review/order-status";
 import { entities } from "./directories-data";
 const STORE = "talabot-orders-return-v1";
 function useFormat() {
@@ -51,25 +44,6 @@ function useFormat() {
         hour12: false,
       }).format(new Date(s)),
   };
-}
-function Status({ value }: { value: OrderStatus }) {
-  const t = useTranslations("talabotOrders");
-  const Icon =
-    value === "delivered"
-      ? CheckCircleIcon
-      : value === "cancelled" || value === "rejected"
-        ? XIcon
-        : value === "pickedup"
-          ? TruckDeliveryIcon
-          : value === "ready"
-            ? BoxIcon
-            : ClockIcon;
-  return (
-    <span className="tp-status" data-status={value}>
-      <Icon aria-hidden="true" />
-      {t(`status.${value}`)}
-    </span>
-  );
 }
 function Notice() {
   const t = useTranslations("talabotOrders");
@@ -626,23 +600,6 @@ export function OrderDetails({ id }: { id: string }) {
       </section>
       <div className="grid items-start gap-6 xl:grid-cols-3">
         <div className="space-y-6 xl:col-span-2">
-          <Section title={t("customer")}>
-            <Link
-              className="font-medium text-brand-500"
-              href={`/customers/${entities("customers").find((e) => e.name === o.customer)?.id}`}
-            >
-              {o.customer}
-            </Link>
-            <p className="mt-3 text-sm">
-              {t("delivery")}: {o.deliveryZone}
-            </p>
-            <p className="mt-2 text-sm text-gray-500">
-              {t("address", { number: 24 })}
-            </p>
-            <p className="mt-3 text-sm text-gray-500">
-              {t("notes")}: {t("notProvided")}
-            </p>
-          </Section>
           <Section title={t("merchant")}>
             <p className="font-medium">
               <Link
@@ -661,6 +618,23 @@ export function OrderDetails({ id }: { id: string }) {
             </p>
             <p className="mt-3 text-sm text-gray-500">
               {t("prep")}: {t("notProvided")}
+            </p>
+          </Section>
+          <Section title={t("customer")}>
+            <Link
+              className="font-medium text-brand-500"
+              href={`/customers/${entities("customers").find((e) => e.name === o.customer)?.id}`}
+            >
+              {o.customer}
+            </Link>
+            <p className="mt-3 text-sm">
+              {t("delivery")}: {o.deliveryZone}
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              {t("address", { number: 24 })}
+            </p>
+            <p className="mt-3 text-sm text-gray-500">
+              {t("notes")}: {t("notProvided")}
             </p>
           </Section>
           <Section title={t("items")}>
@@ -711,23 +685,6 @@ export function OrderDetails({ id }: { id: string }) {
           </Section>
         </div>
         <div className="space-y-6">
-          <Section title={t("route")}>
-            <dl className="space-y-5">
-              <div>
-                <dt className="text-sm text-gray-500">{t("pickup")}</dt>
-                <dd className="mt-2">
-                  {o.pickup} · {o.merchant}
-                </dd>
-              </div>
-              <div>
-                <dt className="text-sm text-gray-500">{t("delivery")}</dt>
-                <dd className="mt-2">
-                  {o.deliveryZone} · {o.customer}
-                </dd>
-              </div>
-            </dl>
-            <p className="mt-5 text-sm text-gray-500">{t("noTracking")}</p>
-          </Section>
           <Section title={t("driver")}>
             <p>
               {o.driver ? (
@@ -744,6 +701,23 @@ export function OrderDetails({ id }: { id: string }) {
             <p className="mt-3 text-sm text-gray-500">
               {t("assignment")}: {t("notProvided")}
             </p>
+          </Section>
+          <Section title={t("route")}>
+            <dl className="space-y-5">
+              <div>
+                <dt className="text-sm text-gray-500">{t("pickup")}</dt>
+                <dd className="mt-2">
+                  {o.pickup} · {o.merchant}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm text-gray-500">{t("delivery")}</dt>
+                <dd className="mt-2">
+                  {o.deliveryZone} · {o.customer}
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-5 text-sm text-gray-500">{t("noTracking")}</p>
           </Section>
           <Section title={t("history")}>
             <p className="mb-5 text-xs text-gray-500">{t("historyNote")}</p>

@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Link, useRouter, usePathname } from "@/i18n/navigation";
 import { useTheme } from "@/context/theme-context";
 import { entities, notices, type Directory } from "./directories-data";
-import { orderStatuses, zones } from "./orders-data";
+import { orderStatuses, zones, type OrderStatus } from "./orders-data";
 import {
   dates,
   selectOrders,
@@ -21,6 +21,7 @@ import {
   demoPersonImage,
 } from "./integrated-review/identity";
 import { copy as visualCopy } from "./visual-review/copy";
+import { OrderStatusBadge } from "./integrated-review/order-status";
 import { PreviewNotice } from "./preview";
 const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
@@ -31,7 +32,8 @@ const button =
 type Row = {
   id: string;
   name: string;
-  values: string[];
+  values: React.ReactNode[];
+  orderStatus?: OrderStatus;
   href: string;
   identity?: "merchant" | "person";
   event?: string;
@@ -177,6 +179,11 @@ function Grid({
                           {r.event}
                         </span>
                       )}
+                      {r.orderStatus && (
+                        <span className="my-2 block">
+                          <OrderStatusBadge value={r.orderStatus} />
+                        </span>
+                      )}
                       {r.name}
                       {r.updated && (
                         <small className="block text-gray-500">
@@ -220,6 +227,11 @@ function Grid({
                 )}
                 {r.event}
               </h3>
+            )}
+            {r.orderStatus && (
+              <div className="mb-3">
+                <OrderStatusBadge value={r.orderStatus} />
+              </div>
             )}
             <div className="tp-identity mb-4">
               {r.identity && (
@@ -399,7 +411,7 @@ export function DirectoryPage({ kind, id }: { kind: Directory; id?: string }) {
                     id: o.id,
                     name: o.id,
                     values: [
-                      st(`status.${o.status}`),
+                      <OrderStatusBadge key={o.id} value={o.status} />,
                       o.pickup,
                       o.deliveryZone,
                       money(o.total),
@@ -694,7 +706,6 @@ export function NotificationsPage({ id }: { id?: string }) {
   const c = visualCopy[locale as keyof typeof visualCopy] || visualCopy.en;
   const t = useTranslations("workspace"),
     nav = useTranslations("talabot"),
-    st = useTranslations("talabotOrders"),
     { params, qs, set, remember } = useListing(),
     { read, mark } = useReadNotices();
   const item = notices.find((n) => n.id === id);
@@ -726,19 +737,20 @@ export function NotificationsPage({ id }: { id?: string }) {
                   />
                   <div>
                     <h2 className="text-lg font-semibold">
-                      {t("notification")} · {item.order.id}
-                    </h2>
-                    <p>
                       {nav(
                         item.order.status === "cancelled"
                           ? "cancellationReview"
                           : "deliveryIssue",
                       )}
+                    </h2>
+                    <p>
+                      {t("notification")} · {item.order.id}
                     </p>
                   </div>
                 </div>
                 <p className="my-4">
-                  {item.order.merchant} · {st(`status.${item.order.status}`)}
+                  <OrderStatusBadge value={item.order.status} /> ·{" "}
+                  {item.order.merchant}
                 </p>
                 <p className="mb-4">
                   {c.noticeTime}: {item.order.updated}
@@ -797,6 +809,7 @@ export function NotificationsPage({ id }: { id?: string }) {
                     ? "cancellationReview"
                     : "deliveryIssue",
                 ),
+                orderStatus: n.order.status,
                 unread: !read.includes(n.id),
                 updated: `${c.noticeTime}: ${n.order.updated}`,
                 values: [
