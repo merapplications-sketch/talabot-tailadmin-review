@@ -1,0 +1,8 @@
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog') to be visible[22m
+
+    at /workspace/scratch/d301f10bb459/repo/tests/talabot-design.cjs:81:33 {
+  log: [ "  - waiting for getByRole('dialog') to be visible" ],
+  name: 'TimeoutError'
+}

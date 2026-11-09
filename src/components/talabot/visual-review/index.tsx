@@ -407,6 +407,16 @@ export function VisualReview() {
             {c.scope} {locale === "tg" && c.languageNote}
           </p>
         </details>
+        <div className="vr-row">
+          {/* Static HTML asset: use native navigation, not the localized App Router. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a className="vr-button" href="/review-gallery/index.html">
+            {c.gallery}
+          </a>
+          <Link className="vr-button" href="/operations-review">
+            {c.operations}
+          </Link>
+        </div>
         <nav className="vr-tabs" aria-label={c.models}>
           {[
             ["orders", n("orders")],

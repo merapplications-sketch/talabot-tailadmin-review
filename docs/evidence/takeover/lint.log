@@ -1,0 +1,98 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 lint
+> eslint .
+
+
+/workspace/scratch/d301f10bb459/repo/scripts/gallery-review-worker.mjs
+  4:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/workspace/scratch/d301f10bb459/repo/src/components/others/auth/sign-in/form.tsx
+  37:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/src/components/others/auth/sign-up/form.tsx
+  41:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/src/components/talabot/visual-review/index.tsx
+   57:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/workspace/scratch/d301f10bb459/repo/src/components/talabot/visual-review/index.tsx:57:5
+  55 |   useEffect(() => {
+  56 |     const image = imageRef.current;
+> 57 |     setFailed(Boolean(src && image?.complete && image.naturalWidth === 0));
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  58 |   }, [src]);
+  59 |   return (
+  60 |     <span  react-hooks/set-state-in-effect
+   70:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @next/next/no-img-element
+  347:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @next/next/no-img-element
+  386:21  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/d301f10bb459/repo/src/context/theme-context.tsx
+  33:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/workspace/scratch/d301f10bb459/repo/src/context/theme-context.tsx:33:5
+  31 |     const initialMode = savedMode || (legacySavedTheme as ThemeMode) || "light";
+  32 |
+> 33 |     setThemeModeState(initialMode);
+     |     ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |     setIsInitialized(true);
+  35 |   }, []);
+  36 |  react-hooks/set-state-in-effect
+  57:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/workspace/scratch/d301f10bb459/repo/src/context/theme-context.tsx:57:7
+  55 |       };
+  56 |     } else {
+> 57 |       setTheme(themeMode as ResolvedTheme);
+     |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  58 |     }
+  59 |   }, [themeMode, isInitialized]);
+  60 |                                                          react-hooks/set-state-in-effect
+  79:24  warning  'prevMode' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/src/hooks/use-mobile.ts
+  16:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/workspace/scratch/d301f10bb459/repo/src/hooks/use-mobile.ts:16:5
+  14 |     };
+  15 |     mql.addEventListener("change", onChange);
+> 16 |     setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  17 |     return () => mql.removeEventListener("change", onChange);
+  18 |   }, []);
+  19 |  react-hooks/set-state-in-effect
+
+/workspace/scratch/d301f10bb459/repo/tests/safari-followup-acceptance.cjs
+  4:7  warning  'path' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/d301f10bb459/repo/tests/safari-followup-regression.cjs
+   4:7   warning  'path' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  63:11  warning  'buttons' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 14 problems (4 errors, 10 warnings)
+

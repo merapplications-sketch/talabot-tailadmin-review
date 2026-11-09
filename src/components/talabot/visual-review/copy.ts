@@ -1,6 +1,8 @@
 export const copy = {
   en: {
     title: "Visual review",
+    gallery: "Original image gallery",
+    operations: "Operations review",
     intro: "Isolated models · Existing pages unchanged",
     search: "Order ID or name",
     models: "Review models",
@@ -38,6 +40,8 @@ export const copy = {
   },
   ru: {
     title: "Визуальный обзор",
+    gallery: "Галерея оригинальных снимков",
+    operations: "Обзор управления",
     intro: "Отдельные образцы · Текущие страницы без изменений",
     search: "Номер или имя",
     models: "Образцы",
@@ -75,6 +79,8 @@ export const copy = {
   },
   tg: {
     title: "Баррасии намуди зоҳирӣ",
+    gallery: "Галереяи тасвирҳои аслӣ",
+    operations: "Баррасии идоракунӣ",
     intro: "Намунаҳои алоҳида · Саҳифаҳои ҷорӣ бетағйир",
     search: "Рақам ё ном",
     models: "Намунаҳо",

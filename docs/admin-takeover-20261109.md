@@ -16,3 +16,28 @@ Group A already exists: dashboard, orders/details, restaurants/details, drivers/
 
 ## Required decision boundaries
 No assumed discount, funding, eligibility or point conversion. Restaurant prior consent required for return flow; actual refund and actual driver receipt remain distinct, residual is an open claim, platform delivery fee tracked separately. No timeout approval. Profit unavailable with incomplete costs. UI permission demonstrations do not prove server enforcement. Human Tajik review and real iPhone Safari testing remain open.
+
+## Delivered implementation
+- Public original gallery: https://talabot-admin-review-gallery.alwarikahtan.chatgpt.site/ (43 original PNGs, original archive, comparisons, filters, native dialog, next/previous, original-size zoom, dark/light).
+- Isolated full application: https://talabot-admin-takeover-review.alwarikahtan.chatgpt.site/operations-review. Existing routes and /visual-review retained. Published using compiled vinext output without changing original Cloudflare Worker. Deployment source snapshot: 16f571e85f84790bc8fbec1641440839c810d436; Site version 1. Server modules and assets copied using scripts/prepare-sites-preview.mjs; no service/database binding.
+- B: editable restaurant/branch/hours/category/item/price/extras/image/status draft with reason and old/new audit values; synthetic single-record models, not a full live menu CMS.
+- C: Banners, Hot Deals, Flash Sale, Lunch Edit, DineOut Gold; target/placement examples, date validation, local preview. Unapproved rules remain visible.
+- D: customer/order/points examples; demo permission, mandatory reason, local adjustment and ledger example; no cash conversion.
+- E: guarded cancellation reason/prior-consent/return/actual restaurant refund/driver confirmation; mismatch, partial open claim, full cash recovery; delivery fee remains separate and unverified. No auto timeout.
+- F: nine separate financial record types, supporting-record/receipt preview and expense draft. Figures explicitly independent, not reconciled ledger totals. No derived payable or confirmed net profit.
+- G: users/roles draft, unconfirmed permissions matrix, demo alert acknowledgement/audit, empty/error/offline/access-denied examples.
+- New routes share EN/RU/TG, original logo/theme, URL search/filter/sort, desktop tables/mobile cards, detail focus and browser Back.
+
+## Verification and limitations
+- New modules: 72 combinations (6 modules ×3 locales ×2 themes ×2 sizes) and behavioral flows pass. Zero captured page errors. 25 screenshots are NEW evidence, separate from the original 43. Final small alignment/audit-label changes followed with final build and source typecheck.
+- Gallery: 43 image SHA256 checks match ZIP, 4 sizes, filters and restore, viewer next/zoom/Escape pass in Chromium. Published gallery and actual next-image action independently viewed through shared Chrome; public HTTP 200.
+- Published operations route independently opened, restaurant 02 defaults checked, detail focus and browser Back verified. Public HTTP 200.
+- Final vinext build and source-only TypeScript check pass. Clean Next --webpack build passed after separating generated .next artifacts; default Turbopack cannot follow this environment's external dependency symlink, and mixing vinext/Next generated types causes validator collisions. tsconfig.source.json checks all application/config TS without generated adapter artifacts.
+- Whole-project lint remains NOT PASSED due four pre-existing synchronous state-in-effect findings in visual avatar/theme/mobile hooks. Generated and vendored output excluded, CJS test imports configured as Node; new modules and new gallery JS lint clean. No source rule disabled globally. Native gallery link uses a scoped router-lint exception because it is a static HTML asset.
+- Real Safari/iPhone and human Tajik linguistic review remain unverified. UI checks are not server functionality/security evidence.
+
+## Hosting blocker and fallback
+Cloudflare connector PUT for new isolated Worker returned 403 No access to the specified resource (Workers Scripts Write missing); GET confirmed target does not exist. Existing Worker left unchanged. Public synthetic review Sites were published as an authorized isolated fallback; no production project changed. Evidence: docs/evidence/gallery-publish/status.json. Local git push also lacked credentials; GitHub connector used for exact-tree branch preservation.
+
+## Next work / decisions
+Owner visual review before generalization. Confirm campaign placements/funding/eligibility, points policy, authoritative financial schemas and server role matrix before operational integration. Next UI iteration: multi-item category/menu management, richer finance reconciliation filters and production-contract-driven role actions. No shared server contract was changed, so there is no backend contract update to send to the programmer.

@@ -1,0 +1,6 @@
+8 date assertions passed
+9 real schema assertions passed; no backend authentication implied
+PASS: 24 count cases EN/RU/TG, including Russian 11/21/22/25. TG linguistic review remains open.
+PASS: 36 unique IDs, seven source statuses, cent-accurate totals, chronological events, dates/search/sort
+PASS directory associations and notification order references
+{"status":"PASS","checks":12,"totals":{"orders":854,"completed":740,"sales":74850,"revenue":6316,"cancelled":66,"delayed":88},"weekdayMeans":[116.5,74,91,108,66,83,99.5]}

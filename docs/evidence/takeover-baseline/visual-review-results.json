@@ -1,0 +1,364 @@
+{
+  "browser": "134.0.6998.35",
+  "safari": false,
+  "checks": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "tab": "orders"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "tab": "accounts"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "tab": "notifications"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "tab": "metrics"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "orders"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "accounts"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "notifications"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "metrics"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "tab": "orders"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "tab": "accounts"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "tab": "notifications"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "tab": "metrics"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "tab": "orders"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "tab": "accounts"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "tab": "notifications"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "tab": "metrics"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "tab": "orders"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "tab": "accounts"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "tab": "notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "tab": "metrics"
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "tab": "orders"
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "tab": "accounts"
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "tab": "notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 390,
+      "height": 844,
+      "tab": "metrics"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "tab": "orders"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "tab": "accounts"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "tab": "notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "tab": "metrics"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "tab": "orders"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "tab": "accounts"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "tab": "notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "tab": "metrics"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "tab": "orders"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "tab": "accounts"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "tab": "notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "tab": "metrics"
+    },
+    {
+      "locale": "tg",
+      "width": 390,
+      "height": 844,
+      "tab": "orders"
+    },
+    {
+      "locale": "tg",
+      "width": 390,
+      "height": 844,
+      "tab": "accounts"
+    },
+    {
+      "locale": "tg",
+      "width": 390,
+      "height": 844,
+      "tab": "notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 390,
+      "height": 844,
+      "tab": "metrics"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "tab": "orders"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "tab": "accounts"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "tab": "notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "tab": "metrics"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "tab": "orders"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "tab": "accounts"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "tab": "notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "tab": "metrics"
+    },
+    {
+      "notificationRotation": [
+        390,
+        844
+      ],
+      "bounds": {
+        "last": 750,
+        "list": 750,
+        "footer": 750,
+        "header": 94,
+        "top": 94,
+        "bottom": 828,
+        "height": 844
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        932,
+        320
+      ],
+      "bounds": {
+        "last": 226,
+        "list": 226,
+        "footer": 226,
+        "header": 94,
+        "top": 94,
+        "bottom": 304,
+        "height": 320
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        320,
+        480
+      ],
+      "bounds": {
+        "last": 386,
+        "list": 386,
+        "footer": 386,
+        "header": 94,
+        "top": 94,
+        "bottom": 464,
+        "height": 480
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        1440,
+        1000
+      ],
+      "bounds": {
+        "last": 906,
+        "list": 906,
+        "footer": 906,
+        "header": 94,
+        "top": 94,
+        "bottom": 984,
+        "height": 1000
+      },
+      "overlap": false,
+      "escapeFocus": true
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

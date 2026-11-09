@@ -78,23 +78,15 @@ fs.mkdirSync(out, { recursive: true });
       await p.screenshot({ path: `${out}/${name}-${theme}.png` });
     }
     await p.locator("[data-testid=summary-cards] > button").first().click();
-    await p.getByRole("dialog").waitFor();
-    assert(
-      await p
-        .getByText(
-          "This section is being prepared for the preview. No live data or permanent changes.",
-        )
-        .isVisible(),
-    );
-    if (w < 1280)
-      assert(!(await p.locator("[data-testid=mobile-navigation]").isVisible()));
-    await p.getByRole("button", { name: "Close", exact: true }).click();
-    await p.getByRole("dialog").waitFor({ state: "hidden" });
+    await p.waitForURL(u => u.pathname.endsWith('/orders'));
+    await p.getByTestId('orders-list').waitFor();
+    await p.goBack({ waitUntil: 'networkidle' });
+    await p.getByTestId('summary-cards').waitFor();
     results.push({
       viewport: [w, h],
       columns: w < 1280 ? 2 : 4,
       overflow: false,
-      message: true,
+      summaryNavigation: "orders",
     });
   }
   await p.setViewportSize({ width: 430, height: 932 });
@@ -103,16 +95,19 @@ fs.mkdirSync(out, { recursive: true });
       .locator("[data-testid=mobile-navigation]")
       .getByRole("button", { name, exact: true })
       .click();
-    await p.getByRole("dialog").waitFor();
-    await p.getByRole("button", { name: "Close", exact: true }).click();
+    await p.waitForURL(u => u.pathname.endsWith('/' + name.toLowerCase()));
+    assert(await p.locator('[data-testid=mobile-navigation] [aria-current=page]').innerText() === name);
+    await p.locator('[data-testid=mobile-navigation]').getByRole('link', {name:'Home',exact:true}).click();
+    await p.getByTestId('summary-cards').waitFor();
   }
   await p.getByRole("button", { name: "Toggle Sidebar", exact: true }).click();
   await p
     .getByRole("navigation", { name: "Administration navigation" })
-    .getByRole("button", { name: "Restaurants", exact: true })
+    .getByRole("button", { name: "Restaurants & stores", exact: true })
     .click();
-  await p.getByRole("dialog").waitFor();
-  await p.getByRole("button", { name: "Close", exact: true }).click();
+  await p.waitForURL(u => u.pathname.endsWith('/restaurants'));
+  await p.getByRole('heading', {name:'Restaurants & stores',exact:true}).waitFor();
+  await p.goto(process.env.BASE_URL || 'http://localhost:3001', {waitUntil:'networkidle'});
   // Manual language selection through the existing menu, persisted on reload.
   await p.getByRole("button", { name: "Toggle application menu" }).click();
   await p.getByRole("button", { name: "Musharof", exact: false }).click();

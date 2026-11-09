@@ -41,7 +41,7 @@ fs.mkdirSync(out, { recursive: true });
   await p.getByLabel("Search", { exact: true }).fill("demo-1100");
   await p.getByRole("button", { name: "Search", exact: true }).click();
   await p.waitForURL(/q=demo-1100/);
-  assert.equal(await p.getByTestId("result-count").innerText(), "1 orders");
+  assert.equal(await p.getByTestId("result-count").innerText(), "1 order");
   await p.getByLabel("Search", { exact: true }).fill("absent");
   await p.getByRole("button", { name: "Search", exact: true }).click();
   await p.getByTestId("empty-orders").waitFor();

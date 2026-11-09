@@ -1,0 +1,290 @@
+[
+  {
+    "locale": "en",
+    "width": 320,
+    "height": 640,
+    "tab": "orders"
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "height": 640,
+    "tab": "accounts"
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "height": 640,
+    "tab": "notifications"
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "height": 640,
+    "tab": "metrics"
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "tab": "orders"
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "tab": "accounts"
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "tab": "notifications"
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "tab": "metrics"
+  },
+  {
+    "locale": "en",
+    "width": 932,
+    "height": 320,
+    "tab": "orders"
+  },
+  {
+    "locale": "en",
+    "width": 932,
+    "height": 320,
+    "tab": "accounts"
+  },
+  {
+    "locale": "en",
+    "width": 932,
+    "height": 320,
+    "tab": "notifications"
+  },
+  {
+    "locale": "en",
+    "width": 932,
+    "height": 320,
+    "tab": "metrics"
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 1000,
+    "tab": "orders"
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 1000,
+    "tab": "accounts"
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 1000,
+    "tab": "notifications"
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 1000,
+    "tab": "metrics"
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "height": 640,
+    "tab": "orders"
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "height": 640,
+    "tab": "accounts"
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "height": 640,
+    "tab": "notifications"
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "height": 640,
+    "tab": "metrics"
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "tab": "orders"
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "tab": "accounts"
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "tab": "notifications"
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "tab": "metrics"
+  },
+  {
+    "locale": "ru",
+    "width": 932,
+    "height": 320,
+    "tab": "orders"
+  },
+  {
+    "locale": "ru",
+    "width": 932,
+    "height": 320,
+    "tab": "accounts"
+  },
+  {
+    "locale": "ru",
+    "width": 932,
+    "height": 320,
+    "tab": "notifications"
+  },
+  {
+    "locale": "ru",
+    "width": 932,
+    "height": 320,
+    "tab": "metrics"
+  },
+  {
+    "locale": "ru",
+    "width": 1440,
+    "height": 1000,
+    "tab": "orders"
+  },
+  {
+    "locale": "ru",
+    "width": 1440,
+    "height": 1000,
+    "tab": "accounts"
+  },
+  {
+    "locale": "ru",
+    "width": 1440,
+    "height": 1000,
+    "tab": "notifications"
+  },
+  {
+    "locale": "ru",
+    "width": 1440,
+    "height": 1000,
+    "tab": "metrics"
+  },
+  {
+    "locale": "tg",
+    "width": 320,
+    "height": 640,
+    "tab": "orders"
+  },
+  {
+    "locale": "tg",
+    "width": 320,
+    "height": 640,
+    "tab": "accounts"
+  },
+  {
+    "locale": "tg",
+    "width": 320,
+    "height": 640,
+    "tab": "notifications"
+  },
+  {
+    "locale": "tg",
+    "width": 320,
+    "height": 640,
+    "tab": "metrics"
+  },
+  {
+    "locale": "tg",
+    "width": 390,
+    "height": 844,
+    "tab": "orders"
+  },
+  {
+    "locale": "tg",
+    "width": 390,
+    "height": 844,
+    "tab": "accounts"
+  },
+  {
+    "locale": "tg",
+    "width": 390,
+    "height": 844,
+    "tab": "notifications"
+  },
+  {
+    "locale": "tg",
+    "width": 390,
+    "height": 844,
+    "tab": "metrics"
+  },
+  {
+    "locale": "tg",
+    "width": 932,
+    "height": 320,
+    "tab": "orders"
+  },
+  {
+    "locale": "tg",
+    "width": 932,
+    "height": 320,
+    "tab": "accounts"
+  },
+  {
+    "locale": "tg",
+    "width": 932,
+    "height": 320,
+    "tab": "notifications"
+  },
+  {
+    "locale": "tg",
+    "width": 932,
+    "height": 320,
+    "tab": "metrics"
+  },
+  {
+    "locale": "tg",
+    "width": 1440,
+    "height": 1000,
+    "tab": "orders"
+  },
+  {
+    "locale": "tg",
+    "width": 1440,
+    "height": 1000,
+    "tab": "accounts"
+  },
+  {
+    "locale": "tg",
+    "width": 1440,
+    "height": 1000,
+    "tab": "notifications"
+  },
+  {
+    "locale": "tg",
+    "width": 1440,
+    "height": 1000,
+    "tab": "metrics"
+  }
+]

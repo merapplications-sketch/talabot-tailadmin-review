@@ -114,13 +114,13 @@ const assert = require("assert/strict");
     if (mobile) {
       if (
         !(await p
-          .getByRole("button", { name: "Toggle notifications" })
+          .getByLabel("Notifications", { exact: true })
           .isVisible())
       )
         await p
           .getByRole("button", { name: "Toggle application menu" })
           .click();
-      await p.getByRole("button", { name: "Toggle notifications" }).click();
+      await p.getByLabel("Notifications", { exact: true }).click();
       const area = p.locator(
         "[data-slot=dropdown-menu-content] [data-slot=scroll-area-viewport]",
       );
@@ -137,7 +137,7 @@ const assert = require("assert/strict");
       await p.screenshot({
         path: `${output}/${process.env.TAG || "local"}-notifications-bottom.png`,
       });
-      await p.getByRole("button", { name: "Close notifications" }).click();
+      await p.getByRole("button", { name: "Close", exact: true }).click();
       results.push({
         mobile,
         test: "notification content scrolls to end and closes landscape",

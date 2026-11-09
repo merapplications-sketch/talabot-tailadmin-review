@@ -1,0 +1,109 @@
+{
+  "engine": "Chromium",
+  "safari": false,
+  "checks": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "theme": "light",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "ru",
+      "theme": "dark",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "tg",
+      "theme": "light",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 390,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "locale": "tg",
+      "theme": "dark",
+      "width": 1440,
+      "modules": 6,
+      "overflow": false
+    },
+    {
+      "search": true,
+      "filter": true,
+      "sortReload": true,
+      "detailsReturn": true,
+      "emptyReset": true
+    },
+    {
+      "consentGuard": true,
+      "reasonGuard": true,
+      "mismatch": true,
+      "partialOpenClaim": true,
+      "fullRecoveryFeePending": true,
+      "decimalValidation": true
+    },
+    {
+      "pointsPermissionAndReason": true
+    }
+  ],
+  "errors": []
+}

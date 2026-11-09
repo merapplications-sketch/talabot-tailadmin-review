@@ -1,0 +1,15 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '1 order'
+- '1 orders'
+          ^
+
+    at /workspace/scratch/d301f10bb459/repo/tests/talabot-orders.cjs:44:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '1 order',
+  expected: '1 orders',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

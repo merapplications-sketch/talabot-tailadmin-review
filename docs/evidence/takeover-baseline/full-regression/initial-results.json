@@ -1,0 +1,125 @@
+{
+  "base": "http://localhost:3021",
+  "results": [
+    {
+      "suite": "date-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 106,
+      "error": null
+    },
+    {
+      "suite": "forms-tests.mjs",
+      "exitCode": 0,
+      "durationMs": 177,
+      "error": null
+    },
+    {
+      "suite": "talabot-orders-wording.mjs",
+      "exitCode": 0,
+      "durationMs": 109,
+      "error": null
+    },
+    {
+      "suite": "talabot-orders-data.cjs",
+      "exitCode": 0,
+      "durationMs": 319,
+      "error": null
+    },
+    {
+      "suite": "talabot-directory-data.cjs",
+      "exitCode": 0,
+      "durationMs": 288,
+      "error": null
+    },
+    {
+      "suite": "talabot-analytics-data.cjs",
+      "exitCode": 0,
+      "durationMs": 323,
+      "error": null
+    },
+    {
+      "suite": "talabot-design.cjs",
+      "exitCode": 1,
+      "durationMs": 44358,
+      "error": null
+    },
+    {
+      "suite": "talabot-input-nav.cjs",
+      "exitCode": 0,
+      "durationMs": 6035,
+      "error": null
+    },
+    {
+      "suite": "talabot-orders.cjs",
+      "exitCode": 1,
+      "durationMs": 2393,
+      "error": null
+    },
+    {
+      "suite": "talabot-orders-filters.cjs",
+      "exitCode": 0,
+      "durationMs": 7408,
+      "error": null
+    },
+    {
+      "suite": "talabot-orders-followup.cjs",
+      "exitCode": 0,
+      "durationMs": 17574,
+      "error": null
+    },
+    {
+      "suite": "talabot-directories.cjs",
+      "exitCode": 0,
+      "durationMs": 48642,
+      "error": null
+    },
+    {
+      "suite": "talabot-pages-focused.cjs",
+      "exitCode": 0,
+      "durationMs": 22379,
+      "error": null
+    },
+    {
+      "suite": "talabot-pages-visual.cjs",
+      "exitCode": 0,
+      "durationMs": 109754,
+      "error": null
+    },
+    {
+      "suite": "talabot-statistics.cjs",
+      "exitCode": 0,
+      "durationMs": 56146,
+      "error": null
+    },
+    {
+      "suite": "visual-review.cjs",
+      "exitCode": 0,
+      "durationMs": 91607,
+      "error": null
+    },
+    {
+      "suite": "notification-clipping.cjs",
+      "exitCode": 0,
+      "durationMs": 9434,
+      "error": null
+    },
+    {
+      "suite": "window-followup.cjs",
+      "exitCode": 1,
+      "durationMs": 36041,
+      "error": null
+    },
+    {
+      "suite": "safari-followup-acceptance.cjs",
+      "exitCode": 1,
+      "durationMs": 35871,
+      "error": null
+    },
+    {
+      "suite": "safari-followup-regression.cjs",
+      "exitCode": 2,
+      "durationMs": 33481,
+      "error": null
+    }
+  ]
+}

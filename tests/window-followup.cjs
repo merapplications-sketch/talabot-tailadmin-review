@@ -89,12 +89,12 @@ fs.mkdirSync(out, { recursive: true });
     { width: 390, height: 844 },
   ]) {
     await p.setViewportSize(size);
-    await p.getByRole("button", { name: "Toggle notifications" }).click();
+    await p.getByLabel("Notifications", { exact: true }).click();
     await p.waitForTimeout(300);
     const popup = p.locator("[data-slot=dropdown-menu-content]");
     const area = popup.locator("[data-slot=scroll-area-viewport]");
     const footer = p.getByText("View All Notifications", { exact: true });
-    const close = p.getByRole("button", { name: "Close notifications" });
+    const close = p.getByRole("button", { name: "Close", exact: true });
     const geom = await popup.evaluate((e) => {
       const a = e.querySelector("[data-slot=scroll-area-viewport]");
       return {
@@ -167,7 +167,7 @@ fs.mkdirSync(out, { recursive: true });
     await p.waitForTimeout(200);
     assert(
       await p
-        .getByRole("button", { name: "Toggle notifications" })
+        .getByLabel("Notifications", { exact: true })
         .evaluate((e) => e === document.activeElement),
     );
     results.push({
@@ -179,7 +179,7 @@ fs.mkdirSync(out, { recursive: true });
     });
   }
   // Rotation while open must recalculate the available space.
-  await p.getByRole("button", { name: "Toggle notifications" }).click();
+  await p.getByLabel("Notifications", { exact: true }).click();
   await p.setViewportSize({ width: 844, height: 300 });
   await p.waitForTimeout(300);
   assert(
@@ -193,17 +193,17 @@ fs.mkdirSync(out, { recursive: true });
   await p.waitForTimeout(200);
   assert(
     await p
-      .getByRole("button", { name: "Toggle notifications" })
+      .getByLabel("Notifications", { exact: true })
       .evaluate((e) => e === document.activeElement),
   );
   results.push("open rotation / Escape / focus");
   await p.setViewportSize({ width: 1280, height: 800 });
-  await p.getByRole("button", { name: "Toggle notifications" }).click();
+  await p.getByLabel("Notifications", { exact: true }).click();
   await p.waitForTimeout(250);
   await p.screenshot({ path: out + "/notifications-desktop.png" });
-  await p.getByRole("button", { name: "Close notifications" }).click();
+  await p.getByRole("button", { name: "Close", exact: true }).click();
   await p.getByRole("button", { name: /toggle color theme/i }).click();
-  await p.getByRole("button", { name: "Toggle notifications" }).click();
+  await p.getByLabel("Notifications", { exact: true }).click();
   await p.waitForTimeout(250);
   await p.screenshot({ path: out + "/notifications-desktop-dark.png" });
   await p.getByText("View All Notifications", { exact: true }).click();

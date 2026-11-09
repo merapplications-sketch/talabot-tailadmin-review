@@ -58,7 +58,7 @@ if (!origin)
   });
   await p.getByRole("button", { name: "Close", exact: true }).last().click();
   await p.setViewportSize({ width: 844, height: 390 });
-  const nb = p.getByRole("button", { name: "Toggle notifications" });
+  const nb = p.getByLabel("Notifications", { exact: true });
   if (!(await nb.isVisible())) {
     const buttons = await p.getByRole("button").all();
     console.log(
@@ -91,7 +91,7 @@ if (!origin)
   await p.screenshot({
     path: `${output}/${process.env.TAG || "before"}-notifications.png`,
   });
-  await p.getByRole("button", { name: "Close notifications" }).click();
+  await p.getByRole("button", { name: "Close", exact: true }).click();
   fs.writeFileSync(
     `${output}/${process.env.TAG || "before"}-results.json`,
     JSON.stringify(results, null, 2),

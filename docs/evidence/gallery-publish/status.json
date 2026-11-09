@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-09",
+  "worker": "talabot-admin-gallery-review",
+  "published": false,
+  "existingReviewWorkerChanged": false,
+  "immutableSourceCommit": "b034238e158243c7a38456dccd3e62e0ab7c535f",
+  "assetCount": 48,
+  "imageCount": 43,
+  "assetsSession": "POST received no response; tool aborted after approximately 354 seconds. No JWT received.",
+  "resourceExistence": {"method": "GET", "path": "/workers/scripts/talabot-admin-gallery-review/settings", "status": 404, "code": 10007, "message": "This Worker does not exist on your account."},
+  "deployment": {"method": "PUT", "path": "/workers/scripts/talabot-admin-gallery-review", "status": 403, "message": "No access to the specified resource.", "acceptedScopes": ["workers-scripts.admin", "workers-scripts.edit", "workers-scripts.write"]},
+  "requiredAction": "Reconnect Cloudflare with Workers Scripts Write (or accepted Editor/Admin scope), then retry isolated review deployment.",
+  "browserValidation": "Not run against unpublished destination. Parent ran local gallery viewer tests."
+}

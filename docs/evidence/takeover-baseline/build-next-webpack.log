@@ -1,0 +1,11 @@
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 47ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 36.5s
+  Running TypeScript ...
+.next/types/validator.ts(5,15): error TS2305: Module '"./routes.js"' has no exported member 'AppRoutes'.
+.next/types/validator.ts(5,26): error TS2305: Module '"./routes.js"' has no exported member 'LayoutRoutes'.
+.next/types/validator.ts(5,40): error TS2305: Module '"./routes.js"' has no exported member 'ParamMap'.
+Failed to type check.
+

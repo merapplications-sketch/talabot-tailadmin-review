@@ -1,0 +1,24 @@
+BUTTONS [
+  { label: 'Toggle Sidebar', text: '' },
+  { label: 'Toggle application menu', text: '' },
+  { label: 'Previous Month', text: '' },
+  { label: 'Next Month', text: '' },
+  { label: 'Add Event +', text: 'Add Event +' },
+  { label: null, text: 'Month' },
+  { label: null, text: 'Event Conf.' },
+  { label: null, text: 'Meeting' },
+  { label: null, text: 'Workshop' },
+  { label: null, text: 'Orders' },
+  { label: null, text: 'Notifications' },
+  { label: null, text: 'Finance' }
+]
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Toggle notifications' })[22m
+
+    at /workspace/scratch/d301f10bb459/repo/tests/safari-followup-regression.cjs:77:12 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Toggle notifications' })"
+  ],
+  name: 'TimeoutError'
+}

@@ -1,0 +1,96 @@
+▲ Next.js 16.3.4 (webpack)
+✓ Running next.config.ts took 43ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 35.9s
+  Running TypeScript ...
+  Finished TypeScript in 8.9s ...
+  Collecting page data using 8 workers ...
+  Generating static pages using 8 workers (0/84) ...
+  Generating static pages using 8 workers (21/84) 
+  Generating static pages using 8 workers (42/84) 
+  Generating static pages using 8 workers (63/84) 
+✓ Generating static pages using 8 workers (84/84) in 1028ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /_not-found
+├   /[locale]
+│ ├ ● /en
+│ ├ ● /ru
+│ └ ● /tg
+├ ƒ /[locale]/alerts
+├ ƒ /[locale]/avatars
+├ ƒ /[locale]/badge
+├ ƒ /[locale]/bar-chart
+├ ƒ /[locale]/basic-tables
+├ ƒ /[locale]/blank
+├ ƒ /[locale]/buttons
+├ ƒ /[locale]/calendar
+├   /[locale]/customers
+│ ├ ● /en/customers
+│ ├ ● /ru/customers
+│ └ ● /tg/customers
+├ ƒ /[locale]/customers/[id]
+├   /[locale]/drivers
+│ ├ ● /en/drivers
+│ ├ ● /ru/drivers
+│ └ ● /tg/drivers
+├ ƒ /[locale]/drivers/[id]
+├   /[locale]/error-404
+│ ├ ● /en/error-404
+│ ├ ● /ru/error-404
+│ └ ● /tg/error-404
+├   /[locale]/finance
+│ ├ ● /en/finance
+│ ├ ● /ru/finance
+│ └ ● /tg/finance
+├ ƒ /[locale]/finance/[id]
+├ ƒ /[locale]/form-elements
+├ ƒ /[locale]/images
+├ ƒ /[locale]/line-chart
+├   /[locale]/notifications
+│ ├ ● /en/notifications
+│ ├ ● /ru/notifications
+│ └ ● /tg/notifications
+├ ƒ /[locale]/notifications/[id]
+├   /[locale]/operations-review
+│ ├ ● /en/operations-review
+│ ├ ● /ru/operations-review
+│ └ ● /tg/operations-review
+├   /[locale]/orders
+│ ├ ● /en/orders
+│ ├ ● /ru/orders
+│ └ ● /tg/orders
+├ ƒ /[locale]/orders/[id]
+├ ƒ /[locale]/profile
+├   /[locale]/reports
+│ ├ ● /en/reports
+│ ├ ● /ru/reports
+│ └ ● /tg/reports
+├ ƒ /[locale]/reports/[id]
+├   /[locale]/restaurants
+│ ├ ● /en/restaurants
+│ ├ ● /ru/restaurants
+│ └ ● /tg/restaurants
+├ ƒ /[locale]/restaurants/[id]
+├   /[locale]/settings
+│ ├ ● /en/settings
+│ ├ ● /ru/settings
+│ └ ● /tg/settings
+├ ƒ /[locale]/signin
+├ ƒ /[locale]/signup
+├ ƒ /[locale]/videos
+└   /[locale]/visual-review
+  ├ ● /en/visual-review
+  ├ ● /ru/visual-review
+  └ ● /tg/visual-review
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

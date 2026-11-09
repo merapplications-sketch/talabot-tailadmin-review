@@ -1,0 +1,373 @@
+.op {
+  --op-brand: #f36831;
+  --op-bg: #f7f7f7;
+  --op-card: #fff;
+  --op-ink: #262626;
+  --op-muted: #666;
+  --op-line: #e5e5e5;
+  --op-soft: #fff3ec;
+  background: var(--op-bg);
+  color: var(--op-ink);
+  min-height: 100dvh;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  color-scheme: light;
+}
+.dark .op {
+  --op-bg: #171717;
+  --op-card: #222;
+  --op-ink: #f5f5f5;
+  --op-muted: #b5b5b5;
+  --op-line: #404040;
+  --op-soft: #39281f;
+  color-scheme: dark;
+}
+.op * {
+  box-sizing: border-box;
+}
+.op-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px max(16px, env(safe-area-inset-right));
+  background: var(--op-card);
+  border-bottom: 1px solid var(--op-line);
+}
+.op-main {
+  max-width: 1500px;
+  margin: auto;
+  padding: 24px 24px calc(32px + env(safe-area-inset-bottom));
+}
+.op h1 {
+  font-size: 30px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+.op h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.op h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.op p {
+  color: var(--op-muted);
+  margin: 8px 0;
+}
+.op small {
+  display: block;
+  color: var(--op-muted);
+}
+.op-heading {
+  margin-bottom: 24px;
+}
+.op-heading > p:first-child {
+  color: var(--op-brand);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+.op-row,
+.op-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.op-links a {
+  padding: 10px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 44px;
+}
+.op-notice {
+  background: var(--op-soft);
+  border: 1px solid var(--op-line);
+  border-inline-start: 4px solid var(--op-brand);
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.op-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+.op button,
+.op input,
+.op select,
+.op textarea {
+  font: inherit;
+  min-height: 44px;
+  border: 1px solid var(--op-line);
+  border-radius: 10px;
+  background: var(--op-card);
+  color: var(--op-ink);
+  padding: 10px 12px;
+  max-width: 100%;
+}
+.op button {
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.op button:active {
+  background: var(--op-soft);
+}
+.op button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.op button[aria-current="page"] {
+  background: var(--op-brand);
+  color: #171717;
+  border-color: var(--op-brand);
+  font-weight: 700;
+}
+.op :focus-visible {
+  outline: 3px solid var(--op-brand);
+  outline-offset: 3px;
+}
+.op input,
+.op select,
+.op textarea {
+  width: 100%;
+  min-width: 0;
+}
+.op label {
+  display: grid;
+  gap: 6px;
+  color: var(--op-muted);
+}
+.op-card {
+  border: 1px solid var(--op-line);
+  border-radius: 16px;
+  background: var(--op-card);
+  padding: 24px;
+  min-width: 0;
+}
+.op-layout {
+  display: grid;
+  gap: 24px;
+}
+.op-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.op table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.op td,
+.op th {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--op-line);
+  text-align: start;
+  vertical-align: middle;
+}
+.op th {
+  color: var(--op-muted);
+  font-weight: 500;
+  font-size: 14px;
+}
+.op-status {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--op-line);
+  background: var(--op-bg);
+  border-radius: 24px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+.op-status[data-status="active"] {
+  background: var(--op-soft);
+}
+.op-mobile {
+  display: none;
+}
+.op-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.op-fields dt {
+  font-size: 14px;
+  color: var(--op-muted);
+}
+.op-fields dd {
+  margin-top: 4px;
+  font-weight: 500;
+}
+.op-detail header {
+  justify-content: space-between;
+}
+.op-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+}
+.op-form h3,
+.op-form > p,
+.op-form .op-campaign,
+.op-form > button {
+  grid-column: 1/-1;
+}
+.op-form textarea {
+  min-height: 90px;
+}
+.op-campaign {
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--op-brand);
+  background: var(--op-soft);
+}
+.op-empty {
+  text-align: center;
+  padding: 48px 16px;
+}
+.op-check {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+.op-check input {
+  width: 20px;
+  height: 20px;
+  min-height: 20px;
+  accent-color: var(--op-brand);
+}
+.op-timeline {
+  list-style: decimal;
+  padding-inline-start: 24px;
+  margin: 24px 0;
+}
+.op-timeline li {
+  padding: 10px;
+}
+.op-timeline form {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.op-image {
+  max-width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.op-image img {
+  width: 100%;
+  height: auto;
+}
+.op-image span {
+  display: block;
+  padding: 30px;
+  background: var(--op-bg);
+}
+.op-detail > section:last-child {
+  margin-top: 24px;
+}
+.op-detail ul {
+  list-style: disc;
+  padding-inline-start: 24px;
+}
+.op-detail li {
+  margin: 8px 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .op button:hover:not(:disabled) {
+    border-color: var(--op-brand);
+  }
+}
+@media (min-width: 1200px) {
+  .op-layout:has(.op-detail) {
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.8fr);
+  }
+  .op-layout:has(.op-detail) .op-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .op-layout:has(.op-detail) .op-filters label:first-child {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 767px) {
+  .op-main {
+    padding: 20px 16px calc(24px + env(safe-area-inset-bottom));
+  }
+  .op-header {
+    flex-wrap: wrap;
+  }
+  .op-header .op-row {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .op-header select {
+    max-width: 130px;
+  }
+  .op-card {
+    padding: 16px;
+  }
+  .op h1 {
+    font-size: 26px;
+  }
+  .op-desktop {
+    display: none;
+  }
+  .op-mobile {
+    display: grid;
+    gap: 12px;
+  }
+  .op-mobile .op-card h3 {
+    margin-top: 12px;
+  }
+  .op-mobile .op-card button {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .op-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .op-filters label:first-child {
+    grid-column: 1/-1;
+  }
+  .op-form,
+  .op-fields {
+    grid-template-columns: 1fr;
+  }
+  .op-tabs button {
+    flex: 1 1 140px;
+  }
+  .op-timeline {
+    padding-inline-start: 20px;
+  }
+  .op-timeline form {
+    display: grid;
+    width: 100%;
+  }
+  .op-timeline button {
+    width: 100%;
+  }
+}
+
+.op-permissions {
+  overflow-x: auto;
+  overscroll-behavior: contain;
+}
+.op-permissions table {
+  min-width: 480px;
+}
+.op-layout {
+  align-items: start;
+}
+.op-form > label {
+  align-content: start;
+}
