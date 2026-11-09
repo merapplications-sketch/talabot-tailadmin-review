@@ -1,0 +1,710 @@
+{
+  "browser": "134.0.6998.35",
+  "safari": false,
+  "checks": [
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/finance"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/reports"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 640,
+      "path": "/settings"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/finance"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/reports"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "en",
+      "width": 932,
+      "height": 320,
+      "path": "/settings"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "path": "/settings"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/finance"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/reports"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "ru",
+      "width": 320,
+      "height": 640,
+      "path": "/settings"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/finance"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/reports"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "ru",
+      "width": 932,
+      "height": 320,
+      "path": "/settings"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "ru",
+      "width": 1440,
+      "height": 1000,
+      "path": "/settings"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/finance"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/reports"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "tg",
+      "width": 320,
+      "height": 640,
+      "path": "/settings"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/finance"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/reports"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "tg",
+      "width": 932,
+      "height": 320,
+      "path": "/settings"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/restaurants/1"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/drivers/1"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers?page=2"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/customers/9"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/finance/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/reports/2026-11-09"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/notifications/1"
+    },
+    {
+      "locale": "tg",
+      "width": 1440,
+      "height": 1000,
+      "path": "/settings"
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

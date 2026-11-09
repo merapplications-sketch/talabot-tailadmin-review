@@ -1,0 +1,10 @@
+{
+  "passed": [
+    "merchant type/area/sort",
+    "scroll restoration",
+    "contextual order return",
+    "language persistence",
+    "bell detail/read/all navigation"
+  ],
+  "errors": []
+}

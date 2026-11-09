@@ -15,6 +15,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter } from "@/i18n/navigation";
+import { useReadNotices } from "@/components/talabot/notification-state";
 import { usePreview } from "@/components/talabot/preview";
 import { BellIcon, DotIcon, XIcon } from "@/icons";
 import { cn, getInitials } from "@/utils";
@@ -25,6 +27,8 @@ import { notifications } from "./data";
 export default function NotificationDropdown() {
   const t = useTranslations("header.notifications");
   const show = usePreview();
+  const router = useRouter();
+  const { read } = useReadNotices();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [notifying, setNotifying] = useState(true);
@@ -100,7 +104,13 @@ export default function NotificationDropdown() {
           <div className="flex flex-col pe-2">
             {notifications.map((item) => (
               <Fragment key={item.id}>
-                <DropdownMenuItem className="flex items-start gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-white/5">
+                <DropdownMenuItem
+                  onClick={() => {
+                    setIsOpen(false);
+                    router.push(`/notifications/${item.id}`);
+                  }}
+                  className="flex items-start gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-white/5"
+                >
                   <Avatar size="default">
                     {item.avatar && (
                       <AvatarImage src={item.avatar} alt={item.name} />
@@ -112,6 +122,7 @@ export default function NotificationDropdown() {
                     <span className="mb-1.5 block space-x-1 text-sm text-gray-500 dark:text-gray-400">
                       <span className="font-medium text-gray-800 dark:text-white/90">
                         {item.name}
+                        {read.includes(item.id) ? " ✓" : ""}
                       </span>{" "}
                       <span>{t(item.actionKey)}</span>{" "}
                       <span className="font-medium text-gray-800 dark:text-white/90">

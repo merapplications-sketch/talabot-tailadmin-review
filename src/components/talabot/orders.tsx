@@ -19,6 +19,7 @@ const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
 const input =
   "mt-2 block min-h-11 w-full min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base text-gray-800 focus:outline-brand-500 dark:border-gray-700 dark:text-gray-200 dark:[color-scheme:dark]";
+import { entities } from "./directories-data";
 const STORE = "talabot-orders-return-v1";
 function useFormat() {
   const locale = useLocale();
@@ -482,18 +483,25 @@ export function OrdersList() {
 }
 export function OrderDetails({ id }: { id: string }) {
   const t = useTranslations("talabotOrders"),
-    search = useSearchParams();
+    search = useSearchParams(),
+    workspace = useTranslations("workspace");
   const { money, date } = useFormat();
   const [copy, setCopy] = useState("");
   const o = orders.find((x) => x.id === id);
   const qs = search.toString();
+  const returnTo =
+    /^\/(restaurants|drivers|customers|notifications)\/[a-zA-Z0-9-]+(?:\?.*)?$/.test(
+      search.get("returnTo") || "",
+    )
+      ? search.get("returnTo")
+      : null;
   const back = (
     <Link
-      href={`/orders${qs ? "?" + qs : ""}`}
+      href={returnTo || `/orders${qs ? "?" + qs : ""}`}
       scroll={false}
       className="inline-flex min-h-11 items-center text-sm font-medium text-brand-500"
     >
-      ← {t("back")}
+      ← {returnTo ? workspace("return") : t("back")}
     </Link>
   );
   if (!o)
@@ -554,7 +562,12 @@ export function OrderDetails({ id }: { id: string }) {
       <div className="grid items-start gap-6 xl:grid-cols-3">
         <div className="space-y-6 xl:col-span-2">
           <Section title={t("customer")}>
-            <p className="font-medium">{o.customer}</p>
+            <Link
+              className="font-medium text-brand-500"
+              href={`/customers/${entities("customers").find((e) => e.name === o.customer)?.id}`}
+            >
+              {o.customer}
+            </Link>
             <p className="mt-3 text-sm">
               {t("delivery")}: {o.deliveryZone}
             </p>
@@ -567,7 +580,13 @@ export function OrderDetails({ id }: { id: string }) {
           </Section>
           <Section title={t("merchant")}>
             <p className="font-medium">
-              {o.merchant} · {t(o.store ? "store" : "restaurant")}
+              <Link
+                className="text-brand-500"
+                href={`/restaurants/${entities("restaurants").find((e) => e.name === o.merchant)?.id}`}
+              >
+                {o.merchant}
+              </Link>{" "}
+              · {t(o.store ? "store" : "restaurant")}
             </p>
             <p className="mt-3 text-sm">
               {t("pickup")}: {o.pickup}
@@ -645,7 +664,18 @@ export function OrderDetails({ id }: { id: string }) {
             <p className="mt-5 text-sm text-gray-500">{t("noTracking")}</p>
           </Section>
           <Section title={t("driver")}>
-            <p>{o.driver || t("unassigned")}</p>
+            <p>
+              {o.driver ? (
+                <Link
+                  className="text-brand-500"
+                  href={`/drivers/${entities("drivers").find((e) => e.name === o.driver)?.id}`}
+                >
+                  {o.driver}
+                </Link>
+              ) : (
+                t("unassigned")
+              )}
+            </p>
             <p className="mt-3 text-sm text-gray-500">
               {t("assignment")}: {t("notProvided")}
             </p>

@@ -1,15 +1,7 @@
 "use client";
 
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-  DialogClose,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import {
   BellIcon,
@@ -42,40 +34,10 @@ const PreviewContext = createContext<(destination: Destination) => void>(
 export const usePreview = () => useContext(PreviewContext);
 
 export function PreviewProvider({ children }: { children: React.ReactNode }) {
-  const t = useTranslations("talabot");
   const router = useRouter();
-  const [destination, setDestination] = useState<Destination | null>(null);
-  const returnFocus = useRef<HTMLElement | null>(null);
   return (
-    <PreviewContext.Provider
-      value={(next) => {
-        if (next === "orders") {
-          router.push("/orders");
-          return;
-        }
-        returnFocus.current = document.activeElement as HTMLElement;
-        setDestination(next);
-      }}
-    >
+    <PreviewContext.Provider value={(next) => router.push(`/${next}`)}>
       {children}
-      <Dialog
-        open={destination !== null}
-        onOpenChange={(open) => {
-          if (!open) setDestination(null);
-        }}
-      >
-        <DialogContent
-          showCloseButton={false}
-          finalFocus={returnFocus}
-          className="max-h-[calc(100dvh-2rem)] overflow-y-auto"
-        >
-          <DialogTitle>{destination ? t(destination) : ""}</DialogTitle>
-          <DialogDescription>{t("preparing")}</DialogDescription>
-          <DialogClose
-            render={<Button variant="outline">{t("close")}</Button>}
-          />
-        </DialogContent>
-      </Dialog>
     </PreviewContext.Provider>
   );
 }
@@ -139,19 +101,19 @@ export function SummaryCards() {
 }
 
 export function NeedsAttention() {
+  const router = useRouter();
   const t = useTranslations("talabot");
-  const show = usePreview();
   // Illustrative, manually authored examples, not operational alert rules or timers.
   const examples = [
     {
-      id: "DEMO-1042",
+      id: "DEMO-1103",
       restaurant: "Demo Bistro",
       reason: "deliveryIssue",
       time: "12:10",
     },
     {
-      id: "DEMO-1043",
-      restaurant: "Demo Kitchen",
+      id: "DEMO-1106",
+      restaurant: "Demo Bistro",
       reason: "cancellationReview",
       time: "12:15",
     },
@@ -178,7 +140,7 @@ export function NeedsAttention() {
           <li key={item.id}>
             <button
               type="button"
-              onClick={() => show("orders")}
+              onClick={() => router.push(`/orders/${item.id}`)}
               className="grid w-full grid-cols-2 gap-2 px-5 py-4 text-start text-sm hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-brand-500 sm:grid-cols-4 dark:hover:bg-white/3"
             >
               <span className="font-medium text-gray-800 dark:text-white/90">
@@ -213,6 +175,7 @@ export function PreviewSidebar({ showContent }: { showContent: boolean }) {
     ["customers", UsersIcon],
     ["finance", DollarIcon],
     ["reports", BarChartIcon],
+    ["notifications", BellIcon],
     ["settings", GearIcon],
   ] as const;
   return (
@@ -233,16 +196,12 @@ export function PreviewSidebar({ showContent }: { showContent: boolean }) {
             key={key}
             type="button"
             aria-label={t(key)}
-            aria-current={
-              key === "orders" && pathname.startsWith("/orders")
-                ? "page"
-                : undefined
-            }
+            aria-current={pathname.startsWith(`/${key}`) ? "page" : undefined}
             onClick={() => {
               setOpenMobile(false);
               requestAnimationFrame(() => show(key));
             }}
-            className={`flex w-full items-center gap-3 rounded-lg px-3 py-3 text-start text-sm hover:bg-gray-100 dark:hover:bg-white/5 ${key === "orders" && pathname.startsWith("/orders") ? "text-brand-500" : "text-gray-700 dark:text-gray-300"}`}
+            className={`flex w-full items-center gap-3 rounded-lg px-3 py-3 text-start text-sm hover:bg-gray-100 dark:hover:bg-white/5 ${pathname.startsWith(`/${key}`) ? "text-brand-500" : "text-gray-700 dark:text-gray-300"}`}
           >
             <Icon className="size-6 shrink-0" />
             {showContent && t(key)}
@@ -263,7 +222,20 @@ export function MobileNavigation({
   const { openMobile } = useSidebar();
   const [keyboard, setKeyboard] = useState(false);
   useEffect(() => {
+    let pointerDown = false;
+    let frame = 0;
+    const beginPointer = () => {
+      pointerDown = true;
+    };
+    const endPointer = () => {
+      pointerDown = false;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(sync);
+    };
     const sync = () => {
+      // Do not insert the fixed bar between pointer-down and click when a
+      // field loses focus: it can cover a link at the bottom of the viewport.
+      if (pointerDown) return;
       const focused = document.activeElement;
       const editing =
         focused instanceof HTMLElement &&
@@ -271,10 +243,19 @@ export function MobileNavigation({
       // Hide during input focus, including Safari's keyboard accessory bar.
       setKeyboard(editing);
     };
+    document.addEventListener("pointerdown", beginPointer, true);
+    document.addEventListener("click", endPointer, true);
+    document.addEventListener("pointerup", endPointer, true);
+    document.addEventListener("pointercancel", endPointer, true);
     document.addEventListener("focusin", sync);
     document.addEventListener("focusout", sync);
     window.visualViewport?.addEventListener("resize", sync);
     return () => {
+      cancelAnimationFrame(frame);
+      document.removeEventListener("pointerdown", beginPointer, true);
+      document.removeEventListener("click", endPointer, true);
+      document.removeEventListener("pointerup", endPointer, true);
+      document.removeEventListener("pointercancel", endPointer, true);
       document.removeEventListener("focusin", sync);
       document.removeEventListener("focusout", sync);
       window.visualViewport?.removeEventListener("resize", sync);
@@ -307,12 +288,8 @@ export function MobileNavigation({
             key={key}
             type="button"
             onClick={() => show(key)}
-            aria-current={
-              key === "orders" && pathname.startsWith("/orders")
-                ? "page"
-                : undefined
-            }
-            className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-1 py-2 text-xs ${key === "orders" && pathname.startsWith("/orders") ? "text-brand-500" : "text-gray-500 dark:text-gray-400"}`}
+            aria-current={pathname.startsWith(`/${key}`) ? "page" : undefined}
+            className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-1 py-2 text-xs ${pathname.startsWith(`/${key}`) ? "text-brand-500" : "text-gray-500 dark:text-gray-400"}`}
           >
             <Icon className="size-5" />
             {t(key)}

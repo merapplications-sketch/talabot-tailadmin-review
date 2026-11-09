@@ -1,16 +1,16 @@
 import { NotificationItem } from "./types";
-
-// Synthetic examples only; no live status evaluation or escalation timers.
-export const notifications: NotificationItem[] = Array.from(
-  { length: 8 },
-  (_, index) => ({
-    id: String(index + 1),
-    name: `DEMO-${1042 + index}`,
+import { notices } from "@/components/talabot/directories-data";
+// Manually chosen fictional examples, never automatic escalation rules.
+export const notifications: NotificationItem[] = notices.map(
+  ({ id, order }, i) => ({
+    id,
+    name: order.id,
     avatar: "",
-    actionKey: index % 2 === 0 ? "deliveryIssue" : "cancellationReview",
-    project: index % 2 === 0 ? "Demo Bistro" : "Demo Kitchen",
+    actionKey:
+      order.status === "cancelled" ? "cancellationReview" : "deliveryIssue",
+    project: order.merchant,
     timeKey: "minAgo",
-    timeCount: 5 + index * 3,
+    timeCount: 5 + i * 3,
     status: "offline",
   }),
 );
