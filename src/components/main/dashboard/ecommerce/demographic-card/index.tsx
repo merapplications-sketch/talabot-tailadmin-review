@@ -10,7 +10,7 @@ export default function DemographicCard() {
     latLng: country.latLng,
     name: country.name,
     style: {
-      fill: "#465FFF",
+      fill: "#F36831",
       borderWidth: 1,
       borderColor: "white",
     },

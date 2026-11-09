@@ -13,7 +13,7 @@
   },
   "sidebar": {
     "groups": {
-      "menu": "Menu",
+      "menu": "Template examples",
       "support": "Support",
       "others": "Others"
     },
@@ -134,14 +134,19 @@
     "searchPlaceholder": "Search or type command...",
     "toggleSidebar": "Toggle Sidebar",
     "notifications": {
-      "title": "Notification",
+      "title": "Notifications · Example",
       "requestsPermission": "requests permission to change",
-      "project": "Project",
+      "project": "Example",
       "minAgo": "{count} min ago",
       "hrAgo": "{count} hr ago",
-      "viewAll": "View All Notifications"
+      "viewAll": "View All Notifications",
+      "deliveryIssue": "Delivery issue",
+      "cancellationReview": "Cancellation review",
+      "toggle": "Notifications",
+      "close": "Close"
     },
-    "toggleTheme": "Toggle color theme"
+    "toggleTheme": "Toggle color theme",
+    "toggleMenu": "Toggle application menu"
   },
   "userDropdown": {
     "editProfile": "Edit profile",
@@ -866,5 +871,31 @@
         "inProgress": "In Progress"
       }
     }
+  },
+  "talabot": {
+    "home": "Home",
+    "orders": "Orders",
+    "drivers": "Drivers",
+    "restaurants": "Restaurants",
+    "customers": "Customers",
+    "notifications": "Notifications",
+    "finance": "Finance",
+    "reports": "Reports",
+    "settings": "Settings",
+    "activeOrders": "Active orders",
+    "availableDrivers": "Available drivers",
+    "openRestaurants": "Open restaurants",
+    "attention": "Needs attention",
+    "examples": "Synthetic examples · No automatic intervention rules",
+    "exampleTime": "Example time: {time}",
+    "deliveryIssue": "Delivery issue",
+    "cancellationReview": "Cancellation review",
+    "preparing": "This section is being prepared for the preview. No live data or permanent changes.",
+    "close": "Close",
+    "preview": "Design preview · Synthetic data",
+    "navigation": "Administration navigation",
+    "mobileNavigation": "Mobile navigation",
+    "sample": "Example",
+    "languageNote": ""
   }
 }

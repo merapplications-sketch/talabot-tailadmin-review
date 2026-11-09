@@ -41,17 +41,17 @@
   --color-white: #ffffff;
   --color-black: #101828;
 
-  --color-brand-50: rgba(236, 243, 255, 1);
-  --color-brand-100: rgba(221, 233, 255, 1);
-  --color-brand-200: rgba(194, 214, 255, 1);
-  --color-brand-300: rgba(156, 185, 255, 1);
-  --color-brand-400: rgba(117, 146, 255, 1);
-  --color-brand-500: rgba(70, 95, 255, 1);
-  --color-brand-600: rgba(54, 65, 245, 1);
-  --color-brand-700: rgba(42, 49, 216, 1);
-  --color-brand-800: rgba(37, 45, 174, 1);
-  --color-brand-900: rgba(38, 46, 137, 1);
-  --color-brand-950: rgba(22, 25, 80, 1);
+  --color-brand-50: color-mix(in srgb, #f36831, white 95%);
+  --color-brand-100: color-mix(in srgb, #f36831, white 90%);
+  --color-brand-200: color-mix(in srgb, #f36831, white 80%);
+  --color-brand-300: color-mix(in srgb, #f36831, white 60%);
+  --color-brand-400: color-mix(in srgb, #f36831, white 30%);
+  --color-brand-500: #f36831;
+  --color-brand-600: color-mix(in srgb, #f36831, black 12%);
+  --color-brand-700: color-mix(in srgb, #f36831, black 24%);
+  --color-brand-800: color-mix(in srgb, #f36831, black 36%);
+  --color-brand-900: color-mix(in srgb, #f36831, black 48%);
+  --color-brand-950: color-mix(in srgb, #f36831, black 60%);
 
   --shadow-theme-md:
     0px 4px 8px -2px rgba(16, 24, 40, 0.1),
@@ -67,7 +67,7 @@
     0px 20px 24px -4px rgba(16, 24, 40, 0.08),
     0px 8px 8px -4px rgba(16, 24, 40, 0.03);
   --shadow-datepicker: -5px 0 0 #262d3c, 5px 0 0 #262d3c;
-  --shadow-focus-ring: 0px 0px 0px 4px rgba(70, 95, 255, 0.12);
+  --shadow-focus-ring: 0px 0px 0px 4px rgba(243, 104, 49, 0.12);
   --shadow-slider-navigation:
     0px 1px 2px 0px rgba(16, 24, 40, 0.1), 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
   --shadow-tooltip:
@@ -806,4 +806,10 @@ pre[class*="language-"].line-numbers {
   .custom-calendar .fc-timegrid {
     min-width: 580px;
   }
+}
+
+/* Keep mobile navigation out of all dialog/menu focus layers. */
+body:has([role="dialog"]) .talabot-bottom-nav,
+body:has([data-slot="dropdown-menu-content"]) .talabot-bottom-nav {
+  visibility: hidden;
 }

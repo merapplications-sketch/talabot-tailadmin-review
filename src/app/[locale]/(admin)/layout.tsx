@@ -1,6 +1,10 @@
 "use client";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import {
+  PreviewProvider,
+  MobileNavigation,
+} from "@/components/talabot/preview";
 import AppHeader from "@/layout/app-layout/header";
 import AppSidebar from "@/layout/app-layout/sidebar";
 
@@ -10,16 +14,19 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SidebarProvider>
-      <AppSidebar />
+    <PreviewProvider>
+      <SidebarProvider>
+        <AppSidebar />
 
-      <SidebarInset>
-        <AppHeader />
+        <SidebarInset>
+          <AppHeader />
 
-        <div className="p-4 mx-auto w-full max-w-(--breakpoint-2xl) md:p-6">
-          {children}
-        </div>
-      </SidebarInset>
-    </SidebarProvider>
+          <div className="mx-auto w-full max-w-(--breakpoint-2xl) p-4 pb-[calc(6rem+env(safe-area-inset-bottom))] md:p-6 md:pb-[calc(6rem+env(safe-area-inset-bottom))] xl:pb-6">
+            {children}
+          </div>
+        </SidebarInset>
+        <MobileNavigation />
+      </SidebarProvider>
+    </PreviewProvider>
   );
 }

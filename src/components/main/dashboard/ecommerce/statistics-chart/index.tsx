@@ -40,12 +40,12 @@ export default function StatisticsChart() {
   const colors = useMemo(() => {
     switch (selectedTab) {
       case "sales":
-        return ["#465FFF"];
+        return ["#F36831"];
       case "revenue":
-        return ["#9CB9FF"];
+        return ["#F9B69D"];
       case "overview":
       default:
-        return ["#465FFF", "#9CB9FF"];
+        return ["#F36831", "#F9B69D"];
     }
   }, [selectedTab]);
 
@@ -112,14 +112,14 @@ export default function StatisticsChart() {
             w.globals?.categoryLabels?.[dataPointIndex] ??
             w.config.xaxis?.categories?.[dataPointIndex] ??
             "";
-          const colors = w.config.colors ?? ["#465FFF"];
+          const colors = w.config.colors ?? ["#F36831"];
           const seriesList =
             (w.config.series as unknown as TooltipSeriesItem[]) ?? [];
 
           const rows = seriesList
             .map((s, idx) => {
               const val = chartSeries[idx]?.[dataPointIndex];
-              const color = colors[idx] ?? "#465FFF";
+              const color = colors[idx] ?? "#F36831";
               const formattedVal =
                 typeof val === "number" ? val.toLocaleString() : (val ?? "");
               return `
@@ -168,7 +168,7 @@ export default function StatisticsChart() {
             gradient: {
               colorFrom:
                 theme === "dark" ? "rgba(255, 255, 255, 0.1)" : "#ffffff",
-              colorTo: "#9CB9FF",
+              colorTo: "#F9B69D",
               stops: [0, 100],
               opacityFrom: 1,
               opacityTo: 1,

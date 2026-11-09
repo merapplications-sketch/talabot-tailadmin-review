@@ -2,7 +2,7 @@ export interface NotificationItem {
   id: string;
   name: string;
   avatar: string;
-  actionKey: "requestsPermission";
+  actionKey: "deliveryIssue" | "cancellationReview";
   project: string;
   timeKey: "minAgo" | "hrAgo";
   timeCount: number;

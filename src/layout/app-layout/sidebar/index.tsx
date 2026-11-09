@@ -11,7 +11,7 @@ import { useState } from "react";
 import { navItems, othersItems, supportItems } from "./data";
 import AppSidebarHeader from "./sidebar-header";
 import SidebarNavGroup from "./sidebar-nav-group";
-import SidebarWidget from "./sidebar-widget";
+import { PreviewSidebar, PreviewNotice } from "@/components/talabot/preview";
 import { MenuType, NavItem } from "./types";
 
 const menuSections: { type: MenuType; labelKey: string; items: NavItem[] }[] = [
@@ -28,7 +28,8 @@ const findMatchingSubmenu = (path: string) => {
         nav.subItems?.some(
           (subItem) =>
             subItem.path === path ||
-            (subItem.path === "/ai-settings" && path.startsWith("/ai-settings")),
+            (subItem.path === "/ai-settings" &&
+              path.startsWith("/ai-settings")),
         )
       ) {
         return { type: section.type, index };
@@ -77,6 +78,7 @@ export default function AppSidebar() {
       <AppSidebarHeader showContent={showContent} />
 
       <SidebarContent className="overflow-y-auto px-5 duration-300 ease-linear">
+        <PreviewSidebar showContent={showContent} />
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             {activeSections.map((section) => (
@@ -97,7 +99,7 @@ export default function AppSidebar() {
 
       {showContent && (
         <SidebarFooter className="p-0 px-5 pt-1 pb-4">
-          <SidebarWidget />
+          <PreviewNotice />
         </SidebarFooter>
       )}
     </Sidebar>

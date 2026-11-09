@@ -15,7 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Link } from "@/i18n/navigation";
+import { usePreview } from "@/components/talabot/preview";
 import { BellIcon, DotIcon, XIcon } from "@/icons";
 import { cn, getInitials } from "@/utils";
 import { useTranslations } from "next-intl";
@@ -24,6 +24,7 @@ import { notifications } from "./data";
 
 export default function NotificationDropdown() {
   const t = useTranslations("header.notifications");
+  const show = usePreview();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [notifying, setNotifying] = useState(true);
@@ -44,7 +45,7 @@ export default function NotificationDropdown() {
             variant="outline"
             size="icon-lg"
             className="relative"
-            aria-label="Toggle notifications"
+            aria-label={t("toggle")}
           >
             <span
               className={cn(
@@ -82,7 +83,7 @@ export default function NotificationDropdown() {
             size="icon-xs"
             onClick={() => setIsOpen(false)}
             className="size-"
-            aria-label="Close notifications"
+            aria-label={t("close")}
           >
             <XIcon className="size-5" />
           </Button>
@@ -101,7 +102,9 @@ export default function NotificationDropdown() {
               <Fragment key={item.id}>
                 <DropdownMenuItem className="flex items-start gap-3 rounded-lg p-3 hover:bg-gray-100 dark:hover:bg-white/5">
                   <Avatar size="default">
-                    <AvatarImage src={item.avatar} alt={item.name} />
+                    {item.avatar && (
+                      <AvatarImage src={item.avatar} alt={item.name} />
+                    )}
                     <AvatarFallback>{getInitials(item.name)}</AvatarFallback>
                     <AvatarBadge variant={item.status} />
                   </Avatar>
@@ -131,10 +134,12 @@ export default function NotificationDropdown() {
         <Button
           variant="outline"
           size="default"
-          nativeButton={false}
-          render={<Link href="/" />}
+
           className="mt-3 w-full shrink-0"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+            requestAnimationFrame(() => show("notifications"));
+          }}
         >
           {t("viewAll")}
         </Button>

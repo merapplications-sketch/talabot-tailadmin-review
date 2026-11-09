@@ -28,7 +28,7 @@ fs.mkdirSync(out, { recursive: true });
     waitUntil: "networkidle",
   });
   await p.getByRole("button", { name: "Toggle application menu" }).click();
-  await p.getByRole("button", { name: "Toggle notifications" }).click();
+  await p.getByLabel("Notifications", { exact: true }).click();
   const popup = p.locator("[data-slot=dropdown-menu-content]");
   const area = popup.locator("[data-slot=scroll-area-viewport]");
   const results = [];
@@ -37,7 +37,7 @@ fs.mkdirSync(out, { recursive: true });
     return popup.evaluate((e) => {
       const root = e.querySelector("[data-slot=scroll-area]"),
         v = e.querySelector("[data-slot=scroll-area-viewport]"),
-        footer = e.querySelector("a"),
+        footer = e.lastElementChild,
         header = e.firstElementChild;
       const rect = (x) => {
         const r = x.getBoundingClientRect();
@@ -206,11 +206,11 @@ fs.mkdirSync(out, { recursive: true });
         : n.setAttribute("style", s[i]),
     );
   }, original);
-  await p.getByRole("button", { name: "Close notifications" }).click();
+  await p.getByRole("button", { name: "Close", exact: true }).click();
   await p.waitForTimeout(200);
   assert(
     await p
-      .getByRole("button", { name: "Toggle notifications" })
+      .getByLabel("Notifications", { exact: true })
       .evaluate((e) => e === document.activeElement),
   );
   assert.deepEqual(errors, []);

@@ -17,7 +17,7 @@ export default function CountryMap({ markers }: CountryMapProps) {
           fill: #374151 !important;
         }
         .dark #demographicCountryMap .jvm-region.jvm-element:hover {
-          fill: #465fff !important;
+          fill: #F36831 !important;
         }
       `}</style>
       <VectorMap
@@ -25,7 +25,7 @@ export default function CountryMap({ markers }: CountryMapProps) {
         backgroundColor="transparent"
         markerStyle={{
           initial: {
-            fill: "#465FFF",
+            fill: "#F36831",
             r: 4,
           },
         }}
@@ -36,7 +36,7 @@ export default function CountryMap({ markers }: CountryMapProps) {
               coords: [37.2580397, -104.657039],
               name: "United States",
               style: {
-                fill: "#465FFF",
+                fill: "#F36831",
                 strokeWidth: 1,
                 stroke: "#383f47",
               },
@@ -44,18 +44,18 @@ export default function CountryMap({ markers }: CountryMapProps) {
             {
               coords: [20.7504374, 73.7276105],
               name: "India",
-              style: { fill: "#465FFF", strokeWidth: 1, stroke: "white" },
+              style: { fill: "#F36831", strokeWidth: 1, stroke: "white" },
             },
             {
               coords: [53.613, -11.6368],
               name: "United Kingdom",
-              style: { fill: "#465FFF", strokeWidth: 1, stroke: "white" },
+              style: { fill: "#F36831", strokeWidth: 1, stroke: "white" },
             },
             {
               coords: [-25.0304388, 115.2092761],
               name: "Sweden",
               style: {
-                fill: "#465FFF",
+                fill: "#F36831",
                 strokeWidth: 1,
                 stroke: "white",
                 strokeOpacity: 0,
@@ -81,11 +81,11 @@ export default function CountryMap({ markers }: CountryMapProps) {
           hover: {
             fillOpacity: 0.7,
             cursor: "pointer",
-            fill: "#465fff",
+            fill: "#F36831",
             stroke: "none",
           },
           selected: {
-            fill: "#465FFF",
+            fill: "#F36831",
           },
           selectedHover: {},
         }}

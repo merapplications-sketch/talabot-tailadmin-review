@@ -16,7 +16,7 @@ import ThemeToggleButton from "@/layout/header/theme-toggler";
 import UserDropdown from "@/layout/header/user-dropdown";
 import { cn } from "@/utils";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import TalabotLogo from "@/components/talabot/logo";
 import { useEffect, useRef, useState } from "react";
 
 export default function AppHeader() {
@@ -64,27 +64,14 @@ export default function AppHeader() {
           </Button>
 
           <Link href="/" className="xl:hidden">
-            <Image
-              width={154}
-              height={32}
-              className="dark:hidden"
-              src="/images/logo/logo.svg"
-              alt="Logo"
-            />
-            <Image
-              width={154}
-              height={32}
-              className="hidden dark:block"
-              src="/images/logo/logo-dark.svg"
-              alt="Logo"
-            />
+            <TalabotLogo />
           </Link>
 
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleApplicationMenu}
-            aria-label="Toggle application menu"
+            aria-label={t("toggleMenu")}
             className="text-gray-700 xl:hidden dark:text-gray-400"
           >
             <HorizontalDotsIcon />
