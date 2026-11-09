@@ -1,0 +1,76 @@
+{
+  "browser": "134.0.6998.35",
+  "safari": false,
+  "checks": [
+    {
+      "notificationRotation": [
+        390,
+        844
+      ],
+      "bounds": {
+        "last": 750,
+        "list": 750,
+        "footer": 750,
+        "header": 94,
+        "top": 94,
+        "bottom": 828,
+        "height": 844
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        932,
+        320
+      ],
+      "bounds": {
+        "last": 226,
+        "list": 226,
+        "footer": 226,
+        "header": 94,
+        "top": 94,
+        "bottom": 304,
+        "height": 320
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        320,
+        480
+      ],
+      "bounds": {
+        "last": 386,
+        "list": 386,
+        "footer": 386,
+        "header": 94,
+        "top": 94,
+        "bottom": 464,
+        "height": 480
+      },
+      "overlap": false,
+      "escapeFocus": true
+    },
+    {
+      "notificationRotation": [
+        1440,
+        1000
+      ],
+      "bounds": {
+        "last": 906,
+        "list": 906,
+        "footer": 906,
+        "header": 94,
+        "top": 94,
+        "bottom": 984,
+        "height": 1000
+      },
+      "overlap": false,
+      "escapeFocus": true
+    }
+  ],
+  "errors": [],
+  "failed": []
+}
