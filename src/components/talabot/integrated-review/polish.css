@@ -386,3 +386,15 @@ body:has(.talabot-polish) {
     padding-inline: 12px;
   }
 }
+
+/* Keep chart/table scrolling within each component and all controls above bottom nav. */
+.tp-chart-scroll {
+  overscroll-behavior-inline: contain;
+}
+.talabot-polish :is(input, select, textarea, a, button, summary) {
+  scroll-margin-block: 96px;
+}
+.talabot-polish [data-testid="analytics"] [role="group"] button {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}

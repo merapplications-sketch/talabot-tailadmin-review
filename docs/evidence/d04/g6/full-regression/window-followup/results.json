@@ -1,0 +1,145 @@
+{
+  "base": "http://localhost:3041",
+  "browser": "134.0.6998.35",
+  "kind": "Chromium touch emulation, not actual Safari",
+  "results": [
+    "calendar day list -> editor -> button -> marker focus",
+    "calendar day list -> editor -> Escape -> marker focus",
+    "day list reopens and closes normally",
+    {
+      "size": {
+        "width": 844,
+        "height": 430
+      },
+      "geometry": {
+        "popup": {
+          "x": 5,
+          "y": 5,
+          "width": 361,
+          "height": 419.984375,
+          "top": 5,
+          "right": 366,
+          "bottom": 424.984375,
+          "left": 5
+        },
+        "area": {
+          "x": 18,
+          "y": 71,
+          "width": 335,
+          "height": 284.984375,
+          "top": 71,
+          "right": 353,
+          "bottom": 355.984375,
+          "left": 18
+        },
+        "vh": 430,
+        "offset": 0
+      },
+      "touchScrollBottom": true,
+      "footerAndCloseReachable": true,
+      "focusReturned": true
+    },
+    {
+      "size": {
+        "width": 844,
+        "height": 300
+      },
+      "geometry": {
+        "popup": {
+          "x": 5,
+          "y": 5,
+          "width": 361,
+          "height": 289.984375,
+          "top": 5,
+          "right": 366,
+          "bottom": 294.984375,
+          "left": 5
+        },
+        "area": {
+          "x": 18,
+          "y": 71,
+          "width": 335,
+          "height": 154.984375,
+          "top": 71,
+          "right": 353,
+          "bottom": 225.984375,
+          "left": 18
+        },
+        "vh": 300,
+        "offset": 0
+      },
+      "touchScrollBottom": true,
+      "footerAndCloseReachable": true,
+      "focusReturned": true
+    },
+    {
+      "size": {
+        "width": 320,
+        "height": 640
+      },
+      "geometry": {
+        "popup": {
+          "x": 5,
+          "y": 116,
+          "width": 288,
+          "height": 519,
+          "top": 116,
+          "right": 293,
+          "bottom": 635,
+          "left": 5
+        },
+        "area": {
+          "x": 18,
+          "y": 182,
+          "width": 262,
+          "height": 384,
+          "top": 182,
+          "right": 280,
+          "bottom": 566,
+          "left": 18
+        },
+        "vh": 640,
+        "offset": 0
+      },
+      "touchScrollBottom": true,
+      "footerAndCloseReachable": true,
+      "focusReturned": true
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "geometry": {
+        "popup": {
+          "x": 5,
+          "y": 139,
+          "width": 350,
+          "height": 519,
+          "top": 139,
+          "right": 355,
+          "bottom": 658,
+          "left": 5
+        },
+        "area": {
+          "x": 18,
+          "y": 205,
+          "width": 324,
+          "height": 384,
+          "top": 205,
+          "right": 342,
+          "bottom": 589,
+          "left": 18
+        },
+        "vh": 844,
+        "offset": 0
+      },
+      "touchScrollBottom": true,
+      "footerAndCloseReachable": true,
+      "focusReturned": true
+    },
+    "open rotation / Escape / focus",
+    "desktop light/dark and footer link activation"
+  ],
+  "errors": []
+}

@@ -85,7 +85,7 @@ function DataTable({
               <TableCell
                 key={h}
                 isHeader
-                className="px-3 py-3 text-start text-xs font-medium whitespace-nowrap text-gray-500"
+                className="px-3 py-3 text-start text-sm font-medium whitespace-nowrap text-gray-500"
               >
                 {h}
               </TableCell>
@@ -153,6 +153,13 @@ function Plot({
       categories,
       axisBorder: { show: false },
       axisTicks: { show: false },
+      labels: {
+        rotate: 0,
+        hideOverlappingLabels: false,
+        trim: false,
+        formatter: (value: string) =>
+          /^\d{4}-\d{2}-\d{2}$/.test(value) ? value.slice(5) : value,
+      },
     },
     yaxis: {
       min: 0,
@@ -162,6 +169,10 @@ function Plot({
     },
     grid: { borderColor: theme === "dark" ? "#404040" : "#f2f2f2" },
     tooltip: {
+      x: {
+        formatter: (value, options) =>
+          categories[options?.dataPointIndex ?? -1] ?? String(value),
+      },
       y: {
         formatter: (v) =>
           v == null
@@ -173,8 +184,13 @@ function Plot({
     noData: { text: "—" },
   };
   return (
-    <div className="max-w-full overflow-x-auto">
-      <div className="min-w-162.5 xl:min-w-full">
+    <div
+      className="tp-chart-scroll max-w-full overflow-x-auto"
+      tabIndex={0}
+      role="region"
+      aria-label={series.map((s) => s.name).join(" / ")}
+    >
+      <div style={{ minWidth: Math.max(650, categories.length * 64 + 80) }}>
         <Chart options={options} series={series} type={type} height={height} />
       </div>
     </div>
