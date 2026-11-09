@@ -55,6 +55,7 @@ export default function CalendarEventModal({
     }
   };
 
+  const [mobileDates, setMobileDates] = useState(false);
   const [dateError, setDateError] = useState<string | null>(null);
   const [eventTitle, setEventTitle] = useState("");
   const [eventStartDate, setEventStartDate] = useState("");
@@ -159,6 +160,10 @@ export default function CalendarEventModal({
           },
         });
         startPickerRef.current = Array.isArray(fp) ? fp[0] : fp;
+        setMobileDates(startPickerRef.current?.isMobile ?? false);
+        if (startPickerRef.current?.mobileInput) {
+          startPickerRef.current.mobileInput.id = "event-start-date-mobile";
+        }
       }
 
       if (endDateInputRef.current && !endPickerRef.current) {
@@ -179,6 +184,9 @@ export default function CalendarEventModal({
           },
         });
         endPickerRef.current = Array.isArray(fp) ? fp[0] : fp;
+        if (endPickerRef.current?.mobileInput) {
+          endPickerRef.current.mobileInput.id = "event-end-date-mobile";
+        }
       }
     }, 10);
 
@@ -207,6 +215,16 @@ export default function CalendarEventModal({
       endPickerRef.current.setDate(eventEndDate, false);
     }
   }, [eventEndDate]);
+
+  // Flatpickr's native mobile input is outside React's rendered tree.
+  // Keep its accessibility state in sync with the controlled form.
+  useEffect(() => {
+    const input = endPickerRef.current?.mobileInput;
+    if (!input) return;
+    input.setAttribute("aria-invalid", String(!!dateError));
+    if (dateError) input.setAttribute("aria-describedby", "event-date-error");
+    else input.removeAttribute("aria-describedby");
+  }, [dateError, mobileDates]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -311,13 +329,16 @@ export default function CalendarEventModal({
             {/* Enter Start Date */}
             <div>
               <Label
-                htmlFor="event-start-date"
+                htmlFor={
+                  mobileDates ? "event-start-date-mobile" : "event-start-date"
+                }
                 className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
                 Enter Start Date
               </Label>
               <Input
                 ref={startDateInputRef}
+                type={mobileDates ? "hidden" : "text"}
                 id="event-start-date"
                 placeholder="dd/mm/yyyy"
                 value={eventStartDate}
@@ -329,13 +350,16 @@ export default function CalendarEventModal({
             {/* Enter End Date */}
             <div>
               <Label
-                htmlFor="event-end-date"
+                htmlFor={
+                  mobileDates ? "event-end-date-mobile" : "event-end-date"
+                }
                 className="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
                 Enter End Date
               </Label>
               <Input
                 ref={endDateInputRef}
+                type={mobileDates ? "hidden" : "text"}
                 id="event-end-date"
                 aria-invalid={!!dateError}
                 aria-describedby={dateError ? "event-date-error" : undefined}
