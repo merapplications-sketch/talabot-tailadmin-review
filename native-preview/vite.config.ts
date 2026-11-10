@@ -1,2 +1,2 @@
 import {defineConfig} from 'vite';import react from '@vitejs/plugin-react';import path from 'node:path';import {svgComponents} from '../config/svg-components';
-export default defineConfig({root:path.resolve('native-preview'),publicDir:path.resolve('public'),resolve:{alias:{'@':path.resolve('src')}},plugins:[svgComponents(),react()],build:{outDir:path.resolve('native-dist'),emptyOutDir:true},server:{host:'0.0.0.0',fs:{allow:[path.resolve('.')]}}});
+export default defineConfig({root:path.resolve('native-preview'),publicDir:false,resolve:{alias:{'@':path.resolve('src')}},plugins:[svgComponents(),react()],build:{outDir:path.resolve('native-dist'),emptyOutDir:true},server:{host:'0.0.0.0',fs:{allow:[path.resolve('.')]}}});

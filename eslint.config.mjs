@@ -17,6 +17,7 @@ const eslintConfig = defineConfig([
     ".vinext/**",
     "public/maplibre/**",
     "dist/**",
+    "native-dist/**",
     "qa/**",
     "out/**",
     "build/**",

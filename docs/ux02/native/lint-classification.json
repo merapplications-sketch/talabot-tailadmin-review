@@ -1,0 +1,344 @@
+[
+  {
+    "file": "public/operations-source/adapter.js",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 1,
+        "message": "'E' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 1,
+        "message": "'DE' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 1,
+        "message": "'BE' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "public/operations-source/preview-client.js",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 11,
+        "message": "'si' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 63,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 80,
+        "message": "'o' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 98,
+        "message": "'k' is assigned a value but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 109,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 112,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 114,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 118,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 120,
+        "message": "'_' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 121,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 121,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 129,
+        "message": "'x' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 130,
+        "message": "'x' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 131,
+        "message": "'x' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 136,
+        "message": "'mx0' is assigned a value but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 150,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 153,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 162,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 162,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 164,
+        "message": "'e' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "public/operations-source/talabat-core.js",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 24,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 37,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 77,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 80,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 85,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 93,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 145,
+        "message": "'sig' is assigned a value but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 196,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 443,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 596,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 598,
+        "message": "'e' is defined but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 796,
+        "message": "'e' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "scripts/gallery-review-worker.mjs",
+    "messages": [
+      {
+        "ruleId": "import/no-anonymous-default-export",
+        "severity": 1,
+        "line": 4,
+        "message": "Assign object to a variable before exporting as module default"
+      }
+    ]
+  },
+  {
+    "file": "src/components/others/auth/sign-in/form.tsx",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 37,
+        "message": "'_data' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "src/components/others/auth/sign-up/form.tsx",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 41,
+        "message": "'_data' is defined but never used."
+      }
+    ]
+  },
+  {
+    "file": "src/components/talabot/integrated-review/identity.tsx",
+    "messages": [
+      {
+        "ruleId": "@next/next/no-img-element",
+        "severity": 1,
+        "line": 59,
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element"
+      }
+    ]
+  },
+  {
+    "file": "src/components/talabot",
+    "messages": [
+      {
+        "ruleId": "@next/next/no-img-element",
+        "severity": 1,
+        "line": 27,
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element"
+      }
+    ]
+  },
+  {
+    "file": "src/components/talabot",
+    "messages": [
+      {
+        "ruleId": "react-hooks/refs",
+        "severity": 2,
+        "line": 5,
+        "message": "Error: Cannot access refs during render"
+      }
+    ]
+  },
+  {
+    "file": "src/components/talabot/visual-review/index.tsx",
+    "messages": [
+      {
+        "ruleId": "@next/next/no-img-element",
+        "severity": 1,
+        "line": 79,
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element"
+      },
+      {
+        "ruleId": "@next/next/no-img-element",
+        "severity": 1,
+        "line": 356,
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element"
+      },
+      {
+        "ruleId": "@next/next/no-location-assign-relative-destination",
+        "severity": 1,
+        "line": 395,
+        "message": "Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination"
+      }
+    ]
+  },
+  {
+    "file": "tests/safari-followup-acceptance.cjs",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 4,
+        "message": "'path' is assigned a value but never used."
+      }
+    ]
+  },
+  {
+    "file": "tests/safari-followup-regression.cjs",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 4,
+        "message": "'path' is assigned a value but never used."
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 1,
+        "line": 63,
+        "message": "'buttons' is assigned a value but never used."
+      }
+    ]
+  }
+]

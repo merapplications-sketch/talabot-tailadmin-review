@@ -1,4 +1,5 @@
-const fs=require('fs'),vm=require('vm'),ts=require('typescript'),crypto=require('crypto');
+async function inventoryMain(){
+const fs=await import('node:fs'),vm=await import('node:vm'),ts=(await import('typescript')).default,crypto=await import('node:crypto');
 const admin=fs.readFileSync('public/operations-source/admin.html','utf8'),core=fs.readFileSync('public/operations-source/talabat-core.js','utf8');
 const calls=[...new Set([...admin.matchAll(/TLB\.(\w+)\s*\(/g)].map(x=>x[1]))].sort();
 const ast=ts.createSourceFile('core.js',core,ts.ScriptTarget.Latest,true,ts.ScriptKind.JS),definitions={};
@@ -8,5 +9,11 @@ fs.writeFileSync('docs/ux02/native/contracts.json',JSON.stringify(inventory,null
 let fixture=fs.readFileSync('public/operations-source/preview-client.js','utf8').split(' if(window.__EMPTY)')[0]+'})();';
 class FixedDate extends Date{constructor(...args){super(...(args.length?args:['2026-11-10T12:00:00Z']));} static now(){return 1794312000000;}}
 const sandbox={window:{},Date:FixedDate};vm.runInNewContext(fixture,sandbox);
+const previewSource=fs.readFileSync('public/operations-source/preview-client.js','utf8');
+const historical=previewSource.slice(previewSource.indexOf('(function(){var T=window.__pvTables;if(!T||!T.profiles'),previewSource.indexOf(' setInterval(function(){var T=window.__pvTables'));
+vm.runInNewContext(historical,{window:sandbox.window,Date:FixedDate,location:{pathname:'/admin'}});
 fs.writeFileSync('src/components/talabot/native/fixture.json',JSON.stringify(sandbox.window.__pvTables,null,2));
 console.log(JSON.stringify({calls:calls.length,definitions:Object.keys(definitions).length,unresolved:inventory.unresolved,tables:Object.keys(sandbox.window.__pvTables).length}));
+
+}
+inventoryMain().catch(error=>{console.error(error);process.exitCode=1;});
