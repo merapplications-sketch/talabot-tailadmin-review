@@ -39,7 +39,7 @@ const html=wrap(React.createElement(OrdersPresentation,props));
 let checks=0;function test(name,fn){fn();checks++;console.log('PASS '+name)}
 test('one order search, inside original filter panel',()=>{assert.equal((html.match(/type="search"/g)||[]).length,1);assert(html.indexOf('type="search"')<html.indexOf('order-quick-filters'));assert(html.includes('tp-order-search flex items-end gap-3'));});
 test('four quick shortcuts and all statuses in closed secondary section',()=>{const quick=html.split('data-testid="order-quick-filters"')[1].split('</div>')[0];assert.equal((quick.match(/aria-pressed=/g)||[]).length,4);const secondary=html.match(/<details[^>]*class="tp-secondary-filters[^>]*>[\s\S]*?<\/details>/)[0];assert(!/^<details[^>]*\bopen/.test(secondary));for(const status of ['all','pending','preparing','ready','pickedup','delivered','cancelled','rejected'])assert(secondary.includes(`value="${status}"`),status);assert.equal((html.match(/aria-label="Status"/g)||[]).length,1);});
-test('filter panel closes before desktop table and phone cards',()=>{const end=html.indexOf('</section>');assert(end<html.indexOf('data-testid="orders-table"'));assert(html.includes('data-testid="orders-cards"'));assert(html.includes('data-testid="orders-list"'));assert(html.includes('tp-active-filters'));});
+test('filter panel closes before desktop table and phone cards',()=>{const end=html.indexOf('</section>');assert(end<html.indexOf('data-testid="orders-table"'));assert(html.includes('data-testid="orders-cards"'));assert(html.includes('data-testid="orders-list"'));assert(html.includes('tp-active-filters'));assert(!html.includes('36 orders'));assert(!html.includes('November 9, 2026')); });
 test('A list payment, item count, fee and parties retained',()=>{for(const text of ['ord0','Wallet','2 items','delivery 10 TJS','Муаммад','Ресторан'])assert(html.includes(text),text);});
 test('invalid dates and empty/error outcomes remain visible',()=>{assert(wrap(React.createElement(OrdersPresentation,{...props,rows:[],filterError:'invalid_range'})).includes('role="alert"'));assert(wrap(React.createElement(OrdersPresentation,{...props,rows:[],error:'unavailable'})).includes('Your filters are preserved'));assert(wrap(React.createElement(OrdersPresentation,{...props,loading:true})).includes('uOqBusy')===false);});
 test('SummaryCards remains informational and uses B four-card structure',()=>{const h=wrap(React.createElement(SummaryCards,{cards:[24,12,18,'3,782'].map((value,i)=>({key:String(i),label:'B'+i,value,Icon:icon}))}));assert.equal((h.match(/data-summary-info/g)||[]).length,4);assert(!h.includes('<button'));assert(h.includes('grid grid-cols-2 gap-4 md:gap-6 xl:grid-cols-4'));});
@@ -49,9 +49,10 @@ test('header contains no duplicate search or generic search substitute',()=>{con
 const {OrdersList}=load('src/components/talabot/orders');
 const b=wrap(React.createElement(OrdersList));
 test('B and D shared composition hooks render with equal hierarchy',()=>{for(const hook of ['orders-list','tp-order-search','order-quick-filters','tp-secondary-filters','tp-active-filters','orders-table','orders-cards'])assert(b.includes(hook)&&html.includes(hook),hook);const hierarchy=h=>['type="search"','order-quick-filters','tp-secondary-filters','tp-active-filters','orders-table','orders-cards'].map(x=>h.indexOf(x));for(const positions of [hierarchy(b),hierarchy(html)])assert.deepEqual(positions,[...positions].sort((a,b)=>a-b));});
-fs.mkdirSync('docs/ux02/source-conformance',{recursive:true});
-fs.writeFileSync('docs/ux02/source-conformance/rendered-D.html',html);
-fs.writeFileSync('docs/ux02/source-conformance/rendered-B.html',b);
+const outputDir=process.env.UX02_SSR_OUTPUT||'docs/ux02/source-conformance';
+fs.mkdirSync(outputDir,{recursive:true});
+fs.writeFileSync(path.join(outputDir,'rendered-D.html'),html);
+fs.writeFileSync(path.join(outputDir,'rendered-B.html'),b);
 console.log(`${checks} server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.`);
 
 module.exports={load,wrap,React};

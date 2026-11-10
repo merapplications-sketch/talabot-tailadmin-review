@@ -1,0 +1,7 @@
+PASS approveItem only updates approved flag for selected menu item; preview refuses real write
+PASS brand creation trims name and preserves original RPC arguments
+PASS brand name bounds rejected before transport
+PASS invalid brand identifier rejected before transport
+PASS branch attachment preserves source UUID, trimmed 60-character contract, store ID
+PASS branch detach only sends store ID and does not claim success
+6 narrow A contract checks passed; UI placement, confirmations and backend permissions remain unverified.

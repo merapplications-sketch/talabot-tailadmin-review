@@ -702,7 +702,7 @@ export function AnalyticsPage({
   );
 }
 export type NotificationRecord = {id: string; order: {id: string; merchant: string; status: OrderStatus; updated: string}};
-export function NotificationsPage({ id, records = notices }: { id?: string; records?: NotificationRecord[] }) {
+export function NotificationsPage({ id, records = notices, merchantImage = demoMerchantImage }: { id?: string; records?: NotificationRecord[]; merchantImage?: string }) {
   const locale = useLocale();
   const c = visualCopy[locale as keyof typeof visualCopy] || visualCopy.en;
   const t = useTranslations("workspace"),
@@ -733,7 +733,7 @@ export function NotificationsPage({ id, records = notices }: { id?: string; reco
                 <div className="tp-identity">
                   <IdentityImage
                     name={item.order.merchant}
-                    src={demoMerchantImage}
+                    src={merchantImage}
                     large
                   />
                   <div>

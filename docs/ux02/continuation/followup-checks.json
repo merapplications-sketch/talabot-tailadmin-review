@@ -1,0 +1,14 @@
+[
+  {
+    "check": "affected-followup",
+    "exit": 0
+  },
+  {
+    "check": "typescript-followup",
+    "exit": 0
+  },
+  {
+    "check": "build-followup",
+    "exit": 0
+  }
+]

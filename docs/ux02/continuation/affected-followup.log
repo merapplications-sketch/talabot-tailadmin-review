@@ -1,0 +1,22 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS B notification routes retain query, read filter and page on reload
+PASS notification to native A order has exact return URL
+PASS all twelve native navigation destinations and logo use native query routes
+PASS external or unimplemented B destinations are not silently mapped to A
+PASS synthetic notices refer to the same native order and merchant, no B DEMO ID alias
+PASS original B NotificationsPage renders injected local records and search/read controls
+PASS notification details link to exact native order and explicit mark-read; missing record is honest
+PASS A audit/error reads are descending, limited to 100, cap 200, no mutation
+PASS audit actor and changes keep A fallback/null/length rules
+PASS log renders correct A empty state and no untranslated placeholder labels
+PASS populated log fields rendered using existing B Card and Field adapters
+PASS original B local read state: empty, mark, deduplicate, sync, remount, malformed storage
+12 continuation checks passed (plus 8 composition regressions). No mobile/Safari claim.

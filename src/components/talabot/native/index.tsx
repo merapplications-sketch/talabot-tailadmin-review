@@ -63,6 +63,7 @@ const extra = {
       "Latest loaded orders (maximum 300), all statuses. Revenue and commission count delivered orders in that scope only.",
     nativeSource: "B analytics use a separate synthetic dataset.",
     nativeTest: "Read scenario",
+    nativeOrderTime: "Times shown in Dushanbe time (UTC+5).",
     normal: "Normal",
     empty: "Empty",
     error: "Read failure",
@@ -92,6 +93,7 @@ const extra = {
       "Последние загруженные заказы (не более 300), все статусы. Выручка и комиссия только доставленных заказов этой выборки.",
     nativeSource: "Аналитика B использует отдельную тестовую выборку.",
     nativeTest: "Сценарий чтения",
+    nativeOrderTime: "Время указано по Душанбе (UTC+5).",
     normal: "Обычный",
     empty: "Нет данных",
     error: "Ошибка чтения",
@@ -194,6 +196,7 @@ export default function NativeAdmin() {
               <NotificationsPage
                 id={state.id || undefined}
                 records={notices.records}
+              merchantImage=""
               />
             ) : state.section === "orders" ? (
               state.id ? (

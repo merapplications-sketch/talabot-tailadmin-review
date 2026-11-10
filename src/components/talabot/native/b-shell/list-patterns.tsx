@@ -468,14 +468,14 @@ export function OrdersPresentation({
         </>
       )}
       <p className="text-sm text-gray-500 dark:text-gray-400">
-        {t("notice")} {t("languageNote")}
+        {nativeT("nativeNotice")} {t("languageNote")}
       </p>
       {hasMore && (
         <Button variant="outline" onClick={onMore}>
           {nativeT("aMore")}
         </Button>
       )}
-      <p className="text-xs text-gray-500">{t("timezone")}</p>
+      <p className="text-xs text-gray-500">{nativeT("nativeOrderTime")}</p>
     </div>
   );
 }

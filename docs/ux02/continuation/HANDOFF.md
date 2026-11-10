@@ -30,3 +30,6 @@ Branch: review/ux02-final-b-integration-20261110. Repository: merapplications-sk
 
 ## Resume
 Publish this checkpoint only to existing isolated project appgprj_6af33addc50481918ebbc6ca01125d15 after remote source verification, then perform connected browser regression. Do not use inherited native/.openai/hosting.json (protected D2 project). No A/B/C/D2/main/production changes.
+
+## Browser-discovered data corrections
+The v4 browser pass exposed inherited B footer copy claiming 36 orders / 9 Nov for A sample rows, and a missing native updated_at value incorrectly substituted with created_at in notification data. Corrected display data only: native sample/timezone notice, unknown update time as —, and original IdentityImage fallback for native merchants with no supplied image (no missing asset request). No layout/CSS changes. Follow-up affected tests20, TypeScript, Build and affected lint0/0 pass. Original 70 unaffected regression assertions retained. Added6 isolated contracts for approveItem and brandCreate/Attach/Detach; no UI or real server acceptance claim.

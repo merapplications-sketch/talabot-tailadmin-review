@@ -17,7 +17,7 @@ export function nativeNotifications(locale: string) {
           id,
           merchant: store ? text(store, "name") : "",
           status: text(order, "status") as "pickedup" | "cancelled",
-          updated: formatDate(text(order, "created_at"), locale),
+          updated: formatDate(text(order, "updated_at"), locale),
         },
       },
     ];
