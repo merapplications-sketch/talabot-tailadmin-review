@@ -1,31 +1,476 @@
-import AdminLayout from './b-shell/admin-layout';
-import {NativeRouteContext} from './b-shell/router';
-'use client';
-import {useEffect,useRef,useState} from 'react';
-import {useLocale,useTranslations} from 'next-intl';
-import {useNativeNavigation} from './navigation';
-import {useTheme} from '@/context/theme-context';
-import {metrics,readOrders,findOrder,text,number,statuses,tables,secondaryFilter,type Row} from './domain';
-import dictionary from './dictionary.json';
+"use client";
+import { Button } from "@/components/ui/button";
+import AdminLayout from "./b-shell/admin-layout";
+import { NativeRouteContext } from "./b-shell/router";
+import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useNativeNavigation } from "./navigation";
+import { useTheme } from "@/context/theme-context";
+import {
+  metrics,
+  readOrders,
+  findOrder,
+  text,
+  number,
+  statuses,
+  tables,
+  secondaryFilter,
+  type Row,
+} from "./domain";
+import dictionary from "./dictionary.json";
 
-import {Card,button,input,Action} from './primitives';
-import OperationalAlerts from './operational-alerts';
-import OrderDetails from './order-details';
-import EntitySections from './entity-sections';
-import AnalyticsDashboard from '../analytics';
+import { Card, input, Action } from "./primitives";
+import OperationalAlerts from "./operational-alerts";
+import OrderDetails from "./order-details";
+import EntitySections from "./entity-sections";
+import AnalyticsDashboard from "../analytics";
 
-
-const extra={en:{nativeNext:'Next: review the recorded parties, items, timeline and payment information.',nativeWriteBlocked:'Isolated review. Financial and administrative writes are not connected.',nativeProofMissing:'The proof image is unavailable in the sample.',nativeNotice:'Synthetic data · native React migration in progress',nativePending:'This section is not migrated yet. The preserved source remains a separate reference.',nativeScope:'Latest loaded orders (maximum 300), all statuses. Revenue and commission count delivered orders in that scope only.',nativeSource:'B analytics use a separate synthetic dataset.',nativeTest:'Read scenario',normal:'Normal',empty:'Empty',error:'Read failure',denied:'Access denied',status:'Status',address:'Address',nativeRetry:'Retry',nativeDetails:'Details',nativeCashMissing:'Balance is not supplied for this account in the sample.',nativeRefundMissing:'Refund allowance is not supplied in the sample. No amount is assumed.'},ru:{nativeNext:'Далее: проверьте участников, состав, историю и сведения об оплате.',nativeWriteBlocked:'Изолированное превью. Финансовая и административная запись не подключена.',nativeProofMissing:'Фото подтверждения отсутствует в выборке.',nativeNotice:'Тестовые данные · перенос в React не завершён',nativePending:'Раздел ещё не перенесён. Исходник сохранён отдельно.',nativeScope:'Последние загруженные заказы (не более 300), все статусы. Выручка и комиссия только доставленных заказов этой выборки.',nativeSource:'Аналитика B использует отдельную тестовую выборку.',nativeTest:'Сценарий чтения',normal:'Обычный',empty:'Нет данных',error:'Ошибка чтения',denied:'Нет доступа',status:'Статус',address:'Адрес',nativeRetry:'Повторить',nativeDetails:'Подробнее',nativeCashMissing:'Баланс этого счёта отсутствует в выборке.',nativeRefundMissing:'Допустимая сумма возврата отсутствует в выборке. Значение не предполагается.'}};
-export default function NativeAdmin(){
- const locale=useLocale(),lang=locale==='en'?'en':'ru',dict=dictionary[lang] as Record<string,string>,copy=extra[lang] as Record<string,string>;
- const bT=useTranslations('talabot');
- const t=(key:string)=>copy[key]||dict[key]||key;
- const {themeMode,setThemeMode}=useTheme();const {state,navigate,back}=useNativeNavigation();const [result,setResult]=useState<{key:string;rows:Row[];error:string}>({key:'',rows:[],error:''}),[mode,setMode]=useState('normal'),[retry,setRetry]=useState(0),[limit,setLimit]=useState(()=>Number(sessionStorage.getItem('ux02-native:limit'))||50),[filters,setFilters]=useState<{store:string;payment:string;start:string;end:string;sort:string}>(()=>{try{return JSON.parse(sessionStorage.getItem('ux02-native:filters')||'null')||{store:'',payment:'',start:'',end:'',sort:''}}catch{return {store:'',payment:'',start:'',end:'',sort:''}}});
- const queryRef=useRef<HTMLInputElement>(null);
- const requestKey=JSON.stringify([state.query,state.status,mode,retry]);
- useEffect(()=>{let active=true;readOrders(state.query,state.status,mode).then(value=>{if(active)setResult({key:requestKey,rows:value.data||[],error:value.error||''})});return()=>{active=false}},[state.query,state.status,mode,requestKey]);
- const loading=result.key!==requestKey,rows=loading?[]:result.rows,error=loading?'':result.error;
- useEffect(()=>{sessionStorage.setItem('ux02-native:filters',JSON.stringify(filters));sessionStorage.setItem('ux02-native:limit',String(limit))},[filters,limit]);
- const m=metrics(),order=findOrder(state.id),filtered=secondaryFilter(rows,filters),visible=filtered.rows.slice(0,limit);
- return <NativeRouteContext.Provider value={{section:state.section,go:section=>navigate({section,id:'',query:'',status:'all'})}}><AdminLayout header={{query:state.query,onSearch:query=>navigate({section:'orders',id:'',query},true),notifications:<Action kind="chat" label={t('tH')} onClick={()=>navigate({section:'support',id:'',query:''})}/>,controls:<div className="flex gap-2"><select aria-label="Language" className={input} value={locale} onChange={e=>{localStorage.setItem('ux02-native:locale',e.target.value);window.dispatchEvent(new Event('native-locale'))}}><option>en</option><option>ru</option><option>tg</option></select><select aria-label="Theme" className={input} value={themeMode} onChange={e=>setThemeMode(e.target.value as 'light'|'dark'|'auto')}><option value="light">Light</option><option value="dark">Dark</option><option value="auto">Auto</option></select></div>}}><section className="min-w-0 space-y-4"><p className="text-sm text-gray-500">{t('nativeNotice')}{locale==='tg'?' · Тарҷумаи амалиёт нопурра: RU':''}</p>{state.section==='orders'?state.id?(order?<OrderDetails order={order} t={t} back={back}/>:<Card><p role="alert">{t('uOrdMissing').replace('{n}',state.id)}</p><button className={button} onClick={back}>{t('aBack')}</button></Card>):<><div className="grid grid-cols-2 gap-3 xl:grid-cols-4" data-testid="a-metrics">{[['aKOrd',m.orders],['aKRev',m.revenue.toFixed(2)+' TJS'],['aKCom',m.commission.toFixed(2)+' TJS'],['aKAct',m.active]].map(([label,value])=><Card key={label}><p className="text-sm text-gray-500">{t(String(label))}</p><strong className="mt-2 block text-2xl">{value}</strong></Card>)}</div><p className="text-sm text-gray-500">{t('nativeScope')}</p><OperationalAlerts t={t} navigate={navigate}/><Card title={t('tO')}><label className="block">{t('uOq')}<input ref={queryRef} type="search" className={input} value={state.query} onChange={e=>navigate({query:e.target.value},true)}/></label><div className="my-3 flex flex-wrap gap-2">{['all',...statuses].map(s=><button key={s} className={button+(s===state.status?' bg-brand-500 text-white':'')} aria-pressed={s===state.status} onClick={()=>navigate({status:s},true)}>{t(s==='all'?'aAll':s)}</button>)}</div><details className="mb-3"><summary>{t('nativeTest')}</summary><select aria-label={t('nativeTest')} value={mode} className={input} onChange={e=>setMode(e.target.value)}>{['normal','empty','error','denied'].map(v=><option key={v} value={v}>{t(v)}</option>)}</select></details><details className="my-3"><summary>{lang==='en'?'Additional sample filters':'Дополнительные фильтры выборки'}</summary><div className="grid gap-3 sm:grid-cols-2"><label>{t('aStoreL')}<select className={input} value={filters.store} onChange={e=>setFilters({...filters,store:e.target.value})}><option value="">{t('aAll')}</option>{tables.stores.map(r=><option key={text(r,'id')} value={text(r,'id')}>{text(r,'name')}</option>)}</select></label><label>{t('uFinM')}<select className={input} value={filters.payment} onChange={e=>setFilters({...filters,payment:e.target.value})}><option value="">{t('aAll')}</option>{['cash','wallet','apple'].map(k=><option key={k} value={k}>{t(k)}</option>)}</select></label>{(['start','end'] as const).map(k=><label key={k}>{k==='start'?t('aBFrom'):t('aBTo')}<input type="date" className={input} value={filters[k]} onChange={e=>setFilters({...filters,[k]:e.target.value})}/></label>)}<label>{lang==='en'?'Sort':'Порядок'}<select className={input} value={filters.sort} onChange={e=>setFilters({...filters,sort:e.target.value})}><option value="">—</option><option value="newest">↓</option><option value="oldest">↑</option></select></label></div><p className="text-sm">{lang==='en'?'Local sample only. Zone data is unavailable in A.':'Только локальная выборка. Данные зон отсутствуют в A.'}</p>{filtered.error&&<p role="alert">{lang==='en'?'Start must not exceed end.':'Начало не может быть позже конца.'}</p>}</details>{loading?<p role="status">{t('uOqBusy')}</p>:error?<div role="alert"><p>{error==='not_allowed'?t('uOqDeny'):(lang==='en'?'Could not load orders. Your filters are preserved.':'Не удалось загрузить заказы. Фильтры сохранены.')}</p><button className={button} onClick={()=>setRetry(retry+1)}>{t('nativeRetry')}</button></div>:visible.length?visible.map(o=><article key={text(o,'id')} className="border-b border-gray-200 py-4 dark:border-gray-700"><div className="flex flex-wrap justify-between gap-2"><strong>#{text(o,'id')}</strong><span>{t(text(o,'status'))}</span></div><p className="break-words">{text(tables.stores.find(s=>s.id===o.store_id)||{},'name')}</p><p className="text-sm text-gray-500">{text(o,'created_at')} · {text(o,'customer_name')} · {tables.order_items.filter(i=>i.order_id===o.id).reduce((sum,i)=>sum+number(i,'qty'),0)} {t('aItems')}</p><div className="mt-2 flex flex-wrap items-center justify-between gap-2"><span>{number(o,'total')} TJS · {t(text(o,'payment'))} · {text(o,'driver_name')||'—'} · {t('aDel')} {number(o,'delivery_fee')}</span><Action label={t('aDetails')==='aDetails'?(lang==='en'?'Details':'Подробнее'):t('aDetails')} kind="details" onClick={()=>{navigate({id:text(o,'id')});window.scrollTo(0,0)}}/></div></article>):<p>{t('aNo')}</p>}{filtered.rows.length>limit&&<button className={button} onClick={()=>setLimit(limit+50)}>{t('aMore')}</button>}</Card><section id="native-analytics" className="grid grid-cols-12 gap-4 md:gap-6"><div className="col-span-12"><h2 className="text-lg font-semibold">{t('nativeSource')}</h2></div><AnalyticsDashboard/><div className="col-span-12 grid grid-cols-2 gap-3 lg:grid-cols-4">{[['activeOrders','24'],['availableDrivers','12'],['openRestaurants','18'],['customers','3,782']].map(([label,value])=><Card key={label}><p>{bT(label)}</p><strong>{value}</strong></Card>)}</div></section></>:<EntitySections key={state.section+':'+state.id} section={state.section} id={state.id} query={state.query} t={t} navigate={navigate}/>}</section></AdminLayout></NativeRouteContext.Provider>;
+const extra = {
+  en: {
+    nativeNext:
+      "Next: review the recorded parties, items, timeline and payment information.",
+    nativeWriteBlocked:
+      "Isolated review. Financial and administrative writes are not connected.",
+    nativeProofMissing: "The proof image is unavailable in the sample.",
+    nativeNotice: "Synthetic data · native React migration in progress",
+    nativePending:
+      "This section is not migrated yet. The preserved source remains a separate reference.",
+    nativeScope:
+      "Latest loaded orders (maximum 300), all statuses. Revenue and commission count delivered orders in that scope only.",
+    nativeSource: "B analytics use a separate synthetic dataset.",
+    nativeTest: "Read scenario",
+    normal: "Normal",
+    empty: "Empty",
+    error: "Read failure",
+    denied: "Access denied",
+    status: "Status",
+    address: "Address",
+    nativeRetry: "Retry",
+    nativeDetails: "Details",
+    nativeCashMissing:
+      "Balance is not supplied for this account in the sample.",
+    nativeRefundMissing:
+      "Refund allowance is not supplied in the sample. No amount is assumed.",
+  },
+  ru: {
+    nativeNext:
+      "Далее: проверьте участников, состав, историю и сведения об оплате.",
+    nativeWriteBlocked:
+      "Изолированное превью. Финансовая и административная запись не подключена.",
+    nativeProofMissing: "Фото подтверждения отсутствует в выборке.",
+    nativeNotice: "Тестовые данные · перенос в React не завершён",
+    nativePending: "Раздел ещё не перенесён. Исходник сохранён отдельно.",
+    nativeScope:
+      "Последние загруженные заказы (не более 300), все статусы. Выручка и комиссия только доставленных заказов этой выборки.",
+    nativeSource: "Аналитика B использует отдельную тестовую выборку.",
+    nativeTest: "Сценарий чтения",
+    normal: "Обычный",
+    empty: "Нет данных",
+    error: "Ошибка чтения",
+    denied: "Нет доступа",
+    status: "Статус",
+    address: "Адрес",
+    nativeRetry: "Повторить",
+    nativeDetails: "Подробнее",
+    nativeCashMissing: "Баланс этого счёта отсутствует в выборке.",
+    nativeRefundMissing:
+      "Допустимая сумма возврата отсутствует в выборке. Значение не предполагается.",
+  },
+};
+export default function NativeAdmin() {
+  const locale = useLocale(),
+    lang = locale === "en" ? "en" : "ru",
+    dict = dictionary[lang] as Record<string, string>,
+    copy = extra[lang] as Record<string, string>;
+  const bT = useTranslations("talabot");
+  const t = (key: string) => copy[key] || dict[key] || key;
+  const { themeMode, setThemeMode } = useTheme();
+  const { state, navigate, back } = useNativeNavigation();
+  const [result, setResult] = useState<{
+      key: string;
+      rows: Row[];
+      error: string;
+    }>({ key: "", rows: [], error: "" }),
+    [mode, setMode] = useState("normal"),
+    [retry, setRetry] = useState(0),
+    [limit, setLimit] = useState(
+      () => Number(sessionStorage.getItem("ux02-native:limit")) || 50,
+    ),
+    [filters, setFilters] = useState<{
+      store: string;
+      payment: string;
+      start: string;
+      end: string;
+      sort: string;
+    }>(() => {
+      try {
+        return (
+          JSON.parse(
+            sessionStorage.getItem("ux02-native:filters") || "null",
+          ) || { store: "", payment: "", start: "", end: "", sort: "" }
+        );
+      } catch {
+        return { store: "", payment: "", start: "", end: "", sort: "" };
+      }
+    });
+  const queryRef = useRef<HTMLInputElement>(null);
+  const requestKey = JSON.stringify([state.query, state.status, mode, retry]);
+  useEffect(() => {
+    let active = true;
+    readOrders(state.query, state.status, mode).then((value) => {
+      if (active)
+        setResult({
+          key: requestKey,
+          rows: value.data || [],
+          error: value.error || "",
+        });
+    });
+    return () => {
+      active = false;
+    };
+  }, [state.query, state.status, mode, requestKey]);
+  const loading = result.key !== requestKey,
+    rows = loading ? [] : result.rows,
+    error = loading ? "" : result.error;
+  useEffect(() => {
+    sessionStorage.setItem("ux02-native:filters", JSON.stringify(filters));
+    sessionStorage.setItem("ux02-native:limit", String(limit));
+  }, [filters, limit]);
+  const m = metrics(),
+    order = findOrder(state.id),
+    filtered = secondaryFilter(rows, filters),
+    visible = filtered.rows.slice(0, limit);
+  return (
+    <NativeRouteContext.Provider
+      value={{
+        section: state.section,
+        go: (section) =>
+          navigate({ section, id: "", query: "", status: "all" }),
+      }}
+    >
+      <AdminLayout
+        header={{
+          query: state.query,
+          onSearch: (query) =>
+            navigate({ section: "orders", id: "", query }, true),
+          notifications: (
+            <Action
+              kind="chat"
+              label={t("tH")}
+              onClick={() =>
+                navigate({ section: "support", id: "", query: "" })
+              }
+            />
+          ),
+          controls: (
+            <div className="flex gap-2">
+              <select
+                aria-label="Language"
+                className={input}
+                value={locale}
+                onChange={(e) => {
+                  localStorage.setItem("ux02-native:locale", e.target.value);
+                  window.dispatchEvent(new Event("native-locale"));
+                }}
+              >
+                <option>en</option>
+                <option>ru</option>
+                <option>tg</option>
+              </select>
+              <select
+                aria-label="Theme"
+                className={input}
+                value={themeMode}
+                onChange={(e) =>
+                  setThemeMode(e.target.value as "light" | "dark" | "auto")
+                }
+              >
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="auto">Auto</option>
+              </select>
+            </div>
+          ),
+        }}
+      >
+        <section className="min-w-0 space-y-4">
+          <p className="text-sm text-gray-500">
+            {t("nativeNotice")}
+            {locale === "tg" ? " · Тарҷумаи амалиёт нопурра: RU" : ""}
+          </p>
+          {state.section === "orders" ? (
+            state.id ? (
+              order ? (
+                <OrderDetails order={order} t={t} back={back} />
+              ) : (
+                <Card>
+                  <p role="alert">
+                    {t("uOrdMissing").replace("{n}", state.id)}
+                  </p>
+                  <Button variant="outline" onClick={back}>
+                    {t("aBack")}
+                  </Button>
+                </Card>
+              )
+            ) : (
+              <>
+                <div
+                  className="grid grid-cols-2 gap-3 xl:grid-cols-4"
+                  data-testid="a-metrics"
+                >
+                  {[
+                    ["aKOrd", m.orders],
+                    ["aKRev", m.revenue.toFixed(2) + " TJS"],
+                    ["aKCom", m.commission.toFixed(2) + " TJS"],
+                    ["aKAct", m.active],
+                  ].map(([label, value]) => (
+                    <Card key={label}>
+                      <p className="text-sm text-gray-500">
+                        {t(String(label))}
+                      </p>
+                      <strong className="mt-2 block text-2xl">{value}</strong>
+                    </Card>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-500">{t("nativeScope")}</p>
+                <OperationalAlerts t={t} navigate={navigate} />
+                <Card title={t("tO")}>
+                  <label className="block">
+                    {t("uOq")}
+                    <input
+                      ref={queryRef}
+                      type="search"
+                      className={input}
+                      value={state.query}
+                      onChange={(e) =>
+                        navigate({ query: e.target.value }, true)
+                      }
+                    />
+                  </label>
+                  <div className="my-3 flex flex-wrap gap-2">
+                    {["all", ...statuses].map((s) => (
+                      <Button
+                        key={s}
+                        variant={s === state.status ? "default" : "outline"}
+                        aria-pressed={s === state.status}
+                        onClick={() => navigate({ status: s }, true)}
+                      >
+                        {t(s === "all" ? "aAll" : s)}
+                      </Button>
+                    ))}
+                  </div>
+                  <details className="mb-3">
+                    <summary>{t("nativeTest")}</summary>
+                    <select
+                      aria-label={t("nativeTest")}
+                      value={mode}
+                      className={input}
+                      onChange={(e) => setMode(e.target.value)}
+                    >
+                      {["normal", "empty", "error", "denied"].map((v) => (
+                        <option key={v} value={v}>
+                          {t(v)}
+                        </option>
+                      ))}
+                    </select>
+                  </details>
+                  <details className="my-3">
+                    <summary>
+                      {lang === "en"
+                        ? "Additional sample filters"
+                        : "Дополнительные фильтры выборки"}
+                    </summary>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <label>
+                        {t("aStoreL")}
+                        <select
+                          className={input}
+                          value={filters.store}
+                          onChange={(e) =>
+                            setFilters({ ...filters, store: e.target.value })
+                          }
+                        >
+                          <option value="">{t("aAll")}</option>
+                          {tables.stores.map((r) => (
+                            <option key={text(r, "id")} value={text(r, "id")}>
+                              {text(r, "name")}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label>
+                        {t("uFinM")}
+                        <select
+                          className={input}
+                          value={filters.payment}
+                          onChange={(e) =>
+                            setFilters({ ...filters, payment: e.target.value })
+                          }
+                        >
+                          <option value="">{t("aAll")}</option>
+                          {["cash", "wallet", "apple"].map((k) => (
+                            <option key={k} value={k}>
+                              {t(k)}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      {(["start", "end"] as const).map((k) => (
+                        <label key={k}>
+                          {k === "start" ? t("aBFrom") : t("aBTo")}
+                          <input
+                            type="date"
+                            className={input}
+                            value={filters[k]}
+                            onChange={(e) =>
+                              setFilters({ ...filters, [k]: e.target.value })
+                            }
+                          />
+                        </label>
+                      ))}
+                      <label>
+                        {lang === "en" ? "Sort" : "Порядок"}
+                        <select
+                          className={input}
+                          value={filters.sort}
+                          onChange={(e) =>
+                            setFilters({ ...filters, sort: e.target.value })
+                          }
+                        >
+                          <option value="">—</option>
+                          <option value="newest">↓</option>
+                          <option value="oldest">↑</option>
+                        </select>
+                      </label>
+                    </div>
+                    <p className="text-sm">
+                      {lang === "en"
+                        ? "Local sample only. Zone data is unavailable in A."
+                        : "Только локальная выборка. Данные зон отсутствуют в A."}
+                    </p>
+                    {filtered.error && (
+                      <p role="alert">
+                        {lang === "en"
+                          ? "Start must not exceed end."
+                          : "Начало не может быть позже конца."}
+                      </p>
+                    )}
+                  </details>
+                  {loading ? (
+                    <p role="status">{t("uOqBusy")}</p>
+                  ) : error ? (
+                    <div role="alert">
+                      <p>
+                        {error === "not_allowed"
+                          ? t("uOqDeny")
+                          : lang === "en"
+                            ? "Could not load orders. Your filters are preserved."
+                            : "Не удалось загрузить заказы. Фильтры сохранены."}
+                      </p>
+                      <Button
+                        variant="outline"
+                        onClick={() => setRetry(retry + 1)}
+                      >
+                        {t("nativeRetry")}
+                      </Button>
+                    </div>
+                  ) : visible.length ? (
+                    visible.map((o) => (
+                      <article
+                        key={text(o, "id")}
+                        className="border-b border-gray-200 py-4 dark:border-gray-700"
+                      >
+                        <div className="flex flex-wrap justify-between gap-2">
+                          <strong>#{text(o, "id")}</strong>
+                          <span>{t(text(o, "status"))}</span>
+                        </div>
+                        <p className="break-words">
+                          {text(
+                            tables.stores.find((s) => s.id === o.store_id) ||
+                              {},
+                            "name",
+                          )}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          {text(o, "created_at")} · {text(o, "customer_name")} ·{" "}
+                          {tables.order_items
+                            .filter((i) => i.order_id === o.id)
+                            .reduce((sum, i) => sum + number(i, "qty"), 0)}{" "}
+                          {t("aItems")}
+                        </p>
+                        <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+                          <span>
+                            {number(o, "total")} TJS · {t(text(o, "payment"))} ·{" "}
+                            {text(o, "driver_name") || "—"} · {t("aDel")}{" "}
+                            {number(o, "delivery_fee")}
+                          </span>
+                          <Action
+                            label={
+                              t("aDetails") === "aDetails"
+                                ? lang === "en"
+                                  ? "Details"
+                                  : "Подробнее"
+                                : t("aDetails")
+                            }
+                            kind="details"
+                            onClick={() => {
+                              navigate({ id: text(o, "id") });
+                              window.scrollTo(0, 0);
+                            }}
+                          />
+                        </div>
+                      </article>
+                    ))
+                  ) : (
+                    <p>{t("aNo")}</p>
+                  )}
+                  {filtered.rows.length > limit && (
+                    <Button
+                      variant="outline"
+                      onClick={() => setLimit(limit + 50)}
+                    >
+                      {t("aMore")}
+                    </Button>
+                  )}
+                </Card>
+                <section
+                  id="native-analytics"
+                  className="grid grid-cols-12 gap-4 md:gap-6"
+                >
+                  <div className="col-span-12">
+                    <h2 className="text-lg font-semibold">
+                      {t("nativeSource")}
+                    </h2>
+                  </div>
+                  <AnalyticsDashboard />
+                  <div className="col-span-12 grid grid-cols-2 gap-3 lg:grid-cols-4">
+                    {[
+                      ["activeOrders", "24"],
+                      ["availableDrivers", "12"],
+                      ["openRestaurants", "18"],
+                      ["customers", "3,782"],
+                    ].map(([label, value]) => (
+                      <Card key={label}>
+                        <p>{bT(label)}</p>
+                        <strong>{value}</strong>
+                      </Card>
+                    ))}
+                  </div>
+                </section>
+              </>
+            )
+          ) : (
+            <EntitySections
+              key={state.section + ":" + state.id}
+              section={state.section}
+              id={state.id}
+              query={state.query}
+              t={t}
+              navigate={navigate}
+            />
+          )}
+        </section>
+      </AdminLayout>
+    </NativeRouteContext.Provider>
+  );
 }
