@@ -1,0 +1,22 @@
+[
+  {
+    "path": "public/operations-source/admin.html",
+    "unchanged_from_frozen_architecture": true,
+    "sha256": "1003e231abc433d994189926db1de88792af0e351ad3d0aea63d09eca5910d6f"
+  },
+  {
+    "path": "public/operations-source/talabat-core.js",
+    "unchanged_from_frozen_architecture": true,
+    "sha256": "4c33a6df5bac39d27a47ec9b6c56495120ecf4d90a2d3e538dbcb68fe847350e"
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "unchanged_from_frozen_architecture": true,
+    "sha256": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108"
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "unchanged_from_frozen_architecture": true,
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c"
+  }
+]

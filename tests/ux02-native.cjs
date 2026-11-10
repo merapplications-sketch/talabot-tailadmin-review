@@ -11,3 +11,14 @@ check('chat location safe parser',()=>{assert.equal(d.parseLocation('LOC:999,68'
 const denied=await d.readOrders('','all','denied'),error=await d.readOrders('','all','error');check('read denied and failure distinct',()=>{assert.equal(denied.error,'not_allowed');assert.equal(error.error,'unavailable')});check('writes fail explicitly and do not mutate fixture',()=>{const before=JSON.stringify(d.tables);assert.equal(d.previewWrite().error.code,'PREVIEW');assert.equal(JSON.stringify(d.tables),before)});
 check('native source has no embedding or legacy runtime',()=>{for(const f of fs.readdirSync('src/components/talabot/native').filter(f=>/tsx?$/.test(f))){const s=fs.readFileSync('src/components/talabot/native/'+f,'utf8');assert(!/iframe|dangerouslySetInnerHTML|innerHTML|TLB\.|render0|talabat-core/.test(s),f)}});
 console.log(n+' checks passed');})();
+
+// Additional regression cases discovered during source parity review.
+assert.equal(d.finance({payment:'Наличными',status:'delivered'}).cash,true);
+assert.equal(d.finance({payment:'Cash',status:'pending'}).cash,true);
+assert.equal(d.finance({payment:'cash',status:'delivered',cash_settled_at:'2026-11-10'}).settled,true);
+assert.equal(d.elapsedSeconds('2026-11-10T09:01:01.400Z','2026-11-10T09:00:00.900Z'),61);
+assert.equal(d.tables.orders.filter(o=>o.customer_id==='pv-cust62').length,62);
+assert(d.findOrder('h999')._hist);
+assert.equal(d.searchOrders('').length,7);
+assert.equal(d.secondaryFilter(d.tables.orders,{start:'2026-11-11',end:'2026-11-10'}).error,'invalid_range');
+console.log('PASS 8 order parity regressions (cash aliases, settlement, second boundaries, history, initial scope, invalid period)');

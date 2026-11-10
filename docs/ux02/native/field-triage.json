@@ -1,0 +1,202 @@
+[
+  {
+    "original": "app",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "oq",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "brsel",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "brbn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "brnn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "brno",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "ownem",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "ss",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sp",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sc",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sm",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sf",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sb",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sd",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "sq",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "dq",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bt",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bp",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "blb",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bpl",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bfr",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bto",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "bo",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "${id}_${x.id}",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "ly_${k}",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "he_t",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pcode",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pkind",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pval",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pmin",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pmax",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pfr",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pto",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "resn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "supph",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "suphrs",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "tka",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "tkn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "tkr",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "tkrm",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cur",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cuph",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cuphr",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cuwa",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cuwn",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "cuq",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "srn-${q.id}",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "pgt_${s}_${l}",
+    "status": "PARITY PENDING"
+  },
+  {
+    "original": "adm-map",
+    "status": "PARITY PENDING"
+  }
+]

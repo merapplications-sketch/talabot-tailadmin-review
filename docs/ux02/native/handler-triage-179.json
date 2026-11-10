@@ -1,0 +1,1361 @@
+[
+  {
+    "index": 1,
+    "original": "event.stopPropagation()",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 2,
+    "original": "event.stopPropagation()",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 3,
+    "original": "${reload}",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 4,
+    "original": "oqSet(this.value)",
+    "referenced_functions": [
+      "oqSet"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 5,
+    "original": "oqSet('');$('oq')&&$('oq').focus()",
+    "referenced_functions": [
+      "oqSet"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 6,
+    "original": "f='${s}';pgN=50;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 7,
+    "original": "openOrd(${esc(JSON.stringify(o.id))})",
+    "referenced_functions": [
+      "openOrd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 8,
+    "original": "pgN+=50;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 9,
+    "original": "ordBack()",
+    "referenced_functions": [
+      "ordBack"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 10,
+    "original": "ordBack()",
+    "referenced_functions": [
+      "ordBack"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 11,
+    "original": "TLB.proofUrl('${esc(o.deliveryPhoto)}').then(u=>{if(u)window.open(u,'_blank','noopener')})",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 12,
+    "original": "ASG=${esc(JSON.stringify(o.id))};render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 13,
+    "original": "brDet('${s.id}')",
+    "referenced_functions": [
+      "brDet"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 14,
+    "original": "brAtt('${s.id}')",
+    "referenced_functions": [
+      "brAtt"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 15,
+    "original": "brNew()",
+    "referenced_functions": [
+      "brNew"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 16,
+    "original": "E=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 17,
+    "original": "edCover(event)",
+    "referenced_functions": [
+      "edCover"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 18,
+    "original": "edLogo(event)",
+    "referenced_functions": [
+      "edLogo"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 19,
+    "original": "ed('name',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 20,
+    "original": "ed('description',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 21,
+    "original": "ed('phone',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 22,
+    "original": "ed('address',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 23,
+    "original": "ed('category',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 24,
+    "original": "ed('commission_pct',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 25,
+    "original": "ed('discount_pct',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 26,
+    "original": "ed('max_discount_pct',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 27,
+    "original": "ed('fee_type',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 28,
+    "original": "ed('free_first_delivery',this.checked)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 29,
+    "original": "ed('fee_base',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 30,
+    "original": "ed('gpid',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 31,
+    "original": "ed('rating',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 32,
+    "original": "ed('rcount',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 33,
+    "original": "edRating()",
+    "referenced_functions": [
+      "edRating"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 34,
+    "original": "edLoc()",
+    "referenced_functions": [
+      "edLoc"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 35,
+    "original": "edLocClr()",
+    "referenced_functions": [
+      "edLocClr"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 36,
+    "original": "saveStore()",
+    "referenced_functions": [
+      "saveStore"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 37,
+    "original": "ed('owner',this.value)",
+    "referenced_functions": [
+      "ed"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 38,
+    "original": "edOwner()",
+    "referenced_functions": [
+      "edOwner"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 39,
+    "original": "run(TLB.updateStore('${s.id}',{is_active:${!s.is_active}}))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 40,
+    "original": "DE=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 41,
+    "original": "run(TLB.setDriverStatus('${x.id}','approved'))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 42,
+    "original": "run(TLB.setDriverStatus('${x.id}','suspended'))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 43,
+    "original": "dd('limit',this.value)",
+    "referenced_functions": [
+      "dd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 44,
+    "original": "saveLimit()",
+    "referenced_functions": [
+      "saveLimit"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 45,
+    "original": "run(TLB.setDriverBlocked('${x.id}',${!x.accept_blocked}))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 46,
+    "original": "settle('${x.id}',${bal})",
+    "referenced_functions": [
+      "settle"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 47,
+    "original": "openFrom(${esc(JSON.stringify(o.id))})",
+    "referenced_functions": [
+      "openFrom"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 48,
+    "original": "tarOpen()",
+    "referenced_functions": [
+      "tarOpen"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 49,
+    "original": "TAR=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 50,
+    "original": "tarSet('${k}',this.value)",
+    "referenced_functions": [
+      "tarSet"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 51,
+    "original": "tarSave()",
+    "referenced_functions": [
+      "tarSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 52,
+    "original": "showAddS=false;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 53,
+    "original": "addStore()",
+    "referenced_functions": [
+      "addStore"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 54,
+    "original": "showAddS=true;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 55,
+    "original": "sfl='${k}';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 56,
+    "original": "sq=this.value;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 57,
+    "original": "openStoreEdit('${s.id}')",
+    "referenced_functions": [
+      "openStoreEdit"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 58,
+    "original": "run(TLB.approveItem('${i.id}'))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 59,
+    "original": "dfl='${k}';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 60,
+    "original": "dq=this.value;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 61,
+    "original": "openMap()",
+    "referenced_functions": [
+      "openMap"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 62,
+    "original": "openDrvEdit('${x.id}')",
+    "referenced_functions": [
+      "openDrvEdit"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 63,
+    "original": "openDrvEdit('${x.id}')",
+    "referenced_functions": [
+      "openDrvEdit"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 64,
+    "original": "showAddB=false;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 65,
+    "original": "pickB(event)",
+    "referenced_functions": [
+      "pickB"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 66,
+    "original": "pickLink(v=>{BL=v;$('blb').innerHTML=ic('link')+' '+linkLabel(v)})",
+    "referenced_functions": [
+      "linkLabel",
+      "pickLink"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 67,
+    "original": "addBanner()",
+    "referenced_functions": [
+      "addBanner"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 68,
+    "original": "showAddB=true;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 69,
+    "original": "openBE('${b.id}')",
+    "referenced_functions": [
+      "openBE"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 70,
+    "original": "BE=null;BD=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 71,
+    "original": "bd('title',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 72,
+    "original": "bd('sort',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 73,
+    "original": "pickLink(v=>bannerLink(v))",
+    "referenced_functions": [
+      "pickLink",
+      "bannerLink"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 74,
+    "original": "bd('placement',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 75,
+    "original": "bd('from',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 76,
+    "original": "bd('from',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 77,
+    "original": "bd('to',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 78,
+    "original": "bd('to',this.value)",
+    "referenced_functions": [
+      "bd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 79,
+    "original": "bannerImg(event)",
+    "referenced_functions": [
+      "bannerImg"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 80,
+    "original": "BD.is_active=!BD.is_active;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 81,
+    "original": "if(confirm('?')){const i=BE;BE=null;BD=null;run(TLB.deleteBanner(i))}",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 82,
+    "original": "bannerSave()",
+    "referenced_functions": [
+      "bannerSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 83,
+    "original": "STF.email=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 84,
+    "original": "stfTog('${p}')",
+    "referenced_functions": [
+      "stfTog"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 85,
+    "original": "stfAdd()",
+    "referenced_functions": [
+      "stfAdd"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 86,
+    "original": "stfSave('${esc(x.user_id)}','${esc(x.email)}')",
+    "referenced_functions": [
+      "stfSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 87,
+    "original": "stfActive('${esc(x.user_id)}','${esc(x.email)}',${JSON.stringify(x.perms||[])},${!x.active})",
+    "referenced_functions": [
+      "stfActive"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 88,
+    "original": "stfRm('${esc(x.user_id)}')",
+    "referenced_functions": [
+      "stfRm"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 89,
+    "original": "LYS=true;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 90,
+    "original": "LYS=false;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 91,
+    "original": "Promise.all([TLB.setStoreLoyalty('${x.id}',$('pmo_${x.id}').value,$('scb_${x.id}').value),TLB.setStoreFreeDelivery('${x.id}',$('sfd_${x.id}').value),TLB.setStoreEarn('${x.id}',$('ser_${x.id}').value)]).then(render)",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 92,
+    "original": "lySave()",
+    "referenced_functions": [
+      "lySave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 93,
+    "original": "HE=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 94,
+    "original": "HE.title=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 95,
+    "original": "HE.store=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 96,
+    "original": "HE.days=this.checked?[...HE.days,${d}]:HE.days.filter(x=>x!=${d});render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 97,
+    "original": "HE.start=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 98,
+    "original": "HE.start=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 99,
+    "original": "HE.end=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 100,
+    "original": "HE.end=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 101,
+    "original": "HE.pct=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 102,
+    "original": "HE.active=this.checked",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 103,
+    "original": "heSave()",
+    "referenced_functions": [
+      "heSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 104,
+    "original": "TLB.setHHActive(${+h.id},${!h.active}).then(render)",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 105,
+    "original": "heOpen(${+h.id})",
+    "referenced_functions": [
+      "heOpen"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 106,
+    "original": "heDel(${+h.id})",
+    "referenced_functions": [
+      "heDel"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 107,
+    "original": "heOpen()",
+    "referenced_functions": [
+      "heOpen"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 108,
+    "original": "showAddP=false;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 109,
+    "original": "addPromo()",
+    "referenced_functions": [
+      "addPromo"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 110,
+    "original": "showAddP=true;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 111,
+    "original": "run(TLB.updatePromo('${p.id}',{is_active:${!p.is_active}}))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 112,
+    "original": "if(confirm('?'))run(TLB.deletePromo('${p.id}'))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 113,
+    "original": "goLive('d')",
+    "referenced_functions": [
+      "goLive"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 114,
+    "original": "goLive('s')",
+    "referenced_functions": [
+      "goLive"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 115,
+    "original": "run(TLB.reopenRating(${esc(JSON.stringify(r.order_id))}))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 116,
+    "original": "RES={o:${esc(JSON.stringify(r.order_id))},n:''};render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 117,
+    "original": "openFrom(${esc(JSON.stringify(r.order_id))})",
+    "referenced_functions": [
+      "openFrom"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 118,
+    "original": "RES=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 119,
+    "original": "event.stopPropagation()",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 120,
+    "original": "RES=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 121,
+    "original": "RES.n=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 122,
+    "original": "saveRes()",
+    "referenced_functions": [
+      "saveRes"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 123,
+    "original": "rfl='${k}';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 124,
+    "original": "tab='r';rfl='need';render();window.scrollTo(0,0)",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 125,
+    "original": "RES={o:${esc(JSON.stringify(r.order_id))},n:''};render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 126,
+    "original": "tab='r';rfl='need';render();window.scrollTo(0,0)",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 127,
+    "original": "logTab='a';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 128,
+    "original": "logTab='e';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 129,
+    "original": "AUD=null;ERR=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 130,
+    "original": "SUP={ph:'${esc(sp.phone)}',hrs:'${esc(sp.hours)}'};render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 131,
+    "original": "SUP=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 132,
+    "original": "SUP.ph=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 133,
+    "original": "SUP.hrs=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 134,
+    "original": "supSave()",
+    "referenced_functions": [
+      "supSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 135,
+    "original": "TK.fl='${k}';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 136,
+    "original": "TK.sel=${esc(JSON.stringify(k.id))};TK.note='';TK.refund='';render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 137,
+    "original": "TK.sel=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 138,
+    "original": "openFrom(${esc(JSON.stringify(k.order_id))})",
+    "referenced_functions": [
+      "openFrom"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 139,
+    "original": "tkStatus('open')",
+    "referenced_functions": [
+      "tkStatus"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 140,
+    "original": "tkSendA()",
+    "referenced_functions": [
+      "tkSendA"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 141,
+    "original": "TK.note=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 142,
+    "original": "tkStatus('in_progress')",
+    "referenced_functions": [
+      "tkStatus"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 143,
+    "original": "tkStatus('resolved')",
+    "referenced_functions": [
+      "tkStatus"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 144,
+    "original": "tkStatus('rejected')",
+    "referenced_functions": [
+      "tkStatus"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 145,
+    "original": "TK.refund=this.value;tkRoomChk()",
+    "referenced_functions": [
+      "tkRoomChk"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 146,
+    "original": "CU.sel=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 147,
+    "original": "cuBan(false)",
+    "referenced_functions": [
+      "cuBan"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 148,
+    "original": "CU.reason=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 149,
+    "original": "cuBan(true)",
+    "referenced_functions": [
+      "cuBan"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 150,
+    "original": "CU.ph=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 151,
+    "original": "CU.phr=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 152,
+    "original": "cuPhone()",
+    "referenced_functions": [
+      "cuPhone"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 153,
+    "original": "CU.wa=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 154,
+    "original": "CU.wn=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 155,
+    "original": "cuWal()",
+    "referenced_functions": [
+      "cuWal"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 156,
+    "original": "openFrom(${esc(JSON.stringify(o.id))})",
+    "referenced_functions": [
+      "openFrom"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 157,
+    "original": "cuMore()",
+    "referenced_functions": [
+      "cuMore"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 158,
+    "original": "CU.q=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 159,
+    "original": "if(event.key=='Enter')cuLoad(true)",
+    "referenced_functions": [
+      "cuLoad"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 160,
+    "original": "cuLoad(true)",
+    "referenced_functions": [
+      "cuLoad"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 161,
+    "original": "cuOpen('${x.id}')",
+    "referenced_functions": [
+      "cuOpen"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 162,
+    "original": "cuLoad(false)",
+    "referenced_functions": [
+      "cuLoad"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 163,
+    "original": "SRN['${q.id}']=this.value",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 164,
+    "original": "srqDecide('${q.id}',true)",
+    "referenced_functions": [
+      "srqDecide"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 165,
+    "original": "srqDecide('${q.id}',false)",
+    "referenced_functions": [
+      "srqDecide"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 166,
+    "original": "pgSet('${s}','${l}',this.value)",
+    "referenced_functions": [
+      "pgSet"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 167,
+    "original": "pgSave()",
+    "referenced_functions": [
+      "pgSave"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 168,
+    "original": "TLB.loadPages(true)",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 169,
+    "original": "ASG=${esc(JSON.stringify(o.id))};render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 170,
+    "original": "ASG=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 171,
+    "original": "event.stopPropagation()",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 172,
+    "original": "ASG=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 173,
+    "original": "doAssign(${esc(JSON.stringify(o.id))},'${x.id}')",
+    "referenced_functions": [
+      "doAssign"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 174,
+    "original": "MAPO=false;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 175,
+    "original": "run(TLB.setDriverBlocked('${x.id}',true))",
+    "referenced_functions": [],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 176,
+    "original": "tab='d';D=null;E=null;DE=null;render()",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 177,
+    "original": "tab='h';TK.sel=null;D=null;E=null;DE=null;BE=null;render();window.scrollTo(0,0)",
+    "referenced_functions": [
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 178,
+    "original": "const _t=tabTop();BACKO=null;tab='${x[0]}';D=null;E=null;DE=null;BE=null;pgN=50;TK.sel=null;CU.sel=null;if(tab=='l'){AUD=null;ERR=null}if(tab=='f')STF.list=null;if(tab=='u'&&!CU.loaded)cuLoad(true);if(tab=='g'){PGE={};TLB.loadPages(true)}render();tabKeep(_t)",
+    "referenced_functions": [
+      "cuLoad",
+      "tabTop",
+      "tabKeep",
+      "render"
+    ],
+    "status": "PARITY PENDING"
+  },
+  {
+    "index": 179,
+    "original": "confTake('${e.id}')",
+    "referenced_functions": [
+      "confTake"
+    ],
+    "status": "PARITY PENDING"
+  }
+]
