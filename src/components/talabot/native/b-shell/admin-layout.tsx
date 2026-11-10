@@ -18,7 +18,7 @@ export default function AdminLayout({
         <SidebarInset>
           <AppHeader {...header} />
 
-          <div className="mx-auto w-full max-w-(--breakpoint-2xl) p-4 pb-[calc(6rem+env(safe-area-inset-bottom))] md:p-6 md:pb-[calc(6rem+env(safe-area-inset-bottom))] xl:pb-6">
+          <div className="mx-auto w-full max-w-(--breakpoint-2xl) p-4 md:p-6">
             {children}
           </div>
         </SidebarInset>

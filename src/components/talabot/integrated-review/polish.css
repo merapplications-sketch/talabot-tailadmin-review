@@ -49,7 +49,7 @@ html.dark body:has(.talabot-polish) {
 .talabot-polish h3 {
   font-size: 18px;
 }
-.talabot-polish :is(section, article, button).rounded-2xl {
+.talabot-polish :is(section, article, button, [data-summary-info]).rounded-2xl {
   padding: 16px;
   border-radius: 16px;
   background: var(--tp-surface);
@@ -84,22 +84,22 @@ html.dark body:has(.talabot-polish) {
 .talabot-polish [data-testid="summary-cards"] {
   gap: 16px;
 }
-.talabot-polish [data-testid="summary-cards"] button {
+.talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) {
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr);
   gap: 8px 12px;
   align-items: center;
 }
-.talabot-polish [data-testid="summary-cards"] button > span:first-child {
+.talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) > span:first-child {
   width: 40px;
   height: 40px;
   grid-row: 1 / 3;
 }
-.talabot-polish [data-testid="summary-cards"] button > span:nth-child(2) {
+.talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) > span:nth-child(2) {
   margin: 0;
   line-height: 1.4;
 }
-.talabot-polish [data-testid="summary-cards"] button > span:last-child {
+.talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) > span:last-child {
   margin: 0;
   font-size: 24px;
   line-height: 1.25;
@@ -261,16 +261,16 @@ html.dark body:has(.talabot-polish) {
   .talabot-polish h2 {
     font-size: 20px;
   }
-  .talabot-polish [data-testid="summary-cards"] button {
+  .talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
   }
-  .talabot-polish [data-testid="summary-cards"] button > span:first-child {
+  .talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) > span:first-child {
     grid-row: auto;
     width: 32px;
     height: 32px;
   }
-  .talabot-polish [data-testid="summary-cards"] button > span:first-child svg {
+  .talabot-polish [data-testid="summary-cards"] :is(button, [data-summary-info]) > span:first-child svg {
     width: 20px;
     height: 20px;
   }

@@ -1,12 +1,4 @@
 "use client";
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "@/components/ui/table";
-
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -16,10 +8,10 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
-import MetricCard from "@/components/main/dashboard/ecommerce/metrics/metric-card";
+import SummaryCards from "./b-shell/summary-cards";
+import { OrdersPresentation } from "./b-shell/list-patterns";
 import { BoxIcon, DollarIcon, PieChartIcon, MovingBoxIcon } from "@/icons";
-import { OrderStatusBadge } from "../integrated-review/order-status";
-import type { OrderStatus } from "../orders-data";
+
 import { Button } from "@/components/ui/button";
 import AdminLayout from "./b-shell/admin-layout";
 import { NativeRouteContext } from "./b-shell/router";
@@ -32,7 +24,6 @@ import {
   readOrders,
   findOrder,
   text,
-  number,
   statuses,
   tables,
   secondaryFilter,
@@ -259,34 +250,34 @@ export default function NativeAdmin() {
               )
             ) : (
               <>
-                <div
-                  className="grid grid-cols-2 gap-3 xl:grid-cols-4"
-                  data-testid="a-metrics"
-                >
-                  {[
-                    ["aKOrd", m.orders],
-                    ["aKRev", m.revenue.toFixed(2) + " TJS"],
-                    ["aKCom", m.commission.toFixed(2) + " TJS"],
-                    ["aKAct", m.active],
-                  ].map(([label, value]) => (
-                    <MetricCard
-                      key={label}
-                      title={t(String(label))}
-                      value={value}
-                      icon={
-                        label === "aKOrd" ? (
-                          <BoxIcon />
-                        ) : label === "aKRev" ? (
-                          <DollarIcon />
-                        ) : label === "aKCom" ? (
-                          <PieChartIcon />
-                        ) : (
-                          <MovingBoxIcon />
-                        )
-                      }
-                    />
-                  ))}
-                </div>
+                <SummaryCards
+                  cards={[
+                    {
+                      key: "orders",
+                      label: t("aKOrd"),
+                      value: m.orders,
+                      Icon: BoxIcon,
+                    },
+                    {
+                      key: "revenue",
+                      label: t("aKRev"),
+                      value: m.revenue.toFixed(2) + " TJS",
+                      Icon: DollarIcon,
+                    },
+                    {
+                      key: "commission",
+                      label: t("aKCom"),
+                      value: m.commission.toFixed(2) + " TJS",
+                      Icon: PieChartIcon,
+                    },
+                    {
+                      key: "active",
+                      label: t("aKAct"),
+                      value: m.active,
+                      Icon: MovingBoxIcon,
+                    },
+                  ]}
+                />
                 <p className="text-sm text-gray-500">{t("nativeScope")}</p>
                 <OperationalAlerts t={t} navigate={navigate} />
                 <Card title={t("tO")}>
@@ -301,8 +292,8 @@ export default function NativeAdmin() {
                       }
                     />
                   </label>
-                  <div className="my-3 flex flex-wrap gap-2">
-                    {["all", ...statuses].map((s) => (
+                  <div className="tp-quick">
+                    {["all", "pending", "preparing", "delivered"].map((s) => (
                       <Button
                         key={s}
                         variant={s === state.status ? "default" : "outline"}
@@ -313,6 +304,30 @@ export default function NativeAdmin() {
                       </Button>
                     ))}
                   </div>
+                  <label className="block min-w-0 text-sm">
+                    {t("status")}
+                    <Select
+                      value={state.status}
+                      onValueChange={(value) =>
+                        navigate({ status: value || "all" }, true)
+                      }
+                      items={["all", ...statuses].map((value) => ({
+                        value,
+                        label: t(value === "all" ? "aAll" : value),
+                      }))}
+                    >
+                      <SelectTrigger aria-label={t("status")}>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {["all", ...statuses].map((value) => (
+                          <SelectItem key={value} value={value}>
+                            {t(value === "all" ? "aAll" : value)}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </label>
                   <details className="mb-3">
                     <summary>{t("nativeTest")}</summary>
                     <Select
@@ -337,7 +352,7 @@ export default function NativeAdmin() {
                       </SelectContent>
                     </Select>
                   </details>
-                  <details className="my-3">
+                  <details className="tp-secondary-filters mt-3">
                     <summary>
                       {lang === "en"
                         ? "Additional sample filters"
@@ -471,88 +486,14 @@ export default function NativeAdmin() {
                       </Button>
                     </div>
                   ) : visible.length ? (
-                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/5 dark:bg-white/3">
-                      <div className="max-w-full overflow-x-auto">
-                        <Table>
-                          <TableHeader className="border-b border-gray-100 dark:border-white/5">
-                            <TableRow>
-                              <TableCell
-                                isHeader
-                                className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
-                              >
-                                {t("tO")}
-                              </TableCell>
-                              <TableCell
-                                isHeader
-                                className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
-                              >
-                                {t("nativeDetails")}
-                              </TableCell>
-                            </TableRow>
-                          </TableHeader>
-                          <TableBody className="divide-y divide-gray-100 dark:divide-white/5">
-                            {visible.map((o) => (
-                              <TableRow
-                                key={text(o, "id")}
-                                className="transition hover:bg-gray-50/50 dark:hover:bg-white/2"
-                              >
-                                <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
-                                  <div className="flex flex-wrap justify-between gap-2">
-                                    <strong>#{text(o, "id")}</strong>
-                                    <OrderStatusBadge
-                                      value={text(o, "status") as OrderStatus}
-                                    />
-                                  </div>
-                                  <p className="break-words">
-                                    {text(
-                                      tables.stores.find(
-                                        (s) => s.id === o.store_id,
-                                      ) || {},
-                                      "name",
-                                    )}
-                                  </p>
-                                  <p className="text-sm text-gray-500">
-                                    {text(o, "created_at")} ·{" "}
-                                    {text(o, "customer_name")} ·{" "}
-                                    {tables.order_items
-                                      .filter((i) => i.order_id === o.id)
-                                      .reduce(
-                                        (sum, i) => sum + number(i, "qty"),
-                                        0,
-                                      )}{" "}
-                                    {t("aItems")}
-                                  </p>
-                                  <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-                                    <span>
-                                      {number(o, "total")} TJS ·{" "}
-                                      {t(text(o, "payment"))} ·{" "}
-                                      {text(o, "driver_name") || "—"} ·{" "}
-                                      {t("aDel")} {number(o, "delivery_fee")}
-                                    </span>
-                                  </div>
-                                </TableCell>
-                                <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
-                                  <Action
-                                    label={
-                                      t("aDetails") === "aDetails"
-                                        ? lang === "en"
-                                          ? "Details"
-                                          : "Подробнее"
-                                        : t("aDetails")
-                                    }
-                                    kind="details"
-                                    onClick={() => {
-                                      navigate({ id: text(o, "id") });
-                                      window.scrollTo(0, 0);
-                                    }}
-                                  />
-                                </TableCell>
-                              </TableRow>
-                            ))}
-                          </TableBody>
-                        </Table>
-                      </div>
-                    </div>
+                    <OrdersPresentation
+                      rows={visible}
+                      t={t}
+                      onDetails={(id) => {
+                        navigate({ id });
+                        window.scrollTo(0, 0);
+                      }}
+                    />
                   ) : (
                     <p>{t("aNo")}</p>
                   )}
