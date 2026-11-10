@@ -1,0 +1,1448 @@
+[
+  {
+    "path": "src/components/main/dashboard/ecommerce/metrics/index.tsx",
+    "B_blob": "676fb8cfcec8a312619b12052dd1e5f65aa28226",
+    "current_blob": "676fb8cfcec8a312619b12052dd1e5f65aa28226",
+    "identical": true
+  },
+  {
+    "path": "src/components/main/dashboard/ecommerce/metrics/metric-card.tsx",
+    "B_blob": "f6f9e70716dc6a35eb2bb1cfc1cf697aef5b9079",
+    "current_blob": "f6f9e70716dc6a35eb2bb1cfc1cf697aef5b9079",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "B_blob": "02b34062bbef6497d74b0b85dd33292f8143d15a",
+    "current_blob": "02b34062bbef6497d74b0b85dd33292f8143d15a",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "B_blob": "24df2c8904362b15fdfa9e394672cc34b4d193db",
+    "current_blob": "24df2c8904362b15fdfa9e394672cc34b4d193db",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/directories-data.ts",
+    "B_blob": "0b5b6863887218aa35185e07a15cc3aad5b60291",
+    "current_blob": "0b5b6863887218aa35185e07a15cc3aad5b60291",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/identity.tsx",
+    "B_blob": "9ceba4924cce55058be3dd247a4078b3af142e75",
+    "current_blob": "9ceba4924cce55058be3dd247a4078b3af142e75",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/order-status.tsx",
+    "B_blob": "a026d77c56b200e7d1aa0ed359d31a68c26c3636",
+    "current_blob": "a026d77c56b200e7d1aa0ed359d31a68c26c3636",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/polish.css",
+    "B_blob": "d9c6b49c9e300e6d03c5f427c165901dddba3d87",
+    "current_blob": "d9c6b49c9e300e6d03c5f427c165901dddba3d87",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/logo.tsx",
+    "B_blob": "29d18bcdf0e1bb87ec61e6718cd2c1222f59c43b",
+    "current_blob": "29d18bcdf0e1bb87ec61e6718cd2c1222f59c43b",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/notification-state.ts",
+    "B_blob": "cb39794e90f6d59d046987837b28082337c6f9b8",
+    "current_blob": "cb39794e90f6d59d046987837b28082337c6f9b8",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/copy.ts",
+    "B_blob": "e7d10526436f1d753416446c53628e1e0b88db1b",
+    "current_blob": "e7d10526436f1d753416446c53628e1e0b88db1b",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/data.ts",
+    "B_blob": "4379817f0b24b8efca6ea96bca890a7da49ecce2",
+    "current_blob": "4379817f0b24b8efca6ea96bca890a7da49ecce2",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/detail-panel.tsx",
+    "B_blob": "a2ba0a63d1d4b175ae576fcf0120d07d6861d683",
+    "current_blob": "a2ba0a63d1d4b175ae576fcf0120d07d6861d683",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/finance-copy.ts",
+    "B_blob": "8f7d9ca332a673c6023255739c85e48c0b53428a",
+    "current_blob": "8f7d9ca332a673c6023255739c85e48c0b53428a",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/finance-panel.tsx",
+    "B_blob": "6cac65f4c29677cddf3edede36d091067de89102",
+    "current_blob": "6cac65f4c29677cddf3edede36d091067de89102",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/index.tsx",
+    "B_blob": "e78b69df03c4be36c61a36d38bbd58037a0d7d4d",
+    "current_blob": "e78b69df03c4be36c61a36d38bbd58037a0d7d4d",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/record-list.tsx",
+    "B_blob": "b6e9db6c815522d620fcf76ea1e1e5cbd90f2e48",
+    "current_blob": "b6e9db6c815522d620fcf76ea1e1e5cbd90f2e48",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/return-flow.tsx",
+    "B_blob": "83b000b755a6c46e66abf638bfe3d24123e4e8c2",
+    "current_blob": "83b000b755a6c46e66abf638bfe3d24123e4e8c2",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/review.css",
+    "B_blob": "6ad9c0cd088b1452985fb709cd63b46d9d3c070e",
+    "current_blob": "6ad9c0cd088b1452985fb709cd63b46d9d3c070e",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/operations-review/security-panel.tsx",
+    "B_blob": "6814559faac9f629203efc069e9a7cfb37225cce",
+    "current_blob": "6814559faac9f629203efc069e9a7cfb37225cce",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/orders-data.ts",
+    "B_blob": "d0337f40832e185bf1eb4719583f1d1dd16e697f",
+    "current_blob": "d0337f40832e185bf1eb4719583f1d1dd16e697f",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/orders.tsx",
+    "B_blob": "41e02c9acd670285627bef01b9efdc10e613f269",
+    "current_blob": "41e02c9acd670285627bef01b9efdc10e613f269",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/preview.tsx",
+    "B_blob": "c96f2d46c1691d4d1a2d937e735048cd1e5fea14",
+    "current_blob": "e501dd18a90c185e5a904778bb0972f8071427d5",
+    "identical": false
+  },
+  {
+    "path": "src/components/talabot/visual-review/copy.ts",
+    "B_blob": "fc26c51da55d67bedfde2176cc066b7cb9daa2d0",
+    "current_blob": "fc26c51da55d67bedfde2176cc066b7cb9daa2d0",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/visual-review/index.tsx",
+    "B_blob": "083a8cc0317641bfbccedee2f4b4c39fa85199c8",
+    "current_blob": "083a8cc0317641bfbccedee2f4b4c39fa85199c8",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/visual-review/review.css",
+    "B_blob": "43fa7c7003df71755b3c1a27c9963b451b4ceb33",
+    "current_blob": "43fa7c7003df71755b3c1a27c9963b451b4ceb33",
+    "identical": true
+  },
+  {
+    "path": "src/components/talabot/workspace.tsx",
+    "B_blob": "526b857e36d05793f2c09089d3009faf97ba2047",
+    "current_blob": "526b857e36d05793f2c09089d3009faf97ba2047",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/accordion.tsx",
+    "B_blob": "082dbd075d292ab101a3523a5d157cac9d0d75fe",
+    "current_blob": "082dbd075d292ab101a3523a5d157cac9d0d75fe",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/alert.tsx",
+    "B_blob": "8b51759ccab25df59a9d7a5b0a681e65077b4433",
+    "current_blob": "8b51759ccab25df59a9d7a5b0a681e65077b4433",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/avatar.tsx",
+    "B_blob": "c6cc660f0e23ad67a4153e0c615fccc3beec69f5",
+    "current_blob": "c6cc660f0e23ad67a4153e0c615fccc3beec69f5",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/badge.tsx",
+    "B_blob": "2e77d3bd2ec0aaa767f9e46586cd22f5d3e80ab7",
+    "current_blob": "2e77d3bd2ec0aaa767f9e46586cd22f5d3e80ab7",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/breadcrumb.tsx",
+    "B_blob": "252dcb8c91e15f7bd13539e4d2415a01e93352b3",
+    "current_blob": "252dcb8c91e15f7bd13539e4d2415a01e93352b3",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/button-group.tsx",
+    "B_blob": "82102e9b2aa7b1b3879064ded2a8b4b2ce96dcab",
+    "current_blob": "82102e9b2aa7b1b3879064ded2a8b4b2ce96dcab",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/button.tsx",
+    "B_blob": "fe7705a329e7635dcf831264a13d297066b1839d",
+    "current_blob": "fe7705a329e7635dcf831264a13d297066b1839d",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/card.tsx",
+    "B_blob": "caaab505256274a86b92bb877b2d5b225d327cae",
+    "current_blob": "caaab505256274a86b92bb877b2d5b225d327cae",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/checkbox.tsx",
+    "B_blob": "806b2fb4c1d2fbeaddacbddc57bbf121768cf9c8",
+    "current_blob": "806b2fb4c1d2fbeaddacbddc57bbf121768cf9c8",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/collapsible.tsx",
+    "B_blob": "a2b7a7f50592d18696a1faba8254811359786aa1",
+    "current_blob": "a2b7a7f50592d18696a1faba8254811359786aa1",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/combobox.tsx",
+    "B_blob": "16d3dc534eadf8b2806e51dc5703d517c8e90904",
+    "current_blob": "16d3dc534eadf8b2806e51dc5703d517c8e90904",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/dialog.tsx",
+    "B_blob": "58bfcf251ff1899e94826f52a9ed1aeda38994a4",
+    "current_blob": "58bfcf251ff1899e94826f52a9ed1aeda38994a4",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/dropdown.tsx",
+    "B_blob": "97f7f3de3b2e3322db6fef7e4a33a35beb8cf4d1",
+    "current_blob": "97f7f3de3b2e3322db6fef7e4a33a35beb8cf4d1",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/field.tsx",
+    "B_blob": "79bd9be67da08862e4e4bbed0657b0551ef5dc2a",
+    "current_blob": "79bd9be67da08862e4e4bbed0657b0551ef5dc2a",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/file-input.tsx",
+    "B_blob": "5d53ddbd18768a57607962cde40effb78f72188e",
+    "current_blob": "5d53ddbd18768a57607962cde40effb78f72188e",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/input-group.tsx",
+    "B_blob": "fa5d30ee8189ea7948c7364b13cd1df294bc03cf",
+    "current_blob": "fa5d30ee8189ea7948c7364b13cd1df294bc03cf",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/input-otp.tsx",
+    "B_blob": "9ac30df8347fa2474c915bbbab9ae444d32faf5e",
+    "current_blob": "9ac30df8347fa2474c915bbbab9ae444d32faf5e",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/input.tsx",
+    "B_blob": "ce502788cfb2669043adcc1b1dce60d76eac8de1",
+    "current_blob": "ce502788cfb2669043adcc1b1dce60d76eac8de1",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/label.tsx",
+    "B_blob": "772380badf9040a2c10b6df46a79b38444097c7c",
+    "current_blob": "772380badf9040a2c10b6df46a79b38444097c7c",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/pagination.tsx",
+    "B_blob": "bf0d2c1fd61d907492c67b09b8a3475a3fdf65f8",
+    "current_blob": "bf0d2c1fd61d907492c67b09b8a3475a3fdf65f8",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/popover.tsx",
+    "B_blob": "a56507fe9daef0d6148a5b5a0476f5bd0837ee78",
+    "current_blob": "a56507fe9daef0d6148a5b5a0476f5bd0837ee78",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/progress-bar.tsx",
+    "B_blob": "2e3a7ee7446791b319395e38e2edc570c9fd8d92",
+    "current_blob": "2e3a7ee7446791b319395e38e2edc570c9fd8d92",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/radio-group.tsx",
+    "B_blob": "75a1fa1c1bbbcc2e1c8d185881d397b4ebca03c8",
+    "current_blob": "75a1fa1c1bbbcc2e1c8d185881d397b4ebca03c8",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/resizable.tsx",
+    "B_blob": "0bf4453afda69e057f4b6d89ffb3ba3cd8ed2153",
+    "current_blob": "0bf4453afda69e057f4b6d89ffb3ba3cd8ed2153",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/scroll-area.tsx",
+    "B_blob": "6a1e8538e87a0801f5d8363e75b4a65861c63c1e",
+    "current_blob": "6a1e8538e87a0801f5d8363e75b4a65861c63c1e",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/select.tsx",
+    "B_blob": "fbee8e5aae247234fc481419316b4a4ae2b8fe75",
+    "current_blob": "fbee8e5aae247234fc481419316b4a4ae2b8fe75",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/separator.tsx",
+    "B_blob": "21771e422801a1e6df72f7acb5e018cf52543d3c",
+    "current_blob": "21771e422801a1e6df72f7acb5e018cf52543d3c",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/sheet.tsx",
+    "B_blob": "6c92f7c563483bc56c8d50a4945e70367e42bd86",
+    "current_blob": "6c92f7c563483bc56c8d50a4945e70367e42bd86",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/sidebar.tsx",
+    "B_blob": "de472b751c31fa664223e52409571ef0cf5281b1",
+    "current_blob": "de472b751c31fa664223e52409571ef0cf5281b1",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/skeleton.tsx",
+    "B_blob": "efc1643d36180e978ceef9f3f394bebd72909739",
+    "current_blob": "efc1643d36180e978ceef9f3f394bebd72909739",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/slider.tsx",
+    "B_blob": "f328abd5ef29f90163cf0275ad39da4f95676a62",
+    "current_blob": "f328abd5ef29f90163cf0275ad39da4f95676a62",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/spinner.tsx",
+    "B_blob": "8d11aed4d7abc3689ad43ce02e2fdc90ad85bf46",
+    "current_blob": "8d11aed4d7abc3689ad43ce02e2fdc90ad85bf46",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/switch.tsx",
+    "B_blob": "90aac04543c108dfeeddaf292c27163e900f37c5",
+    "current_blob": "90aac04543c108dfeeddaf292c27163e900f37c5",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/table.tsx",
+    "B_blob": "0ec9957fb80e157e01180232797f50d5715632a9",
+    "current_blob": "0ec9957fb80e157e01180232797f50d5715632a9",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/tabs.tsx",
+    "B_blob": "077d74bfaa3f760c61d5a32468fe2f5aa8c3c026",
+    "current_blob": "077d74bfaa3f760c61d5a32468fe2f5aa8c3c026",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/textarea.tsx",
+    "B_blob": "88917fdcd447e2447ad8968c968c4a968a23b404",
+    "current_blob": "88917fdcd447e2447ad8968c968c4a968a23b404",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/toggle-group.tsx",
+    "B_blob": "a9cafa1c6c5b0da96d0b667503b2d96abdbd78f3",
+    "current_blob": "a9cafa1c6c5b0da96d0b667503b2d96abdbd78f3",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/toggle.tsx",
+    "B_blob": "9bf898ed954e0ac15a7ac6646d9bbdd4dbe674bc",
+    "current_blob": "9bf898ed954e0ac15a7ac6646d9bbdd4dbe674bc",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/tooltip.tsx",
+    "B_blob": "8952146cbad02c34362149dbcfef1e85001ba1a1",
+    "current_blob": "8952146cbad02c34362149dbcfef1e85001ba1a1",
+    "identical": true
+  },
+  {
+    "path": "src/components/ui/video.tsx",
+    "B_blob": "4fe07da3c1d2fa33bc1e49f87f0506cb1285c70f",
+    "current_blob": "4fe07da3c1d2fa33bc1e49f87f0506cb1285c70f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/ai.tsx",
+    "B_blob": "8634340d6abb8035f963c7450266dac794f2e7fe",
+    "current_blob": "8634340d6abb8035f963c7450266dac794f2e7fe",
+    "identical": true
+  },
+  {
+    "path": "src/icons/air-bnb.tsx",
+    "B_blob": "a39429e9b77df4daca433a60dc9368411eebc635",
+    "current_blob": "a39429e9b77df4daca433a60dc9368411eebc635",
+    "identical": true
+  },
+  {
+    "path": "src/icons/alert.tsx",
+    "B_blob": "14314800e51740dc47359a8bca208e33475ee323",
+    "current_blob": "14314800e51740dc47359a8bca208e33475ee323",
+    "identical": true
+  },
+  {
+    "path": "src/icons/amazon.tsx",
+    "B_blob": "6a6d86dc98d22cb2768bd2e404e4cf349ab51e0b",
+    "current_blob": "6a6d86dc98d22cb2768bd2e404e4cf349ab51e0b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/angle-down.tsx",
+    "B_blob": "7216806eeb1a94bb5b794f53f3a97aab4bfaa875",
+    "current_blob": "7216806eeb1a94bb5b794f53f3a97aab4bfaa875",
+    "identical": true
+  },
+  {
+    "path": "src/icons/angle-up.tsx",
+    "B_blob": "522e145390df5c651c9e87b634fd5097de426e90",
+    "current_blob": "522e145390df5c651c9e87b634fd5097de426e90",
+    "identical": true
+  },
+  {
+    "path": "src/icons/apple.tsx",
+    "B_blob": "ce500e7425bae19bb8ac8d3344ac45dab6d9ca6b",
+    "current_blob": "ce500e7425bae19bb8ac8d3344ac45dab6d9ca6b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/archive.tsx",
+    "B_blob": "a60e6ff9ea98bf8d9364127dce31bb4b4b2999a5",
+    "current_blob": "a60e6ff9ea98bf8d9364127dce31bb4b4b2999a5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/arrow-down.tsx",
+    "B_blob": "b4e34e20f1575583e78fc2baaa757342a07a5748",
+    "current_blob": "b4e34e20f1575583e78fc2baaa757342a07a5748",
+    "identical": true
+  },
+  {
+    "path": "src/icons/arrow-left-right.tsx",
+    "B_blob": "e44776b2881c4326a5503a1a6302c4eec34470c9",
+    "current_blob": "e44776b2881c4326a5503a1a6302c4eec34470c9",
+    "identical": true
+  },
+  {
+    "path": "src/icons/arrow-left.tsx",
+    "B_blob": "31e69452ef6416d85bf6b9e6adaf3cc4655968d2",
+    "current_blob": "31e69452ef6416d85bf6b9e6adaf3cc4655968d2",
+    "identical": true
+  },
+  {
+    "path": "src/icons/arrow-right.tsx",
+    "B_blob": "bb157a507baabe5ba47f273d2504fb6ab2c8f9b9",
+    "current_blob": "bb157a507baabe5ba47f273d2504fb6ab2c8f9b9",
+    "identical": true
+  },
+  {
+    "path": "src/icons/arrow-up.tsx",
+    "B_blob": "19298442ca6af25b7ce315473e5ec915283e45b5",
+    "current_blob": "19298442ca6af25b7ce315473e5ec915283e45b5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/aspect-fullscreen.tsx",
+    "B_blob": "b8d840c8485aa6c4ed77ddb0cb7cbed3e9fe4511",
+    "current_blob": "b8d840c8485aa6c4ed77ddb0cb7cbed3e9fe4511",
+    "identical": true
+  },
+  {
+    "path": "src/icons/aspect-portrait.tsx",
+    "B_blob": "7b693b878d84dae0f3169995a069b3335a393de1",
+    "current_blob": "7b693b878d84dae0f3169995a069b3335a393de1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/aspect-square.tsx",
+    "B_blob": "cc45ea07f57ea425987affaadd729c40d269c7c7",
+    "current_blob": "cc45ea07f57ea425987affaadd729c40d269c7c7",
+    "identical": true
+  },
+  {
+    "path": "src/icons/aspect-vertical-widescreen.tsx",
+    "B_blob": "bdf81a07e1bef762a423fb9aa534e518f44f69c1",
+    "current_blob": "bdf81a07e1bef762a423fb9aa534e518f44f69c1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/aspect-widescreen.tsx",
+    "B_blob": "1cc088daaf1e55dc8f5cc53a34df6ff0e3a501ea",
+    "current_blob": "1cc088daaf1e55dc8f5cc53a34df6ff0e3a501ea",
+    "identical": true
+  },
+  {
+    "path": "src/icons/banknote-undo.tsx",
+    "B_blob": "c3d6541e02dde1fa0add4e880daa06d2cfacce04",
+    "current_blob": "c3d6541e02dde1fa0add4e880daa06d2cfacce04",
+    "identical": true
+  },
+  {
+    "path": "src/icons/bar-chart.tsx",
+    "B_blob": "de1d5bbfb11775e6a27b29508b4c3b50395ca4e6",
+    "current_blob": "de1d5bbfb11775e6a27b29508b4c3b50395ca4e6",
+    "identical": true
+  },
+  {
+    "path": "src/icons/bell.tsx",
+    "B_blob": "c455ad454271723d6d3c4c25f4175b0fc2fc4a3b",
+    "current_blob": "c455ad454271723d6d3c4c25f4175b0fc2fc4a3b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/bolt-two.tsx",
+    "B_blob": "f312dd2167ffe6745362c3387e0b84c8b09cf010",
+    "current_blob": "f312dd2167ffe6745362c3387e0b84c8b09cf010",
+    "identical": true
+  },
+  {
+    "path": "src/icons/bolt.tsx",
+    "B_blob": "45d504f2acba94ce1a5d5a533a236dad9556cb39",
+    "current_blob": "45d504f2acba94ce1a5d5a533a236dad9556cb39",
+    "identical": true
+  },
+  {
+    "path": "src/icons/box-tapped.tsx",
+    "B_blob": "b5950403a3c928b7ceff6d745a170a8648050b31",
+    "current_blob": "b5950403a3c928b7ceff6d745a170a8648050b31",
+    "identical": true
+  },
+  {
+    "path": "src/icons/box.tsx",
+    "B_blob": "0a3d403e8b76e297e9eb41d9f5bb33146fa64201",
+    "current_blob": "0a3d403e8b76e297e9eb41d9f5bb33146fa64201",
+    "identical": true
+  },
+  {
+    "path": "src/icons/brain.tsx",
+    "B_blob": "64d9af82cb3587c72b5626a7270ebcaf45b886d4",
+    "current_blob": "64d9af82cb3587c72b5626a7270ebcaf45b886d4",
+    "identical": true
+  },
+  {
+    "path": "src/icons/brush.tsx",
+    "B_blob": "79158ade616cab780171b36a561dfc61cd7d7d3c",
+    "current_blob": "79158ade616cab780171b36a561dfc61cd7d7d3c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/calendar.tsx",
+    "B_blob": "171c8d6617a9c9ffd801ef0e1a428c379f46a4c8",
+    "current_blob": "171c8d6617a9c9ffd801ef0e1a428c379f46a4c8",
+    "identical": true
+  },
+  {
+    "path": "src/icons/call.tsx",
+    "B_blob": "53253c63d10431fde72c055d258a91528e739692",
+    "current_blob": "53253c63d10431fde72c055d258a91528e739692",
+    "identical": true
+  },
+  {
+    "path": "src/icons/camera.tsx",
+    "B_blob": "57e4d701b7649a942a0f5ff9510114cd5ec7eba9",
+    "current_blob": "57e4d701b7649a942a0f5ff9510114cd5ec7eba9",
+    "identical": true
+  },
+  {
+    "path": "src/icons/cart.tsx",
+    "B_blob": "28afac46ea942dffda035fbf7be0d1c1e9e1fe25",
+    "current_blob": "28afac46ea942dffda035fbf7be0d1c1e9e1fe25",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chat.tsx",
+    "B_blob": "6d0b13713e2f4d6e3b73e7ab59c14c013aae1c53",
+    "current_blob": "6d0b13713e2f4d6e3b73e7ab59c14c013aae1c53",
+    "identical": true
+  },
+  {
+    "path": "src/icons/check-circle.tsx",
+    "B_blob": "730149b22017cb04c9527b292247feec6b0ae960",
+    "current_blob": "730149b22017cb04c9527b292247feec6b0ae960",
+    "identical": true
+  },
+  {
+    "path": "src/icons/check.tsx",
+    "B_blob": "8e1b14e3cc49af6530c30a527a0a1367465954b7",
+    "current_blob": "8e1b14e3cc49af6530c30a527a0a1367465954b7",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chevron-down.tsx",
+    "B_blob": "4f591f5ffa1718f22aefdfd2d40efc7cdcde49dd",
+    "current_blob": "4f591f5ffa1718f22aefdfd2d40efc7cdcde49dd",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chevron-left.tsx",
+    "B_blob": "005621e434bc05f2934c16e75ec266cf794eac25",
+    "current_blob": "005621e434bc05f2934c16e75ec266cf794eac25",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chevron-right.tsx",
+    "B_blob": "e3487a7c0efa464976a9e271e5361bf015c2ce04",
+    "current_blob": "e3487a7c0efa464976a9e271e5361bf015c2ce04",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chevron-up-down.tsx",
+    "B_blob": "e3322efa56f8dfa4786744dddcaeb6e8fad40e6f",
+    "current_blob": "e3322efa56f8dfa4786744dddcaeb6e8fad40e6f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chevron-up.tsx",
+    "B_blob": "337d1c9a300daedd19482fb25ed4947d5f905a68",
+    "current_blob": "337d1c9a300daedd19482fb25ed4947d5f905a68",
+    "identical": true
+  },
+  {
+    "path": "src/icons/chip.tsx",
+    "B_blob": "4613544a5f9c8c9a2f57d34ee2e3578ccd31e030",
+    "current_blob": "4613544a5f9c8c9a2f57d34ee2e3578ccd31e030",
+    "identical": true
+  },
+  {
+    "path": "src/icons/claude.tsx",
+    "B_blob": "475daaffaa752210e6c6cc4cea65b6294654a8ed",
+    "current_blob": "475daaffaa752210e6c6cc4cea65b6294654a8ed",
+    "identical": true
+  },
+  {
+    "path": "src/icons/clock.tsx",
+    "B_blob": "a79f6708a30c29e3a321f81567afa0200730477a",
+    "current_blob": "a79f6708a30c29e3a321f81567afa0200730477a",
+    "identical": true
+  },
+  {
+    "path": "src/icons/code.tsx",
+    "B_blob": "1ba5cfb9a0c8f6081d9fb8becbf45085864371c6",
+    "current_blob": "1ba5cfb9a0c8f6081d9fb8becbf45085864371c6",
+    "identical": true
+  },
+  {
+    "path": "src/icons/copy.tsx",
+    "B_blob": "b244c586d5d1b83dc94aac1f19fdb244369b82e1",
+    "current_blob": "b244c586d5d1b83dc94aac1f19fdb244369b82e1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/database.tsx",
+    "B_blob": "292135a0b75e6d3060dd979921cebe572b5b8bce",
+    "current_blob": "292135a0b75e6d3060dd979921cebe572b5b8bce",
+    "identical": true
+  },
+  {
+    "path": "src/icons/diamond.tsx",
+    "B_blob": "8d4e3eb9b8b0e33633f3a212250bee7fdbf327c5",
+    "current_blob": "8d4e3eb9b8b0e33633f3a212250bee7fdbf327c5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/dislike.tsx",
+    "B_blob": "ac9b97f6ef9320247017868d29d29d3e69c55774",
+    "current_blob": "ac9b97f6ef9320247017868d29d29d3e69c55774",
+    "identical": true
+  },
+  {
+    "path": "src/icons/doc.tsx",
+    "B_blob": "f7806d3e49cc0a937146c936034c185a662406bb",
+    "current_blob": "f7806d3e49cc0a937146c936034c185a662406bb",
+    "identical": true
+  },
+  {
+    "path": "src/icons/dollar.tsx",
+    "B_blob": "fd291ca9fce7347bb7fb74416dedc8de871cf2db",
+    "current_blob": "fd291ca9fce7347bb7fb74416dedc8de871cf2db",
+    "identical": true
+  },
+  {
+    "path": "src/icons/dot.tsx",
+    "B_blob": "df487e93abbe5635170ee17b947d7e3d97fd8741",
+    "current_blob": "df487e93abbe5635170ee17b947d7e3d97fd8741",
+    "identical": true
+  },
+  {
+    "path": "src/icons/download.tsx",
+    "B_blob": "f2ad375b9db265acc2e47eb5749cbf4a19a4c4d8",
+    "current_blob": "f2ad375b9db265acc2e47eb5749cbf4a19a4c4d8",
+    "identical": true
+  },
+  {
+    "path": "src/icons/envato.tsx",
+    "B_blob": "25537182877feb0435abb238707f8a82ab8dfb82",
+    "current_blob": "25537182877feb0435abb238707f8a82ab8dfb82",
+    "identical": true
+  },
+  {
+    "path": "src/icons/envelope.tsx",
+    "B_blob": "c5763d528b3f35e283391fa44826dfb9d97d6362",
+    "current_blob": "c5763d528b3f35e283391fa44826dfb9d97d6362",
+    "identical": true
+  },
+  {
+    "path": "src/icons/eye-close.tsx",
+    "B_blob": "aae7a4a4339b0e8e1e541a4f953d585ca39c69ce",
+    "current_blob": "aae7a4a4339b0e8e1e541a4f953d585ca39c69ce",
+    "identical": true
+  },
+  {
+    "path": "src/icons/eye.tsx",
+    "B_blob": "03012e28c0cf8c9399c547bf7d5b61a238db370f",
+    "current_blob": "03012e28c0cf8c9399c547bf7d5b61a238db370f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/facebook.tsx",
+    "B_blob": "ae68112defe2425adbcd8b369675169bbc85d31c",
+    "current_blob": "ae68112defe2425adbcd8b369675169bbc85d31c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/figma.tsx",
+    "B_blob": "915bda9b3cd0aab6eddd362979c34e46f480d069",
+    "current_blob": "915bda9b3cd0aab6eddd362979c34e46f480d069",
+    "identical": true
+  },
+  {
+    "path": "src/icons/file-img.tsx",
+    "B_blob": "daf61d9168a2f493d2bb1cb5430c8afb8e0357d9",
+    "current_blob": "daf61d9168a2f493d2bb1cb5430c8afb8e0357d9",
+    "identical": true
+  },
+  {
+    "path": "src/icons/file-pdf.tsx",
+    "B_blob": "5c42f7ab36d7452ce4346f4f09f0f8ee24d43c3c",
+    "current_blob": "5c42f7ab36d7452ce4346f4f09f0f8ee24d43c3c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/file-video.tsx",
+    "B_blob": "3a54994df997c39b94fe23d84b82e95ce6f18d0c",
+    "current_blob": "3a54994df997c39b94fe23d84b82e95ce6f18d0c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/file.tsx",
+    "B_blob": "f28f71464fcb51ab1b4609f2c7e132b20b51c082",
+    "current_blob": "f28f71464fcb51ab1b4609f2c7e132b20b51c082",
+    "identical": true
+  },
+  {
+    "path": "src/icons/filter.tsx",
+    "B_blob": "09cef7d600a3685f5711c3504239a8085a33de35",
+    "current_blob": "09cef7d600a3685f5711c3504239a8085a33de35",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flag-de.svg",
+    "B_blob": "05a0a69ae4eca33c821158afd72f09b97fefb8ff",
+    "current_blob": "05a0a69ae4eca33c821158afd72f09b97fefb8ff",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flag-es.svg",
+    "B_blob": "6bfa092dbc2227fdcc5d8703240d77fc36d0de31",
+    "current_blob": "6bfa092dbc2227fdcc5d8703240d77fc36d0de31",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flag-sa.svg",
+    "B_blob": "8bf5eda1ba47ada4221fdce414dc6f37a5c67939",
+    "current_blob": "8bf5eda1ba47ada4221fdce414dc6f37a5c67939",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flag-us.svg",
+    "B_blob": "a7220476ababe6badb8a033067ba762c84157de1",
+    "current_blob": "a7220476ababe6badb8a033067ba762c84157de1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flag.tsx",
+    "B_blob": "ef67af33fab714832142db119249a443e33ebcc7",
+    "current_blob": "ef67af33fab714832142db119249a443e33ebcc7",
+    "identical": true
+  },
+  {
+    "path": "src/icons/floppy-disk.tsx",
+    "B_blob": "9fc96683799dcfaf8f59c40d3f8f909ed7b90d46",
+    "current_blob": "9fc96683799dcfaf8f59c40d3f8f909ed7b90d46",
+    "identical": true
+  },
+  {
+    "path": "src/icons/flux.tsx",
+    "B_blob": "209da8c8c5ee9c969385ac559c48134dd02d57f1",
+    "current_blob": "209da8c8c5ee9c969385ac559c48134dd02d57f1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/folder-open.tsx",
+    "B_blob": "897bef9fd90ef2a6c91173c8754d4b19a8b2fe35",
+    "current_blob": "897bef9fd90ef2a6c91173c8754d4b19a8b2fe35",
+    "identical": true
+  },
+  {
+    "path": "src/icons/folder.tsx",
+    "B_blob": "e653323337a43552ea1368074cce0c50507f93e5",
+    "current_blob": "e653323337a43552ea1368074cce0c50507f93e5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/gear-two.tsx",
+    "B_blob": "c2454cd25862b4335f4ce0d99751f7f9ac201691",
+    "current_blob": "c2454cd25862b4335f4ce0d99751f7f9ac201691",
+    "identical": true
+  },
+  {
+    "path": "src/icons/gear.tsx",
+    "B_blob": "69182f96c61c8a2b5e822efad6d2be10d9c8d9e7",
+    "current_blob": "69182f96c61c8a2b5e822efad6d2be10d9c8d9e7",
+    "identical": true
+  },
+  {
+    "path": "src/icons/gemini.tsx",
+    "B_blob": "8b5e9a6181591078cad88c942975d34253f69259",
+    "current_blob": "8b5e9a6181591078cad88c942975d34253f69259",
+    "identical": true
+  },
+  {
+    "path": "src/icons/globe.tsx",
+    "B_blob": "88d32fb1e66d45621205f4bad9cb8956c0fa1c7f",
+    "current_blob": "88d32fb1e66d45621205f4bad9cb8956c0fa1c7f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/google.tsx",
+    "B_blob": "4315896c5a593e788388ff8050d57491c2798277",
+    "current_blob": "4315896c5a593e788388ff8050d57491c2798277",
+    "identical": true
+  },
+  {
+    "path": "src/icons/gpt.tsx",
+    "B_blob": "630133482b82056324577453da033f82b4661751",
+    "current_blob": "630133482b82056324577453da033f82b4661751",
+    "identical": true
+  },
+  {
+    "path": "src/icons/grok.tsx",
+    "B_blob": "2e84ebb535f1f0190eea3f4c73360582351b2062",
+    "current_blob": "2e84ebb535f1f0190eea3f4c73360582351b2062",
+    "identical": true
+  },
+  {
+    "path": "src/icons/horizontal-dots.tsx",
+    "B_blob": "0f00c53c9ae5c27ebae02b78c7c7b63787e7172c",
+    "current_blob": "0f00c53c9ae5c27ebae02b78c7c7b63787e7172c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/horizontal-slide.tsx",
+    "B_blob": "41d870e44f9130d8f915a858b516af514a1bd49a",
+    "current_blob": "41d870e44f9130d8f915a858b516af514a1bd49a",
+    "identical": true
+  },
+  {
+    "path": "src/icons/hourglass.tsx",
+    "B_blob": "80f8e1f434a6d73b04d6007c9eaaf3cc99f1b34f",
+    "current_blob": "80f8e1f434a6d73b04d6007c9eaaf3cc99f1b34f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/ideogram.tsx",
+    "B_blob": "e68191271d0a0e149bf41bfd8baee44037d015d5",
+    "current_blob": "e68191271d0a0e149bf41bfd8baee44037d015d5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/inbox.tsx",
+    "B_blob": "3e568f09775f02c29725287da05136d47be44366",
+    "current_blob": "3e568f09775f02c29725287da05136d47be44366",
+    "identical": true
+  },
+  {
+    "path": "src/icons/index.tsx",
+    "B_blob": "b7a69990cf17418522ade0d7e7c7b648883a5555",
+    "current_blob": "b7a69990cf17418522ade0d7e7c7b648883a5555",
+    "identical": true
+  },
+  {
+    "path": "src/icons/info-circle.tsx",
+    "B_blob": "fe4d6af42f9cdb4de103de8371b73a975741d2d8",
+    "current_blob": "fe4d6af42f9cdb4de103de8371b73a975741d2d8",
+    "identical": true
+  },
+  {
+    "path": "src/icons/info-hexa.tsx",
+    "B_blob": "e33a906a4b7e95a76adef1c5d45070048e071857",
+    "current_blob": "e33a906a4b7e95a76adef1c5d45070048e071857",
+    "identical": true
+  },
+  {
+    "path": "src/icons/info.tsx",
+    "B_blob": "1a4da49981a2158900f7ea7af301157631510fed",
+    "current_blob": "1a4da49981a2158900f7ea7af301157631510fed",
+    "identical": true
+  },
+  {
+    "path": "src/icons/instagram.tsx",
+    "B_blob": "7e7d550116228ddc7715b41e1643f8ac179d85e1",
+    "current_blob": "7e7d550116228ddc7715b41e1643f8ac179d85e1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/key.tsx",
+    "B_blob": "59bc3a5be7a863c251d85a7257511e376678ad02",
+    "current_blob": "59bc3a5be7a863c251d85a7257511e376678ad02",
+    "identical": true
+  },
+  {
+    "path": "src/icons/kling.tsx",
+    "B_blob": "aaee578ecf7b3af93c2be628b3d50542c1e53d96",
+    "current_blob": "aaee578ecf7b3af93c2be628b3d50542c1e53d96",
+    "identical": true
+  },
+  {
+    "path": "src/icons/layer.tsx",
+    "B_blob": "a98dd6908f2aa40fbe6d51a04f5fd191e47068c3",
+    "current_blob": "a98dd6908f2aa40fbe6d51a04f5fd191e47068c3",
+    "identical": true
+  },
+  {
+    "path": "src/icons/layout-grid.tsx",
+    "B_blob": "7bcf793ec8010ce7804b3233acbf0a84a057be16",
+    "current_blob": "7bcf793ec8010ce7804b3233acbf0a84a057be16",
+    "identical": true
+  },
+  {
+    "path": "src/icons/layout.tsx",
+    "B_blob": "c180aa1f9bbb4c91ba132a7d843dc195d6b0d9d4",
+    "current_blob": "c180aa1f9bbb4c91ba132a7d843dc195d6b0d9d4",
+    "identical": true
+  },
+  {
+    "path": "src/icons/like.tsx",
+    "B_blob": "c1e5a1c5dd5e9b6f1480519baed485ddfb019eb2",
+    "current_blob": "c1e5a1c5dd5e9b6f1480519baed485ddfb019eb2",
+    "identical": true
+  },
+  {
+    "path": "src/icons/link.tsx",
+    "B_blob": "10cc3fa8379e0eb903d8e8f543e8be5334d8ec4b",
+    "current_blob": "10cc3fa8379e0eb903d8e8f543e8be5334d8ec4b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/linkedin.tsx",
+    "B_blob": "2763b68d5bcdc4e0b540e3fd9281af1dd838c1ff",
+    "current_blob": "2763b68d5bcdc4e0b540e3fd9281af1dd838c1ff",
+    "identical": true
+  },
+  {
+    "path": "src/icons/list.tsx",
+    "B_blob": "5d18fae13e97a74e53ffd6dc6f6a815ec60d085d",
+    "current_blob": "5d18fae13e97a74e53ffd6dc6f6a815ec60d085d",
+    "identical": true
+  },
+  {
+    "path": "src/icons/loader-circle.tsx",
+    "B_blob": "8cbd6c77a64090712c6b75870c76905a57fa952c",
+    "current_blob": "8cbd6c77a64090712c6b75870c76905a57fa952c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/lock.tsx",
+    "B_blob": "515b5432d21a230c6df1a5bacd8e97200425ae33",
+    "current_blob": "515b5432d21a230c6df1a5bacd8e97200425ae33",
+    "identical": true
+  },
+  {
+    "path": "src/icons/log-out.tsx",
+    "B_blob": "ceee894f1bd43dd64f062e04a87b472d26d07a43",
+    "current_blob": "ceee894f1bd43dd64f062e04a87b472d26d07a43",
+    "identical": true
+  },
+  {
+    "path": "src/icons/mail.tsx",
+    "B_blob": "21ea86f70124112c40ca4366ed8164f69c1091f0",
+    "current_blob": "21ea86f70124112c40ca4366ed8164f69c1091f0",
+    "identical": true
+  },
+  {
+    "path": "src/icons/map.tsx",
+    "B_blob": "efa1098b00fea9d82ce20024d8291ddd9364e985",
+    "current_blob": "efa1098b00fea9d82ce20024d8291ddd9364e985",
+    "identical": true
+  },
+  {
+    "path": "src/icons/mastercard.tsx",
+    "B_blob": "af9f8e6387e1ad9d3cbc855324d3877ef3bd8247",
+    "current_blob": "af9f8e6387e1ad9d3cbc855324d3877ef3bd8247",
+    "identical": true
+  },
+  {
+    "path": "src/icons/menu-two.tsx",
+    "B_blob": "86d9ee41e16beb8badb28ba493b106da9c460881",
+    "current_blob": "86d9ee41e16beb8badb28ba493b106da9c460881",
+    "identical": true
+  },
+  {
+    "path": "src/icons/menu.tsx",
+    "B_blob": "2f0c5f221ebf7634e008cd4823154487b5a13f2f",
+    "current_blob": "2f0c5f221ebf7634e008cd4823154487b5a13f2f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/microphone.tsx",
+    "B_blob": "914f270bfd54e81056eb9a008a81f56a4d0aa00e",
+    "current_blob": "914f270bfd54e81056eb9a008a81f56a4d0aa00e",
+    "identical": true
+  },
+  {
+    "path": "src/icons/minus.tsx",
+    "B_blob": "6389b50974c9e319e480bd5e37be7afc23506958",
+    "current_blob": "6389b50974c9e319e480bd5e37be7afc23506958",
+    "identical": true
+  },
+  {
+    "path": "src/icons/moon.tsx",
+    "B_blob": "a8caab3d5b7bb3535a161af3363419ef3d0a0b22",
+    "current_blob": "a8caab3d5b7bb3535a161af3363419ef3d0a0b22",
+    "identical": true
+  },
+  {
+    "path": "src/icons/moving-box.tsx",
+    "B_blob": "329c156c9f7d2410ca439828323a33ad2467c58c",
+    "current_blob": "329c156c9f7d2410ca439828323a33ad2467c58c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/music.tsx",
+    "B_blob": "eaea8c8a8fff38804f188cd80d7d0907b95e8908",
+    "current_blob": "eaea8c8a8fff38804f188cd80d7d0907b95e8908",
+    "identical": true
+  },
+  {
+    "path": "src/icons/mute.tsx",
+    "B_blob": "314588b4fb182cf67fa709303c826666aa96564a",
+    "current_blob": "314588b4fb182cf67fa709303c826666aa96564a",
+    "identical": true
+  },
+  {
+    "path": "src/icons/nano-banana.tsx",
+    "B_blob": "87ef509d352d86fb3eaf805d4ff6f6d1b176f532",
+    "current_blob": "87ef509d352d86fb3eaf805d4ff6f6d1b176f532",
+    "identical": true
+  },
+  {
+    "path": "src/icons/netflix.tsx",
+    "B_blob": "20e0ad5b5566a19ccd6c7a976025c302d0dd2006",
+    "current_blob": "20e0ad5b5566a19ccd6c7a976025c302d0dd2006",
+    "identical": true
+  },
+  {
+    "path": "src/icons/octagon-alert.tsx",
+    "B_blob": "85935a64060ed206665811aef349c7a392fcc4a2",
+    "current_blob": "85935a64060ed206665811aef349c7a392fcc4a2",
+    "identical": true
+  },
+  {
+    "path": "src/icons/page.tsx",
+    "B_blob": "c12f894db3691593daa66b6f01aecf2fbfa15bba",
+    "current_blob": "c12f894db3691593daa66b6f01aecf2fbfa15bba",
+    "identical": true
+  },
+  {
+    "path": "src/icons/paper-clip.tsx",
+    "B_blob": "21bb84992f45487eab63b29ff31a3dc59e471881",
+    "current_blob": "21bb84992f45487eab63b29ff31a3dc59e471881",
+    "identical": true
+  },
+  {
+    "path": "src/icons/paypal.tsx",
+    "B_blob": "2beac55b770d9a6e37c3547369e38a86a6567cf3",
+    "current_blob": "2beac55b770d9a6e37c3547369e38a86a6567cf3",
+    "identical": true
+  },
+  {
+    "path": "src/icons/pencil.tsx",
+    "B_blob": "95a2bad127d3d543e736b7e730a49600b5aa4a71",
+    "current_blob": "95a2bad127d3d543e736b7e730a49600b5aa4a71",
+    "identical": true
+  },
+  {
+    "path": "src/icons/pie-chart.tsx",
+    "B_blob": "65890cc0f5a0be2db0f0060333a28eed3d978fe4",
+    "current_blob": "65890cc0f5a0be2db0f0060333a28eed3d978fe4",
+    "identical": true
+  },
+  {
+    "path": "src/icons/play.tsx",
+    "B_blob": "5df18dc8228a7b617fea64f72998d11c01ed20ee",
+    "current_blob": "5df18dc8228a7b617fea64f72998d11c01ed20ee",
+    "identical": true
+  },
+  {
+    "path": "src/icons/plugin.tsx",
+    "B_blob": "fa78b53f05e7ceb5c598102bbde9e8b7c22b361b",
+    "current_blob": "fa78b53f05e7ceb5c598102bbde9e8b7c22b361b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/plus.tsx",
+    "B_blob": "4c6f43d6b7044977486b7379d8ce138a9cf0be0c",
+    "current_blob": "4c6f43d6b7044977486b7379d8ce138a9cf0be0c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/printer.tsx",
+    "B_blob": "3d2cf1f621c76e5c8f28cde7d61ac765b9928f61",
+    "current_blob": "3d2cf1f621c76e5c8f28cde7d61ac765b9928f61",
+    "identical": true
+  },
+  {
+    "path": "src/icons/qwen.tsx",
+    "B_blob": "d968be2cc029caddae50dc47693a6930ef38cefb",
+    "current_blob": "d968be2cc029caddae50dc47693a6930ef38cefb",
+    "identical": true
+  },
+  {
+    "path": "src/icons/regenerate.tsx",
+    "B_blob": "fe567e4f7e1437b7d9027a324f5c15aa1a2f713e",
+    "current_blob": "fe567e4f7e1437b7d9027a324f5c15aa1a2f713e",
+    "identical": true
+  },
+  {
+    "path": "src/icons/runway.tsx",
+    "B_blob": "e66b19e57f4a908817a2755392561d32237f984b",
+    "current_blob": "e66b19e57f4a908817a2755392561d32237f984b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/search.tsx",
+    "B_blob": "7b35df8c027f82015c009bcbbd9c5bf506fb7672",
+    "current_blob": "7b35df8c027f82015c009bcbbd9c5bf506fb7672",
+    "identical": true
+  },
+  {
+    "path": "src/icons/seedream.tsx",
+    "B_blob": "38a2c9fdca800f243949de299adc862823000f9c",
+    "current_blob": "38a2c9fdca800f243949de299adc862823000f9c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/send.tsx",
+    "B_blob": "62b1c3b42e12d50e1b9b8fe25f3b581f0db5ab51",
+    "current_blob": "62b1c3b42e12d50e1b9b8fe25f3b581f0db5ab51",
+    "identical": true
+  },
+  {
+    "path": "src/icons/share.tsx",
+    "B_blob": "71317cb83687f442acd9707e7605c35386b92216",
+    "current_blob": "71317cb83687f442acd9707e7605c35386b92216",
+    "identical": true
+  },
+  {
+    "path": "src/icons/shooting-star.tsx",
+    "B_blob": "a4672e9babd12d24505f56204c7821002fae1f67",
+    "current_blob": "a4672e9babd12d24505f56204c7821002fae1f67",
+    "identical": true
+  },
+  {
+    "path": "src/icons/sound.tsx",
+    "B_blob": "a681d0059373809109a8b11bcfb17149d47f32b1",
+    "current_blob": "a681d0059373809109a8b11bcfb17149d47f32b1",
+    "identical": true
+  },
+  {
+    "path": "src/icons/spark.tsx",
+    "B_blob": "b9d2f2fee18ea62ac63faf2d2bab074ab830a041",
+    "current_blob": "b9d2f2fee18ea62ac63faf2d2bab074ab830a041",
+    "identical": true
+  },
+  {
+    "path": "src/icons/spotify.tsx",
+    "B_blob": "92a0f0a9124b53b0ec395f8b8ed3936c653c2a0c",
+    "current_blob": "92a0f0a9124b53b0ec395f8b8ed3936c653c2a0c",
+    "identical": true
+  },
+  {
+    "path": "src/icons/star-filled.tsx",
+    "B_blob": "53e94718b30c51ed4339e86b32a7edcd1a348378",
+    "current_blob": "53e94718b30c51ed4339e86b32a7edcd1a348378",
+    "identical": true
+  },
+  {
+    "path": "src/icons/star.tsx",
+    "B_blob": "5cb5e14febca3673f46ea5b407a49cdeed4e065f",
+    "current_blob": "5cb5e14febca3673f46ea5b407a49cdeed4e065f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/sun.tsx",
+    "B_blob": "4459d5c742f0c760dd735a7c612342f4a8a2818a",
+    "current_blob": "4459d5c742f0c760dd735a7c612342f4a8a2818a",
+    "identical": true
+  },
+  {
+    "path": "src/icons/system.tsx",
+    "B_blob": "f44bfeb4909cf87e67b7bdaa622070d92aaecd3d",
+    "current_blob": "f44bfeb4909cf87e67b7bdaa622070d92aaecd3d",
+    "identical": true
+  },
+  {
+    "path": "src/icons/table.tsx",
+    "B_blob": "a74ec961e40a638e6a93cf54d64ef330ef21a9bb",
+    "current_blob": "a74ec961e40a638e6a93cf54d64ef330ef21a9bb",
+    "identical": true
+  },
+  {
+    "path": "src/icons/tag.tsx",
+    "B_blob": "7ba39db4621783854c47e6db435199c8a3d05b82",
+    "current_blob": "7ba39db4621783854c47e6db435199c8a3d05b82",
+    "identical": true
+  },
+  {
+    "path": "src/icons/target.tsx",
+    "B_blob": "8dde9839e0acb3344510f071ebe103d5118d997f",
+    "current_blob": "8dde9839e0acb3344510f071ebe103d5118d997f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/task.tsx",
+    "B_blob": "cf23fe4c96f7b4741b658f78c9020cccc85f0c5b",
+    "current_blob": "cf23fe4c96f7b4741b658f78c9020cccc85f0c5b",
+    "identical": true
+  },
+  {
+    "path": "src/icons/telescope.tsx",
+    "B_blob": "c15fcb4958bdb2a61623e2a353b6acfee67ef898",
+    "current_blob": "c15fcb4958bdb2a61623e2a353b6acfee67ef898",
+    "identical": true
+  },
+  {
+    "path": "src/icons/tesla.tsx",
+    "B_blob": "876f8e1a5596b10292ffcbe43f72d671cfa14ee7",
+    "current_blob": "876f8e1a5596b10292ffcbe43f72d671cfa14ee7",
+    "identical": true
+  },
+  {
+    "path": "src/icons/text.tsx",
+    "B_blob": "b5ad9dc85a987839931c11fe16dda3d3d2bef07f",
+    "current_blob": "b5ad9dc85a987839931c11fe16dda3d3d2bef07f",
+    "identical": true
+  },
+  {
+    "path": "src/icons/ticket.tsx",
+    "B_blob": "db6d01e8b13962e841c71cf40c713c926669852a",
+    "current_blob": "db6d01e8b13962e841c71cf40c713c926669852a",
+    "identical": true
+  },
+  {
+    "path": "src/icons/time.tsx",
+    "B_blob": "402dc86b521a56986c19ac1c2e4858d7a4665dea",
+    "current_blob": "402dc86b521a56986c19ac1c2e4858d7a4665dea",
+    "identical": true
+  },
+  {
+    "path": "src/icons/trash-bin.tsx",
+    "B_blob": "972fcc67d013d0dc3f5c0ca71fc62d161e077dd3",
+    "current_blob": "972fcc67d013d0dc3f5c0ca71fc62d161e077dd3",
+    "identical": true
+  },
+  {
+    "path": "src/icons/truck-delivery.tsx",
+    "B_blob": "6579abad2d63598f7678dff4ca9cd0dccb6c2ae3",
+    "current_blob": "6579abad2d63598f7678dff4ca9cd0dccb6c2ae3",
+    "identical": true
+  },
+  {
+    "path": "src/icons/twitter-x.tsx",
+    "B_blob": "782feb4aac0c6b3662e7ad29a8842e5304efca21",
+    "current_blob": "782feb4aac0c6b3662e7ad29a8842e5304efca21",
+    "identical": true
+  },
+  {
+    "path": "src/icons/upload.tsx",
+    "B_blob": "b5a5a1dd961f2c288d7d486759f728d3271e9ee9",
+    "current_blob": "b5a5a1dd961f2c288d7d486759f728d3271e9ee9",
+    "identical": true
+  },
+  {
+    "path": "src/icons/user-circle.tsx",
+    "B_blob": "85b77dcd2e22cf72f7e62d0ef6e889edee6452ac",
+    "current_blob": "85b77dcd2e22cf72f7e62d0ef6e889edee6452ac",
+    "identical": true
+  },
+  {
+    "path": "src/icons/user-dollar.tsx",
+    "B_blob": "1bd63b68573bcc99d1ad71c9107aae5b2af380c2",
+    "current_blob": "1bd63b68573bcc99d1ad71c9107aae5b2af380c2",
+    "identical": true
+  },
+  {
+    "path": "src/icons/user.tsx",
+    "B_blob": "8b5e5e1a303f35f51ebb09a533b758dc58644988",
+    "current_blob": "8b5e5e1a303f35f51ebb09a533b758dc58644988",
+    "identical": true
+  },
+  {
+    "path": "src/icons/users.tsx",
+    "B_blob": "2ead09be9b7dc405f0fb2618341e4ad083d5b5bd",
+    "current_blob": "2ead09be9b7dc405f0fb2618341e4ad083d5b5bd",
+    "identical": true
+  },
+  {
+    "path": "src/icons/vertical-dots.tsx",
+    "B_blob": "8d2a4bea740c0f0c9b5b2ea86eed0edcc4029c08",
+    "current_blob": "8d2a4bea740c0f0c9b5b2ea86eed0edcc4029c08",
+    "identical": true
+  },
+  {
+    "path": "src/icons/visa.tsx",
+    "B_blob": "3963d55d2bb911ad1abc64927321b922ccd1d66d",
+    "current_blob": "3963d55d2bb911ad1abc64927321b922ccd1d66d",
+    "identical": true
+  },
+  {
+    "path": "src/icons/whatsapp.tsx",
+    "B_blob": "d51921eff59575fba73a22ec9e3fe00af71bbbe5",
+    "current_blob": "d51921eff59575fba73a22ec9e3fe00af71bbbe5",
+    "identical": true
+  },
+  {
+    "path": "src/icons/x-ai.tsx",
+    "B_blob": "8900dba57e6650b9399789062f73461e1217fe4d",
+    "current_blob": "8900dba57e6650b9399789062f73461e1217fe4d",
+    "identical": true
+  },
+  {
+    "path": "src/icons/x.tsx",
+    "B_blob": "e8fa6a31cd5561604bc3bb2f6a51cb5304ad94bc",
+    "current_blob": "e8fa6a31cd5561604bc3bb2f6a51cb5304ad94bc",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/header/index.tsx",
+    "B_blob": "6c9488a681b562a70e547eee8f02eec463db0a00",
+    "current_blob": "6c9488a681b562a70e547eee8f02eec463db0a00",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/data.tsx",
+    "B_blob": "7942b6d1b34092a16f46ed310b00eb9e083337b8",
+    "current_blob": "7942b6d1b34092a16f46ed310b00eb9e083337b8",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/index.tsx",
+    "B_blob": "cb8cd169e5c0965f8c03c077a35c3a1b2d48a014",
+    "current_blob": "cb8cd169e5c0965f8c03c077a35c3a1b2d48a014",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/sidebar-header.tsx",
+    "B_blob": "bc719f0691ea36a9a99b36b3e6190eb5da7e3c5e",
+    "current_blob": "bc719f0691ea36a9a99b36b3e6190eb5da7e3c5e",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/sidebar-menu-item.tsx",
+    "B_blob": "130ae180ca4b3110955b7a589a4ac65050bd2c2e",
+    "current_blob": "130ae180ca4b3110955b7a589a4ac65050bd2c2e",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/sidebar-nav-group.tsx",
+    "B_blob": "e311dcc9f8405823e14a049eb42a6b788f4ae1c9",
+    "current_blob": "e311dcc9f8405823e14a049eb42a6b788f4ae1c9",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/sidebar-submenu-item.tsx",
+    "B_blob": "4b38cedb59b71d238bc191cd70cd95f8246bd916",
+    "current_blob": "4b38cedb59b71d238bc191cd70cd95f8246bd916",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/sidebar-widget.tsx",
+    "B_blob": "476b559da1b0e01c317b48f99f1de736d4d5153f",
+    "current_blob": "476b559da1b0e01c317b48f99f1de736d4d5153f",
+    "identical": true
+  },
+  {
+    "path": "src/layout/app-layout/sidebar/types.ts",
+    "B_blob": "1d20c022b65a79b924c8d859c314e4fb0096e5e1",
+    "current_blob": "1d20c022b65a79b924c8d859c314e4fb0096e5e1",
+    "identical": true
+  },
+  {
+    "path": "src/layout/header/notification-dropdown/data.ts",
+    "B_blob": "87050acbb88f92f7ac39dd2c2661dd4ab17b2f2e",
+    "current_blob": "87050acbb88f92f7ac39dd2c2661dd4ab17b2f2e",
+    "identical": true
+  },
+  {
+    "path": "src/layout/header/notification-dropdown/index.tsx",
+    "B_blob": "06a3487987aae830cb56231756cd6063ae08561b",
+    "current_blob": "06a3487987aae830cb56231756cd6063ae08561b",
+    "identical": true
+  },
+  {
+    "path": "src/layout/header/notification-dropdown/types.ts",
+    "B_blob": "3d03364fa97458cac16526a4ca5050c682970116",
+    "current_blob": "3d03364fa97458cac16526a4ca5050c682970116",
+    "identical": true
+  },
+  {
+    "path": "src/layout/header/theme-toggler/index.tsx",
+    "B_blob": "ea3b75eb85e80a92f303632a93c24e3371cf2682",
+    "current_blob": "ea3b75eb85e80a92f303632a93c24e3371cf2682",
+    "identical": true
+  },
+  {
+    "path": "src/layout/header/user-dropdown/index.tsx",
+    "B_blob": "b5068a6db5f9cccfa17f0b12e6cf49dc8b9a6484",
+    "current_blob": "b5068a6db5f9cccfa17f0b12e6cf49dc8b9a6484",
+    "identical": true
+  }
+]
