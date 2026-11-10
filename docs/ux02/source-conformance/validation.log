@@ -1,0 +1,15 @@
+PASS wallet zero rejected
+PASS wallet reason required
+PASS wallet negative correction retained
+PASS wallet bound enforced
+PASS invalid phone rejected
+PASS phone reason required
+PASS valid Tajik phone shape
+PASS staff permission selection required
+PASS merchant discount cap preserved
+PASS promo over 100 percent rejected
+PASS promo invalid date range rejected
+PASS happy hours overnight permitted
+PASS happy hours same time rejected
+PASS Dushanbe date contract
+14 validation checks passed. These validate client input constraints, not server authorization.

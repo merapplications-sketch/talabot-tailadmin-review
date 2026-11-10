@@ -1,0 +1,42 @@
+{
+  "date_local": "2026-11-11",
+  "timezone": "Asia/Dushanbe",
+  "build": "PASS",
+  "typescript": "PASS",
+  "lint": {
+    "errors": 0,
+    "warnings": 47,
+    "categories": {
+      "@typescript-eslint/no-unused-vars": 41,
+      "import/no-anonymous-default-export": 1,
+      "@next/next/no-img-element": 4,
+      "@next/next/no-location-assign-relative-destination": 1
+    }
+  },
+  "unit_regression": {
+    "native": 22,
+    "operations": 17,
+    "validation": 14,
+    "dates": 5,
+    "analytics_data": 12
+  },
+  "server_rendered_composition": {
+    "pass": 8,
+    "visual": false,
+    "icons_stubbed": true
+  },
+  "browser_interaction_current_batch": "BLOCKED",
+  "viewports": {
+    "320": "BLOCKED",
+    "390": "BLOCKED",
+    "1440": "BLOCKED"
+  },
+  "safari_real": "NOT TESTED",
+  "blockers": [
+    "Playwright Chromium launch: process_singleton_posix.cc:297 socket() failed: Operation not permitted (1).",
+    "Cloud-browser reload refused by browser URL policy before observing corrected render. No bypass or alternate browser-control path attempted.",
+    "Supported cloud-browser API exposes no viewport resizing capability."
+  ],
+  "screenshots_current_batch": [],
+  "old_screenshots_reused_as_new_evidence": false
+}

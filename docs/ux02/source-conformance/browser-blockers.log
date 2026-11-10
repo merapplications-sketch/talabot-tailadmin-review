@@ -1,0 +1,9 @@
+2026-11-11 Asia/Dushanbe — current batch
+Attempt: Playwright chromium.launch(executablePath=/usr/bin/chromium, headless=true), requested viewport 390x844.
+Result: browserType.launch: Target page, context or browser has been closed.
+FATAL:chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)
+No browser page or viewport screenshot was created.
+
+Attempt: shared-browser reload of existing local preview tab.
+Result: Browser Use rejected this action due to browser security policy. Browser URL policy gate did not grant access before observing corrected page.
+Stopped this browser path; did not bypass the gate.

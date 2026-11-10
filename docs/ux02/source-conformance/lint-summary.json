@@ -1,0 +1,10 @@
+{
+  "errors": 0,
+  "warnings": 47,
+  "categories": {
+    "@typescript-eslint/no-unused-vars": 41,
+    "import/no-anonymous-default-export": 1,
+    "@next/next/no-img-element": 4,
+    "@next/next/no-location-assign-relative-destination": 1
+  }
+}
