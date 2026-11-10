@@ -1,0 +1,480 @@
+{
+  "reference": "89b229e58526091594af5586fc15be13bb0c3cc4",
+  "hash": "4c33a6df5bac39d27a47ec9b6c56495120ecf4d90a2d3e538dbcb68fe847350e",
+  "calls": [
+    "addBanner",
+    "addDict",
+    "addPromo",
+    "addStore",
+    "adminTickets",
+    "allOffers",
+    "approveItem",
+    "assignDriver",
+    "assignOwner",
+    "audit",
+    "banners",
+    "beep",
+    "brandAttach",
+    "brandCreate",
+    "brandDetach",
+    "brands",
+    "can",
+    "cash",
+    "clientErrors",
+    "customerOrders",
+    "customers",
+    "decideStoreRequest",
+    "deleteBanner",
+    "deleteHH",
+    "deletePromo",
+    "drivers",
+    "events",
+    "fetchOrders",
+    "fmtMsg",
+    "happyHours",
+    "hhActive",
+    "icon",
+    "isCash",
+    "isSuper",
+    "lang",
+    "loadOrderExtra",
+    "loadPages",
+    "loadTicket",
+    "logout",
+    "lowRatings",
+    "mapView",
+    "me",
+    "morph",
+    "normPhone",
+    "on",
+    "order",
+    "orders",
+    "ownerInfo",
+    "pages",
+    "pagesError",
+    "pagesState",
+    "pendingItems",
+    "person",
+    "pickLocation",
+    "promos",
+    "proofUrl",
+    "ratings",
+    "refreshRating",
+    "refundRoom",
+    "reopenRating",
+    "resolveRating",
+    "saveHH",
+    "searchOrders",
+    "setBan",
+    "setCustomerPhone",
+    "setDriverBlocked",
+    "setDriverLimit",
+    "setDriverStatus",
+    "setHHActive",
+    "setPage",
+    "setSetting",
+    "setStoreEarn",
+    "setStoreFreeDelivery",
+    "setStoreLoyalty",
+    "setText",
+    "settings",
+    "settleCash",
+    "staffList",
+    "staffRemove",
+    "staffSet",
+    "staffUI",
+    "start",
+    "storeRequests",
+    "stores",
+    "supportInfo",
+    "ticketMessages",
+    "ticketSetStatus",
+    "ticketStaffReply",
+    "updateBanner",
+    "updatePromo",
+    "updateStore",
+    "uploadImage",
+    "walletAdjust",
+    "walletOf"
+  ],
+  "definitions": {
+    "logout": {
+      "source": "logout: logout",
+      "line": 845
+    },
+    "cash": {
+      "source": "cash: function (driverId) { return DB.cash[driverId] || 0; }",
+      "line": 1213
+    },
+    "stores": {
+      "source": "stores: function (all) { return DB.stores.filter(function (s) { return all || s.is_active; }); }",
+      "line": 852
+    },
+    "orders": {
+      "source": "orders: function (fn) { return ORD.filter(function (o) { return !o._x && (!fn || fn(o)); }); }",
+      "line": 891
+    },
+    "drivers": {
+      "source": "drivers: function () { return DB.drivers; }",
+      "line": 854
+    },
+    "banners": {
+      "source": "banners: function (all) { var now = Date.now(); return DB.banners.filter(function (b) { return all || (b.is_active && (!b.starts_at || Date.parse(b.starts_at) <= now) && (!b.ends_at || Date.parse(b.ends_at) > now)); }); }",
+      "line": 1317
+    },
+    "events": {
+      "source": "events: function (id) { return DB.events.filter(function (e) { return e.order_id == id; }); }",
+      "line": 1212
+    },
+    "promos": {
+      "source": "promos: function () { return DB.promos; }",
+      "line": 1321
+    },
+    "ratings": {
+      "source": "ratings: function () { return DB.ratings; }",
+      "line": 930
+    },
+    "settings": {
+      "source": "settings: function () { return DB.settings; }",
+      "line": 1022
+    },
+    "pages": {
+      "source": "pages: function () { return DB.pages; }",
+      "line": 986
+    },
+    "icon": {
+      "source": "icon: icon",
+      "line": 829
+    },
+    "staffUI": {
+      "source": "staffUI: staffUI",
+      "line": 829
+    },
+    "morph": {
+      "source": "morph: morph",
+      "line": 829
+    },
+    "normPhone": {
+      "source": "normPhone: normPhone",
+      "line": 832
+    },
+    "lang": {
+      "source": "lang: function () { return lang; }",
+      "line": 833
+    },
+    "addDict": {
+      "source": "addDict: function (ru, en) { Object.assign(I.ru, ru); Object.assign(I.en, en); }",
+      "line": 834
+    },
+    "on": {
+      "source": "on: function (f) { subs.push(f); }",
+      "line": 835
+    },
+    "start": {
+      "source": "start: function (role, cb) {\n      need = role; onReady = cb;\n      sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { storageKey: 'tlb-auth-' + role } });\n      bootShow();\n      sb.auth.getSession().then(function (x) { if (x.data.session) return enter(x.data.session.user); bootHide(); showLogin(); })\n        .catch(function (e) { console.error(e); bootFail(e); });\n    }",
+      "line": 837
+    },
+    "me": {
+      "source": "me: me",
+      "line": 845
+    },
+    "beep": {
+      "source": "beep: beep",
+      "line": 845
+    },
+    "fmtMsg": {
+      "source": "fmtMsg: fmtMsg",
+      "line": 845
+    },
+    "pickLocation": {
+      "source": "pickLocation: pickLocation",
+      "line": 845
+    },
+    "isCash": {
+      "source": "isCash: function (o) { return /^(cash|Cash|Наличн)/.test((o && o.payment) || ''); }",
+      "line": 847
+    },
+    "pendingItems": {
+      "source": "pendingItems: function () { return DB.items.filter(function (i) { return !i.approved; }).map(shapeItem); }",
+      "line": 855
+    },
+    "order": {
+      "source": "order: function (id) { return ORD.find(function (o) { return o.id == id; }) || null; }",
+      "line": 890
+    },
+    "searchOrders": {
+      "source": "searchOrders: function (q, status) {\n      q = String(q || '').trim().slice(0, 60); if (!q || !sb) return Promise.resolve({ ids: [] });\n      return sb.rpc('admin_search_orders', { p_q: q, p_status: status || null, p_limit: 100 }).then(function (r) {\n        if (r.error) return { error: errKey(r.error), missing: /admin_search_orders|function|schema cache/i.test(String(r.error.message || '')) };\n        var ids = (r.data || []).map(function (x) { return x.id; }); if (!ids.length) return { ids: [] };\n        var need = ids.filter(function (id) { return !DB.orders.some(function (o) { return o.id === id; }); });\n        return Promise.all([need.length ? sb.from('orders').select('*').in('id', need) : Promise.resolve({ data: [] }), need.length ? sb.from('order_items').select('*').in('order_id', need) : Promise.resolve({ data: [] })]).then(function (x) {\n          if (!x[0].error) DB.xorders = (x[0].data || []).concat(DB.xorders.filter(function (o) { return need.indexOf(o.id) < 0; })).slice(0, 300);\n          if (!x[1].error) DB.xitems = (x[1].data || []).concat(DB.xitems.filter(function (i) { return need.indexOf(i.order_id) < 0; }));\n          return fetchAdminContacts(ids).then(function () { ORD = shape(); return { ids: ids }; });\n        });\n      }, function () { return { error: 'generic' }; });\n    }",
+      "line": 893
+    },
+    "fetchOrders": {
+      "source": "fetchOrders: function (ids) {\n      ids = (ids || []).filter(function (id) { return id != null && !ORD.some(function (o) { return o.id == id; }); });\n      if (!ids.length || !sb) return Promise.resolve(true);\n      return Promise.all([sb.from('orders').select('*').in('id', ids), sb.from('order_items').select('*').in('order_id', ids)]).then(function (x) {\n        if (x[0].error) return false;\n        var got = (x[0].data || []).filter(function (o) { return ids.some(function (id) { return o.id == id; }); });\n        if (!got.length) return false;\n        var gid = got.map(function (o) { return o.id; });\n        DB.xorders = got.concat(DB.xorders.filter(function (o) { return gid.indexOf(o.id) < 0; })).slice(0, 300);\n        if (!x[1].error) DB.xitems = (x[1].data || []).filter(function (i) { return gid.indexOf(i.order_id) >= 0; }).concat(DB.xitems.filter(function (i) { return gid.indexOf(i.order_id) < 0; }));\n        return (ME && ME.role === 'admin' ? fetchAdminContacts(gid) : Promise.resolve()).then(function () { ORD = shape(); fireSoon(); return true; });\n      }, function () { return false; });\n    }",
+      "line": 907
+    },
+    "assignDriver": {
+      "source": "assignDriver: function (orderId, driverId) { return rpc('admin_assign_driver', { p_order: orderId, p_driver: driverId }, true); }",
+      "line": 928
+    },
+    "allOffers": {
+      "source": "allOffers: function () { return DB.offersAll; }",
+      "line": 929
+    },
+    "resolveRating": {
+      "source": "resolveRating: function (orderId, note) { return rpc('resolve_rating', { p_order: orderId, p_note: String(note || '').slice(0, 300) }, true); }",
+      "line": 931
+    },
+    "reopenRating": {
+      "source": "reopenRating: function (orderId) { return rpc('reopen_rating', { p_order: orderId }, true); }",
+      "line": 932
+    },
+    "lowRatings": {
+      "source": "lowRatings: function (maxStars, includeHandled) {\n      var m = maxStars || 2;\n      return DB.ratings.filter(function (r) { return ((r.store_stars != null && r.store_stars <= m) || (r.driver_stars != null && r.driver_stars <= m)) && (includeHandled || !r.handled_at); });\n    }",
+      "line": 933
+    },
+    "uploadImage": {
+      "source": "uploadImage: function (file, o) {\n      o = o || {};\n      return new Promise(function (resolve) {\n        if (!file || !/^image\\//.test(file.type || '') || file.size > 12 * 1024 * 1024) { toast(t('err_bad_value'), true); return resolve(null); }\n        var fr = new FileReader();\n        fr.onerror = function () { toast(t('err_generic'), true); resolve(null); };\n        fr.onload = function () {\n          var im = new Image();\n          im.onerror = function () { toast(t('err_bad_value'), true); resolve(null); };\n          im.onload = function () {\n            var max = o.maxW || 800, k = Math.min(1, max / Math.max(im.width, im.height)), c = document.createElement('canvas');\n            c.width = Math.max(1, Math.round(im.width * k)); c.height = Math.max(1, Math.round(im.height * k));\n            c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);\n            var q = o.q || 0.78, inline = function () { resolve(c.toDataURL('image/jpeg', q)); };\n            if (!c.toBlob || !sb || !sb.storage || !ME) return inline();\n            c.toBlob(function (blob) {\n              if (!blob) return inline();\n              var id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2, 10));\n              var path = ME.id + '/' + id + '.jpg';\n              sb.storage.from('media').upload(path, blob, { contentType: 'image/jpeg', cacheControl: '31536000', upsert: false }).then(function (r) {\n                if (r.error) { console.error(r.error); return inline(); }                    // storage not set up yet: keep working with an inline image\n                resolve(sb.storage.from('media').getPublicUrl(path).data.publicUrl);\n              }, function () { inline(); });\n            }, 'image/jpeg', q);\n          };\n          im.src = fr.result;\n        };\n        fr.readAsDataURL(file);\n      });\n    }",
+      "line": 943
+    },
+    "loadOrderExtra": {
+      "source": "loadOrderExtra: function (id) {\n      if (!ME || !sb || (extraLoaded[id] && Date.now() - extraLoaded[id] < 15000)) return Promise.resolve();\n      extraLoaded[id] = Date.now(); extraOrders[id] = 1;\n      if (ME.role === 'admin') fetchAdminContacts([id]).then(function (c) { if (c) { ORD = shape(); fireSoon(); } });\n      return Promise.all([sb.from('order_chat').select('*').eq('order_id', id).order('created_at'), sb.from('order_events').select('*').eq('order_id', id).order('at')]).then(function (r) {\n        var seen = {}; DB.chat.forEach(function (c) { seen[c.id] = 1; });\n        (r[0].error ? [] : (r[0].data || [])).forEach(function (c) { if (!seen[c.id]) { DB.chat.push(c); seen[c.id] = 1; } });\n        DB.events = DB.events.filter(function (e) { return e.order_id !== id; }).concat(r[1].error ? [] : (r[1].data || []));\n        ORD = shape(); fireSoon();\n      }).catch(function (e) { console.error(e); });\n    }",
+      "line": 974
+    },
+    "pagesState": {
+      "source": "pagesState: function () { return pagesSt; }",
+      "line": 988
+    },
+    "loadPages": {
+      "source": "loadPages: function (force) {\n      var now = Date.now();\n      if (!force && extraLoaded.pages && now - extraLoaded.pages < 30000) return Promise.resolve(false);\n      extraLoaded.pages = now;\n      var st0 = pagesSt;\n      return sb.from('app_pages').select('slug,body_ru,body_en').then(function (r) {\n        if (r.error) { pagesSt = 'error'; pagesErr = String(r.error.message || r.error.code || ''); if (st0 !== 'error') fireSoon(); return false; }\n        var o = {}; (r.data || []).forEach(function (p) { o[p.slug] = { ru: p.body_ru || '', en: p.body_en || '' }; });\n        pagesSt = Object.keys(o).length ? 'ok' : 'empty';\n        if (JSON.stringify(o) === JSON.stringify(DB.pages) && st0 === pagesSt) return false;\n        DB.pages = o; fireSoon(); return true;\n      }, function (e) { pagesSt = 'error'; pagesErr = String((e && e.message) || e || ''); fireSoon(); return false; });\n    }",
+      "line": 989
+    },
+    "pagesError": {
+      "source": "pagesError: function () { return pagesErr; }",
+      "line": 1002
+    },
+    "setPage": {
+      "source": "setPage: function (slug, lang, body) {\n      var b = String(body == null ? '' : body);\n      if (['about', 'privacy'].indexOf(slug) < 0 || ['ru', 'en'].indexOf(lang) < 0 || b.length > 20000) return Promise.resolve({ error: 'bad_value' });\n      return rpc('set_page', { p_slug: slug, p_lang: lang, p_body: b }, true).then(function (r) { return r && r.error ? r : TLBref.loadPages(true).then(function () { return { ok: true }; }); });\n    }",
+      "line": 1003
+    },
+    "refundRoom": {
+      "source": "refundRoom: function (ticketId) {\n      return sb.rpc('ticket_refund_room', { p_ticket: ticketId }).then(function (r) {\n        if (r.error || !r.data || !r.data.length) return null;\n        var x = r.data[0]; return { total: +x.order_total, refunded: +x.refunded, room: +x.room };\n      }, function () { return null; });\n    }",
+      "line": 1008
+    },
+    "setCustomerPhone": {
+      "source": "setCustomerPhone: function (userId, phone, reason) {\n      var ph = normPhone(phone), why = String(reason || '').trim();\n      if (!ph) return Promise.resolve({ error: 'bad_phone' });\n      if (why.length < 3 || why.length > 200) return Promise.resolve({ error: 'note_required' });\n      return rpc('admin_set_customer_phone', { p_user: userId, p_phone: ph, p_reason: why }, true).then(function (r) { return r && r.error ? r : { ok: true, phone: ph }; });\n    }",
+      "line": 1014
+    },
+    "ownerInfo": {
+      "source": "ownerInfo: function (storeId) { return sb.rpc('store_owner_info', { p_store: storeId }).then(function (r) { return r.error || !r.data || !r.data.length ? null : r.data[0]; }, function () { return null; }); }",
+      "line": 1020
+    },
+    "setSetting": {
+      "source": "setSetting: function (key, value) { return rpc('set_setting', { p_key: key, p_value: +value }, true).then(function (r) { return r && r.error ? r : refresh(['misc']).then(function () { return { ok: true }; }); }); }",
+      "line": 1023
+    },
+    "supportInfo": {
+      "source": "supportInfo: function () { return { phone: DB.texts.support_phone || '', hours: DB.texts.support_hours || '' }; }",
+      "line": 1027
+    },
+    "ticketMessages": {
+      "source": "ticketMessages: function (id) { return (DB.tmsgs[id] || []).slice(); }",
+      "line": 1030
+    },
+    "loadTicket": {
+      "source": "loadTicket: function (id, force) {\n      var now = Date.now(), c = extraLoaded['t' + id];\n      if (!force && c && now - c < 6000) return Promise.resolve(false);\n      extraLoaded['t' + id] = now;\n      return sb.from('ticket_messages').select('*').eq('ticket_id', id).order('created_at').limit(200).then(function (r) {\n        if (r.error) return false;\n        var k = JSON.stringify(r.data || []); if (JSON.stringify(DB.tmsgs[id] || []) === k) return false;\n        DB.tmsgs[id] = r.data || []; fireSoon(); return true;\n      }, function () { return false; });\n    }",
+      "line": 1031
+    },
+    "person": {
+      "source": "person: function (id) { return DB.people[id] || { name: '', phone: '' }; }",
+      "line": 1059
+    },
+    "adminTickets": {
+      "source": "adminTickets: function () { return DB.tickets.slice(); }",
+      "line": 1060
+    },
+    "ticketStaffReply": {
+      "source": "ticketStaffReply: function (id, body) {\n      var m = String(body || '').trim(); if (!m || m.length > 500) return Promise.resolve({ error: 'bad_value' });\n      return sb.rpc('ticket_staff_reply', { p_ticket: id, p_body: m }).then(function (r) {\n        if (r.error) { console.error(r.error); return { error: errKey(r.error) }; }\n        extraLoaded['t' + id] = 0; return Promise.all([refresh(['misc']), TLBref.loadTicket(id, true)]).then(function () { return { ok: true }; });\n      }, function () { return { error: 'generic' }; });\n    }",
+      "line": 1061
+    },
+    "ticketSetStatus": {
+      "source": "ticketSetStatus: function (id, status, note, refund) {\n      var rf = refund === '' || refund == null ? null : num(refund);\n      if (['open', 'in_progress', 'resolved', 'rejected'].indexOf(status) < 0 || (rf !== null && (isNaN(rf) || rf < 0))) return Promise.resolve({ error: 'bad_value' });\n      if (status === 'rejected' && String(note || '').trim().length < 3) return Promise.resolve({ error: 'note_required' });\n      return sb.rpc('ticket_set_status', { p_ticket: id, p_status: status, p_note: String(note || '').slice(0, 300), p_refund: rf }).then(function (r) {\n        if (r.error) { console.error(r.error); return { error: errKey(r.error) }; }\n        return refresh(['misc']).then(function () { return { ok: true }; });\n      }, function () { return { error: 'generic' }; });\n    }",
+      "line": 1068
+    },
+    "setText": {
+      "source": "setText: function (key, value) { return rpc('set_text_setting', { p_key: key, p_value: String(value || '').slice(0, 60) }, true).then(function (r) { return r && r.error ? r : refresh(['misc']).then(function () { return { ok: true }; }); }); }",
+      "line": 1077
+    },
+    "storeRequests": {
+      "source": "storeRequests: function () { return DB.sreqs.slice(); }",
+      "line": 1080
+    },
+    "decideStoreRequest": {
+      "source": "decideStoreRequest: function (id, approve, note) {\n      if (!approve && String(note || '').trim().length < 3) return Promise.resolve({ error: 'note_required' });\n      return sb.rpc('decide_store_request', { p_id: id, p_approve: !!approve, p_note: String(note || '').slice(0, 300) }).then(function (r) {\n        if (r.error) { console.error(r.error); return { error: errKey(r.error) }; }\n        sigs = {}; return refresh().then(function () { return { ok: true, store: r.data }; });\n      }, function () { return { error: 'generic' }; });\n    }",
+      "line": 1091
+    },
+    "customers": {
+      "source": "customers: function (q, offset) {\n      return sb.rpc('admin_customers', { p_q: String(q || '').trim().slice(0, 60) || null, p_limit: 30, p_offset: Math.max(0, Math.floor(+offset || 0)) }).then(function (r) { return r.error ? { error: errKey(r.error), rows: [] } : { rows: r.data || [] }; }, function () { return { error: 'generic', rows: [] }; });\n    }",
+      "line": 1099
+    },
+    "customerOrders": {
+      "source": "customerOrders: function (id, from) {\n      from = Math.max(0, Math.floor(+from || 0));\n      return sb.from('orders').select('id,store_id,status,total,created_at', { count: 'exact' }).eq('customer_id', id).order('created_at', { ascending: false }).order('id', { ascending: false }).range(from, from + 49).then(function (r) {\n        var a = (r.data || []).map(function (o) { return { id: o.id, store: storeName(o.store_id), status: o.status, total: +o.total, createdAt: Date.parse(o.created_at) }; });\n        a.total = typeof r.count === 'number' ? r.count : null; a.failed = !!r.error; return a;\n      }, function () { var a = []; a.total = null; a.failed = true; return a; });\n    }",
+      "line": 1103
+    },
+    "setBan": {
+      "source": "setBan: function (id, banned, reason) {\n      if (banned && String(reason || '').trim().length < 3) return Promise.resolve({ error: 'note_required' });\n      return rpc('set_customer_ban', { p_id: id, p_banned: !!banned, p_reason: String(reason || '').slice(0, 200) }, true);\n    }",
+      "line": 1110
+    },
+    "happyHours": {
+      "source": "happyHours: function () { return DB.hh; }",
+      "line": 1126
+    },
+    "setStoreEarn": {
+      "source": "setStoreEarn: function (storeId, v) { var e = String(v == null ? '' : v).trim() === '' ? null : +v; if (e !== null && (!isFinite(e) || e < 0 || e > 1000 || e !== Math.floor(e))) return Promise.resolve({ error: 'bad_value' }); return rpc('set_store_earn', { p_store: storeId, p_earn: e }, true); }",
+      "line": 1133
+    },
+    "setStoreFreeDelivery": {
+      "source": "setStoreFreeDelivery: function (storeId, min) { return rpc('set_store_free_delivery', { p_store: storeId, p_min: +min || 0 }, true); }",
+      "line": 1134
+    },
+    "setStoreLoyalty": {
+      "source": "setStoreLoyalty: function (storeId, minOrder, cashback) { return rpc('set_store_loyalty', { p_store: storeId, p_min_order: minOrder === '' || minOrder == null ? null : +minOrder, p_cashback: cashback === '' || cashback == null ? null : +cashback }, true); }",
+      "line": 1141
+    },
+    "hhActive": {
+      "source": "hhActive: function (at) { return hhOnNow(at); }",
+      "line": 1146
+    },
+    "saveHH": {
+      "source": "saveHH: function (f) {\n      var days = (f.days || []).map(Number).filter(function (d) { return d >= 1 && d <= 7; }), pct = Math.floor(+f.pct), title = String(f.title || '').trim();\n      if (!title || title.length > 60 || !days.length || !(pct >= 1 && pct <= 90) || !/^\\d{2}:\\d{2}$/.test(f.start || '') || !/^\\d{2}:\\d{2}$/.test(f.end || '') || f.start === f.end) return badStore();\n      var row = { title: title, store_id: f.store || null, days: days, start_time: f.start, end_time: f.end, discount_pct: pct, active: f.active !== false };\n      var q = f.id ? sb.from('happy_hours').update(row).eq('id', f.id) : sb.from('happy_hours').insert(row);\n      return q.then(function (r) { return r.error ? done(r) : refresh(['misc']).then(function () { toast(t('saved')); return { ok: true }; }); });\n    }",
+      "line": 1159
+    },
+    "setHHActive": {
+      "source": "setHHActive: function (id, on) { return sb.from('happy_hours').update({ active: !!on }).eq('id', id).then(function (r) { return r.error ? done(r) : refresh(['misc']).then(function () { return { ok: true }; }); }); }",
+      "line": 1166
+    },
+    "deleteHH": {
+      "source": "deleteHH: function (id) { return sb.from('happy_hours').delete().eq('id', id).then(function (r) { return r.error ? done(r) : refresh(['misc']).then(function () { return { ok: true }; }); }); }",
+      "line": 1167
+    },
+    "walletOf": {
+      "source": "walletOf: function (userId) {\n      return Promise.all([sb.rpc('wallet_balance', { p_user: userId }), sb.from('wallet_entries').select('*').eq('user_id', userId).order('created_at', { ascending: false }).limit(30)]).then(function (r) {\n        return { balance: r[0].error ? 0 : Math.round(+r[0].data * 100) / 100, entries: r[1].error ? [] : (r[1].data || []).map(function (e) { return { id: e.id, amount: +e.amount, kind: e.kind, orderId: e.order_id, ticketId: e.ticket_id, note: e.note || '', at: Date.parse(e.created_at) }; }) };\n      }, function () { return { balance: 0, entries: [] }; });\n    }",
+      "line": 1180
+    },
+    "walletAdjust": {
+      "source": "walletAdjust: function (userId, amount, note) {\n      var a = num(amount), n = String(note || '').trim();\n      if (isNaN(a) || a === 0 || Math.abs(a) > 100000 || n.length < 3 || n.length > 200) return Promise.resolve({ error: 'bad_value' });\n      return rpc('wallet_adjust', { p_user: userId, p_amount: Math.round(a * 100) / 100, p_note: n }, true);\n    }",
+      "line": 1185
+    },
+    "audit": {
+      "source": "audit: function (limit) {\n      return sb.from('audit_log').select('*').order('at', { ascending: false }).limit(Math.min(200, limit || 100)).then(function (r) { return r.error ? [] : (r.data || []); });\n    }",
+      "line": 1190
+    },
+    "clientErrors": {
+      "source": "clientErrors: function (limit) {\n      return sb.from('client_errors').select('*').order('at', { ascending: false }).limit(Math.min(200, limit || 100)).then(function (r) { return r.error ? [] : (r.data || []); });\n    }",
+      "line": 1193
+    },
+    "mapView": {
+      "source": "mapView: function (elId, points, center) {\n      loadLeaflet(function () {\n        var box = $(elId); if (!box) return;\n        var map = L.map(elId).setView(center || [38.5598, 68.787], 12);\n        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap', referrerPolicy: 'strict-origin-when-cross-origin' }).addTo(map);\n        var group = [];\n        (points || []).forEach(function (p) {\n          if (!isFinite(+p.lat) || !isFinite(+p.lng)) return;\n          var m = L.circleMarker([+p.lat, +p.lng], { radius: p.kind === 'store' ? 8 : 10, color: '#fff', weight: 2, fillColor: p.kind === 'store' ? (p.open ? '#1fa05a' : '#8b8f98') : (p.busy ? '#f59e0b' : '#f1511b'), fillOpacity: 1 }).addTo(map);\n          var tip = document.createElement('div'); tip.textContent = String(p.label || ''); m.bindTooltip(tip, { permanent: true, direction: 'top', offset: [0, -6] });\n          group.push([+p.lat, +p.lng]);\n        });\n        if (group.length) map.fitBounds(group, { padding: [30, 30], maxZoom: 15 });\n        setTimeout(function () { map.invalidateSize(); }, 150);\n      });\n    }",
+      "line": 1196
+    },
+    "proofUrl": {
+      "source": "proofUrl: function (path) { if (!path || !sb || !sb.storage) return Promise.resolve(null); return sb.storage.from('proofs').createSignedUrl(path, 3600).then(function (r) { return r && r.data ? r.data.signedUrl : null; }, function () { return null; }); }",
+      "line": 1267
+    },
+    "approveItem": {
+      "source": "approveItem: function (id) { return sb.from('menu_items').update({ approved: true }).eq('id', id).then(done); }",
+      "line": 1274
+    },
+    "addStore": {
+      "source": "addStore: function (f) { var c = cleanStore(f); if (!validStore(c)) return badStore(); return sb.from('stores').insert(c).then(done); }",
+      "line": 1276
+    },
+    "updateStore": {
+      "source": "updateStore: function (id, f) { var c = cleanStore(f); if (!validStore(c)) return badStore(); return sb.from('stores').update(c).eq('id', id).then(done); }",
+      "line": 1277
+    },
+    "refreshRating": {
+      "source": "refreshRating: function (storeId) {\n      return sb.functions.invoke('google-rating', { body: { store_id: String(storeId) } }).then(function (r) {\n        if (r.error || !r.data || r.data.ok !== true) { toast(t('err_rating_fail'), true); return { error: 'rating_fail', toasted: true }; }\n        toast(t('saved')); return refresh().then(function () { return { ok: true }; });\n      }).catch(function () { toast(t('err_rating_fail'), true); return { error: 'rating_fail', toasted: true }; });\n    }",
+      "line": 1278
+    },
+    "isSuper": {
+      "source": "isSuper: function () { return !!ME && ME.role === 'admin'; }",
+      "line": 1287
+    },
+    "can": {
+      "source": "can: function (p) { return MYPERMS.indexOf(p) >= 0; }",
+      "line": 1288
+    },
+    "staffList": {
+      "source": "staffList: function () { return sb.rpc('staff_list').then(function (r) { return r.error ? { error: errKey(r.error), rows: [] } : { rows: r.data || [] }; }); }",
+      "line": 1289
+    },
+    "staffSet": {
+      "source": "staffSet: function (email, perms, active) {\n      email = String(email || '').trim().toLowerCase();\n      var ok = /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(email) && email.length <= 120 && Array.isArray(perms) && perms.every(function (x) { return ALL_PERMS.indexOf(x) >= 0; }) && (perms.length > 0 || active === false);\n      if (!ok) return Promise.resolve({ error: 'bad_value' });\n      return rpc('staff_set', { p_email: email, p_perms: perms, p_active: active !== false }, true);\n    }",
+      "line": 1290
+    },
+    "brandCreate": {
+      "source": "brandCreate: function (name, ownerEmail) { name = String(name || '').trim(); if (name.length < 2 || name.length > 60) return Promise.resolve({ error: 'bad_value' }); return rpc('brand_create', { p_name: name, p_owner_email: ownerEmail || null }, true); }",
+      "line": 1298
+    },
+    "brandAttach": {
+      "source": "brandAttach: function (storeId, brandId, branch) { if (!/^[0-9a-f-]{36}$/i.test(String(brandId))) return Promise.resolve({ error: 'bad_value' }); return rpc('brand_attach', { p_store: storeId, p_brand: brandId, p_branch: String(branch || '').trim().slice(0, 60) }, true); }",
+      "line": 1299
+    },
+    "brandDetach": {
+      "source": "brandDetach: function (storeId) { return rpc('brand_detach', { p_store: storeId }, true); }",
+      "line": 1300
+    },
+    "brands": {
+      "source": "brands: function () { return (DB.brands || []); }",
+      "line": 1303
+    },
+    "staffRemove": {
+      "source": "staffRemove: function (id) { if (!/^[0-9a-f-]{36}$/i.test(String(id))) return Promise.resolve({ error: 'bad_value' }); return rpc('staff_remove', { p_user: id }, true); }",
+      "line": 1304
+    },
+    "assignOwner": {
+      "source": "assignOwner: function (id, email) { return rpc('assign_owner', { p_store: id, p_email: email }, true); }",
+      "line": 1305
+    },
+    "setDriverStatus": {
+      "source": "setDriverStatus: function (id, st) { return sb.from('profiles').update({ driver_status: st }).eq('id', id).then(done); }",
+      "line": 1306
+    },
+    "setDriverBlocked": {
+      "source": "setDriverBlocked: function (id, v) { return sb.from('profiles').update({ accept_blocked: !!v }).eq('id', id).then(done); }",
+      "line": 1308
+    },
+    "setDriverLimit": {
+      "source": "setDriverLimit: function (id, v) { v = +v; if (!isFinite(v) || v <= 0 || v > 1000000) return badStore(); return sb.from('profiles').update({ cash_limit: v }).eq('id', id).then(done); }",
+      "line": 1309
+    },
+    "settleCash": {
+      "source": "settleCash: function (driverId) {\n      return sb.rpc('settle_driver_cash', { p_driver: driverId }).then(function (r) {\n        if (r.error) { console.error(r.error); return { error: errKey(r.error) }; }\n        toast(t('saved') + ' (' + (+r.data || 0) + ' TJS)'); return refresh().then(function () { return { ok: true }; });\n      });\n    }",
+      "line": 1310
+    },
+    "addBanner": {
+      "source": "addBanner: function (f) { if (!validBanner(f)) return badBanner(); return sb.from('banners').insert(f).then(done); }",
+      "line": 1318
+    },
+    "updateBanner": {
+      "source": "updateBanner: function (id, f) { if (!validBanner(f)) return badBanner(); return sb.from('banners').update(f).eq('id', id).then(done); }",
+      "line": 1319
+    },
+    "deleteBanner": {
+      "source": "deleteBanner: function (id) { return sb.from('banners').delete().eq('id', id).then(done); }",
+      "line": 1320
+    },
+    "addPromo": {
+      "source": "addPromo: function (f) { if (!validPromo(f)) return badPromo(); return sb.from('promo_codes').insert(f).then(done); }",
+      "line": 1322
+    },
+    "updatePromo": {
+      "source": "updatePromo: function (id, f) { if (!validPromo(f)) return badPromo(); return sb.from('promo_codes').update(f).eq('id', id).then(done); }",
+      "line": 1323
+    },
+    "deletePromo": {
+      "source": "deletePromo: function (id) { return sb.from('promo_codes').delete().eq('id', id).then(done); }",
+      "line": 1324
+    }
+  },
+  "unresolved": [],
+  "scope": "Source extraction only. Client checks are not proof of server authorization. Unknown contracts stay blocked."
+}

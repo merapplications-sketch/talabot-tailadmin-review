@@ -1,0 +1,1682 @@
+{
+  "stores": [
+    {
+      "id": "s1",
+      "free_delivery_min": 150,
+      "earn_per_tjs": 20,
+      "name": "Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+      "category": "rest",
+      "description": "Самые вкусные бургеры и шашлык в городе, доставка по всему Душанбе",
+      "logo_url": "",
+      "cover_url": "",
+      "address": "пр. Рудаки 100, Душанбе, Таджикистан",
+      "lat": 38.56,
+      "lng": 68.78,
+      "fee_type": "fixed",
+      "fee_base": 10,
+      "fee_per_km": 2,
+      "fee_free_km": 3,
+      "discount_pct": 15,
+      "is_open": true,
+      "is_active": true,
+      "is_featured": true,
+      "created_at": "2026-11-10T10:20:00.000Z",
+      "phone": "+992900000001",
+      "free_first_delivery": true,
+      "rating": 4.6,
+      "rating_count": 1250,
+      "app_rating": 4.7,
+      "app_rating_count": 40,
+      "brand_id": "b1",
+      "branch_name": "Центр",
+      "owner_id": "00000000-0000-0000-0000-000000000001",
+      "commission_pct": 10,
+      "max_discount_pct": 30
+    },
+    {
+      "id": "s2",
+      "name": "Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино",
+      "category": "rest",
+      "description": "Филиал",
+      "address": "ул. Сино 5",
+      "lat": 38.58,
+      "lng": 68.75,
+      "fee_type": "fixed",
+      "fee_base": 12,
+      "discount_pct": 0,
+      "is_open": false,
+      "is_active": true,
+      "created_at": "2026-11-10T10:30:00.000Z",
+      "phone": "+992900000002",
+      "rating": 0,
+      "rating_count": 0,
+      "brand_id": "b1",
+      "branch_name": "Сино",
+      "owner_id": "00000000-0000-0000-0000-000000000001",
+      "commission_pct": 10
+    },
+    {
+      "id": "s3",
+      "name": "Аптека",
+      "category": "pharmacy",
+      "description": "",
+      "address": "",
+      "lat": 38.5,
+      "lng": 68.7,
+      "fee_type": "free",
+      "fee_base": 0,
+      "discount_pct": 0,
+      "is_open": true,
+      "is_active": true,
+      "created_at": "2026-11-10T11:55:00.000Z",
+      "phone": "+992900000003",
+      "rating": 3.9,
+      "rating_count": 3
+    },
+    {
+      "id": "s4",
+      "name": "Gul",
+      "category": "flowers",
+      "description": "x",
+      "address": "a",
+      "lat": 38.5,
+      "lng": 68.7,
+      "fee_type": "fixed",
+      "fee_base": 8,
+      "discount_pct": 5,
+      "is_open": true,
+      "is_active": false,
+      "created_at": "2025-11-28T06:40:00.000Z",
+      "phone": "+992900000004",
+      "rating": 5,
+      "rating_count": 900000
+    }
+  ],
+  "menu_items": [
+    {
+      "id": "i1",
+      "store_id": "s1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 1",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    },
+    {
+      "id": "i2",
+      "store_id": "s1",
+      "name": "Блюдо 2",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:58:00.000Z"
+    },
+    {
+      "id": "i3",
+      "store_id": "s1",
+      "name": "Блюдо 3",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:57:00.000Z"
+    },
+    {
+      "id": "i4",
+      "store_id": "s1",
+      "name": "Блюдо 4",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:56:00.000Z"
+    },
+    {
+      "id": "i5",
+      "store_id": "s1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 5",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:55:00.000Z"
+    },
+    {
+      "id": "i6",
+      "store_id": "s1",
+      "name": "Блюдо 6",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:54:00.000Z"
+    },
+    {
+      "id": "i7",
+      "store_id": "s1",
+      "name": "Блюдо 7",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:53:00.000Z"
+    },
+    {
+      "id": "i8",
+      "store_id": "s1",
+      "name": "Блюдо 8",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:52:00.000Z"
+    },
+    {
+      "id": "i9",
+      "store_id": "s1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 9",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:51:00.000Z"
+    },
+    {
+      "id": "i10",
+      "store_id": "s1",
+      "name": "Блюдо 10",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:50:00.000Z"
+    },
+    {
+      "id": "i11",
+      "store_id": "s1",
+      "name": "Блюдо 11",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:49:00.000Z"
+    },
+    {
+      "id": "i12",
+      "store_id": "s1",
+      "name": "Блюдо 12",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:48:00.000Z"
+    },
+    {
+      "id": "i13",
+      "store_id": "s1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 13",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:47:00.000Z"
+    },
+    {
+      "id": "i14",
+      "store_id": "s1",
+      "name": "Блюдо 14",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:46:00.000Z"
+    },
+    {
+      "id": "i15",
+      "store_id": "s1",
+      "name": "Блюдо 15",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:45:00.000Z"
+    },
+    {
+      "id": "i16",
+      "store_id": "s1",
+      "name": "Блюдо 16",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:44:00.000Z"
+    },
+    {
+      "id": "i17",
+      "store_id": "s2",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 17",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:43:00.000Z"
+    },
+    {
+      "id": "i18",
+      "store_id": "s2",
+      "name": "Блюдо 18",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:42:00.000Z"
+    },
+    {
+      "id": "i19",
+      "store_id": "s2",
+      "name": "Блюдо 19",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:41:00.000Z"
+    },
+    {
+      "id": "i20",
+      "store_id": "s2",
+      "name": "Блюдо 20",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:40:00.000Z"
+    },
+    {
+      "id": "i21",
+      "store_id": "s2",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 21",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:39:00.000Z"
+    },
+    {
+      "id": "i22",
+      "store_id": "s2",
+      "name": "Блюдо 22",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:38:00.000Z"
+    },
+    {
+      "id": "i23",
+      "store_id": "s2",
+      "name": "Блюдо 23",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:37:00.000Z"
+    },
+    {
+      "id": "i24",
+      "store_id": "s2",
+      "name": "Блюдо 24",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:36:00.000Z"
+    },
+    {
+      "id": "i25",
+      "store_id": "s2",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 25",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:35:00.000Z"
+    },
+    {
+      "id": "i26",
+      "store_id": "s2",
+      "name": "Блюдо 26",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:34:00.000Z"
+    },
+    {
+      "id": "i27",
+      "store_id": "s2",
+      "name": "Блюдо 27",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:33:00.000Z"
+    },
+    {
+      "id": "i28",
+      "store_id": "s2",
+      "name": "Блюдо 28",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:32:00.000Z"
+    },
+    {
+      "id": "i29",
+      "store_id": "s2",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 29",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:31:00.000Z"
+    },
+    {
+      "id": "i30",
+      "store_id": "s2",
+      "name": "Блюдо 30",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:30:00.000Z"
+    },
+    {
+      "id": "i31",
+      "store_id": "s2",
+      "name": "Блюдо 31",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:29:00.000Z"
+    },
+    {
+      "id": "i32",
+      "store_id": "s2",
+      "name": "Блюдо 32",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:28:00.000Z"
+    },
+    {
+      "id": "i33",
+      "store_id": "s3",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 33",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:27:00.000Z"
+    },
+    {
+      "id": "i34",
+      "store_id": "s3",
+      "name": "Блюдо 34",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:26:00.000Z"
+    },
+    {
+      "id": "i35",
+      "store_id": "s3",
+      "name": "Блюдо 35",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:25:00.000Z"
+    },
+    {
+      "id": "i36",
+      "store_id": "s3",
+      "name": "Блюдо 36",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Бургеры",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:24:00.000Z"
+    },
+    {
+      "id": "i37",
+      "store_id": "s3",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 37",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:23:00.000Z"
+    },
+    {
+      "id": "i38",
+      "store_id": "s3",
+      "name": "Блюдо 38",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:22:00.000Z"
+    },
+    {
+      "id": "i39",
+      "store_id": "s3",
+      "name": "Блюдо 39",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:21:00.000Z"
+    },
+    {
+      "id": "i40",
+      "store_id": "s3",
+      "name": "Блюдо 40",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Напитки",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:20:00.000Z"
+    },
+    {
+      "id": "i41",
+      "store_id": "s3",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 41",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:19:00.000Z"
+    },
+    {
+      "id": "i42",
+      "store_id": "s3",
+      "name": "Блюдо 42",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:18:00.000Z"
+    },
+    {
+      "id": "i43",
+      "store_id": "s3",
+      "name": "Блюдо 43",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:17:00.000Z"
+    },
+    {
+      "id": "i44",
+      "store_id": "s3",
+      "name": "Блюдо 44",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Десерты и сладости для всей семьи",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:16:00.000Z"
+    },
+    {
+      "id": "i45",
+      "store_id": "s3",
+      "name": "Очень длинное название блюда с несколькими ингредиентами и соусом 45",
+      "price": 15,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:15:00.000Z"
+    },
+    {
+      "id": "i46",
+      "store_id": "s3",
+      "name": "Блюдо 46",
+      "price": 22.5,
+      "image_url": "",
+      "popular": true,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:14:00.000Z"
+    },
+    {
+      "id": "i47",
+      "store_id": "s3",
+      "name": "Блюдо 47",
+      "price": 30,
+      "image_url": "",
+      "popular": false,
+      "available": true,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 10,
+      "created_at": "2026-11-10T11:13:00.000Z"
+    },
+    {
+      "id": "i48",
+      "store_id": "s3",
+      "name": "Блюдо 48",
+      "price": 37.5,
+      "image_url": "",
+      "popular": false,
+      "available": false,
+      "approved": true,
+      "section": "Салаты",
+      "discount_pct": 0,
+      "created_at": "2026-11-10T11:12:00.000Z"
+    }
+  ],
+  "item_option_groups": [
+    {
+      "id": "g1",
+      "item_id": "i1",
+      "name": "Размер порции (обязательно выбрать)",
+      "required": true,
+      "max_sel": 1,
+      "sort": 1,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    },
+    {
+      "id": "g2",
+      "item_id": "i1",
+      "name": "Добавки",
+      "required": false,
+      "max_sel": 3,
+      "sort": 2,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    }
+  ],
+  "item_options": [
+    {
+      "id": "o10",
+      "group_id": "g1",
+      "name": "Маленький",
+      "price_delta": 0,
+      "available": true,
+      "sort": 0
+    },
+    {
+      "id": "o11",
+      "group_id": "g1",
+      "name": "Средний",
+      "price_delta": 5,
+      "available": true,
+      "sort": 1
+    },
+    {
+      "id": "o12",
+      "group_id": "g1",
+      "name": "Большой",
+      "price_delta": 10,
+      "available": true,
+      "sort": 2
+    },
+    {
+      "id": "o20",
+      "group_id": "g2",
+      "name": "Сыр",
+      "price_delta": 3,
+      "available": true,
+      "sort": 0
+    },
+    {
+      "id": "o21",
+      "group_id": "g2",
+      "name": "Бекон",
+      "price_delta": 3,
+      "available": true,
+      "sort": 1
+    },
+    {
+      "id": "o22",
+      "group_id": "g2",
+      "name": "Халапеньо",
+      "price_delta": 3,
+      "available": true,
+      "sort": 2
+    },
+    {
+      "id": "o23",
+      "group_id": "g2",
+      "name": "Соус",
+      "price_delta": 3,
+      "available": true,
+      "sort": 3
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord0",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "pending",
+      "subtotal": 120,
+      "discount": 10,
+      "promo_discount": 0,
+      "delivery_fee": 10,
+      "driver_payout": 20,
+      "tip": 5,
+      "total": 125,
+      "commission": 11,
+      "commission_pct": 10,
+      "payment": "wallet",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "call",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": "2026-11-10T15:00:00.000Z",
+      "group_id": null,
+      "fee_waived": 0,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": null,
+      "delivery_photo": null,
+      "created_at": "2026-11-10T11:30:00.000Z",
+      "done_at": null,
+      "wallet_used": 125
+    },
+    {
+      "id": "ord1",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "preparing",
+      "subtotal": 121,
+      "discount": 10,
+      "promo_discount": 0,
+      "delivery_fee": 10,
+      "driver_payout": 20,
+      "tip": 5,
+      "total": 126,
+      "commission": 11.1,
+      "commission_pct": 10,
+      "payment": "cash",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "replace",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "fee_waived": 0,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": "2026-11-10T11:55:00.000Z",
+      "delivery_photo": null,
+      "created_at": "2026-11-10T10:40:00.000Z",
+      "done_at": null,
+      "wallet_used": 0
+    },
+    {
+      "id": "ord2",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "ready",
+      "subtotal": 122,
+      "discount": 10,
+      "promo_discount": 0,
+      "delivery_fee": 10,
+      "driver_payout": 20,
+      "tip": 5,
+      "total": 127,
+      "commission": 11.2,
+      "commission_pct": 10,
+      "payment": "wallet",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "remove",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": null,
+      "fee_waived": 0,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": null,
+      "delivery_photo": null,
+      "created_at": "2026-11-10T09:50:00.000Z",
+      "done_at": null,
+      "wallet_used": 127
+    },
+    {
+      "id": "ord3",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "pickedup",
+      "subtotal": 123,
+      "discount": 10,
+      "promo_discount": 0,
+      "delivery_fee": 10,
+      "driver_payout": 20,
+      "tip": 5,
+      "total": 128,
+      "commission": 11.3,
+      "commission_pct": 10,
+      "payment": "cash",
+      "leave_at_door": true,
+      "is_gift": true,
+      "substitution": "call",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": null,
+      "fee_waived": 0,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": null,
+      "delivery_photo": null,
+      "created_at": "2026-11-10T09:00:00.000Z",
+      "done_at": null,
+      "wallet_used": 0
+    },
+    {
+      "id": "ord4",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "delivered",
+      "subtotal": 440,
+      "discount": 0,
+      "promo_discount": 25,
+      "delivery_fee": 0,
+      "driver_payout": 20,
+      "tip": 0,
+      "total": 415,
+      "commission": 44,
+      "commission_pct": 10,
+      "payment": "wallet",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "replace",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": null,
+      "fee_waived": 22,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": null,
+      "delivery_photo": "00000000-0000-0000-0000-000000000001/ord4/abcdefgh12.jpg",
+      "created_at": "2026-11-10T08:10:00.000Z",
+      "done_at": "2026-11-10T11:46:00.000Z",
+      "wallet_used": 415,
+      "promo_code": "SALE25",
+      "delivery_base": 10,
+      "delivery_extra": 12,
+      "delivery_km": 5.2
+    },
+    {
+      "id": "ord5",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "cancelled",
+      "subtotal": 125,
+      "discount": 10,
+      "promo_discount": 0,
+      "delivery_fee": 10,
+      "driver_payout": 20,
+      "tip": 5,
+      "total": 129,
+      "commission": 11.5,
+      "commission_pct": 10,
+      "payment": "apple",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "remove",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": null,
+      "fee_waived": 0,
+      "cancel_reason": null,
+      "cancel_note": null,
+      "cancelled_by": null,
+      "arrived_store_at": null,
+      "delivery_photo": null,
+      "created_at": "2026-11-10T07:20:00.000Z",
+      "done_at": "2026-11-10T11:45:00.000Z",
+      "wallet_used": 20,
+      "wallet_returned_at": "2026-11-10T08:40:00.000Z",
+      "points_used": 1000,
+      "points_value": 1,
+      "points_returned_at": "2026-11-10T08:40:00.000Z"
+    },
+    {
+      "id": "ord6",
+      "store_id": "s1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "status": "rejected",
+      "subtotal": 440,
+      "discount": 0,
+      "promo_discount": 0,
+      "delivery_fee": 0,
+      "driver_payout": 20,
+      "tip": 10,
+      "total": 450,
+      "commission": 22,
+      "commission_pct": 5,
+      "payment": "apple",
+      "leave_at_door": false,
+      "is_gift": false,
+      "substitution": "call",
+      "address": "ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе",
+      "lat": 38.56,
+      "lng": 68.78,
+      "customer_name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "scheduled_for": null,
+      "group_id": null,
+      "fee_waived": 0,
+      "cancel_reason": "out_of_stock",
+      "cancel_note": "закончился плов, приносим извинения",
+      "cancelled_by": "store",
+      "arrived_store_at": null,
+      "delivery_photo": null,
+      "created_at": "2026-11-10T06:30:00.000Z",
+      "done_at": "2026-11-10T11:44:00.000Z",
+      "wallet_used": 0
+    }
+  ],
+  "order_items": [
+    {
+      "id": "oi0",
+      "order_id": "ord0",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 60,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi1",
+      "order_id": "ord1",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 60.5,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi2",
+      "order_id": "ord2",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 61,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi3",
+      "order_id": "ord3",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 61.5,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi4",
+      "order_id": "ord4",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 220,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi5",
+      "order_id": "ord5",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 62.5,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    },
+    {
+      "id": "oi6",
+      "order_id": "ord6",
+      "item_id": "i1",
+      "name": "Очень длинное название блюда с несколькими ингредиентами",
+      "price": 220,
+      "qty": 2,
+      "note": "без лука, пожалуйста, очень острый соус отдельно",
+      "options": [
+        {
+          "id": "o11",
+          "g": "Размер",
+          "n": "Средний",
+          "p": 5
+        }
+      ]
+    }
+  ],
+  "banners": [
+    {
+      "id": "bn1",
+      "title": "Скидка 20% на всё",
+      "image_url": "",
+      "placement": "top",
+      "link_type": "store",
+      "link_value": "s1",
+      "active": true,
+      "sort": 1,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    },
+    {
+      "id": "bn2",
+      "title": "Бесплатная доставка",
+      "image_url": "",
+      "placement": "bottom",
+      "active": true,
+      "sort": 2,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "a1",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "label": "home",
+      "street": "пр. Рудаки",
+      "house": "100",
+      "entrance": "2",
+      "floor": "5",
+      "apartment": "45",
+      "details": "",
+      "note": "домофон не работает",
+      "lat": 38.56,
+      "lng": 68.78,
+      "is_default": true
+    }
+  ],
+  "brands": [
+    {
+      "id": "b1",
+      "name": "Дар-ул-Хилоф",
+      "owner_id": "00000000-0000-0000-0000-000000000001"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "email": "admin@test.com",
+      "role": "admin",
+      "name": "Муаммад ибни Абдуллоҳ аз Душанбе",
+      "phone": "+992900000000",
+      "driver_status": "approved",
+      "cash_limit": 1000,
+      "created_at": "2026-11-09T19:20:00.000Z"
+    },
+    {
+      "id": "u2",
+      "email": "driver2@test.com",
+      "role": "driver",
+      "name": "Водитель",
+      "phone": "+992900000009",
+      "driver_status": "pending",
+      "created_at": "2026-11-10T11:55:00.000Z"
+    },
+    {
+      "id": "u3",
+      "email": "c@test.com",
+      "role": "customer",
+      "name": "Клиент",
+      "phone": "+992900000008",
+      "created_at": "2026-11-10T11:55:00.000Z"
+    }
+  ],
+  "promo_codes": [
+    {
+      "id": "p1",
+      "code": "WELCOME10",
+      "kind": "percent",
+      "value": 10,
+      "min_order": 50,
+      "max_uses": 100,
+      "active": true,
+      "created_at": "2026-11-10T11:59:00.000Z"
+    }
+  ],
+  "favorites": [
+    {
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1"
+    }
+  ],
+  "wallet_entries": [
+    {
+      "id": "w1",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "amount": 50,
+      "kind": "refund",
+      "note": "Пополнение",
+      "created_at": "2026-11-10T11:55:00.000Z"
+    }
+  ],
+  "support_tickets": [
+    {
+      "id": "t1",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "subject": "Не приехал заказ",
+      "reason": "late",
+      "order_id": "ord1",
+      "status": "open",
+      "created_at": "2026-11-10T11:40:00.000Z",
+      "updated_at": "2026-11-10T11:58:00.000Z"
+    }
+  ],
+  "ticket_messages": [
+    {
+      "id": "tm1",
+      "ticket_id": "t1",
+      "sender_id": "00000000-0000-0000-0000-000000000001",
+      "body": "Здравствуйте, где мой заказ?",
+      "created_at": "2026-11-10T11:40:00.000Z"
+    }
+  ],
+  "order_chat": [
+    {
+      "id": 901,
+      "order_id": "ord1",
+      "sender_id": "00000000-0000-0000-0000-000000000001",
+      "body": "Здравствуйте! Подъезд с обратной стороны дома, позвоните, когда будете рядом. ОченьДлинноеСловоБезПробеловКотороеДолжноПереноситься",
+      "created_at": "2026-11-10T11:40:00.000Z"
+    },
+    {
+      "id": 902,
+      "order_id": "ord1",
+      "sender_id": "u2",
+      "body": "LOC:38.560000,68.780000",
+      "created_at": "2026-11-10T11:41:00.000Z"
+    }
+  ],
+  "order_offers": [],
+  "ratings": [
+    {
+      "id": 1,
+      "order_id": "ord0",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 5,
+      "driver_stars": 5,
+      "comment": "",
+      "created_at": "2026-11-10T10:20:00.000Z",
+      "handled_at": null,
+      "handled_note": null
+    },
+    {
+      "id": 2,
+      "order_id": "ord1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 5,
+      "driver_stars": 4,
+      "comment": "[Холодная еда] долго ждали",
+      "created_at": "2026-11-10T10:19:00.000Z",
+      "handled_at": null,
+      "handled_note": null
+    },
+    {
+      "id": 3,
+      "order_id": "ord2",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 4,
+      "driver_stars": 4,
+      "comment": "",
+      "created_at": "2026-11-10T10:18:00.000Z",
+      "handled_at": null,
+      "handled_note": null
+    },
+    {
+      "id": 4,
+      "order_id": "ord3",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 4,
+      "driver_stars": 5,
+      "comment": "[Холодная еда] долго ждали",
+      "created_at": "2026-11-10T10:17:00.000Z",
+      "handled_at": null,
+      "handled_note": null
+    },
+    {
+      "id": 5,
+      "order_id": "ord4",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 3,
+      "driver_stars": 4,
+      "comment": "",
+      "created_at": "2026-11-10T10:16:00.000Z",
+      "handled_at": null,
+      "handled_note": null
+    },
+    {
+      "id": 6,
+      "order_id": "ord5",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 1,
+      "driver_stars": 2,
+      "comment": "[Холодная еда] долго ждали",
+      "created_at": "2026-11-10T10:15:00.000Z",
+      "handled_at": "2026-11-10T11:05:00.000Z",
+      "handled_note": "Связались с клиентом"
+    },
+    {
+      "id": 7,
+      "order_id": "ord6",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 2,
+      "driver_stars": 3,
+      "comment": "",
+      "created_at": "2026-11-10T10:14:00.000Z",
+      "handled_at": "2026-11-10T11:04:00.000Z",
+      "handled_note": "Связались с клиентом"
+    },
+    {
+      "id": 8,
+      "order_id": "ord0",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 5,
+      "driver_stars": 5,
+      "comment": "[Холодная еда] долго ждали",
+      "created_at": "2026-11-10T10:13:00.000Z",
+      "handled_at": "2026-11-10T11:03:00.000Z",
+      "handled_note": "Связались с клиентом"
+    },
+    {
+      "id": 9,
+      "order_id": "ord1",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 4,
+      "driver_stars": 4,
+      "comment": "",
+      "created_at": "2026-11-10T10:12:00.000Z",
+      "handled_at": "2026-11-10T11:02:00.000Z",
+      "handled_note": "Связались с клиентом"
+    },
+    {
+      "id": 10,
+      "order_id": "ord2",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 3,
+      "driver_stars": 3,
+      "comment": "[Холодная еда] долго ждали",
+      "created_at": "2026-11-10T10:11:00.000Z",
+      "handled_at": "2026-11-10T11:01:00.000Z",
+      "handled_note": "Связались с клиентом"
+    },
+    {
+      "id": 11,
+      "order_id": "ord3",
+      "customer_id": "00000000-0000-0000-0000-000000000001",
+      "store_id": "s1",
+      "driver_id": "00000000-0000-0000-0000-000000000001",
+      "store_stars": 2,
+      "driver_stars": 1,
+      "comment": "",
+      "created_at": "2026-11-10T10:10:00.000Z",
+      "handled_at": "2026-11-10T11:00:00.000Z",
+      "handled_note": "Связались с клиентом"
+    }
+  ],
+  "store_requests": [
+    {
+      "id": "r1",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "name": "Новая кофейня",
+      "category": "rest",
+      "phone": "+992900000005",
+      "address": "ул. 1",
+      "status": "pending",
+      "created_at": "2026-11-10T11:57:00.000Z"
+    }
+  ],
+  "audit_log": [],
+  "app_texts": [],
+  "app_settings": [
+    {
+      "key": "delivery_free_km",
+      "value": 3
+    },
+    {
+      "key": "delivery_step_km",
+      "value": 0.5
+    },
+    {
+      "key": "delivery_step_price",
+      "value": 2
+    },
+    {
+      "key": "delivery_max_km",
+      "value": 15
+    },
+    {
+      "key": "delivery_road_factor",
+      "value": 1.3
+    },
+    {
+      "key": "loyalty_earn_per_tjs",
+      "value": 10
+    },
+    {
+      "key": "loyalty_points_per_tjs",
+      "value": 1000
+    },
+    {
+      "key": "loyalty_min_redeem",
+      "value": 1000
+    },
+    {
+      "key": "loyalty_expiry_days",
+      "value": 90
+    },
+    {
+      "key": "cashback_pct",
+      "value": 0
+    },
+    {
+      "key": "loyalty_voucher_points",
+      "value": 1000
+    },
+    {
+      "key": "loyalty_min_order",
+      "value": 30
+    },
+    {
+      "key": "loyalty_rate_reward",
+      "value": 10
+    }
+  ],
+  "order_recipient": [
+    {
+      "order_id": "ord3",
+      "name": "Мадина Рахимова",
+      "phone": "+992901112233"
+    }
+  ],
+  "happy_hours": [
+    {
+      "id": 1,
+      "title": "Счастливые часы обеда для всех",
+      "store_id": null,
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "start_time": "00:00:00",
+      "end_time": "23:59:00",
+      "discount_pct": 25,
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "Ночь",
+      "store_id": "s1",
+      "days": [
+        6,
+        7
+      ],
+      "start_time": "22:00:00",
+      "end_time": "02:00:00",
+      "discount_pct": 30,
+      "active": false
+    }
+  ],
+  "loyalty_ledger": [
+    {
+      "id": 1,
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "points": 1250,
+      "kind": "earn",
+      "order_id": "ord4",
+      "created_at": "2026-11-10T11:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "points": -1000,
+      "kind": "spend",
+      "order_id": "ord1",
+      "created_at": "2026-11-10T11:30:00.000Z"
+    }
+  ],
+  "app_pages": [
+    {
+      "slug": "about",
+      "body_ru": "Талабот — сервис доставки еды и товаров в Душанбе. (демо-текст)",
+      "body_en": "Talabot is a food and goods delivery service in Dushanbe. (demo text)"
+    },
+    {
+      "slug": "privacy",
+      "body_ru": "Мы храним только данные, нужные для доставки заказа. (демо-текст)",
+      "body_en": "We keep only the data needed to deliver an order. (demo text)"
+    }
+  ],
+  "order_events": [
+    {
+      "id": "ord10",
+      "order_id": "ord1",
+      "kind": "pending",
+      "at": "2026-11-10T09:00:00.000Z"
+    },
+    {
+      "id": "ord11",
+      "order_id": "ord1",
+      "kind": "preparing",
+      "at": "2026-11-10T09:01:01.400Z"
+    },
+    {
+      "id": "ord12",
+      "order_id": "ord1",
+      "kind": "driver_assigned",
+      "at": "2026-11-10T09:02:05.900Z"
+    },
+    {
+      "id": "ord13",
+      "order_id": "ord1",
+      "kind": "at_store",
+      "at": "2026-11-10T09:05:00.200Z"
+    },
+    {
+      "id": "ord14",
+      "order_id": "ord1",
+      "kind": "ready",
+      "at": "2026-11-10T09:07:00.700Z"
+    },
+    {
+      "id": "ord40",
+      "order_id": "ord4",
+      "kind": "pending",
+      "at": "2026-11-10T09:00:00.000Z"
+    },
+    {
+      "id": "ord41",
+      "order_id": "ord4",
+      "kind": "preparing",
+      "at": "2026-11-10T09:00:59.600Z"
+    },
+    {
+      "id": "ord42",
+      "order_id": "ord4",
+      "kind": "driver_assigned",
+      "at": "2026-11-10T09:02:01.200Z"
+    },
+    {
+      "id": "ord43",
+      "order_id": "ord4",
+      "kind": "at_store",
+      "at": "2026-11-10T09:04:20.800Z"
+    },
+    {
+      "id": "ord44",
+      "order_id": "ord4",
+      "kind": "pickedup",
+      "at": "2026-11-10T09:06:40.400Z"
+    },
+    {
+      "id": "ord45",
+      "order_id": "ord4",
+      "kind": "at_customer",
+      "at": "2026-11-10T09:20:10.900Z"
+    },
+    {
+      "id": "ord46",
+      "order_id": "ord4",
+      "kind": "delivered",
+      "at": "2026-11-10T09:21:30.100Z"
+    },
+    {
+      "id": "ord47",
+      "order_id": "ord4",
+      "kind": "mystery_kind",
+      "at": "2026-11-10T09:21:40.000Z"
+    }
+  ],
+  "client_errors": [],
+  "drivers": []
+}
