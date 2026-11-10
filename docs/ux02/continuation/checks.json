@@ -1,0 +1,81 @@
+[
+  {
+    "check": "typescript",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit",
+      "-p",
+      "tsconfig.source.json"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "regression-domain",
+    "command": [
+      "node",
+      "tests/ux02-native.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "regression-operations",
+    "command": [
+      "node",
+      "tests/ux02-native-operations.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "regression-validation",
+    "command": [
+      "node",
+      "tests/ux02-native-validation.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "regression-format",
+    "command": [
+      "node",
+      "tests/ux02-final-format.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "regression-analytics",
+    "command": [
+      "node",
+      "tests/talabot-analytics-data.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "continuation-composition",
+    "command": [
+      "node",
+      "tests/ux02-continuation.cjs"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "build",
+    "command": [
+      "npm",
+      "run",
+      "build:native"
+    ],
+    "exit": 0
+  },
+  {
+    "check": "lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      ".",
+      "--format",
+      "json"
+    ],
+    "exit": 0
+  }
+]

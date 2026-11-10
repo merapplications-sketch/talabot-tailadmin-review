@@ -701,15 +701,16 @@ export function AnalyticsPage({
     </Shell>
   );
 }
-export function NotificationsPage({ id }: { id?: string }) {
+export type NotificationRecord = {id: string; order: {id: string; merchant: string; status: OrderStatus; updated: string}};
+export function NotificationsPage({ id, records = notices }: { id?: string; records?: NotificationRecord[] }) {
   const locale = useLocale();
   const c = visualCopy[locale as keyof typeof visualCopy] || visualCopy.en;
   const t = useTranslations("workspace"),
     nav = useTranslations("talabot"),
     { params, qs, set, remember } = useListing(),
     { read, mark } = useReadNotices();
-  const item = notices.find((n) => n.id === id);
-  const filtered = notices.filter(
+  const item = records.find((n) => n.id === id);
+  const filtered = records.filter(
     (n) =>
       `${n.order.id} ${n.order.merchant}`
         .toLowerCase()

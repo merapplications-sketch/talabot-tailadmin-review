@@ -18,12 +18,12 @@ function load(file){
  const localRequire=name=>{
   if(name==='@/icons'||name.startsWith('@/icons/'))return icons;
   if(name==='next/navigation') return {useSearchParams:()=>new URLSearchParams(''),usePathname:()=>'/orders'};
-  if(name==='@/i18n/navigation')return {useRouter:()=>({replace(){},push(){}}),usePathname:()=>'/orders',Link:({children,href,...p})=>React.createElement('a',{href,...p},children)};
+  if(name==='@/i18n/navigation')return {useRouter:()=>({replace(){},push(){}}),usePathname:()=>'/orders',Link:({children,href,...p})=>{delete p.scroll;return React.createElement('a',{href,...p},children)}};
   if(name.startsWith('@/'))return load(path.join(root,'src',name.slice(2)));
   if(name.startsWith('.'))return load(path.resolve(path.dirname(file),name));
   return require(name);
  };
- vm.runInNewContext(code,{module:mod,exports:mod.exports,require:localRequire,console,URLSearchParams,sessionStorage:storage,localStorage:storage,location:{search:''},setTimeout,clearTimeout},{filename:file});
+ vm.runInNewContext(code,{module:mod,exports:mod.exports,require:localRequire,console,URL,URLSearchParams,sessionStorage:storage,localStorage:storage,location:{search:''},setTimeout,clearTimeout},{filename:file});
  return mod.exports;
 }
 const messages=require('../src/messages/en.json');
@@ -53,3 +53,5 @@ fs.mkdirSync('docs/ux02/source-conformance',{recursive:true});
 fs.writeFileSync('docs/ux02/source-conformance/rendered-D.html',html);
 fs.writeFileSync('docs/ux02/source-conformance/rendered-B.html',b);
 console.log(`${checks} server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.`);
+
+module.exports={load,wrap,React};

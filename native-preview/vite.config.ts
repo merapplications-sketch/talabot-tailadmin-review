@@ -1,2 +1,22 @@
-import {defineConfig} from 'vite';import react from '@vitejs/plugin-react';import path from 'node:path';import {svgComponents} from '../config/svg-components';
-export default defineConfig({root:path.resolve('native-preview'),publicDir:false,resolve:{alias:{'@/i18n/navigation':path.resolve('src/components/talabot/native/b-shell/router.tsx'),'@':path.resolve('src')}},plugins:[svgComponents(),react()],build:{outDir:path.resolve('native-dist'),emptyOutDir:true},server:{host:'0.0.0.0',fs:{allow:[path.resolve('.')]}}});
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "node:path";
+import { svgComponents } from "../config/svg-components";
+export default defineConfig({
+  root: path.resolve("native-preview"),
+  publicDir: false,
+  resolve: {
+    alias: {
+      "next/navigation": path.resolve(
+        "src/components/talabot/native/b-shell/router.tsx",
+      ),
+      "@/i18n/navigation": path.resolve(
+        "src/components/talabot/native/b-shell/router.tsx",
+      ),
+      "@": path.resolve("src"),
+    },
+  },
+  plugins: [svgComponents(), react()],
+  build: { outDir: path.resolve("native-dist"), emptyOutDir: true },
+  server: { host: "0.0.0.0", fs: { allow: [path.resolve(".")] } },
+});

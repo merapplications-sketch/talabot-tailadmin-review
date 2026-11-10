@@ -23,8 +23,9 @@ import { cn, getInitials } from "@/utils";
 import { useTranslations } from "next-intl";
 import { Fragment, useRef, useState } from "react";
 import { notifications } from "./data";
+import type { NotificationItem } from "./types";
 
-export default function NotificationDropdown() {
+export default function NotificationDropdown({items = notifications}: {items?: NotificationItem[]}) {
   const t = useTranslations("header.notifications");
   const show = usePreview();
   const router = useRouter();
@@ -102,7 +103,7 @@ export default function NotificationDropdown() {
           viewportClassName="absolute inset-0 size-auto overscroll-contain"
         >
           <div className="flex flex-col pe-2">
-            {notifications.map((item) => (
+            {items.map((item) => (
               <Fragment key={item.id}>
                 <DropdownMenuItem
                   onClick={() => {

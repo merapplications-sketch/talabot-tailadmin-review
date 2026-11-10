@@ -39,6 +39,7 @@ import {
 import { useState } from "react";
 import { tables, text, number, type Row } from "./domain";
 import { Card, Pair } from "./primitives";
+import { readLogs, logActor, logChanges } from "./log-data";
 import NativeForm from "./native-form";
 import {
   merchantFields,
@@ -82,7 +83,8 @@ export default function EntitySections({
     [historyLimit, setHistoryLimit] = useState(
       () => Number(sessionStorage.getItem("ux02-native:history:" + id)) || 50,
     ),
-    [notice, setNotice] = useState("");
+    [notice, setNotice] = useState(""),
+    [logs, setLogs] = useState(readLogs);
   const source = (tables[tableNames[section]] || []).filter((r) =>
     section === "drivers"
       ? r.role === "driver"
@@ -319,20 +321,65 @@ export default function EntitySections({
           <Button
             variant="outline"
             aria-pressed={filter !== "errors"}
-            onClick={() => setFilter("all")}
+            onClick={() => {
+              setFilter("all");
+              sessionStorage.setItem("ux02-native:filter:log", "all");
+            }}
           >
-            {t("aLogA")}
+            {t("aTabAudit")} · {logs.audit.length}
           </Button>
           <Button
             variant="outline"
             aria-pressed={filter === "errors"}
-            onClick={() => setFilter("errors")}
+            onClick={() => {
+              setFilter("errors");
+              sessionStorage.setItem("ux02-native:filter:log", "errors");
+            }}
           >
-            {t("aLogE")}
+            {t("aTabErr")} · {logs.errors.length}
+          </Button>
+          <Button variant="outline" onClick={() => setLogs(readLogs())}>
+            {t("uTxRetry")}
           </Button>
         </div>
-        <p>{t("aNoRes")}</p>
-        {blocked}
+        {filter === "errors" ? (
+          logs.errors.length ? (
+            logs.errors.map((r, i) => (
+              <Card
+                key={text(r, "id") || String(i)}
+                title={text(r, "app") || "?"}
+              >
+                <p>{formatDate(text(r, "at"), locale)}</p>
+                <p>{text(r, "message")}</p>
+                <Pair label={t("aCtx")}>{text(r, "context")}</Pair>
+                <Pair label={t("aWho")}>
+                  {logActor(r.user_id)} · {text(r, "ua").slice(0, 60)}
+                </Pair>
+              </Card>
+            ))
+          ) : (
+            <p>{t("aNoErr")}</p>
+          )
+        ) : logs.audit.length ? (
+          logs.audit.map((r, i) => (
+            <Card
+              key={text(r, "id") || String(i)}
+              title={text(r, "table_name") + " · " + text(r, "action")}
+            >
+              <p>{formatDate(text(r, "at"), locale)}</p>
+              <Pair label={t("aWho")}>
+                {logActor(r.user_id)} · {text(r, "row_id").slice(0, 12)}
+              </Pair>
+              {logChanges(r.details).map((c) => (
+                <Pair key={c.field} label={c.field}>
+                  {c.from} → {c.to}
+                </Pair>
+              ))}
+            </Card>
+          ))
+        ) : (
+          <p>{t("aNoAudit")}</p>
+        )}
       </Card>
     );
   if (id === "new" && section === "restaurants")
