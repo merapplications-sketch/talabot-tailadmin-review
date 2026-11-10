@@ -1,3 +1,4 @@
+import { CallIcon, MapIcon } from "@/icons";
 import {
   Table,
   TableHeader,
@@ -406,13 +407,22 @@ export default function EntitySections({
             <p>
               {text(row, "lat")}, {text(row, "lng")}
             </p>
-            <a
-              href={`https://www.google.com/maps?q=${row.lat},${row.lng}`}
-              target="_blank"
-              rel="noreferrer"
+            <Button
+              variant="outline"
+              size="icon-lg"
+              nativeButton={false}
+              aria-label={t("aMapOpen")}
+              title={t("aMapOpen")}
+              render={
+                <a
+                  href={`https://www.google.com/maps?q=${row.lat},${row.lng}`}
+                  target="_blank"
+                  rel="noreferrer"
+                />
+              }
             >
-              {t("aMapOpen")}
-            </a>
+              <MapIcon aria-hidden="true" />
+            </Button>
             <Button variant="outline" onClick={write}>
               {t("aLocSet")}
             </Button>
@@ -456,7 +466,19 @@ export default function EntitySections({
             <p>
               {text(row, "driver_status")} · {row.online ? t("aOn") : t("aOff")}
             </p>
-            <a href={"tel:" + text(row, "phone")}>{text(row, "phone")}</a>
+            <>
+              <span>{text(row, "phone")}</span>
+              <Button
+                variant="outline"
+                size="icon-lg"
+                nativeButton={false}
+                aria-label={t("aCall") + ": " + text(row, "phone")}
+                title={t("aCall") + ": " + text(row, "phone")}
+                render={<a href={"tel:" + text(row, "phone")} />}
+              >
+                <CallIcon aria-hidden="true" />
+              </Button>
+            </>
             {!!row.accept_blocked && (
               <p className="text-error-500">{t("aBlocked")}</p>
             )}
@@ -528,7 +550,19 @@ export default function EntitySections({
         <div className="space-y-4">
           {back}
           <Card title={text(row, "name")}>
-            <a href={"tel:" + text(row, "phone")}>{text(row, "phone")}</a>
+            <>
+              <span>{text(row, "phone")}</span>
+              <Button
+                variant="outline"
+                size="icon-lg"
+                nativeButton={false}
+                aria-label={t("aCall") + ": " + text(row, "phone")}
+                title={t("aCall") + ": " + text(row, "phone")}
+                render={<a href={"tel:" + text(row, "phone")} />}
+              >
+                <CallIcon aria-hidden="true" />
+              </Button>
+            </>
             <p>{text(row, "email")}</p>
             <Pair label={t("xCuReg")}>{text(row, "created_at")}</Pair>
           </Card>

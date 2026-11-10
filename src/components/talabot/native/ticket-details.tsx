@@ -1,4 +1,6 @@
 "use client";
+import { CallIcon } from "@/icons";
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -103,7 +105,19 @@ export default function TicketDetails({
         <Pair label={t("status")}>{t("xs_" + text(k, "status"))}</Pair>
         <p>{text(person, "name") || "—"}</p>
         {!!person.phone && (
-          <a href={"tel:" + text(person, "phone")}>{text(person, "phone")}</a>
+          <>
+            <span>{text(person, "phone")}</span>
+            <Button
+              variant="outline"
+              size="icon-lg"
+              nativeButton={false}
+              aria-label={t("aCall") + ": " + text(person, "phone")}
+              title={t("aCall") + ": " + text(person, "phone")}
+              render={<a href={"tel:" + text(person, "phone")} />}
+            >
+              <CallIcon aria-hidden="true" />
+            </Button>
+          </>
         )}
         {!!k.order_id && (
           <Button

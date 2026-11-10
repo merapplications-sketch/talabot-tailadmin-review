@@ -1,3 +1,4 @@
+import { CallIcon, MapIcon } from "@/icons";
 import {
   Accordion,
   AccordionItem,
@@ -46,7 +47,19 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         {name || text(row || {}, "name") || "—"}
       </p>
       {row?.phone ? (
-        <a href={"tel:" + text(row, "phone")}>{text(row, "phone")}</a>
+        <>
+          <span>{text(row, "phone")}</span>
+          <Button
+            variant="outline"
+            size="icon-lg"
+            nativeButton={false}
+            aria-label={t("aCall") + ": " + text(row, "phone")}
+            title={t("aCall") + ": " + text(row, "phone")}
+            render={<a href={"tel:" + text(row, "phone")} />}
+          >
+            <CallIcon aria-hidden="true" />
+          </Button>
+        </>
       ) : (
         <p>{t("aDrvNoPh")}</p>
       )}
@@ -90,7 +103,9 @@ export default function OrderDetails({ order: o, t, back }: Props) {
             {t("aAssign")}
           </Button>
         ) : (
-          <p className="mt-3 text-sm text-gray-500">{t("nativeNext")}</p>
+          <p className="mt-3 text-sm text-gray-500">
+            {t(o.driver_id ? "nativeAssignAlready" : "nativeAssignStatus")}
+          </p>
         )}
         <p className="text-sm">{t("nativeWriteBlocked")}</p>
         {!!o.delivery_photo && (
@@ -107,13 +122,22 @@ export default function OrderDetails({ order: o, t, back }: Props) {
       <Card title={t("address")}>
         <p className="break-words">{text(o, "address")}</p>
         {o.lat != null && o.lng != null && (
-          <a
-            href={`https://www.google.com/maps?q=${o.lat},${o.lng}`}
-            target="_blank"
-            rel="noreferrer"
+          <Button
+            variant="outline"
+            size="icon-lg"
+            nativeButton={false}
+            aria-label={t("aOnMap")}
+            title={t("aOnMap")}
+            render={
+              <a
+                href={`https://www.google.com/maps?q=${o.lat},${o.lng}`}
+                target="_blank"
+                rel="noreferrer"
+              />
+            }
           >
-            {t("aOnMap")}
-          </a>
+            <MapIcon aria-hidden="true" />
+          </Button>
         )}
         {!!o.leave_at_door && <p>{t("yDoor")}</p>}
         {!!o.is_gift && (
@@ -325,13 +349,22 @@ export default function OrderDetails({ order: o, t, back }: Props) {
                       </small>
                       <p>
                         {loc ? (
-                          <a
-                            href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`}
-                            target="_blank"
-                            rel="noreferrer"
+                          <Button
+                            variant="outline"
+                            size="icon-lg"
+                            nativeButton={false}
+                            aria-label={t("aOnMap")}
+                            title={t("aOnMap")}
+                            render={
+                              <a
+                                href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`}
+                                target="_blank"
+                                rel="noreferrer"
+                              />
+                            }
                           >
-                            {t("aOnMap")}
-                          </a>
+                            <MapIcon aria-hidden="true" />
+                          </Button>
                         ) : (
                           text(m, "body")
                         )}

@@ -48,6 +48,10 @@ import AnalyticsDashboard from "../analytics";
 
 const extra = {
   en: {
+    nativeAssignAlready:
+      "Assign courier is unavailable: this order already has a courier.",
+    nativeAssignStatus:
+      "Assign courier is available only for an unassigned order in Preparing or Ready for courier pickup.",
     nativeNext:
       "Next: review the recorded parties, items, timeline and payment information.",
     nativeWriteBlocked:
@@ -74,6 +78,10 @@ const extra = {
       "Refund allowance is not supplied in the sample. No amount is assumed.",
   },
   ru: {
+    nativeAssignAlready:
+      "Назначение недоступно: курьер уже назначен этому заказу.",
+    nativeAssignStatus:
+      "Назначение доступно только без курьера в статусе приготовления или готовности к выдаче.",
     nativeNext:
       "Далее: проверьте участников, состав, историю и сведения об оплате.",
     nativeWriteBlocked:
