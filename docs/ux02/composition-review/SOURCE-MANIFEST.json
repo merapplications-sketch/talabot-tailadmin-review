@@ -1,0 +1,50 @@
+[
+  {
+    "original": "src/components/talabot/preview.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "c96f2d46c1691d4d1a2d937e735048cd1e5fea14",
+    "sha256": "82ceddd2fec608c42797e2605c755e909916433a4780b4e5f0418bb8676885ec"
+  },
+  {
+    "original": "src/components/talabot/integrated-review/polish.css",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "d9c6b49c9e300e6d03c5f427c165901dddba3d87",
+    "sha256": "9669caa24c22a56016110e6ea6349cc00c2b9e4699c717946e15bc26433f1fe7"
+  },
+  {
+    "original": "src/components/talabot/orders.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "41e02c9acd670285627bef01b9efdc10e613f269",
+    "sha256": "23285a3dbcda574f861ea0724844e122116ea37b559f3de9f9db85486b64765e"
+  },
+  {
+    "original": "src/components/talabot/workspace.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "526b857e36d05793f2c09089d3009faf97ba2047",
+    "sha256": "3913d6fbafca91dc9d52c5d197e7400fd7187cec8cb8f4f307812b6cfc136f60"
+  },
+  {
+    "original": "src/components/main/profile/personal-information/index.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "58cc48f9cefa1904247ebdd49faccbcacc4e6cc1",
+    "sha256": "2977e0574a6cc21f49eb3bb226ce6fe6856183c081dc1ee3f2d955f4d03b69fd"
+  },
+  {
+    "original": "src/components/main/profile/personal-information/edit-dialog/index.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "2f10f254f54a05f748247b3e303a71954a607c1f",
+    "sha256": "4d1b0a244371ace344cc3319fa95f2efd17a0c94fa6074aea39f3f541e79f7ca"
+  },
+  {
+    "original": "src/components/main/profile/danger/danger-item.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "acc41ab3ac7d40c6f874f7fbad43f5c31cd62350",
+    "sha256": "e0b5894d8531af9b371f82df67d64f7d679e986e636bcc968b74d5f5bc0e7bdc"
+  },
+  {
+    "original": "src/components/main/dashboard/ecommerce/metrics/metric-card.tsx",
+    "ref": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87",
+    "git_blob": "f6f9e70716dc6a35eb2bb1cfc1cf697aef5b9079",
+    "sha256": "9d2771c9a0ed75f97dd54523ccaef65d672f69255a7ba460219b3adf2c1d1702"
+  }
+]

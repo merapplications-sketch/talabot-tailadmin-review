@@ -1,0 +1,400 @@
+/* D-03 isolated preview: values transcribed from docs/visual-review.md. */
+body:has(.talabot-polish) {
+  --color-gray-25: #fafafa;
+  --color-gray-50: #f7f7f7;
+  --color-gray-100: #f2f2f2;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #b5b5b5;
+  --color-gray-500: #666;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #222;
+  --color-gray-950: #171717;
+  --color-black: #171717;
+  --tp-bg: #f7f7f7;
+  --tp-surface: #fff;
+  --tp-text: #262626;
+  --tp-muted: #666;
+  --tp-border: #e5e5e5;
+  background: var(--tp-bg);
+  color: var(--tp-text);
+}
+html.dark body:has(.talabot-polish) {
+  --tp-bg: #171717;
+  --tp-surface: #222;
+  --tp-text: #f5f5f5;
+  --tp-muted: #b5b5b5;
+  --tp-border: #404040;
+}
+.talabot-polish {
+  background: var(--tp-bg);
+  color: var(--tp-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.talabot-polish :is(h1, h2, h3) {
+  overflow-wrap: anywhere;
+  font-weight: 600;
+}
+.talabot-polish h1 {
+  font-size: 28px;
+  line-height: 1.25;
+}
+.talabot-polish h2 {
+  font-size: 22px;
+  line-height: 1.35;
+}
+.talabot-polish h3 {
+  font-size: 18px;
+}
+.talabot-polish :is(section, article, button).rounded-2xl {
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--tp-surface);
+  border-color: var(--tp-border);
+  box-shadow: 0 2px 8px #00000006;
+}
+.talabot-polish :is(input, select, textarea) {
+  font-size: 16px;
+  border-radius: 12px;
+}
+.talabot-polish :is(input:not([type="checkbox"]):not([type="radio"]), select) {
+  min-height: 48px;
+}
+.talabot-polish button,
+.talabot-polish summary {
+  min-height: 44px;
+}
+.talabot-polish button {
+  border-radius: 12px;
+}
+.talabot-polish :is(a, button, input, select, summary):focus-visible {
+  outline: 2px solid #f36831;
+  outline-offset: 3px;
+}
+.talabot-polish :is(td, dd, p, h2) {
+  overflow-wrap: anywhere;
+}
+.talabot-polish header > div > div:first-child {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.talabot-polish [data-testid="summary-cards"] {
+  gap: 16px;
+}
+.talabot-polish [data-testid="summary-cards"] button {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: center;
+}
+.talabot-polish [data-testid="summary-cards"] button > span:first-child {
+  width: 40px;
+  height: 40px;
+  grid-row: 1 / 3;
+}
+.talabot-polish [data-testid="summary-cards"] button > span:nth-child(2) {
+  margin: 0;
+  line-height: 1.4;
+}
+.talabot-polish [data-testid="summary-cards"] button > span:last-child {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.tp-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--color-gray-100);
+  color: var(--tp-muted);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--tp-border);
+}
+.tp-avatar[data-person="true"] {
+  border-radius: 50%;
+}
+.tp-avatar[data-large="true"] {
+  width: 80px;
+  height: 80px;
+  flex-basis: 80px;
+}
+.tp-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tp-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.tp-identity > :last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.tp-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--color-gray-100);
+  color: var(--tp-muted);
+}
+.tp-status svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+/* D-04 shared semantic tokens; order states keep their existing labels/icons. */
+body:has(.talabot-polish) {
+  --tp-success-bg: #ecfdf3;
+  --tp-success-text: #067647;
+  --tp-error-bg: #fef3f2;
+  --tp-error-text: #b42318;
+  --tp-pending-bg: #fffaeb;
+  --tp-pending-text: #93370d;
+  --tp-preparing-bg: #fff0e8;
+  --tp-preparing-text: #b54708;
+  --tp-transit-bg: #f4ebff;
+  --tp-transit-text: #6941c6;
+  --tp-neutral-bg: #f2f2f2;
+  --tp-neutral-text: #666;
+}
+html.dark body:has(.talabot-polish) {
+  --tp-success-bg: #123027;
+  --tp-success-text: #75e0a7;
+  --tp-error-bg: #3b1d1b;
+  --tp-error-text: #fda29b;
+  --tp-pending-bg: #362a13;
+  --tp-pending-text: #fec84b;
+  --tp-preparing-bg: #38251c;
+  --tp-preparing-text: #ffab85;
+  --tp-transit-bg: #302044;
+  --tp-transit-text: #d6bbfb;
+  --tp-neutral-bg: #2c2c2c;
+  --tp-neutral-text: #b5b5b5;
+}
+.tp-status {
+  background: var(--tp-neutral-bg);
+  color: var(--tp-neutral-text);
+}
+.tp-status[data-status="delivered"] {
+  background: var(--tp-success-bg);
+  color: var(--tp-success-text);
+}
+.tp-status[data-status="cancelled"],
+.tp-status[data-status="rejected"] {
+  background: var(--tp-error-bg);
+  color: var(--tp-error-text);
+}
+.tp-status[data-status="pending"] {
+  background: var(--tp-pending-bg);
+  color: var(--tp-pending-text);
+}
+.tp-status[data-status="preparing"] {
+  background: var(--tp-preparing-bg);
+  color: var(--tp-preparing-text);
+}
+.tp-status[data-status="pickedup"] {
+  background: var(--tp-transit-bg);
+  color: var(--tp-transit-text);
+}
+.tp-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.tp-quick button {
+  padding: 8px 12px;
+  border: 1px solid var(--tp-border);
+  background: var(--tp-surface);
+  font-size: 14px;
+}
+.tp-quick button[aria-pressed="true"] {
+  border-color: #f36831;
+  color: var(--tp-text);
+  background: color-mix(in srgb, #f36831 12%, var(--tp-surface));
+}
+.talabot-polish [data-testid="orders-cards"] article {
+  min-width: 0;
+}
+.talabot-polish [data-testid="orders-cards"] dl {
+  margin-top: 12px;
+}
+.talabot-polish [data-testid="orders-cards"] dl > div {
+  margin-top: 8px;
+}
+.tp-event {
+  border-inline-start: 3px solid #f36831;
+}
+.tp-event[data-unread="false"] {
+  border-inline-start-color: var(--tp-border);
+}
+.tp-unread {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  background: #f36831;
+}
+.tp-event-heading {
+  font-size: 18px !important;
+}
+@media (max-width: 639px) {
+  .talabot-polish h1 {
+    font-size: 24px;
+  }
+  .talabot-polish h2 {
+    font-size: 20px;
+  }
+  .talabot-polish [data-testid="summary-cards"] button {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .talabot-polish [data-testid="summary-cards"] button > span:first-child {
+    grid-row: auto;
+    width: 32px;
+    height: 32px;
+  }
+  .talabot-polish [data-testid="summary-cards"] button > span:first-child svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .tp-filter-grid > label:last-child {
+    grid-column: 1/-1;
+  }
+}
+.talabot-polish [data-testid="orders-cards"] dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+.talabot-polish [data-testid="orders-cards"] dl > div {
+  display: block;
+  margin: 0;
+  min-width: 0;
+}
+.talabot-polish [data-testid="orders-cards"] dl dd {
+  margin-top: 4px;
+}
+.talabot-polish button svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+.talabot-polish .apexcharts-text {
+  fill: var(--tp-muted);
+}
+
+body:has(.talabot-polish) {
+  --color-blue-50: var(--color-brand-50);
+  --color-blue-100: var(--color-brand-100);
+  --color-blue-200: var(--color-brand-200);
+  --color-blue-300: var(--color-brand-300);
+  --color-blue-400: var(--color-brand-400);
+  --color-blue-500: var(--color-brand-500);
+  --color-blue-600: var(--color-brand-600);
+  --color-blue-700: var(--color-brand-700);
+  --color-blue-800: var(--color-brand-800);
+  --color-blue-900: var(--color-brand-900);
+  --color-blue-950: var(--color-brand-950);
+  --color-indigo-50: var(--color-brand-50);
+  --color-indigo-100: var(--color-brand-100);
+  --color-indigo-200: var(--color-brand-200);
+  --color-indigo-300: var(--color-brand-300);
+  --color-indigo-400: var(--color-brand-400);
+  --color-indigo-500: var(--color-brand-500);
+  --color-indigo-600: var(--color-brand-600);
+  --color-indigo-700: var(--color-brand-700);
+  --color-indigo-800: var(--color-brand-800);
+  --color-indigo-900: var(--color-brand-900);
+  --color-indigo-950: var(--color-brand-950);
+  --color-sky-50: var(--color-brand-50);
+  --color-sky-100: var(--color-brand-100);
+  --color-sky-200: var(--color-brand-200);
+  --color-sky-300: var(--color-brand-300);
+  --color-sky-400: var(--color-brand-400);
+  --color-sky-500: var(--color-brand-500);
+  --color-sky-600: var(--color-brand-600);
+  --color-sky-700: var(--color-brand-700);
+  --color-sky-800: var(--color-brand-800);
+  --color-sky-900: var(--color-brand-900);
+  --color-sky-950: var(--color-brand-950);
+}
+.dark .talabot-polish .text-gray-500 {
+  color: var(--tp-muted);
+}
+/* This existing card owns its padding in the header and rows, not the outer shell. */
+.talabot-polish section[data-testid="needs-attention"] {
+  padding: 0;
+}
+.talabot-polish [data-testid="needs-attention"] > div,
+.talabot-polish [data-testid="needs-attention"] li > button {
+  padding: 16px;
+}
+.dark .tp-avatar,
+.dark
+  .tp-status:not([data-status="delivered"]):not([data-status="cancelled"]):not(
+    [data-status="rejected"]
+  ):not([data-status="pending"]):not([data-status="preparing"]):not(
+    [data-status="pickedup"]
+  ) {
+  background: #2c2c2c;
+  color: #b5b5b5;
+}
+
+/* D-04: existing controls, less space before first order. */
+.tp-active-filters:empty {
+  display: none;
+}
+.tp-active-filters:not(:empty) {
+  margin-block-start: 12px;
+}
+.tp-secondary-filters summary {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 639px) {
+  .tp-quick {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-block-end: 4px;
+  }
+  .tp-quick button {
+    flex-shrink: 0;
+  }
+  .tp-order-search {
+    gap: 8px;
+  }
+  .tp-order-search button {
+    padding-inline: 12px;
+  }
+}
+
+/* Keep chart/table scrolling within each component and all controls above bottom nav. */
+.tp-chart-scroll {
+  overscroll-behavior-inline: contain;
+}
+.talabot-polish :is(input, select, textarea, a, button, summary) {
+  scroll-margin-block: 96px;
+}
+.talabot-polish [data-testid="analytics"] [role="group"] button {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
