@@ -1,0 +1,80 @@
+{
+  "status": "PARTIAL IMPLEMENTATION / NOT ACCEPTED",
+  "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+  "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site",
+  "version_number": 1,
+  "version_id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_2f7b6f2f054c81919e238d023f5b4fc4",
+  "deployment_id": "appgdep_6af33b34ef108191ac081165cfb1ddd1",
+  "deployment_status": "succeeded",
+  "canonical_source_commit": "8dc1a27358f11a36efe6c23125f5ade72161dea8",
+  "hosting_artifact_commit": "cacc489f994dad75e57ddf654bc95e1c5ccd1c0a",
+  "repository": "merapplications-sketch/talabot-tailadmin-review",
+  "branch": "review/ux02-native-unified-20261110",
+  "verification": [
+    {
+      "path": "src/components/talabot/native/assignment-dialog.tsx",
+      "local_blob": "f08378a0b9ac97ea1972eec748826d0bc3fa0e0f",
+      "remote_blob": "f08378a0b9ac97ea1972eec748826d0bc3fa0e0f",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/entity-sections.tsx",
+      "local_blob": "0bec163401ad4def6c895111d4da593de7f311a1",
+      "remote_blob": "0bec163401ad4def6c895111d4da593de7f311a1",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/index.tsx",
+      "local_blob": "c50819d43b98b86cdb84408dfd9f5bc2fc94d766",
+      "remote_blob": "c50819d43b98b86cdb84408dfd9f5bc2fc94d766",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/mutation-action.tsx",
+      "local_blob": "43ef7eb55788352344d2465ca1934d5df0b6d242",
+      "remote_blob": "43ef7eb55788352344d2465ca1934d5df0b6d242",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/native-form.tsx",
+      "local_blob": "831910c6ca69ea156c0584bbe82154352508130d",
+      "remote_blob": "831910c6ca69ea156c0584bbe82154352508130d",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/operational-alerts.tsx",
+      "local_blob": "9b0a3a9da199953254be583bbc6607864a8db961",
+      "remote_blob": "9b0a3a9da199953254be583bbc6607864a8db961",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/order-details.tsx",
+      "local_blob": "20d45ec1ab9e9b3164360b092c52310f0c717008",
+      "remote_blob": "20d45ec1ab9e9b3164360b092c52310f0c717008",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/primitives.tsx",
+      "local_blob": "a7c4e54d18a10e5d51ae98bedb21143a78988316",
+      "remote_blob": "a7c4e54d18a10e5d51ae98bedb21143a78988316",
+      "match": true
+    },
+    {
+      "path": "src/components/talabot/native/ticket-details.tsx",
+      "local_blob": "01db145c90459b588e835f0dc439812e1398ebdb",
+      "remote_blob": "01db145c90459b588e835f0dc439812e1398ebdb",
+      "match": true
+    }
+  ],
+  "browser": {
+    "engine": "shared Chromium",
+    "viewport_width": 1363,
+    "root": 1,
+    "navigation": 1,
+    "iframe": 0,
+    "overflow": false,
+    "published_search_detail_back_reload": "PASS",
+    "physical_safari": "NOT TESTED",
+    "widths_320_390_1440": "NOT TESTED"
+  }
+}

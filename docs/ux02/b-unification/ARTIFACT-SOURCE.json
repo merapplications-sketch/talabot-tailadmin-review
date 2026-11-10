@@ -1,0 +1,31 @@
+{
+  "status": "PARTIAL IMPLEMENTATION \u2014 NOT ACCEPTED",
+  "repository": "https://github.com/merapplications-sketch/talabot-tailadmin-review",
+  "branch": "review/ux02-native-unified-20261110",
+  "source_commit": "8dc1a27358f11a36efe6c23125f5ade72161dea8",
+  "local_build_commit": "5b92169",
+  "build": "npm run build:native",
+  "source_checkout": "native",
+  "files": [
+    {
+      "path": "assets/index-B7DHJk3n.js",
+      "sha256": "f2724411f83932d325a5d18106375ae0875ae15cfaceb8193e3c88e2fe80924b"
+    },
+    {
+      "path": "assets/index-CjZ_5-W7.css",
+      "sha256": "002679295c387d293c5b4afd567fbf9ded3756ae3424338969be0d88ffb87a58"
+    },
+    {
+      "path": "assets/react-apexcharts.esm-1PlCRfw7.js",
+      "sha256": "5657ccf2b522a51cad4f29592cbb204bb6fd028085cc3af8334dcbd4bd07daad"
+    },
+    {
+      "path": "assets/talabot-original-MIjVQ1p2.png",
+      "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367"
+    },
+    {
+      "path": "index.html",
+      "sha256": "78b80706c761c05f8c97f68635f5d1a91a5f0e1a9460bdb7b3b39d15008c5fad"
+    }
+  ]
+}
