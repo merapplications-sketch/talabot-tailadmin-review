@@ -1,0 +1,56 @@
+[
+  {
+    "path": "src/components/talabot/native/domain.ts",
+    "before": "6d74777fe99382568cbb67eae8b9cec563f13d9b",
+    "after": "6d74777fe99382568cbb67eae8b9cec563f13d9b",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/navigation.ts",
+    "before": "f517e49aba9ad559e25cfd53883ca9f9284fd377",
+    "after": "f517e49aba9ad559e25cfd53883ca9f9284fd377",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/fixture.json",
+    "before": "a01f939dc5797d844d450aa7aabf4f1ba1e6a973",
+    "after": "a01f939dc5797d844d450aa7aabf4f1ba1e6a973",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/mutation-service.js",
+    "before": "5116198fe5a2bd39e3dc101e4c7ce35f9f645e81",
+    "after": "5116198fe5a2bd39e3dc101e4c7ce35f9f645e81",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/form-contracts.ts",
+    "before": "e0a028863280a0f8f1290174c3b7dd4c8052e3b6",
+    "after": "e0a028863280a0f8f1290174c3b7dd4c8052e3b6",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/fields.ts",
+    "before": "c254290843540b2d142bc1684bd30b0464240ce7",
+    "after": "c254290843540b2d142bc1684bd30b0464240ce7",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/validation.ts",
+    "before": "440d23f9f87b7f161512317c95a19a0ecb568955",
+    "after": "440d23f9f87b7f161512317c95a19a0ecb568955",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "before": "24df2c8904362b15fdfa9e394672cc34b4d193db",
+    "after": "24df2c8904362b15fdfa9e394672cc34b4d193db",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "before": "02b34062bbef6497d74b0b85dd33292f8143d15a",
+    "after": "02b34062bbef6497d74b0b85dd33292f8143d15a",
+    "unchanged": true
+  }
+]
