@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 build:native
+> vite build --config native-preview/vite.config.ts
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../config/svg-components" without a file extension (native-preview/vite.config.ts:1:133). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 203 modules transformed.
+rendering chunks...
+computing gzip size...
+native-dist/index.html                   0.67 kB │ gzip:   0.41 kB
+native-dist/assets/index-DcTQFqsx.css  271.53 kB │ gzip:  35.24 kB
+native-dist/assets/index-BP4Dcm9C.js   427.77 kB │ gzip: 122.51 kB
+
+✓ built in 1.52s

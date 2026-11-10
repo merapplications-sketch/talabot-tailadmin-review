@@ -46,3 +46,6 @@ next-env.d.ts
 
 # Generated local browser captures (curated evidence is in docs/evidence)
 /qa/
+
+# Isolated native review build output
+native-dist/

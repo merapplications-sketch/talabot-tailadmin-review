@@ -1,0 +1,15 @@
+PASS A metric definitions
+PASS search by id and status
+PASS wrong status
+PASS customer search
+PASS phone search
+PASS empty search result
+PASS cancelled online is not proven refunded
+PASS delivered commission only
+PASS unknown id
+PASS reload restores query and recomputes results
+PASS chat location safe parser
+PASS read denied and failure distinct
+PASS writes fail explicitly and do not mutate fixture
+PASS native source has no embedding or legacy runtime
+14 checks passed
