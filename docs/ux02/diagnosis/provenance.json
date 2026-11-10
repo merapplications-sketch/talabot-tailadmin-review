@@ -1,0 +1,19 @@
+{
+  "D": {
+    "url": "https://talabot-admin-ux02-unified-d.alwarikahtan.chatgpt.site/",
+    "version": 1,
+    "published_commit": "6782f98f98e9996934f45968ef0013eda0060561",
+    "unpublished_site_source": "690255c1318cc40322c89b3db914d06101934e8d",
+    "github_source_checkpoint": "5faf6086afbe1f4921c2359a137356007b0e2eff"
+  },
+  "B": {
+    "url": "https://talabot-admin-d04-order-review.alwarikahtan.chatgpt.site/",
+    "source": "8dc0f4c30d1a390ec1c81c440b03f5ff9c549f87"
+  },
+  "capture": "Chromium EN light, desktop screenshot viewport approx 1348 CSS px; mobile outer frame 390px / inner body 375px due scrollbar. Not physical iPhone. Static comparison harness only; no app edits. 1440 layout measured but full-page capture timed out.",
+  "sha256": {
+    "B-desktop.jpg": "eaf15bc435be97b1a6066d1d14f4d55ba8d2e1b4496287d565c97287ff2dea8e",
+    "D-B-mobile-390.jpg": "0f9fab6e74730014be06fbbc981084e28e4ae9935ee703aa190569387cd7ae2b",
+    "D-desktop.jpg": "84b5e639dcd630c48e99b91ab31103d8fb9ba287dbd0f60df2105d9638565656"
+  }
+}
