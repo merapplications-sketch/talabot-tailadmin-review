@@ -38,7 +38,10 @@ export function OrdersPresentation({
     store: false,
     pickup: text(o, "pickup_address") || "—",
     deliveryZone: text(o, "address") || "—",
-    driver: text(o, "driver_name"),
+    driver:
+      text(o, "driver_name") ||
+      text(tables.profiles.find((p) => p.id === o.driver_id) || {}, "name") ||
+      (o.driver_id ? String(o.driver_id) : ""),
     total: number(o, "total"),
     extra:
       nativeT(text(o, "payment")) +
@@ -91,8 +94,8 @@ export function OrdersPresentation({
                   <p className="font-medium">{o.id}</p>
                   <p className="mt-1 text-xs text-gray-500">
                     {date(o.created)}
-                    <p className="mt-1 text-xs text-gray-500">{o.extra}</p>
                   </p>
+                  <p className="mt-1 text-xs text-gray-500">{o.extra}</p>
                 </td>
                 <td className="px-4 py-5">{o.customer}</td>
                 <td className="px-4 py-5">

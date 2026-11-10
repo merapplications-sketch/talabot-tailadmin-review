@@ -1,11 +1,9 @@
 import { CallIcon, MapIcon } from "@/icons";
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "@/components/ui/table";
+import { NativeGrid } from "./b-shell/entity-grid";
+import { SettingsPresentation } from "./b-shell/settings";
+import { Badge } from "@/components/ui/badge";
+import { useLocale, useTranslations } from "next-intl";
+import { formatDate } from "./format";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -40,7 +38,7 @@ import {
 } from "./validation";
 import { useState } from "react";
 import { tables, text, number, type Row } from "./domain";
-import { Card, Pair, Action } from "./primitives";
+import { Card, Pair } from "./primitives";
 import NativeForm from "./native-form";
 import {
   merchantFields,
@@ -75,6 +73,8 @@ export default function EntitySections({
   t,
   navigate,
 }: Props) {
+  const locale = useLocale();
+  const wt = useTranslations("workspace");
   const [filter, setFilter] = useState(
       () => sessionStorage.getItem("ux02-native:filter:" + section) || "all",
     ),
@@ -166,6 +166,8 @@ export default function EntitySections({
   if (section === "texts")
     return (
       <div className="space-y-4">
+        <SettingsPresentation />
+
         {tables.app_pages.map((r) => (
           <NativeForm
             key={text(r, "slug")}
@@ -564,7 +566,9 @@ export default function EntitySections({
               </Button>
             </>
             <p>{text(row, "email")}</p>
-            <Pair label={t("xCuReg")}>{text(row, "created_at")}</Pair>
+            <Pair label={t("xCuReg")}>
+              {formatDate(text(row, "created_at"), locale)}
+            </Pair>
           </Card>
           <Card title={t("xWalT")}>
             {syntheticWallets[text(row, "id")] ? (
@@ -581,7 +585,8 @@ export default function EntitySections({
                   key={text(w, "id")}
                   label={t("wk_" + text(w, "kind")) + " · " + text(w, "note")}
                 >
-                  {number(w, "amount")} TJS · {text(w, "created_at")}
+                  {number(w, "amount")} TJS ·{" "}
+                  {formatDate(text(w, "created_at"), locale)}
                 </Pair>
               ))}
           </Card>
@@ -690,7 +695,11 @@ export default function EntitySections({
     <div className="space-y-4">
       <Card>
         <label>
-          {t(section === "customers" ? "xCuSearch" : "aSearch")}
+          {section === "customers"
+            ? t("xCuSearch")
+            : section === "restaurants"
+              ? t("aSearch")
+              : wt("search")}
           <Input
             type="search"
             value={query}
@@ -850,84 +859,60 @@ export default function EntitySections({
           )}
         </Button>
       )}
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/5 dark:bg-white/3">
-        <div className="max-w-full overflow-x-auto">
-          <Table>
-            <TableHeader className="border-b border-gray-100 dark:border-white/5">
-              <TableRow>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
-                >
-                  {t("aName")}
-                </TableCell>
-                <TableCell
-                  isHeader
-                  className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
-                >
-                  {t("nativeDetails")}
-                </TableCell>
-              </TableRow>
-            </TableHeader>
-            <TableBody className="divide-y divide-gray-100 dark:divide-white/5">
-              {rows.slice(0, limit).map((r) => (
-                <TableRow
-                  key={text(r, "id")}
-                  className="transition hover:bg-gray-50/50 dark:hover:bg-white/2"
-                >
-                  <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
-                    <div className="flex flex-wrap justify-between gap-3">
-                      <strong className="min-w-0 break-words">
-                        {text(r, "name") ||
-                          text(r, "title") ||
-                          text(r, "code") ||
-                          text(r, "subject") ||
-                          text(r, "order_id") ||
-                          text(r, "id")}
-                      </strong>
-                      <span>
-                        {section === "customers"
-                          ? r.banned_at
-                            ? t("xBanned")
-                            : ""
-                          : text(r, "status")
-                            ? t(
-                                section === "support"
-                                  ? "xs_" + text(r, "status")
-                                  : text(r, "status"),
-                              )
-                            : text(r, "driver_status")
-                              ? t(text(r, "driver_status"))
-                              : r.is_active != null
-                                ? t(r.is_active ? "aOn" : "aOff")
-                                : ""}
-                      </span>
-                    </div>
-                    {!!r.accept_blocked && (
-                      <p className="text-error-500">{t("aBlocked")}</p>
-                    )}
-                    {section === "drivers" && (
-                      <Pair label={t("aCashH")}>
-                        {syntheticCash[text(r, "id")] ?? "—"} /{" "}
-                        {number(r, "cash_limit") || 1000} TJS
-                      </Pair>
-                    )}
-                    <p>{text(r, "phone") || text(r, "comment")}</p>
-                    <p>{text(r, "address")}</p>
-                  </TableCell>
-                  <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
-                    <Action
-                      kind="details"
-                      label={t("nativeDetails")}
-                      onClick={() => navigate({ id: text(r, "id") })}
-                    />
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>{" "}
+      <NativeGrid
+        firstHeader={t("aName")}
+        headers={[
+          t("aStat"),
+          t("aPhoneL"),
+          t("address"),
+          ...(section === "drivers" ? [t("aCashH")] : []),
+        ]}
+        onDetails={(id) => navigate({ id })}
+        rows={rows.slice(0, limit).map((r) => ({
+          id: text(r, "id"),
+          name:
+            text(r, "name") ||
+            text(r, "title") ||
+            text(r, "code") ||
+            text(r, "subject") ||
+            text(r, "order_id") ||
+            text(r, "id"),
+          values: [
+            <>
+              <Badge color={r.banned_at || r.accept_blocked ? "error" : "gray"}>
+                {section === "customers"
+                  ? r.banned_at
+                    ? t("xBanned")
+                    : "—"
+                  : text(r, "status")
+                    ? t(
+                        section === "support"
+                          ? "xs_" + text(r, "status")
+                          : text(r, "status"),
+                      )
+                    : text(r, "driver_status")
+                      ? t(text(r, "driver_status"))
+                      : r.is_active != null
+                        ? t(r.is_active ? "aOn" : "aOff")
+                        : "—"}
+              </Badge>
+              {!!r.accept_blocked && (
+                <p className="text-error-500">{t("aBlocked")}</p>
+              )}
+            </>,
+            text(r, "phone") || text(r, "comment") || "—",
+            text(r, "address") || "—",
+            ...(section === "drivers"
+              ? [
+                  (syntheticCash[text(r, "id")] ?? "—") +
+                    " / " +
+                    (number(r, "cash_limit") || 1000) +
+                    " TJS",
+                ]
+              : []),
+          ],
+        }))}
+      />
       {!rows.length && (
         <Card>
           <p>{t("aNoRes")}</p>

@@ -1,4 +1,6 @@
 "use client";
+import { useLocale } from "next-intl";
+import { formatDate } from "./format";
 import { CallIcon } from "@/icons";
 
 import { Input } from "@/components/ui/input";
@@ -29,6 +31,7 @@ export default function TicketDetails({
   back,
   openOrder,
 }: Props) {
+  const locale = useLocale();
   const room = syntheticRefundRooms[text(k, "id")];
   const key = "ux02-native:ticket:" + k.id,
     person = tables.profiles.find((p) => p.id === k.customer_id) || {},
@@ -139,7 +142,7 @@ export default function TicketDetails({
             <article className="my-3 break-words" key={text(m, "id")}>
               <small>
                 {m.from_staff ? t("aStfT") : text(person, "name")} ·{" "}
-                {text(m, "created_at")}
+                {formatDate(text(m, "created_at"), locale)}
               </small>
               <p>{text(m, "body")}</p>
             </article>

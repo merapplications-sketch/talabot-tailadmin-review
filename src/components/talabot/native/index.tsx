@@ -18,7 +18,7 @@ import { NativeRouteContext } from "./b-shell/router";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useNativeNavigation } from "./navigation";
-import { useTheme } from "@/context/theme-context";
+import ThemeToggleButton from "@/layout/header/theme-toggler";
 import {
   metrics,
   readOrders,
@@ -104,7 +104,6 @@ export default function NativeAdmin() {
     copy = extra[lang] as Record<string, string>;
   const bT = useTranslations("talabot");
   const t = (key: string) => copy[key] || dict[key] || key;
-  const { themeMode, setThemeMode } = useTheme();
   const { state, navigate, back } = useNativeNavigation();
   const [result, setResult] = useState<{
       key: string;
@@ -182,51 +181,7 @@ export default function NativeAdmin() {
               }
             />
           ),
-          controls: (
-            <div className="flex gap-2">
-              <Select
-                value={locale}
-                onValueChange={(value) => {
-                  localStorage.setItem("ux02-native:locale", value ?? "");
-                  window.dispatchEvent(new Event("native-locale"));
-                }}
-                items={[
-                  { value: "en", label: "en" },
-                  { value: "ru", label: "ru" },
-                  { value: "tg", label: "tg" },
-                ]}
-              >
-                <SelectTrigger aria-label="Language">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="en">en</SelectItem>
-                  <SelectItem value="ru">ru</SelectItem>
-                  <SelectItem value="tg">tg</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select
-                value={themeMode}
-                onValueChange={(value) =>
-                  setThemeMode((value ?? "") as "light" | "dark" | "auto")
-                }
-                items={[
-                  { value: "light", label: "Light" },
-                  { value: "dark", label: "Dark" },
-                  { value: "auto", label: "Auto" },
-                ]}
-              >
-                <SelectTrigger aria-label="Theme">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="auto">Auto</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          ),
+          controls: <ThemeToggleButton />,
         }}
       >
         <section className="min-w-0 space-y-4">

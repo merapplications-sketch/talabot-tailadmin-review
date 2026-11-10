@@ -1,3 +1,5 @@
+import { useLocale } from "next-intl";
+import { formatDate } from "./format";
 import { CallIcon, MapIcon } from "@/icons";
 import {
   Accordion,
@@ -26,6 +28,7 @@ import {
 type Props = { order: Row; t: (key: string) => string; back: () => void };
 const money = (n: number) => n.toFixed(2) + " TJS";
 export default function OrderDetails({ order: o, t, back }: Props) {
+  const locale = useLocale();
   const [assigning, setAssigning] = useState(false);
   const f = finance(o),
     store = tables.stores.find((s) => s.id === o.store_id),
@@ -77,16 +80,16 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         <Pair label={t("status")}>
           <OrderStatusBadge value={text(o, "status") as OrderStatus} />
         </Pair>
-        <p>
-          {new Date(text(o, "created_at")).toLocaleString("en-GB", {
-            timeZone: "Asia/Dushanbe",
-          })}
-        </p>
+        <p>{formatDate(text(o, "created_at"), locale)}</p>
         {!!o.arrived_store_at && (
-          <Pair label={t("zAtS")}>{text(o, "arrived_store_at")}</Pair>
+          <Pair label={t("zAtS")}>
+            {formatDate(text(o, "arrived_store_at"), locale)}
+          </Pair>
         )}
         {!!o.arrived_cust_at && (
-          <Pair label={t("zAtC")}>{text(o, "arrived_cust_at")}</Pair>
+          <Pair label={t("zAtC")}>
+            {formatDate(text(o, "arrived_cust_at"), locale)}
+          </Pair>
         )}
         {!!o.cancel_reason && (
           <p>
@@ -303,7 +306,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
                             : t("aeUnk") + ": " + text(e, "kind")
                         }
                       >
-                        {text(e, "at")}
+                        {formatDate(text(e, "at"), locale)}
                         {i > 0
                           ? " (+" +
                             duration(text(e, "at"), text(events[i - 1], "at")) +
@@ -314,7 +317,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
                   ))}
                 </ol>
               ) : (
-                <p>{text(o, "created_at")}</p>
+                <p>{formatDate(text(o, "created_at"), locale)}</p>
               )}
               {events.length > 1 && (
                 <Pair label={t("aTotalT")}>
@@ -345,7 +348,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
                         {m.sender_id === o.customer_id
                           ? t("aClient")
                           : t("aDrvL")}{" "}
-                        · {text(m, "created_at")}
+                        · {formatDate(text(m, "created_at"), locale)}
                       </small>
                       <p>
                         {loc ? (
