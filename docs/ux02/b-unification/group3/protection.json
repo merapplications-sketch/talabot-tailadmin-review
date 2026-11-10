@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/components/talabot/native/domain.ts",
+    "unchanged": true,
+    "sha256": "df415cbf3a0c9bcf3861b201cbb06d94326c086581fc6c75eb22ce97fa88695e"
+  },
+  {
+    "file": "src/components/talabot/native/navigation.ts",
+    "unchanged": true,
+    "sha256": "1403b1f7d77919c46fef62065fac9164ef88b41d9f26d7d80300be07fd4a6495"
+  },
+  {
+    "file": "src/components/talabot/native/fields.ts",
+    "unchanged": true,
+    "sha256": "346a18f7909cc02474623fc915087ab6630185cfa2deb227339f664ccd9ded38"
+  },
+  {
+    "file": "src/components/talabot/native/mutation-service.js",
+    "unchanged": true,
+    "sha256": "7bb10e4f3a405d5b3162048c93861faa9aa6210e441eb063550170d0b6b44250"
+  },
+  {
+    "file": "src/components/talabot/native/form-contracts.ts",
+    "unchanged": true,
+    "sha256": "3e487652531ccec8791d67d822955d9ccccefaba1e6fd98b602e2b7658666759"
+  },
+  {
+    "file": "src/components/talabot/native/validation.ts",
+    "unchanged": true,
+    "sha256": "0a09f1053bc489b02eb87715f92c0b3ad3ca471ac0dea72b1a3d4b23bf5099df"
+  },
+  {
+    "file": "src/components/talabot/analytics-data.ts",
+    "unchanged": true,
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c"
+  },
+  {
+    "file": "src/components/talabot/analytics.tsx",
+    "unchanged": true,
+    "sha256": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108"
+  }
+]

@@ -1,3 +1,11 @@
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import { OrderStatusBadge } from "../integrated-review/order-status";
+import type { OrderStatus } from "../orders-data";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import AssignmentDialog from "./assignment-dialog";
@@ -53,7 +61,9 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         ← {t("aBack")}
       </Button>
       <Card title={"#" + text(o, "id")}>
-        <Pair label={t("status")}>{t(text(o, "status"))}</Pair>
+        <Pair label={t("status")}>
+          <OrderStatusBadge value={text(o, "status") as OrderStatus} />
+        </Pair>
         <p>
           {new Date(text(o, "created_at")).toLocaleString("en-GB", {
             timeZone: "Asia/Dushanbe",
@@ -253,69 +263,88 @@ export default function OrderDetails({ order: o, t, back }: Props) {
           {t(f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait")}
         </Pair>
       </Card>
-      <Card title={t("aTimeL")}>
-        {events.length ? (
-          events.map((e, i) => (
-            <Pair
-              key={text(e, "id")}
-              label={
-                eventLabels[text(e, "kind")]
-                  ? t(eventLabels[text(e, "kind")])
-                  : t("aeUnk") + ": " + text(e, "kind")
-              }
-            >
-              {text(e, "at")}
-              {i > 0
-                ? " (+" +
-                  duration(text(e, "at"), text(events[i - 1], "at")) +
-                  ")"
-                : ""}
-            </Pair>
-          ))
-        ) : (
-          <p>{text(o, "created_at")}</p>
-        )}
-        {events.length > 1 && (
-          <Pair label={t("aTotalT")}>
-            {duration(
-              text(events[events.length - 1], "at"),
-              text(events[0], "at"),
-            )}
-          </Pair>
-        )}
-      </Card>
-      <Card title={t("aChatL")}>
-        {chat.length ? (
-          chat.map((m) => {
-            const loc = parseLocation(text(m, "body"));
-            return (
-              <article
-                key={text(m, "id")}
-                className="border-b border-gray-200 py-3 break-words dark:border-gray-700"
-              >
-                <small>
-                  {m.sender_id === o.customer_id ? t("aClient") : t("aDrvL")} ·{" "}
-                  {text(m, "created_at")}
-                </small>
-                <p>
-                  {loc ? (
-                    <a
-                      href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {t("aOnMap")}
-                    </a>
-                  ) : (
-                    text(m, "body")
+      <Card>
+        <Accordion>
+          <AccordionItem value="aTimeL">
+            <AccordionTrigger>{t("aTimeL")}</AccordionTrigger>
+            <AccordionContent>
+              {events.length ? (
+                <ol className="space-y-6 border-l border-brand-500 pl-4">
+                  {events.map((e, i) => (
+                    <li key={text(e, "id")}>
+                      <Pair
+                        label={
+                          eventLabels[text(e, "kind")]
+                            ? t(eventLabels[text(e, "kind")])
+                            : t("aeUnk") + ": " + text(e, "kind")
+                        }
+                      >
+                        {text(e, "at")}
+                        {i > 0
+                          ? " (+" +
+                            duration(text(e, "at"), text(events[i - 1], "at")) +
+                            ")"
+                          : ""}
+                      </Pair>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                <p>{text(o, "created_at")}</p>
+              )}
+              {events.length > 1 && (
+                <Pair label={t("aTotalT")}>
+                  {duration(
+                    text(events[events.length - 1], "at"),
+                    text(events[0], "at"),
                   )}
-                </p>
-              </article>
-            );
-          })
-        ) : (
-          <p>{t("aNoChat")}</p>
-        )}
+                </Pair>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </Card>
+      <Card>
+        <Accordion>
+          <AccordionItem value="aChatL">
+            <AccordionTrigger>{t("aChatL")}</AccordionTrigger>
+            <AccordionContent>
+              {chat.length ? (
+                chat.map((m) => {
+                  const loc = parseLocation(text(m, "body"));
+                  return (
+                    <article
+                      key={text(m, "id")}
+                      className="border-b border-gray-200 py-3 break-words dark:border-gray-700"
+                    >
+                      <small>
+                        {m.sender_id === o.customer_id
+                          ? t("aClient")
+                          : t("aDrvL")}{" "}
+                        · {text(m, "created_at")}
+                      </small>
+                      <p>
+                        {loc ? (
+                          <a
+                            href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {t("aOnMap")}
+                          </a>
+                        ) : (
+                          text(m, "body")
+                        )}
+                      </p>
+                    </article>
+                  );
+                })
+              ) : (
+                <p>{t("aNoChat")}</p>
+              )}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </Card>
     </div>
   );

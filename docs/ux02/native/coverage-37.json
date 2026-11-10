@@ -3,7 +3,7 @@
     "id": "FP01",
     "function": "الرئيسية والمؤشرات الأربع",
     "status": "VERIFIED SAMPLE",
-    "evidence_and_gap": "مؤشرات A أعلى القائمة؛ حسابات العينة مختبرة: 7 / 415 / 44 / 4."
+    "evidence_and_gap": "MetricCard الأصلي لـB؛ مؤشرات A أعلى الطلبات بالقيم7/415/44/4. الحساب والنطاق دون تعديل. دليل group3/home.png."
   },
   {
     "id": "FP02",
@@ -21,31 +21,31 @@
     "id": "FP04",
     "function": "التنقل الرئيسي",
     "status": "VERIFIED SAMPLE",
-    "evidence_and_gap": "12 مدخلاً في ملاحة واحدة؛ لا iframe أو قائمة أقسام ثانية داخل الرئيسية."
+    "evidence_and_gap": "ملاحة واحدة و12 قسماً فُتحت في Chrome1363؛ root1 وiframe0. ليس إثبات جميع رحلات الأقسام."
   },
   {
     "id": "FP05",
     "function": "بحث الطلبات",
     "status": "PARTIAL",
-    "evidence_and_gap": "رقم/اسم/هاتف وحالات فشل ومنع قراءة؛ اختبارات محلية ومتصفح محددة."
+    "evidence_and_gap": "بحث ord1→تفاصيل→رجوع محفوظ؛ فشل القراءة يحفظ البحث ثم Normal يعيد النتائج. مكونات B Input/Select."
   },
   {
     "id": "FP06",
     "function": "حالات الطلب",
     "status": "PARTIAL",
-    "evidence_and_gap": "الحالات السبع ظاهرة؛ مطابقة جميع الألوان لم تُختبر."
+    "evidence_and_gap": "OrderStatusBadge الأصلي من B بنص ورمز وألوان الحالات؛ Delivered أعادord4. فحص المقاسات لم يكتمل."
   },
   {
     "id": "FP07",
     "function": "الفترة والفرز والفلاتر الثانوية",
     "status": "PARTIAL",
-    "evidence_and_gap": "فلاتر محلية معلنة؛ المنطقة والسائق ومسح الفلاتر غير مكتملة."
+    "evidence_and_gap": "فلاتر B Select متصلة بالقيم السابقة؛ تقاطع ord1 وWallet صفر نتائج ثم All يعيد7. بقية الفلاتر/مسحها تحتاج تغطية."
   },
   {
     "id": "FP08",
     "function": "بطاقة الطلب",
     "status": "PARTIAL",
-    "evidence_and_gap": "رقم/حالة/منشأة/عميل/أصناف/مبلغ/سائق/توصيل/دفع موجودة؛ التواريخ تحتاج توحيداً."
+    "evidence_and_gap": "Table الأصلي مع نمطTableOne يحفظ كل معلومات الصف السابق. لا دليل اكتمال320/390/1440."
   },
   {
     "id": "FP09",
@@ -75,7 +75,7 @@
     "id": "FP13",
     "function": "Timeline والمحادثة",
     "status": "PARTIAL",
-    "evidence_and_gap": "Timeline وفروق الثواني والمجموع والمجهول وChat؛ روابط LOC آمنة."
+    "evidence_and_gap": "Accordion الأصلي مغلق افتراضياً؛ فتح Timeline وChat أظهر5 أحداث ورسالتين وفروق الزمن نفسها. خط الرحلة بالبرتقالي المعتمد."
   },
   {
     "id": "FP14",
@@ -129,7 +129,7 @@
     "id": "FP22",
     "function": "المحفظة وحركاتها",
     "status": "PARTIAL",
-    "evidence_and_gap": "المحفظة بعد ملخص العميل؛ تحقق مدخلات واحتفاظ مسودة مختبران؛ الرصيد غير متاح."
+    "evidence_and_gap": "محفظة بعد الملخص؛ رصيد اصطناعي50؛ تصحيح10 يرجع PREVIEW ويبقي الرصيد. الرجوع يعيد المسودة. الأصلcuWal لا يتضمنconfirm؛ لا اعتماد مالي."
   },
   {
     "id": "FP23",
@@ -207,13 +207,13 @@
     "id": "FP35",
     "function": "اللغات والوضع الداكن",
     "status": "PARTIAL",
-    "evidence_and_gap": "EN/RU والتبديل Light/Dark/Auto جُرّبت جزئياً؛ TG يعود RU للعمليات مع تنبيه."
+    "evidence_and_gap": "تبديلEN/RU/TG مثبت معlang؛ TG للعمليات يعودRU معلناً. Light/Dark/Auto اختبارات تبديل فقط، لا مصفوفة كاملة."
   },
   {
     "id": "FP36",
     "function": "الألوان والشعار والمكونات",
     "status": "PARTIAL",
-    "evidence_and_gap": "شعار وأصول ونظام ألوان B محفوظة؛ اكتمال الأيقونات و320/390/1440 غير مثبت."
+    "evidence_and_gap": "B Card/Button/Field/Input/Select/Checkbox/FileInput/Dialog/Table/MetricCard/Accordion مستخدمة. MapIcon أصلي؛ Wallet نص واضح. المقاسات وSafari غير مختبرة."
   },
   {
     "id": "FP37",

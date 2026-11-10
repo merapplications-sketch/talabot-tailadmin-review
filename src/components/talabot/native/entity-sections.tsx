@@ -1,3 +1,18 @@
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
+} from "@/components/ui/table";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { syntheticCash, syntheticWallets } from "./scenario-responses";
 import MutationAction from "./mutation-action";
@@ -24,7 +39,7 @@ import {
 } from "./validation";
 import { useState } from "react";
 import { tables, text, number, type Row } from "./domain";
-import { Card, Pair, input, Action } from "./primitives";
+import { Card, Pair, Action } from "./primitives";
 import NativeForm from "./native-form";
 import {
   merchantFields,
@@ -642,52 +657,77 @@ export default function EntitySections({
       <Card>
         <label>
           {t(section === "customers" ? "xCuSearch" : "aSearch")}
-          <input
+          <Input
             type="search"
-            className={input}
             value={query}
             onChange={(e) => navigate({ query: e.target.value })}
           />
         </label>
         {section === "restaurants" && (
-          <select
-            className={input}
-            aria-label={t("status")}
+          <Select
             value={filter}
-            onChange={(e) => {
-              setFilter(e.target.value);
+            onValueChange={(value) => {
+              setFilter(value ?? "");
               sessionStorage.setItem(
                 "ux02-native:filter:" + section,
-                e.target.value,
+                value ?? "",
               );
             }}
+            items={[
+              ...["all", "open", "closed"].map((k) => ({
+                value: k,
+                label: t(
+                  k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
+                ),
+              })),
+            ]}
           >
-            {["all", "open", "closed"].map((k) => (
-              <option key={k} value={k}>
-                {t(k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS")}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger aria-label={t("status")}>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {["all", "open", "closed"].map((k) => (
+                <SelectItem key={k} value={k}>
+                  {t(
+                    k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
+                  )}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         )}
         {section === "support" && (
-          <select
-            className={input}
-            aria-label={t("status")}
+          <Select
             value={filter}
-            onChange={(e) => {
-              setFilter(e.target.value);
+            onValueChange={(value) => {
+              setFilter(value ?? "");
               sessionStorage.setItem(
                 "ux02-native:filter:" + section,
-                e.target.value,
+                value ?? "",
               );
             }}
+            items={[
+              ...["all", "open", "in_progress", "resolved", "rejected"].map(
+                (k) => ({
+                  value: k,
+                  label: t(k === "all" ? "aAll" : "xs_" + k),
+                }),
+              ),
+            ]}
           >
-            {["all", "open", "in_progress", "resolved", "rejected"].map((k) => (
-              <option key={k} value={k}>
-                {t(k === "all" ? "aAll" : "xs_" + k)}
-              </option>
-            ))}
-          </select>
+            <SelectTrigger aria-label={t("status")}>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {["all", "open", "in_progress", "resolved", "rejected"].map(
+                (k) => (
+                  <SelectItem key={k} value={k}>
+                    {t(k === "all" ? "aAll" : "xs_" + k)}
+                  </SelectItem>
+                ),
+              )}
+            </SelectContent>
+          </Select>
         )}
       </Card>
       {section === "restaurants" && (
@@ -776,53 +816,84 @@ export default function EntitySections({
           )}
         </Button>
       )}
-      {rows.slice(0, limit).map((r) => (
-        <Card key={text(r, "id")}>
-          <div className="flex flex-wrap justify-between gap-3">
-            <strong className="min-w-0 break-words">
-              {text(r, "name") ||
-                text(r, "title") ||
-                text(r, "code") ||
-                text(r, "subject") ||
-                text(r, "order_id") ||
-                text(r, "id")}
-            </strong>
-            <span>
-              {section === "customers"
-                ? r.banned_at
-                  ? t("xBanned")
-                  : ""
-                : text(r, "status")
-                  ? t(
-                      section === "support"
-                        ? "xs_" + text(r, "status")
-                        : text(r, "status"),
-                    )
-                  : text(r, "driver_status")
-                    ? t(text(r, "driver_status"))
-                    : r.is_active != null
-                      ? t(r.is_active ? "aOn" : "aOff")
-                      : ""}
-            </span>
-          </div>
-          {!!r.accept_blocked && (
-            <p className="text-error-500">{t("aBlocked")}</p>
-          )}
-          {section === "drivers" && (
-            <Pair label={t("aCashH")}>
-              {syntheticCash[text(r, "id")] ?? "—"} /{" "}
-              {number(r, "cash_limit") || 1000} TJS
-            </Pair>
-          )}
-          <p>{text(r, "phone") || text(r, "comment")}</p>
-          <p>{text(r, "address")}</p>
-          <Action
-            kind="details"
-            label={t("nativeDetails")}
-            onClick={() => navigate({ id: text(r, "id") })}
-          />
-        </Card>
-      ))}
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/5 dark:bg-white/3">
+        <div className="max-w-full overflow-x-auto">
+          <Table>
+            <TableHeader className="border-b border-gray-100 dark:border-white/5">
+              <TableRow>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
+                >
+                  {t("aName")}
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
+                >
+                  {t("nativeDetails")}
+                </TableCell>
+              </TableRow>
+            </TableHeader>
+            <TableBody className="divide-y divide-gray-100 dark:divide-white/5">
+              {rows.slice(0, limit).map((r) => (
+                <TableRow
+                  key={text(r, "id")}
+                  className="transition hover:bg-gray-50/50 dark:hover:bg-white/2"
+                >
+                  <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
+                    <div className="flex flex-wrap justify-between gap-3">
+                      <strong className="min-w-0 break-words">
+                        {text(r, "name") ||
+                          text(r, "title") ||
+                          text(r, "code") ||
+                          text(r, "subject") ||
+                          text(r, "order_id") ||
+                          text(r, "id")}
+                      </strong>
+                      <span>
+                        {section === "customers"
+                          ? r.banned_at
+                            ? t("xBanned")
+                            : ""
+                          : text(r, "status")
+                            ? t(
+                                section === "support"
+                                  ? "xs_" + text(r, "status")
+                                  : text(r, "status"),
+                              )
+                            : text(r, "driver_status")
+                              ? t(text(r, "driver_status"))
+                              : r.is_active != null
+                                ? t(r.is_active ? "aOn" : "aOff")
+                                : ""}
+                      </span>
+                    </div>
+                    {!!r.accept_blocked && (
+                      <p className="text-error-500">{t("aBlocked")}</p>
+                    )}
+                    {section === "drivers" && (
+                      <Pair label={t("aCashH")}>
+                        {syntheticCash[text(r, "id")] ?? "—"} /{" "}
+                        {number(r, "cash_limit") || 1000} TJS
+                      </Pair>
+                    )}
+                    <p>{text(r, "phone") || text(r, "comment")}</p>
+                    <p>{text(r, "address")}</p>
+                  </TableCell>
+                  <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
+                    <Action
+                      kind="details"
+                      label={t("nativeDetails")}
+                      onClick={() => navigate({ id: text(r, "id") })}
+                    />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>{" "}
       {!rows.length && (
         <Card>
           <p>{t("aNoRes")}</p>

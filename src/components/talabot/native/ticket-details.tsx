@@ -1,4 +1,7 @@
 "use client";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
 import { Button } from "@/components/ui/button";
 import { syntheticRefundRooms } from "./scenario-responses";
 import { useState } from "react";
@@ -9,7 +12,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { tables, text, number, type Row } from "./domain";
-import { Card, Pair, input } from "./primitives";
+import { Card, Pair } from "./primitives";
 import NativeForm from "./native-form";
 import { mutations } from "./mutation-service";
 interface Props {
@@ -156,8 +159,7 @@ export default function TicketDetails({
           <Card title={t("xDecision")}>
             <label>
               {t("xNotePh")}
-              <textarea
-                className={input}
+              <Textarea
                 maxLength={300}
                 value={draft.note}
                 onChange={(e) => update({ note: e.target.value })}
@@ -167,8 +169,7 @@ export default function TicketDetails({
               <>
                 <label>
                   {t("xRefundPh")}
-                  <input
-                    className={input}
+                  <Input
                     type="number"
                     min="0"
                     step="0.5"

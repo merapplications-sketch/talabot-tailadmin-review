@@ -1,0 +1,74 @@
+[
+  {
+    "section": "Stores",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 3522
+  },
+  {
+    "section": "Couriers",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 2001
+  },
+  {
+    "section": "Customers",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 2116
+  },
+  {
+    "section": "Support",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 1969
+  },
+  {
+    "section": "Texts",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 1487
+  },
+  {
+    "section": "Ratings",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 3957
+  },
+  {
+    "section": "Banners",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 2061
+  },
+  {
+    "section": "Promo codes",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 1820
+  },
+  {
+    "section": "Loyalty",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 2151
+  },
+  {
+    "section": "Log",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 1567
+  },
+  {
+    "section": "Staff",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 1540
+  },
+  {
+    "section": "Orders",
+    "rendered": true,
+    "fatal": false,
+    "snapshotLength": 19680
+  }
+]

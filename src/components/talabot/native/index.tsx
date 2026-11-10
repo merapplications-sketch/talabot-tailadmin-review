@@ -1,4 +1,25 @@
 "use client";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
+} from "@/components/ui/table";
+
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+
+import MetricCard from "@/components/main/dashboard/ecommerce/metrics/metric-card";
+import { BoxIcon, DollarIcon, PieChartIcon, MovingBoxIcon } from "@/icons";
+import { OrderStatusBadge } from "../integrated-review/order-status";
+import type { OrderStatus } from "../orders-data";
 import { Button } from "@/components/ui/button";
 import AdminLayout from "./b-shell/admin-layout";
 import { NativeRouteContext } from "./b-shell/router";
@@ -19,7 +40,7 @@ import {
 } from "./domain";
 import dictionary from "./dictionary.json";
 
-import { Card, input, Action } from "./primitives";
+import { Card, Action } from "./primitives";
 import OperationalAlerts from "./operational-alerts";
 import OrderDetails from "./order-details";
 import EntitySections from "./entity-sections";
@@ -164,31 +185,47 @@ export default function NativeAdmin() {
           ),
           controls: (
             <div className="flex gap-2">
-              <select
-                aria-label="Language"
-                className={input}
+              <Select
                 value={locale}
-                onChange={(e) => {
-                  localStorage.setItem("ux02-native:locale", e.target.value);
+                onValueChange={(value) => {
+                  localStorage.setItem("ux02-native:locale", value ?? "");
                   window.dispatchEvent(new Event("native-locale"));
                 }}
+                items={[
+                  { value: "en", label: "en" },
+                  { value: "ru", label: "ru" },
+                  { value: "tg", label: "tg" },
+                ]}
               >
-                <option>en</option>
-                <option>ru</option>
-                <option>tg</option>
-              </select>
-              <select
-                aria-label="Theme"
-                className={input}
+                <SelectTrigger aria-label="Language">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="en">en</SelectItem>
+                  <SelectItem value="ru">ru</SelectItem>
+                  <SelectItem value="tg">tg</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select
                 value={themeMode}
-                onChange={(e) =>
-                  setThemeMode(e.target.value as "light" | "dark" | "auto")
+                onValueChange={(value) =>
+                  setThemeMode((value ?? "") as "light" | "dark" | "auto")
                 }
+                items={[
+                  { value: "light", label: "Light" },
+                  { value: "dark", label: "Dark" },
+                  { value: "auto", label: "Auto" },
+                ]}
               >
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="auto">Auto</option>
-              </select>
+                <SelectTrigger aria-label="Theme">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="auto">Auto</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
           ),
         }}
@@ -224,12 +261,22 @@ export default function NativeAdmin() {
                     ["aKCom", m.commission.toFixed(2) + " TJS"],
                     ["aKAct", m.active],
                   ].map(([label, value]) => (
-                    <Card key={label}>
-                      <p className="text-sm text-gray-500">
-                        {t(String(label))}
-                      </p>
-                      <strong className="mt-2 block text-2xl">{value}</strong>
-                    </Card>
+                    <MetricCard
+                      key={label}
+                      title={t(String(label))}
+                      value={value}
+                      icon={
+                        label === "aKOrd" ? (
+                          <BoxIcon />
+                        ) : label === "aKRev" ? (
+                          <DollarIcon />
+                        ) : label === "aKCom" ? (
+                          <PieChartIcon />
+                        ) : (
+                          <MovingBoxIcon />
+                        )
+                      }
+                    />
                   ))}
                 </div>
                 <p className="text-sm text-gray-500">{t("nativeScope")}</p>
@@ -237,10 +284,9 @@ export default function NativeAdmin() {
                 <Card title={t("tO")}>
                   <label className="block">
                     {t("uOq")}
-                    <input
+                    <Input
                       ref={queryRef}
                       type="search"
-                      className={input}
                       value={state.query}
                       onChange={(e) =>
                         navigate({ query: e.target.value }, true)
@@ -261,18 +307,27 @@ export default function NativeAdmin() {
                   </div>
                   <details className="mb-3">
                     <summary>{t("nativeTest")}</summary>
-                    <select
-                      aria-label={t("nativeTest")}
+                    <Select
                       value={mode}
-                      className={input}
-                      onChange={(e) => setMode(e.target.value)}
+                      onValueChange={(value) => setMode(value ?? "")}
+                      items={[
+                        ...["normal", "empty", "error", "denied"].map((v) => ({
+                          value: v,
+                          label: t(v),
+                        })),
+                      ]}
                     >
-                      {["normal", "empty", "error", "denied"].map((v) => (
-                        <option key={v} value={v}>
-                          {t(v)}
-                        </option>
-                      ))}
-                    </select>
+                      <SelectTrigger aria-label={t("nativeTest")}>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {["normal", "empty", "error", "denied"].map((v) => (
+                          <SelectItem key={v} value={v}>
+                            {t(v)}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </details>
                   <details className="my-3">
                     <summary>
@@ -283,44 +338,68 @@ export default function NativeAdmin() {
                     <div className="grid gap-3 sm:grid-cols-2">
                       <label>
                         {t("aStoreL")}
-                        <select
-                          className={input}
+                        <Select
                           value={filters.store}
-                          onChange={(e) =>
-                            setFilters({ ...filters, store: e.target.value })
+                          onValueChange={(value) =>
+                            setFilters({ ...filters, store: value ?? "" })
                           }
+                          items={[
+                            { value: "", label: t("aAll") },
+                            ...tables.stores.map((r) => ({
+                              value: text(r, "id"),
+                              label: text(r, "name"),
+                            })),
+                          ]}
                         >
-                          <option value="">{t("aAll")}</option>
-                          {tables.stores.map((r) => (
-                            <option key={text(r, "id")} value={text(r, "id")}>
-                              {text(r, "name")}
-                            </option>
-                          ))}
-                        </select>
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="">{t("aAll")}</SelectItem>
+                            {tables.stores.map((r) => (
+                              <SelectItem
+                                key={text(r, "id")}
+                                value={text(r, "id")}
+                              >
+                                {text(r, "name")}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </label>
                       <label>
                         {t("uFinM")}
-                        <select
-                          className={input}
+                        <Select
                           value={filters.payment}
-                          onChange={(e) =>
-                            setFilters({ ...filters, payment: e.target.value })
+                          onValueChange={(value) =>
+                            setFilters({ ...filters, payment: value ?? "" })
                           }
+                          items={[
+                            { value: "", label: t("aAll") },
+                            ...["cash", "wallet", "apple"].map((k) => ({
+                              value: k,
+                              label: t(k),
+                            })),
+                          ]}
                         >
-                          <option value="">{t("aAll")}</option>
-                          {["cash", "wallet", "apple"].map((k) => (
-                            <option key={k} value={k}>
-                              {t(k)}
-                            </option>
-                          ))}
-                        </select>
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="">{t("aAll")}</SelectItem>
+                            {["cash", "wallet", "apple"].map((k) => (
+                              <SelectItem key={k} value={k}>
+                                {t(k)}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </label>
                       {(["start", "end"] as const).map((k) => (
                         <label key={k}>
                           {k === "start" ? t("aBFrom") : t("aBTo")}
-                          <input
+                          <Input
                             type="date"
-                            className={input}
                             value={filters[k]}
                             onChange={(e) =>
                               setFilters({ ...filters, [k]: e.target.value })
@@ -330,17 +409,26 @@ export default function NativeAdmin() {
                       ))}
                       <label>
                         {lang === "en" ? "Sort" : "Порядок"}
-                        <select
-                          className={input}
+                        <Select
                           value={filters.sort}
-                          onChange={(e) =>
-                            setFilters({ ...filters, sort: e.target.value })
+                          onValueChange={(value) =>
+                            setFilters({ ...filters, sort: value ?? "" })
                           }
+                          items={[
+                            { value: "", label: "—" },
+                            { value: "newest", label: "↓" },
+                            { value: "oldest", label: "↑" },
+                          ]}
                         >
-                          <option value="">—</option>
-                          <option value="newest">↓</option>
-                          <option value="oldest">↑</option>
-                        </select>
+                          <SelectTrigger>
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="">—</SelectItem>
+                            <SelectItem value="newest">↓</SelectItem>
+                            <SelectItem value="oldest">↑</SelectItem>
+                          </SelectContent>
+                        </Select>
                       </label>
                     </div>
                     <p className="text-sm">
@@ -375,52 +463,88 @@ export default function NativeAdmin() {
                       </Button>
                     </div>
                   ) : visible.length ? (
-                    visible.map((o) => (
-                      <article
-                        key={text(o, "id")}
-                        className="border-b border-gray-200 py-4 dark:border-gray-700"
-                      >
-                        <div className="flex flex-wrap justify-between gap-2">
-                          <strong>#{text(o, "id")}</strong>
-                          <span>{t(text(o, "status"))}</span>
-                        </div>
-                        <p className="break-words">
-                          {text(
-                            tables.stores.find((s) => s.id === o.store_id) ||
-                              {},
-                            "name",
-                          )}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          {text(o, "created_at")} · {text(o, "customer_name")} ·{" "}
-                          {tables.order_items
-                            .filter((i) => i.order_id === o.id)
-                            .reduce((sum, i) => sum + number(i, "qty"), 0)}{" "}
-                          {t("aItems")}
-                        </p>
-                        <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-                          <span>
-                            {number(o, "total")} TJS · {t(text(o, "payment"))} ·{" "}
-                            {text(o, "driver_name") || "—"} · {t("aDel")}{" "}
-                            {number(o, "delivery_fee")}
-                          </span>
-                          <Action
-                            label={
-                              t("aDetails") === "aDetails"
-                                ? lang === "en"
-                                  ? "Details"
-                                  : "Подробнее"
-                                : t("aDetails")
-                            }
-                            kind="details"
-                            onClick={() => {
-                              navigate({ id: text(o, "id") });
-                              window.scrollTo(0, 0);
-                            }}
-                          />
-                        </div>
-                      </article>
-                    ))
+                    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/5 dark:bg-white/3">
+                      <div className="max-w-full overflow-x-auto">
+                        <Table>
+                          <TableHeader className="border-b border-gray-100 dark:border-white/5">
+                            <TableRow>
+                              <TableCell
+                                isHeader
+                                className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
+                              >
+                                {t("tO")}
+                              </TableCell>
+                              <TableCell
+                                isHeader
+                                className="px-5 py-3 text-start text-xs font-medium text-gray-500 sm:px-6 dark:text-gray-400"
+                              >
+                                {t("nativeDetails")}
+                              </TableCell>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody className="divide-y divide-gray-100 dark:divide-white/5">
+                            {visible.map((o) => (
+                              <TableRow
+                                key={text(o, "id")}
+                                className="transition hover:bg-gray-50/50 dark:hover:bg-white/2"
+                              >
+                                <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
+                                  <div className="flex flex-wrap justify-between gap-2">
+                                    <strong>#{text(o, "id")}</strong>
+                                    <OrderStatusBadge
+                                      value={text(o, "status") as OrderStatus}
+                                    />
+                                  </div>
+                                  <p className="break-words">
+                                    {text(
+                                      tables.stores.find(
+                                        (s) => s.id === o.store_id,
+                                      ) || {},
+                                      "name",
+                                    )}
+                                  </p>
+                                  <p className="text-sm text-gray-500">
+                                    {text(o, "created_at")} ·{" "}
+                                    {text(o, "customer_name")} ·{" "}
+                                    {tables.order_items
+                                      .filter((i) => i.order_id === o.id)
+                                      .reduce(
+                                        (sum, i) => sum + number(i, "qty"),
+                                        0,
+                                      )}{" "}
+                                    {t("aItems")}
+                                  </p>
+                                  <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+                                    <span>
+                                      {number(o, "total")} TJS ·{" "}
+                                      {t(text(o, "payment"))} ·{" "}
+                                      {text(o, "driver_name") || "—"} ·{" "}
+                                      {t("aDel")} {number(o, "delivery_fee")}
+                                    </span>
+                                  </div>
+                                </TableCell>
+                                <TableCell className="px-5 py-4 text-start text-sm text-gray-500 sm:px-6 dark:text-gray-400">
+                                  <Action
+                                    label={
+                                      t("aDetails") === "aDetails"
+                                        ? lang === "en"
+                                          ? "Details"
+                                          : "Подробнее"
+                                        : t("aDetails")
+                                    }
+                                    kind="details"
+                                    onClick={() => {
+                                      navigate({ id: text(o, "id") });
+                                      window.scrollTo(0, 0);
+                                    }}
+                                  />
+                                </TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </div>
+                    </div>
                   ) : (
                     <p>{t("aNo")}</p>
                   )}
