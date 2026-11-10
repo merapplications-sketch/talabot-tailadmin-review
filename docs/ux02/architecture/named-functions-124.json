@@ -1,0 +1,746 @@
+[
+  {
+    "original": "resizeImg",
+    "proposed_component": "SharedMediaService",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "addStore",
+    "proposed_component": "MerchantCreate",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "pickB",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "linkLabel",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "pickLink",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "draw",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "addBanner",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openBE",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "srvDiff",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "confCard",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "bd",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "bannerImg",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "bannerLink",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "bannerSave",
+    "proposed_component": "BannerEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openStoreEdit",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "ed",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edLogo",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edCover",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edLoc",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edLocClr",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "saveStore",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edRating",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "ownerLine",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "edOwner",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openDrvEdit",
+    "proposed_component": "DriverEditor + CashReceipt",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "dd",
+    "proposed_component": "DriverEditor + CashReceipt",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "saveLimit",
+    "proposed_component": "DriverEditor + CashReceipt",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "settle",
+    "proposed_component": "DriverEditor + CashReceipt",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "oqSet",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "oqRun",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openOrd",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openFrom",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "ordBack",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vOrders",
+    "proposed_component": "OrderSearch + OrderDetails + ListContext",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "finBox",
+    "proposed_component": "OrderFinance",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vDetail",
+    "proposed_component": "OrderDetails",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "brCard",
+    "proposed_component": "MerchantBrandPanel",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "brAtt",
+    "proposed_component": "MerchantBrandPanel",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "brDet",
+    "proposed_component": "MerchantBrandPanel",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "brNew",
+    "proposed_component": "MerchantBrandPanel",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vStoreEdit",
+    "proposed_component": "MerchantEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vDrvEdit",
+    "proposed_component": "DriverEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "drvAct",
+    "proposed_component": "DriverActivity",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tarOpen",
+    "proposed_component": "TariffSettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tarSet",
+    "proposed_component": "TariffSettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tarSave",
+    "proposed_component": "TariffSettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tarCard",
+    "proposed_component": "TariffSettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vStores",
+    "proposed_component": "MerchantList",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vDrivers",
+    "proposed_component": "DriverList",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "bState",
+    "proposed_component": "BannerManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vBanners",
+    "proposed_component": "BannerManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vBannerEdit",
+    "proposed_component": "BannerManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfLoad",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfTog",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfAdd",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfSave",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfActive",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "stfRm",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vStaff",
+    "proposed_component": "StaffPermissions",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "addPromo",
+    "proposed_component": "PromoManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "promoUsed",
+    "proposed_component": "PromoManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "lySave",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "heOpen",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "heSave",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "heDel",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "storeLoy",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vLoyalty",
+    "proposed_component": "LoyaltySettings",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vPromos",
+    "proposed_component": "PromoManager",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "goLive",
+    "proposed_component": "OperationalAvailability",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "livePills",
+    "proposed_component": "OperationalAvailability",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cmtParts",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "ratingBlock",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "resModal",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "saveRes",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vRatings",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "lowAlert",
+    "proposed_component": "RatingReview",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "loadLog",
+    "proposed_component": "AuditLog + ClientErrors",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vLog",
+    "proposed_component": "AuditLog + ClientErrors",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "supCard",
+    "proposed_component": "SupportContacts",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "supSave",
+    "proposed_component": "SupportContacts",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vSupportA",
+    "proposed_component": "SupportInbox",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vTicketA",
+    "proposed_component": "TicketDetails",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "refundBox",
+    "proposed_component": "RefundPanel + TicketDecision",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tkRoomChk",
+    "proposed_component": "RefundPanel + TicketDecision",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tkSendA",
+    "proposed_component": "RefundPanel + TicketDecision",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tkStatus",
+    "proposed_component": "RefundPanel + TicketDecision",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuLoad",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuPhone",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuMore",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuOpen",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuWal",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "cuBan",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vCustomers",
+    "proposed_component": "CustomerProfile + CustomerWallet + CustomerOrderHistory",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "srqCard",
+    "proposed_component": "MerchantApproval",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "srqDecide",
+    "proposed_component": "MerchantApproval",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "pgVal",
+    "proposed_component": "TextsEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "pgSet",
+    "proposed_component": "TextsEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "pgSave",
+    "proposed_component": "TextsEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "vTexts",
+    "proposed_component": "TextsEditor",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "noCourier",
+    "proposed_component": "OperationalAlerts + AssignmentDialog",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "assignModal",
+    "proposed_component": "OperationalAlerts + AssignmentDialog",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "doAssign",
+    "proposed_component": "OperationalAlerts + AssignmentDialog",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "mapModal",
+    "proposed_component": "OperationsMap",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "openMap",
+    "proposed_component": "OperationsMap",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "alerts",
+    "proposed_component": "OperationalAlerts",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "render0",
+    "proposed_component": "AdminShell + HomeMetricsA",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "selDef",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "formKeep",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "setVal",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "confNote",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "confTake",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "formBack",
+    "proposed_component": "FormDraft + ConflictNotice",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "scrollHold",
+    "proposed_component": "ListContext + FocusRestore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "autoR",
+    "proposed_component": "DataSubscription",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "uiSave",
+    "proposed_component": "ViewStateStore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "uiSoon",
+    "proposed_component": "ViewStateStore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "uiClear",
+    "proposed_component": "ViewStateStore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "uiRestore",
+    "proposed_component": "ViewStateStore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "paint",
+    "proposed_component": "React rendering lifecycle",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tabTop",
+    "proposed_component": "NavigationScrollRestore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "tabKeep",
+    "proposed_component": "NavigationScrollRestore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "hsKeep",
+    "proposed_component": "NavigationScrollRestore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "hsBack",
+    "proposed_component": "NavigationScrollRestore",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  },
+  {
+    "original": "render",
+    "proposed_component": "React rendering lifecycle",
+    "status": "NOT MIGRATED",
+    "rule": "Preserve behavior and contract; replace DOM rendering only after parity verification."
+  }
+]
