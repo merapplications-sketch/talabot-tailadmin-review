@@ -1,0 +1,58 @@
+[
+  {
+    "id": "D10",
+    "panel": "قرار الدعم داخل Dialog\n\nSupport\nDemo customer · synthetic account\n\nticket1 · ord1 · demo refund room 106 TJS · presentation only, not a contract test."
+  },
+  {
+    "id": "D11",
+    "panel": "تحرير داخل Dialog\n\nbanners\n\nالتمثيل هنا لموضع نموذج B، وليس نقلاً كاملاً لحقول هذا القسم أو صلاحياته.\n\nEdit"
+  },
+  {
+    "id": "D12",
+    "panel": "Card الأصلية دون تخصيص\n\nمؤشرات A المعروضة أعلى الصفحة تستخدم Card من B. بيانات A مستقلة عن مؤشرات B الموجودة بعد التحليلات؛ الضغط لا يغيّر الحسابات."
+  },
+  {
+    "id": "D13",
+    "panel": "أيقونات B مع النص الظاهر\n\nCall\nEdit\nLocation\nChat\nWallet / Location\nMapIcon أصلي من B. لا توجد أيقونة Wallet منفردة في الجرد؛ يظهر نص المحفظة داخل But"
+  },
+  {
+    "id": "D14",
+    "panel": "غير ممثّل: وجهات الشريط السفلي غير محسومة\n\nNOT REPRESENTED\nMobileNavigation في B موجود، لكن وجهاته لا تطابق أقسام A الاثني عشر دون قرار. لا شريط جديد."
+  },
+  {
+    "id": "D01",
+    "panel": "بحث القائمة والرأس بالحالة نفسها\n\nOrders\nSearch orders\nStatus\nall\nID\tCustomer\tStatus\tDetails\nord1\tDe"
+  },
+  {
+    "id": "D02",
+    "panel": "ضوابط اللغة والمظهر داخل نافذة B\n\nLanguage / Theme"
+  },
+  {
+    "id": "D03",
+    "panel": "فتح التنبيهات في نافذة B\n\n3 · Details"
+  },
+  {
+    "id": "D04",
+    "panel": "التفاصيل الثانوية داخل Tabs B\n\nOrders\nSearch orders\nStatus\nall\nID\tCustomer\tStatus\tDetails\nord1\tDemo "
+  },
+  {
+    "id": "D05",
+    "panel": "المعاني المالية داخل Dialog B\n\nPayment / Collection / Settlement"
+  },
+  {
+    "id": "D06",
+    "panel": "الإسناد من صف الطلب\n\nOrders\nSearch orders\nStatus\nall\nID\tCustomer\tStatus\tDetails\nord1\tDemo customer\tp"
+  },
+  {
+    "id": "D07",
+    "panel": "المحفظة ظاهرة والسجل داخل Tabs\n\nCustomer\nDemo customer · synthetic account\nWallet: 50 TJS\nWallet\nTim"
+  },
+  {
+    "id": "D08",
+    "panel": "الإجراءات داخل Dialog B\n\nCourier\nDemo customer · synthetic account\nCash: 1250 · Limit: 1000 TJS\nDeta"
+  },
+  {
+    "id": "D09",
+    "panel": "الموافقة داخل التفاصيل\n\nDemo store"
+  }
+]

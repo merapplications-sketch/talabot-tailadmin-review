@@ -1,0 +1,25 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 build:gallery
+> vite build --config gallery/vite.config.ts
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../config/svg-components" without a file extension (gallery/vite.config.ts:4:31). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 604 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.73 kB │ gzip:   0.43 kB
+dist/assets/talabot-original-MIjVQ1p2.png      42.26 kB
+dist/assets/index-CnrL-fFc.css                279.47 kB │ gzip:  37.03 kB
+dist/assets/index-6iN2KJTo.js                 636.57 kB │ gzip: 190.65 kB
+dist/assets/react-apexcharts.esm-2emDDeIe.js  925.80 kB │ gzip: 264.76 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.84s

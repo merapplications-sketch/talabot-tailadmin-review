@@ -3,7 +3,7 @@
   "version": "2.5.0",
   "private": true,
   "scripts": {
-    "dev": "vite --config native-preview/vite.config.ts",
+    "dev": "vite --config gallery/vite.config.ts",
     "build": "vite build",
     "start": "next start",
     "lint": "eslint .",
@@ -11,7 +11,8 @@
     "build:vinext": "vite build",
     "start:vinext": "vite preview",
     "deploy:vinext": "vinext-cloudflare deploy",
-    "build:native": "vite build --config native-preview/vite.config.ts"
+    "build:native": "vite build --config native-preview/vite.config.ts",
+    "build:gallery": "vite build --config gallery/vite.config.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
