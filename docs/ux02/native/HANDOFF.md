@@ -38,3 +38,11 @@ Lint:0 أخطاء و46 تحذيراً حالياً. سجل47 الأصلي محف
 إكمال بوابة المرحلة2 أولاً (الإسناد والتنبيهات ومطابقة حالة البحث/التمرير والمدخلات/النتائج)، ثم إتمام الأطراف وبقية الإدارة وفق المصفوفة، وحفظ بعيد بعد كل بوابة. الموافقة الحالية تكفي لهذه الأعمال؛ لا حاجة لإعادة سؤال المالك عن القرارات الخمسة. أي فجوة عقد حقيقية تُوثق ولا تُحسم بالافتراض.
 لا تنشر المسودات باعتبارها نسخة موحدة مكتملة. لا تستخدم .openai/hosting.json الموروث للنشر: هويته تخص D2 المحمية. أي معاينة لاحقة قابلة للمراجعة يجب أن تملك مشروعاً مستقلاً.
 A/B/C/D2 والإنتاج والمصادر المرجعية محفوظة دون تعديل. لا merge ولا force-push ولا تغيير خادم/بيانات/صلاحيات.
+
+## Continuation checkpoint after f692cf4
+
+Native assignment, operational alerts, ticket decisions and 37 offline original client mutation methods added. Exact payload allowlists and pending/error/draft handling added. Synthetic financial response scenarios explicitly identified in scenario-responses.ts. These are not server results.
+
+17 new focused checks PASS; native Build PASS; TypeScript PASS. Current full lint classification: continuation/lint-summary.md. Existing unaffected 48 checks were not rerun. Browser tests for this new batch, 320/390/1440 and physical Safari remain NOT TESTED.
+
+Stages 2–5 remain PARTIAL. No new public preview or version published. Stage 6 acceptance is blocked by incomplete interaction/field/handler coverage. Resume with new dialog interaction tests, complete order search/scroll/draft/error journeys, then remaining administration, images/maps, B notifications/settings. Keep remote checkpoints and do not publish with inherited D2 hosting identity.
