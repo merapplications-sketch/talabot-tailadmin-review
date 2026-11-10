@@ -5,7 +5,10 @@
     "status": "VERIFIED SAMPLE",
     "evidence_and_gap": "SummaryCards الأصلي مع polish.css؛ قيم A 7/415/44/4 ونطاقها دون تغيير. المؤشرات معلومات وليست أزراراً. screenshot home-desktop.jpg.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vOrders; B preview.tsx SummaryCards",
+    "component": "native/index.tsx + b-shell/summary-cards.tsx",
+    "test_and_result": "regression-domain.log; composition; v5-home-1363.jpg"
   },
   {
     "id": "FP02",
@@ -13,7 +16,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A livePills/goLive",
+    "component": "native/operational-alerts.tsx + order-operations.ts",
+    "test_and_result": "regression-operations.log; displayed desktop only, not every action"
   },
   {
     "id": "FP03",
@@ -21,7 +27,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A alerts/lowAlert/noCourier",
+    "component": "native/operational-alerts.tsx",
+    "test_and_result": "regression-operations.log; full alert interaction NOT VERIFIED"
   },
   {
     "id": "FP04",
@@ -29,34 +38,46 @@
     "status": "VERIFIED SAMPLE",
     "evidence_and_gap": "فُتحت الأقسام الاثنا عشر في Chromium بعرض 1363؛ root واحد وiframe صفر. لا إثبات لكل رحلة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A tabKeep/render; B AdminLayout/AppSidebar/AppHeader",
+    "component": "native/b-shell/* + navigation.ts",
+    "test_and_result": "browser-evidence: 12 section openings; v5-final-build root1/iframe0"
   },
   {
     "id": "FP05",
     "function": "بحث الطلبات",
     "status": "PARTIAL",
     "evidence_and_gap": "اختبار جديد: بحث ord1 ثم تفاصيل ثم رجوع حفظ البحث.",
-    "current_batch": "تم تصحيح تركيب المصدر؛ ثمانية فحوص SSR ناجحة. فحص التفاعل والعرض الجديد محجوب ولا يرفع حالة المطابقة.",
+    "current_batch": "browser: order-search/order-back-search/reload-search; regression-domain.log",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A oqSet/oqRun; B OrdersList search",
+    "component": "native/domain.ts + b-shell/list-patterns.tsx",
+    "test_and_result": "browser: order-search/order-back-search/reload-search; regression-domain.log"
   },
   {
     "id": "FP06",
     "function": "حالات الطلب",
     "status": "PARTIAL",
     "evidence_and_gap": "أربع اختصارات وفلتر شامل؛ Preparing أعاد ord1 وCancelled أعاد ord5. OrderStatusBadge محفوظ. المقاسات المطلوبة غير مثبتة.",
-    "current_batch": "تم تصحيح تركيب المصدر؛ ثمانية فحوص SSR ناجحة. فحص التفاعل والعرض الجديد محجوب ولا يرفع حالة المطابقة.",
+    "current_batch": "browser: all-seven-status-interactions; 7 statuses -> ord0..ord6",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A order status enum; B OrdersList/OrderStatusBadge",
+    "component": "native/b-shell/list-patterns.tsx + integrated-review/order-status.tsx",
+    "test_and_result": "browser: all-seven-status-interactions; 7 statuses -> ord0..ord6"
   },
   {
     "id": "FP07",
     "function": "الفترة والفرز والفلاتر الثانوية",
     "status": "PARTIAL",
     "evidence_and_gap": "فلاتر B Select متصلة بالقيم السابقة؛ تقاطع ord1 وWallet صفر نتائج ثم All يعيد7. بقية الفلاتر/مسحها تحتاج تغطية.",
-    "current_batch": "تم تصحيح تركيب المصدر؛ ثمانية فحوص SSR ناجحة. فحص التفاعل والعرض الجديد محجوب ولا يرفع حالة المطابقة.",
+    "current_batch": "browser: secondary-payment/all-status-filter/reset; invalid range logic test; full dates/store/sort interaction NOT VERIFIED",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B OrdersList secondary filters; A native row fields",
+    "component": "native/domain.ts secondaryFilter + b-shell/list-patterns.tsx",
+    "test_and_result": "browser: secondary-payment/all-status-filter/reset; invalid range logic test; full dates/store/sort interaction NOT VERIFIED"
   },
   {
     "id": "FP08",
@@ -64,7 +85,11 @@
     "status": "PARTIAL",
     "evidence_and_gap": "Table الأصلي مع نمطTableOne يحفظ كل معلومات الصف السابق. لا دليل اكتمال320/390/1440.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vOrders; B OrdersList table/cards",
+    "component": "native/b-shell/list-patterns.tsx",
+    "test_and_result": "composition SSR + v4-orders-list-1363.jpg; 320/390/1440 NOT TESTED",
+    "current_batch": "composition SSR + v4-orders-list-1363.jpg; 320/390/1440 NOT TESTED"
   },
   {
     "id": "FP09",
@@ -72,7 +97,11 @@
     "status": "PARTIAL",
     "evidence_and_gap": "رجوع دعم→طلب→دعم وعميل→طلب قديم→عميل مختبر؛ التمرير الكامل لم يُقبل.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A openOrd/ordBack/hsBack; B useListing",
+    "component": "native/navigation.ts + b-route.ts",
+    "test_and_result": "browser: search/reload/notification-order-back/scroll-visible-target; broad scroll guarantee NOT VERIFIED",
+    "current_batch": "browser: search/reload/notification-order-back/scroll-visible-target; broad scroll guarantee NOT VERIFIED"
   },
   {
     "id": "FP10",
@@ -80,7 +109,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "الأطراف بترتيب المنشأة/السائق/العميل؛ الإسناد وصورة التسليم غير مكتملين.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail/assignModal/doAssign; selected C party order",
+    "component": "native/order-details.tsx + assignment-dialog.tsx",
+    "test_and_result": "browser: ord1/ord5 detail fields; assignment source tests only"
   },
   {
     "id": "FP11",
@@ -88,7 +120,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "تفاصيل الأصناف والخصومات والتوصيل؛ تحتاج مطابقة مرئية شاملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail order items/options/totals",
+    "component": "native/order-details.tsx",
+    "test_and_result": "browser ord1 item/fee/tip/total visible; full field interaction NOT VERIFIED"
   },
   {
     "id": "FP12",
@@ -96,7 +131,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "تمييز النقد والمحفظة والتحصيل والتسوية والعمولة؛ حالات المجال مختبرة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A finBox; original mutation contracts",
+    "component": "native/order-details.tsx + domain.ts finance",
+    "test_and_result": "regression-domain.log; browser ord1 cash/ord5 online distinction; real settlement NOT TESTED"
   },
   {
     "id": "FP13",
@@ -104,7 +142,11 @@
     "status": "PARTIAL",
     "evidence_and_gap": "Accordion الأصلي مغلق افتراضياً؛ فتح Timeline وChat أظهر5 أحداث ورسالتين وفروق الزمن نفسها. خط الرحلة بالبرتقالي المعتمد.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail Timeline/cmtParts; B Accordion",
+    "component": "native/order-details.tsx",
+    "test_and_result": "browser: explicit Timeline/Chat open, 5 events/2 messages; actual call/map handoff NOT TESTED",
+    "current_batch": "browser: explicit Timeline/Chat open, 5 events/2 messages; actual call/map handoff NOT TESTED"
   },
   {
     "id": "FP14",
@@ -112,7 +154,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "بحث وقائمة وموافقات وتعرفة مسودة؛ مطابقة التفاعلات غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStores/srqCard/tarCard; B Grid/Forms",
+    "component": "native/entity-sections.tsx restaurants + b-shell/entity-grid.tsx",
+    "test_and_result": "browser store-list screenshot; complete approval/tariff journey NOT VERIFIED"
   },
   {
     "id": "FP15",
@@ -120,7 +165,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "حقول React وتحقق هاتف/خصم؛ الملكية والخريطة والصور غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStoreEdit/saveStore/edOwner/edCover/edLogo/edLoc",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "regression-validation.log; images/location/ownership end-to-end NOT VERIFIED"
   },
   {
     "id": "FP16",
@@ -128,7 +176,10 @@
     "status": "NOT COMPLETE",
     "evidence_and_gap": "الفروع وموافقات الأصناف غير منقولة بالكامل.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "brCard/brandAttach/brandDetach/brandCreate and approveItem source/transport contracts preserved. No full branch-management contract inferred. Exact B placement for remaining action surfaces unresolved; no new UI implemented."
+    "continuation": "Six offline contract tests PASS. UI/actions/confirmation placement remains unresolved. Source only proves approval and brand association/create/detach, not complete branch/menu/hours management.",
+    "source": "A brCard/brAtt/brDet/brNew; approveItem in vStores/core",
+    "component": "native/mutation-service.js; merchant brand summary only",
+    "test_and_result": "branch-contracts.log 6 PASS; UI placement/confirmations not implemented; no full menu/hours CRUD inferred"
   },
   {
     "id": "FP17",
@@ -136,7 +187,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "قائمة وتفاصيل سائق؛ الخريطة وحالات الاتصال تحتاج مطابقة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDrivers/vDrvEdit/driver activity",
+    "component": "native/entity-sections.tsx drivers + order-operations.ts",
+    "test_and_result": "browser courier-list; heartbeat/eligibility logic tests; actual maps/phone NOT TESTED"
   },
   {
     "id": "FP18",
@@ -144,7 +198,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "حد النقد ظاهر؛ الرصيد غير المتاح معلن دون افتراض صفر.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A driver cash/limit/accept_blocked",
+    "component": "native/entity-sections.tsx + operational-alerts.tsx",
+    "test_and_result": "regression-operations/validation; cash alert rendered; full sensitive journey NOT VERIFIED"
   },
   {
     "id": "FP19",
@@ -152,7 +209,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "نموذج الحد ومسودة إجراءات؛ الاستلام والتأكيدات غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A openDrvEdit/saveLimit/settle/drvAct",
+    "component": "native/native-form.tsx + mutation-action.tsx + mutation-service.js",
+    "test_and_result": "logic/contract tests only; cash receipt/confirmations end-to-end NOT VERIFIED"
   },
   {
     "id": "FP20",
@@ -160,7 +220,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "العينات اصطناعية؛ قائمة السائقين تُرشح الدور؛ مطابقة جرد الأصل مفتوحة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDrivers and preserved sample data",
+    "component": "native/fixture.json + entity-sections.tsx role filter",
+    "test_and_result": "source preserved; courier list opened; exhaustive fixture parity NOT VERIFIED"
   },
   {
     "id": "FP21",
@@ -168,7 +231,11 @@
     "status": "PARTIAL",
     "evidence_and_gap": "قائمة/ملف/هاتف وحظر مسودات؛ مجاميع الطلبات والإنفاق غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vCustomers/cuOpen/cuPhone/cuBan",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "browser customer file/phone edit/preview refusal; full totals/ban journey NOT VERIFIED",
+    "current_batch": "browser customer file/phone edit/preview refusal; full totals/ban journey NOT VERIFIED"
   },
   {
     "id": "FP22",
@@ -176,7 +243,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "محفظة بعد الملخص؛ رصيد اصطناعي50؛ تصحيح10 يرجع PREVIEW ويبقي الرصيد. الرجوع يعيد المسودة. الأصلcuWal لا يتضمنconfirm؛ لا اعتماد مالي.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A cuWal; selected C wallet position",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "wallet50 shown after summary; prior sample wallet proof retained; full ledger/financial confirmation NOT VERIFIED"
   },
   {
     "id": "FP23",
@@ -184,15 +254,21 @@
     "status": "VERIFIED SAMPLE",
     "evidence_and_gap": "50 من 62 ثم 62 من 62 ثم فتح h938 والرجوع مع بقاء العدد؛ مثبت بالمتصفح.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A cuMore/customer order history",
+    "component": "native/entity-sections.tsx history helper",
+    "test_and_result": "prior 50/62 ->62/62 browser proof; unchanged; regression-domain checks62, no fresh full rerun"
   },
   {
     "id": "FP24",
     "function": "الإشعارات والجرس",
     "status": "PARTIAL",
-    "evidence_and_gap": "مركز إشعارات B غير منقول.",
+    "evidence_and_gap": "B dropdown/page/local read state wired to explicit synthetic A-order examples. Desktop search/read/filter/reload/order/back verified. Phone/Safari and production notifications not tested; no alert generation rules inferred.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "B NotificationDropdown + NotificationsPage + useReadNotices reused with exact local native-order IDs. Route, return URL, source render and read-state tests PASS. Browser regression pending; phone/Safari not tested."
+    "continuation": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked",
+    "source": "B NotificationDropdown/NotificationsPage/useReadNotices",
+    "component": "layout/header/notification-dropdown + workspace.tsx + native/notifications.ts + b-route.ts",
+    "test_and_result": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked"
   },
   {
     "id": "FP25",
@@ -200,7 +276,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "عرض تذكرة ورسائل ومسودة رد وقرار؛ قيود الحالات المغلقة غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vSupportA/vTicketA/tkSendA",
+    "component": "native/ticket-details.tsx + entity-sections.tsx",
+    "test_and_result": "support list opened; previous contract tests retained; closed-state reply guards NOT COMPLETE"
   },
   {
     "id": "FP26",
@@ -208,7 +287,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "حد الاسترداد غير متاح؛ تأكيد الاسترداد وربطه بالعقد لم يكتمل.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A refundBox/tkStatus/ticketSetStatus",
+    "component": "native/ticket-details.tsx + mutation-service.js",
+    "test_and_result": "negative/rejected-reason tests PASS; refund allowance unavailable; real refund NOT TESTED"
   },
   {
     "id": "FP27",
@@ -216,7 +298,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "قائمة/تفاصيل/مسودة حل؛ فلاتر ومتوسطات وإعادة فتح غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vRatings/ratingBlock/resModal/saveRes",
+    "component": "native/entity-sections.tsx ratings",
+    "test_and_result": "low-rating contract tests; list opened; averages/filter/reopen incomplete"
   },
   {
     "id": "FP28",
@@ -224,7 +309,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "حقول وجدولة مسودة؛ الصور والروابط وتعارض تحديث موظف آخر غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vBanners/vBannerEdit/bannerSave/pickLink",
+    "component": "native/entity-sections.tsx banners + native-form.tsx",
+    "test_and_result": "validation tests; list opened; images/link/conflict journey incomplete"
   },
   {
     "id": "FP29",
@@ -232,7 +320,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "نماذج عروض وولاء وساعات؛ بعض التحقق منقول؛ التفاعلات والتعارضات غير مكتملة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vPromos/vLoyalty/lySave/heSave/storeLoy",
+    "component": "native/entity-sections.tsx promotions/loyalty",
+    "test_and_result": "validation/overnight HH contract tests; sections opened; full interaction/conflicts incomplete"
   },
   {
     "id": "FP30",
@@ -240,7 +331,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "مالية الطلب وتحليلات B موجودة؛ لا ادعاء تقرير إنتاجي أو إيصالات إضافية.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A finBox/settle; B AnalyticsDashboard finances",
+    "component": "native/order-details.tsx + analytics.tsx",
+    "test_and_result": "analytics-data tests; financial source unchanged; no production receipt/accounting inference"
   },
   {
     "id": "FP31",
@@ -248,7 +342,11 @@
     "status": "PARTIAL",
     "evidence_and_gap": "مصدرا AnalyticsDashboard وanalytics-data دون تعديل؛ 12 اختبار حسابات وخمسة رسوم ظهرت.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B analytics.tsx/analytics-data.ts complete source",
+    "component": "AnalyticsDashboard + native B SummaryCards adapter",
+    "test_and_result": "12 data tests; browser Today102/sales10494/Monday/area quality; all groups retained, not every hover/drilldown tested",
+    "current_batch": "12 data tests; browser Today102/sales10494/Monday/area quality; all groups retained, not every hover/drilldown tested"
   },
   {
     "id": "FP32",
@@ -256,15 +354,21 @@
     "status": "PARTIAL",
     "evidence_and_gap": "حقول الصلاحيات الخمس الأصلية؛ لا إثبات RBAC؛ تحرير/حذف الموظف غير مكتمل.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStaff/stfSave/stfActive/stfRm",
+    "component": "native/entity-sections.tsx staff + mutation-service.js",
+    "test_and_result": "permission allowlist tests; section opened; edit/delete and backend RBAC NOT VERIFIED"
   },
   {
     "id": "FP33",
     "function": "سجل العمليات والأخطاء",
     "status": "PARTIAL",
-    "evidence_and_gap": "مصدر العينة فارغ؛ واجهة أولية فقط، لا إثبات معالجة السجل.",
+    "evidence_and_gap": "Original audit/error fields, sorting, cap, empty states, tab and refresh rendered with existing B primitives. Populated render tested in SSR only; real logs/RBAC/network errors not verified.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "A audit/clientErrors and vLog fields connected to existing native log section using B Card/Field/Button. Sorting/cap/actor/null/truncation and empty/populated render tests PASS. Browser empty/filter/refresh pending; live backend/RBAC not tested."
+    "continuation": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED",
+    "source": "A loadLog/vLog; core audit/clientErrors",
+    "component": "native/entity-sections.tsx log + log-data.ts + existing B Card/Field/Button",
+    "test_and_result": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED"
   },
   {
     "id": "FP34",
@@ -272,7 +376,10 @@
     "status": "PARTIAL",
     "evidence_and_gap": "Language/Appearance باستخدام تركيب SettingsPage الأصلي داخل قسم النصوص الموجود، دون قسم ملاحة جديد. نماذج النصوص محفوظة.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vTexts/pgSave/setPage; B SettingsPage",
+    "component": "native/entity-sections.tsx + b-shell/settings.tsx",
+    "test_and_result": "settings opened; existing RU/EN draft contracts; full text error/save journey incomplete"
   },
   {
     "id": "FP35",
@@ -280,16 +387,23 @@
     "status": "PARTIAL",
     "evidence_and_gap": "EN/RU/TG وLight/Dark رُصدت؛ Auto بقي بعد إعادة التحميل. TG للعمليات يعود RU بإشعار صريح. ليست مصفوفة كل الصفحات.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B settings + context/theme-context.tsx + messages",
+    "component": "native-preview/main.tsx + b-shell/settings.tsx + ThemeProvider",
+    "test_and_result": "browser EN/RU/TG and Light/Dark/Auto; TG operations RU fallback; not full cross-product/screen matrix",
+    "current_batch": "browser EN/RU/TG and Light/Dark/Auto; TG operations RU fallback; not full cross-product/screen matrix"
   },
   {
     "id": "FP36",
     "function": "الألوان والشعار والمكونات",
     "status": "PARTIAL",
     "evidence_and_gap": "SummaryCards/OrdersList/Grid وPersonalInformationSection/EditPersonalInfoDialog أنماط B مستخدمة مع محولات بيانات A. لا قبول بصري نهائي؛ 320/390/1440 وSafari غير مثبتة.",
-    "current_batch": "تم تصحيح تركيب المصدر؛ ثمانية فحوص SSR ناجحة. فحص التفاعل والعرض الجديد محجوب ولا يرفع حالة المطابقة.",
+    "current_batch": "SSR hierarchy + screenshots; dense long-text wrapping remains; no CSS/color edits",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B original shell/primitives/icons; approved orange/logo",
+    "component": "native/b-shell + components/ui + original logo",
+    "test_and_result": "SSR hierarchy + screenshots; dense long-text wrapping remains; no CSS/color edits"
   },
   {
     "id": "FP37",
@@ -297,6 +411,9 @@
     "status": "VERIFIED SAMPLE",
     "evidence_and_gap": "الأصول محفوظة خارج مسار التطبيق الأصلي React؛ لا صفحات قالب ضمن ملاحة التشغيل.",
     "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
-    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS."
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "Original B template demonstration routes",
+    "component": "preserved src/app reference pages, excluded native sidebar",
+    "test_and_result": "source unchanged; 12-link native sidebar only; source preservation, not all demo pages retested"
   }
 ]

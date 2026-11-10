@@ -1,0 +1,208 @@
+[
+  {
+    "file": "v3-home-1363.jpg",
+    "sha256": "cc7fbc39f7c970d1f9cc5baa271de5e69378d09419e70164bf399aea5c07a90f",
+    "version": 3,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "bbef27fd30c7d27b0397189fb8f3977c50f3a4f9",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-analytics-quality-1363.jpg",
+    "sha256": "882a00f3e15b52df8fdefbc8104ba49dde15835f37feeb2dc496154fa9c2a2b6",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-couriers-list-1363.jpg",
+    "sha256": "18fb086edf6666b555f1b53b1c73c413e9ec44086170185a6ef73851dae051bd",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-customer-details-1363.jpg",
+    "sha256": "118f037c82709229aea884b1306978eff4540019661a38eda58645d123afecb1",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-customer-edit-1363.jpg",
+    "sha256": "7ffa00ad8414b3e5b52396d85dfa37ac41e5a5a3ea3e857f6329bd551c4627d3",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-customers-list-1363.jpg",
+    "sha256": "e2680b7673e0e8fc37372c5830c568e6c0b86af7f46db5303f3435401b1c2864",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-home-1363.jpg",
+    "sha256": "7a909fb47920666848e1f8820af047bb92f847a9ddda287a2dede80a30aeb082",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-log-errors-1363.jpg",
+    "sha256": "950321fe6aaff6236c6f6d8d365335a34f22755cc720d5bd833d1b0d05bcf1b9",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-notification-bell-1363.jpg",
+    "sha256": "9402f6809de4ed3ae94e2315d076ea8617243d81c89de999b6357901ef79f753",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-notification-list-1363.jpg",
+    "sha256": "968101bdf14651310dbdf29be6fad41270d57854dc8c47e3aa4f9c02d93af26d",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-order-details-1363.jpg",
+    "sha256": "6d49b1d4d210b26b30303a56adaa4958c97e6a6fd69839d4cf996c8da663d353",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-orders-list-1363.jpg",
+    "sha256": "1412d0533b95c21b11060917f915d66bef225d37a9f3147427d5e17e6579832a",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-settings-dark-1363.jpg",
+    "sha256": "cf08faa0881a41ed9eb7fc98695e16c0a120edabf82194e0539c6c668c9c9755",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-settings-tg-1363.jpg",
+    "sha256": "0ae9036676fd07f5efb989f2892ab36bedcd3959b703d2646673ddf4e452c080",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-stores-list-1363.jpg",
+    "sha256": "cfc1ed34ad8bf5d901c4c847bcdf36abcbdd673a2844532ed0721e83a4dc149f",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v4-support-list-1363.jpg",
+    "sha256": "0e2a72409fdbc397cf35ce2020a6a1fe7a325a43ce867b76b6387aa4c9b1ea05",
+    "version": 4,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "ebc4782c398f0f2cf6d3df1e8bfc543edef12640",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v5-home-1363.jpg",
+    "sha256": "33e978c72f4853534bd40bf7f2829c4fd55c3157dc52d781dd1326dfdf2fb680",
+    "version": 5,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "4297dee6ae2948db720d24f604f31e0214264e51",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "v5-notification-details-1363.jpg",
+    "sha256": "d8da9cbc5f60d80c801a239ff8b5e93b94156b93db583f54b8f39d6ecf6e4a86",
+    "version": 5,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "4297dee6ae2948db720d24f604f31e0214264e51",
+    "note": "Actual connected Chromium viewport, not a mobile/Safari screenshot"
+  },
+  {
+    "file": "viewport-blocked.png",
+    "sha256": "98c59dd41c84df4138a1309c53ef205cc37132789a674144d4b4b22596f96008",
+    "version": null,
+    "viewport": null,
+    "source_commit": null,
+    "note": "Desktop policy dialog evidence"
+  }
+]

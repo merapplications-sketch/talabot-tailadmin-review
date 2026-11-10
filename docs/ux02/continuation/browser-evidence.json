@@ -1,0 +1,291 @@
+[
+  {
+    "check": "initial-render",
+    "result": {
+      "height": 936,
+      "iframes": 0,
+      "openDetails": 0,
+      "pageWidth": 1348,
+      "rootCount": 1,
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-C1bE4qOu.js"
+      ],
+      "searchCount": 1,
+      "width": 1363
+    }
+  },
+  {
+    "check": "order-search",
+    "query": "ord1",
+    "count": 1
+  },
+  {
+    "check": "order-detail",
+    "result": "ord1; parties/items/payment visible; Timeline and Chat initially closed, opened explicitly"
+  },
+  {
+    "check": "order-back-search",
+    "value": "ord1"
+  },
+  {
+    "check": "reload-search",
+    "result": "ord1 restored and one detail button visible"
+  },
+  {
+    "check": "secondary-payment",
+    "result": 0
+  },
+  {
+    "check": "all-status-filter",
+    "result": "Cancelled -> ord5; all seven statuses selectable"
+  },
+  {
+    "check": "notification-mark-read",
+    "disabled": true
+  },
+  {
+    "check": "notification-order-back",
+    "result": "ord5 exact; returns native-ord5 with q=ord5,state=unread and read state intact"
+  },
+  {
+    "check": "notification-reload",
+    "disabled": true
+  },
+  {
+    "check": "notification-unread-after-mark",
+    "result": "0 results; q and unread preserved"
+  },
+  {
+    "check": "log-empty-refresh-reload",
+    "result": "Actions: No entries yet; Errors: No errors — great; retry works; Errors remains selected after reload"
+  },
+  {
+    "check": "edit-close-reopen",
+    "reason": "QA local draft only"
+  },
+  {
+    "check": "synthetic-save",
+    "result": "explicit preview_readonly alert; draft retained, no success claim"
+  },
+  {
+    "check": "reload-edit-closed",
+    "dialogs": 0
+  },
+  {
+    "check": "draft-after-reload",
+    "reason": "QA local draft only"
+  },
+  {
+    "check": "open-section-stores",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1348,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search store or category…\n  - searchbox \"Search store or category…\"\n  - com"
+  },
+  {
+    "check": "open-section-couriers",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search\n  - searchbox \"Search\"\n  - table:\n    - rowgroup:\n      - row \"Name "
+  },
+  {
+    "check": "open-section-support",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search\n  - searchbox \"Search\"\n  - combobox \"Status\":\n    - generic: All\n  -"
+  },
+  {
+    "check": "open-section-settings",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Language\n  - combobox \"Language\":\n    - option \"English\" [selected]\n    - o"
+  },
+  {
+    "check": "open-section-ratings",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1348,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search\n  - searchbox \"Search\"\n  - table:\n    - rowgroup:\n      - row \"Name "
+  },
+  {
+    "check": "open-section-banners",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search\n  - searchbox \"Search\"\n  - button \"Add banner\"\n  - table:\n    - rowg"
+  },
+  {
+    "check": "open-section-promos",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - text: Search\n  - searchbox \"Search\"\n  - button \"Add promo code\"\n  - table:\n    - "
+  },
+  {
+    "check": "open-section-loyalty",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1348,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Loyalty\" [level=2]\n  - button \"Loyalty\":\n  - heading \"Ресторан «Дар-ул-Х"
+  },
+  {
+    "check": "open-section-staff",
+    "result": {
+      "dialogs": 0,
+      "pageWidth": 1363,
+      "width": 1363
+    },
+    "main": "- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Staff\" [level=2]\n  - button \"Staff\":\n  - paragraph: No staff yet\n  - sta"
+  },
+  {
+    "check": "dark",
+    "className": "dark"
+  },
+  {
+    "check": "auto",
+    "value": null,
+    "className": ""
+  },
+  {
+    "check": "ru-language",
+    "result": "Russian navigation/settings rendered"
+  },
+  {
+    "check": "tg-light",
+    "result": {
+      "selected": [
+        "tg",
+        "light"
+      ],
+      "theme": ""
+    },
+    "note": "Operations remain RU fallback, disclosed in UI"
+  },
+  {
+    "check": "auto-tg-reload",
+    "result": {
+      "selected": [
+        "tg",
+        "auto"
+      ],
+      "theme": ""
+    }
+  },
+  {
+    "check": "analytics-period-today",
+    "excerpt": "heading \"TALABOT statistics\" [level=2]\n  - paragraph: Synthetic examples · snapshot 9 Nov 2026 · Asia/Dushanbe\n  - group \"Custom period\":\n    - button \"Today\" [active] [pressed]\n    - button \"Last 7 days\"\n    - button \"Month\"\n    - button \"Custom period\"\n  - paragraph:\n    - text: \"Selected period:\"\n    - generic: 2026-11-09 — 2026-11-09\n  - heading \"Completed orders & merchant sales\" [level=2]\n  - group \"Completed orders & merchant sales\":\n    - button \"Completed orders\" [pressed]\n    - button \"Merchant sales · TJS\"\n  - paragraph: \"102\"\n  - paragraph:\n    - text: \"Previous equal-length period: 2026-11-08 — 2026-11-08 · 87\"\n    - text: \"Change: 17.2%\"\n  - region \"Selected period / Previous equal-length period\":\n    - 'application \"bar chart with 2 data series: Selected period, Previous equal-length period\"':\n      - generic \"150\"\n      - generic \"100\"\n      - generic \"50\"\n      - generic \"0\"\n      - generic \"11-09\"\n    - button \"Selected period, visible. Press Enter or Space to toggle.\":\n      - generic: Selected period\n    - button \"Previous equal-length period, visible. Press Enter or Space to toggle.\":\n      - generic: Previous equal-length period\n    - status\n    - tooltip\n  - "
+  },
+  {
+    "check": "analytics-sales-toggle",
+    "excerpt": "heading \"Completed orders & merchant sales\" [level=2]\n  - group \"Completed orders & merchant sales\":\n    - button \"Completed orders\"\n    - button \"Merchant sales · TJS\" [active] [pressed]\n  - paragraph: 10,494\n  - paragraph:\n    - text: \"Previous equal-length period: 2026-11-08 — 2026-11-08 · 8,903\"\n    - text: \"Change: 17.9%\"\n  - region \"Selected period / Previous equal-length period\":\n    - 'application \"bar chart with 2 data series: Selected period, Previous equal-length period\"':\n      - generic \"15000\"\n      - generic \"10000\"\n      - generic \"5000\"\n      - generic \"0\"\n      - generic \"11-09\"\n    - button \"Selected period, visible. Press Enter or Space to toggle.\":\n      - generic: Selected period\n    - button \"Previous equal-length period, visible. Press Enter or Space to toggle.\":\n      - generic: Previous equal-length period\n    - status\n    - tooltip\n  - "
+  },
+  {
+    "check": "analytics-day-quality",
+    "hourly": true,
+    "quality": "heading \"Operational quality\" [level=2]\n  - group \"Operational quality\":\n    - button \"Merchant\"\n    - button \"Delivery area\" [active] [pressed]\n  - paragraph: Delays and reasons are fictional recorded labels; no delay threshold or operational rule is introduced.\n  - table:\n    - rowgroup:\n      - row \"Delivery area Orders Delayed orders Cancelled orders Cancellation reasons\":\n        - columnheader \"Delivery area\"\n        - columnheader \"Orders\"\n        - columnheader \"Delayed orders\"\n        - columnheader \"Cancelled orders\"\n        - columnheader \"Cancellation reasons\"\n    - rowgroup:\n      - 'row \"North · demo 29 3 3 Customer request: 1 · Item unavailable: 1 · Delivery issue: 1\"':\n        - cell \"North · demo\"\n        - cell \"29\"\n        - cell \"3\"\n        - cell \"3\"\n        - 'cell \"Customer request: 1 · Item unavailable: 1 · Delivery issue: 1\"'\n      - 'row \"South · demo 29 3 2 Customer request: 0 · Item unavailable: 1 · Delivery issue: 1\"':\n        - cell \"South · demo\"\n        - cell \"29\"\n        - cell \"3\"\n        - cell \"2\"\n        - 'cell \"Customer request: 0 · Item unavailable: 1 · Delivery issue: 1\"'\n      - 'row \"East · demo 30 4 2 Customer request: 1 · Item unavailable: 0 · Delivery issue: 1\"':\n        - cell \"East · demo\"\n        - cell \"30\"\n        - cell \"4\"\n        - cell \"2\"\n        - 'cell \"Customer request: 1 · Item unavailable: 0 · Delivery issue: 1\"'\n      - 'row \"West · demo 29 2 2 Customer request: 1 · Item unavailable: 1 · Delivery issue: 0\"':\n        - cell \"West · demo\"\n        - cell \"29\"\n        - cell \"2\"\n        - cell \"2\"\n        - 'cell \"Customer request: 1 · Item unavailable: 1 · Delivery issue: 0\"'\n  - "
+  },
+  {
+    "check": "all-seven-status-interactions",
+    "result": [
+      {
+        "status": "Waiting for confirmation",
+        "order": "ord0",
+        "buttons": 1
+      },
+      {
+        "status": "Preparing",
+        "order": "ord1",
+        "buttons": 1
+      },
+      {
+        "status": "Ready for courier pickup",
+        "order": "ord2",
+        "buttons": 1
+      },
+      {
+        "status": "Courier on the way",
+        "order": "ord3",
+        "buttons": 1
+      },
+      {
+        "status": "Delivered",
+        "order": "ord4",
+        "buttons": 1
+      },
+      {
+        "status": "Cancelled",
+        "order": "ord5",
+        "buttons": 1
+      },
+      {
+        "status": "Rejected by restaurant",
+        "order": "ord6",
+        "buttons": 1
+      }
+    ]
+  },
+  {
+    "check": "order-back-scroll",
+    "y": 2050,
+    "note": "Back restored nonzero scroll; exact before/after not yet measured"
+  },
+  {
+    "check": "order-scroll-exact",
+    "before": 2050,
+    "after": 1682
+  },
+  {
+    "check": "order-scroll-visible-target",
+    "before": {
+      "top": 445.59375,
+      "y": 1682
+    },
+    "after": {
+      "top": 445.59375,
+      "y": 1682
+    }
+  },
+  {
+    "check": "v5-final-build",
+    "result": {
+      "height": 936,
+      "iframes": 0,
+      "pageWidth": 1348,
+      "root": 1,
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-C4x3ovNP.js"
+      ],
+      "search": 1,
+      "width": 1363,
+      "wrongSample": false
+    }
+  },
+  {
+    "check": "v5-notice-metadata",
+    "unknownUpdate": true,
+    "nativeImageRequests": []
+  },
+  {
+    "check": "v5-notice-route-regression",
+    "detailPresent": 1
+  }
+]

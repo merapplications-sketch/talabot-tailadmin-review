@@ -1,35 +1,30 @@
-# UX-02 — continuation after version 3
+# UX-02 — version5 continuation handoff
 
-Status: PARTIAL IMPLEMENTATION / NOT ACCEPTED. This checkpoint precedes publication and connected-browser regression.
-Remote base: 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0. Published baseline: bbef27fd30c7d27b0397189fb8f3977c50f3a4f9 (version 3).
-Branch: review/ux02-final-b-integration-20261110. Repository: merapplications-sketch/talabot-tailadmin-review.
+Status: PARTIAL IMPLEMENTATION / NOT ACCEPTED. Visual acceptance, mobile proof and matrix37 completeness remain open.
 
-## Implemented
-- FP24: original B NotificationDropdown, NotificationsPage, useReadNotices. Optional data props preserve B defaults. Native supplies two explicitly fictional notices for ord3/ord5; their detail links point to those exact A sample orders. No aliases to B DEMO order IDs. B's existing bell position, list, search, read filter, mark-read, pagination and detail composition reused. No extra sidebar section.
-- Native route adapter preserves B query/read/page and returnTo semantics inside the existing React root. A order details and existing drafts remain the destination. No legacy runtime or iframe.
-- FP33: existing log section now reads isolated audit_log/client_errors, descending at, max 100 as A loadLog. Existing B Card/Field/Button show original action/table/date/actor/row/changes and app/date/message/context/actor/UA fields. A truncation/null/actor rules retained. Empty states and refresh wired. Original A read contract masks source errors as []; this preview does not claim a new server error or authorization contract.
-- No CSS, colors, business contract, permission, fixture or analytics data changes.
+- Repo: https://github.com/merapplications-sketch/talabot-tailadmin-review
+- Branch: review/ux02-final-b-integration-20261110
+- Baseline resume:45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; baseline published source:bbef27fd30c7d27b0397189fb8f3977c50f3a4f9/version3.
+- Implementation checkpoint:ebc4782c398f0f2cf6d3df1e8bfc543edef12640 (original B notifications + native route adapter; A log fields).
+- Final published source:4297dee6ae2948db720d24f604f31e0214264e51 (unknown timestamp/image fallback and native sample labels).
+- Hosting artifact commit:410a7cfe0b4e761d8514a7ded7649905ed66825a; version5.
+- Direct review: https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site
+- Site project:appgprj_6af33addc50481918ebbc6ca01125d15. Deployment:appgdep_6af37c8a6214819185ae2b5e2dfd0f2a — succeeded.
 
-## Source evidence
-- A read contracts: public/operations-source/talabat-core.js audit/clientErrors; admin.html loadLog/vLog (497–504).
-- B: src/layout/header/notification-dropdown/index.tsx, src/components/talabot/workspace.tsx NotificationsPage, notification-state.ts.
-- Approved component map: docs/ux02/template-audit/REPORT.md notification row; current original B header bell slot. Native log section keeps its existing location and existing B primitives.
+## Delivered
+Original B NotificationDropdown, NotificationsPage and useReadNotices are used with optional data props. B defaults remain unchanged. Explicit local examples refer to the exact synthetic A orders ord3/ord5; no DEMO-ID alias, no new alert rule, no second root/navigation. Existing A details handle the linked orders and return context.
+Existing log section uses B Card/Field/Button to display original audit/client-error fields, sort/cap, actor/change formatting, empty states and refresh. No production transport. No new CSS, color, business contract, permission or analytics changes.
+Six contract tests preserve only proven brand/create/attach/detach and menu approval operations; these are not complete administration screens.
 
-## Validation
-- Build, TypeScript: PASS. Lint: 0 errors / 47 unchanged warnings (41 unused, 4 image guidance, 1 anonymous default export, 1 relative-location guidance).
-- 70 logic/data regression assertions + 8 server-rendered composition checks + 12 continuation tests: PASS. Raw logs and checks.json in this directory. SSR/hook tests are not browser interaction.
-- Connected browser can interact with the public preview at viewport 1363×936. Actual320/390/1440 not obtained: browser API has no resize capability and organization policy blocks DevTools. No retry of blocked local Chromium or policy bypass. Screenshot of the policy block preserved separately.
-- Existing CI reviewed at pinned remote base: verify-tailadmin-original.yml only builds original app, has no viewport/browser tests; verify-vinext-build.yml writes review/cloudflare-vinext and is outside isolated D. Neither workflow was launched. No new CI/secrets/production changes.
-- Safari on real iPhone: NOT TESTED.
+## Evidence
+- [QA results and limitations](QA.md)
+- [37-function source/component/behavior/test/gap matrix](coverage-37.md)
+- [Machine-readable matrix](coverage-37.json)
+- [Screenshots](screenshots/README.md), screenshot-manifest.json, browser-evidence.json
+- publication.json, checks.json, followup-checks.json and individual logs.
+96 distinct logic/contract/SSR checks PASS; Build/TypeScript PASS; lint0 errors/47 unchanged warnings; final affected lint0/0. Specific desktop interactions verified. 320/390/1440 and real Safari NOT TESTED; exact capability blocker inQA.md. No accepted visual result is claimed.
 
-## Remaining concrete gaps
-- FP16: A brCard/brAtt/brDet/brNew and approveItem contracts are preserved. Branch attach/detach/create UI and pending-menu-item approval placement remain unresolved under the strict B placement lock. Existing merchant brand summary is not proof of those actions. Source supports narrow association/create/approve functions, not a full branch-management product. No invented management screens.
-- B notification times remain fictional relative-time labels. No operational alert-generation rule is introduced.
-- Audit/error empty behavior implemented; populated render and ordering tested using test-only records. No production logs or server RBAC tested.
-- Existing remaining matrix gaps, including uploads/maps, financial allowance, staff edit/delete and incomplete TG operations, are retained.
-
-## Resume
-Publish this checkpoint only to existing isolated project appgprj_6af33addc50481918ebbc6ca01125d15 after remote source verification, then perform connected browser regression. Do not use inherited native/.openai/hosting.json (protected D2 project). No A/B/C/D2/main/production changes.
-
-## Browser-discovered data corrections
-The v4 browser pass exposed inherited B footer copy claiming 36 orders / 9 Nov for A sample rows, and a missing native updated_at value incorrectly substituted with created_at in notification data. Corrected display data only: native sample/timezone notice, unknown update time as —, and original IdentityImage fallback for native merchants with no supplied image (no missing asset request). No layout/CSS changes. Follow-up affected tests20, TypeScript, Build and affected lint0/0 pass. Original 70 unaffected regression assertions retained. Added6 isolated contracts for approveItem and brandCreate/Attach/Detach; no UI or real server acceptance claim.
+## Resume exactly here
+Use the remote branch head containing this handoff; source commit4297dee6 is the published executable baseline. Local Git commit IDs differ from connector-created remote history; use remote source and evidence, never force-push.
+Retain unchanged successful tests. Continue unresolved functional rows only where A contract and approved B placement are proven. FP16 UI placement remains blocked; do not invent complete branch/menu/hours management. Other gaps are listed per row. Authorized viewport capability is still needed for mobile evidence; do not repeat blocked local Chromium or bypass DevTools policy.
+No A/B/C/D2/production/main edits. Native checkout's inherited hosting manifest points to protected D2; never deploy it. Use the verified isolated project's hosting checkout and source provenance only. Owner's final visual approval is still required; do not label this version complete.
