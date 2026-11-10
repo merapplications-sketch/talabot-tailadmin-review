@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+const read=p=>fs.readFileSync(p,'utf8');
+const a=read('docs/ux02/reference/admin.html'), d=read('public/operations-source/admin.html');
+const list=(s,re)=>[...s.matchAll(re)].map(x=>x[1]).sort();
+const results=[];const check=(name,fn)=>{fn();results.push({name,status:'PASS'});};
+for(const [label,re] of [['function names',/(?:async\s+)?function\s+(\w+)\(/g],['original handlers',/on(?:click|input|change|keydown)="([^"]*)"/g],['original field IDs',/\bid="([^"]+)"/g]])check(label,()=>assert.deepEqual(list(a,re),list(d,re)));
+check('all 12 sections',()=>assert.equal(a.match(/const TABS=[^;]+;/)[0],d.match(/const TABS=[^;]+;/)[0]));
+check('37 traceability families',()=>assert.equal(JSON.parse(read('docs/ux02/traceability-37.json')).length,37));
+for(const f of ['analytics.tsx','analytics-data.ts'])check('B '+f+' unchanged',()=>assert.equal(read('docs/ux02/reference/'+f),read('src/components/talabot/'+f)));
+check('four A metrics precede orders body',()=>{const render=d.slice(d.indexOf('  const H=`'));assert(render.indexOf('kp(')<render.indexOf('+body'));});
+check('inline JavaScript parses',()=>{for(const x of d.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(x[1]);});
+for(const f of ['adapter.js','boot.js','preview-client.js','talabat-core.js'])check(f+' parses',()=>new vm.Script(read('public/operations-source/'+f)));
+check('network disabled in operation frame',()=>assert(d.includes("connect-src 'none'")));
+check('no-this-alias fixed without disabling rule',()=>{assert(!read('public/operations-source/preview-client.js').includes('var me=this'));assert(!read('eslint.config.mjs').includes('no-this-alias'));});
+fs.writeFileSync('docs/ux02/preservation-results.json',JSON.stringify({checks:results.length,results,scope:'Static preservation, not execution of every handler.'},null,2));console.log(JSON.stringify(results,null,2));

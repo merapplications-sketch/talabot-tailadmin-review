@@ -1,0 +1,62 @@
+[
+  {
+    "name": "function names",
+    "status": "PASS"
+  },
+  {
+    "name": "original handlers",
+    "status": "PASS"
+  },
+  {
+    "name": "original field IDs",
+    "status": "PASS"
+  },
+  {
+    "name": "all 12 sections",
+    "status": "PASS"
+  },
+  {
+    "name": "37 traceability families",
+    "status": "PASS"
+  },
+  {
+    "name": "B analytics.tsx unchanged",
+    "status": "PASS"
+  },
+  {
+    "name": "B analytics-data.ts unchanged",
+    "status": "PASS"
+  },
+  {
+    "name": "four A metrics precede orders body",
+    "status": "PASS"
+  },
+  {
+    "name": "inline JavaScript parses",
+    "status": "PASS"
+  },
+  {
+    "name": "adapter.js parses",
+    "status": "PASS"
+  },
+  {
+    "name": "boot.js parses",
+    "status": "PASS"
+  },
+  {
+    "name": "preview-client.js parses",
+    "status": "PASS"
+  },
+  {
+    "name": "talabat-core.js parses",
+    "status": "PASS"
+  },
+  {
+    "name": "network disabled in operation frame",
+    "status": "PASS"
+  },
+  {
+    "name": "no-this-alias fixed without disabling rule",
+    "status": "PASS"
+  }
+]

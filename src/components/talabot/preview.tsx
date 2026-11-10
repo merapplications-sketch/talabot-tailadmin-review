@@ -14,6 +14,7 @@ import {
   BarChartIcon,
   GearIcon,
 } from "@/icons";
+import { OperationsLinks } from "./unified-review";
 import { useSidebar } from "@/components/ui/sidebar";
 
 // Synthetic design persona only. No real account, permission, or financial data.
@@ -189,6 +190,7 @@ export function PreviewSidebar({ showContent }: { showContent: boolean }) {
         <LayoutGridIcon className="size-6 shrink-0" />
         {showContent && t("home")}
       </Link>
+      {showContent && <OperationsLinks compact />}
       {items
         .filter(([key]) => key !== "finance" || previewPersona.canViewFinance)
         .map(([key, Icon]) => (

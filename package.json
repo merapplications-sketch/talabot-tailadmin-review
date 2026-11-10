@@ -3,8 +3,8 @@
   "version": "2.5.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "vite dev",
+    "build": "vite build",
     "start": "next start",
     "lint": "eslint .",
     "dev:vinext": "vite dev --port 3001",

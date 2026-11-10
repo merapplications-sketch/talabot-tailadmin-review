@@ -1,0 +1,26 @@
+{
+  "prior": {
+    "warnings": 47,
+    "errors": 1,
+    "note": "Prior output retained verbatim; category totals below are recomputed by rule."
+  },
+  "prior_by_rule": {
+    "@typescript-eslint/no-unused-vars": 42,
+    "import/no-anonymous-default-export": 1,
+    "@next/next/no-img-element": 3,
+    "@next/next/no-location-assign-relative-destination": 1
+  },
+  "current_by_rule": {
+    "@typescript-eslint/no-unused-vars": 40,
+    "import/no-anonymous-default-export": 1,
+    "@next/next/no-img-element": 3,
+    "@next/next/no-location-assign-relative-destination": 1
+  },
+  "disposition": {
+    "unused_variables": "Inherited fixture/catch/test variables and adapter globals. Nonblocking, retained to minimize original behavior changes.",
+    "anonymous_default_export": "Inherited gallery helper; nonblocking.",
+    "next_image_advisory": "Inherited reference/image components; performance advisory.",
+    "relative_location_navigation": "Inherited visual-review route; separate from new D navigation.",
+    "no_this_alias": "FIXED with lexical arrow callback; rule unchanged."
+  }
+}

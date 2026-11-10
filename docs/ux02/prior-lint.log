@@ -1,0 +1,78 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 lint
+> eslint .
+
+
+/workspace/sites/talabot-ux02-d/public/operations-source/adapter.js
+   8:160  warning  '_' is defined but never used        @typescript-eslint/no-unused-vars
+   9:10   warning  'uxSet' is defined but never used    @typescript-eslint/no-unused-vars
+  10:10   warning  'uxReset' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/public/operations-source/boot.js
+  3:89  warning  '_' is defined but never used         @typescript-eslint/no-unused-vars
+  4:10  warning  'uxFilter' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/public/operations-source/preview-client.js
+   11:144  warning  'si' is defined but never used                   @typescript-eslint/no-unused-vars
+   63:182  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+   80:46   warning  'o' is defined but never used                    @typescript-eslint/no-unused-vars
+   98:91   warning  'k' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  101:98   error    Unexpected aliasing of 'this' to local variable  @typescript-eslint/no-this-alias
+  109:76   warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  112:202  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  114:165  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  118:222  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  120:222  warning  '_' is defined but never used                    @typescript-eslint/no-unused-vars
+  121:132  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  121:244  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  129:128  warning  'x' is defined but never used                    @typescript-eslint/no-unused-vars
+  130:318  warning  'x' is defined but never used                    @typescript-eslint/no-unused-vars
+  131:134  warning  'x' is defined but never used                    @typescript-eslint/no-unused-vars
+  136:28   warning  'mx0' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  150:324  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  153:140  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  162:256  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  162:324  warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+  164:68   warning  'e' is defined but never used                    @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/public/operations-source/talabat-core.js
+   24:117  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   37:79   warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   77:153  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   80:367  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   85:394  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   93:148  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  145:56   warning  'sig' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  196:14   warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  443:188  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  596:102  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  598:114  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  796:63   warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/scripts/gallery-review-worker.mjs
+  4:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/workspace/sites/talabot-ux02-d/src/components/others/auth/sign-in/form.tsx
+  37:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/src/components/others/auth/sign-up/form.tsx
+  41:35  warning  '_data' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/src/components/talabot/integrated-review/identity.tsx
+  59:9  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/workspace/sites/talabot-ux02-d/src/components/talabot/visual-review/index.tsx
+   79:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  356:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  395:21  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination                       @next/next/no-location-assign-relative-destination
+
+/workspace/sites/talabot-ux02-d/tests/safari-followup-acceptance.cjs
+  4:7  warning  'path' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/sites/talabot-ux02-d/tests/safari-followup-regression.cjs
+   4:7   warning  'path' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  63:11  warning  'buttons' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 48 problems (1 error, 47 warnings)
+
