@@ -1,0 +1,62 @@
+[
+  {
+    "section": "orders",
+    "content": 2001,
+    "overlay": 0
+  },
+  {
+    "section": "restaurants",
+    "content": 815,
+    "overlay": 0
+  },
+  {
+    "section": "drivers",
+    "content": 567,
+    "overlay": 0
+  },
+  {
+    "section": "customers",
+    "content": 244,
+    "overlay": 0
+  },
+  {
+    "section": "support",
+    "content": 246,
+    "overlay": 0
+  },
+  {
+    "section": "texts",
+    "content": 219,
+    "overlay": 0
+  },
+  {
+    "section": "ratings",
+    "content": 467,
+    "overlay": 0
+  },
+  {
+    "section": "banners",
+    "content": 171,
+    "overlay": 0
+  },
+  {
+    "section": "promotions",
+    "content": 187,
+    "overlay": 0
+  },
+  {
+    "section": "loyalty",
+    "content": 993,
+    "overlay": 0
+  },
+  {
+    "section": "log",
+    "content": 140,
+    "overlay": 0
+  },
+  {
+    "section": "staff",
+    "content": 275,
+    "overlay": 0
+  }
+]

@@ -25,7 +25,8 @@
   let lastHeight = 0;
   const sync = () => {
     const app = document.getElementById('app');
-    if (!app || !window.TLB) return;
+    // Initial sync runs before TLB renders; observers retry after content arrives.
+    if (!app || !app.firstElementChild || !window.TLB) return;
     if (tab === 'o' && !D && !document.getElementById('ux-filters')) {
       const el = document.createElement('details'); el.id='ux-filters'; el.className='card';
       const label = en() ? ['Additional preview filters','Merchant','Payment','From','To','Sort','Source order','Newest','Oldest','Clear','Pickup/delivery zone: unavailable in A fixture; see B filter sample.'] : ['Дополнительные фильтры · демо','Заведение','Оплата','С','По','Порядок','Исходный','Новые','Старые','Сброс','Зоны получения/доставки отсутствуют в выборке A; доступны в примере B.'];

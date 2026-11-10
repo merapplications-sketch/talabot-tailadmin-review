@@ -1,0 +1,1 @@
+PASS: old uxInit race reproduced; DOMContentLoaded starts once after adapter definition; empty app is not mutated before initial render.

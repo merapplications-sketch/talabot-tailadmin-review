@@ -1,0 +1,122 @@
+[
+  {
+    "tab": "o",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "7\nOrders\n415.00 TJS\nRevenue\n44.00 TJS\nCommission\n4\nActive\nOnly the latest loaded orders — at most 300 (now 7), all statuses; data for 10/11/2026, 12:04 — 10/11/2026, 17:04. Not an "
+  },
+  {
+    "tab": "s",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nOpen · 3\nClosed · 1\nAll · 4\n New restaurant requests\n1\nНовая кофейня\nRestaurants\nOwner: Муаммад ибни"
+  },
+  {
+    "tab": "d",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nOnline · 0\nOffline · 5\nAll · 5\nMap\nВодитель\npending\noffline\n Cash on hand\n0.00 / 1000 TJS\n+992900000"
+  },
+  {
+    "tab": "u",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nSearch\nКлиент\n3 orders · 250.50 TJS\n+992900000008\n10.11, 16:29:49\nДемо-клиент · 62 заказа\n3 orders ·"
+  },
+  {
+    "tab": "h",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nSupport contacts\n— · —\nNeed a reply · 1\nOpen · 1\nClosed · 0\nOrder very late\nOpen\nМуаммад ибни Абдулл"
+  },
+  {
+    "tab": "g",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nApp texts\n“About” and “Privacy” are visible to all customers. Separate paragraphs with an empty line"
+  },
+  {
+    "tab": "r",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\n3.6 ★\nCouriers · 11 ratings\n3.5 ★\nStores · 11 ratings\n1\nNeed attention\n11\nratings\nNeed attention · 1"
+  },
+  {
+    "tab": "b",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply Add banner\nСкидка 20% на всё\nOff\n Edit\nБесплатная доставка\nOff\n Edit\nVersion v56 · admin-56"
+  },
+  {
+    "tab": "c",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply Add promo code\nWELCOME10\nOff\n10% • Min. order, TJS: 50 • used: 0 / 100\nEnable\nDelete\nVersion v56 · a"
+  },
+  {
+    "tab": "y",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nPoints and cashback\nPoints are added when an order is delivered, for what the customer paid for the "
+  },
+  {
+    "tab": "l",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\nActions · 0\nErrors · 0\nNo entries yet\nVersion v56 · admin-56"
+  },
+  {
+    "tab": "f",
+    "fallback": [
+      {
+        "visible": false
+      }
+    ],
+    "overlay": false,
+    "text": "0\n/2\ncouriers online\n2\n/3\nstores open\n 1 support request(s) waiting for a reply\n Staff\n\nAdd an account by email (the person must register first). Staff only see the sections you ti"
+  }
+]
