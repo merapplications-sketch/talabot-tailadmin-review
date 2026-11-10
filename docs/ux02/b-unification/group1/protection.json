@@ -1,0 +1,34 @@
+[
+  {
+    "path": "src/components/talabot/native/domain.ts",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/navigation.ts",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/mutation-service.js",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/fields.ts",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/validation.ts",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "unchanged": true
+  },
+  {
+    "path": "src/components/talabot/native/fixture.json",
+    "unchanged": true
+  }
+]

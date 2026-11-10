@@ -1,0 +1,9 @@
+PASS: protected domain/navigation/mutations/fields/validation/analytics source unchanged (see protection.json).
+PASS: old manual header/aside removed from NativeAdmin.
+PASS: native B sidebar dataset contains the same 12 operational sections.
+Browser observed: 1 #root, 0 iframe, 1 nav; 1363px, no document overflow.
+Browser observed: ord1 search -> details -> Back preserves ord1. Customers link opens customer list.
+Visual: B sidebar/header visible; controls in header need design decision; not accepted.
+320/390/1440, EN/RU/TG x themes, full drafts/scroll: NOT TESTED for this change.
+Physical Safari: NOT TESTED.
+Headless fallback unavailable: missing Playwright bundled browser; installed Chromium launch rejected by OS socket restriction. Shared Chrome used for checks above.
