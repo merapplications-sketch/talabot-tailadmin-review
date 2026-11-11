@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useTranslations } from "next-intl";
-import { IdentityImage } from "../../integrated-review/identity";
+import NativeIdentity from "./identity";
 import { OrderStatusBadge } from "../../integrated-review/order-status";
 import type { OrderStatus } from "../../orders-data";
 import { Action } from "../primitives";
@@ -19,6 +19,8 @@ export function NativeGrid({
     values: ReactNode[];
     identity?: "person" | "merchant";
     image?: string;
+    presence?: boolean;
+    presenceLabel?: string;
     event?: string;
     unread?: boolean;
     updated?: string;
@@ -53,10 +55,12 @@ export function NativeGrid({
                 <td className="p-4 font-medium">
                   <div className="tp-identity">
                     {r.identity && (
-                      <IdentityImage
+                      <NativeIdentity
                         name={r.name}
                         person={r.identity === "person"}
                         src={r.image}
+                        presence={r.presence}
+                        presenceLabel={r.presenceLabel}
                       />
                     )}
                     <span>
@@ -124,10 +128,12 @@ export function NativeGrid({
             )}
             <div className="tp-identity mb-2">
               {r.identity && (
-                <IdentityImage
+                <NativeIdentity
                   name={r.name}
                   person={r.identity === "person"}
                   src={r.image}
+                  presence={r.presence}
+                  presenceLabel={r.presenceLabel}
                 />
               )}
               <h2 className="min-w-0 flex-1 text-base! font-semibold break-words">

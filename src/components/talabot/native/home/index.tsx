@@ -8,12 +8,7 @@ import {
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import {
-  BoxIcon,
-  DollarIcon,
-  PieChartIcon,
-  MovingBoxIcon,
-} from "@/icons";
+import { BoxIcon, DollarIcon, PieChartIcon, MovingBoxIcon } from "@/icons";
 import SummaryCards from "../b-shell/summary-cards";
 import { metrics } from "../domain";
 import { operationalAlerts } from "../order-operations";
@@ -67,7 +62,7 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
     </Accordion>
   );
   return (
-    <Shell title={h("title")}>
+    <Shell showNotice={false} title={h("title")}>
       <SummaryCards
         cards={[
           {

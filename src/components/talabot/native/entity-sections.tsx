@@ -1,4 +1,5 @@
-import { IdentityImage } from "../integrated-review/identity";
+import { actionColors } from "./action-colors";
+import NativeIdentity from "./b-shell/identity";
 import { CallIcon, MapIcon, StarIcon, AlertIcon, BoxIcon } from "@/icons";
 import SummaryCards from "./b-shell/summary-cards";
 import {
@@ -19,7 +20,13 @@ import { SettingsPresentation } from "./b-shell/settings";
 import { Badge } from "@/components/ui/badge";
 import { useLocale, useTranslations } from "next-intl";
 import { formatDate } from "./format";
-import { Input } from "@/components/ui/input";
+import SearchField from "./b-shell/search-field";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import {
   Select,
   SelectTrigger,
@@ -95,6 +102,8 @@ export default function EntitySections({
 }: Props) {
   const locale = useLocale();
   const wt = useTranslations("workspace");
+  const ft = useTranslations("ownerRound");
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [filter, setFilter] = useState(
       () =>
         sessionStorage.getItem("ux02-native:filter:" + section) ||
@@ -208,11 +217,7 @@ export default function EntitySections({
     );
   };
   const reason = [{ key: "reason", label: "xPhWhy", maxLength: 200 }];
-  const blocked = (
-    <p role="status" className="text-sm text-gray-500">
-      {t("nativeWriteBlocked")}
-    </p>
-  );
+  const blocked = null;
   if (section === "texts")
     return (
       <div className="space-y-4">
@@ -596,10 +601,12 @@ export default function EntitySections({
           {back}
           <Card>
             <div className="flex items-center gap-3">
-              <IdentityImage
+              <NativeIdentity
                 name={text(row, "name")}
                 src={text(row, "avatar_url") || undefined}
                 person
+                presence={isLive(row)}
+                presenceLabel={t(isLive(row) ? "aOnlineL" : "aOfflineL")}
               />
               <h2 className="min-w-0 flex-1 text-lg font-semibold text-gray-800 dark:text-white/90">
                 {text(row, "name")}
@@ -609,13 +616,8 @@ export default function EntitySections({
               <Badge color={entityStatus(section, row).color}>
                 {t(entityStatus(section, row).label)}
               </Badge>{" "}
-              ·{" "}
-              {t(
-                isLive(row)
-                  ? isBusy(row)
-                    ? "aBusy"
-                    : "aOnlineL"
-                  : "aOfflineL",
+              {isLive(row) && isBusy(row) && (
+                <Badge color="warning">{t("aBusy")}</Badge>
               )}
             </p>
             {!!row.phone && (
@@ -632,7 +634,7 @@ export default function EntitySections({
                   title={t("aCall") + ": " + text(row, "phone")}
                   render={<a href={"tel:" + text(row, "phone")} />}
                 >
-                  <CallIcon aria-hidden="true" />
+                  <CallIcon className={actionColors.phone} aria-hidden="true" />
                 </Button>
               </div>
             )}
@@ -722,7 +724,7 @@ export default function EntitySections({
           {back}
           <Card>
             <div className="flex items-center gap-3">
-              <IdentityImage
+              <NativeIdentity
                 name={text(row, "name")}
                 src={text(row, "avatar_url") || undefined}
                 person
@@ -745,7 +747,7 @@ export default function EntitySections({
                   title={t("aCall") + ": " + text(row, "phone")}
                   render={<a href={"tel:" + text(row, "phone")} />}
                 >
-                  <CallIcon aria-hidden="true" />
+                  <CallIcon className={actionColors.phone} aria-hidden="true" />
                 </Button>
               </div>
             )}
@@ -959,177 +961,214 @@ export default function EntitySections({
         />
       )}
       <section className={panel}>
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <label>
-            {section === "customers"
+        <SearchField
+          id={`search-${section}`}
+          label={
+            section === "customers"
               ? t("xCuSearch")
               : section === "restaurants"
                 ? t("aSearch")
-                : wt("search")}
-            <Input
-              type="search"
-              value={query}
-              onChange={(e) => navigate({ query: e.target.value })}
-            />
-          </label>
-          {section === "drivers" && (
-            <label>
-              {t("aStat")}
-              <Select
-                value={filter}
-                onValueChange={(value) => {
-                  setFilter(value || "all");
-                  sessionStorage.setItem(
-                    "ux02-native:filter:" + section,
-                    value || "all",
-                  );
-                }}
-                items={["all", "on", "off"].map((k) => ({
-                  value: k,
-                  label:
-                    t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff") +
-                    " · " +
-                    (k === "all"
-                      ? source.length
-                      : source.filter((r) =>
-                          k === "on" ? isLive(r) : !isLive(r),
-                        ).length),
-                }))}
-              >
-                <SelectTrigger aria-label={t("aStat")}>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {["all", "on", "off"].map((k) => (
-                    <SelectItem key={k} value={k}>
-                      {t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff")} ·{" "}
-                      {k === "all"
-                        ? source.length
-                        : source.filter((r) =>
-                            k === "on" ? isLive(r) : !isLive(r),
-                          ).length}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </label>
-          )}
-          {section === "restaurants" && (
-            <label className="block min-w-0 text-sm">
-              {t("aStat")}
-              <Select
-                value={filter}
-                onValueChange={(value) => {
-                  setFilter(value ?? "");
-                  sessionStorage.setItem(
-                    "ux02-native:filter:" + section,
-                    value ?? "",
-                  );
-                }}
-                items={[
-                  ...["all", "open", "closed"].map((k) => ({
-                    value: k,
-                    label: t(
-                      k === "all"
-                        ? "aAll"
-                        : k === "open"
-                          ? "aOpenS"
-                          : "aClosedS",
-                    ),
-                  })),
-                ]}
-              >
-                <SelectTrigger aria-label={t("status")}>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {["all", "open", "closed"].map((k) => (
-                    <SelectItem key={k} value={k}>
-                      {t(
-                        k === "all"
-                          ? "aAll"
-                          : k === "open"
-                            ? "aOpenS"
-                            : "aClosedS",
-                      )}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </label>
-          )}
-          {section === "ratings" && (
-            <label className="block min-w-0 text-sm">
-              {t("aStat")}
-              <Select
-                value={filter}
-                onValueChange={(value) => {
-                  setFilter(value ?? "need");
-                  sessionStorage.setItem(
-                    "ux02-native:filter:" + section,
-                    value ?? "need",
-                  );
-                }}
-                items={[
-                  { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
-                  { value: "all", label: `${t("fAllK")} · ${source.length}` },
-                  { value: "done", label: `${t("aRDone")} · ${handledCount}` },
-                ]}
-              >
-                <SelectTrigger aria-label={t("aStat")}>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="need">
-                    {t("aRNeeds")} · {needsCount}
-                  </SelectItem>
-                  <SelectItem value="all">
-                    {t("fAllK")} · {source.length}
-                  </SelectItem>
-                  <SelectItem value="done">
-                    {t("aRDone")} · {handledCount}
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-            </label>
-          )}
-          {section === "support" && (
-            <label className="block min-w-0 text-sm">
-              {t("aStat")}
-              <Select
-                value={filter}
-                onValueChange={(value) => {
-                  setFilter(value ?? "");
-                  sessionStorage.setItem(
-                    "ux02-native:filter:" + section,
-                    value ?? "",
-                  );
-                }}
-                items={[
-                  ...["all", "open", "in_progress", "resolved", "rejected"].map(
-                    (k) => ({
+                : wt("search")
+          }
+          value={query}
+          onChange={(query) => navigate({ query })}
+          filterLabel={ft("filters")}
+          filtersOpen={filtersOpen}
+          onFilters={
+            ["drivers", "restaurants", "ratings", "support"].includes(section)
+              ? () => setFiltersOpen(true)
+              : undefined
+          }
+        />
+        <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
+          <DialogContent className="max-h-[90dvh] overflow-y-auto">
+            <DialogTitle>{ft("filters")}</DialogTitle>
+            <div className="grid gap-3">
+              {section === "drivers" && (
+                <label>
+                  {t("aStat")}
+                  <Select
+                    value={filter}
+                    onValueChange={(value) => {
+                      setFilter(value || "all");
+                      sessionStorage.setItem(
+                        "ux02-native:filter:" + section,
+                        value || "all",
+                      );
+                    }}
+                    items={["all", "on", "off"].map((k) => ({
                       value: k,
-                      label: t(k === "all" ? "aAll" : "xs_" + k),
-                    }),
-                  ),
-                ]}
-              >
-                <SelectTrigger aria-label={t("status")}>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {["all", "open", "in_progress", "resolved", "rejected"].map(
-                    (k) => (
-                      <SelectItem key={k} value={k}>
-                        {t(k === "all" ? "aAll" : "xs_" + k)}
+                      label:
+                        t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff") +
+                        " · " +
+                        (k === "all"
+                          ? source.length
+                          : source.filter((r) =>
+                              k === "on" ? isLive(r) : !isLive(r),
+                            ).length),
+                    }))}
+                  >
+                    <SelectTrigger aria-label={t("aStat")}>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {["all", "on", "off"].map((k) => (
+                        <SelectItem key={k} value={k}>
+                          {t(
+                            k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff",
+                          )}{" "}
+                          ·{" "}
+                          {k === "all"
+                            ? source.length
+                            : source.filter((r) =>
+                                k === "on" ? isLive(r) : !isLive(r),
+                              ).length}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </label>
+              )}
+              {section === "restaurants" && (
+                <label className="block min-w-0 text-sm">
+                  {t("aStat")}
+                  <Select
+                    value={filter}
+                    onValueChange={(value) => {
+                      setFilter(value ?? "");
+                      sessionStorage.setItem(
+                        "ux02-native:filter:" + section,
+                        value ?? "",
+                      );
+                    }}
+                    items={[
+                      ...["all", "open", "closed"].map((k) => ({
+                        value: k,
+                        label: t(
+                          k === "all"
+                            ? "aAll"
+                            : k === "open"
+                              ? "aOpenS"
+                              : "aClosedS",
+                        ),
+                      })),
+                    ]}
+                  >
+                    <SelectTrigger aria-label={t("status")}>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {["all", "open", "closed"].map((k) => (
+                        <SelectItem key={k} value={k}>
+                          {t(
+                            k === "all"
+                              ? "aAll"
+                              : k === "open"
+                                ? "aOpenS"
+                                : "aClosedS",
+                          )}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </label>
+              )}
+              {section === "ratings" && (
+                <label className="block min-w-0 text-sm">
+                  {t("aStat")}
+                  <Select
+                    value={filter}
+                    onValueChange={(value) => {
+                      setFilter(value ?? "need");
+                      sessionStorage.setItem(
+                        "ux02-native:filter:" + section,
+                        value ?? "need",
+                      );
+                    }}
+                    items={[
+                      {
+                        value: "need",
+                        label: `${t("aRNeeds")} · ${needsCount}`,
+                      },
+                      {
+                        value: "all",
+                        label: `${t("fAllK")} · ${source.length}`,
+                      },
+                      {
+                        value: "done",
+                        label: `${t("aRDone")} · ${handledCount}`,
+                      },
+                    ]}
+                  >
+                    <SelectTrigger aria-label={t("aStat")}>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="need">
+                        {t("aRNeeds")} · {needsCount}
                       </SelectItem>
-                    ),
-                  )}
-                </SelectContent>
-              </Select>
-            </label>
-          )}
-        </div>
+                      <SelectItem value="all">
+                        {t("fAllK")} · {source.length}
+                      </SelectItem>
+                      <SelectItem value="done">
+                        {t("aRDone")} · {handledCount}
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </label>
+              )}
+              {section === "support" && (
+                <label className="block min-w-0 text-sm">
+                  {t("aStat")}
+                  <Select
+                    value={filter}
+                    onValueChange={(value) => {
+                      setFilter(value ?? "");
+                      sessionStorage.setItem(
+                        "ux02-native:filter:" + section,
+                        value ?? "",
+                      );
+                    }}
+                    items={[
+                      ...[
+                        "all",
+                        "open",
+                        "in_progress",
+                        "resolved",
+                        "rejected",
+                      ].map((k) => ({
+                        value: k,
+                        label: t(k === "all" ? "aAll" : "xs_" + k),
+                      })),
+                    ]}
+                  >
+                    <SelectTrigger aria-label={t("status")}>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {[
+                        "all",
+                        "open",
+                        "in_progress",
+                        "resolved",
+                        "rejected",
+                      ].map((k) => (
+                        <SelectItem key={k} value={k}>
+                          {t(k === "all" ? "aAll" : "xs_" + k)}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </label>
+              )}
+            </div>
+            <DialogFooter>
+              <Button onClick={() => setFiltersOpen(false)}>
+                {ft("done")}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </section>
       {section === "restaurants" && (
         <>
@@ -1317,19 +1356,9 @@ export default function EntitySections({
               values = [
                 <>
                   {badge}{" "}
-                  <Badge
-                    color={
-                      isLive(r) ? (isBusy(r) ? "warning" : "success") : "gray"
-                    }
-                  >
-                    {t(
-                      isLive(r)
-                        ? isBusy(r)
-                          ? "aBusy"
-                          : "aOnlineL"
-                        : "aOfflineL",
-                    )}
-                  </Badge>
+                  {isLive(r) && isBusy(r) && (
+                    <Badge color="warning">{t("aBusy")}</Badge>
+                  )}
                   {!!r.accept_blocked && (
                     <Badge color="error">{t("aBlocked")}</Badge>
                   )}
@@ -1394,6 +1423,11 @@ export default function EntitySections({
                       ? "image_url"
                       : "avatar_url",
                 ) || undefined,
+              presence: section === "drivers" ? isLive(r) : undefined,
+              presenceLabel:
+                section === "drivers"
+                  ? t(isLive(r) ? "aOnlineL" : "aOfflineL")
+                  : undefined,
               updated: section === "ratings" ? stamp("created_at") : undefined,
             };
           })}

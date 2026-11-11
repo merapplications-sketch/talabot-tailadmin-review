@@ -1,3 +1,4 @@
+import { actionColors } from "./action-colors";
 import type { ReactNode } from "react";
 import {
   Card as BCard,
@@ -55,8 +56,12 @@ export function Pair({
 }) {
   return (
     <Field orientation="horizontal">
-      <FieldTitle className="font-normal text-gray-500 dark:text-gray-400">{label}</FieldTitle>
-      <FieldContent className="min-w-0 font-medium text-gray-800 dark:text-gray-200">{children}</FieldContent>
+      <FieldTitle className="font-normal text-gray-500 dark:text-gray-400">
+        {label}
+      </FieldTitle>
+      <FieldContent className="min-w-0 font-medium text-gray-800 dark:text-gray-200">
+        {children}
+      </FieldContent>
     </Field>
   );
 }
@@ -87,7 +92,16 @@ export function Action({
       title={label}
       onClick={onClick}
     >
-      {Icon && <Icon aria-hidden="true" />}
+      {Icon && (
+        <Icon
+          className={
+            kind === "details" || kind === "phone" || kind === "edit"
+              ? actionColors[kind]
+              : undefined
+          }
+          aria-hidden="true"
+        />
+      )}
       {!compact && <span>{label}</span>}
     </Button>
   );

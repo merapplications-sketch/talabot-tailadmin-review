@@ -1,4 +1,5 @@
-"use client";
+import { actionColors } from "./action-colors";
+("use client");
 import { Badge } from "@/components/ui/badge";
 import { entityStatus } from "./entity-data";
 import { useLocale } from "next-intl";
@@ -127,7 +128,7 @@ export default function TicketDetails({
               title={t("aCall") + ": " + text(person, "phone")}
               render={<a href={"tel:" + text(person, "phone")} />}
             >
-              <CallIcon aria-hidden="true" />
+              <CallIcon className={actionColors.phone} aria-hidden="true" />
             </Button>
           </>
         )}

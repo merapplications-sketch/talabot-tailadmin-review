@@ -1,3 +1,4 @@
+import { actionColors } from "./action-colors";
 import { useLocale, useTranslations } from "next-intl";
 import { formatDate } from "./format";
 import { CallIcon, MapIcon, ClockIcon } from "@/icons";
@@ -127,7 +128,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
             title={t("aCall") + ": " + text(row, "phone")}
             render={<a href={"tel:" + text(row, "phone")} />}
           >
-            <CallIcon aria-hidden="true" />
+            <CallIcon className={actionColors.phone} aria-hidden="true" />
           </Button>
         ) : (
           <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -183,7 +184,6 @@ export default function OrderDetails({ order: o, t, back }: Props) {
             {t(o.driver_id ? "nativeAssignAlready" : "nativeAssignStatus")}
           </p>
         )}
-        <p className="text-sm">{t("nativeWriteBlocked")}</p>
         {!!o.delivery_photo && (
           <p>
             {t("zPhO")}: {t("nativeProofMissing")}

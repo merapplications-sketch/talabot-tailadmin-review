@@ -1137,6 +1137,7 @@
     "rangeError": "Choose a valid range between {start} and {end}."
   },
   "ownerRound": {
+    "filters": "Filters",
     "overview": "Operations & finances",
     "shortcuts": "Quick access",
     "done": "Show results",

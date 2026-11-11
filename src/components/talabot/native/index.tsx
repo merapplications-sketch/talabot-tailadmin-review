@@ -7,6 +7,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
+import NotificationSearch from "./b-shell/notification-search";
 import SummaryCards from "./b-shell/summary-cards";
 import { OrdersPresentation } from "./b-shell/list-patterns";
 import { BoxIcon, TruckDeliveryIcon, CartIcon, UsersIcon } from "@/icons";
@@ -39,8 +40,7 @@ const extra = {
       "Assign courier is available only for an unassigned order in Preparing or Ready for courier pickup.",
     nativeNext:
       "Next: review the recorded parties, items, timeline and payment information.",
-    nativeWriteBlocked:
-      "Isolated review. Financial and administrative writes are not connected.",
+    nativeWriteBlocked: "Changes cannot be saved in this preview.",
     nativeProofMissing: "The proof image is unavailable in the sample.",
     nativeNotice: "Synthetic data · native React migration in progress",
     nativePending:
@@ -70,8 +70,7 @@ const extra = {
       "Назначение доступно только без курьера в статусе приготовления или готовности к выдаче.",
     nativeNext:
       "Далее: проверьте участников, состав, историю и сведения об оплате.",
-    nativeWriteBlocked:
-      "Изолированное превью. Финансовая и административная запись не подключена.",
+    nativeWriteBlocked: "Изменения нельзя сохранить в этом превью.",
     nativeProofMissing: "Фото подтверждения отсутствует в выборке.",
     nativeNotice: "Тестовые данные · перенос в React не завершён",
     nativePending: "Раздел ещё не перенесён. Исходник сохранён отдельно.",
@@ -94,6 +93,7 @@ const extra = {
   },
 };
 export default function NativeAdmin() {
+  const demoT = useTranslations("ownerRound");
   const locale = useLocale(),
     lang = locale === "en" ? "en" : "ru",
     homeT = useTranslations("nativeHome"),
@@ -174,14 +174,10 @@ export default function NativeAdmin() {
           }}
         >
           <section className="min-w-0 space-y-6">
-            <p className="text-sm text-gray-500">
-              {t("nativeNotice")}
-              {locale === "tg" ? " · Тарҷумаи амалиёт нопурра: RU" : ""}
-            </p>
             {state.section === "home" ? (
               <HomeDashboard t={t} navigate={navigate} href={href} />
             ) : state.section === "reports" ? (
-              <Shell title={homeT("reports")}>
+              <Shell showNotice={false} title={homeT("reports")}>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {homeT("reportsNote")}
                 </p>
@@ -239,6 +235,7 @@ export default function NativeAdmin() {
               <NotificationsPage
                 id={state.id || undefined}
                 records={notices.records}
+                renderSearch={(props) => <NotificationSearch {...props} />}
                 merchantImage=""
               />
             ) : state.section === "orders" ? (
@@ -320,6 +317,7 @@ export default function NativeAdmin() {
               )
             ) : (
               <Shell
+                showNotice={false}
                 title={t(
                   (
                     {
@@ -350,6 +348,9 @@ export default function NativeAdmin() {
               </Shell>
             )}
           </section>
+          <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+            {demoT("demo")}
+          </p>
         </AdminLayout>
       </PreviewProvider>
     </NativeRouteContext.Provider>

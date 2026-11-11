@@ -1,15 +1,12 @@
-import {
-  InputGroup,
-  InputGroupInput,
-  InputGroupAddon,
-} from "@/components/ui/input-group";
+import { actionColors } from "../action-colors";
+import SearchField from "./search-field";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import { OrderStatusBadge } from "../../integrated-review/order-status";
 import type { OrderStatus } from "../../orders-data";
 import { IdentityImage } from "../../integrated-review/identity";
-import { ChevronRightIcon, FilterIcon, SearchIcon } from "@/icons";
+import { ChevronRightIcon } from "@/icons";
 import {
   Dialog,
   DialogContent,
@@ -131,7 +128,10 @@ export function OrdersPresentation({
       title={nativeT("nativeDetails") + " " + o.id}
       onClick={() => onDetails(o.id)}
     >
-      <ChevronRightIcon className="size-4" aria-hidden="true" />
+      <ChevronRightIcon
+        className={`size-4 ${actionColors.details}`}
+        aria-hidden="true"
+      />
     </Button>
   );
   const accent: Record<string, string> = {
@@ -186,36 +186,17 @@ export function OrdersPresentation({
             }}
           >
             <div className="min-w-0 flex-1 sm:w-96">
-              <label htmlFor="order-search" className="sr-only">
-                {t("search")}
-              </label>
-              <InputGroup>
-                <InputGroupAddon>
-                  <SearchIcon aria-hidden="true" />
-                </InputGroupAddon>
-                <InputGroupInput
-                  id="order-search"
-                  ref={inputRef}
-                  type="search"
-                  value={query}
-                  onChange={(e) => onSearch(e.target.value)}
-                  placeholder={nativeT("uOq")}
-                />
-                <InputGroupAddon align="inline-end" className="pe-0">
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="icon-lg"
-                    className="shrink-0 text-brand-500 dark:text-brand-400"
-                    aria-label={t("moreFilters")}
-                    aria-haspopup="dialog"
-                    aria-expanded={filtersOpen}
-                    onClick={() => setFiltersOpen(true)}
-                  >
-                    <FilterIcon aria-hidden="true" />
-                  </Button>
-                </InputGroupAddon>
-              </InputGroup>
+              <SearchField
+                id="order-search"
+                inputRef={inputRef}
+                label={t("search")}
+                placeholder={nativeT("uOq")}
+                value={query}
+                onChange={onSearch}
+                filterLabel={t("moreFilters")}
+                filtersOpen={filtersOpen}
+                onFilters={() => setFiltersOpen(true)}
+              />
             </div>
           </form>
         </div>
@@ -530,9 +511,6 @@ export function OrdersPresentation({
           </div>
         </>
       )}
-      <p className="text-sm text-gray-500 dark:text-gray-400">
-        {nativeT("nativeNotice")} {t("languageNote")}
-      </p>
       {hasMore && (
         <Button size="lg" variant="outline" onClick={onMore}>
           {nativeT("aMore")}

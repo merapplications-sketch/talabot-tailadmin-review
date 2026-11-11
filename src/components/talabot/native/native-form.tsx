@@ -1,3 +1,4 @@
+import { actionColors } from "./action-colors";
 import { useState } from "react";
 import { Card } from "./primitives";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -10,7 +11,6 @@ import {
   Field as BField,
   FieldGroup,
   FieldLabel,
-  FieldDescription,
   FieldError,
 } from "@/components/ui/field";
 import {
@@ -151,7 +151,7 @@ export default function NativeForm({
         aria-expanded={editing}
         onClick={() => setEditing(true)}
       >
-        <PencilIcon aria-hidden="true" />
+        <PencilIcon className={actionColors.edit} aria-hidden="true" />
       </Button>
     </div>
   );
@@ -202,7 +202,6 @@ export default function NativeForm({
                 <DialogTitle className="text-xl font-semibold text-gray-800 sm:text-2xl dark:text-white/90">
                   {title}
                 </DialogTitle>
-                <DialogDescription>{t("nativeWriteBlocked")}</DialogDescription>
               </DialogHeader>
               {editing && (
                 <form
@@ -286,9 +285,6 @@ export default function NativeForm({
                         )}
                       </BField>
                     ))}
-                    <FieldDescription>
-                      {t("nativeWriteBlocked")}
-                    </FieldDescription>
                     {error && <FieldError>{error}</FieldError>}
                     <BField orientation="horizontal">
                       <Button

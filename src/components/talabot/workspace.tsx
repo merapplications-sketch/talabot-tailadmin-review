@@ -78,17 +78,25 @@ function useListing() {
 export function Shell({
   title,
   children,
+  showNotice = true,
 }: {
   title: string;
   children: React.ReactNode;
+  showNotice?: boolean;
 }) {
   const t = useTranslations("workspace");
   return (
     <div className="space-y-6 text-gray-800 dark:text-gray-200">
       <h1 className="text-title-sm font-semibold">{title}</h1>
       {children}
-      <p className="text-sm text-gray-500 dark:text-gray-400">{t("notice")}</p>
-      <PreviewNotice />
+      {showNotice && (
+        <>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            {t("notice")}
+          </p>
+          <PreviewNotice />
+        </>
+      )}
     </div>
   );
 }
@@ -701,8 +709,25 @@ export function AnalyticsPage({
     </Shell>
   );
 }
-export type NotificationRecord = {id: string; order: {id: string; merchant: string; status: OrderStatus; updated: string}};
-export function NotificationsPage({ id, records = notices, merchantImage = demoMerchantImage }: { id?: string; records?: NotificationRecord[]; merchantImage?: string }) {
+export type NotificationRecord = {
+  id: string;
+  order: { id: string; merchant: string; status: OrderStatus; updated: string };
+};
+export function NotificationsPage({
+  id,
+  records = notices,
+  merchantImage = demoMerchantImage,
+  renderSearch,
+}: {
+  id?: string;
+  records?: NotificationRecord[];
+  merchantImage?: string;
+  renderSearch?: (props: {
+    query: string;
+    state: string;
+    set: (key: string, value: string) => void;
+  }) => React.ReactNode;
+}) {
   const locale = useLocale();
   const c = visualCopy[locale as keyof typeof visualCopy] || visualCopy.en;
   const t = useTranslations("workspace"),
@@ -720,8 +745,8 @@ export function NotificationsPage({ id, records = notices, merchantImage = demoM
   );
   const page = pageNumber(params.get("page"), filtered.length);
   return (
-    <Shell title={nav("notifications")}>
-      <p>{t("local")}</p>
+    <Shell title={nav("notifications")} showNotice={!renderSearch}>
+      {!renderSearch && <p>{t("local")}</p>}
       {id ? (
         <>
           <Link className={button} href={`/notifications?${qs}`} scroll={false}>
@@ -778,26 +803,34 @@ export function NotificationsPage({ id, records = notices, merchantImage = demoM
         </>
       ) : (
         <>
-          <section className={`${panel} grid gap-5 md:grid-cols-2`}>
-            <label>
-              {t("search")}
-              <input
-                className={input}
-                value={params.get("q") || ""}
-                onChange={(e) => set("q", e.target.value)}
+          {renderSearch ? (
+            renderSearch({
+              query: params.get("q") || "",
+              state: params.get("state") || "",
+              set,
+            })
+          ) : (
+            <section className={`${panel} grid gap-5 md:grid-cols-2`}>
+              <label>
+                {t("search")}
+                <input
+                  className={input}
+                  value={params.get("q") || ""}
+                  onChange={(e) => set("q", e.target.value)}
+                />
+              </label>
+              <Select
+                label={t("status")}
+                value={params.get("state") || ""}
+                onChange={(v) => set("state", v)}
+                options={[
+                  ["", t("all")],
+                  ["read", t("read")],
+                  ["unread", t("unread")],
+                ]}
               />
-            </label>
-            <Select
-              label={t("status")}
-              value={params.get("state") || ""}
-              onChange={(v) => set("state", v)}
-              options={[
-                ["", t("all")],
-                ["read", t("read")],
-                ["unread", t("unread")],
-              ]}
-            />
-          </section>
+            </section>
+          )}
           <section className={panel}>
             <Grid
               headers={[t("name"), t("status")]}
