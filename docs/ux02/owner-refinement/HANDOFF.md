@@ -42,3 +42,7 @@ Only existing B primitives/compositions were used. No new stylesheet, dependenci
 The prior 37-function evidence classification is carried forward without claiming 37/37. Presentation/navigation changed around orders, merchant/driver/customer/rating directories, banners and promo entry. Existing financial/permission contracts and FP07/FP09/FP27 remain unchanged. References: ../mobile-consistency/HANDOFF.md and ../source-conformance/coverage-37.md.
 
 Resume from this branch and DELIVERY.md after deployment. Next step is owner visual approval on actual iPhone Safari, with any remaining issue tied to a screenshot and the published version. No main merge, old-preview update, production publication or FP16 is authorized.
+
+## Latest focused correction handoff — v2
+
+The five subsequent owner corrections are saved at `64e4f1178c341ab475a46245b8537993cb3cf4e3` and deployed as isolated refined-review version 2. Read [FOCUSED-FIXES.md](FOCUSED-FIXES.md) and [DELIVERY-FOCUSED.md](DELIVERY-FOCUSED.md) for the exact source scope, verified behavior, screenshots and test limitations. Earlier sections above describe the earlier round and do not override this resume point. Await owner visual review; real Safari and 320/390/1440 remain NOT TESTED.
