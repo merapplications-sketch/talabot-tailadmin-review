@@ -344,6 +344,8 @@ export function OrdersPresentation({
       ) : (
         <>
           <div className="hidden overflow-x-auto rounded-2xl border border-gray-200 bg-white xl:block dark:border-gray-800 dark:bg-white/3">
+            {/* B basic-tables/table-three cell rhythm; retain full text and
+                existing 44px actions instead of truncating long locales. */}
             <table
               className="w-full text-left text-sm"
               data-testid="orders-table"
@@ -361,7 +363,7 @@ export function OrdersPresentation({
                     "total",
                     "details",
                   ].map((k) => (
-                    <th scope="col" key={k} className="px-4 py-5 font-medium">
+                    <th scope="col" key={k} className="px-4 py-3 font-medium">
                       {t(k)}
                     </th>
                   ))}
@@ -370,15 +372,15 @@ export function OrdersPresentation({
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
                 {rows.map((o) => (
                   <tr key={o.id}>
-                    <td className="px-4 py-5">
+                    <td className="px-4 py-3">
                       <p className="font-medium">{o.id}</p>
                       <p className="mt-1 text-xs text-gray-500">
                         {date(o.created)}
                       </p>
                       <p className="mt-1 text-xs text-gray-500">{o.extra}</p>
                     </td>
-                    <td className="px-4 py-5">{o.customer}</td>
-                    <td className="px-4 py-5">
+                    <td className="px-4 py-3">{o.customer}</td>
+                    <td className="px-4 py-3">
                       <div className="tp-identity">
                         <IdentityImage
                           name={o.merchant}
@@ -390,13 +392,13 @@ export function OrdersPresentation({
                         {t("merchant")}
                       </p>
                     </td>
-                    <td className="px-4 py-5">
+                    <td className="px-4 py-3">
                       {o.pickup}
                       <span className="block text-gray-500">
                         → {o.deliveryZone}
                       </span>
                     </td>
-                    <td className="px-4 py-5">
+                    <td className="px-4 py-3">
                       <div className="tp-identity">
                         <IdentityImage
                           name={o.driver || t("unassigned")}
@@ -406,14 +408,14 @@ export function OrdersPresentation({
                         <span>{o.driver || t("unassigned")}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-5">
+                    <td className="px-4 py-3">
                       <OrderStatusBadge value={o.status} />
                       <p className="mt-2 text-xs text-gray-500">
                         {date(o.updated)}
                       </p>
                     </td>
-                    <td className="px-4 py-5 tabular-nums">{money(o.total)}</td>
-                    <td className="px-4 py-5">{details(o)}</td>
+                    <td className="px-4 py-3 tabular-nums">{money(o.total)}</td>
+                    <td className="px-4 py-3">{details(o)}</td>
                   </tr>
                 ))}
               </tbody>
