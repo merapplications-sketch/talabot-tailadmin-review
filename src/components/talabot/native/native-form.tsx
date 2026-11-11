@@ -173,7 +173,7 @@ export default function NativeForm({
         )}
         <Button
           type="button"
-          variant="outline"
+          variant="ghost"
           size="icon-lg"
           aria-label={t("aEdit") + " " + title}
           title={t("aEdit") + " " + title}

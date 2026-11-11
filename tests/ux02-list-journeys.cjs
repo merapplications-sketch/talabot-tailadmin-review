@@ -39,5 +39,23 @@ test('Orders to Home and sidebar Orders restores search, status, secondary filte
 test('Direct order detail from Home returns to Home; original list memory remains separate',()=>{const h=harness('?section=home');h.ctx.scrollY=230;h.render().navigate({section:'orders',id:'ord1'});h.render().back();h.flush();assert.equal(h.loc.search,'?section=home');assert.equal(h.scroll.at(-1),230);});
 test('Reports metric to drivers has a return to Reports with its exact scroll',()=>{const h=harness('?section=reports');h.ctx.scrollY=506;h.render().navigate({section:'drivers',id:''});h.render().back();h.flush();assert.equal(h.render().state.section,'reports');assert.equal(h.scroll.at(-1),506);});
 test('multiple page transitions unwind in order without inheriting search into other sections',()=>{const h=harness('?section=customers&q=demo');h.ctx.scrollY=220;h.render().navigate({section:'drivers',id:''});assert.equal(h.render().state.query,'');h.render().navigate({section:'restaurants',id:''});h.render().back();h.flush();assert.equal(h.render().state.section,'drivers');h.render().back();h.flush();assert.equal(h.loc.search,'?section=customers&q=demo');assert.equal(h.scroll.at(-1),220);});
+test('Ratings summary shortcuts select the matching scope and persist it',()=>{
+ for (const key of ['driver','store','need','total']) {
+  const h=harness('?section=ratings');let navigation;
+  const tree=h.renderEntity({id:'',query:'old search',navigate:patch=>navigation=patch});
+  const cards=nodes(tree,n=>Array.isArray(n.props?.cards))[0].props.cards;
+  const card=cards.find(c=>c.key===key);assert.equal(typeof card.onClick,'function',key+' shortcut');card.onClick();
+  assert.equal(h.storage.getItem('ux02-native:filter:ratings'),key==='need'?'need':'all');
+  assert.equal(JSON.parse(h.storage.getItem('ux02-native:advanced:ratings')).target,['driver','store'].includes(key)?key:'all');
+  assert.equal(navigation.query,'');
+ }
+});
+test('Ratings target independently excludes missing scores without requiring a star filter',()=>{
+ const h=harness();const {filterDirectoryRows:f,emptyDirectoryFilters:base}=h.load('src/components/talabot/native/directory-filters.ts');
+ const rows=[{id:'driver',driver_stars:4,store_stars:null},{id:'store',driver_stars:null,store_stars:3},{id:'both',driver_stars:2,store_stars:5}];
+ assert.deepEqual(Array.from(f('ratings',rows,'','all',{...base,target:'driver'}),r=>r.id),['driver','both']);
+ assert.deepEqual(Array.from(f('ratings',rows,'','all',{...base,target:'store'}),r=>r.id),['store','both']);
+ assert.equal(f('ratings',rows,'','all',base).length,3);
+});
 console.log(`${pass} list journey checks passed; ${fail} failed.`);if(fail)process.exitCode=1;
 

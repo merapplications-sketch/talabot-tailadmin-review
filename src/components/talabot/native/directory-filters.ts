@@ -117,6 +117,10 @@ export function filterDirectoryRows(
       !!row.banned_at !== (filters.account === "blocked")
     )
       return false;
+    if (section === "ratings") {
+      if (filters.target === "driver" && row.driver_stars == null) return false;
+      if (filters.target === "store" && row.store_stars == null) return false;
+    }
     if (section === "ratings" && filters.stars !== "all") {
       const fields =
         filters.target === "driver"

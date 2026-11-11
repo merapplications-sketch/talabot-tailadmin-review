@@ -6,7 +6,7 @@ export function SettingsPresentation() {
     t = useTranslations("workspace"),
     { themeMode, setThemeMode } = useTheme();
   const input =
-    "mt-2 block min-h-11 w-full min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base dark:border-gray-700 dark:[color-scheme:dark]";
+    "mt-2 block min-h-11 w-full min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base focus:border-gray-300! focus:ring-0! focus:outline-none! focus-visible:outline-none! dark:border-gray-700 dark:focus:border-gray-700! dark:[color-scheme:dark]";
   return (
     <section className="grid gap-6 rounded-2xl border border-gray-200 bg-white p-5 md:grid-cols-2 md:p-6 dark:border-gray-800 dark:bg-white/3">
       <label className="block min-w-0 text-sm">

@@ -121,30 +121,32 @@ export default function TicketDetails({
           </Badge>
         </Pair>
         <p>{text(person, "name") || "—"}</p>
-        {!!person.phone && (
-          <>
-            <span>{text(person, "phone")}</span>
+        <div className="flex flex-wrap items-center gap-3">
+          {!!person.phone && (
+            <div className="flex min-w-0 items-center gap-2">
+              <span className="min-w-0 break-all">{text(person, "phone")}</span>
+              <Button
+                variant="outline"
+                size="icon-lg"
+                nativeButton={false}
+                aria-label={t("aCall") + ": " + text(person, "phone")}
+                title={t("aCall") + ": " + text(person, "phone")}
+                render={<a href={"tel:" + text(person, "phone")} />}
+              >
+                <CallIcon className={actionColors.phone} aria-hidden="true" />
+              </Button>
+            </div>
+          )}
+          {!!k.order_id && (
             <Button
+              size="lg"
               variant="outline"
-              size="icon-lg"
-              nativeButton={false}
-              aria-label={t("aCall") + ": " + text(person, "phone")}
-              title={t("aCall") + ": " + text(person, "phone")}
-              render={<a href={"tel:" + text(person, "phone")} />}
+              onClick={() => openOrder(text(k, "order_id"))}
             >
-              <CallIcon className={actionColors.phone} aria-hidden="true" />
+              #{text(k, "order_id")}
             </Button>
-          </>
-        )}
-        {!!k.order_id && (
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => openOrder(text(k, "order_id"))}
-          >
-            #{text(k, "order_id")}
-          </Button>
-        )}
+          )}
+        </div>
         {number(k, "refund_amount") > 0 && (
           <Pair label={t("xRefundL")}>{number(k, "refund_amount")} TJS</Pair>
         )}

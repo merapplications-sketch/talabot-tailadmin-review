@@ -86,7 +86,7 @@ export function Action({
   return (
     <Button
       type="button"
-      variant={kind === "details" ? "ghost" : "outline"}
+      variant={kind === "details" || kind === "edit" ? "ghost" : "outline"}
       size={compact ? "icon-lg" : "lg"}
       aria-label={label}
       title={label}

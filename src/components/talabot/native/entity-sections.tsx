@@ -10,6 +10,7 @@ import { actionColors } from "./action-colors";
 import NativeIdentity from "./b-shell/identity";
 import { CallIcon, MapIcon, StarIcon, AlertIcon, BoxIcon } from "@/icons";
 import SummaryCards from "./b-shell/summary-cards";
+import RatingStars from "./b-shell/rating-stars";
 import {
   ratingAverage,
   needsRatingFollowup,
@@ -192,6 +193,15 @@ export default function EntitySections({
     storeAverage = ratingAverage(source, "store_stars"),
     needsCount = source.filter(needsRatingFollowup).length,
     handledCount = source.filter((r) => r.handled_at).length;
+  const openRatingScope = (scope: "driver" | "store" | "need" | "total") => {
+    setStatus(scope === "need" ? "need" : "all");
+    setAdvanced({
+      ...emptyDirectoryFilters,
+      target: scope === "driver" || scope === "store" ? scope : "all",
+    });
+    setLimit(30);
+    navigate({ query: "" });
+  };
   const ratingStatus = (r: Row) =>
     r.handled_at ? "aHandled" : needsRatingFollowup(r) ? "aNeeds" : "uRNot";
   const ratingStore = (r: Row) =>
@@ -996,14 +1006,12 @@ export default function EntitySections({
             </Pair>
             {row.store_stars != null && (
               <Pair label={t("aStoreRate2")}>
-                {text(row, "store_stars")}{" "}
-                <span className="text-yellow-500">★</span>
+                <RatingStars value={row.store_stars} />
               </Pair>
             )}
             {row.driver_stars != null && (
               <Pair label={t("aCourierRate")}>
-                {text(row, "driver_stars")}{" "}
-                <span className="text-yellow-500">★</span>
+                <RatingStars value={row.driver_stars} />
               </Pair>
             )}
             {ratingComment(row.comment).tags.map((tag, i) => (
@@ -1058,12 +1066,13 @@ export default function EntitySections({
       );
   }
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 [&_button[data-summary-info]]:block [&_button[data-summary-info]]:border-solid">
       {section === "ratings" && (
         <SummaryCards
           cards={[
             {
               key: "driver",
+              onClick: () => openRatingScope("driver"),
               label: `${t("aRAvgD")} · ${driverAverage?.n || 0} ${t("aRCnt")}`,
               value: driverAverage ? (
                 <>
@@ -1078,6 +1087,7 @@ export default function EntitySections({
             },
             {
               key: "store",
+              onClick: () => openRatingScope("store"),
               label: `${t("aRAvgS")} · ${storeAverage?.n || 0} ${t("aRCnt")}`,
               value: storeAverage ? (
                 <>
@@ -1092,12 +1102,14 @@ export default function EntitySections({
             },
             {
               key: "need",
+              onClick: () => openRatingScope("need"),
               label: t("aRNeeds"),
               value: needsCount,
               Icon: AlertIcon,
             },
             {
               key: "total",
+              onClick: () => openRatingScope("total"),
               label: t("aRCnt"),
               value: source.length,
               Icon: BoxIcon,
@@ -1508,18 +1520,12 @@ export default function EntitySections({
                 text(r, "comment") || t("aNoCmt"),
                 ratingStore(r),
                 r.store_stars != null ? (
-                  <>
-                    {text(r, "store_stars")}{" "}
-                    <span className="text-yellow-500">★</span>
-                  </>
+                  <RatingStars value={r.store_stars} />
                 ) : (
                   "—"
                 ),
                 r.driver_stars != null ? (
-                  <>
-                    {text(r, "driver_stars")}{" "}
-                    <span className="text-yellow-500">★</span>
-                  </>
+                  <RatingStars value={r.driver_stars} />
                 ) : (
                   "—"
                 ),

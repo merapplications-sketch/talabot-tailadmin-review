@@ -44,7 +44,7 @@ export default function MerchantPicker({
         aria-label={label}
         placeholder={label}
         showClear
-        className="h-12 [&_input]:text-base [&_input]:focus-visible:outline-none!"
+        className="h-12 has-[input:focus]:border-gray-300! has-[input:focus]:ring-0! dark:has-[input:focus]:border-gray-700! [&_input]:text-base [&_input]:focus:shadow-none! [&_input]:focus:ring-0! [&_input]:focus:outline-none! [&_input]:focus-visible:outline-none!"
       />
       <ComboboxContent>
         <ComboboxEmpty>{emptyLabel}</ComboboxEmpty>

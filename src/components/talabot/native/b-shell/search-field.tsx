@@ -35,7 +35,7 @@ export default function SearchField({
       <label htmlFor={id} className="sr-only">
         {label}
       </label>
-      <InputGroup className="h-12 has-[[data-slot=input-group-control]:focus]:border-gray-500 has-[[data-slot=input-group-control]:focus]:ring-0 has-[[data-slot=input-group-control]:focus-visible]:border-gray-500 has-[[data-slot=input-group-control]:focus-visible]:ring-0">
+      <InputGroup className="h-12 has-[[data-slot=input-group-control]:focus]:border-gray-300! has-[[data-slot=input-group-control]:focus]:ring-0! dark:has-[[data-slot=input-group-control]:focus]:border-gray-700!">
         <InputGroupAddon>
           <SearchIcon aria-hidden="true" />
         </InputGroupAddon>
@@ -43,7 +43,7 @@ export default function SearchField({
           id={id}
           ref={inputRef}
           type="search"
-          className="min-w-0 text-base focus-visible:outline-offset-0! focus-visible:outline-none!"
+          className="min-w-0 text-base focus:border-transparent! focus:shadow-none! focus:ring-0! focus:outline-none! focus-visible:outline-none!"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder || label}
