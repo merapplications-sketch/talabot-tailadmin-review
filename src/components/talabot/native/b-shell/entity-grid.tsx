@@ -25,6 +25,7 @@ export function NativeGrid({
     promoted?: boolean;
     closedLabel?: string;
     promotedLabel?: string;
+    onPromotedClick?: () => void;
     compactValues?: number[];
     event?: string;
     unread?: boolean;
@@ -70,6 +71,7 @@ export function NativeGrid({
                         promoted={r.promoted}
                         closedLabel={r.closedLabel}
                         promotedLabel={r.promotedLabel}
+                        onPromotedClick={r.onPromotedClick}
                       />
                     )}
                     <span>
@@ -153,6 +155,7 @@ export function NativeGrid({
                   promoted={r.promoted}
                   closedLabel={r.closedLabel}
                   promotedLabel={r.promotedLabel}
+                  onPromotedClick={r.onPromotedClick}
                 />
               )}
               <h2

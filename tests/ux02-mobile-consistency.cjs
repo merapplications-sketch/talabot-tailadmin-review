@@ -11,15 +11,17 @@ for (const section of ['drivers', 'restaurants', 'customers', 'ratings', 'suppor
   assert(html.includes('data-slot="input-group"'), section);
   // Filters belong to the dialog, not permanent tall rows above the results.
   assert(!html.includes('role="combobox"'), section);
-  if (['drivers', 'restaurants', 'ratings', 'support'].includes(section)) {
+  if (['drivers', 'restaurants', 'customers', 'ratings', 'support'].includes(section)) {
     assert(html.includes('aria-haspopup="dialog"'), section);
     assert(html.includes('aria-expanded="false"'), section);
   }
 }
 for (const presence of [true, false, undefined]) {
   const html = wrap(React.createElement(Identity, { name: 'Driver', person: true, presence, presenceLabel: presence ? 'Online' : 'Offline' }));
-  assert.equal(html.includes('data-slot="avatar-badge"'), presence !== undefined);
-  if (presence !== undefined) assert(html.includes(`data-variant="${presence ? 'online' : 'offline'}"`));
+  assert.equal(html.includes('data-testid="identity-outline"'), presence !== undefined);
+  if (presence !== undefined) assert(html.includes(presence ? 'border-green-500' : 'border-red-500') && html.includes('rounded-full'));
+  assert(!html.includes('data-slot="avatar-badge"'));
   assert(!html.includes('>Online<') && !html.includes('>Offline<'));
 }
 console.log('PASS 7 list search compositions, closed page filters, known presence states and absent presence; SSR only, not a mobile visual test.');
+

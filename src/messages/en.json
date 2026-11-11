@@ -1140,7 +1140,6 @@
     "closed": "Closed",
     "activeBanner": "Active banner",
     "close": "Close",
-
     "filters": "Filters",
     "overview": "Operations & finances",
     "shortcuts": "Quick access",
@@ -1154,6 +1153,26 @@
     "notes": "Scope & calculation",
     "demo": "Demo data · saved sample",
     "walletRecorded": "Wallet amount · saved record",
-    "subCall": "If an item is unavailable: call the customer"
+    "subCall": "If an item is unavailable: call the customer",
+    "presence": "Connection",
+    "account": "Account status",
+    "availability": "Order availability",
+    "available": "Available",
+    "hasBanner": "With an active banner",
+    "noBanner": "Without an active banner",
+    "ratingTarget": "Rated party",
+    "fromDate": "From date",
+    "toDate": "To date",
+    "sort": "Sort",
+    "defaultSort": "Default order",
+    "nameSort": "Name",
+    "newest": "Newest first",
+    "oldest": "Oldest first",
+    "invalidDates": "End date must be on or after the start date.",
+    "resetFilters": "Reset filters",
+    "searchMerchants": "Search restaurant or store",
+    "globalPromo": "This promo code applies across the platform. Opening it from a store does not limit it to that store.",
+    "rankingMerchants": "Best-selling partners",
+    "noBannerImage": "No banner image available"
   }
 }

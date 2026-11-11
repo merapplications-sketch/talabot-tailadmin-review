@@ -1,4 +1,20 @@
-"use client";
+import SearchField from "../b-shell/search-field";
+import MerchantPicker from "../b-shell/merchant-picker";
+import { merchantCategories } from "../directory-filters";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { tables } from "../domain";
 import {
   Accordion,
   AccordionItem,
@@ -45,7 +61,27 @@ export default function HomeDashboard({
     [range, setRange] = useState(() => periodRange("month"));
   const [draft, setDraft] = useState(range),
     [error, setError] = useState(false);
-  const rank = homeRankings(range.start, range.end),
+  const [scope, setScopeState] = useState(() => {
+    try {
+      return (
+        JSON.parse(
+          sessionStorage.getItem("ux02-native:ranking-scope") || "null",
+        ) || { category: "rest", merchant: "", query: "" }
+      );
+    } catch {
+      return { category: "rest", merchant: "", query: "" };
+    }
+  });
+  const setScope = (next: {
+    category: string;
+    merchant: string;
+    query: string;
+  }) => {
+    setScopeState(next);
+    sessionStorage.setItem("ux02-native:ranking-scope", JSON.stringify(next));
+  };
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const rank = homeRankings(range.start, range.end, tables, scope),
     m = metrics(),
     attention = operationalAlerts().unassigned;
   const fmt = (value: number) =>
@@ -73,24 +109,28 @@ export default function HomeDashboard({
         cards={[
           {
             key: "orders",
+            onClick: () => navigate({ section: "orders", id: "" }),
             label: t("aKOrd"),
             value: m.orders,
             Icon: BoxIcon,
           },
           {
             key: "revenue",
+            onClick: () => navigate({ section: "reports", id: "" }),
             label: t("aKRev"),
             value: m.revenue.toFixed(2) + " TJS",
             Icon: DollarIcon,
           },
           {
             key: "commission",
+            onClick: () => navigate({ section: "reports", id: "" }),
             label: t("aKCom"),
             value: m.commission.toFixed(2) + " TJS",
             Icon: PieChartIcon,
           },
           {
             key: "active",
+            onClick: () => navigate({ section: "orders", id: "" }),
             label: t("aKAct"),
             value: m.active,
             Icon: MovingBoxIcon,
@@ -118,6 +158,78 @@ export default function HomeDashboard({
             </Note>
           </>,
         )}
+        <SearchField
+          id="ranking-search"
+          label={ownerT("searchMerchants")}
+          value={scope.query}
+          onChange={(query) => setScope({ ...scope, query })}
+          filterLabel={ownerT("filters")}
+          filtersOpen={filtersOpen}
+          onFilters={() => setFiltersOpen(true)}
+        />
+        <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
+          <DialogContent>
+            <DialogTitle>{ownerT("filters")}</DialogTitle>
+            <div className="text-sm">
+              {t("aCat")}
+              <Select
+                value={scope.category}
+                onValueChange={(category) =>
+                  setScope({
+                    ...scope,
+                    category: category || "all",
+                    merchant: "",
+                  })
+                }
+                items={[
+                  { value: "all", label: t("aAll") },
+                  ...merchantCategories.map((value) => ({
+                    value,
+                    label: t(value),
+                  })),
+                ]}
+              >
+                <SelectTrigger aria-label={t("aCat")}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t("aAll")}</SelectItem>
+                  {merchantCategories.map((value) => (
+                    <SelectItem key={value} value={value}>
+                      {t(value)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <MerchantPicker
+              value={scope.merchant}
+              onChange={(merchant) => setScope({ ...scope, merchant })}
+              label={ownerT("searchMerchants")}
+              emptyLabel={t("aNo")}
+              stores={tables.stores.filter(
+                (store) =>
+                  scope.category === "all" || store.category === scope.category,
+              )}
+            />
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  setScope({ category: "all", merchant: "", query: "" })
+                }
+              >
+                {ownerT("resetFilters")}
+              </Button>
+              <Button onClick={() => setFiltersOpen(false)}>
+                {ownerT("done")}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+        <p className="text-sm text-gray-500">
+          {t(scope.category === "all" ? "aAll" : scope.category)}
+        </p>
         <AnalyticsPeriod
           period={period}
           choosePeriod={choosePeriod}
@@ -138,7 +250,14 @@ export default function HomeDashboard({
       </Card>
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12">
-          <Card title={h("restaurants")} id="home-restaurants">
+          <Card
+            title={
+              scope.category === "rest"
+                ? h("restaurants")
+                : ownerT("rankingMerchants")
+            }
+            id="home-restaurants"
+          >
             <ul className="divide-y divide-gray-100 dark:divide-gray-800">
               {rank.restaurants.slice(0, 5).map((row) => (
                 <li key={row.id} className="py-2">

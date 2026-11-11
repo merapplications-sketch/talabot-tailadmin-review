@@ -2,5 +2,5 @@
 export const actionColors = {
   details: "text-brand-500! dark:text-brand-400!",
   phone: "text-green-600! dark:text-green-400!",
-  edit: "text-purple-400! dark:text-purple-300!",
+  edit: "text-brand-500! dark:text-brand-400!",
 } as const;

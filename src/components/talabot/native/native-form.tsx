@@ -1,3 +1,5 @@
+import MerchantPicker from "./b-shell/merchant-picker";
+import { merchantCategories } from "./directory-filters";
 import DetailDialog from "./b-shell/detail-dialog";
 import { actionColors } from "./action-colors";
 import { useState } from "react";
@@ -45,7 +47,13 @@ export default function NativeForm({
   resetAfterSuccess = false,
   closeAfterSuccess = false,
   summary,
+  openOnMount = false,
+  onClose,
+  description,
 }: {
+  openOnMount?: boolean;
+  onClose?: () => void;
+  description?: string;
   summary?: { label: string; value: string }[];
   title: string;
   fields: Field[];
@@ -84,8 +92,12 @@ export default function NativeForm({
     [error, setError] = useState(""),
     [confirming, setConfirming] = useState(false),
     [pending, setPending] = useState(false),
-    [editing, setEditing] = useState(false),
+    [editing, setEditing] = useState(openOnMount),
     [reading, setReading] = useState(false);
+  const close = () => {
+    setEditing(false);
+    if (openOnMount) onClose?.();
+  };
   const setDraft = (next: Row) => {
     setDraftState(next);
     sessionStorage.setItem(draftKey, JSON.stringify(next));
@@ -175,28 +187,29 @@ export default function NativeForm({
   );
   return (
     <>
-      {info.length ? (
-        <div
-          onClick={(e) => {
-            if (
-              info.length > 2 &&
-              !(e.target as HTMLElement).closest("button, a, input, select")
-            )
-              setReading(true);
-          }}
-        >
-          <Card>
-            {trigger}
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {info.slice(0, 2).map((item, i) => (
-                <InfoField key={i} label={item.label} value={item.value} />
-              ))}
-            </div>
-          </Card>
-        </div>
-      ) : (
-        trigger
-      )}
+      {!openOnMount &&
+        (info.length ? (
+          <div
+            onClick={(e) => {
+              if (
+                info.length > 2 &&
+                !(e.target as HTMLElement).closest("button, a, input, select")
+              )
+                setReading(true);
+            }}
+          >
+            <Card>
+              {trigger}
+              <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {info.slice(0, 2).map((item, i) => (
+                  <InfoField key={i} label={item.label} value={item.value} />
+                ))}
+              </div>
+            </Card>
+          </div>
+        ) : (
+          trigger
+        ))}
       {reading && (
         <DetailDialog
           title={title}
@@ -214,7 +227,10 @@ export default function NativeForm({
       <Dialog
         open={editing}
         onOpenChange={(open) => {
-          if (!pending) setEditing(open);
+          if (!pending) {
+            if (open) setEditing(true);
+            else close();
+          }
         }}
       >
         <DialogContent
@@ -244,6 +260,9 @@ export default function NativeForm({
                 <DialogTitle className="text-xl font-semibold text-gray-800 sm:text-2xl dark:text-white/90">
                   {title}
                 </DialogTitle>
+                {description && (
+                  <DialogDescription>{description}</DialogDescription>
+                )}
               </DialogHeader>
               {editing && (
                 <form
@@ -254,79 +273,127 @@ export default function NativeForm({
                   }}
                 >
                   <FieldGroup>
-                    {fields.map((f) => (
-                      <BField
-                        key={f.key}
-                        orientation={
-                          f.type === "checkbox" ? "horizontal" : "vertical"
-                        }
-                      >
-                        <FieldLabel>{t(f.label)}</FieldLabel>
-                        {f.type === "checkbox" ? (
-                          <Checkbox
-                            checked={!!draft[f.key]}
-                            onCheckedChange={(checked) =>
-                              setDraft({ ...draft, [f.key]: checked })
-                            }
-                          />
-                        ) : f.options ? (
-                          <Select
-                            value={text(draft, f.key)}
-                            items={[
-                              { value: "", label: "—" },
-                              ...f.options.map((v) => ({
-                                value: v,
-                                label: t(v),
-                              })),
-                            ]}
-                            onValueChange={(value) =>
-                              setDraft({ ...draft, [f.key]: value ?? "" })
-                            }
-                          >
-                            <SelectTrigger aria-label={t(f.label)}>
-                              <SelectValue />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="">—</SelectItem>
-                              {f.options.map((v) => (
-                                <SelectItem key={v} value={v}>
-                                  {t(v)}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                        ) : f.type === "textarea" ? (
-                          <Textarea
-                            maxLength={f.maxLength}
-                            value={text(draft, f.key)}
-                            onChange={(e) =>
-                              setDraft({ ...draft, [f.key]: e.target.value })
-                            }
-                          />
-                        ) : f.type === "file" ? (
-                          <FileInput
-                            accept="image/*"
-                            onChange={() => setError(t("nativeWriteBlocked"))}
-                          />
-                        ) : (
-                          <Input
-                            type={f.type || "text"}
-                            step={f.type === "number" ? "any" : undefined}
-                            min={f.min}
-                            max={f.max}
-                            maxLength={f.maxLength}
-                            value={
-                              f.type === "date"
-                                ? text(draft, f.key).slice(0, 10)
-                                : text(draft, f.key)
-                            }
-                            onChange={(e) =>
-                              setDraft({ ...draft, [f.key]: e.target.value })
-                            }
-                          />
-                        )}
-                      </BField>
-                    ))}
+                    {fields.map((f) =>
+                      f.type === "merchant" &&
+                      draft.link_type === "none" ? null : (
+                        <BField
+                          key={f.key}
+                          orientation={
+                            f.type === "checkbox" ? "horizontal" : "vertical"
+                          }
+                        >
+                          <FieldLabel>
+                            {t(
+                              f.type === "merchant" &&
+                                draft.link_type === "category"
+                                ? "aCat"
+                                : f.label,
+                            )}
+                          </FieldLabel>
+                          {f.type === "merchant" &&
+                          draft.link_type !== "category" ? (
+                            <MerchantPicker
+                              value={text(draft, f.key)}
+                              onChange={(value) =>
+                                setDraft({ ...draft, [f.key]: value })
+                              }
+                              label={t(f.label)}
+                              emptyLabel={t("aNo")}
+                            />
+                          ) : f.type === "merchant" ? (
+                            <Select
+                              value={text(draft, f.key)}
+                              items={merchantCategories.map((value) => ({
+                                value,
+                                label: t(value),
+                              }))}
+                              onValueChange={(value) =>
+                                setDraft({ ...draft, [f.key]: value || "" })
+                              }
+                            >
+                              <SelectTrigger aria-label={t("aCat")}>
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                {merchantCategories.map((value) => (
+                                  <SelectItem key={value} value={value}>
+                                    {t(value)}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          ) : f.type === "checkbox" ? (
+                            <Checkbox
+                              checked={!!draft[f.key]}
+                              onCheckedChange={(checked) =>
+                                setDraft({ ...draft, [f.key]: checked })
+                              }
+                            />
+                          ) : f.options ? (
+                            <Select
+                              value={text(draft, f.key)}
+                              items={[
+                                { value: "", label: "—" },
+                                ...f.options.map((v) => ({
+                                  value: v,
+                                  label: t(v),
+                                })),
+                              ]}
+                              onValueChange={(value) =>
+                                setDraft({
+                                  ...draft,
+                                  [f.key]: value ?? "",
+                                  ...(f.key === "link_type"
+                                    ? { link_value: "" }
+                                    : {}),
+                                })
+                              }
+                            >
+                              <SelectTrigger aria-label={t(f.label)}>
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="">—</SelectItem>
+                                {f.options.map((v) => (
+                                  <SelectItem key={v} value={v}>
+                                    {t(v)}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          ) : f.type === "textarea" ? (
+                            <Textarea
+                              maxLength={f.maxLength}
+                              value={text(draft, f.key)}
+                              onChange={(e) =>
+                                setDraft({ ...draft, [f.key]: e.target.value })
+                              }
+                            />
+                          ) : f.type === "file" ? (
+                            <FileInput
+                              accept="image/*"
+                              onChange={() => setError(t("nativeWriteBlocked"))}
+                            />
+                          ) : (
+                            <Input
+                              type={f.type || "text"}
+                              step={f.type === "number" ? "any" : undefined}
+                              min={f.min}
+                              max={f.max}
+                              maxLength={f.maxLength}
+                              value={
+                                f.type === "date"
+                                  ? text(draft, f.key).slice(0, 10)
+                                  : text(draft, f.key)
+                              }
+                              onChange={(e) =>
+                                setDraft({ ...draft, [f.key]: e.target.value })
+                              }
+                            />
+                          )}
+                        </BField>
+                      ),
+                    )}
                     {error && <FieldError>{error}</FieldError>}
                     <BField orientation="horizontal">
                       <Button
@@ -334,7 +401,7 @@ export default function NativeForm({
                         variant="outline"
                         size="lg"
                         disabled={pending}
-                        onClick={() => setEditing(false)}
+                        onClick={close}
                       >
                         {t("aClose")}
                       </Button>

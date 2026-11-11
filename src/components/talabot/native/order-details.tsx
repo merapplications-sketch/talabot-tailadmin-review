@@ -221,11 +221,11 @@ export default function OrderDetails({
                     }
                   >
                     {formatDate(text(e, "at"), locale)}
-                    {i > 0
-                      ? " (+" +
-                        duration(text(e, "at"), text(events[i - 1], "at")) +
-                        ")"
-                      : ""}
+                    {i > 0 && (
+                      <span className="block text-sm font-normal text-gray-500 dark:text-gray-400">
+                        (+{duration(text(e, "at"), text(events[i - 1], "at"))})
+                      </span>
+                    )}
                   </Pair>
                 </li>
               ))}

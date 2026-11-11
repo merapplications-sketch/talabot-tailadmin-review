@@ -280,6 +280,7 @@ export default function NativeAdmin() {
                       sort: "",
                     });
                   }}
+                  onBanner={(id) => navigate({ section: "banners", id })}
                   onDetails={(id) => {
                     navigate({ id });
                   }}
@@ -345,44 +346,57 @@ export default function NativeAdmin() {
               </Shell>
             )}
           </section>
-          {state.id && (
-            <DetailDialog
-              key={state.section + ":" + state.id}
-              title={t("nativeDetails")}
-              backLabel={t("aBack")}
-              closeLabel={demoT("close")}
-              onClose={back}
-            >
-              {state.section === "orders" ? (
-                order ? (
-                  <OrderDetails order={order} t={t} back={back} hideBack />
+          {state.id &&
+            (["banners", "promotions"].includes(state.section) &&
+            (state.id === "new" || state.id.startsWith("new:")) ? (
+              <EntitySections
+                key={state.section + ":" + state.id}
+                section={state.section}
+                id={state.id}
+                query={state.query}
+                t={t}
+                navigate={navigate}
+                onBack={back}
+                hideBack
+              />
+            ) : (
+              <DetailDialog
+                key={state.section + ":" + state.id}
+                title={t("nativeDetails")}
+                backLabel={t("aBack")}
+                closeLabel={demoT("close")}
+                onClose={back}
+              >
+                {state.section === "orders" ? (
+                  order ? (
+                    <OrderDetails order={order} t={t} back={back} hideBack />
+                  ) : (
+                    <p role="alert">
+                      {t("uOrdMissing").replace("{n}", state.id)}
+                    </p>
+                  )
+                ) : state.section === "notifications" ? (
+                  <NotificationsPage
+                    id={state.id}
+                    records={notices.records}
+                    renderSearch={(props) => <NotificationSearch {...props} />}
+                    merchantImage=""
+                    hideBack
+                  />
                 ) : (
-                  <p role="alert">
-                    {t("uOrdMissing").replace("{n}", state.id)}
-                  </p>
-                )
-              ) : state.section === "notifications" ? (
-                <NotificationsPage
-                  id={state.id}
-                  records={notices.records}
-                  renderSearch={(props) => <NotificationSearch {...props} />}
-                  merchantImage=""
-                  hideBack
-                />
-              ) : (
-                <EntitySections
-                  key={state.section + ":" + state.id}
-                  section={state.section}
-                  id={state.id}
-                  query={state.query}
-                  t={t}
-                  navigate={navigate}
-                  onBack={back}
-                  hideBack
-                />
-              )}
-            </DetailDialog>
-          )}
+                  <EntitySections
+                    key={state.section + ":" + state.id}
+                    section={state.section}
+                    id={state.id}
+                    query={state.query}
+                    t={t}
+                    navigate={navigate}
+                    onBack={back}
+                    hideBack
+                  />
+                )}
+              </DetailDialog>
+            ))}
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
             {demoT("demo")}
           </p>

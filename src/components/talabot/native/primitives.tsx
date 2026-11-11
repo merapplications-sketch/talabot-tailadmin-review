@@ -95,8 +95,11 @@ export function Action({
       {Icon && (
         <Icon
           className={
-            kind === "details" || kind === "phone" || kind === "edit"
-              ? actionColors[kind]
+            kind === "details" ||
+            kind === "phone" ||
+            kind === "edit" ||
+            kind === "map"
+              ? actionColors[kind === "map" ? "details" : kind]
               : undefined
           }
           aria-hidden="true"

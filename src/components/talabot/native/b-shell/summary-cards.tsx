@@ -7,7 +7,8 @@ export default function SummaryCards({
   cards: {
     key: string;
     label: string;
-    value: string | number;
+    value: React.ReactNode;
+    iconClassName?: string;
     onClick?: () => void;
     Icon: ComponentType<{ className?: string }>;
   }[];
@@ -17,13 +18,13 @@ export default function SummaryCards({
       className="grid grid-cols-2 gap-4 md:gap-6 xl:grid-cols-4"
       data-testid="summary-cards"
     >
-      {cards.map(({ key, label, value, Icon, onClick }) => {
+      {cards.map(({ key, label, value, Icon, onClick, iconClassName }) => {
         const className =
           "min-w-0 h-auto rounded-2xl border border-gray-200 bg-white p-4 text-start whitespace-normal shadow-theme-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 max-sm:gap-1! max-sm:p-3! md:p-6 dark:border-gray-800 dark:bg-white/3";
         const content = (
           <>
             <span className="flex size-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-500/15 dark:text-brand-400">
-              <Icon className="size-6" />
+              <Icon className={`size-6 ${iconClassName || ""}`} />
             </span>
             <span className="mt-5 block text-sm text-gray-500 dark:text-gray-400">
               {label}

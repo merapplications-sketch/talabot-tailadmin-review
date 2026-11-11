@@ -1,7 +1,7 @@
 import { actionColors } from "../action-colors";
 import SearchField from "./search-field";
 import NativeIdentity from "./identity";
-import { identityCues } from "../entity-data";
+import { identityCues, activeMerchantBanner } from "../entity-data";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
@@ -37,6 +37,7 @@ export function OrdersPresentation({
   backAction,
   t: nativeT,
   onDetails,
+  onBanner,
   query,
   onSearch,
   status,
@@ -70,6 +71,7 @@ export function OrdersPresentation({
   onReset: () => void;
   t: (key: string) => string;
   onDetails: (id: string) => void;
+  onBanner: (id: string) => void;
 }) {
   const [filtersOpen, setFiltersOpen] = useState(false);
   const ownerT = useTranslations("ownerRound");
@@ -102,6 +104,7 @@ export function OrdersPresentation({
       "restaurants",
       tables.stores.find((s) => s.id === o.store_id) || {},
     ),
+    bannerId: text(activeMerchantBanner(o.store_id) || {}, "id"),
     merchantImage: text(
       tables.stores.find((s) => s.id === o.store_id) || {},
       "logo_url",
@@ -442,6 +445,7 @@ export function OrdersPresentation({
                           {...o.merchantCues}
                           closedLabel={ownerT("closed")}
                           promotedLabel={ownerT("activeBanner")}
+                          onPromotedClick={() => onBanner(o.bannerId)}
                         />
                         <span>{o.merchant}</span>
                       </div>
@@ -500,37 +504,31 @@ export function OrdersPresentation({
                     {details(o)}
                   </div>
                 </div>
-                <div className="tp-identity mt-1 text-sm">
+                <div className="tp-identity mt-1 min-w-0 text-sm">
                   <NativeIdentity
                     name={o.merchant}
                     src={o.merchantImage}
                     {...o.merchantCues}
                     closedLabel={ownerT("closed")}
                     promotedLabel={ownerT("activeBanner")}
+                    onPromotedClick={() => onBanner(o.bannerId)}
                   />
-                  <p className="line-clamp-2 font-medium" title={o.merchant}>
+                  <p
+                    className="line-clamp-2 min-w-0 flex-1 font-medium"
+                    title={o.merchant}
+                  >
                     {o.merchant}
                   </p>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">{date(o.created)}</p>
-                <dl className="mt-2! gap-2! text-sm">
-                  {[
-                    [t("driver"), o.driver || t("unassigned")],
-                    [t("customer"), o.customer],
-                    [t("total"), money(o.total)],
-                    [nativeT("uFinM"), o.paymentLabel],
-                  ].map(([k, v]) => (
-                    <div
-                      className={`min-w-0 ${k === t("pickup") || k === t("delivery") ? "col-span-2 flex! items-baseline gap-2" : ""}`}
-                      key={k}
-                    >
-                      <dt className="text-gray-500 dark:text-gray-400">{k}</dt>
-                      <dd className="font-medium break-words text-gray-800 dark:text-gray-200">
-                        {v}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+                <div className="mt-2 flex items-center justify-between gap-2 text-sm">
+                  <span className="text-gray-500">
+                    {t("total")} · {o.paymentLabel}
+                  </span>
+                  <strong className="shrink-0 text-gray-800 dark:text-gray-200">
+                    {money(o.total)}
+                  </strong>
+                </div>
               </article>
             ))}
           </div>

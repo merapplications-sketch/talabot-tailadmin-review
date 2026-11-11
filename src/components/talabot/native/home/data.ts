@@ -36,19 +36,31 @@ export function homeRankings(
   start: string,
   end: string,
   source: Tables = tables,
+  scope?: { category: string; merchant: string; query: string },
 ) {
   const loaded = source.orders.filter((o) => !o._hist).slice(0, 300);
+  const storeMatches = (store: Row | undefined) =>
+    !!store &&
+    (!scope ||
+      ((scope.category === "all" || store.category === scope.category) &&
+        (!scope.merchant || String(store.id) === scope.merchant) &&
+        (!scope.query ||
+          text(store, "name")
+            .toLowerCase()
+            .includes(scope.query.trim().toLowerCase()))));
   const delivered = loaded.filter((o) => {
     const created = Date.parse(text(o, "created_at"));
     return (
       o.status === "delivered" &&
+      (!scope ||
+        storeMatches(source.stores.find((s) => s.id === o.store_id))) &&
       Number.isFinite(created) &&
       created >= Date.parse(start + "T00:00:00+05:00") &&
       created < Date.parse(end + "T00:00:00+05:00") + 86400000
     );
   });
   const restaurants = source.stores
-    .filter((s) => s.category === "rest")
+    .filter((s) => (scope ? storeMatches(s) : s.category === "rest"))
     .flatMap((store) => {
       const orders = delivered.filter((o) => o.store_id === store.id);
       if (!orders.length) return [];

@@ -74,7 +74,10 @@ export function filterDrivers(rows: Row[], query: string, filter: string) {
     .filter(
       (r) =>
         (filter === "all" || (filter === "on" ? isLive(r) : !isLive(r))) &&
-        (!q || text(r, "name").toLowerCase().includes(q)),
+        (!q ||
+          [text(r, "name"), text(r, "phone")].some((value) =>
+            value.toLowerCase().includes(q),
+          )),
     )
     .sort(
       (a, b) =>
@@ -86,6 +89,22 @@ export function cashExceeded(row: Row, balance: number | undefined) {
   return balance != null && balance >= Number(row.cash_limit || 1000);
 }
 
+export function activeMerchantBanner(
+  storeId: unknown,
+  banners = tables.banners,
+  now = snapshotTime,
+) {
+  if (storeId == null) return undefined;
+  return banners
+    .filter(
+      (b) =>
+        b.link_type === "store" &&
+        b.link_value != null &&
+        String(b.link_value) === String(storeId) &&
+        entityStatus("banners", b, now).label === "aBNow",
+    )
+    .sort((a, b) => Number(a.sort || 0) - Number(b.sort || 0))[0];
+}
 // Read-only identity cues; use the same banner schedule/status rules as its list.
 export function identityCues(
   section: string,

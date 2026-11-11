@@ -22,6 +22,11 @@ assert.equal(identityCues('customers', { id: 'c' }, [], now).closed, false);
 assert.equal(identityCues('customers', { id: 'c', banned_at: '2026-11-09' }, [], now).closed, true);
 assert.equal(identityCues('drivers', { id: 'd', online: false }, [], now).closed, false);
 const html = wrap(React.createElement(Identity, { name: 'Closed merchant', src: '/saved-avatar.png', closed: true, closedLabel: 'Closed', promoted: true, promotedLabel: 'Active banner' }));
-assert(html.includes('grayscale') && html.includes('>Closed<') && html.includes('ring-green-500'));
+assert(html.includes('grayscale') && html.includes('>Closed<') && html.includes('border-green-500'));
 assert(html.includes('/saved-avatar.png'));
+assert(html.includes('absolute inset-0') && !html.includes('ring-offset-2'));
+const clickable = wrap(React.createElement(Identity, { name: 'Banner merchant', promoted: true, promotedLabel: 'Active banner', onPromotedClick() {} }));
+assert(clickable.includes('<button') && clickable.includes('Active banner'));
+assert(clickable.includes('rounded-xl'));
 console.log('PASS banner link/schedule (7), closure states (7), saved-image grayscale/overlay/outline. Read-only source contracts unchanged.');
+

@@ -1,3 +1,11 @@
+import { Input } from "@/components/ui/input";
+import MerchantPicker from "./b-shell/merchant-picker";
+import {
+  emptyDirectoryFilters,
+  filterDirectoryRows,
+  merchantCategories,
+  type DirectoryFilters,
+} from "./directory-filters";
 import { actionColors } from "./action-colors";
 import NativeIdentity from "./b-shell/identity";
 import { CallIcon, MapIcon, StarIcon, AlertIcon, BoxIcon } from "@/icons";
@@ -9,6 +17,7 @@ import {
 } from "./ratings-data";
 import {
   identityCues,
+  activeMerchantBanner,
   entityRecord,
   entityStatus,
   filterDrivers,
@@ -118,6 +127,57 @@ export default function EntitySections({
     ),
     [notice, setNotice] = useState(""),
     [logs, setLogs] = useState(readLogs);
+  const [advanced, setAdvancedState] = useState<DirectoryFilters>(() => {
+    try {
+      return {
+        ...emptyDirectoryFilters,
+        ...JSON.parse(
+          sessionStorage.getItem("ux02-native:advanced:" + section) || "{}",
+        ),
+      };
+    } catch {
+      return { ...emptyDirectoryFilters };
+    }
+  });
+  const setAdvanced = (next: DirectoryFilters) => {
+    setAdvancedState(next);
+    sessionStorage.setItem(
+      "ux02-native:advanced:" + section,
+      JSON.stringify(next),
+    );
+  };
+  const setStatus = (value: string) => {
+    setFilter(value);
+    sessionStorage.setItem("ux02-native:filter:" + section, value);
+  };
+  const selectFilter = (
+    label: string,
+    key: keyof DirectoryFilters,
+    options: { value: string; label: string }[],
+  ) => (
+    <div className="block min-w-0 text-sm">
+      {label}
+      <Select
+        value={advanced[key]}
+        items={options}
+        onValueChange={(value) =>
+          setAdvanced({ ...advanced, [key]: value || "all" })
+        }
+      >
+        <SelectTrigger aria-label={label}>
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {options.map((option) => (
+            <SelectItem key={option.value} value={option.value}>
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
+  );
+  const allOption = { value: "all", label: t("aAll") };
   const source = (tables[tableNames[section]] || [])
     .map((r) => entityRecord(section, r))
     .filter((r) =>
@@ -127,30 +187,7 @@ export default function EntitySections({
           ? r.role === "customer"
           : true,
     );
-  const rows =
-    section === "drivers"
-      ? filterDrivers(source, query, filter)
-      : source.filter(
-          (r) =>
-            Object.values(r)
-              .filter((v) => typeof v === "string")
-              .join(" ")
-              .toLowerCase()
-              .includes(query.toLowerCase()) &&
-            (section === "ratings"
-              ? filter === "need"
-                ? needsRatingFollowup(r)
-                : filter === "done"
-                  ? !!r.handled_at
-                  : true
-              : filter === "all" ||
-                text(r, "status") === filter ||
-                (filter === "open"
-                  ? !!r.is_open
-                  : filter === "closed"
-                    ? !r.is_open
-                    : true)),
-        );
+  const rows = filterDirectoryRows(section, source, query, filter, advanced);
   const driverAverage = ratingAverage(source, "driver_stars"),
     storeAverage = ratingAverage(source, "store_stars"),
     needsCount = source.filter(needsRatingFollowup).length,
@@ -511,12 +548,26 @@ export default function EntitySections({
         />
       </>
     );
-  if (id === "new" && (section === "banners" || section === "promotions"))
+  if (
+    (id === "new" || id.startsWith("new:")) &&
+    (section === "banners" || section === "promotions")
+  )
     return (
       <>
         {back}
         <NativeForm
           title={t(section === "banners" ? "aAddB" : "aAddP")}
+          openOnMount
+          onClose={onBack || (() => navigate({ id: "" }))}
+          initial={
+            section === "banners"
+              ? {
+                  link_type: "store",
+                  link_value: id.startsWith("new:") ? id.slice(4) : "",
+                }
+              : {}
+          }
+          description={section === "promotions" ? ft("globalPromo") : undefined}
           operation={(r) =>
             section === "banners"
               ? mutations.addBanner(bannerPayload(r))
@@ -541,6 +592,11 @@ export default function EntitySections({
                 {...identityCues(section, row)}
                 closedLabel={ft("closed")}
                 promotedLabel={ft("activeBanner")}
+                onPromotedClick={() => {
+                  const banner = activeMerchantBanner(row.id);
+                  if (banner)
+                    navigate({ section: "banners", id: text(banner, "id") });
+                }}
               />
               <h2 className="min-w-0 flex-1 text-base font-semibold break-words">
                 {text(row, "name")}
@@ -555,35 +611,59 @@ export default function EntitySections({
             t={t}
             validate={validateMerchant}
           />
-          <Card title={t("aLoc")}>
-            <p>
-              {text(row, "lat")}, {text(row, "lng")}
-            </p>
+          <div className="flex flex-wrap gap-2">
             <Button
-              variant="outline"
-              size="icon-lg"
-              nativeButton={false}
-              aria-label={t("aMapOpen")}
-              title={t("aMapOpen")}
-              render={
-                <a
-                  href={`https://www.google.com/maps?q=${row.lat},${row.lng}`}
-                  target="_blank"
-                  rel="noreferrer"
-                />
+              onClick={() =>
+                navigate({ section: "banners", id: "new:" + row.id })
               }
             >
-              <MapIcon aria-hidden="true" />
+              {t("aAddB")}
             </Button>
-            <Button variant="outline" onClick={write} size="lg">
-              {t("aLocSet")}
+            <Button
+              variant="outline"
+              onClick={() =>
+                navigate({ section: "promotions", id: "new:" + row.id })
+              }
+            >
+              {t("aAddP")}
             </Button>
-            <Button variant="outline" onClick={write} size="lg">
-              {t("aLocClr")}
-            </Button>
-            <Button variant="outline" onClick={write} size="lg">
-              {t("aRatGet")}
-            </Button>
+          </div>
+          <Card title={t("aLoc")}>
+            <div className="flex items-center gap-3">
+              <div className="min-w-0 flex-1">
+                <p className="font-medium">{text(row, "address") || "—"}</p>
+                <p className="text-sm text-gray-500">
+                  {text(row, "lat") || "—"}, {text(row, "lng") || "—"}
+                </p>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon-lg"
+                nativeButton={false}
+                aria-label={t("aMapOpen")}
+                title={t("aMapOpen")}
+                render={
+                  <a
+                    href={`https://www.google.com/maps?q=${row.lat},${row.lng}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+              >
+                <MapIcon className={actionColors.details} aria-hidden="true" />
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button variant="outline" onClick={write}>
+                {t("aLocSet")}
+              </Button>
+              <Button variant="outline" onClick={write}>
+                {t("aLocClr")}
+              </Button>
+              <Button variant="outline" onClick={write}>
+                {t("aRatGet")}
+              </Button>
+            </div>
           </Card>
           <NativeForm
             title={t("aOwn")}
@@ -857,6 +937,29 @@ export default function EntitySections({
           <Badge color={entityStatus(section, row).color}>
             {t(entityStatus(section, row).label)}
           </Badge>
+          {section === "banners" && (
+            <Card title={text(row, "title")}>
+              {row.image_url ? (
+                <img
+                  src={text(row, "image_url")}
+                  alt={text(row, "title")}
+                  className="max-h-80 w-full rounded-xl object-contain"
+                />
+              ) : (
+                <p className="text-sm text-gray-500">{ft("noBannerImage")}</p>
+              )}
+              {row.link_type === "store" && (
+                <p className="text-sm">
+                  {text(
+                    tables.stores.find(
+                      (store) => String(store.id) === String(row.link_value),
+                    ) || {},
+                    "name",
+                  )}
+                </p>
+              )}
+            </Card>
+          )}
           <NativeForm
             title={text(row, section === "banners" ? "title" : "code")}
             operation={(r) =>
@@ -892,11 +995,15 @@ export default function EntitySections({
               {formatDate(text(row, "created_at"), locale)}
             </Pair>
             {row.store_stars != null && (
-              <Pair label={t("aStoreRate2")}>{text(row, "store_stars")} ★</Pair>
+              <Pair label={t("aStoreRate2")}>
+                {text(row, "store_stars")}{" "}
+                <span className="text-yellow-500">★</span>
+              </Pair>
             )}
             {row.driver_stars != null && (
               <Pair label={t("aCourierRate")}>
-                {text(row, "driver_stars")} ★
+                {text(row, "driver_stars")}{" "}
+                <span className="text-yellow-500">★</span>
               </Pair>
             )}
             {ratingComment(row.comment).tags.map((tag, i) => (
@@ -958,13 +1065,29 @@ export default function EntitySections({
             {
               key: "driver",
               label: `${t("aRAvgD")} · ${driverAverage?.n || 0} ${t("aRCnt")}`,
-              value: driverAverage ? driverAverage.a.toFixed(1) + " ★" : "—",
+              value: driverAverage ? (
+                <>
+                  {driverAverage.a.toFixed(1)}{" "}
+                  <span className="text-yellow-500">★</span>
+                </>
+              ) : (
+                "—"
+              ),
+              iconClassName: "text-yellow-500!",
               Icon: StarIcon,
             },
             {
               key: "store",
               label: `${t("aRAvgS")} · ${storeAverage?.n || 0} ${t("aRCnt")}`,
-              value: storeAverage ? storeAverage.a.toFixed(1) + " ★" : "—",
+              value: storeAverage ? (
+                <>
+                  {storeAverage.a.toFixed(1)}{" "}
+                  <span className="text-yellow-500">★</span>
+                </>
+              ) : (
+                "—"
+              ),
+              iconClassName: "text-yellow-500!",
               Icon: StarIcon,
             },
             {
@@ -997,7 +1120,13 @@ export default function EntitySections({
           filterLabel={ft("filters")}
           filtersOpen={filtersOpen}
           onFilters={
-            ["drivers", "restaurants", "ratings", "support"].includes(section)
+            [
+              "drivers",
+              "restaurants",
+              "customers",
+              "ratings",
+              "support",
+            ].includes(section)
               ? () => setFiltersOpen(true)
               : undefined
           }
@@ -1005,186 +1134,197 @@ export default function EntitySections({
         <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
           <DialogContent className="max-h-[90dvh] overflow-y-auto">
             <DialogTitle>{ft("filters")}</DialogTitle>
-            <div className="grid gap-3">
-              {section === "drivers" && (
-                <label>
-                  {t("aStat")}
+            <div className="grid gap-3 sm:grid-cols-2">
+              {section !== "customers" && (
+                <div className="text-sm">
+                  {section === "drivers" ? ft("presence") : t("aStat")}
                   <Select
                     value={filter}
-                    onValueChange={(value) => {
-                      setFilter(value || "all");
-                      sessionStorage.setItem(
-                        "ux02-native:filter:" + section,
-                        value || "all",
-                      );
-                    }}
-                    items={["all", "on", "off"].map((k) => ({
-                      value: k,
+                    onValueChange={(value) => setStatus(value || "all")}
+                    items={(section === "drivers"
+                      ? ["all", "on", "off"]
+                      : section === "restaurants"
+                        ? ["all", "open", "closed"]
+                        : section === "ratings"
+                          ? ["all", "need", "done"]
+                          : [
+                              "all",
+                              "open",
+                              "in_progress",
+                              "resolved",
+                              "rejected",
+                            ]
+                    ).map((value) => ({
+                      value,
                       label:
-                        t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff") +
-                        " · " +
-                        (k === "all"
-                          ? source.length
-                          : source.filter((r) =>
-                              k === "on" ? isLive(r) : !isLive(r),
-                            ).length),
+                        value === "all"
+                          ? t("aAll")
+                          : section === "drivers"
+                            ? t(value === "on" ? "fOn" : "fOff")
+                            : section === "restaurants"
+                              ? t(value === "open" ? "aOpenS" : "aClosedS")
+                              : section === "ratings"
+                                ? t(value === "need" ? "aRNeeds" : "aRDone")
+                                : t("xs_" + value),
                     }))}
                   >
-                    <SelectTrigger aria-label={t("aStat")}>
+                    <SelectTrigger
+                      aria-label={
+                        section === "drivers" ? ft("presence") : t("aStat")
+                      }
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      {["all", "on", "off"].map((k) => (
-                        <SelectItem key={k} value={k}>
-                          {t(
-                            k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff",
-                          )}{" "}
-                          ·{" "}
-                          {k === "all"
-                            ? source.length
-                            : source.filter((r) =>
-                                k === "on" ? isLive(r) : !isLive(r),
-                              ).length}
+                      {(section === "drivers"
+                        ? ["all", "on", "off"]
+                        : section === "restaurants"
+                          ? ["all", "open", "closed"]
+                          : section === "ratings"
+                            ? ["all", "need", "done"]
+                            : [
+                                "all",
+                                "open",
+                                "in_progress",
+                                "resolved",
+                                "rejected",
+                              ]
+                      ).map((value) => (
+                        <SelectItem key={value} value={value}>
+                          {value === "all"
+                            ? t("aAll")
+                            : section === "drivers"
+                              ? t(value === "on" ? "fOn" : "fOff")
+                              : section === "restaurants"
+                                ? t(value === "open" ? "aOpenS" : "aClosedS")
+                                : section === "ratings"
+                                  ? t(value === "need" ? "aRNeeds" : "aRDone")
+                                  : t("xs_" + value)}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
-                </label>
+                </div>
+              )}
+              {["restaurants", "ratings"].includes(section) && (
+                <>
+                  {selectFilter(t("aCat"), "category", [
+                    allOption,
+                    ...merchantCategories.map((value) => ({
+                      value,
+                      label: t(value),
+                    })),
+                  ])}
+                  <div className="min-w-0 text-sm">
+                    {t("aStoreL")}
+                    <MerchantPicker
+                      value={advanced.merchant}
+                      onChange={(merchant) =>
+                        setAdvanced({ ...advanced, merchant })
+                      }
+                      label={ft("searchMerchants")}
+                      emptyLabel={t("aNo")}
+                    />
+                  </div>
+                </>
               )}
               {section === "restaurants" && (
-                <label className="block min-w-0 text-sm">
-                  {t("aStat")}
-                  <Select
-                    value={filter}
-                    onValueChange={(value) => {
-                      setFilter(value ?? "");
-                      sessionStorage.setItem(
-                        "ux02-native:filter:" + section,
-                        value ?? "",
-                      );
-                    }}
-                    items={[
-                      ...["all", "open", "closed"].map((k) => ({
-                        value: k,
-                        label: t(
-                          k === "all"
-                            ? "aAll"
-                            : k === "open"
-                              ? "aOpenS"
-                              : "aClosedS",
-                        ),
-                      })),
-                    ]}
-                  >
-                    <SelectTrigger aria-label={t("status")}>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {["all", "open", "closed"].map((k) => (
-                        <SelectItem key={k} value={k}>
-                          {t(
-                            k === "all"
-                              ? "aAll"
-                              : k === "open"
-                                ? "aOpenS"
-                                : "aClosedS",
-                          )}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </label>
+                <>
+                  {selectFilter(ft("account"), "account", [
+                    allOption,
+                    { value: "active", label: t("aOn") },
+                    { value: "disabled", label: t("aOff") },
+                  ])}
+                  {selectFilter(ft("activeBanner"), "banner", [
+                    allOption,
+                    { value: "yes", label: ft("hasBanner") },
+                    { value: "no", label: ft("noBanner") },
+                  ])}
+                </>
               )}
+              {section === "drivers" && (
+                <>
+                  {selectFilter(ft("account"), "account", [
+                    allOption,
+                    ...["pending", "approved", "suspended", "rejected"].map(
+                      (value) => ({ value, label: t(value) }),
+                    ),
+                  ])}
+                  {selectFilter(ft("availability"), "availability", [
+                    allOption,
+                    { value: "free", label: ft("available") },
+                    { value: "busy", label: t("aBusy") },
+                    { value: "paused", label: t("aBlocked") },
+                  ])}
+                  {selectFilter(t("aCashH"), "cash", [
+                    allOption,
+                    { value: "exceeded", label: t("aOver") },
+                  ])}
+                </>
+              )}
+              {section === "customers" &&
+                selectFilter(ft("account"), "account", [
+                  allOption,
+                  { value: "active", label: t("aOn") },
+                  { value: "blocked", label: t("xBanned") },
+                ])}
               {section === "ratings" && (
-                <label className="block min-w-0 text-sm">
-                  {t("aStat")}
-                  <Select
-                    value={filter}
-                    onValueChange={(value) => {
-                      setFilter(value ?? "need");
-                      sessionStorage.setItem(
-                        "ux02-native:filter:" + section,
-                        value ?? "need",
-                      );
-                    }}
-                    items={[
-                      {
-                        value: "need",
-                        label: `${t("aRNeeds")} · ${needsCount}`,
-                      },
-                      {
-                        value: "all",
-                        label: `${t("fAllK")} · ${source.length}`,
-                      },
-                      {
-                        value: "done",
-                        label: `${t("aRDone")} · ${handledCount}`,
-                      },
-                    ]}
-                  >
-                    <SelectTrigger aria-label={t("aStat")}>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="need">
-                        {t("aRNeeds")} · {needsCount}
-                      </SelectItem>
-                      <SelectItem value="all">
-                        {t("fAllK")} · {source.length}
-                      </SelectItem>
-                      <SelectItem value="done">
-                        {t("aRDone")} · {handledCount}
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </label>
+                <>
+                  {selectFilter(ft("ratingTarget"), "target", [
+                    allOption,
+                    { value: "driver", label: t("aCourierRate") },
+                    { value: "store", label: t("aStoreRate2") },
+                  ])}
+                  {selectFilter(t("tR"), "stars", [
+                    allOption,
+                    ...[1, 2, 3, 4, 5].map((n) => ({
+                      value: String(n),
+                      label: n + " ★",
+                    })),
+                  ])}
+                </>
               )}
-              {section === "support" && (
-                <label className="block min-w-0 text-sm">
-                  {t("aStat")}
-                  <Select
-                    value={filter}
-                    onValueChange={(value) => {
-                      setFilter(value ?? "");
-                      sessionStorage.setItem(
-                        "ux02-native:filter:" + section,
-                        value ?? "",
-                      );
-                    }}
-                    items={[
-                      ...[
-                        "all",
-                        "open",
-                        "in_progress",
-                        "resolved",
-                        "rejected",
-                      ].map((k) => ({
-                        value: k,
-                        label: t(k === "all" ? "aAll" : "xs_" + k),
-                      })),
-                    ]}
-                  >
-                    <SelectTrigger aria-label={t("status")}>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {[
-                        "all",
-                        "open",
-                        "in_progress",
-                        "resolved",
-                        "rejected",
-                      ].map((k) => (
-                        <SelectItem key={k} value={k}>
-                          {t(k === "all" ? "aAll" : "xs_" + k)}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </label>
-              )}
+              {["customers", "ratings"].includes(section) &&
+                ["start", "end"].map((key) => (
+                  <label className="min-w-0 text-sm" key={key}>
+                    {ft(key === "start" ? "fromDate" : "toDate")}
+                    <Input
+                      type="date"
+                      value={advanced[key as "start" | "end"]}
+                      onChange={(event) =>
+                        setAdvanced({ ...advanced, [key]: event.target.value })
+                      }
+                    />
+                  </label>
+                ))}
+              {selectFilter(ft("sort"), "sort", [
+                { value: "default", label: ft("defaultSort") },
+                { value: "name", label: ft("nameSort") },
+                ...(["customers", "ratings"].includes(section)
+                  ? [
+                      { value: "newest", label: ft("newest") },
+                      { value: "oldest", label: ft("oldest") },
+                    ]
+                  : []),
+              ])}
             </div>
+            {advanced.start &&
+              advanced.end &&
+              advanced.start > advanced.end && (
+                <p role="alert" className="text-red-500">
+                  {ft("invalidDates")}
+                </p>
+              )}
             <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setStatus("all");
+                  setAdvanced({ ...emptyDirectoryFilters });
+                }}
+              >
+                {ft("resetFilters")}
+              </Button>
               <Button onClick={() => setFiltersOpen(false)}>
                 {ft("done")}
               </Button>
@@ -1268,11 +1408,7 @@ export default function EntitySections({
         />
       )}
       {["restaurants", "banners", "promotions"].includes(section) && (
-        <Button
-          size="lg"
-          variant="outline"
-          onClick={() => navigate({ id: "new" })}
-        >
+        <Button size="lg" onClick={() => navigate({ id: "new" })}>
           {t(
             section === "restaurants"
               ? "aAddS"
@@ -1371,8 +1507,22 @@ export default function EntitySections({
                 badge,
                 text(r, "comment") || t("aNoCmt"),
                 ratingStore(r),
-                r.store_stars != null ? text(r, "store_stars") + " ★" : "—",
-                r.driver_stars != null ? text(r, "driver_stars") + " ★" : "—",
+                r.store_stars != null ? (
+                  <>
+                    {text(r, "store_stars")}{" "}
+                    <span className="text-yellow-500">★</span>
+                  </>
+                ) : (
+                  "—"
+                ),
+                r.driver_stars != null ? (
+                  <>
+                    {text(r, "driver_stars")}{" "}
+                    <span className="text-yellow-500">★</span>
+                  </>
+                ) : (
+                  "—"
+                ),
               ];
             else if (section === "drivers")
               values = [
@@ -1412,12 +1562,7 @@ export default function EntitySections({
               ];
             else
               values = [
-                <>
-                  {badge}{" "}
-                  <Badge color={r.is_open ? "success" : "gray"}>
-                    {t(r.is_open ? "aOpenN" : "aClosedN")}
-                  </Badge>
-                </>,
+                badge,
                 text(r, "phone") || "—",
                 text(r, "address") || "—",
               ];
@@ -1453,6 +1598,17 @@ export default function EntitySections({
               ...identityCues(section, r),
               closedLabel: ft("closed"),
               promotedLabel: ft("activeBanner"),
+              onPromotedClick:
+                section === "restaurants"
+                  ? () => {
+                      const banner = activeMerchantBanner(r.id);
+                      if (banner)
+                        navigate({
+                          section: "banners",
+                          id: text(banner, "id"),
+                        });
+                    }
+                  : undefined,
               compactValues:
                 section === "drivers"
                   ? [0, 1, 3]
