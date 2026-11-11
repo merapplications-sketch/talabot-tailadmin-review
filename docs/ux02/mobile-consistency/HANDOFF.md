@@ -32,8 +32,8 @@ No business function removed or newly declared operational. Affected presentatio
 
 ## Publication and resume
 NEW candidate Site: appgprj_6af4855ec6f0819181650887dfd786b0.
-Expected URL (not proof of deployment): https://talabot-ux02-compact-review.alwarikahtan.chatgpt.site
+Published and browser-verified URL: https://talabot-ux02-compact-review.alwarikahtan.chatgpt.site/
 Artifact checkout: /workspace/sites/talabot-ux02-compact-review.
 Only this new synthetic preview is public, per the owner's previously authorized direct Safari link without ChatGPT sign-in. Old previews and production unchanged.
-Final source SHA, actual deployed version and screenshot index will be recorded in DELIVERY.md after successful publication.
+Executable source: 0323787a6daea766455d84bf02652c6f12c3174c. New Site version 1, deployment succeeded. Published SOURCE.json and asset hash were matched in the browser. See [DELIVERY.md](DELIVERY.md) for exact version/deployment identifiers, before/after screenshots, test results and limitations.
 Stop: owner visual review on iPhone Safari. Do not merge main, change old previews or begin FP16. Any remaining mobile differences must be tied to the owner's real-device evidence; do not claim restored old unpushed files.
