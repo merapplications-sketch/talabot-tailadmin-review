@@ -40,6 +40,7 @@ export default function NativeForm({
   confirm,
   validate,
   operation,
+  resetAfterSuccess = false,
 }: {
   title: string;
   fields: Field[];
@@ -47,6 +48,7 @@ export default function NativeForm({
   t: (k: string) => string;
   confirm?: string;
   validate?: (row: Row) => string | null;
+  resetAfterSuccess?: boolean;
   operation?: (row: Row) => Promise<{
     error?: string | { message?: string; code?: string };
     code?: string;
@@ -107,6 +109,9 @@ export default function NativeForm({
             ? t("nativeWriteBlocked")
             : t("err_" + key),
         );
+      } else if (result.ok && resetAfterSuccess) {
+        setDraft({ ...initial });
+        setError("");
       }
     } catch {
       setError(t("err_generic"));

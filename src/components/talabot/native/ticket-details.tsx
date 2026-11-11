@@ -91,6 +91,9 @@ export default function TicketDetails({
             ? t("nativeWriteBlocked")
             : t("err_" + msg),
         );
+      } else if ("ok" in r && r.ok === true) {
+        update({ note: "", refund: "" });
+        if (status === "resolved" || status === "rejected") back();
       }
     } catch {
       setError(t("err_generic"));
@@ -162,6 +165,7 @@ export default function TicketDetails({
         <>
           <NativeForm
             title={t("xSend")}
+            resetAfterSuccess
             fields={[
               {
                 key: "body",

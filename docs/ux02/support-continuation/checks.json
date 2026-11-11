@@ -1,0 +1,22 @@
+{
+  "baseline": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+  "support_handlers": {
+    "pass": 12,
+    "fail": 0,
+    "before_fix_failed": 4,
+    "scope": "Production handlers with test-only hook scheduling; no browser/backend success proof"
+  },
+  "regression": {
+    "operations": 17,
+    "validation": 14,
+    "composition_ssr": 8,
+    "result": "PASS",
+    "why": "NativeForm and support lifecycle change; other unaffected test suites retained"
+  },
+  "build": "PASS",
+  "typescript": "PASS after explicit ok-in-result type narrowing",
+  "affected_lint": "PASS 0 errors 0 warnings",
+  "full_lint": "NOT RERUN: prior 47 warnings retained, no new full lint claim",
+  "ui_changes": false,
+  "transport_changes": false
+}
