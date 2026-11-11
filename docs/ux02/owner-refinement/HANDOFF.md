@@ -1,6 +1,6 @@
 # UX-02 owner refinement — 11 November 2026
 
-Status: implementation saved for isolated preview; visual acceptance remains with the owner.
+Status: isolated preview version 1 published and observed. Source 02f9815be9970172b71d509688a286c3c914da02. Visual acceptance remains with the owner.
 Branch: review/ux02-owner-refinement-20261111.
 Canonical starting HEAD: 3f6fd4a6b322e267c3bba6c7a6730079119b20ba; previous executable source: 0323787a6daea766455d84bf02652c6f12c3174c.
 Previous compact preview version 1 is protected and unchanged. The former local checkout was unavailable; recovery was from canonical GitHub files, not unpushed historical work.
@@ -32,7 +32,7 @@ Only existing B primitives/compositions were used. No new stylesheet, dependenci
 - Existing native operations: 17 PASS; home saved-data calculations: 7 PASS; banner linkage: 7 PASS; closure/unknown states: 7 PASS; invoice/contact/translation and saved-wallet versus received-cash assertions PASS. These are local/synthetic checks, not hosted operational certification.
 - Browser: Chromium 1363x936 only. Observed Home Orders/Revenue links and all four Reports links with Back, store image -> linked banner -> Close, store -> Add banner preselected -> searchable choice -> X -> store details, store -> immediate global promo form -> X -> store details, order search ord0 -> details -> Close preserving q=ord0, merchant category selection, driver phone/filter/reset and presence border, customer/rating filter fields and yellow stars.
 - Border measured at 48x48, matching parent image at zero x/y offset and 12px rounded merchant corners. Driver border is circular red on current offline sample. Search input and container measured 48px, focus outline style none.
-- Pointer selection exposed an interactive issue with Select inside wrapping labels; the new filter compositions now use labelled div wrappers plus aria-label on the B SelectTrigger. Final hosted verification is recorded in DELIVERY.md.
+- Browser automation sometimes returned before Select state settled and unhighlighted semantic clicks did not select reliably. This was not established as an application pointer defect. Category selection was verified by keyboard; merchant search-result selection was subsequently verified by click with selected ID s3. No B primitive was changed to accommodate automation. Actual touch/Safari remains NOT TESTED. Final hosted verification is recorded in DELIVERY.md.
 - 320 / 390 / 1440 / real iPhone Safari: NOT TESTED. Available browser has no supported viewport emulation; previous DevTools restriction was not bypassed. Owner iPhone screenshots are BEFORE/reference evidence only.
 - No actual financial writes or operational backend tests. Missing driver-photo/banner-image sample data was not replaced with stock imagery.
 - Original local Outfit WOFF2 files retained; browser computed Outfit, sans-serif. No font replacement.

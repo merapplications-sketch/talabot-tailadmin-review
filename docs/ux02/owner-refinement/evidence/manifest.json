@@ -1,0 +1,23 @@
+[
+  {
+    "path": "docs/ux02/owner-refinement/evidence/talabot-refinement-stores.jpg",
+    "sha256": "12b1cd5191739ef8ab25d359859abf0b9a5df3f60e13ddaba535ff682745d6f8",
+    "bytes": 71619,
+    "viewport": "1363x936 Chromium",
+    "source": "02f9815be9970172b71d509688a286c3c914da02"
+  },
+  {
+    "path": "docs/ux02/owner-refinement/evidence/talabot-refinement-drivers.jpg",
+    "sha256": "19f5247e22669c80405a7b29c628838d8198e77b0624119834af4ea7853d9ce2",
+    "bytes": 45359,
+    "viewport": "1363x936 Chromium",
+    "source": "02f9815be9970172b71d509688a286c3c914da02"
+  },
+  {
+    "path": "docs/ux02/owner-refinement/evidence/talabot-refinement-banner.jpg",
+    "sha256": "a3df979dc7f09466163aaa1c00eb4e034be45963c83ae0b766e7c2e5a39a2026",
+    "bytes": 50246,
+    "viewport": "1363x936 Chromium",
+    "source": "02f9815be9970172b71d509688a286c3c914da02"
+  }
+]
