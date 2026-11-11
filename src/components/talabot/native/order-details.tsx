@@ -91,11 +91,22 @@ import {
   elapsedSeconds,
   type Row,
 } from "./domain";
-type Props = { order: Row; t: (key: string) => string; back: () => void };
+type Props = {
+  order: Row;
+  t: (key: string) => string;
+  hideBack?: boolean;
+  back: () => void;
+};
 const money = (n: number) => n.toFixed(2) + " TJS";
-export default function OrderDetails({ order: o, t, back }: Props) {
+export default function OrderDetails({
+  order: o,
+  t,
+  back,
+  hideBack = false,
+}: Props) {
   const locale = useLocale(),
-    ownerT = useTranslations("ownerRound");
+    ownerT = useTranslations("ownerRound"),
+    orderT = useTranslations("talabotOrders");
   const [assigning, setAssigning] = useState(false);
   const f = finance(o),
     store = tables.stores.find((s) => s.id === o.store_id),
@@ -143,9 +154,11 @@ export default function OrderDetails({ order: o, t, back }: Props) {
       {assigning && (
         <AssignmentDialog order={o} t={t} close={() => setAssigning(false)} />
       )}
-      <Button variant="outline" onClick={back} size="lg">
-        ← {t("aBack")}
-      </Button>
+      {!hideBack && (
+        <Button variant="outline" onClick={back} size="lg">
+          ← {t("aBack")}
+        </Button>
+      )}
       <Card title={"#" + text(o, "id")}>
         <Pair label={t("status")}>
           <OrderStatusBadge value={text(o, "status") as OrderStatus} />
@@ -243,6 +256,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         {party(t("aClient"), client)}
       </div>
       <DetailSection title={t("address")}>
+        <Pair label={orderT("pickup")}>{text(o, "pickup_address") || "—"}</Pair>
         <div className="flex items-start justify-between gap-3">
           <p className="min-w-0 font-medium break-words">
             {text(o, "address")}

@@ -1137,6 +1137,10 @@
     "rangeError": "Выберите корректный период от {start} до {end}."
   },
   "ownerRound": {
+    "closed": "Закрыто",
+    "activeBanner": "Активный баннер",
+    "close": "Закрыть",
+
     "filters": "Фильтры",
     "overview": "Операции и финансы",
     "shortcuts": "Быстрый доступ",

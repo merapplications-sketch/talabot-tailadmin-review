@@ -21,6 +21,11 @@ export function NativeGrid({
     image?: string;
     presence?: boolean;
     presenceLabel?: string;
+    closed?: boolean;
+    promoted?: boolean;
+    closedLabel?: string;
+    promotedLabel?: string;
+    compactValues?: number[];
     event?: string;
     unread?: boolean;
     updated?: string;
@@ -61,6 +66,10 @@ export function NativeGrid({
                         src={r.image}
                         presence={r.presence}
                         presenceLabel={r.presenceLabel}
+                        closed={r.closed}
+                        promoted={r.promoted}
+                        closedLabel={r.closedLabel}
+                        promotedLabel={r.promotedLabel}
                       />
                     )}
                     <span>
@@ -112,6 +121,12 @@ export function NativeGrid({
             className={`${panel} ${r.event ? "tp-event" : ""}`}
             data-unread={r.unread}
             key={r.id}
+            onClick={(e) => {
+              if (
+                !(e.target as HTMLElement).closest("button, a, input, select")
+              )
+                onDetails(r.id);
+            }}
           >
             {r.event && (
               <h3 className="tp-event-heading mb-3">
@@ -134,9 +149,16 @@ export function NativeGrid({
                   src={r.image}
                   presence={r.presence}
                   presenceLabel={r.presenceLabel}
+                  closed={r.closed}
+                  promoted={r.promoted}
+                  closedLabel={r.closedLabel}
+                  promotedLabel={r.promotedLabel}
                 />
               )}
-              <h2 className="min-w-0 flex-1 text-base! font-semibold break-words">
+              <h2
+                className="line-clamp-2 min-w-0 flex-1 text-base! font-semibold break-words"
+                title={r.name}
+              >
                 {r.name}
               </h2>{" "}
               <Action
@@ -149,16 +171,22 @@ export function NativeGrid({
               <p className="mb-3 text-sm text-gray-500">{r.updated}</p>
             )}
             <dl className="space-y-2 text-sm">
-              {r.values.map((v, i) => (
-                <div className="flex flex-wrap justify-between gap-2" key={i}>
-                  <dt className="text-gray-500 dark:text-gray-400">
-                    {headers[i]}
-                  </dt>
-                  <dd className="min-w-0 text-end font-medium break-words text-gray-800 dark:text-gray-200">
-                    {v}
-                  </dd>
-                </div>
-              ))}
+              {r.values.map(
+                (v, i) =>
+                  (r.compactValues || [0, 1, 2]).includes(i) && (
+                    <div
+                      className="flex flex-wrap justify-between gap-2"
+                      key={i}
+                    >
+                      <dt className="text-gray-500 dark:text-gray-400">
+                        {headers[i]}
+                      </dt>
+                      <dd className="min-w-0 text-end font-medium break-words text-gray-800 dark:text-gray-200">
+                        {v}
+                      </dd>
+                    </div>
+                  ),
+              )}
             </dl>
           </article>
         ))}

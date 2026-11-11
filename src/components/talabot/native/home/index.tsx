@@ -30,8 +30,14 @@ interface Props {
   t: (key: string) => string;
   navigate: (patch: { section?: string; id?: string; query?: string }) => void;
   href: (url: string) => void;
+  backAction?: React.ReactNode;
 }
-export default function HomeDashboard({ t, navigate, href }: Props) {
+export default function HomeDashboard({
+  t,
+  navigate,
+  href,
+  backAction,
+}: Props) {
   const h = useTranslations("nativeHome"),
     ownerT = useTranslations("ownerRound"),
     locale = useLocale();
@@ -62,7 +68,7 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
     </Accordion>
   );
   return (
-    <Shell showNotice={false} title={h("title")}>
+    <Shell backAction={backAction} showNotice={false} title={h("title")}>
       <SummaryCards
         cards={[
           {

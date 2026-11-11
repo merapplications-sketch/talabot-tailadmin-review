@@ -79,15 +79,20 @@ export function Shell({
   title,
   children,
   showNotice = true,
+  backAction,
 }: {
   title: string;
   children: React.ReactNode;
   showNotice?: boolean;
+  backAction?: React.ReactNode;
 }) {
   const t = useTranslations("workspace");
   return (
     <div className="space-y-6 text-gray-800 dark:text-gray-200">
-      <h1 className="text-title-sm font-semibold">{title}</h1>
+      <div className="flex items-center gap-2">
+        {backAction}
+        <h1 className="text-title-sm font-semibold">{title}</h1>
+      </div>
       {children}
       {showNotice && (
         <>
@@ -718,8 +723,12 @@ export function NotificationsPage({
   records = notices,
   merchantImage = demoMerchantImage,
   renderSearch,
+  backAction,
+  hideBack = false,
 }: {
   id?: string;
+  backAction?: React.ReactNode;
+  hideBack?: boolean;
   records?: NotificationRecord[];
   merchantImage?: string;
   renderSearch?: (props: {
@@ -745,13 +754,23 @@ export function NotificationsPage({
   );
   const page = pageNumber(params.get("page"), filtered.length);
   return (
-    <Shell title={nav("notifications")} showNotice={!renderSearch}>
+    <Shell
+      title={nav("notifications")}
+      showNotice={!renderSearch}
+      backAction={backAction}
+    >
       {!renderSearch && <p>{t("local")}</p>}
       {id ? (
         <>
-          <Link className={button} href={`/notifications?${qs}`} scroll={false}>
-            {t("back")}
-          </Link>
+          {!hideBack && (
+            <Link
+              className={button}
+              href={`/notifications?${qs}`}
+              scroll={false}
+            >
+              {t("back")}
+            </Link>
+          )}
           <section className={panel}>
             {item ? (
               <>

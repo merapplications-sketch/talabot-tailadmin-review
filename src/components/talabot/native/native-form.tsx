@@ -1,3 +1,4 @@
+import DetailDialog from "./b-shell/detail-dialog";
 import { actionColors } from "./action-colors";
 import { useState } from "react";
 import { Card } from "./primitives";
@@ -30,7 +31,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import InfoField from "@/components/main/profile/personal-information/info-field";
-import { PencilIcon, XIcon } from "@/icons";
+import { PencilIcon, XIcon, ChevronRightIcon } from "@/icons";
 import { previewWrite, text, type Row } from "./domain";
 import type { Field } from "./fields";
 export default function NativeForm({
@@ -83,7 +84,8 @@ export default function NativeForm({
     [error, setError] = useState(""),
     [confirming, setConfirming] = useState(false),
     [pending, setPending] = useState(false),
-    [editing, setEditing] = useState(false);
+    [editing, setEditing] = useState(false),
+    [reading, setReading] = useState(false);
   const setDraft = (next: Row) => {
     setDraftState(next);
     sessionStorage.setItem(draftKey, JSON.stringify(next));
@@ -141,33 +143,73 @@ export default function NativeForm({
     <div className="flex items-center justify-between gap-4">
       <h2 className="text-base font-semibold text-gray-800 sm:text-lg dark:text-white/90">
         {title}
-      </h2>{" "}
-      <Button
-        type="button"
-        variant="outline"
-        size="icon-lg"
-        aria-label={t("aEdit") + " " + title}
-        title={t("aEdit") + " " + title}
-        aria-expanded={editing}
-        onClick={() => setEditing(true)}
-      >
-        <PencilIcon className={actionColors.edit} aria-hidden="true" />
-      </Button>
+      </h2>
+      <div className="flex shrink-0 items-center gap-1">
+        {info.length > 2 && (
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-lg"
+            aria-label={t("nativeDetails") + " " + title}
+            onClick={() => setReading(true)}
+          >
+            <ChevronRightIcon
+              className={actionColors.details}
+              aria-hidden="true"
+            />
+          </Button>
+        )}
+        <Button
+          type="button"
+          variant="outline"
+          size="icon-lg"
+          aria-label={t("aEdit") + " " + title}
+          title={t("aEdit") + " " + title}
+          aria-expanded={editing}
+          onClick={() => setEditing(true)}
+        >
+          <PencilIcon className={actionColors.edit} aria-hidden="true" />
+        </Button>
+      </div>
     </div>
   );
   return (
     <>
       {info.length ? (
-        <Card>
-          {trigger}
-          <div className="mt-2 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          onClick={(e) => {
+            if (
+              info.length > 2 &&
+              !(e.target as HTMLElement).closest("button, a, input, select")
+            )
+              setReading(true);
+          }}
+        >
+          <Card>
+            {trigger}
+            <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {info.slice(0, 2).map((item, i) => (
+                <InfoField key={i} label={item.label} value={item.value} />
+              ))}
+            </div>
+          </Card>
+        </div>
+      ) : (
+        trigger
+      )}
+      {reading && (
+        <DetailDialog
+          title={title}
+          backLabel={t("aBack")}
+          closeLabel={t("aClose")}
+          onClose={() => setReading(false)}
+        >
+          <div className="grid gap-4 sm:grid-cols-2">
             {info.map((item, i) => (
               <InfoField key={i} label={item.label} value={item.value} />
             ))}
           </div>
-        </Card>
-      ) : (
-        trigger
+        </DetailDialog>
       )}
       <Dialog
         open={editing}

@@ -1,5 +1,7 @@
 import { actionColors } from "../action-colors";
 import SearchField from "./search-field";
+import NativeIdentity from "./identity";
+import { identityCues } from "../entity-data";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
@@ -32,6 +34,7 @@ type Filters = {
 };
 export function OrdersPresentation({
   rows: source,
+  backAction,
   t: nativeT,
   onDetails,
   query,
@@ -50,6 +53,7 @@ export function OrdersPresentation({
   onReset,
 }: {
   rows: Row[];
+  backAction?: React.ReactNode;
   query: string;
   onSearch: (query: string) => void;
   status: string;
@@ -94,6 +98,10 @@ export function OrdersPresentation({
     created: text(o, "created_at"),
     updated: text(o, "updated_at"),
     customer: contacts(o).customer.name || "—",
+    merchantCues: identityCues(
+      "restaurants",
+      tables.stores.find((s) => s.id === o.store_id) || {},
+    ),
     merchantImage: text(
       tables.stores.find((s) => s.id === o.store_id) || {},
       "logo_url",
@@ -106,6 +114,7 @@ export function OrdersPresentation({
     deliveryZone: text(o, "address") || "—",
     driver: contacts(o).driver.name || (o.driver_id ? String(o.driver_id) : ""),
     total: number(o, "total"),
+    paymentLabel: nativeT(text(o, "payment")),
     extra:
       nativeT(text(o, "payment")) +
       " · " +
@@ -173,7 +182,10 @@ export function OrdersPresentation({
             when space allows; the existing B panel owns the padding. */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="mb-2 text-title-sm font-semibold">{t("title")}</h1>
+            <div className="flex items-center gap-2">
+              {backAction}
+              <h1 className="text-title-sm font-semibold">{t("title")}</h1>
+            </div>
             <p role="status" data-testid="result-count" className="text-sm">
               {t("results", { count: resultCount })}
             </p>
@@ -424,9 +436,12 @@ export function OrdersPresentation({
                     <td className="min-w-36 px-4 py-3">{o.customer}</td>
                     <td className="px-4 py-3">
                       <div className="tp-identity">
-                        <IdentityImage
+                        <NativeIdentity
                           name={o.merchant}
                           src={o.merchantImage}
+                          {...o.merchantCues}
+                          closedLabel={ownerT("closed")}
+                          promotedLabel={ownerT("activeBanner")}
                         />
                         <span>{o.merchant}</span>
                       </div>
@@ -473,6 +488,10 @@ export function OrdersPresentation({
               <article
                 className={`${panel} border-s-4 ${accent[o.status] || "border-s-gray-300!"}`}
                 key={o.id}
+                onClick={(e) => {
+                  if (!(e.target as HTMLElement).closest("button, a"))
+                    onDetails(o.id);
+                }}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <h2 className="text-base! font-semibold">{o.id}</h2>
@@ -482,18 +501,24 @@ export function OrdersPresentation({
                   </div>
                 </div>
                 <div className="tp-identity mt-1 text-sm">
-                  <IdentityImage name={o.merchant} src={o.merchantImage} />
-                  <p className="font-medium">{o.merchant}</p>
+                  <NativeIdentity
+                    name={o.merchant}
+                    src={o.merchantImage}
+                    {...o.merchantCues}
+                    closedLabel={ownerT("closed")}
+                    promotedLabel={ownerT("activeBanner")}
+                  />
+                  <p className="line-clamp-2 font-medium" title={o.merchant}>
+                    {o.merchant}
+                  </p>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">{date(o.created)}</p>
                 <dl className="mt-2! gap-2! text-sm">
                   {[
-                    [t("pickup"), o.pickup],
-                    [t("delivery"), o.deliveryZone],
                     [t("driver"), o.driver || t("unassigned")],
                     [t("customer"), o.customer],
                     [t("total"), money(o.total)],
-                    [nativeT("uFinM"), o.extra],
+                    [nativeT("uFinM"), o.paymentLabel],
                   ].map(([k, v]) => (
                     <div
                       className={`min-w-0 ${k === t("pickup") || k === t("delivery") ? "col-span-2 flex! items-baseline gap-2" : ""}`}

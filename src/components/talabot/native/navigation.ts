@@ -28,7 +28,16 @@ export function useNativeNavigation() {
     (patch: Partial<typeof state>, replace = false) => {
       savePosition();
       const prev = state,
-        next = { ...prev, ...patch };
+        next =
+          patch.section && patch.section !== prev.section
+            ? {
+                section: patch.section,
+                id: "",
+                query: "",
+                status: "all",
+                ...patch,
+              }
+            : { ...prev, ...patch };
       const p = new URLSearchParams(location.search);
       if (patch.section && patch.section !== prev.section) {
         for (const key of [...p.keys()]) p.delete(key);
@@ -39,14 +48,23 @@ export function useNativeNavigation() {
         if (value && (key !== "status" || value !== "all")) p.set(param, value);
         else p.delete(param);
       }
-      window.history[replace ? "replaceState" : "pushState"]({}, "", `?${p}`);
+      const transition = prev.section !== next.section || prev.id !== next.id;
+      window.history[replace || !transition ? "replaceState" : "pushState"](
+        replace || !transition ? window.history.state : { ux02Parent: true },
+        "",
+        `?${p}`,
+      );
       setState(next);
-      window.scrollTo(0, 0);
+      if (!next.id) window.scrollTo(0, 0);
     },
     [state],
   );
   const back = () => {
     savePosition();
+    if (window.history.state?.ux02Parent) {
+      window.history.back();
+      return;
+    }
     const p = new URLSearchParams(location.search),
       origin = p.get("return");
     if (origin?.startsWith("?")) {
@@ -54,7 +72,12 @@ export function useNativeNavigation() {
       setState(listState(origin));
       restorePosition();
     } else {
-      navigate({ id: "" }, true);
+      navigate(
+        state.id
+          ? { id: "" }
+          : { section: "home", id: "", query: "", status: "all" },
+        true,
+      );
       restorePosition();
     }
   };
@@ -77,10 +100,26 @@ export function useNativeNavigation() {
       listState(saved).section === "orders" &&
       !listState(saved).id;
     const next = resume && saved ? saved : requested;
-    window.history[replace ? "replaceState" : "pushState"]({}, "", next);
+    const target = listState(next);
+    const transition =
+      state.section !== target.section || state.id !== target.id;
+    window.history[replace || !transition ? "replaceState" : "pushState"](
+      replace || !transition ? window.history.state : { ux02Parent: true },
+      "",
+      next,
+    );
     setState(listState(next));
     if (resume) restorePosition();
-    else if (scroll) window.scrollTo(0, 0);
+    else if (scroll && !target.id) window.scrollTo(0, 0);
   };
-  return { state, navigate, back, href };
+  return {
+    state,
+    navigate,
+    back,
+    href,
+    canBack:
+      !!window.history.state?.ux02Parent ||
+      state.section !== "home" ||
+      !!state.id,
+  };
 }

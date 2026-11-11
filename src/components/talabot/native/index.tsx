@@ -1,4 +1,6 @@
 "use client";
+import BackButton from "./b-shell/back-button";
+import DetailDialog from "./b-shell/detail-dialog";
 import {
   Select,
   SelectTrigger,
@@ -12,7 +14,6 @@ import SummaryCards from "./b-shell/summary-cards";
 import { OrdersPresentation } from "./b-shell/list-patterns";
 import { BoxIcon, TruckDeliveryIcon, CartIcon, UsersIcon } from "@/icons";
 
-import { Button } from "@/components/ui/button";
 import AdminLayout from "./b-shell/admin-layout";
 import { NativeRouteContext } from "./b-shell/router";
 import { useEffect, useState } from "react";
@@ -22,7 +23,6 @@ import ThemeToggleButton from "@/layout/header/theme-toggler";
 import { readOrders, findOrder, secondaryFilter, type Row } from "./domain";
 import dictionary from "./dictionary.json";
 
-import { Card } from "./primitives";
 import HomeDashboard from "./home";
 import OrderDetails from "./order-details";
 import EntitySections from "./entity-sections";
@@ -101,7 +101,10 @@ export default function NativeAdmin() {
     copy = extra[lang] as Record<string, string>;
   const bT = useTranslations("talabot");
   const t = (key: string) => copy[key] || dict[key] || key;
-  const { state, navigate, back, href } = useNativeNavigation();
+  const { state, navigate, back, href, canBack } = useNativeNavigation();
+  const backAction = canBack ? (
+    <BackButton label={t("aBack")} onClick={back} />
+  ) : undefined;
   const notices = nativeNotifications(locale);
   const [result, setResult] = useState<{
       key: string;
@@ -175,9 +178,18 @@ export default function NativeAdmin() {
         >
           <section className="min-w-0 space-y-6">
             {state.section === "home" ? (
-              <HomeDashboard t={t} navigate={navigate} href={href} />
+              <HomeDashboard
+                t={t}
+                navigate={navigate}
+                href={href}
+                backAction={backAction}
+              />
             ) : state.section === "reports" ? (
-              <Shell showNotice={false} title={homeT("reports")}>
+              <Shell
+                showNotice={false}
+                backAction={backAction}
+                title={homeT("reports")}
+              >
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {homeT("reportsNote")}
                 </p>
@@ -233,90 +245,75 @@ export default function NativeAdmin() {
               </Shell>
             ) : state.section === "notifications" ? (
               <NotificationsPage
-                id={state.id || undefined}
+                id={undefined}
+                backAction={backAction}
                 records={notices.records}
                 renderSearch={(props) => <NotificationSearch {...props} />}
                 merchantImage=""
               />
             ) : state.section === "orders" ? (
-              state.id ? (
-                order ? (
-                  <OrderDetails order={order} t={t} back={back} />
-                ) : (
-                  <Card>
-                    <p role="alert">
-                      {t("uOrdMissing").replace("{n}", state.id)}
-                    </p>
-                    <Button variant="outline" onClick={back}>
-                      {t("aBack")}
-                    </Button>
-                  </Card>
-                )
-              ) : (
-                <>
-                  <OrdersPresentation
-                    rows={visible}
-                    t={t}
-                    query={state.query}
-                    onSearch={(query) => navigate({ query }, true)}
-                    status={state.status}
-                    onStatus={(status) => navigate({ status }, true)}
-                    filters={filters}
-                    onFilters={setFilters}
-                    filterError={filtered.error}
-                    resultCount={filtered.rows.length}
-                    loading={loading}
-                    error={error}
-                    onRetry={() => setRetry(retry + 1)}
-                    hasMore={filtered.rows.length > limit}
-                    onMore={() => setLimit(limit + 50)}
-                    onReset={() => {
-                      navigate({ query: "", status: "all" }, true);
-                      setFilters({
-                        store: "",
-                        payment: "",
-                        start: "",
-                        end: "",
-                        sort: "",
-                      });
-                    }}
-                    onDetails={(id) => {
-                      navigate({ id });
-                      window.scrollTo(0, 0);
-                    }}
-                  />
-                  {qaTools && (
-                    <details className="mb-3">
-                      <summary>{t("nativeTest")}</summary>
-                      <Select
-                        value={mode}
-                        onValueChange={(value) => setMode(value ?? "")}
-                        items={[
-                          ...["normal", "empty", "error", "denied"].map(
-                            (v) => ({
-                              value: v,
-                              label: t(v),
-                            }),
-                          ),
-                        ]}
-                      >
-                        <SelectTrigger aria-label={t("nativeTest")}>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {["normal", "empty", "error", "denied"].map((v) => (
-                            <SelectItem key={v} value={v}>
-                              {t(v)}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </details>
-                  )}
-                </>
-              )
+              <>
+                <OrdersPresentation
+                  rows={visible}
+                  backAction={backAction}
+                  t={t}
+                  query={state.query}
+                  onSearch={(query) => navigate({ query }, true)}
+                  status={state.status}
+                  onStatus={(status) => navigate({ status }, true)}
+                  filters={filters}
+                  onFilters={setFilters}
+                  filterError={filtered.error}
+                  resultCount={filtered.rows.length}
+                  loading={loading}
+                  error={error}
+                  onRetry={() => setRetry(retry + 1)}
+                  hasMore={filtered.rows.length > limit}
+                  onMore={() => setLimit(limit + 50)}
+                  onReset={() => {
+                    navigate({ query: "", status: "all" }, true);
+                    setFilters({
+                      store: "",
+                      payment: "",
+                      start: "",
+                      end: "",
+                      sort: "",
+                    });
+                  }}
+                  onDetails={(id) => {
+                    navigate({ id });
+                  }}
+                />
+                {qaTools && (
+                  <details className="mb-3">
+                    <summary>{t("nativeTest")}</summary>
+                    <Select
+                      value={mode}
+                      onValueChange={(value) => setMode(value ?? "")}
+                      items={[
+                        ...["normal", "empty", "error", "denied"].map((v) => ({
+                          value: v,
+                          label: t(v),
+                        })),
+                      ]}
+                    >
+                      <SelectTrigger aria-label={t("nativeTest")}>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {["normal", "empty", "error", "denied"].map((v) => (
+                          <SelectItem key={v} value={v}>
+                            {t(v)}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </details>
+                )}
+              </>
             ) : (
               <Shell
+                backAction={backAction}
                 showNotice={false}
                 title={t(
                   (
@@ -337,9 +334,9 @@ export default function NativeAdmin() {
                 )}
               >
                 <EntitySections
-                  key={state.section + ":" + state.id}
+                  key={state.section}
                   section={state.section}
-                  id={state.id}
+                  id=""
                   query={state.query}
                   t={t}
                   navigate={navigate}
@@ -348,6 +345,44 @@ export default function NativeAdmin() {
               </Shell>
             )}
           </section>
+          {state.id && (
+            <DetailDialog
+              key={state.section + ":" + state.id}
+              title={t("nativeDetails")}
+              backLabel={t("aBack")}
+              closeLabel={demoT("close")}
+              onClose={back}
+            >
+              {state.section === "orders" ? (
+                order ? (
+                  <OrderDetails order={order} t={t} back={back} hideBack />
+                ) : (
+                  <p role="alert">
+                    {t("uOrdMissing").replace("{n}", state.id)}
+                  </p>
+                )
+              ) : state.section === "notifications" ? (
+                <NotificationsPage
+                  id={state.id}
+                  records={notices.records}
+                  renderSearch={(props) => <NotificationSearch {...props} />}
+                  merchantImage=""
+                  hideBack
+                />
+              ) : (
+                <EntitySections
+                  key={state.section + ":" + state.id}
+                  section={state.section}
+                  id={state.id}
+                  query={state.query}
+                  t={t}
+                  navigate={navigate}
+                  onBack={back}
+                  hideBack
+                />
+              )}
+            </DetailDialog>
+          )}
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
             {demoT("demo")}
           </p>

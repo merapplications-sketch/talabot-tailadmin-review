@@ -8,6 +8,7 @@ import {
   ratingComment,
 } from "./ratings-data";
 import {
+  identityCues,
   entityRecord,
   entityStatus,
   filterDrivers,
@@ -77,6 +78,7 @@ type Props = {
   id: string;
   t: (k: string) => string;
   onBack?: () => void;
+  hideBack?: boolean;
   navigate: (patch: { section?: string; id?: string; query?: string }) => void;
 };
 const panel =
@@ -99,6 +101,7 @@ export default function EntitySections({
   t,
   navigate,
   onBack,
+  hideBack = false,
 }: Props) {
   const locale = useLocale();
   const wt = useTranslations("workspace");
@@ -158,13 +161,11 @@ export default function EntitySections({
     text(tables.stores.find((s) => s.id === r.store_id) || {}, "name") || "—";
   const row = source.find((r) => String(r.id) === id);
   const write = () => setNotice(t("nativeWriteBlocked"));
-  const back = (
+  const back = !hideBack && (
     <Button
       size="lg"
       variant="outline"
-      onClick={
-        section === "ratings" && onBack ? onBack : () => navigate({ id: "" })
-      }
+      onClick={onBack || (() => navigate({ id: "" }))}
     >
       ← {t("aBack")}
     </Button>
@@ -532,6 +533,20 @@ export default function EntitySections({
       return (
         <div className="space-y-4">
           {back}
+          <Card>
+            <div className="flex items-center gap-3">
+              <NativeIdentity
+                name={text(row, "name")}
+                src={text(row, "logo_url") || undefined}
+                {...identityCues(section, row)}
+                closedLabel={ft("closed")}
+                promotedLabel={ft("activeBanner")}
+              />
+              <h2 className="min-w-0 flex-1 text-base font-semibold break-words">
+                {text(row, "name")}
+              </h2>
+            </div>
+          </Card>
           <NativeForm
             title={t("aEdS")}
             operation={(r) => mutations.updateStore(row.id, merchantPayload(r))}
@@ -604,6 +619,9 @@ export default function EntitySections({
               <NativeIdentity
                 name={text(row, "name")}
                 src={text(row, "avatar_url") || undefined}
+                {...identityCues(section, row)}
+                closedLabel={ft("closed")}
+                promotedLabel={ft("activeBanner")}
                 person
                 presence={isLive(row)}
                 presenceLabel={t(isLive(row) ? "aOnlineL" : "aOfflineL")}
@@ -727,6 +745,9 @@ export default function EntitySections({
               <NativeIdentity
                 name={text(row, "name")}
                 src={text(row, "avatar_url") || undefined}
+                {...identityCues(section, row)}
+                closedLabel={ft("closed")}
+                promotedLabel={ft("activeBanner")}
                 person
               />
               <h2 className="min-w-0 flex-1 text-lg font-semibold text-gray-800 dark:text-white/90">
@@ -824,7 +845,8 @@ export default function EntitySections({
         <TicketDetails
           ticket={row}
           t={t}
-          back={() => navigate({ id: "" })}
+          back={onBack || (() => navigate({ id: "" }))}
+          hideBack={hideBack}
           openOrder={(orderId) => navigate({ section: "orders", id: orderId })}
         />
       );
@@ -1428,6 +1450,15 @@ export default function EntitySections({
                 section === "drivers"
                   ? t(isLive(r) ? "aOnlineL" : "aOfflineL")
                   : undefined,
+              ...identityCues(section, r),
+              closedLabel: ft("closed"),
+              promotedLabel: ft("activeBanner"),
+              compactValues:
+                section === "drivers"
+                  ? [0, 1, 3]
+                  : section === "ratings"
+                    ? [0, 2, 3, 4]
+                    : [0, 1, 2],
               updated: section === "ratings" ? stamp("created_at") : undefined,
             };
           })}

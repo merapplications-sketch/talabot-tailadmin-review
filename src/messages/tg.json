@@ -1137,6 +1137,10 @@
     "rangeError": "Давраи дурустро аз {start} то {end} интихоб кунед."
   },
   "ownerRound": {
+    "closed": "Пӯшида",
+    "activeBanner": "Баннери фаъол",
+    "close": "Пӯшидан",
+
     "filters": "Полояҳо",
     "overview": "Амалиёт ва молия",
     "shortcuts": "Дастрасии зуд",

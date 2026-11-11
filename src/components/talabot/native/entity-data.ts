@@ -85,3 +85,30 @@ export function filterDrivers(rows: Row[], query: string, filter: string) {
 export function cashExceeded(row: Row, balance: number | undefined) {
   return balance != null && balance >= Number(row.cash_limit || 1000);
 }
+
+// Read-only identity cues; use the same banner schedule/status rules as its list.
+export function identityCues(
+  section: string,
+  row: Row,
+  banners = tables.banners,
+  now = snapshotTime,
+) {
+  return {
+    closed:
+      section === "restaurants"
+        ? row.is_open === false || row.is_active === false
+        : section === "customers"
+          ? !!row.banned_at
+          : false,
+    promoted:
+      section === "restaurants" &&
+      row.id != null &&
+      banners.some(
+        (b) =>
+          b.link_type === "store" &&
+          b.link_value != null &&
+          String(b.link_value) === String(row.id) &&
+          entityStatus("banners", b, now).label === "aBNow",
+      ),
+  };
+}

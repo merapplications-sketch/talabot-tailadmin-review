@@ -25,6 +25,7 @@ import { mutations } from "./mutation-service";
 interface Props {
   ticket: Row;
   t: (key: string) => string;
+  hideBack?: boolean;
   back: () => void;
   openOrder: (id: string) => void;
 }
@@ -32,6 +33,7 @@ export default function TicketDetails({
   ticket: k,
   t,
   back,
+  hideBack = false,
   openOrder,
 }: Props) {
   const locale = useLocale();
@@ -107,9 +109,11 @@ export default function TicketDetails({
   }
   return (
     <div className="space-y-4">
-      <Button variant="outline" onClick={back} size="lg">
-        {t("aBack")}
-      </Button>
+      {!hideBack && (
+        <Button variant="outline" onClick={back} size="lg">
+          {t("aBack")}
+        </Button>
+      )}
       <Card title={t("rs_" + text(k, "reason"))}>
         <Pair label={t("status")}>
           <Badge color={entityStatus("support", k).color}>
