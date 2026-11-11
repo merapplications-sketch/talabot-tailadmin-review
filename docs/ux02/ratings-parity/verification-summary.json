@@ -1,0 +1,77 @@
+{
+  "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "date": "2026-11-11",
+  "build": {
+    "status": "PASS",
+    "exit_code": 0,
+    "command": "npm run build:native",
+    "log": "build.log"
+  },
+  "typescript": {
+    "status": "PASS",
+    "exit_code": 0,
+    "scope": "existing tsconfig.source.json source check",
+    "log": "typescript.log"
+  },
+  "affected_lint": {
+    "status": "PASS",
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "log": "lint.log"
+  },
+  "full_lint": {
+    "status": "NOT_RERUN",
+    "prior_warnings": 47,
+    "note": "Inherited previous evidence; not a fresh full-project result. No rule disabled."
+  },
+  "new_checks": {
+    "ratings_parity": 12,
+    "rating_action_handlers": 6,
+    "list_journeys": 10,
+    "total": 28
+  },
+  "affected_regression": {
+    "rating_state": 4,
+    "support_handlers": 12,
+    "operations": 17,
+    "validation": 14,
+    "domain": 22,
+    "shared_B_composition_SSR": 8,
+    "total": 77
+  },
+  "distinct_total": 105,
+  "failed": 0,
+  "counting_note": "Domain reports14 checks plus8 separate assertions outside async suite. Shared8 composition checks counted once, although imported by multiple suites.",
+  "test_results": "test-results.json",
+  "before_failures": [
+    "before.log",
+    "actions-before.log",
+    "journeys-before.log"
+  ],
+  "browser": {
+    "engine": "connected Chromium",
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "local": "browser-local.json",
+    "published": "browser-published.json",
+    "support": "support-published.json",
+    "scope": "UI interaction and DOM observations, separate from handler simulations. Success is injected only in tests, never connected to backend.",
+    "local_support_serialization": "Two local getters recorded null/empty rather than input.value. Those entries alone are INCONCLUSIVE; public support-published.json supplies explicit input.value after refused save/reload/reopen.",
+    "automation_transition": "Immediate Back during closing-dialog transition did not navigate; after closed state was confirmed, Back returned with t1 query. No production code workaround.",
+    "console": "Local: extension metadata errors plus2 opaque Vite-client Object errors. Published screenshot pass: only extension metadata errors in sampled logs; no application-domain entries returned. Not a blanket zero-error guarantee.",
+    "network": "No full network/HAR capability exposed; failed-request coverage NOT VERIFIED."
+  },
+  "responsive": "BLOCKED_CAPABILITY — see responsive-capability.json",
+  "real_safari": "NOT_TESTED",
+  "real_HTTP_or_RBAC": "NOT_TESTED",
+  "warnings": [
+    "Existing Vite config import-extension warning",
+    "Existing >500kB bundle warnings",
+    "npm http-proxy environment warning"
+  ],
+  "unchanged_prior_suites": "Full analytics/language/theme suites retained, not rerun solely for report. Protected source hashes recorded.",
+  "static_published_assets": "4 asset hashes plus root HTML match manifest. /index.html307 to /; no-follow preliminary check diagnosed, no app defect."
+}

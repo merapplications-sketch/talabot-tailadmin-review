@@ -1,0 +1,425 @@
+{
+  "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "version": 8,
+  "captures": [
+    {
+      "screen": "v8-home-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders",
+      "geometry": {
+        "clientWidth": 1348,
+        "documentWidth": 1348,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-home-loaded-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders",
+      "geometry": {
+        "clientWidth": 1348,
+        "documentWidth": 1348,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-orders-search-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders&q=ord4",
+      "geometry": {
+        "clientWidth": 1348,
+        "documentWidth": 1348,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-order-details-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders&q=ord4&id=ord4",
+      "geometry": {
+        "clientWidth": 1348,
+        "documentWidth": 1348,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-ratings-needs-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=ratings",
+      "geometry": {
+        "clientWidth": 1363,
+        "documentWidth": 1363,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-rating-details-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=ratings&id=5",
+      "geometry": {
+        "clientWidth": 1363,
+        "documentWidth": 1363,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-rating-dialog-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=ratings&id=5",
+      "geometry": {
+        "clientWidth": 1363,
+        "documentWidth": 1363,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-customer-edit-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=customers&id=u3",
+      "geometry": {
+        "clientWidth": 1363,
+        "documentWidth": 1363,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    },
+    {
+      "screen": "v8-customer-edit-visible-1363",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=customers&id=u3",
+      "geometry": {
+        "clientWidth": 1363,
+        "documentWidth": 1363,
+        "height": 936,
+        "scrollY": 0,
+        "width": 1363
+      },
+      "scripts": [
+        "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/assets/index-Ch8D8wob.js"
+      ]
+    }
+  ],
+  "application_logs": [],
+  "recent_logs": [
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:38.824Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:38:52.223Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:39:03.039Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:39:03.104Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:39:03.282Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:39:03.283Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:39:03.305Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:10.660Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:15.759Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:15.760Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:15.769Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:22.670Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:22.696Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:22.696Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:29.872Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:29.873Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:29.880Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:29.880Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:30.906Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:30.908Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:30.917Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:30.918Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:37.108Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:37.108Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:37.121Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:42.311Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:42.557Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:42.557Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:50.532Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:50.541Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:50.542Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:50.543Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:51.569Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:51.570Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:51.578Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:42:51.580Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    }
+  ],
+  "network_capture": "NOT AVAILABLE: no network/HAR capability exposed",
+  "notes": [
+    "No requested viewport resize capability",
+    "v8-home-1363 captured loading; use v8-home-loaded-1363",
+    "v8-customer-edit-1363 captured pre-modal transition; use v8-customer-edit-visible-1363",
+    "Existing synthetic v7 rating draft and v6 customer draft survived source update",
+    "No server write submitted in public screenshot pass"
+  ]
+}

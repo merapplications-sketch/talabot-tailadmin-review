@@ -1,0 +1,49 @@
+{
+  "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "checks": [
+    {
+      "path": "assets/index-B5vVbvkj.css",
+      "sha256": "0fa994d85fccc281bc6ef657474df27a35f5c485d11feeb398c13c05c08b8f24",
+      "matches_manifest": true,
+      "observation": "Passed SHA256 assertion in initial post-publish verification before explicit index.html mismatch"
+    },
+    {
+      "path": "assets/index-Ch8D8wob.js",
+      "sha256": "2960d09bdfdb4b98be2e39905c3bc5342fc367a263234e07f8c79aa9565c8b09",
+      "matches_manifest": true,
+      "observation": "Passed SHA256 assertion in initial post-publish verification before explicit index.html mismatch"
+    },
+    {
+      "path": "assets/react-apexcharts.esm-KZwgfaOj.js",
+      "sha256": "19dc8790d1b76f6cfcc5db945d10c96dcd755d810422911a74cc67c3c11bd30a",
+      "matches_manifest": true,
+      "observation": "Passed SHA256 assertion in initial post-publish verification before explicit index.html mismatch"
+    },
+    {
+      "path": "assets/talabot-original-MIjVQ1p2.png",
+      "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367",
+      "matches_manifest": true,
+      "observation": "Passed SHA256 assertion in initial post-publish verification before explicit index.html mismatch"
+    },
+    {
+      "path": "/",
+      "sha256": "4337d3703e77418f43e13104bb9a67a212cc943cab934b33b4e30c30deb02d02",
+      "matches_manifest": true,
+      "expected_index_hash": "4337d3703e77418f43e13104bb9a67a212cc943cab934b33b4e30c30deb02d02"
+    },
+    {
+      "path": "/index.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_manifest": false,
+      "expected_index_hash": "4337d3703e77418f43e13104bb9a67a212cc943cab934b33b4e30c30deb02d02"
+    }
+  ],
+  "initial_explicit_index_assertion": "Verifier no-follow redirect-body comparison failed; diagnosed307 to root, root matches manifest. No runtime change.",
+  "scope": "Static public assets only, not operational HTTP or RBAC",
+  "explicit_index_redirect": {
+    "status": 307,
+    "location": "/",
+    "body_bytes": 0,
+    "resolution": "Expected hosting canonical redirect. Root HTML SHA256 verified equal to built index.html; not a failed app asset."
+  }
+}

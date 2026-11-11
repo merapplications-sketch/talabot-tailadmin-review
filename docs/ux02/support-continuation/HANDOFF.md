@@ -1,5 +1,7 @@
 # UX-02 — support and rating continuation / version 7
 
+> Superseded for the next resume by [version8 ratings/list HANDOFF](../ratings-parity/HANDOFF.md). Published source604b4df7a947b5bff9664b9c6b99d13110b4f77e. The historical version7 evidence below is preserved.
+
 Status: PARTIAL IMPLEMENTATION / NOT ACCEPTED. No redesign or new UI placement.
 
 - Repository: https://github.com/merapplications-sketch/talabot-tailadmin-review

@@ -1,0 +1,43 @@
+{
+  "status": "PARTIAL NATIVE IMPLEMENTATION \u2014 NOT ACCEPTED",
+  "repository": "https://github.com/merapplications-sketch/talabot-tailadmin-review",
+  "branch": "review/ux02-final-b-integration-20261110",
+  "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "build": "npm run build:native",
+  "files": [
+    {
+      "path": "assets/index-B5vVbvkj.css",
+      "sha256": "0fa994d85fccc281bc6ef657474df27a35f5c485d11feeb398c13c05c08b8f24"
+    },
+    {
+      "path": "assets/index-Ch8D8wob.js",
+      "sha256": "2960d09bdfdb4b98be2e39905c3bc5342fc367a263234e07f8c79aa9565c8b09"
+    },
+    {
+      "path": "assets/react-apexcharts.esm-KZwgfaOj.js",
+      "sha256": "19dc8790d1b76f6cfcc5db945d10c96dcd755d810422911a74cc67c3c11bd30a"
+    },
+    {
+      "path": "assets/talabot-original-MIjVQ1p2.png",
+      "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367"
+    },
+    {
+      "path": "index.html",
+      "sha256": "4337d3703e77418f43e13104bb9a67a212cc943cab934b33b4e30c30deb02d02"
+    }
+  ],
+  "canonical_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "previous_published_source": "adf0d32c688eebf00e8e376bab7913def02aae76",
+  "files_sha256": {
+    "src/components/talabot/native/entity-sections.tsx": "2ec50a17a3947a6cddd92805febf3876719de7f847f94ab7a713aae6c5ea5c77",
+    "src/components/talabot/native/ratings-data.ts": "fb1914f689de9dba2b9c1f5fe26daa7447fd1e051f34e2e61a0295a2f4d0d0f5",
+    "src/components/talabot/native/dictionary.json": "060eaa8f6f7bc736486da6235fd23685cd34103114d69c41499bad7cec1db6f0",
+    "src/components/talabot/native/index.tsx": "8b4cf2114f1d02160fe02b001849391f9da70a8e9a989547205a8647f2cae886",
+    "src/components/talabot/native/native-form.tsx": "8a9f6f93659bb989dd2bbe2e98f2f41ce99dc9972e5a2f5f25c6211cdf1c2871",
+    "src/components/talabot/native/ticket-details.tsx": "085aff8af1e6cab383d54c45ef71d7d5b027d828e50157c75c7bf64a4940e4f3",
+    "src/components/talabot/analytics.tsx": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108",
+    "src/components/talabot/analytics-data.ts": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c",
+    "src/components/talabot/native/fixture.json": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5"
+  },
+  "scope": "UX-02 v8 ratings parity and existing list journey evidence; isolated synthetic preview only"
+}

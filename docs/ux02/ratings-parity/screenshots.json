@@ -1,0 +1,74 @@
+[
+  {
+    "path": "screenshots/rating-resolution-refusal-local.jpg",
+    "sha256": "a7eb0c4eb7ae6d08bea0d56e71d8a9f14d5f402c87ee51ce58fa0aca0252a37e",
+    "stage": "local Vite source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/ratings-all-local.jpg",
+    "sha256": "4e4464448baf51cb2fef8d4c6fd6ba32b5c4540a04cf3c5f3576ca1a61934073",
+    "stage": "local Vite source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/ratings-needs-local.jpg",
+    "sha256": "51d8ddbbde8572bb0df9e41ee38693631ba0a6c0e7e0a5a62cd8bab224697610",
+    "stage": "local Vite source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-customer-edit-1363.jpg",
+    "sha256": "3bf0b59ef3915e2871c68dd3de02c8ce8d3ce049f738b59f5b93d758a75ac04e",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot. Pre-modal transition; use customer-edit-visible for open dialog."
+  },
+  {
+    "path": "screenshots/v8-customer-edit-visible-1363.jpg",
+    "sha256": "812a15c32393b9c05719df211a48d6d61a4f0a8e290a3dd3f359c5e73534773a",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-home-1363.jpg",
+    "sha256": "c56580a0970d83399b2d2caf5687099b962ab5c8aaab0d240110da667a12b5ef",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot. Initial loading state; use home-loaded for final view."
+  },
+  {
+    "path": "screenshots/v8-home-loaded-1363.jpg",
+    "sha256": "dcb188e9b7a165ab751d3daaf09f55e66aa57187d68e0f4455a7a48520b8a6f3",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-order-details-1363.jpg",
+    "sha256": "cd4621c73669e6bf9259407e134b2fcf162b0d0d22f62e3656d351dcd5db886b",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-orders-search-1363.jpg",
+    "sha256": "92484c84865118c3c603130ee3556d763ec22dc4233b9b8eb38f89619f09233b",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-rating-details-1363.jpg",
+    "sha256": "33008ae2adf68b9a56781e85be46ac874a35b386e03cc9ee37551e81158d6231",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-rating-dialog-1363.jpg",
+    "sha256": "c550e89d6080e2244a744844599ad62ba26b79d7539c4b1b279041c3291ed163",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  },
+  {
+    "path": "screenshots/v8-ratings-needs-1363.jpg",
+    "sha256": "f32a631af975088a71393b651f49fa9d8469aa405eee5e47f4e2588f18e2d16d",
+    "stage": "published version8 source604b",
+    "notes": "1363x936 connected Chromium; NOT a requested viewport or Safari screenshot."
+  }
+]

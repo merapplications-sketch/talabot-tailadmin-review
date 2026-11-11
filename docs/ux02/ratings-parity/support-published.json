@@ -1,0 +1,33 @@
+{
+  "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "version": 8,
+  "observations": [
+    {
+      "step": "decision-preview-refusal",
+      "value": "V8 published support decision retained",
+      "alert": "Isolated review. Financial and administrative writes are not connected."
+    },
+    {
+      "step": "reply-refusal",
+      "value": "V8 published synthetic support reply",
+      "text": "Send\n\nIsolated review. Financial and administrative writes are not connected.\n\nReply to the customer (the customer sees it)\n\nIsolated review. Financial and administrative writes are not connected.\n\nIsolated review. Financial and administrative writes are not connected.\nClose\nSave\nClose"
+    },
+    {
+      "step": "reload",
+      "dialogs": 0,
+      "decision": "V8 published support decision retained"
+    },
+    {
+      "step": "explicit-reopen",
+      "reply": "V8 published synthetic support reply"
+    },
+    {
+      "step": "back-list-after-dialog-close-settled",
+      "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=support&q=t1",
+      "query": "t1",
+      "text": "Synthetic data · native React migration in progress\n\nSearch\nAll\nSupport contacts\nName\tStatus\tPhone\tAddress\tView details\n\nНе приехал заказ\n\tOpen\t—\t—\t",
+      "note": "Immediate click during modal close transition left detail visible; fresh state confirmed closed, then explicit Back reached list. No code change."
+    }
+  ],
+  "scope": "Synthetic preview refusal only; no real write or successful HTTP. Replaces inconclusive local support field serialization, not earlier handler evidence."
+}
