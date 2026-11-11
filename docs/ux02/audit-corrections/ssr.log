@@ -1,0 +1,17 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS support/banner/promo columns describe actual fields, not phone/address
+PASS rating list retains comment and displays both actual star fields
+PASS driver filter has all/on/off, status and inclusive cash warning
+PASS canonical activation badge is shown on list and detail
+PASS real image reaches identity markup, missing image uses existing fallback
+PASS texts and loyalty show supplied summaries with details closed
+PASS pencil includes Edit and entity; nameless field groups do not create empty cards
+7 audit SSR checks passed (plus shared composition checks); no viewport claim

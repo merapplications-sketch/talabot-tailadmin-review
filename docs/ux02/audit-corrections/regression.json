@@ -1,0 +1,35 @@
+[
+  {
+    "test": "ux02-native",
+    "exit": 0
+  },
+  {
+    "test": "ux02-native-operations",
+    "exit": 0
+  },
+  {
+    "test": "ux02-native-validation",
+    "exit": 0
+  },
+  {
+    "test": "ux02-support",
+    "exit": 0
+  },
+  {
+    "test": "ux02-rating-actions",
+    "exit": 0
+  },
+  {
+    "test": "ux02-ratings",
+    "exit": 0
+  },
+  {
+    "test": "ux02-ratings-parity",
+    "exit": 0
+  },
+  {
+    "test": "ux02-list-journeys",
+    "exit": 0,
+    "harness_update": "Load real new data adapters; original 10 assertions unchanged. Initial harness missing module resolved."
+  }
+]

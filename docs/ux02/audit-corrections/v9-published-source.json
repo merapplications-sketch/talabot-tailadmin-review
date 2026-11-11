@@ -1,0 +1,45 @@
+{
+  "status": "ISOLATED AUDIT CORRECTIONS \u2014 PARTIAL / NOT ACCEPTED",
+  "repository": "https://github.com/merapplications-sketch/talabot-tailadmin-review",
+  "branch": "review/ux02-final-b-integration-20261110",
+  "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+  "previous_published_source": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+  "build": "npm run build:native",
+  "files": [
+    {
+      "path": "assets/index-1nwEA-3B.js",
+      "sha256": "7223a54ddfd6f51fd77c08ac14f5b0672484e0384a9e154c9945f6e46b5e309a"
+    },
+    {
+      "path": "assets/index-B5vVbvkj.css",
+      "sha256": "0fa994d85fccc281bc6ef657474df27a35f5c485d11feeb398c13c05c08b8f24"
+    },
+    {
+      "path": "assets/outfit-c8e7a734-D6ftewdU.woff2",
+      "sha256": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12"
+    },
+    {
+      "path": "assets/outfit-f37fa50e-BMnJGVZj.woff2",
+      "sha256": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091"
+    },
+    {
+      "path": "assets/react-apexcharts.esm-Dafft_XP.js",
+      "sha256": "87f31f138ac01884a2b81b451f41e84f50563a52a3109dd51c40c671a7611c90"
+    },
+    {
+      "path": "assets/talabot-original-MIjVQ1p2.png",
+      "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367"
+    },
+    {
+      "path": "index.html",
+      "sha256": "7cfde160e7d328d57b404154240f9d2d7c470fd8e231ab9e4bbe05619dae06e8"
+    }
+  ],
+  "checks": "Build and TypeScript PASS; Lint0errors/47baseline warnings. Source tests and browser desktop evidence in audit-corrections.",
+  "limits": [
+    "U08 partial: first row899.59375, 0 fully visible at1363x936",
+    "320/390/1440 and real Safari NOT TESTED",
+    "isolated synthetic data, no backend writes",
+    "FP16 remains blocked"
+  ]
+}

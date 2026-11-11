@@ -1,0 +1,57 @@
+{
+  "status": "U01-U15 visual review pending; responsive and Safari validation incomplete",
+  "repository": "https://github.com/merapplications-sketch/talabot-tailadmin-review",
+  "branch": "review/ux02-final-b-integration-20261110",
+  "source_commit": "48592032e774a965c33e0e7c00dce4c9ecb3f94f",
+  "previous_published_source": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+  "build": "npm run build:native",
+  "files": [
+    {
+      "path": "assets/index-B0BoGvYQ.js",
+      "sha256": "8af0700698d55bd3bc5122032169a1b5a77f8055b3f83be95d9796bb5ee91589"
+    },
+    {
+      "path": "assets/index-PWk3ss1n.css",
+      "sha256": "fa53e34af8ccc36d38db3fe0a5f6692730abaadf05cfe8cc2b9a1b2cc8149f9f"
+    },
+    {
+      "path": "assets/outfit-c8e7a734-D6ftewdU.woff2",
+      "sha256": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12"
+    },
+    {
+      "path": "assets/outfit-f37fa50e-BMnJGVZj.woff2",
+      "sha256": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091"
+    },
+    {
+      "path": "assets/react-apexcharts.esm-Bsysdl8j.js",
+      "sha256": "32ecd8331b7caf9bf45307a79d996a073ded89484328835f4ee587e47d83f252"
+    },
+    {
+      "path": "assets/talabot-original-MIjVQ1p2.png",
+      "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367"
+    },
+    {
+      "path": "index.html",
+      "sha256": "fe24558c9d09ac5734e3edd82a1f854c729a2da8577758865c897432c865fd09"
+    }
+  ],
+  "density": {
+    "viewport": [
+      1363,
+      936
+    ],
+    "first_row_y": 726.59375,
+    "first_row_bottom_by_locale": {
+      "en": 891.09375,
+      "ru": 911.09375,
+      "tg": 931.09375
+    },
+    "fully_visible_records_each_locale": 1,
+    "previous_first_row_y": 899.59375
+  },
+  "limits": [
+    "320/390/1440 and actual Safari NOT TESTED",
+    "synthetic preview; no backend writes or RBAC proof",
+    "FP16 deferred under owner restaurant policy; no preapproval tab implemented"
+  ]
+}

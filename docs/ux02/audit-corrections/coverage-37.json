@@ -1,0 +1,1344 @@
+[
+  {
+    "id": "FP01",
+    "function": "الرئيسية والمؤشرات الأربع",
+    "status": "VERIFIED SAMPLE",
+    "evidence_and_gap": "SummaryCards الأصلي مع polish.css؛ قيم A 7/415/44/4 ونطاقها دون تغيير. المؤشرات معلومات وليست أزراراً. screenshot home-desktop.jpg.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vOrders; B preview.tsx SummaryCards",
+    "component": "native/index.tsx + b-shell/summary-cards.tsx",
+    "test_and_result": "regression-domain.log; composition; v5-home-1363.jpg",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "SummaryCards الأصلي مع polish.css؛ قيم A 7/415/44/4 ونطاقها دون تغيير. المؤشرات معلومات وليست أزراراً. screenshot home-desktop.jpg.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-domain.log; composition; v5-home-1363.jpg"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Protected sources/assets unchanged; protected-files.json. index.tsx only forwards existing Back callback; no homepage/card/analytics/layout edits.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "Public v8 screenshots at1363x936; source hash protected. Not owner acceptance or requested widths.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "SummaryCards/calc unchanged; protected-files.json",
+      "interaction": "Final-home retains four original indicators. U08 density remains partial.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP02",
+    "function": "حالة السائقين والمتاجر",
+    "status": "PARTIAL",
+    "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A livePills/goLive",
+    "component": "native/operational-alerts.tsx + order-operations.ts",
+    "test_and_result": "regression-operations.log; displayed desktop only, not every action",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-operations.log; displayed desktop only, not every action"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "entity-data driver freshness and original availability rules",
+      "interaction": "All/on/off desktop results and audited data tests pass; no all-device guarantee.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP03",
+    "function": "التنبيهات التشغيلية",
+    "status": "PARTIAL",
+    "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A alerts/lowAlert/noCourier",
+    "component": "native/operational-alerts.tsx",
+    "test_and_result": "regression-operations.log; full alert interaction NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "نُقلت ملخصات التوفر وتنبيهات الدعم والتقييم والإسناد والنقد إلى React. اختبارات قواعد محددة ناجحة؛ التفاعل البصري والمطابقة الكاملة غير مثبتين.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-operations.log; full alert interaction NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Operational cash Alert composition only; original calculations",
+      "interaction": "74px earlier first record; alert information/action preserved; not full alert-journey proof.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP04",
+    "function": "التنقل الرئيسي",
+    "status": "VERIFIED SAMPLE",
+    "evidence_and_gap": "فُتحت الأقسام الاثنا عشر في Chromium بعرض 1363؛ root واحد وiframe صفر. لا إثبات لكل رحلة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A tabKeep/render; B AdminLayout/AppSidebar/AppHeader",
+    "component": "native/b-shell/* + navigation.ts",
+    "test_and_result": "browser-evidence: 12 section openings; v5-final-build root1/iframe0",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "فُتحت الأقسام الاثنا عشر في Chromium بعرض 1363؛ root واحد وiframe صفر. لا إثبات لكل رحلة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser-evidence: 12 section openings; v5-final-build root1/iframe0"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Single root/navigation preserved; Shell h1 added to entity content",
+      "interaction": "Desktop lists and Back observed; mobile navigation NOT TESTED.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP05",
+    "function": "بحث الطلبات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "اختبار جديد: بحث ord1 ثم تفاصيل ثم رجوع حفظ البحث.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A oqSet/oqRun; B OrdersList search",
+    "component": "native/domain.ts + b-shell/list-patterns.tsx",
+    "test_and_result": "browser: order-search/order-back-search/reload-search; regression-domain.log",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "اختبار جديد: بحث ord1 ثم تفاصيل ثم رجوع حفظ البحث.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: order-search/order-back-search/reload-search; regression-domain.log",
+      "current_batch": "browser: order-search/order-back-search/reload-search; regression-domain.log"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Existing search/status/secondary-filter rules unchanged. 10 list-journey tests cover boundaries, independent filters, intersections and navigation.",
+      "interaction": "Scoped PASS: dates invalid/corrected; store/payment/sort; intersection with Preparing + #ord1; empty/reload input retention; payment chip clear-only; Reset all ->7; details/reload/back. browser-local.json and ux02-list-journeys.log.",
+      "visual": "1363x936 screenshot evidence only; full responsive or owner acceptance absent.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Actual customer phone lookup and truthful A hint",
+      "interaction": "8 data checks and10list checks; desktop phone isolation/status/reset observed.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP06",
+    "function": "حالات الطلب",
+    "status": "PARTIAL",
+    "evidence_and_gap": "أربع اختصارات وفلتر شامل؛ Preparing أعاد ord1 وCancelled أعاد ord5. OrderStatusBadge محفوظ. المقاسات المطلوبة غير مثبتة.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A order status enum; B OrdersList/OrderStatusBadge",
+    "component": "native/b-shell/list-patterns.tsx + integrated-review/order-status.tsx",
+    "test_and_result": "browser: all-seven-status-interactions; 7 statuses -> ord0..ord6",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "أربع اختصارات وفلتر شامل؛ Preparing أعاد ord1 وCancelled أعاد ord5. OrderStatusBadge محفوظ. المقاسات المطلوبة غير مثبتة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: all-seven-status-interactions; 7 statuses -> ord0..ord6",
+      "current_batch": "browser: all-seven-status-interactions; 7 statuses -> ord0..ord6"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Existing search/status/secondary-filter rules unchanged. 10 list-journey tests cover boundaries, independent filters, intersections and navigation.",
+      "interaction": "Scoped PASS: dates invalid/corrected; store/payment/sort; intersection with Preparing + #ord1; empty/reload input retention; payment chip clear-only; Reset all ->7; details/reload/back. browser-local.json and ux02-list-journeys.log.",
+      "visual": "1363x936 screenshot evidence only; full responsive or owner acceptance absent.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Order enum/status mapping unchanged; entity badges corrected separately",
+      "interaction": "Prior7states evidence retained; affected Delivered/filter regression passed.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP07",
+    "function": "الفترة والفرز والفلاتر الثانوية",
+    "status": "PARTIAL",
+    "evidence_and_gap": "أُغلقت فجوة تغطية الفترة والمنشأة والترتيب والتقاطعات ومسح فلتر واحد/الجميع في المنطق والمتصفح المتاح. لم تتغير قواعد الفلاتر أو مواضعها. المقاسات المطلوبة والربط الخادمي غير مثبتين.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B OrdersList secondary filters; A native row fields",
+    "component": "native/domain.ts secondaryFilter + b-shell/list-patterns.tsx",
+    "test_and_result": "ux02-list-journeys.log10 PASS (7 filter checks +3 navigation checks); browser-local.json invalid-range-verified/orders-intersection-oldest/orders-return-reload/clear-one-filter/orders-empty-search/orders-reset-all.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "فلاتر B Select متصلة بالقيم السابقة؛ تقاطع ord1 وWallet صفر نتائج ثم All يعيد7. بقية الفلاتر/مسحها تحتاج تغطية.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: secondary-payment/all-status-filter/reset; invalid range logic test; full dates/store/sort interaction NOT VERIFIED",
+      "current_batch": "browser: secondary-payment/all-status-filter/reset; invalid range logic test; full dates/store/sort interaction NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Existing search/status/secondary-filter rules unchanged. 10 list-journey tests cover boundaries, independent filters, intersections and navigation.",
+      "interaction": "Scoped PASS: dates invalid/corrected; store/payment/sort; intersection with Preparing + #ord1; empty/reload input retention; payment chip clear-only; Reset all ->7; details/reload/back. browser-local.json and ux02-list-journeys.log.",
+      "visual": "1363x936 screenshot evidence only; full responsive or owner acceptance absent.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "Filter-test gap closed within logic + connected-desktop scope; overall PARTIAL retained for responsive/full-scope/backend gaps.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Secondary filter semantics unchanged",
+      "interaction": "10list journey checks rerun successfully; prior v8 browser invalid dates/intersection/clearing retained.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP08",
+    "function": "بطاقة الطلب",
+    "status": "PARTIAL",
+    "evidence_and_gap": "Table الأصلي مع نمطTableOne يحفظ كل معلومات الصف السابق. لا دليل اكتمال320/390/1440.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vOrders; B OrdersList table/cards",
+    "component": "native/b-shell/list-patterns.tsx",
+    "test_and_result": "composition SSR + v4-orders-list-1363.jpg; 320/390/1440 NOT TESTED",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "Table الأصلي مع نمطTableOne يحفظ كل معلومات الصف السابق. لا دليل اكتمال320/390/1440.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "composition SSR + v4-orders-list-1363.jpg; 320/390/1440 NOT TESTED",
+      "current_batch": "composition SSR + v4-orders-list-1363.jpg; 320/390/1440 NOT TESTED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Shared party identity/image adapter; B table/card structure preserved",
+      "interaction": "Desktop records observed; U08 row height unchanged180.5/181; phone NOT TESTED.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP09",
+    "function": "الرجوع وحالة البحث",
+    "status": "PARTIAL",
+    "evidence_and_gap": "أُصلح رجوع تفاصيل التقييم لاستعمال معالج استعادة الحالة القائم. ثبت تقييم→طلب→تحديث→تقييم→قائمة مع البحث والفلتر؛ واستعادة التمرير538 بعد اكتمال الرسم. البحث وفلاتر الطلب محفوظة بعد التفاصيل/الرجوع/التحديث. لا تعميم على كل الرحلات أو الهاتف.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A openOrd/ordBack/hsBack; B useListing",
+    "component": "native/navigation.ts + b-route.ts",
+    "test_and_result": "ux02-list-journeys.log; browser-local.json; support-published.json. All-screen/phone scroll guarantee not established.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "رجوع دعم→طلب→دعم وعميل→طلب قديم→عميل مختبر؛ التمرير الكامل لم يُقبل.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: search/reload/notification-order-back/scroll-visible-target; broad scroll guarantee NOT VERIFIED",
+      "current_batch": "Support q=t1 retained after detail/back; note/refund retained after reload in connected local preview. Prior scope and scroll limitations retained."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PASS scoped: ratings detail Back delegates to existing back handler; other sections untouched.",
+      "interaction": "PASS scoped: navigation-handler tests3; local order/rating linked-return journeys, draft reload, settled scroll538; public support Back retained t1 after modal closed. Immediate pre-RAF read0 is superseded by settled538.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "Ratings Back defect fixed and tested. Search/filter/scroll subcoverage improved; overall PARTIAL remains.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "navigation.ts unchanged; same saved filters/drafts",
+      "interaction": "10list journey checks PASS; driver search/off filter/back/reload and draft preservation observed.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP10",
+    "function": "تفاصيل الطلب والأطراف",
+    "status": "PARTIAL",
+    "evidence_and_gap": "الأطراف بترتيب المنشأة/السائق/العميل؛ الإسناد وصورة التسليم غير مكتملين.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail/assignModal/doAssign; selected C party order",
+    "component": "native/order-details.tsx + assignment-dialog.tsx",
+    "test_and_result": "browser: ord1/ord5 detail fields; assignment source tests only",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "الأطراف بترتيب المنشأة/السائق/العميل؛ الإسناد وصورة التسليم غير مكتملين.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: ord1/ord5 detail fields; assignment source tests only"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "One profile id for party name/phone/image; absent phone has no invented contact",
+      "interaction": "Adapter cases PASS; order list/details identity matched in desktop; no real call.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP11",
+    "function": "الأصناف والمجموع",
+    "status": "PARTIAL",
+    "evidence_and_gap": "تفاصيل الأصناف والخصومات والتوصيل؛ تحتاج مطابقة مرئية شاملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail order items/options/totals",
+    "component": "native/order-details.tsx",
+    "test_and_result": "browser ord1 item/fee/tip/total visible; full field interaction NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "تفاصيل الأصناف والخصومات والتوصيل؛ تحتاج مطابقة مرئية شاملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser ord1 item/fee/tip/total visible; full field interaction NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP12",
+    "function": "الدفع والتحصيل والتسوية",
+    "status": "PARTIAL",
+    "evidence_and_gap": "تمييز النقد والمحفظة والتحصيل والتسوية والعمولة؛ حالات المجال مختبرة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A finBox; original mutation contracts",
+    "component": "native/order-details.tsx + domain.ts finance",
+    "test_and_result": "regression-domain.log; browser ord1 cash/ord5 online distinction; real settlement NOT TESTED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "تمييز النقد والمحفظة والتحصيل والتسوية والعمولة؛ حالات المجال مختبرة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-domain.log; browser ord1 cash/ord5 online distinction; real settlement NOT TESTED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP13",
+    "function": "Timeline والمحادثة",
+    "status": "PARTIAL",
+    "evidence_and_gap": "Accordion الأصلي مغلق افتراضياً؛ فتح Timeline وChat أظهر5 أحداث ورسالتين وفروق الزمن نفسها. خط الرحلة بالبرتقالي المعتمد.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDetail Timeline/cmtParts; B Accordion",
+    "component": "native/order-details.tsx",
+    "test_and_result": "browser: explicit Timeline/Chat open, 5 events/2 messages; actual call/map handoff NOT TESTED",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "Accordion الأصلي مغلق افتراضياً؛ فتح Timeline وChat أظهر5 أحداث ورسالتين وفروق الزمن نفسها. خط الرحلة بالبرتقالي المعتمد.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser: explicit Timeline/Chat open, 5 events/2 messages; actual call/map handoff NOT TESTED",
+      "current_batch": "browser: explicit Timeline/Chat open, 5 events/2 messages; actual call/map handoff NOT TESTED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP14",
+    "function": "قائمة المنشآت",
+    "status": "PARTIAL",
+    "evidence_and_gap": "بحث وقائمة وموافقات وتعرفة مسودة؛ مطابقة التفاعلات غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStores/srqCard/tarCard; B Grid/Forms",
+    "component": "native/entity-sections.tsx restaurants + b-shell/entity-grid.tsx",
+    "test_and_result": "browser store-list screenshot; complete approval/tariff journey NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "بحث وقائمة وموافقات وتعرفة مسودة؛ مطابقة التفاعلات غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser store-list screenshot; complete approval/tariff journey NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "B Shell/panel/Grid entity fields/images; active/open badges",
+      "interaction": "final-stores screenshot and SSR; full merchant action parity still partial.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP15",
+    "function": "تعديل المنشأة والملكية",
+    "status": "PARTIAL",
+    "evidence_and_gap": "حقول React وتحقق هاتف/خصم؛ الملكية والخريطة والصور غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStoreEdit/saveStore/edOwner/edCover/edLogo/edLoc",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "regression-validation.log; images/location/ownership end-to-end NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "حقول React وتحقق هاتف/خصم؛ الملكية والخريطة والصور غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-validation.log; images/location/ownership end-to-end NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Existing contracts/fields/draft behavior unchanged; Edit accessible name and button variants",
+      "interaction": "Validation14 and SSR; no real ownership/image change or backend proof.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP16",
+    "function": "القوائم والأصناف والفروع والساعات",
+    "status": "NOT COMPLETE",
+    "evidence_and_gap": "الفروع وموافقات الأصناف غير منقولة بالكامل.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Six offline contract tests PASS. UI/actions/confirmation placement remains unresolved. Source only proves approval and brand association/create/detach, not complete branch/menu/hours management.",
+    "source": "A brCard/brAtt/brDet/brNew; approveItem in vStores/core",
+    "component": "native/mutation-service.js; merchant brand summary only",
+    "test_and_result": "branch-contracts.log 6 PASS; UI placement/confirmations not implemented; no full menu/hours CRUD inferred",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "الفروع وموافقات الأصناف غير منقولة بالكامل.",
+      "continuation": "Six offline contract tests PASS. UI/actions/confirmation placement remains unresolved. Source only proves approval and brand association/create/detach, not complete branch/menu/hours management.",
+      "test_and_result": "branch-contracts.log 6 PASS; UI placement/confirmations not implemented; no full menu/hours CRUD inferred"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "NOT COMPLETE / BLOCKED DESIGN: unresolved branch/item-approval and map/photo placement; no invented implementation."
+  },
+  {
+    "id": "FP17",
+    "function": "السائق: موافقة واتصال وآخر ظهور",
+    "status": "PARTIAL",
+    "evidence_and_gap": "قائمة وتفاصيل سائق؛ الخريطة وحالات الاتصال تحتاج مطابقة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDrivers/vDrvEdit/driver activity",
+    "component": "native/entity-sections.tsx drivers + order-operations.ts",
+    "test_and_result": "browser courier-list; heartbeat/eligibility logic tests; actual maps/phone NOT TESTED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "قائمة وتفاصيل سائق؛ الخريطة وحالات الاتصال تحتاج مطابقة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser courier-list; heartbeat/eligibility logic tests; actual maps/phone NOT TESTED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "A driver live/off/busy/last-seen semantics restored in list/detail",
+      "interaction": "Data tests and desktop All/on/off/name search PASS; approval write remains simulation only.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP18",
+    "function": "السائق: النقد والحد والإيقاف",
+    "status": "PARTIAL",
+    "evidence_and_gap": "حد النقد ظاهر؛ الرصيد غير المتاح معلن دون افتراض صفر.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A driver cash/limit/accept_blocked",
+    "component": "native/entity-sections.tsx + operational-alerts.tsx",
+    "test_and_result": "regression-operations/validation; cash alert rendered; full sensitive journey NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "حد النقد ظاهر؛ الرصيد غير المتاح معلن دون افتراض صفر.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "regression-operations/validation; cash alert rendered; full sensitive journey NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Original balance≥limit warning; no account recalculation",
+      "interaction": "Boundary adapter test and desktop1250/1000 warning PASS; server permission not tested.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP19",
+    "function": "تعديل السائق واستلام النقد",
+    "status": "PARTIAL",
+    "evidence_and_gap": "نموذج الحد ومسودة إجراءات؛ الاستلام والتأكيدات غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A openDrvEdit/saveLimit/settle/drvAct",
+    "component": "native/native-form.tsx + mutation-action.tsx + mutation-service.js",
+    "test_and_result": "logic/contract tests only; cash receipt/confirmations end-to-end NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "نموذج الحد ومسودة إجراءات؛ الاستلام والتأكيدات غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "logic/contract tests only; cash receipt/confirmations end-to-end NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Original edit/receive-cash workflow preserved; B controls/confirmation",
+      "interaction": "Draft1100 retained after refusedSave/cancel/reopen/reload; confirmation opened/cancelled. No live write.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP20",
+    "function": "بيانات قائمة السائقين التجريبية",
+    "status": "PARTIAL",
+    "evidence_and_gap": "العينات اصطناعية؛ قائمة السائقين تُرشح الدور؛ مطابقة جرد الأصل مفتوحة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vDrivers and preserved sample data",
+    "component": "native/fixture.json + entity-sections.tsx role filter",
+    "test_and_result": "source preserved; courier list opened; exhaustive fixture parity NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "العينات اصطناعية؛ قائمة السائقين تُرشح الدور؛ مطابقة جرد الأصل مفتوحة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "source preserved; courier list opened; exhaustive fixture parity NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP21",
+    "function": "العملاء والملفات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "قائمة/ملف/هاتف وحظر مسودات؛ مجاميع الطلبات والإنفاق غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vCustomers/cuOpen/cuPhone/cuBan",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "browser customer file/phone edit/preview refusal; full totals/ban journey NOT VERIFIED",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "قائمة/ملف/هاتف وحظر مسودات؛ مجاميع الطلبات والإنفاق غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser customer file/phone edit/preview refusal; full totals/ban journey NOT VERIFIED",
+      "current_batch": "V6 shared NativeForm regression: explicit phone edit, synthetic refusal, reload closed, reason retained on explicit reopen. No real write."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "Prior behavior retained; public v8 explicit phone-edit dialog reopened existing synthetic v6 reason draft. No new customer mutation test or backend write.",
+      "visual": "v8-customer-edit-visible-1363.jpg;1363x936 only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Customer Grid uses actual phone/email and coherent identity",
+      "interaction": "final-customers; no false Address; edit/helper regression only, not full customer parity.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP22",
+    "function": "المحفظة وحركاتها",
+    "status": "PARTIAL",
+    "evidence_and_gap": "محفظة بعد الملخص؛ رصيد اصطناعي50؛ تصحيح10 يرجع PREVIEW ويبقي الرصيد. الرجوع يعيد المسودة. الأصلcuWal لا يتضمنconfirm؛ لا اعتماد مالي.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A cuWal; selected C wallet position",
+    "component": "native/entity-sections.tsx + native-form.tsx",
+    "test_and_result": "wallet50 shown after summary; prior sample wallet proof retained; full ledger/financial confirmation NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "محفظة بعد الملخص؛ رصيد اصطناعي50؛ تصحيح10 يرجع PREVIEW ويبقي الرصيد. الرجوع يعيد المسودة. الأصلcuWal لا يتضمنconfirm؛ لا اعتماد مالي.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "wallet50 shown after summary; prior sample wallet proof retained; full ledger/financial confirmation NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP23",
+    "function": "سجل طلبات العميل",
+    "status": "VERIFIED SAMPLE",
+    "evidence_and_gap": "50 من 62 ثم 62 من 62 ثم فتح h938 والرجوع مع بقاء العدد؛ مثبت بالمتصفح.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A cuMore/customer order history",
+    "component": "native/entity-sections.tsx history helper",
+    "test_and_result": "prior 50/62 ->62/62 browser proof; unchanged; regression-domain checks62, no fresh full rerun",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "50 من 62 ثم 62 من 62 ثم فتح h938 والرجوع مع بقاء العدد؛ مثبت بالمتصفح.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "prior 50/62 ->62/62 browser proof; unchanged; regression-domain checks62, no fresh full rerun"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP24",
+    "function": "الإشعارات والجرس",
+    "status": "PARTIAL",
+    "evidence_and_gap": "B dropdown/page/local read state wired to explicit synthetic A-order examples. Desktop search/read/filter/reload/order/back verified. Phone/Safari and production notifications not tested; no alert generation rules inferred.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked",
+    "source": "B NotificationDropdown/NotificationsPage/useReadNotices",
+    "component": "layout/header/notification-dropdown + workspace.tsx + native/notifications.ts + b-route.ts",
+    "test_and_result": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "B dropdown/page/local read state wired to explicit synthetic A-order examples. Desktop search/read/filter/reload/order/back verified. Phone/Safari and production notifications not tested; no alert generation rules inferred.",
+      "continuation": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked",
+      "test_and_result": "12 continuation checks subset + browser search/read/reload/order/back; v5 unknown updated_at/image fallback checked"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP25",
+    "function": "الدعم والشكاوى",
+    "status": "PARTIAL",
+    "evidence_and_gap": "قيود resolved/rejected وإعادة الفتح مثبتة باختبارات المعالجات. نُقلت استجابة النجاح لمسح مسودة الرد/القرار والرجوع بعد الإغلاق فقط. المتصفح أثبت حفظ الرد والبحث والمسودات عند الرفض والتحديث. النجاح الخادمي والتذكرة المغلقة في المتصفح غير مثبتين.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "A admin.html tkSendA/tkStatus; native-form.tsx resetAfterSuccess opt-in only for support reply; ticket-details.tsx ok===true success path. No transport or placement change.",
+    "source": "A vSupportA/vTicketA/tkSendA",
+    "component": "native/ticket-details.tsx + entity-sections.tsx",
+    "test_and_result": "ux02-support.log12 PASS; support-published.json. Earlier refund107/10 browser evidence retained, not rerun. Success is simulated, not HTTP.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "قيود resolved/rejected وإعادة الفتح مثبتة باختبارات المعالجات. نُقلت استجابة النجاح لمسح مسودة الرد/القرار والرجوع بعد الإغلاق فقط. المتصفح أثبت حفظ الرد والبحث والمسودات عند الرفض والتحديث. النجاح الخادمي والتذكرة المغلقة في المتصفح غير مثبتين.",
+      "continuation": "A admin.html tkSendA/tkStatus; native-form.tsx resetAfterSuccess opt-in only for support reply; ticket-details.tsx ok===true success path. No transport or placement change.",
+      "test_and_result": "tests/ux02-support.cjs: 12 handler checks incl. closed guards, mocked success, errors, refund. Browser v6 reply refusal/reload and local decision flow PASS within stated scope."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "V7 support logic preserved; ticket-details.tsx byte-identical. Existing explicit-success semantics retained.",
+      "interaction": "12 support handler checks rerun PASS incl. isolated success/refund/error/closed guards. Published browser reply and decision refused with drafts retained through close/reload/reopen; no auto-open; Back retained t1. Real closure/refund not tested.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "Regression evidence refreshed without new support feature or backend connection; overall PARTIAL remains.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Entity-specific subject/order/customer/date/status; ticket badge/44px controls",
+      "interaction": "12support handler checks PASS, final-support screenshot. v7 clear-only-on-success and return retained.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP26",
+    "function": "الإلغاء والاسترداد والإرجاع",
+    "status": "PARTIAL",
+    "evidence_and_gap": "تصحيح دقة الجرد: توجد استجابة اصطناعية t1: total126/refunded20/room106. المتصفح اختبر رفض107، وتأكيد10 وإلغاءه ثم رفض المعاينة مع بقاء المسودة. هذا ليس حد استرداد خادمياً ولا استرداداً حقيقياً.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Source refundBox/tkStatus/ticketSetStatus retained; syntheticRefundRooms unchanged; confirmed-success only unit simulated.",
+    "source": "A refundBox/tkStatus/ticketSetStatus",
+    "component": "native/ticket-details.tsx + mutation-service.js",
+    "test_and_result": "ux02-support.log12 PASS; support-published.json. Earlier refund107/10 browser evidence retained, not rerun. Success is simulated, not HTTP.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "تصحيح دقة الجرد: توجد استجابة اصطناعية t1: total126/refunded20/room106. المتصفح اختبر رفض107، وتأكيد10 وإلغاءه ثم رفض المعاينة مع بقاء المسودة. هذا ليس حد استرداد خادمياً ولا استرداداً حقيقياً.",
+      "continuation": "Source refundBox/tkStatus/ticketSetStatus retained; syntheticRefundRooms unchanged; confirmed-success only unit simulated.",
+      "test_and_result": "Handler over-limit/no-send/confirmation/cancel/payload tests PASS; connected local browser same scenarios PASS. Actual refund/backend allowance NOT TESTED."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "V7 support logic preserved; ticket-details.tsx byte-identical. Existing explicit-success semantics retained.",
+      "interaction": "12 support handler checks rerun PASS incl. isolated success/refund/error/closed guards. Published browser reply and decision refused with drafts retained through close/reload/reopen; no auto-open; Back retained t1. Real closure/refund not tested.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "Regression evidence refreshed without new support feature or backend connection; overall PARTIAL remains.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Refund/cancellation contract unchanged; confirmation controls affected",
+      "interaction": "Support/validation/operations simulated checks PASS; backend financial success NOT TESTED.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP27",
+    "function": "التقييمات والجودة",
+    "status": "PARTIAL",
+    "evidence_and_gap": "صححت العناوين والحقول في المواضع القائمة دون هاتف مختلق. نُقلت فلاتر تحتاج متابعة/الكل/المعالجة بتعريف A <=3 وغير معالج؛ وملخصات المتوسطات/الأعداد من المصدر الكامل قبل فلتر العرض. المفقود مستبعد، البديل — والدقة منزلة واحدة. كل بيانات التقييم وتفاصيله والوسوم والطلب المرتبط محفوظة. نجاح الحل ممثل بحقن اختبار فقط؛ الاستجابة والهاتف والنجاح الخادمي غير مثبتة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "No low-alert threshold2 change; no CSS/new UI/new action placement. Reset/close resolution only on explicit ok===true; errors/refusal retain draft. V7 exclusive Reopen/Resolve preserved.",
+    "source": "public/operations-source/admin.html: avg/lowOf/needR/cmtParts/vRatings/ratingBlock/resModal/saveRes (463,474–492)",
+    "component": "native/ratings-data.ts + entity-sections.tsx; existing B SummaryCards/Select/NativeGrid/Card/Badge/NativeForm/MutationAction",
+    "test_and_result": "12 ratings parity +6 generic NativeForm action handlers +4 prior rating SSR PASS; actual B mobile markup checked by SSR only. Browser need1/all11/done6, search/empty/details/order/back/refusal/draft/reload/scroll. Independent synthetic oracle: driver3.0/5, store3.2/5, need3,total8; missing means —.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "صُحح شرط handled_at وفق ratingBlock: المعالج يعرض إعادة الفتح فقط وغير المعالج نموذج الحل فقط، مع بقاء النجوم والتعليق والملاحظة والطلب. فلاتر ومتوسطات القائمة ونجاح إعادة الفتح الفعلي غير مكتملة. عنوان Phone في قائمة التقييمات يعرض التعليق؛ تعارض دلالي قائم موثق، دون تغيير توزيع الأعمدة في هذه الدفعة.",
+      "continuation": "A ratingBlock/resModal/saveRes; existing NativeForm and MutationAction kept in same location. No new component, action or contract.",
+      "test_and_result": "4 original B SSR checks PASS plus published V7: handled ord5 Reopen only/refusal; unhandled ord4 Resolve only/explicit dialog/refusal/draft reload. Ratings list filters/averages and field-heading mapping remain partial."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PASS for requested FP27 source behavior, exercised against A oracle and existing B components. No production transport attached.",
+      "interaction": "PASS scoped logic/SSR and desktop refusal/draft/navigation. Successful close/reset is generic handler simulation with explicit rating opt-in wiring; not a browser successful rating mutation.",
+      "visual": "Desktop screenshots and SSR semantic mobile markup only; no mobile rendering/owner acceptance. Comment/Store headings verified on published version8.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "Source/filter/average/field-heading and requested local journey gaps closed. Overall PARTIAL because responsive, visual acceptance and backend success remain unverified.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "ratings-data unchanged; list shows both available star fields and comment; filter label corrected",
+      "interaction": "12parity+6action+4state+SSR checks PASS; final-ratings; v8 linked-back evidence retained.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP28",
+    "function": "البانرات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "حقول وجدولة مسودة؛ الصور والروابط وتعارض تحديث موظف آخر غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vBanners/vBannerEdit/bannerSave/pickLink",
+    "component": "native/entity-sections.tsx banners + native-form.tsx",
+    "test_and_result": "validation tests; list opened; images/link/conflict journey incomplete",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "حقول وجدولة مسودة؛ الصور والروابط وتعارض تحديث موظف آخر غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "validation tests; list opened; images/link/conflict journey incomplete"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Banner activation read alias, original scheduled/expired semantics; image/position/link/sort",
+      "interaction": "Data/SSR PASS; final-banners. Entire banner CRUD not established.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP29",
+    "function": "العروض والولاء",
+    "status": "PARTIAL",
+    "evidence_and_gap": "نماذج عروض وولاء وساعات؛ بعض التحقق منقول؛ التفاعلات والتعارضات غير مكتملة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vPromos/vLoyalty/lySave/heSave/storeLoy",
+    "component": "native/entity-sections.tsx promotions/loyalty",
+    "test_and_result": "validation/overnight HH contract tests; sections opened; full interaction/conflicts incomplete",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "نماذج عروض وولاء وساعات؛ بعض التحقق منقول؛ التفاعلات والتعارضات غير مكتملة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "validation/overnight HH contract tests; sections opened; full interaction/conflicts incomplete"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Promo actual value/condition fields and status; loyalty actual InfoField summaries",
+      "interaction": "AuditSSR and validation PASS; final-promotions/loyalty; complete campaigns/loyalty backend not proven.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP30",
+    "function": "المالية والإيصالات والمصروفات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "مالية الطلب وتحليلات B موجودة؛ لا ادعاء تقرير إنتاجي أو إيصالات إضافية.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A finBox/settle; B AnalyticsDashboard finances",
+    "component": "native/order-details.tsx + analytics.tsx",
+    "test_and_result": "analytics-data tests; financial source unchanged; no production receipt/accounting inference",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "مالية الطلب وتحليلات B موجودة؛ لا ادعاء تقرير إنتاجي أو إيصالات إضافية.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "analytics-data tests; financial source unchanged; no production receipt/accounting inference"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP31",
+    "function": "التقارير والتحليلات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "مصدرا AnalyticsDashboard وanalytics-data دون تعديل؛ 12 اختبار حسابات وخمسة رسوم ظهرت.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B analytics.tsx/analytics-data.ts complete source",
+    "component": "AnalyticsDashboard + native B SummaryCards adapter",
+    "test_and_result": "12 data tests; browser Today102/sales10494/Monday/area quality; all groups retained, not every hover/drilldown tested",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "مصدرا AnalyticsDashboard وanalytics-data دون تعديل؛ 12 اختبار حسابات وخمسة رسوم ظهرت.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "12 data tests; browser Today102/sales10494/Monday/area quality; all groups retained, not every hover/drilldown tested",
+      "current_batch": "12 data tests; browser Today102/sales10494/Monday/area quality; all groups retained, not every hover/drilldown tested"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Protected sources/assets unchanged; protected-files.json. index.tsx only forwards existing Back callback; no homepage/card/analytics/layout edits.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "Public v8 screenshots at1363x936; source hash protected. Not owner acceptance or requested widths.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP32",
+    "function": "الأدوار والصلاحيات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "حقول الصلاحيات الخمس الأصلية؛ لا إثبات RBAC؛ تحرير/حذف الموظف غير مكتمل.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vStaff/stfSave/stfActive/stfRm",
+    "component": "native/entity-sections.tsx staff + mutation-service.js",
+    "test_and_result": "permission allowlist tests; section opened; edit/delete and backend RBAC NOT VERIFIED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "حقول الصلاحيات الخمس الأصلية؛ لا إثبات RBAC؛ تحرير/حذف الموظف غير مكتمل.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "permission allowlist tests; section opened; edit/delete and backend RBAC NOT VERIFIED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP33",
+    "function": "سجل العمليات والأخطاء",
+    "status": "PARTIAL",
+    "evidence_and_gap": "Original audit/error fields, sorting, cap, empty states, tab and refresh rendered with existing B primitives. Populated render tested in SSR only; real logs/RBAC/network errors not verified.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED",
+    "source": "A loadLog/vLog; core audit/clientErrors",
+    "component": "native/entity-sections.tsx log + log-data.ts + existing B Card/Field/Button",
+    "test_and_result": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "Original audit/error fields, sorting, cap, empty states, tab and refresh rendered with existing B primitives. Populated render tested in SSR only; real logs/RBAC/network errors not verified.",
+      "continuation": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED",
+      "test_and_result": "sort100/cap200/actor/null/truncation/empty/populated SSR PASS; browser empty/error-tab/retry/reload PASS; real backend NOT TESTED"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  },
+  {
+    "id": "FP34",
+    "function": "النصوص والإعدادات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "Language/Appearance باستخدام تركيب SettingsPage الأصلي داخل قسم النصوص الموجود، دون قسم ملاحة جديد. نماذج النصوص محفوظة.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "A vTexts/pgSave/setPage; B SettingsPage",
+    "component": "native/entity-sections.tsx + b-shell/settings.tsx",
+    "test_and_result": "settings opened; existing RU/EN draft contracts; full text error/save journey incomplete",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "Language/Appearance باستخدام تركيب SettingsPage الأصلي داخل قسم النصوص الموجود، دون قسم ملاحة جديد. نماذج النصوص محفوظة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "settings opened; existing RU/EN draft contracts; full text error/save journey incomplete"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "PRIOR EVIDENCE RETAINED; unchanged unless specified below.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Existing fields/contracts preserved; actual text/setting summaries and no empty card",
+      "interaction": "SSR summaries/closed forms PASS; final-texts. Full setting behavior still partial.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP35",
+    "function": "اللغات والوضع الداكن",
+    "status": "PARTIAL",
+    "evidence_and_gap": "EN/RU/TG وLight/Dark رُصدت؛ Auto بقي بعد إعادة التحميل. TG للعمليات يعود RU بإشعار صريح. ليست مصفوفة كل الصفحات.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B settings + context/theme-context.tsx + messages",
+    "component": "native-preview/main.tsx + b-shell/settings.tsx + ThemeProvider",
+    "test_and_result": "browser EN/RU/TG and Light/Dark/Auto; TG operations RU fallback; not full cross-product/screen matrix",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "EN/RU/TG وLight/Dark رُصدت؛ Auto بقي بعد إعادة التحميل. TG للعمليات يعود RU بإشعار صريح. ليست مصفوفة كل الصفحات.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "browser EN/RU/TG and Light/Dark/Auto; TG operations RU fallback; not full cross-product/screen matrix",
+      "current_batch": "browser EN/RU/TG and Light/Dark/Auto; TG operations RU fallback; not full cross-product/screen matrix"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Only Comment/Комментарий dictionary entry added. Existing TG operations RU fallback and full translation gaps retained.",
+      "interaction": "Prior EN/RU/TG and Light/Dark/Auto evidence retained; not rerun. No complete screen/language/theme cross-product claim.",
+      "visual": "NOT ACCEPTED; prior screenshots are evidence only.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Same language/theme infrastructure; labels use existing translation; RU fallback retained",
+      "interaction": "Desktop EN/RU/TG Light/Dark/Auto switching and persistence observed; no full translation/phone certification.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP36",
+    "function": "الألوان والشعار والمكونات",
+    "status": "PARTIAL",
+    "evidence_and_gap": "SummaryCards/OrdersList/Grid وPersonalInformationSection/EditPersonalInfoDialog أنماط B مستخدمة مع محولات بيانات A. لا قبول بصري نهائي؛ 320/390/1440 وSafari غير مثبتة.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "B original shell/primitives/icons; approved orange/logo",
+    "component": "native/b-shell + components/ui + original logo",
+    "test_and_result": "SSR hierarchy + screenshots; dense long-text wrapping remains; no CSS/color edits",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "SummaryCards/OrdersList/Grid وPersonalInformationSection/EditPersonalInfoDialog أنماط B مستخدمة مع محولات بيانات A. لا قبول بصري نهائي؛ 320/390/1440 وSafari غير مثبتة.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "SSR hierarchy + screenshots; dense long-text wrapping remains; no CSS/color edits",
+      "current_batch": "Only two nonvisual source files changed; no CSS/UI composition/asset change. V5/V6 support same-state desktop comparison saved at1363×936. Owner visual acceptance still absent."
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Protected sources/assets unchanged; protected-files.json. index.tsx only forwards existing Back callback; no homepage/card/analytics/layout edits.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "Public v8 screenshots at1363x936; source hash protected. Not owner acceptance or requested widths.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "Original B font,Shell,panel,Grid,Badge,Alert,InfoField,Button/Dialog reused; no CSS changes",
+      "interaction": "Desktop evidence and affected SSR PASS; U08partial,U13/U14partial verification; owner visual acceptance pending.",
+      "visual": "Desktop1363x936 evidence only; NOT OWNER ACCEPTED. See U01-U15 and gallery.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "Overall status retained; source/interaction subcoverage updated only."
+  },
+  {
+    "id": "FP37",
+    "function": "صفحات TailAdmin الإضافية",
+    "status": "VERIFIED SAMPLE",
+    "evidence_and_gap": "الأصول محفوظة خارج مسار التطبيق الأصلي React؛ لا صفحات قالب ضمن ملاحة التشغيل.",
+    "prior_evidence": "docs/ux02/source-conformance/coverage-37.json @ 45ed6a30fa1c63a79eb3dc3b8addb1081451d9e0; prior desktop observations are not new mobile proof",
+    "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+    "source": "Original B template demonstration routes",
+    "component": "preserved src/app reference pages, excluded native sidebar",
+    "test_and_result": "source unchanged; 12-link native sidebar only; source preservation, not all demo pages retested",
+    "previous_checkpoint": "0ccdd955d1b4408fd547838d2e9d8c2622f168ca",
+    "v7_record": {
+      "evidence_and_gap": "الأصول محفوظة خارج مسار التطبيق الأصلي React؛ لا صفحات قالب ضمن ملاحة التشغيل.",
+      "continuation": "Unchanged scope; prior gaps retained. Common logic/data regression logs in docs/ux02/continuation; no blanket interactive PASS.",
+      "test_and_result": "source unchanged; 12-link native sidebar only; source preservation, not all demo pages retested"
+    },
+    "v8_source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "v8_dimensions": {
+      "source_parity": "Protected sources/assets unchanged; protected-files.json. index.tsx only forwards existing Back callback; no homepage/card/analytics/layout edits.",
+      "interaction": "PRIOR SCOPED EVIDENCE RETAINED; no new blanket pass.",
+      "visual": "Public v8 screenshots at1363x936; source hash protected. Not owner acceptance or requested widths.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — viewport setter unavailable in inspected paths.",
+      "backend": "NOT CONNECTED / NOT TESTED — isolated synthetic preview; no RBAC claim."
+    },
+    "v8_change": "No overall status change. Prior gap remains; not rerun solely for documentation.",
+    "current_batch": "See v10_dimensions and v10_change. All v7/v8 fields remain historical evidence.",
+    "v10_source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "v10_dimensions": {
+      "source_parity": "UNCHANGED / PRIOR EVIDENCE RETAINED; no new full parity claim.",
+      "interaction": "Prior scoped evidence retained; no new blanket PASS.",
+      "visual": "Prior evidence retained; NOT OWNER ACCEPTED.",
+      "responsive": "320x844 /390x844 /1440x1000 NOT TESTED — supported viewport setter unavailable. Actual Safari NOT TESTED.",
+      "backend": "NOT CONNECTED / NOT TESTED — synthetic preview; no live writes or RBAC claim."
+    },
+    "v10_change": "No overall status change; inherited gaps retained."
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "measurement": {
+    "fullyVisible": 0,
+    "height": 936,
+    "overflow": 1348,
+    "partiallyVisible": 1,
+    "rows": [
+      {
+        "bottom": 1080.09375,
+        "height": 180.5,
+        "y": 899.59375
+      },
+      {
+        "bottom": 1261.09375,
+        "height": 181,
+        "y": 1080.09375
+      },
+      {
+        "bottom": 1442.09375,
+        "height": 181,
+        "y": 1261.09375
+      },
+      {
+        "bottom": 1623.09375,
+        "height": 181,
+        "y": 1442.09375
+      },
+      {
+        "bottom": 1804.09375,
+        "height": 181,
+        "y": 1623.09375
+      },
+      {
+        "bottom": 1985.09375,
+        "height": 181,
+        "y": 1804.09375
+      },
+      {
+        "bottom": 2165.59375,
+        "height": 180.5,
+        "y": 1985.09375
+      }
+    ],
+    "scrollY": 0,
+    "width": 1363
+  },
+  "checked": [
+    "drivers all/on/off; online empty result; name search",
+    "driver detail identity/cash warning; draft1100 retained after refused Save/Close/reopen/reload; no auto dialog",
+    "driver list query Водитель and Offline retained after Back/reload",
+    "support,banner,promo,rating,customer,store headings and columns; no open dialog; no page overflow",
+    "EN/RU/TG switching; Dark/Auto/Light; TG+Auto persist after reload; documented RU fallback",
+    "light Save #404040 on white; dark #d4d4d4 on #262626; Save/Close/X settled44px",
+    "order phone900000009=0; ord4+Delivered=1; linked identity identical; reload/back retained; Reset=7"
+  ],
+  "notTested": [
+    "320x844",
+    "390x844",
+    "1440x1000",
+    "actual Safari",
+    "backend/RBAC",
+    "complete network request log"
+  ]
+}

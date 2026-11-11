@@ -1,0 +1,26 @@
+{
+  "background": "rgb(255, 255, 255)",
+  "buttons": [
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(64, 64, 64)",
+      "h": 44,
+      "label": "Close",
+      "w": 44
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(64, 64, 64)",
+      "h": 44,
+      "label": "Close",
+      "w": 76.203125
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(64, 64, 64)",
+      "h": 44,
+      "label": "Save",
+      "w": 72.21875
+    }
+  ]
+}

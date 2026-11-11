@@ -1,0 +1,24 @@
+{
+  "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+  "version_number": 10,
+  "version_id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_b9280807e3e4819180c66a6a3736af5d",
+  "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+  "implementation_commits": [
+    "e29297889fa7758815f7a07812842b29da26b893",
+    "5a30d82d18b3c74726360e901711c14f8e3bed51"
+  ],
+  "artifact_commit": "df66fffb0a6b31bbb343877b311c10f61993af00",
+  "deployment_id": "appgdep_6af41f620aa88191aa45ee9798c88108",
+  "status": "succeeded",
+  "updated_at": "2026-11-11T07:55:27.669131+00:00",
+  "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site",
+  "archive_sha256": "4ab69d9887d4486409f2b71fa36d401d85c6e77f3e5960c3e3aaf785c1b20940",
+  "public_source_manifest_matches": true,
+  "prior_v9": {
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "artifact_commit": "43a497d17c822f5ef12e82883fbe39c2e5de3568",
+    "version_id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_01e591e46cf081918f9c1fb85cf826c5"
+  },
+  "access_changed": false,
+  "D2_config_used": false
+}

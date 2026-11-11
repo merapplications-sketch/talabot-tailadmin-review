@@ -1,0 +1,542 @@
+[
+  {
+    "path": "after-edit-dark.jpg",
+    "phase": "local correction candidate",
+    "source_commit": null,
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "c43a5558cf5bbadf24652dcd45766035915683b331c8fb1c83f8c2408fa5ce8b",
+    "note": "Local captures support observations; not independently commit-pinned at capture."
+  },
+  {
+    "path": "after-edit-light.jpg",
+    "phase": "local correction candidate",
+    "source_commit": null,
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "ad37c4bdda2e4e44badca18cef0a545e56c94c999492e8deaca3d823119d7d67",
+    "note": "Local captures support observations; not independently commit-pinned at capture."
+  },
+  {
+    "path": "after-order-details.jpg",
+    "phase": "local correction candidate",
+    "source_commit": null,
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "6f550f5cf7e18fc13bfa2edb4768acf31c24eae5b32d6f3e288a4f8c9e43aedf",
+    "note": "Local captures support observations; not independently commit-pinned at capture."
+  },
+  {
+    "path": "after-tg-auto.jpg",
+    "phase": "local correction candidate",
+    "source_commit": null,
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "87a2290e451c1a3bc84bbb4e6e9a869cd79f3e8f4a9421186c1da23db1bf5a2d",
+    "note": "Local captures support observations; not independently commit-pinned at capture."
+  },
+  {
+    "path": "screenshots/before-banners.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "5fe5af9e970aa9b21a76d627b30e5dc8f14e26d1df05b84bb41a6c5d14d4290b",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-drivers.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "dad7cc57c50721560c16cfd9715c03d89479663739277e89bb2c5e1a24153aa6",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-home.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "4a5109f87685cfbd7cb0121e8a982299922b4fe1a41c0d4393e0eaa9dd9dd618",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-loyalty.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "c4020c07fc205077c792e70fac75df59fef80ef15962bffd5da61228df9425b3",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-promotions.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "7beb858ec19f4a2dbe2c380fb01e52ec6af358933840a01d8067c4b13d961467",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-support.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "870968087b65f35a52008b9b2919b09f9660a94746dccd2fb17e538db7fddbcd",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/before-texts.jpg",
+    "phase": "v8 before",
+    "source_commit": "604b4df7a947b5bff9664b9c6b99d13110b4f77e",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "7c298b460c2ced9a2cb4d67f895859ccab22f97a47457260ee7b555d6e2378ca",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-banners.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "d05f29568a15199e8508414863f4b9df7bbfba4a540dd8991f2adf8b6ab9369b",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-customers.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "40710703bc51149fc8535a26ccb1f7ed71cd7a607882ec7aee1e2e200ce6bf95",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-drivers.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "280efe9dc089ebe617bbf1df1051725bf33562a4a998f76cb590a52f67242f40",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-edit.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "31c818f09b0c9bc32ad6e4c385731d7ea83255b0cb9b32f4ae6a80104c4a0d8e",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-home.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "23db995eb72f70fda3d406de17e5013805565b6f7d0b5451e328873fda517add",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-loyalty.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "9d6a3a4f2546200bbcb5c9093e7c975e7e5111993302ac8092007c89fed4237e",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-order-details.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "3faff465166f0e004c4c301bb2c40852231d4ba980c606aa36d10aa010d3f60c",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-promotions.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "01a219d3cbdab10fac2a72ac1eaed85deb25e7b52294a8574414a3b27ae70914",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-ratings.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "da473f7d9f39d226270240e505daff9f9f9d3b744f77b28454a6a99c922f217e",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-stores.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "5a5849114fd1133bdba82885e58bf0eeacd9eb67c46a9df794c55a6d1718660e",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-support.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "75169c5028ec8b8de1ba0792afc8a838b46a5589d9ed509912a5b5f6dcece362",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/final-texts.jpg",
+    "phase": "v10 published",
+    "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "6f0c7e833aa108bf815175f44aa5a5e66c984ebb65d6dfc0e644d66c32f8b7a4",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-banners.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "79b948d9b2c1aefd6a2edceed69335596c0a56870ca489fdf5ec18d8e8844a85",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-confirm.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "1534eb3737a74e81e9712d9766cc234708dc8c5367e174cdad6c5e16be84be0e",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-customers.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "93187a0a94faa362d2eec397635c2ce9e5d94029da363e9c413cdcf6d5aae93f",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-driver-details.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "9908f8abaa15f3f4130418f692c79310b1077a95b614791428a6ce0fa0d8ecff",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-drivers.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "675c9c972bad7082e8158040bfac225c580f706f1aeaac0381f1a0f4bc98dda9",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-edit.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "71b049b23578574d7ce5650e4ee7bb2e0b78a041732ca9b7a145a6fa4d01e702",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-home.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "10c63428eda495833dd8d0919a31aa54d4f748003f0abe33fdefb074cfbd66ac",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-loyalty.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "b6a11351131a8084a064d7cb505a62984a43496e005cd763c128c0959c590807",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-promotions.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "ca02e906598334c040d52a04177676cb2573b315c8373711b463cdfbc5105c37",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-ratings.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "455b7b9d34edd21199ed5ea2d80b4b1acce46cf0f01582142d8a79f0419999bb",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-stores.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1348,
+      926
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "3ab1a6337d8428b3ace7f3f427e9302ba274dd1ad08a5360f96116cdf3094ccf",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-support.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "e87835b3d00f59005224b5df8305fb13705814618bd58a65b56eba076baf1355",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  },
+  {
+    "path": "screenshots/published-texts.jpg",
+    "phase": "v9 published",
+    "source_commit": "e29297889fa7758815f7a07812842b29da26b893",
+    "image_dimensions": [
+      1363,
+      936
+    ],
+    "actual_viewport": [
+      1363,
+      936
+    ],
+    "sha256": "f72585bcddf1be3ceb6fa49d00cf2c2029cce5043efefb115bad01ce131e3019",
+    "note": "Actual desktop screenshot; not mobile/Safari evidence."
+  }
+]

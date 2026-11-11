@@ -1,0 +1,34 @@
+{
+  "deployment": {
+    "id": "appgdep_6af439934a348191bd4a4a8cbbd5da73",
+    "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+    "title": "TALABOT UX-02 — Native B / Partial Review",
+    "version_id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_92a713635f508191b6dde8289bbe1b93",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6af33addc50481918ebbc6ca01125d15",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-11T09:47:13.467129+00:00"
+  },
+  "version": {
+    "id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_92a713635f508191b6dde8289bbe1b93",
+    "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+    "version_number": 11,
+    "source": {
+      "commit_sha": "b226dd42d20bc50cb3a58aba6a887d91b09afc55"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000005b48824689fb07f62046c33d",
+      "content_hash": "sha256:1753d1710885b581d2e332078645265c085bbd8d0dfedcddea3e022bba96b948",
+      "size_bytes": 2201600,
+      "file_count": 9
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  }
+}

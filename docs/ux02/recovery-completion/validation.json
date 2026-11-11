@@ -1,0 +1,31 @@
+{
+  "source": "48592032e774a965c33e0e7c00dce4c9ecb3f94f",
+  "fresh_checks": {
+    "build": "PASS, existing >500k chunk warning",
+    "typescript": "PASS",
+    "affected_lint": "PASS,0 errors0 warnings",
+    "composition": 8,
+    "list_journeys": 10
+  },
+  "harness_change": "Exact class-order string assertion replaced by equivalent class-token check after Prettier reordering; added one-h1/result-count preservation assertions. No behavior assertions removed.",
+  "browser_checks": [
+    "search ord4 + Delivered =1",
+    "details/back and reload preserve q/status/result",
+    "reset restores7",
+    "secondary status selection =1",
+    "EN Light/RU Dark/TG Dark first complete row",
+    "no horizontal overflow at1363x936",
+    "Outfit loaded/check true/no Outfit errors",
+    "details touch target44x44 desktop"
+  ],
+  "retained_checks": "v10 logs recovered,120 prior distinct checks retained; not freshly rerun",
+  "not_tested": [
+    "320x844",
+    "390x844",
+    "1440x1000",
+    "actual Safari",
+    "mobile keyboard/safe-area",
+    "all hover/focus color states",
+    "backend writes/RBAC"
+  ]
+}

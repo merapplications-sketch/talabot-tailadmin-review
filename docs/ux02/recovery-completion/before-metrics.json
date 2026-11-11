@@ -1,0 +1,157 @@
+{
+  "bodyFont": "Outfit, sans-serif",
+  "fonts": "loaded",
+  "outfitCheck": true,
+  "rows": [
+    {
+      "bottom": 1080.09375,
+      "height": 180.5,
+      "y": 899.59375
+    },
+    {
+      "bottom": 1261.09375,
+      "height": 181,
+      "y": 1080.09375
+    },
+    {
+      "bottom": 1442.09375,
+      "height": 181,
+      "y": 1261.09375
+    },
+    {
+      "bottom": 1623.09375,
+      "height": 181,
+      "y": 1442.09375
+    },
+    {
+      "bottom": 1804.09375,
+      "height": 181,
+      "y": 1623.09375
+    },
+    {
+      "bottom": 1985.09375,
+      "height": 181,
+      "y": 1804.09375
+    },
+    {
+      "bottom": 2165.59375,
+      "height": 180.5,
+      "y": 1985.09375
+    }
+  ],
+  "scrollY": 0,
+  "sections": [
+    {
+      "bottom": 6881.0625,
+      "class": "relative flex min-w-0 w-full flex-1 flex-col transition-all duration-300 ease-in-out xl:peer-data-[variant=inset]:m-2 xl:peer-data-[variant=inset]:ms-0 xl:peer-data-[variant=inset]:rounded-xl xl:peer-data-[variant=inset]:shadow-sm xl:peer-data-[variant=inset]:peer-data-[state=collapsed]:ms-2",
+      "height": 6881.0625,
+      "tag": "MAIN",
+      "width": 1058,
+      "x": 290,
+      "y": 0
+    },
+    {
+      "bottom": 77,
+      "class": "sticky top-0 z-50 flex w-full shrink-0 border-gray-200 bg-white xl:border-b dark:border-gray-800 dark:bg-gray-900",
+      "height": 77,
+      "tag": "HEADER",
+      "width": 1058,
+      "x": 290,
+      "y": 0
+    },
+    {
+      "bottom": 6881.0625,
+      "class": "mx-auto w-full max-w-(--breakpoint-2xl) p-4 md:p-6",
+      "height": 6804.0625,
+      "tag": "DIV",
+      "width": 1058,
+      "x": 290,
+      "y": 77
+    },
+    {
+      "bottom": 2234.59375,
+      "class": "space-y-4 text-gray-800 dark:text-gray-200",
+      "height": 1790,
+      "tag": "DIV",
+      "width": 1010,
+      "x": 314,
+      "y": 444.59375
+    },
+    {
+      "bottom": 507.59375,
+      "class": "",
+      "height": 63,
+      "tag": "DIV",
+      "width": 1010,
+      "x": 314,
+      "y": 444.59375
+    },
+    {
+      "bottom": 801.59375,
+      "class": "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3",
+      "height": 278,
+      "tag": "SECTION",
+      "width": 1010,
+      "x": 314,
+      "y": 523.59375
+    },
+    {
+      "bottom": 676.59375,
+      "class": "tp-quick",
+      "height": 44,
+      "tag": "DIV",
+      "width": 976,
+      "x": 331,
+      "y": 632.59375
+    },
+    {
+      "bottom": 732.59375,
+      "class": "tp-secondary-filters mt-3",
+      "height": 44,
+      "tag": "DETAILS",
+      "width": 976,
+      "x": 331,
+      "y": 688.59375
+    },
+    {
+      "bottom": 2166.59375,
+      "class": "hidden overflow-x-auto rounded-2xl border border-gray-200 bg-white xl:block dark:border-gray-800 dark:bg-white/3",
+      "height": 1349,
+      "tag": "DIV",
+      "width": 1010,
+      "x": 314,
+      "y": 817.59375
+    },
+    {
+      "bottom": 0,
+      "class": "grid gap-4 md:grid-cols-2 xl:hidden",
+      "height": 0,
+      "tag": "DIV",
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "bottom": 2202.59375,
+      "class": "text-sm text-gray-500 dark:text-gray-400",
+      "height": 20,
+      "tag": "P",
+      "width": 1010,
+      "x": 314,
+      "y": 2182.59375
+    },
+    {
+      "bottom": 2234.59375,
+      "class": "text-xs text-gray-500",
+      "height": 16,
+      "tag": "P",
+      "width": 1010,
+      "x": 314,
+      "y": 2218.59375
+    }
+  ],
+  "viewport": {
+    "height": 936,
+    "width": 1363
+  }
+}

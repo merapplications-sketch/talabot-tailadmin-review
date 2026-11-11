@@ -1,0 +1,80 @@
+[
+  {
+    "path": "src/components/talabot/native/fixture.json",
+    "unchanged": true,
+    "sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/ratings-data.ts",
+    "unchanged": true,
+    "sha256": "fb1914f689de9dba2b9c1f5fe26daa7447fd1e051f34e2e61a0295a2f4d0d0f5",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/navigation.ts",
+    "unchanged": true,
+    "sha256": "47d90475ed30db1400adffab542785d7944afbda6c788e663a694852293da0a8",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/mutation-service.js",
+    "unchanged": true,
+    "sha256": "7bb10e4f3a405d5b3162048c93861faa9aa6210e441eb063550170d0b6b44250",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/form-contracts.ts",
+    "unchanged": true,
+    "sha256": "3e487652531ccec8791d67d822955d9ccccefaba1e6fd98b602e2b7658666759",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/validation.ts",
+    "unchanged": true,
+    "sha256": "0a09f1053bc489b02eb87715f92c0b3ad3ca471ac0dea72b1a3d4b23bf5099df",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/fields.ts",
+    "unchanged": true,
+    "sha256": "346a18f7909cc02474623fc915087ab6630185cfa2deb227339f664ccd9ded38",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "unchanged": true,
+    "sha256": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "unchanged": true,
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/integrated-review/polish.css",
+    "unchanged": true,
+    "sha256": "982cb73ab5caa3cf9e3e07697e7654cc8e51e7027cea08a8510b263f49d59dae",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/components/talabot/native/b-shell/summary-cards.tsx",
+    "unchanged": true,
+    "sha256": "32a204adff7af42195134adbf4022b9f47ea6852547d8b5960866433fbbef76c",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "src/app/globals.css",
+    "unchanged": true,
+    "sha256": "53bbe92f3abc48d1ba933c4ed15a04030eb9231ba4ef407b04dcf419c81f67c5",
+    "matches_recovered_v10": true
+  },
+  {
+    "path": "package-lock.json",
+    "unchanged": true,
+    "sha256": "7909efd89b29612783ae42bd51c7e3b5cd9f99b624928db9fbf0b50fc65c287e",
+    "matches_recovered_v10": true
+  }
+]

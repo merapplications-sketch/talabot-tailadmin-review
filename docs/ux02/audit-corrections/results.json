@@ -1,0 +1,105 @@
+{
+  "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+  "base_source_for_full_regression": "e29297889fa7758815f7a07812842b29da26b893",
+  "final_delta": "existing status Select visible-label wrappers in support/ratings/stores only; affected SSR+rating-parity rerun",
+  "checks": [
+    {
+      "group": "domain",
+      "unique_passed": 22,
+      "log": "ux02-native.log"
+    },
+    {
+      "group": "operations",
+      "unique_passed": 17,
+      "log": "ux02-native-operations.log"
+    },
+    {
+      "group": "validation",
+      "unique_passed": 14,
+      "log": "ux02-native-validation.log"
+    },
+    {
+      "group": "support",
+      "unique_passed": 12,
+      "log": "ux02-support.log"
+    },
+    {
+      "group": "rating action",
+      "unique_passed": 6,
+      "log": "ux02-rating-actions.log"
+    },
+    {
+      "group": "rating state",
+      "unique_passed": 4,
+      "log": "ux02-ratings.log"
+    },
+    {
+      "group": "rating parity",
+      "unique_passed": 12,
+      "log": "ux02-ratings-parity.log"
+    },
+    {
+      "group": "list journeys",
+      "unique_passed": 10,
+      "log": "ux02-list-journeys.log"
+    },
+    {
+      "group": "shared B composition SSR",
+      "unique_passed": 8,
+      "log": "ssr.log"
+    },
+    {
+      "group": "audit data",
+      "unique_passed": 8,
+      "log": "adapters.log"
+    },
+    {
+      "group": "audit SSR",
+      "unique_passed": 7,
+      "log": "ssr.log"
+    }
+  ],
+  "total_unique_passed": 120,
+  "deduplication": "Shared composition8 counted once across scripts. Final rerun not new unique checks.",
+  "build": {
+    "status": "PASS",
+    "command": "npm run build:native",
+    "log": "build.log",
+    "warning": "existing chunk >500KB"
+  },
+  "typescript": {
+    "status": "PASS",
+    "command": "./node_modules/.bin/tsc --noEmit --incremental false",
+    "exit_code": 0,
+    "log": "typescript.log"
+  },
+  "lint": {
+    "status": "PASS with existing warnings",
+    "errors": 0,
+    "warnings": 47,
+    "log": "lint.log",
+    "rules_changed": false
+  },
+  "browser": {
+    "actual_viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "engine": "connected Chromium/CDP, not actual Safari",
+    "requested_viewports": {
+      "320x844": "NOT TESTED",
+      "390x844": "NOT TESTED",
+      "1440x1000": "NOT TESTED"
+    },
+    "missing_capability": "No authorized viewport setter in available browser API; prior TinyFish capability result has no setter/verified sizes; existing safe CI build job has no browser runner. No prohibited socket/DevTools/zoom repeated.",
+    "network": "No complete request log; no all-requests PASS",
+    "evidence": "local-browser-observations.json, screenshots/*metrics.json, screenshots/*sections.json"
+  },
+  "function37_counts": {
+    "VERIFIED SAMPLE": 4,
+    "PARTIAL": 32,
+    "NOT COMPLETE": 1
+  },
+  "success_scope": "logic/SSR/isolated handler simulations/limited desktop UI only; no HTTP or backend RBAC",
+  "U08": "PARTIAL; 74px earlier but zero fully visible records"
+}

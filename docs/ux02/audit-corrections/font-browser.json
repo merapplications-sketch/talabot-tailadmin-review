@@ -1,0 +1,14 @@
+{
+  "source_commit": "5a30d82d18b3c74726360e901711c14f8e3bed51",
+  "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders",
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "bodyFont": "Outfit, sans-serif",
+  "headingFont": "Outfit, sans-serif",
+  "fontState": "loaded",
+  "outfitCheck": true,
+  "outfit_error_logs": [],
+  "limit": "Browser read-only evaluator did not expose a usable FontFaceSet iterator: values() not a function, Array.from yielded[]. These values are not a complete font network/face enumeration proof."
+}

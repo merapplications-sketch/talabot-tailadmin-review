@@ -1,0 +1,13 @@
+PASS confirmed resolved success clears decision draft and returns to support list
+PASS preview refusal keeps decision draft and current ticket
+PASS closed ticket offers only reopening, no reply or new decision
+PASS short rejection note never reaches mutation
+PASS refund above available synthetic room never reaches mutation
+PASS refund requires explicit confirmation; cancel keeps draft and sends nothing
+PASS rejected success clears draft and returns; non-refund argument is null
+PASS thrown error preserves draft and releases pending state
+PASS reply form clears stored body only after explicit success
+PASS reply error keeps stored body and shows refusal
+PASS non-reply form draft remains unchanged after success
+PASS support reply opts into success clearing without changing other forms
+12 handler checks passed; 0 failed. No backend success, browser or mobile claim.

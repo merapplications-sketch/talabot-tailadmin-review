@@ -1,0 +1,176 @@
+[
+  {
+    "section": "drivers",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Couriers"
+      ],
+      "headers": [
+        "Name",
+        "Status",
+        "Phone",
+        "seen",
+        "Cash on hand",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\" [active]:\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Couriers\" [level=1]\n  - text: Search\n  - searchbox \"Search\"\n  - text: Status\n  - combobox \"Status\":\n    - generic: All · 1\n  - textbox: all\n  - table:\n    - rowgroup:\n      - row \"Name Status Phone seen Cash on hand View details\":\n        - columnheader \"Name\"\n        - columnheader \"Status\"\n        - columnheader \"Phone\"\n        - columnheader \"seen\"\n        - columnheader \"Cash on hand\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"Водитель Водитель Waiting for confirmation offline +992900000009 — 1250 / 1000 TJS Cash limit exceeded View details Водитель\":\n        - cell \"Водитель Водитель\":\n          - img \"Водитель\":\n            - generic: В\n          - generic: Водитель\n        - cell \"Waiting for confirmation offline\":\n          - generic: Waiting for confirmation\n          - generic: offline\n        - cell \"+992900000009\"\n        - cell \"—\"\n        - cell \"1250 / 1000 TJS Cash limit exceeded\":\n          - text: 1250 / 1000 TJS\n          - generic: Cash limit exceeded\n        - cell \"View details Водитель\":\n          - button \"View details Водитель\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "support",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Support"
+      ],
+      "headers": [
+        "Subject",
+        "Status",
+        "Order",
+        "Customer",
+        "Date",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\" [active]:\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Support\" [level=1]\n  - text: Search\n  - searchbox \"Search\"\n  - combobox \"Status\":\n    - generic: All\n  - textbox: all\n  - heading \"Support contacts\" [level=2]\n  - button \"Edit Support contacts\":\n  - table:\n    - rowgroup:\n      - row \"Subject Status Order Customer Date View details\":\n        - columnheader \"Subject\"\n        - columnheader \"Status\"\n        - columnheader \"Order\"\n        - columnheader \"Customer\"\n        - columnheader \"Date\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"Не приехал заказ Open ord1 Муаммад ибни Абдуллоҳ аз Душанбе Nov 10, 2026, 16:40 View details Не приехал заказ\":\n        - cell \"Не приехал заказ\":\n          - generic: Не приехал заказ\n        - cell \"Open\":\n          - generic: Open\n        - cell \"ord1\"\n        - cell \"Муаммад ибни Абдуллоҳ аз Душанбе\"\n        - cell \"Nov 10, 2026, 16:40\"\n        - cell \"View details Не приехал заказ\":\n          - button \"View details Не приехал заказ\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "banners",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Banners"
+      ],
+      "headers": [
+        "Banner title",
+        "Status",
+        "Placement",
+        "Link",
+        "Display order (0 = first, then 1, 2…)",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\" [active]:\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Banners\" [level=1]\n  - text: Search\n  - searchbox \"Search\"\n  - button \"Add banner\"\n  - table:\n    - rowgroup:\n      - row \"Banner title Status Placement Link Display order (0 = first, then 1, 2…) View details\":\n        - columnheader \"Banner title\"\n        - columnheader \"Status\"\n        - columnheader \"Placement\"\n        - columnheader \"Link\"\n        - columnheader \"Display order (0 = first, then 1, 2…)\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"Скидка 20% на всё Скидка 20% на всё Live now Top of home (carousel) store · s1 1 View details Скидка 20% на всё\":\n        - cell \"Скидка 20% на всё Скидка 20% на всё\":\n          - img \"Скидка 20% на всё\":\n            - generic: С2\n          - generic: Скидка 20% на всё\n        - cell \"Live now\":\n          - generic: Live now\n        - cell \"Top of home (carousel)\"\n        - cell \"store · s1\"\n        - cell \"1\"\n        - cell \"View details Скидка 20% на всё\":\n          - button \"View details Скидка 20% на всё\":\n      - row \"Бесплатная доставка Бесплатная доставка Live now Bottom of home (paid ad, full width) No link 2 View details Бесплатная доставка\":\n        - cell \"Бесплатная доставка Бесплатная доставка\":\n          - img \"Бесплатная доставка\":\n            - generic: Бд\n          - generic: Бесплатная доставка\n        - cell \"Live now\":\n          - generic: Live now\n        - cell \"Bottom of home (paid ad, full width)\"\n        - cell \"No link\"\n        - cell \"2\"\n        - cell \"View details Бесплатная доставка\":\n          - button \"View details Бесплатная доставка\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "promotions",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Promo codes"
+      ],
+      "headers": [
+        "Code (letters, digits, 3–20)",
+        "Status",
+        "Value",
+        "Min. order, TJS",
+        "Max. total uses (empty = unlimited)",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\" [active]:\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Promo codes\" [level=1]\n  - text: Search\n  - searchbox \"Search\"\n  - button \"Add promo code\"\n  - table:\n    - rowgroup:\n      - row \"Code (letters, digits, 3–20) Status Value Min. order, TJS Max. total uses (empty = unlimited) View details\":\n        - columnheader \"Code (letters, digits, 3–20)\"\n        - columnheader \"Status\"\n        - columnheader \"Value\"\n        - columnheader \"Min. order, TJS\"\n        - columnheader \"Max. total uses (empty = unlimited)\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"WELCOME10 Live now 10% 50 100 View details WELCOME10\":\n        - cell \"WELCOME10\":\n          - generic: WELCOME10\n        - cell \"Live now\":\n          - generic: Live now\n        - cell \"10%\"\n        - cell \"50\"\n        - cell \"100\"\n        - cell \"View details WELCOME10\":\n          - button \"View details WELCOME10\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "loyalty",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Loyalty"
+      ],
+      "headers": [],
+      "height": 936,
+      "overflow": 1348,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\" [active]:\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Loyalty\" [level=1]\n  - heading \"Loyalty\" [level=2]\n  - button \"Edit Loyalty\":\n  - paragraph: Points per 1 TJS\n  - paragraph: \"10\"\n  - paragraph: How many points = 1 TJS when paying\n  - paragraph: \"1000\"\n  - paragraph: Voucher size, points (used only as whole vouchers)\n  - paragraph: \"1000\"\n  - paragraph: Minimum points to use\n  - paragraph: \"1000\"\n  - paragraph: Minimum dishes amount to use points, TJS\n  - paragraph: \"30\"\n  - paragraph: Points valid for, days\n  - paragraph: \"90\"\n  - paragraph: Points for rating an order\n  - paragraph: \"10\"\n  - paragraph: Cashback to the wallet, % (0 = off)\n  - paragraph: \"0\"\n  - heading \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\" [level=2]\n  - button \"Edit Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n  - paragraph: Minimum dishes amount to use points, TJS\n  - paragraph: —\n  - paragraph: Cashback, %\n  - paragraph: —\n  - paragraph: Points per 1 TJS\n  - paragraph: \"20\"\n  - paragraph: Free delivery from, TJS\n  - paragraph: \"150\"\n  - heading \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\" [level=2]\n  - button \"Edit Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n  - paragraph: Minimum dishes amount to use points, TJS\n  - paragraph: —\n  - paragraph: Cashback, %\n  - paragraph: —\n  - paragraph: Points per 1 TJS\n  - paragraph: —\n  - paragraph: Free delivery from, TJS\n  - paragraph: —\n  - heading \"Аптека\" [level=2]\n  - button \"Edit Аптека\":\n  - paragraph: Minimum dishes amount to use points, TJS\n  - paragraph: —\n  - paragraph: Cashback, %\n  - paragraph: —\n  - paragraph: Points per 1 TJS\n  - paragraph: —\n  - paragraph: Free delivery from, TJS\n  - paragraph: —\n  - heading \"Gul\" [level=2]\n  - button \"Edit Gul\":\n  - paragraph: Minimum dishes amount to use points, TJS\n  - paragraph: —\n  - paragraph: Cashback, %\n  - paragraph: —\n  - paragraph: Points per 1 TJS\n  - paragraph: —\n  - paragraph: Free delivery from, TJS\n  - paragraph: —\n  - heading \"Add\" [level=2]\n  - button \"Edit Add\":\n  - heading \"Счастливые часы обеда для всех\" [level=2]\n  - button \"Edit Счастливые часы обеда для всех\":\n  - paragraph: Store discount, %\n  - paragraph: 25%\n  - paragraph: Show from\n  - paragraph: 00:00\n  - paragraph: Show until\n  - paragraph: 23:59\n  - paragraph: Active\n  - paragraph: Active\n  - heading \"Ночь\" [level=2]\n  - button \"Edit Ночь\":\n  - paragraph: Store discount, %\n  - paragraph: 30%\n  - paragraph: Show from\n  - paragraph: 22:00\n  - paragraph: Show until\n  - paragraph: 02:00\n  - paragraph: Active\n  - paragraph: Disabled\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "texts",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Texts"
+      ],
+      "headers": [],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\" [active]:\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Texts\" [level=1]\n  - text: Language\n  - combobox \"Language\":\n    - option \"English\" [selected]\n    - option \"Русский\"\n    - option \"Тоҷикӣ\"\n  - text: Appearance\n  - combobox \"Appearance\":\n    - option \"Light\" [selected]\n    - option \"Dark\"\n    - option \"System\"\n  - heading \"About the app\" [level=2]\n  - button \"Edit About the app\":\n  - paragraph: Русский\n  - paragraph: Талабот — сервис доставки еды и товаров в Душанбе. (демо-текст)\n  - paragraph: English\n  - paragraph: Talabot is a food and goods delivery service in Dushanbe. (demo text)\n  - heading \"Privacy\" [level=2]\n  - button \"Edit Privacy\":\n  - paragraph: Русский\n  - paragraph: Мы храним только данные, нужные для доставки заказа. (демо-текст)\n  - paragraph: English\n  - paragraph: We keep only the data needed to deliver an order. (demo text)\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "ratings",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Ratings"
+      ],
+      "headers": [
+        "Order",
+        "Status",
+        "Comment",
+        "Store",
+        "Restaurant",
+        "Courier",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\" [active]:\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Ratings\" [level=1]\n  - generic: Couriers · 11 ratings\n  - generic: 3.6 ★\n  - generic: Stores · 11 ratings\n  - generic: 3.5 ★\n  - generic: Need attention\n  - generic: \"1\"\n  - generic: ratings\n  - generic: \"11\"\n  - text: Search\n  - searchbox \"Search\"\n  - combobox \"Status\":\n    - generic: Need attention · 1\n  - textbox: need\n  - table:\n    - rowgroup:\n      - row \"Order Status Comment Store Restaurant Courier View details\":\n        - columnheader \"Order\"\n        - columnheader \"Status\"\n        - columnheader \"Comment\"\n        - columnheader \"Store\"\n        - columnheader \"Restaurant\"\n        - columnheader \"Courier\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"ord4 Nov 10, 2026, 15:16 Needs attention no comment Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) 3 ★ 4 ★ View details ord4\":\n        - cell \"ord4 Nov 10, 2026, 15:16\":\n          - text: ord4\n          - generic: Nov 10, 2026, 15:16\n        - cell \"Needs attention\":\n          - generic: Needs attention\n        - cell \"no comment\"\n        - cell \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\"\n        - cell \"3 ★\"\n        - cell \"4 ★\"\n        - cell \"View details ord4\":\n          - button \"View details ord4\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "customers",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Customers"
+      ],
+      "headers": [
+        "Name",
+        "Status",
+        "Phone",
+        "Email",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1363,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\":\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\" [active]:\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Customers\" [level=1]\n  - text: \"Search: name, phone or email\"\n  - 'searchbox \"Search: name, phone or email\"'\n  - table:\n    - rowgroup:\n      - row \"Name Status Phone Email View details\":\n        - columnheader \"Name\"\n        - columnheader \"Status\"\n        - columnheader \"Phone\"\n        - columnheader \"Email\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"Клиент Клиент — +992900000008 c@test.com View details Клиент\":\n        - cell \"Клиент Клиент\":\n          - img \"Клиент\":\n            - generic: К\n          - generic: Клиент\n        - cell \"—\":\n          - generic: —\n        - cell \"+992900000008\"\n        - cell \"c@test.com\"\n        - cell \"View details Клиент\":\n          - button \"View details Клиент\":\n      - row \"Демо-клиент · 62 заказа Демо-клиент · 62 заказа — +992900000062 demo62@test.com View details Демо-клиент · 62 заказа\":\n        - cell \"Демо-клиент · 62 заказа Демо-клиент · 62 заказа\":\n          - img \"Демо-клиент · 62 заказа\":\n            - generic: Д·\n          - generic: Демо-клиент · 62 заказа\n        - cell \"—\":\n          - generic: —\n        - cell \"+992900000062\"\n        - cell \"demo62@test.com\"\n        - cell \"View details Демо-клиент · 62 заказа\":\n          - button \"View details Демо-клиент · 62 заказа\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  },
+  {
+    "section": "stores",
+    "measure": {
+      "dialogs": 0,
+      "h1": [
+        "Stores"
+      ],
+      "headers": [
+        "Name",
+        "Status",
+        "Phone",
+        "Address",
+        "View details"
+      ],
+      "height": 936,
+      "overflow": 1348,
+      "width": 1363
+    },
+    "snapshot": "- link \"TALABOT\":\n  - /url: \"?section=orders\"\n  - img \"TALABOT\"\n- navigation:\n  - generic: Operations\n  - list:\n    - link \"Orders\":\n      - /url: \"?section=orders\"\n      - generic: Orders\n    - link \"Stores\" [active]:\n      - /url: \"?section=restaurants\"\n      - generic: Stores\n    - link \"Couriers\":\n      - /url: \"?section=drivers\"\n      - generic: Couriers\n    - link \"Customers\":\n      - /url: \"?section=customers\"\n      - generic: Customers\n    - link \"Support\":\n      - /url: \"?section=support\"\n      - generic: Support\n    - link \"Texts / Settings\":\n      - /url: \"?section=texts\"\n      - generic: Texts / Settings\n    - link \"Ratings\":\n      - /url: \"?section=ratings\"\n      - generic: Ratings\n    - link \"Banners\":\n      - /url: \"?section=banners\"\n      - generic: Banners\n    - link \"Promo codes\":\n      - /url: \"?section=promotions\"\n      - generic: Promo codes\n    - link \"Loyalty\":\n      - /url: \"?section=loyalty\"\n      - generic: Loyalty\n    - link \"Log\":\n      - /url: \"?section=log\"\n      - generic: Log\n    - link \"Staff\":\n      - /url: \"?section=staff\"\n      - generic: Staff\n- main:\n  - button \"Toggle Sidebar\":\n  - button \"Notifications\":\n  - button \"Toggle color theme\":\n  - paragraph: Synthetic data · native React migration in progress\n  - heading \"Stores\" [level=1]\n  - text: Search store or category…\n  - searchbox \"Search store or category…\"\n  - combobox \"Status\":\n    - generic: All\n  - textbox: all\n  - generic: New restaurant requests\n  - paragraph: Новая кофейня · +992900000005 · ул. 1\n  - heading \"Decision\" [level=2]\n  - button \"Edit Decision\":\n  - generic \"Delivery tariffs\"\n  - button \"Add store\"\n  - table:\n    - rowgroup:\n      - row \"Name Status Phone Address View details\":\n        - columnheader \"Name\"\n        - columnheader \"Status\"\n        - columnheader \"Phone\"\n        - columnheader \"Address\"\n        - columnheader \"View details\"\n    - rowgroup:\n      - row \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) Active open +992900000001 пр. Рудаки 100, Душанбе, Таджикистан View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n        - cell \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n          - img \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n            - generic: Р«\n          - generic: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n        - cell \"Active open\":\n          - generic: Active\n          - generic: open\n        - cell \"+992900000001\"\n        - cell \"пр. Рудаки 100, Душанбе, Таджикистан\"\n        - cell \"View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n          - button \"View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\":\n      - row \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино Active closed +992900000002 ул. Сино 5 View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n        - cell \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n          - img \"Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n            - generic: Р«\n          - generic: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\n        - cell \"Active closed\":\n          - generic: Active\n          - generic: closed\n        - cell \"+992900000002\"\n        - cell \"ул. Сино 5\"\n        - cell \"View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n          - button \"View details Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\":\n      - row \"Аптека Аптека Active open +992900000003 — View details Аптека\":\n        - cell \"Аптека Аптека\":\n          - img \"Аптека\":\n            - generic: А\n          - generic: Аптека\n        - cell \"Active open\":\n          - generic: Active\n          - generic: open\n        - cell \"+992900000003\"\n        - cell \"—\"\n        - cell \"View details Аптека\":\n          - button \"View details Аптека\":\n      - row \"Gul Gul Disabled open +992900000004 a View details Gul\":\n        - cell \"Gul Gul\":\n          - img \"Gul\":\n            - generic: G\n          - generic: Gul\n        - cell \"Disabled open\":\n          - generic: Disabled\n          - generic: open\n        - cell \"+992900000004\"\n        - cell \"a\"\n        - cell \"View details Gul\":\n          - button \"View details Gul\":\n  - paragraph: Synthetic preview only. No operational actions or persistent order changes.\n  - paragraph: Design preview · Synthetic data"
+  }
+]

@@ -1,0 +1,9 @@
+PASS driver identity resolves one id for list/details/phone/image
+PASS missing contacts never borrow a fixed number
+PASS phone search isolates correct customer, normalizes digits
+PASS sample aliases are scoped; canonical false wins; source is immutable
+PASS known entity status semantics, unknown stays neutral
+PASS scheduled and expired banner meanings preserved
+PASS driver live/off filters use A freshness and sort online first
+PASS cash warning is inclusive at original limit; absent balance unknown
+8 audit adapter checks passed

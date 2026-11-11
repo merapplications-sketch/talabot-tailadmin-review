@@ -1,0 +1,19 @@
+{
+  "bodyFont": "Outfit, sans-serif",
+  "first": {
+    "bottom": 891.09375,
+    "height": 164.5,
+    "y": 726.59375
+  },
+  "fontState": "loaded",
+  "fullyVisible": true,
+  "headingFont": "Outfit, sans-serif",
+  "lang": "en",
+  "outfitCheck": true,
+  "overflow": false,
+  "scrollY": 0,
+  "viewport": [
+    1363,
+    936
+  ]
+}

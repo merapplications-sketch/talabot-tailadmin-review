@@ -1,0 +1,37 @@
+{
+  "source": "48592032e774a965c33e0e7c00dce4c9ecb3f94f",
+  "files": [
+    {
+      "path": "native-preview/fonts/outfit-c8e7a734.woff2",
+      "sha256": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12",
+      "matches_recovered_v10": true
+    },
+    {
+      "path": "native-preview/fonts/outfit-f37fa50e.woff2",
+      "sha256": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091",
+      "matches_recovered_v10": true
+    }
+  ],
+  "provenance": "Recovered original B assets under _vinext_fonts/outfit-e425a954def7, documented in previous checkpoint. Same-origin variable100-900 normal/swap FontFace descriptors unchanged. No new font or network domain.",
+  "fresh_browser": {
+    "bodyFont": "Outfit, sans-serif",
+    "first": {
+      "bottom": 891.09375,
+      "height": 164.5,
+      "y": 726.59375
+    },
+    "fontState": "loaded",
+    "fullyVisible": true,
+    "headingFont": "Outfit, sans-serif",
+    "lang": "en",
+    "outfitCheck": true,
+    "overflow": false,
+    "scrollY": 0,
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  "Outfit_console_errors": [],
+  "limits": "No full font network or face enumeration. Cyrillic fallback unchanged; computed family does not prove every glyph uses Outfit."
+}
