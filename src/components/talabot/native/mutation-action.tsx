@@ -55,6 +55,7 @@ export default function MutationAction({
   return (
     <>
       <Button
+        size="lg"
         variant="outline"
         type="button"
         disabled={disabled || pending}
@@ -67,10 +68,16 @@ export default function MutationAction({
         <DialogContent showCloseButton={false}>
           <DialogTitle>{label}</DialogTitle>
           <DialogDescription>{confirm}</DialogDescription>
-          <Button variant="outline" disabled={pending} onClick={execute}>
+          <Button
+            variant="outline"
+            disabled={pending}
+            onClick={execute}
+            size="lg"
+          >
             {label}
           </Button>
           <Button
+            size="lg"
             variant="outline"
             disabled={pending}
             onClick={() => setOpen(false)}

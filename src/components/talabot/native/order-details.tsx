@@ -73,7 +73,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
       {assigning && (
         <AssignmentDialog order={o} t={t} close={() => setAssigning(false)} />
       )}
-      <Button variant="outline" onClick={back}>
+      <Button variant="outline" onClick={back} size="lg">
         ← {t("aBack")}
       </Button>
       <Card title={"#" + text(o, "id")}>
@@ -102,7 +102,11 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         )}
         {!!o.group_id && <Pair label={t("yGrp")}>{text(o, "group_id")}</Pair>}
         {canAssign(o) ? (
-          <Button variant="outline" onClick={() => setAssigning(true)}>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => setAssigning(true)}
+          >
             {t("aAssign")}
           </Button>
         ) : (
@@ -120,7 +124,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
       <div className="grid gap-4 lg:grid-cols-3">
         {party(t("aStoreL"), store)}
         {party(t("aDrvL"), driver)}
-        {party(t("aClient"), client, text(o, "customer_name"))}
+        {party(t("aClient"), client)}
       </div>
       <Card title={t("address")}>
         <p className="break-words">{text(o, "address")}</p>

@@ -6,6 +6,7 @@ import { mutations } from "./mutation-service";
 import { useState } from "react";
 import { tables, text, type Row } from "./domain";
 import { operationalAlerts, isLive } from "./order-operations";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Card } from "./primitives";
 import AssignmentDialog from "./assignment-dialog";
 interface Props {
@@ -21,6 +22,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
     <>
       <div className="flex flex-wrap gap-2">
         <Button
+          size="lg"
           variant="outline"
           onClick={() => navigate({ section: "drivers", id: "" })}
         >
@@ -28,6 +30,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
           {t("aCourL")} {t("aOnLine")}
         </Button>
         <Button
+          size="lg"
           variant="outline"
           onClick={() => navigate({ section: "restaurants", id: "" })}
         >
@@ -36,6 +39,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
         </Button>
         {alerts.tickets.length > 0 && (
           <Button
+            size="lg"
             variant="outline"
             onClick={() => navigate({ section: "support", id: "" })}
           >
@@ -51,6 +55,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
               className="flex flex-wrap justify-between gap-2"
             >
               <Button
+                size="lg"
                 variant="outline"
                 onClick={() =>
                   navigate({ section: "orders", id: text(o, "id") })
@@ -58,7 +63,11 @@ export default function OperationalAlerts({ t, navigate }: Props) {
               >
                 #{text(o, "id")}
               </Button>
-              <Button variant="outline" onClick={() => setAssignment(o)}>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => setAssignment(o)}
+              >
                 {t("aAssign")}
               </Button>
             </div>
@@ -78,6 +87,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
                 {text(r, "driver_stars")} ★
               </span>
               <Button
+                size="lg"
                 variant="outline"
                 onClick={() =>
                   navigate({ section: "ratings", id: text(r, "id") })
@@ -89,6 +99,7 @@ export default function OperationalAlerts({ t, navigate }: Props) {
           ))}
           {alerts.ratings.length > 5 && (
             <Button
+              size="lg"
               variant="outline"
               onClick={() => navigate({ section: "ratings", id: "" })}
             >
@@ -104,21 +115,26 @@ export default function OperationalAlerts({ t, navigate }: Props) {
             syntheticCash[text(d, "id")] >= Number(d.cash_limit || 1000),
         )
         .map((d) => (
-          <Card key={text(d, "id")} title={t("aOver")}>
-            <p>
-              {text(d, "name")} · {syntheticCash[text(d, "id")].toFixed(2)} /{" "}
-              {Number(d.cash_limit || 1000)} TJS
-            </p>
-            {d.accept_blocked ? (
-              <p>{t("aBlocked")}</p>
-            ) : (
-              <MutationAction
-                label={t("aBlock")}
-                t={t}
-                operation={() => mutations.setDriverBlocked(d.id, true)}
-              />
-            )}
-          </Card>
+          <Alert key={text(d, "id")} variant="warning">
+            <AlertTitle>{t("aOver")}</AlertTitle>
+            <AlertDescription>
+              <div className="flex flex-wrap justify-between gap-2">
+                <p>
+                  {text(d, "name")} · {syntheticCash[text(d, "id")].toFixed(2)}{" "}
+                  / {Number(d.cash_limit || 1000)} TJS
+                </p>
+                {d.accept_blocked ? (
+                  <p>{t("aBlocked")}</p>
+                ) : (
+                  <MutationAction
+                    label={t("aBlock")}
+                    t={t}
+                    operation={() => mutations.setDriverBlocked(d.id, true)}
+                  />
+                )}
+              </div>
+            </AlertDescription>
+          </Alert>
         ))}
       {assignment && (
         <AssignmentDialog

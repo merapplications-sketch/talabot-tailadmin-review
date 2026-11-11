@@ -10,7 +10,6 @@ import {
   Field as BField,
   FieldGroup,
   FieldLabel,
-  FieldTitle,
   FieldDescription,
   FieldError,
 } from "@/components/ui/field";
@@ -23,13 +22,15 @@ import {
 } from "@/components/ui/select";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
   DialogFooter,
 } from "@/components/ui/dialog";
-import { PencilIcon } from "@/icons";
+import InfoField from "@/components/main/profile/personal-information/info-field";
+import { PencilIcon, XIcon } from "@/icons";
 import { previewWrite, text, type Row } from "./domain";
 import type { Field } from "./fields";
 export default function NativeForm({
@@ -42,7 +43,9 @@ export default function NativeForm({
   operation,
   resetAfterSuccess = false,
   closeAfterSuccess = false,
+  summary,
 }: {
+  summary?: { label: string; value: string }[];
   title: string;
   fields: Field[];
   initial?: Row;
@@ -125,9 +128,15 @@ export default function NativeForm({
       setConfirming(false);
     }
   }
-  const hasInfo = ["name", "title", "code", "phone", "address"].some(
-    (key) => initial[key],
-  );
+  const info =
+    summary ??
+    fields
+      .filter(
+        (f) =>
+          ["name", "title", "code", "phone", "address"].includes(f.key) &&
+          initial[f.key],
+      )
+      .map((f) => ({ label: t(f.label), value: text(initial, f.key) }));
   const trigger = (
     <div className="flex items-center justify-between gap-4">
       <h2 className="text-base font-semibold text-gray-800 sm:text-lg dark:text-white/90">
@@ -137,8 +146,8 @@ export default function NativeForm({
         type="button"
         variant="outline"
         size="icon-lg"
-        aria-label={title}
-        title={title}
+        aria-label={t("aEdit") + " " + title}
+        title={t("aEdit") + " " + title}
         aria-expanded={editing}
         onClick={() => setEditing(true)}
       >
@@ -148,28 +157,14 @@ export default function NativeForm({
   );
   return (
     <>
-      {hasInfo ? (
+      {info.length ? (
         <Card>
-          {trigger}{" "}
-          {["name", "title", "code", "phone", "address"].some(
-            (key) => initial[key],
-          ) && (
-            <FieldGroup>
-              {fields
-                .filter(
-                  (f) =>
-                    ["name", "title", "code", "phone", "address"].includes(
-                      f.key,
-                    ) && initial[f.key],
-                )
-                .map((f) => (
-                  <BField key={f.key}>
-                    <FieldTitle>{t(f.label)}</FieldTitle>
-                    <FieldDescription>{text(initial, f.key)}</FieldDescription>
-                  </BField>
-                ))}
-            </FieldGroup>
-          )}
+          {trigger}
+          <div className="mt-2 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {info.map((item, i) => (
+              <InfoField key={i} label={item.label} value={item.value} />
+            ))}
+          </div>
         </Card>
       ) : (
         trigger
@@ -180,7 +175,23 @@ export default function NativeForm({
           if (!pending) setEditing(open);
         }}
       >
-        <DialogContent className="max-h-[90vh] w-full overflow-hidden p-0 sm:max-w-2xl">
+        <DialogContent
+          showCloseButton={false}
+          className="max-h-[90vh] w-full overflow-hidden p-0 sm:max-w-2xl"
+        >
+          <DialogClose
+            render={
+              <Button
+                variant="ghost"
+                size="icon-lg"
+                className="absolute inset-e-3 top-3"
+                disabled={pending}
+                aria-label={t("aClose")}
+              >
+                <XIcon aria-hidden="true" />
+              </Button>
+            }
+          />
           <ScrollArea scrollbars="vertical" className="max-h-[90vh]">
             <div className="p-6 sm:p-8">
               <DialogHeader className="gap-1 sm:gap-2">
@@ -279,12 +290,18 @@ export default function NativeForm({
                       <Button
                         type="button"
                         variant="outline"
+                        size="lg"
                         disabled={pending}
                         onClick={() => setEditing(false)}
                       >
                         {t("aClose")}
                       </Button>
-                      <Button type="submit" disabled={pending}>
+                      <Button
+                        type="submit"
+                        variant="outline"
+                        size="lg"
+                        disabled={pending}
+                      >
                         {t("aSv")}
                       </Button>
                     </BField>
@@ -301,7 +318,7 @@ export default function NativeForm({
           if (!pending) setConfirming(open);
         }}
       >
-        <DialogContent>
+        <DialogContent showCloseButton={false}>
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{confirm}</DialogDescription>
@@ -310,12 +327,19 @@ export default function NativeForm({
             <Button
               type="button"
               variant="outline"
+              size="lg"
               disabled={pending}
               onClick={() => setConfirming(false)}
             >
               {t("aClose")}
             </Button>
-            <Button type="button" disabled={pending} onClick={() => submit()}>
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              disabled={pending}
+              onClick={() => submit()}
+            >
               {t("aSv")}
             </Button>
           </DialogFooter>

@@ -64,6 +64,7 @@ export default function AssignmentDialog({ order, t, close, drivers }: Props) {
                 </p>
               </div>
               <Button
+                size="lg"
                 variant="outline"
                 disabled={pending}
                 onClick={() => assign(driver)}
@@ -76,7 +77,7 @@ export default function AssignmentDialog({ order, t, close, drivers }: Props) {
           <p>{t("aNoOnlineC")}</p>
         )}
         {error && <p role="alert">{error}</p>}
-        <Button variant="outline" disabled={pending} onClick={close}>
+        <Button variant="outline" disabled={pending} onClick={close} size="lg">
           {t("aClose2")}
         </Button>
       </DialogContent>

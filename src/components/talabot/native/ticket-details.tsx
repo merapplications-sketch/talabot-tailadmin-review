@@ -1,4 +1,6 @@
 "use client";
+import { Badge } from "@/components/ui/badge";
+import { entityStatus } from "./entity-data";
 import { useLocale } from "next-intl";
 import { formatDate } from "./format";
 import { CallIcon } from "@/icons";
@@ -104,11 +106,15 @@ export default function TicketDetails({
   }
   return (
     <div className="space-y-4">
-      <Button variant="outline" onClick={back}>
+      <Button variant="outline" onClick={back} size="lg">
         {t("aBack")}
       </Button>
       <Card title={t("rs_" + text(k, "reason"))}>
-        <Pair label={t("status")}>{t("xs_" + text(k, "status"))}</Pair>
+        <Pair label={t("status")}>
+          <Badge color={entityStatus("support", k).color}>
+            {t(entityStatus("support", k).label)}
+          </Badge>
+        </Pair>
         <p>{text(person, "name") || "—"}</p>
         {!!person.phone && (
           <>
@@ -127,6 +133,7 @@ export default function TicketDetails({
         )}
         {!!k.order_id && (
           <Button
+            size="lg"
             variant="outline"
             onClick={() => openOrder(text(k, "order_id"))}
           >
@@ -154,6 +161,7 @@ export default function TicketDetails({
       {closed ? (
         <Card title={t("xClosedT")}>
           <Button
+            size="lg"
             variant="outline"
             disabled={pending}
             onClick={() => decide("open")}
@@ -214,6 +222,7 @@ export default function TicketDetails({
             <div className="my-3 flex flex-wrap gap-2">
               {k.status === "open" && (
                 <Button
+                  size="lg"
                   variant="outline"
                   disabled={pending}
                   onClick={() => decide("in_progress")}
@@ -222,6 +231,7 @@ export default function TicketDetails({
                 </Button>
               )}
               <Button
+                size="lg"
                 variant="outline"
                 disabled={pending}
                 onClick={() => decide("resolved")}
@@ -229,6 +239,7 @@ export default function TicketDetails({
                 {t("xResolve")}
               </Button>
               <Button
+                size="lg"
                 variant="outline"
                 disabled={pending}
                 onClick={() => decide("rejected")}
@@ -250,6 +261,7 @@ export default function TicketDetails({
               .replace("{name}", text(person, "name"))}
           </DialogDescription>
           <Button
+            size="lg"
             variant="outline"
             disabled={pending}
             onClick={() => decide("resolved", true)}
@@ -257,6 +269,7 @@ export default function TicketDetails({
             {t("xResolve")}
           </Button>
           <Button
+            size="lg"
             variant="outline"
             disabled={pending}
             onClick={() => setConfirm(false)}

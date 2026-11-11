@@ -5,7 +5,7 @@ import { OrderStatusBadge } from "../../integrated-review/order-status";
 import type { OrderStatus } from "../../orders-data";
 import { IdentityImage } from "../../integrated-review/identity";
 import { Action } from "../primitives";
-import { tables, text, number, statuses, type Row } from "../domain";
+import { tables, text, number, statuses, contacts, type Row } from "../domain";
 import { formatDate } from "../format";
 const panel =
   "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
@@ -77,23 +77,23 @@ export function OrdersPresentation({
       style: "currency",
       currency: "TJS",
     }).format(value);
-  const demoMerchantImage = undefined,
-    demoPersonImage = undefined;
   const rows = source.map((o) => ({
     id: text(o, "id"),
     status: text(o, "status") as OrderStatus,
     created: text(o, "created_at"),
     updated: text(o, "updated_at"),
-    customer: text(o, "customer_name") || "—",
+    customer: contacts(o).customer.name || "—",
+    merchantImage: text(
+      tables.stores.find((s) => s.id === o.store_id) || {},
+      "logo_url",
+    ),
+    driverImage: contacts(o).driver.image,
     merchant:
       text(tables.stores.find((s) => s.id === o.store_id) || {}, "name") || "—",
     store: false,
     pickup: text(o, "pickup_address") || "—",
     deliveryZone: text(o, "address") || "—",
-    driver:
-      text(o, "driver_name") ||
-      text(tables.profiles.find((p) => p.id === o.driver_id) || {}, "name") ||
-      (o.driver_id ? String(o.driver_id) : ""),
+    driver: contacts(o).driver.name || (o.driver_id ? String(o.driver_id) : ""),
     total: number(o, "total"),
     extra:
       nativeT(text(o, "payment")) +
@@ -163,7 +163,7 @@ export function OrdersPresentation({
               type="search"
               value={query}
               onChange={(e) => onSearch(e.target.value)}
-              placeholder={t("searchHint")}
+              placeholder={nativeT("uOq")}
             />
           </label>
           <Button type="submit" size="lg">
@@ -172,14 +172,16 @@ export function OrdersPresentation({
         </form>
         <div className="tp-quick" data-testid="order-quick-filters">
           {["all", "pending", "preparing", "delivered"].map((value) => (
-            <button
+            <Button
+              variant="outline"
+              size={value === "all" ? "icon-lg" : "lg"}
               type="button"
               key={value}
               aria-pressed={status === value}
               onClick={() => onStatus(value)}
             >
               {value === "all" ? t("all") : t(`status.${value}`)}
-            </button>
+            </Button>
           ))}
         </div>
         <details className="tp-secondary-filters mt-3">
@@ -307,7 +309,7 @@ export function OrdersPresentation({
             ))}
         </div>
         <div className="mt-2 flex flex-wrap items-end justify-between gap-2">
-          <Button variant="outline" onClick={onReset}>
+          <Button size="lg" variant="outline" onClick={onReset}>
             {t("reset")}
           </Button>
         </div>
@@ -325,7 +327,7 @@ export function OrdersPresentation({
                 ? "Could not load orders. Your filters are preserved."
                 : "Не удалось загрузить заказы. Фильтры сохранены."}
           </p>
-          <Button variant="outline" onClick={onRetry}>
+          <Button size="lg" variant="outline" onClick={onRetry}>
             {nativeT("nativeRetry")}
           </Button>
         </div>
@@ -374,7 +376,7 @@ export function OrdersPresentation({
                       <div className="tp-identity">
                         <IdentityImage
                           name={o.merchant}
-                          src={demoMerchantImage}
+                          src={o.merchantImage}
                         />
                         <span>{o.merchant}</span>
                       </div>
@@ -393,7 +395,7 @@ export function OrdersPresentation({
                         <IdentityImage
                           name={o.driver || t("unassigned")}
                           person
-                          src={o.driver ? demoPersonImage : undefined}
+                          src={o.driverImage || undefined}
                         />
                         <span>{o.driver || t("unassigned")}</span>
                       </div>
@@ -422,7 +424,7 @@ export function OrdersPresentation({
                   <OrderStatusBadge value={o.status} />
                 </div>
                 <div className="tp-identity mt-3">
-                  <IdentityImage name={o.merchant} src={demoMerchantImage} />
+                  <IdentityImage name={o.merchant} src={o.merchantImage} />
                   <p className="font-medium">{o.merchant}</p>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">
@@ -448,7 +450,7 @@ export function OrdersPresentation({
                             <IdentityImage
                               name={v}
                               person
-                              src={o.driver ? demoPersonImage : undefined}
+                              src={o.driverImage || undefined}
                             />
                             <span>{v}</span>
                           </span>
@@ -471,7 +473,7 @@ export function OrdersPresentation({
         {nativeT("nativeNotice")} {t("languageNote")}
       </p>
       {hasMore && (
-        <Button variant="outline" onClick={onMore}>
+        <Button size="lg" variant="outline" onClick={onMore}>
           {nativeT("aMore")}
         </Button>
       )}

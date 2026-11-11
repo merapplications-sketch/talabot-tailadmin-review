@@ -1,5 +1,5 @@
 // Real B SSR and source-derived rating logic. No browser/backend claims.
-process.env.UX02_SSR_OUTPUT='docs/ux02/ratings-parity';
+process.env.UX02_SSR_OUTPUT||='docs/ux02/ratings-parity';
 const {load,wrap,React,storage}=require('./ux02-composition-ssr.cjs');
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {tables}=load('src/components/talabot/native/domain');

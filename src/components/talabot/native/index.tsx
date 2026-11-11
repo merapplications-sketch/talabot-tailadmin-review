@@ -41,7 +41,7 @@ import OrderDetails from "./order-details";
 import EntitySections from "./entity-sections";
 import AnalyticsDashboard from "../analytics";
 import NotificationDropdown from "@/layout/header/notification-dropdown";
-import { NotificationsPage } from "../workspace";
+import { NotificationsPage, Shell } from "../workspace";
 import { PreviewProvider } from "../preview";
 import { nativeNotifications } from "./notifications";
 
@@ -196,7 +196,7 @@ export default function NativeAdmin() {
               <NotificationsPage
                 id={state.id || undefined}
                 records={notices.records}
-              merchantImage=""
+                merchantImage=""
               />
             ) : state.section === "orders" ? (
               state.id ? (
@@ -347,15 +347,35 @@ export default function NativeAdmin() {
                 </>
               )
             ) : (
-              <EntitySections
-                key={state.section + ":" + state.id}
-                section={state.section}
-                id={state.id}
-                query={state.query}
-                t={t}
-                navigate={navigate}
-                onBack={back}
-              />
+              <Shell
+                title={t(
+                  (
+                    {
+                      restaurants: "tS",
+                      drivers: "tD",
+                      customers: "tU",
+                      support: "tH",
+                      texts: "tG",
+                      ratings: "tR",
+                      banners: "tB",
+                      promotions: "tP",
+                      loyalty: "tY",
+                      log: "tL",
+                      staff: "tF",
+                    } as Record<string, string>
+                  )[state.section] || "tO",
+                )}
+              >
+                <EntitySections
+                  key={state.section + ":" + state.id}
+                  section={state.section}
+                  id={state.id}
+                  query={state.query}
+                  t={t}
+                  navigate={navigate}
+                  onBack={back}
+                />
+              </Shell>
             )}
           </section>
         </AdminLayout>

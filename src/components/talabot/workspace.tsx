@@ -75,7 +75,7 @@ function useListing() {
     },
   };
 }
-function Shell({
+export function Shell({
   title,
   children,
 }: {

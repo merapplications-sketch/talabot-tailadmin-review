@@ -5,6 +5,14 @@ import {
   needsRatingFollowup,
   ratingComment,
 } from "./ratings-data";
+import {
+  entityRecord,
+  entityStatus,
+  filterDrivers,
+  cashExceeded,
+} from "./entity-data";
+import { isLive, isBusy, locationFresh } from "./order-operations";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 import { NativeGrid } from "./b-shell/entity-grid";
 import { SettingsPresentation } from "./b-shell/settings";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +71,8 @@ type Props = {
   onBack?: () => void;
   navigate: (patch: { section?: string; id?: string; query?: string }) => void;
 };
+const panel =
+  "rounded-2xl border border-gray-200 bg-white p-5 md:p-6 dark:border-gray-800 dark:bg-white/3";
 const tableNames: Record<string, string> = {
   restaurants: "stores",
   drivers: "profiles",
@@ -95,34 +105,39 @@ export default function EntitySections({
     ),
     [notice, setNotice] = useState(""),
     [logs, setLogs] = useState(readLogs);
-  const source = (tables[tableNames[section]] || []).filter((r) =>
+  const source = (tables[tableNames[section]] || [])
+    .map((r) => entityRecord(section, r))
+    .filter((r) =>
+      section === "drivers"
+        ? r.role === "driver"
+        : section === "customers"
+          ? r.role === "customer"
+          : true,
+    );
+  const rows =
     section === "drivers"
-      ? r.role === "driver"
-      : section === "customers"
-        ? r.role === "customer"
-        : true,
-  );
-  const rows = source.filter(
-    (r) =>
-      Object.values(r)
-        .filter((v) => typeof v === "string")
-        .join(" ")
-        .toLowerCase()
-        .includes(query.toLowerCase()) &&
-      (section === "ratings"
-        ? filter === "need"
-          ? needsRatingFollowup(r)
-          : filter === "done"
-            ? !!r.handled_at
-            : true
-        : filter === "all" ||
-          text(r, "status") === filter ||
-          (filter === "open"
-            ? !!r.is_open
-            : filter === "closed"
-              ? !r.is_open
-              : true)),
-  );
+      ? filterDrivers(source, query, filter)
+      : source.filter(
+          (r) =>
+            Object.values(r)
+              .filter((v) => typeof v === "string")
+              .join(" ")
+              .toLowerCase()
+              .includes(query.toLowerCase()) &&
+            (section === "ratings"
+              ? filter === "need"
+                ? needsRatingFollowup(r)
+                : filter === "done"
+                  ? !!r.handled_at
+                  : true
+              : filter === "all" ||
+                text(r, "status") === filter ||
+                (filter === "open"
+                  ? !!r.is_open
+                  : filter === "closed"
+                    ? !r.is_open
+                    : true)),
+        );
   const driverAverage = ratingAverage(source, "driver_stars"),
     storeAverage = ratingAverage(source, "store_stars"),
     needsCount = source.filter(needsRatingFollowup).length,
@@ -135,6 +150,7 @@ export default function EntitySections({
   const write = () => setNotice(t("nativeWriteBlocked"));
   const back = (
     <Button
+      size="lg"
       variant="outline"
       onClick={
         section === "ratings" && onBack ? onBack : () => navigate({ id: "" })
@@ -145,6 +161,7 @@ export default function EntitySections({
   );
   const linkOrder = (r: Row) => (
     <Button
+      size="lg"
       variant="outline"
       onClick={() =>
         navigate({
@@ -173,6 +190,7 @@ export default function EntitySections({
         ))}
         {orders.length > historyLimit && (
           <Button
+            size="lg"
             variant="outline"
             onClick={() => {
               setHistoryLimit(historyLimit + 50);
@@ -212,6 +230,12 @@ export default function EntitySections({
               )
             }
             initial={r}
+            summary={["ru", "en"].map((lang) => ({
+              label: t(lang === "ru" ? "xTxRu" : "xTxEn"),
+              value:
+                text(r, "body_" + lang).slice(0, 160) +
+                (text(r, "body_" + lang).length > 160 ? "…" : ""),
+            }))}
             fields={[
               {
                 key: "body_ru",
@@ -249,6 +273,14 @@ export default function EntitySections({
                 .map((f) => () => mutations.setSetting(f.key, d[f.key])),
             )
           }
+          summary={loyaltyFields.map((f) => ({
+            label: t(f.label),
+            value:
+              text(
+                tables.app_settings.find((r) => r.key === f.key) || {},
+                "value",
+              ) || "—",
+          }))}
           fields={loyaltyFields}
           initial={Object.fromEntries(
             tables.app_settings.map((r) => [text(r, "key"), r.value]),
@@ -272,6 +304,15 @@ export default function EntitySections({
               ])
             }
             initial={r}
+            summary={[
+              ["points_min_order", "yMinO"],
+              ["cashback_pct", "yStoreCb"],
+              ["earn_per_tjs", "yEarnS"],
+              ["free_delivery_min", "yFd"],
+            ].map(([key, label]) => ({
+              label: t(label),
+              value: text(r, key) || "—",
+            }))}
             fields={[
               { key: "points_min_order", label: "yMinO", type: "number" },
               {
@@ -308,6 +349,12 @@ export default function EntitySections({
             key={text(r, "id")}
             title={text(r, "title")}
             fields={happyFields}
+            summary={[
+              { label: t("aDis"), value: text(r, "discount_pct") + "%" },
+              { label: t("aBFrom"), value: text(r, "start_time").slice(0, 5) },
+              { label: t("aBTo"), value: text(r, "end_time").slice(0, 5) },
+              { label: t("uConfAct"), value: t(r.active ? "aOn" : "aOff") },
+            ]}
             initial={r}
             operation={(r) => mutations.saveHH(happyPayload(r))}
             validate={validateHappy}
@@ -348,6 +395,7 @@ export default function EntitySections({
       <Card title={t("tL")}>
         <div className="flex gap-2">
           <Button
+            size="lg"
             variant="outline"
             aria-pressed={filter !== "errors"}
             onClick={() => {
@@ -358,6 +406,7 @@ export default function EntitySections({
             {t("aTabAudit")} · {logs.audit.length}
           </Button>
           <Button
+            size="lg"
             variant="outline"
             aria-pressed={filter === "errors"}
             onClick={() => {
@@ -367,7 +416,11 @@ export default function EntitySections({
           >
             {t("aTabErr")} · {logs.errors.length}
           </Button>
-          <Button variant="outline" onClick={() => setLogs(readLogs())}>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => setLogs(readLogs())}
+          >
             {t("uTxRetry")}
           </Button>
         </div>
@@ -501,13 +554,13 @@ export default function EntitySections({
             >
               <MapIcon aria-hidden="true" />
             </Button>
-            <Button variant="outline" onClick={write}>
+            <Button variant="outline" onClick={write} size="lg">
               {t("aLocSet")}
             </Button>
-            <Button variant="outline" onClick={write}>
+            <Button variant="outline" onClick={write} size="lg">
               {t("aLocClr")}
             </Button>
-            <Button variant="outline" onClick={write}>
+            <Button variant="outline" onClick={write} size="lg">
               {t("aRatGet")}
             </Button>
           </Card>
@@ -542,21 +595,33 @@ export default function EntitySections({
           {back}
           <Card title={text(row, "name")}>
             <p>
-              {text(row, "driver_status")} · {row.online ? t("aOn") : t("aOff")}
+              <Badge color={entityStatus(section, row).color}>
+                {t(entityStatus(section, row).label)}
+              </Badge>{" "}
+              ·{" "}
+              {t(
+                isLive(row)
+                  ? isBusy(row)
+                    ? "aBusy"
+                    : "aOnlineL"
+                  : "aOfflineL",
+              )}
             </p>
-            <>
-              <span>{text(row, "phone")}</span>
-              <Button
-                variant="outline"
-                size="icon-lg"
-                nativeButton={false}
-                aria-label={t("aCall") + ": " + text(row, "phone")}
-                title={t("aCall") + ": " + text(row, "phone")}
-                render={<a href={"tel:" + text(row, "phone")} />}
-              >
-                <CallIcon aria-hidden="true" />
-              </Button>
-            </>
+            {!!row.phone && (
+              <>
+                <span>{text(row, "phone")}</span>
+                <Button
+                  variant="outline"
+                  size="icon-lg"
+                  nativeButton={false}
+                  aria-label={t("aCall") + ": " + text(row, "phone")}
+                  title={t("aCall") + ": " + text(row, "phone")}
+                  render={<a href={"tel:" + text(row, "phone")} />}
+                >
+                  <CallIcon aria-hidden="true" />
+                </Button>
+              </>
+            )}
             {!!row.accept_blocked && (
               <p className="text-error-500">{t("aBlocked")}</p>
             )}
@@ -567,7 +632,14 @@ export default function EntitySections({
             {syntheticCash[text(row, "id")] == null && (
               <p>{t("nativeCashMissing")}</p>
             )}
-            <p>{text(row, "last_seen") || "—"}</p>
+            {cashExceeded(row, syntheticCash[text(row, "id")]) && (
+              <Alert variant="warning">
+                <AlertTitle>{t("aOver")}</AlertTitle>
+              </Alert>
+            )}
+            <p>
+              {t("aSeenL")}: {formatDate(text(row, "last_seen"), locale)}
+            </p>
             <MutationAction
               label={t("aDrvA")}
               t={t}
@@ -598,7 +670,12 @@ export default function EntitySections({
                 operation={() => mutations.settleCash(row.id)}
               />
             ) : (
-              <Button variant="outline" disabled title={t("nativeCashMissing")}>
+              <Button
+                variant="outline"
+                disabled
+                title={t("nativeCashMissing")}
+                size="lg"
+              >
                 {t("aSettle")}
               </Button>
             )}
@@ -628,19 +705,21 @@ export default function EntitySections({
         <div className="space-y-4">
           {back}
           <Card title={text(row, "name")}>
-            <>
-              <span>{text(row, "phone")}</span>
-              <Button
-                variant="outline"
-                size="icon-lg"
-                nativeButton={false}
-                aria-label={t("aCall") + ": " + text(row, "phone")}
-                title={t("aCall") + ": " + text(row, "phone")}
-                render={<a href={"tel:" + text(row, "phone")} />}
-              >
-                <CallIcon aria-hidden="true" />
-              </Button>
-            </>
+            {!!row.phone && (
+              <>
+                <span>{text(row, "phone")}</span>
+                <Button
+                  variant="outline"
+                  size="icon-lg"
+                  nativeButton={false}
+                  aria-label={t("aCall") + ": " + text(row, "phone")}
+                  title={t("aCall") + ": " + text(row, "phone")}
+                  render={<a href={"tel:" + text(row, "phone")} />}
+                >
+                  <CallIcon aria-hidden="true" />
+                </Button>
+              </>
+            )}
             <p>{text(row, "email")}</p>
             <Pair label={t("xCuReg")}>
               {formatDate(text(row, "created_at"), locale)}
@@ -715,6 +794,9 @@ export default function EntitySections({
       return (
         <div className="space-y-4">
           {back}
+          <Badge color={entityStatus(section, row).color}>
+            {t(entityStatus(section, row).label)}
+          </Badge>
           <NativeForm
             title={text(row, section === "banners" ? "title" : "code")}
             operation={(r) =>
@@ -766,7 +848,19 @@ export default function EntitySections({
               {ratingComment(row.comment).text ||
                 (ratingComment(row.comment).tags.length ? "—" : t("aNoCmt"))}
             </Pair>
-            <Pair label={t("aStat")}>{t(ratingStatus(row))}</Pair>
+            <Pair label={t("aStat")}>
+              <Badge
+                color={
+                  row.handled_at
+                    ? "success"
+                    : needsRatingFollowup(row)
+                      ? "warning"
+                      : "gray"
+                }
+              >
+                {t(ratingStatus(row))}
+              </Badge>
+            </Pair>
             {!!row.handled_at && (
               <Pair label={t("aHandled")}>
                 {formatDate(text(row, "handled_at"), locale)}
@@ -828,118 +922,166 @@ export default function EntitySections({
           ]}
         />
       )}
-      <Card>
-        <label>
-          {section === "customers"
-            ? t("xCuSearch")
-            : section === "restaurants"
-              ? t("aSearch")
-              : wt("search")}
-          <Input
-            type="search"
-            value={query}
-            onChange={(e) => navigate({ query: e.target.value })}
-          />
-        </label>
-        {section === "restaurants" && (
-          <Select
-            value={filter}
-            onValueChange={(value) => {
-              setFilter(value ?? "");
-              sessionStorage.setItem(
-                "ux02-native:filter:" + section,
-                value ?? "",
-              );
-            }}
-            items={[
-              ...["all", "open", "closed"].map((k) => ({
-                value: k,
-                label: t(
-                  k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
-                ),
-              })),
-            ]}
-          >
-            <SelectTrigger aria-label={t("status")}>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {["all", "open", "closed"].map((k) => (
-                <SelectItem key={k} value={k}>
-                  {t(
-                    k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
-                  )}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        )}
-        {section === "ratings" && (
-          <Select
-            value={filter}
-            onValueChange={(value) => {
-              setFilter(value ?? "need");
-              sessionStorage.setItem(
-                "ux02-native:filter:" + section,
-                value ?? "need",
-              );
-            }}
-            items={[
-              { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
-              { value: "all", label: `${t("fAllK")} · ${source.length}` },
-              { value: "done", label: `${t("aRDone")} · ${handledCount}` },
-            ]}
-          >
-            <SelectTrigger aria-label={t("aStat")}>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="need">
-                {t("aRNeeds")} · {needsCount}
-              </SelectItem>
-              <SelectItem value="all">
-                {t("fAllK")} · {source.length}
-              </SelectItem>
-              <SelectItem value="done">
-                {t("aRDone")} · {handledCount}
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        )}
-        {section === "support" && (
-          <Select
-            value={filter}
-            onValueChange={(value) => {
-              setFilter(value ?? "");
-              sessionStorage.setItem(
-                "ux02-native:filter:" + section,
-                value ?? "",
-              );
-            }}
-            items={[
-              ...["all", "open", "in_progress", "resolved", "rejected"].map(
-                (k) => ({
+      <section className={panel}>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <label>
+            {section === "customers"
+              ? t("xCuSearch")
+              : section === "restaurants"
+                ? t("aSearch")
+                : wt("search")}
+            <Input
+              type="search"
+              value={query}
+              onChange={(e) => navigate({ query: e.target.value })}
+            />
+          </label>
+          {section === "drivers" && (
+            <label>
+              {t("aStat")}
+              <Select
+                value={filter}
+                onValueChange={(value) => {
+                  setFilter(value || "all");
+                  sessionStorage.setItem(
+                    "ux02-native:filter:" + section,
+                    value || "all",
+                  );
+                }}
+                items={["all", "on", "off"].map((k) => ({
                   value: k,
-                  label: t(k === "all" ? "aAll" : "xs_" + k),
-                }),
-              ),
-            ]}
-          >
-            <SelectTrigger aria-label={t("status")}>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {["all", "open", "in_progress", "resolved", "rejected"].map(
-                (k) => (
+                  label:
+                    t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff") +
+                    " · " +
+                    (k === "all"
+                      ? source.length
+                      : source.filter((r) =>
+                          k === "on" ? isLive(r) : !isLive(r),
+                        ).length),
+                }))}
+              >
+                <SelectTrigger aria-label={t("aStat")}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {["all", "on", "off"].map((k) => (
+                    <SelectItem key={k} value={k}>
+                      {t(k === "all" ? "fAllK" : k === "on" ? "fOn" : "fOff")} ·{" "}
+                      {k === "all"
+                        ? source.length
+                        : source.filter((r) =>
+                            k === "on" ? isLive(r) : !isLive(r),
+                          ).length}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </label>
+          )}
+          {section === "restaurants" && (
+            <Select
+              value={filter}
+              onValueChange={(value) => {
+                setFilter(value ?? "");
+                sessionStorage.setItem(
+                  "ux02-native:filter:" + section,
+                  value ?? "",
+                );
+              }}
+              items={[
+                ...["all", "open", "closed"].map((k) => ({
+                  value: k,
+                  label: t(
+                    k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
+                  ),
+                })),
+              ]}
+            >
+              <SelectTrigger aria-label={t("status")}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {["all", "open", "closed"].map((k) => (
                   <SelectItem key={k} value={k}>
-                    {t(k === "all" ? "aAll" : "xs_" + k)}
+                    {t(
+                      k === "all"
+                        ? "aAll"
+                        : k === "open"
+                          ? "aOpenS"
+                          : "aClosedS",
+                    )}
                   </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          )}
+          {section === "ratings" && (
+            <Select
+              value={filter}
+              onValueChange={(value) => {
+                setFilter(value ?? "need");
+                sessionStorage.setItem(
+                  "ux02-native:filter:" + section,
+                  value ?? "need",
+                );
+              }}
+              items={[
+                { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
+                { value: "all", label: `${t("fAllK")} · ${source.length}` },
+                { value: "done", label: `${t("aRDone")} · ${handledCount}` },
+              ]}
+            >
+              <SelectTrigger aria-label={t("aStat")}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="need">
+                  {t("aRNeeds")} · {needsCount}
+                </SelectItem>
+                <SelectItem value="all">
+                  {t("fAllK")} · {source.length}
+                </SelectItem>
+                <SelectItem value="done">
+                  {t("aRDone")} · {handledCount}
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          )}
+          {section === "support" && (
+            <Select
+              value={filter}
+              onValueChange={(value) => {
+                setFilter(value ?? "");
+                sessionStorage.setItem(
+                  "ux02-native:filter:" + section,
+                  value ?? "",
+                );
+              }}
+              items={[
+                ...["all", "open", "in_progress", "resolved", "rejected"].map(
+                  (k) => ({
+                    value: k,
+                    label: t(k === "all" ? "aAll" : "xs_" + k),
+                  }),
                 ),
-              )}
-            </SelectContent>
-          </Select>
-        )}
-      </Card>
+              ]}
+            >
+              <SelectTrigger aria-label={t("status")}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {["all", "open", "in_progress", "resolved", "rejected"].map(
+                  (k) => (
+                    <SelectItem key={k} value={k}>
+                      {t(k === "all" ? "aAll" : "xs_" + k)}
+                    </SelectItem>
+                  ),
+                )}
+              </SelectContent>
+            </Select>
+          )}
+        </div>
+      </section>
       {section === "restaurants" && (
         <>
           <Card title={t("xSrqT")}>
@@ -1016,7 +1158,11 @@ export default function EntitySections({
         />
       )}
       {["restaurants", "banners", "promotions"].includes(section) && (
-        <Button variant="outline" onClick={() => navigate({ id: "new" })}>
+        <Button
+          size="lg"
+          variant="outline"
+          onClick={() => navigate({ id: "new" })}
+        >
           {t(
             section === "restaurants"
               ? "aAddS"
@@ -1026,75 +1172,190 @@ export default function EntitySections({
           )}
         </Button>
       )}
-      <NativeGrid
-        firstHeader={t(section === "ratings" ? "aOpenO" : "aName")}
-        headers={[
-          t("aStat"),
-          t(section === "ratings" ? "ratingComment" : "aPhoneL"),
-          t(section === "ratings" ? "aStoreL" : "address"),
-          ...(section === "drivers" ? [t("aCashH")] : []),
-        ]}
-        onDetails={(id) => navigate({ id })}
-        rows={rows.slice(0, limit).map((r) => ({
-          id: text(r, "id"),
-          updated:
+      <section className={panel}>
+        <NativeGrid
+          firstHeader={t(
             section === "ratings"
-              ? formatDate(text(r, "created_at"), locale)
-              : undefined,
-          name:
-            text(r, "name") ||
-            text(r, "title") ||
-            text(r, "code") ||
-            text(r, "subject") ||
-            text(r, "order_id") ||
-            text(r, "id"),
-          values: [
-            <>
-              <Badge color={r.banned_at || r.accept_blocked ? "error" : "gray"}>
-                {section === "ratings"
-                  ? t(ratingStatus(r))
-                  : section === "customers"
-                    ? r.banned_at
-                      ? t("xBanned")
-                      : "—"
-                    : text(r, "status")
-                      ? t(
-                          section === "support"
-                            ? "xs_" + text(r, "status")
-                            : text(r, "status"),
-                        )
-                      : text(r, "driver_status")
-                        ? t(text(r, "driver_status"))
-                        : r.is_active != null
-                          ? t(r.is_active ? "aOn" : "aOff")
-                          : "—"}
-              </Badge>
-              {!!r.accept_blocked && (
-                <p className="text-error-500">{t("aBlocked")}</p>
-              )}
-            </>,
-            section === "ratings"
-              ? text(r, "comment") || t("aNoCmt")
-              : text(r, "phone") || text(r, "comment") || "—",
-            section === "ratings" ? ratingStore(r) : text(r, "address") || "—",
-            ...(section === "drivers"
-              ? [
-                  (syntheticCash[text(r, "id")] ?? "—") +
+              ? "aOpenO"
+              : section === "banners"
+                ? "aBTitle"
+                : section === "promotions"
+                  ? "aPCode"
+                  : section === "support"
+                    ? "ticketSubject"
+                    : "aName",
+          )}
+          headers={
+            section === "support"
+              ? [t("aStat"), t("aOpenO"), t("aClient"), wt("date")]
+              : section === "banners"
+                ? [t("aStat"), t("aBPl"), t("uLinkL"), t("aBOrd")]
+                : section === "promotions"
+                  ? [t("aStat"), t("aPVal"), t("aPMin"), t("aPMax")]
+                  : section === "ratings"
+                    ? [
+                        t("aStat"),
+                        t("ratingComment"),
+                        t("aStoreL"),
+                        t("aStoreRate2"),
+                        t("aCourierRate"),
+                      ]
+                    : section === "drivers"
+                      ? [t("aStat"), t("aPhoneL"), t("aSeenL"), t("aCashH")]
+                      : section === "customers"
+                        ? [t("aStat"), t("aPhoneL"), t("entityEmail")]
+                        : [t("aStat"), t("aPhoneL"), t("address")]
+          }
+          onDetails={(id) => navigate({ id })}
+          rows={rows.slice(0, limit).map((r) => {
+            const status = entityStatus(section, r),
+              cash = syntheticCash[text(r, "id")];
+            const badge =
+              section === "ratings" ? (
+                <Badge
+                  color={
+                    r.handled_at
+                      ? "success"
+                      : needsRatingFollowup(r)
+                        ? "warning"
+                        : "gray"
+                  }
+                >
+                  {t(ratingStatus(r))}
+                </Badge>
+              ) : (
+                <Badge color={status.color}>{t(status.label)}</Badge>
+              );
+            const stamp = (key: string) => formatDate(text(r, key), locale);
+            let values;
+            if (section === "support")
+              values = [
+                badge,
+                text(r, "order_id") || "—",
+                text(
+                  tables.profiles.find(
+                    (p) => p.id === (r.customer_id || r.user_id),
+                  ) || {},
+                  "name",
+                ) || "—",
+                stamp("created_at"),
+              ];
+            else if (section === "banners")
+              values = [
+                badge,
+                t(r.placement === "bottom" ? "aBBot" : "aBTop"),
+                [text(r, "link_type"), text(r, "link_value")]
+                  .filter(Boolean)
+                  .join(" · ") || t("aBNone"),
+                text(r, "sort") || "0",
+              ];
+            else if (section === "promotions")
+              values = [
+                badge,
+                text(r, "value") + (r.kind === "percent" ? "%" : " TJS"),
+                text(r, "min_order") || "—",
+                text(r, "max_uses") || "—",
+              ];
+            else if (section === "ratings")
+              values = [
+                badge,
+                text(r, "comment") || t("aNoCmt"),
+                ratingStore(r),
+                r.store_stars != null ? text(r, "store_stars") + " ★" : "—",
+                r.driver_stars != null ? text(r, "driver_stars") + " ★" : "—",
+              ];
+            else if (section === "drivers")
+              values = [
+                <>
+                  {badge}{" "}
+                  <Badge
+                    color={
+                      isLive(r) ? (isBusy(r) ? "warning" : "success") : "gray"
+                    }
+                  >
+                    {t(
+                      isLive(r)
+                        ? isBusy(r)
+                          ? "aBusy"
+                          : "aOnlineL"
+                        : "aOfflineL",
+                    )}
+                  </Badge>
+                  {!!r.accept_blocked && (
+                    <Badge color="error">{t("aBlocked")}</Badge>
+                  )}
+                </>,
+                text(r, "phone") || t("aDrvNoPh"),
+                <>
+                  {stamp("last_seen")}
+                  {isLive(r) && (
+                    <p>
+                      {locationFresh(r) ? stamp("loc_updated") : t("aNoLoc")}
+                    </p>
+                  )}
+                </>,
+                <>
+                  {(cash ?? "—") +
                     " / " +
                     (number(r, "cash_limit") || 1000) +
-                    " TJS",
-                ]
-              : []),
-          ],
-        }))}
-      />
-      {!rows.length && (
-        <Card>
-          <p>{t("aNoRes")}</p>
-        </Card>
-      )}
+                    " TJS"}
+                  {cashExceeded(r, cash) && (
+                    <Badge color="warning">{t("aOver")}</Badge>
+                  )}
+                </>,
+              ];
+            else if (section === "customers")
+              values = [
+                badge,
+                text(r, "phone") || "—",
+                text(r, "email") || "—",
+              ];
+            else
+              values = [
+                <>
+                  {badge}{" "}
+                  <Badge color={r.is_open ? "success" : "gray"}>
+                    {t(r.is_open ? "aOpenN" : "aClosedN")}
+                  </Badge>
+                </>,
+                text(r, "phone") || "—",
+                text(r, "address") || "—",
+              ];
+            return {
+              id: text(r, "id"),
+              name:
+                text(r, "name") ||
+                text(r, "title") ||
+                text(r, "code") ||
+                text(r, "subject") ||
+                text(r, "order_id") ||
+                text(r, "id"),
+              values,
+              identity: ["drivers", "customers"].includes(section)
+                ? ("person" as const)
+                : ["restaurants", "banners"].includes(section)
+                  ? ("merchant" as const)
+                  : undefined,
+              image:
+                text(
+                  r,
+                  section === "restaurants"
+                    ? "logo_url"
+                    : section === "banners"
+                      ? "image_url"
+                      : "avatar_url",
+                ) || undefined,
+              updated: section === "ratings" ? stamp("created_at") : undefined,
+            };
+          })}
+        />
+      </section>
       {rows.length > limit && (
-        <Button variant="outline" onClick={() => setLimit(limit + 30)}>
+        <Button
+          size="lg"
+          variant="outline"
+          onClick={() => setLimit(limit + 30)}
+        >
           {t("xMore")}
         </Button>
       )}

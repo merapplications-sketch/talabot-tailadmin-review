@@ -675,7 +675,9 @@
     "aContact": "Связаться",
     "aDrvRate": "Курьер",
     "aStoreRate": "Магазин",
-    "aNoCmt": "без комментария"
+    "aNoCmt": "без комментария",
+    "entityEmail": "Эл. почта",
+    "ticketSubject": "Тема"
   },
   "en": {
     "ratingComment": "Comment",
@@ -1353,6 +1355,8 @@
     "aContact": "Contact",
     "aDrvRate": "Courier",
     "aStoreRate": "Store",
-    "aNoCmt": "no comment"
+    "aNoCmt": "no comment",
+    "entityEmail": "Email",
+    "ticketSubject": "Subject"
   }
 }

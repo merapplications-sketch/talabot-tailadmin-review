@@ -8,6 +8,7 @@ import {sections} from '../src/components/talabot/native/b-shell/data';
 import {TooltipProvider} from '../src/components/ui/tooltip';
 import en from '../src/messages/en.json';import ru from '../src/messages/ru.json';import tg from '../src/messages/tg.json';
 import '../src/app/globals.css';
+import './fonts/outfit';
 const readLocale=()=>{const value=localStorage.getItem('ux02-native:locale');return value&&['en','ru','tg'].includes(value)?value:'en'};
 const keys=['tO','tS','tD','tU','tH','tG','tR','tB','tP','tY','tL','tF'];
 for(const [lang,messages] of Object.entries({en,ru,tg})){messages.sidebar.groups.menu=lang==='en'?'Operations':lang==='tg'?'Амалиёт':'Операции';Object.assign(messages.sidebar.items,Object.fromEntries(sections.map((section,i)=>['native_'+section,(dictionary[lang==='en'?'en':'ru'] as Record<string,string>)[keys[i]]+(section==='texts'?' / '+messages.talabot.settings:'')])))}

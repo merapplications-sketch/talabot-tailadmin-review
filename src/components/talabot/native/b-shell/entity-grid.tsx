@@ -18,6 +18,7 @@ export function NativeGrid({
     name: string;
     values: ReactNode[];
     identity?: "person" | "merchant";
+    image?: string;
     event?: string;
     unread?: boolean;
     updated?: string;
@@ -28,8 +29,6 @@ export function NativeGrid({
   onDetails: (id: string) => void;
 }) {
   const t = useTranslations("workspace");
-  const demoPersonImage = undefined,
-    demoMerchantImage = undefined;
   return (
     <>
       <div className="hidden overflow-x-auto xl:block">
@@ -57,11 +56,7 @@ export function NativeGrid({
                       <IdentityImage
                         name={r.name}
                         person={r.identity === "person"}
-                        src={
-                          r.identity === "person"
-                            ? demoPersonImage
-                            : demoMerchantImage
-                        }
+                        src={r.image}
                       />
                     )}
                     <span>
@@ -132,11 +127,7 @@ export function NativeGrid({
                 <IdentityImage
                   name={r.name}
                   person={r.identity === "person"}
-                  src={
-                    r.identity === "person"
-                      ? demoPersonImage
-                      : demoMerchantImage
-                  }
+                  src={r.image}
                 />
               )}
               <h2 className="text-lg font-semibold break-words">{r.name}</h2>
