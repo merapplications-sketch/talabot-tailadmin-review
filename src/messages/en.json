@@ -1145,6 +1145,10 @@
     "noEvents": "No journey events are recorded in this sample.",
     "created": "Created",
     "contact": "Contact",
-    "amounts": "Saved amounts · TJS"
+    "amounts": "Saved amounts · TJS",
+    "notes": "Scope & calculation",
+    "demo": "Demo data · saved sample",
+    "walletRecorded": "Wallet amount · saved record",
+    "subCall": "If an item is unavailable: call the customer"
   }
 }

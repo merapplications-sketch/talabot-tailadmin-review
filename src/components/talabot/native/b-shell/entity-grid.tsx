@@ -122,7 +122,7 @@ export function NativeGrid({
                 <OrderStatusBadge value={r.orderStatus} />
               </div>
             )}
-            <div className="tp-identity mb-4">
+            <div className="tp-identity mb-2">
               {r.identity && (
                 <IdentityImage
                   name={r.name}
@@ -130,26 +130,30 @@ export function NativeGrid({
                   src={r.image}
                 />
               )}
-              <h2 className="text-lg font-semibold break-words">{r.name}</h2>
+              <h2 className="min-w-0 flex-1 text-base! font-semibold break-words">
+                {r.name}
+              </h2>{" "}
+              <Action
+                kind="details"
+                label={t("details") + " " + r.name}
+                onClick={() => onDetails(r.id)}
+              />
             </div>
             {r.updated && (
               <p className="mb-3 text-sm text-gray-500">{r.updated}</p>
             )}
-            <dl className="space-y-3">
+            <dl className="space-y-2 text-sm">
               {r.values.map((v, i) => (
                 <div className="flex flex-wrap justify-between gap-2" key={i}>
                   <dt className="text-gray-500 dark:text-gray-400">
                     {headers[i]}
                   </dt>
-                  <dd className="break-words">{v}</dd>
+                  <dd className="min-w-0 text-end font-medium break-words text-gray-800 dark:text-gray-200">
+                    {v}
+                  </dd>
                 </div>
               ))}
             </dl>
-            <Action
-              kind="details"
-              label={t("details") + " " + r.name}
-              onClick={() => onDetails(r.id)}
-            />
           </article>
         ))}
       </div>

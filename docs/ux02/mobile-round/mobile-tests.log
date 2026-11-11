@@ -1,0 +1,9 @@
+PASS compact search and accessible closed filter dialog trigger
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and native retain list, active chips and both responsive presentations
+7 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS missing call translation, saved wallet label, cash collected field, saved invoice and contact/journey retained; SSR only.

@@ -36,13 +36,13 @@ export function Card({
   children: ReactNode;
 }) {
   return (
-    <BCard className="rounded-2xl shadow-theme-xs">
+    <BCard size="sm" className="gap-3 rounded-2xl shadow-theme-xs sm:gap-5">
       {title && (
         <CardHeader>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
       )}
-      <CardContent className="space-y-4">{children}</CardContent>
+      <CardContent className="space-y-2 sm:space-y-4">{children}</CardContent>
     </BCard>
   );
 }
@@ -55,8 +55,8 @@ export function Pair({
 }) {
   return (
     <Field orientation="horizontal">
-      <FieldTitle>{label}</FieldTitle>
-      <FieldContent>{children}</FieldContent>
+      <FieldTitle className="font-normal text-gray-500 dark:text-gray-400">{label}</FieldTitle>
+      <FieldContent className="min-w-0 font-medium text-gray-800 dark:text-gray-200">{children}</FieldContent>
     </Field>
   );
 }
@@ -81,7 +81,7 @@ export function Action({
   return (
     <Button
       type="button"
-      variant="outline"
+      variant={kind === "details" ? "ghost" : "outline"}
       size={compact ? "icon-lg" : "lg"}
       aria-label={label}
       title={label}

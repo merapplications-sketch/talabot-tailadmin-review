@@ -32,7 +32,7 @@ export default function AppHeader({
         <div className="flex w-full items-center justify-between gap-2 border-b border-gray-200 px-3 py-3 sm:gap-4 xl:justify-normal xl:border-b-0 xl:px-0 xl:py-4 dark:border-gray-800">
           <Button
             variant="outline"
-            size="icon"
+            size="icon-lg"
             className="text-gray-500 lg:size-11 dark:text-gray-400"
             onClick={toggleSidebar}
             aria-label={t("toggleSidebar")}
@@ -50,7 +50,7 @@ export default function AppHeader({
 
           <Button
             variant="ghost"
-            size="icon"
+            size="icon-lg"
             onClick={toggleApplicationMenu}
             aria-label={t("toggleMenu")}
             className="text-gray-700 xl:hidden dark:text-gray-400"

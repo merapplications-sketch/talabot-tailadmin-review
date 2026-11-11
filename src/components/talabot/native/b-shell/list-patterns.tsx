@@ -207,11 +207,11 @@ export function OrdersPresentation({
             </Button>
           </form>
         </div>
-                {filterError && (
-                  <p role="alert" className="w-full text-red-500">
-                    {t("invalidRange")}
-                  </p>
-                )}
+        {filterError && (
+          <p role="alert" className="w-full text-red-500">
+            {t("invalidRange")}
+          </p>
+        )}
         <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
           <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
             <DialogTitle>{t("filters")}</DialogTitle>
@@ -323,7 +323,6 @@ export function OrdersPresentation({
                     ? "Local sample only. Zone data is unavailable in A."
                     : "Только локальная выборка. Данные зон отсутствуют в A."}
                 </p>
-
               </div>
               <Button size="lg" variant="outline" onClick={onReset}>
                 {t("reset")}
@@ -483,17 +482,18 @@ export function OrdersPresentation({
                 key={o.id}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
-                  <h2 className="text-lg font-semibold">{o.id}</h2>
-                  <OrderStatusBadge value={o.status} />
+                  <h2 className="text-base! font-semibold">{o.id}</h2>
+                  <div className="flex min-w-0 items-center gap-1">
+                    <OrderStatusBadge value={o.status} />
+                    {details(o)}
+                  </div>
                 </div>
-                <div className="tp-identity mt-3">
+                <div className="tp-identity mt-1 text-sm">
                   <IdentityImage name={o.merchant} src={o.merchantImage} />
                   <p className="font-medium">{o.merchant}</p>
                 </div>
-                <p className="mt-1 text-sm text-gray-500">
-                  {date(o.created)} · {t("merchant")}
-                </p>
-                <dl className="mt-5 space-y-3 text-sm">
+                <p className="mt-1 text-sm text-gray-500">{date(o.created)}</p>
+                <dl className="mt-2! gap-2! text-sm">
                   {[
                     [t("pickup"), o.pickup],
                     [t("delivery"), o.deliveryZone],
@@ -503,30 +503,16 @@ export function OrdersPresentation({
                     [nativeT("uFinM"), o.extra],
                   ].map(([k, v]) => (
                     <div
-                      className={`min-w-0 ${k === t("pickup") || k === t("delivery") ? "col-span-2" : ""}`}
+                      className={`min-w-0 ${k === t("pickup") || k === t("delivery") ? "col-span-2 flex! items-baseline gap-2" : ""}`}
                       key={k}
                     >
                       <dt className="text-gray-500 dark:text-gray-400">{k}</dt>
                       <dd className="font-medium break-words text-gray-800 dark:text-gray-200">
-                        {k === t("driver") ? (
-                          <span className="tp-identity">
-                            <IdentityImage
-                              name={v}
-                              person
-                              src={o.driverImage || undefined}
-                            />
-                            <span>{v}</span>
-                          </span>
-                        ) : (
-                          v
-                        )}
+                        {v}
                       </dd>
                     </div>
                   ))}
                 </dl>
-                <div className="mt-4 flex justify-end border-t border-gray-100 pt-2 dark:border-gray-800">
-                  {details(o)}
-                </div>
               </article>
             ))}
           </div>

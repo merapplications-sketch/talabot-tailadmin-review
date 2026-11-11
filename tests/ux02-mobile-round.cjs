@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const {load,wrap,React}=require('./ux02-composition-ssr.cjs');
+const Details=load('src/components/talabot/native/order-details').default;
+const {tables}=load('src/components/talabot/native/domain');
+const dict=require('../src/components/talabot/native/dictionary.json').en;
+const order=tables.orders.find(o=>o.id==='ord0');
+const html=wrap(React.createElement(Details,{order:{...order,substitution:'call'},t:k=>dict[k]||k,back(){}}));
+assert(!html.includes('ySub_call'));
+assert(html.includes('If an item is unavailable: call the customer'));
+assert(html.includes('Wallet amount · saved record'));
+assert(!html.includes('Money received'));
+for(const token of ['125.00 TJS','120.00 TJS','10.00 TJS','5.00 TJS','order-journey','order-invoice','tel:'])assert(html.includes(token),token);
+const cash=wrap(React.createElement(Details,{order:{...order,payment:'cash',status:'delivered',cash_collected:123.45},t:k=>dict[k]||k,back(){}}));
+assert(cash.includes('Money received'));assert(cash.includes('123.45 TJS'));
+console.log('PASS missing call translation, saved wallet label, cash collected field, saved invoice and contact/journey retained; SSR only.');

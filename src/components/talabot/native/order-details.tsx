@@ -91,10 +91,10 @@ export default function OrderDetails({ order: o, t, back }: Props) {
     );
   };
   const party = (label: string, row: Row | undefined, name?: string) => (
-    <BCard className="rounded-2xl shadow-theme-xs">
+    <BCard size="sm" className="gap-1 rounded-2xl shadow-theme-xs">
       <CardDescription>{label}</CardDescription>
       <CardContent className="flex items-start justify-between gap-3">
-        <p className="min-w-0 text-base font-semibold break-words text-gray-800 dark:text-gray-200">
+        <p className="min-w-0 text-sm font-semibold break-words text-gray-800 dark:text-gray-200">
           {name || text(row || {}, "name") || "—"}
         </p>
         {row?.phone ? (
@@ -118,7 +118,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
     </BCard>
   );
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 sm:space-y-4">
       {assigning && (
         <AssignmentDialog order={o} t={t} close={() => setAssigning(false)} />
       )}
@@ -257,7 +257,13 @@ export default function OrderDetails({ order: o, t, back }: Props) {
               .join(", ")}
           </p>
         )}
-        {!!o.substitution && <p>{t("ySub_" + text(o, "substitution"))}</p>}
+        {!!o.substitution && (
+          <p>
+            {text(o, "substitution") === "call"
+              ? ownerT("subCall")
+              : t("ySub_" + text(o, "substitution"))}
+          </p>
+        )}
       </Card>
       <section data-testid="order-invoice">
         <Card title={ownerT("invoice")}>
@@ -361,7 +367,15 @@ export default function OrderDetails({ order: o, t, back }: Props) {
       </section>
       <Card title={t("uFinT")}>
         <Pair label={t("uFinM")}>{t(text(o, "payment"))}</Pair>
-        <Pair label={t("uFinGot")}>
+        <Pair
+          label={
+            f.wallet
+              ? ownerT("walletRecorded")
+              : f.cash
+                ? t("uFinGot")
+                : t("uFinM")
+          }
+        >
           {f.cash
             ? f.delivered
               ? f.collected == null
@@ -405,15 +419,15 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         {f.dead && f.online && <p>{t("uFinCardNo")}</p>}
         {number(o, "tip") > 0 && (
           <Pair label={t("uFinTip")}>
-            {money(number(o, "tip"))} —{" "}
-            {t(
+            {money(number(o, "tip"))}
+            <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">{t(
               f.delivered ? "uFinTipOk" : f.dead ? "uFinTipNo" : "uFinTipWait",
-            )}
+            )}</span>
           </Pair>
         )}
         <Pair label={t("uFinCom") + " (" + number(o, "commission_pct") + "%)"}>
-          {money(f.commission)} —{" "}
-          {t(f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait")}
+          {money(f.commission)}
+          <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">{t(f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait")}</span>
         </Pair>
       </Card>
       <Card>

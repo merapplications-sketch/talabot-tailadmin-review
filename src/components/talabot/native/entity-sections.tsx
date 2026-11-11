@@ -1185,7 +1185,7 @@ export default function EntitySections({
           )}
         </Button>
       )}
-      <section className={panel}>
+      <section className="min-w-0 xl:rounded-2xl xl:border xl:border-gray-200 xl:bg-white xl:p-6 dark:xl:border-gray-800 dark:xl:bg-white/3">
         <NativeGrid
           firstHeader={t(
             section === "ratings"

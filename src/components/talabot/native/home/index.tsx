@@ -1,4 +1,10 @@
 "use client";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
@@ -21,7 +27,6 @@ import { Shell } from "../../workspace";
 import AnalyticsDashboard, {
   Card,
   Note,
-  DataTable,
   AnalyticsPeriod,
 } from "../../analytics";
 import {
@@ -58,6 +63,14 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
       setDraft(next);
     }
   };
+  const notes = (children: React.ReactNode) => (
+    <Accordion>
+      <AccordionItem value="scope">
+        <AccordionTrigger className="py-2">{ownerT("notes")}</AccordionTrigger>
+        <AccordionContent keepMounted>{children}</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
   return (
     <Shell title={h("title")}>
       <SummaryCards
@@ -88,11 +101,11 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
           },
         ]}
       />
-      <p className="text-sm text-gray-500">{t("nativeScope")}</p>
+      {notes(<Note>{t("nativeScope")}</Note>)}
 
       <nav
         aria-label={ownerT("shortcuts")}
-        className="grid grid-cols-2 gap-3 sm:grid-cols-3"
+        className="grid grid-cols-2 gap-2 sm:grid-cols-3"
         data-testid="home-shortcuts"
       >
         {[
@@ -107,7 +120,7 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
             key={section}
             size="lg"
             variant="outline"
-            className="h-auto min-h-14 justify-start gap-3 text-start whitespace-normal"
+            className="h-auto min-h-11 justify-start gap-2 text-start whitespace-normal"
             onClick={() => href("/" + section)}
           >
             <Icon className="shrink-0 text-brand-500" />
@@ -119,16 +132,21 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
         <p className="text-lg font-semibold">
           {h("attentionCount", { count: attention.length })}
         </p>
-        <Note>{h("attentionRule")}</Note>
-        {!attention.length && <Note>{h("attentionEmpty")}</Note>}
+        {notes(<Note>{h("attentionRule")}</Note>)}
+
         <OperationalAlerts t={t} navigate={navigate} compact />
       </Card>
       <AnalyticsDashboard overview />
       <Card title={h("rankings")} id="home-ranking-period">
-        <Note>{h("source")}</Note>
-        <Note>
-          {h("snapshot")}: {snapshot} · {h("scope")}
-        </Note>
+        <p className="text-sm text-gray-500">{ownerT("demo")}</p>
+        {notes(
+          <>
+            <Note>{h("source")}</Note>
+            <Note>
+              {h("snapshot")}: {snapshot} · {h("scope")}
+            </Note>
+          </>,
+        )}
         <AnalyticsPeriod
           period={period}
           choosePeriod={choosePeriod}
@@ -150,51 +168,60 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12">
           <Card title={h("restaurants")} id="home-restaurants">
-            <DataTable
-              headers={[h("name"), h("completed"), h("sales")]}
-              rows={rank.restaurants.slice(0, 5).map((row) => [
-                <Button
-                  key={row.id}
-                  size="lg"
-                  variant="ghost"
-                  title={row.name}
-                  onClick={() =>
-                    navigate({ section: "restaurants", id: row.id })
-                  }
-                >
-                  <span className="block max-w-xs truncate">{row.name}</span>
-                </Button>,
-                fmt(row.completed),
-                row.sales === null ? "—" : fmt(row.sales),
-              ])}
-            />
+            <ul className="divide-y divide-gray-100 dark:divide-gray-800">
+              {rank.restaurants.slice(0, 5).map((row) => (
+                <li key={row.id} className="py-2">
+                  <Button
+                    variant="ghost"
+                    className="h-auto min-h-11 w-full justify-start px-0 text-start whitespace-normal"
+                    onClick={() =>
+                      navigate({ section: "restaurants", id: row.id })
+                    }
+                  >
+                    {row.name}
+                  </Button>
+                  <dl className="mt-1 grid grid-cols-2 gap-3 text-sm">
+                    <div>
+                      <dt className="text-gray-500">{h("completed")}</dt>
+                      <dd className="font-semibold">{fmt(row.completed)}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-gray-500">{h("sales")}</dt>
+                      <dd className="font-semibold">
+                        {row.sales === null ? "—" : fmt(row.sales)}
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
+              ))}
+            </ul>
             {!rank.restaurants.length && <Note>{h("empty")}</Note>}
-            <Note>{h("salesMethod")}</Note>
+            {notes(<Note>{h("salesMethod")}</Note>)}
           </Card>
         </div>
         <div className="col-span-12">
           <Card title={h("items")} id="home-items">
-            <DataTable
-              headers={[h("item"), h("quantity")]}
-              rows={rank.items.slice(0, 5).map((row) => [
-                <Button
-                  key={row.storeId + row.id}
-                  size="lg"
-                  variant="ghost"
-                  title={row.name + " · " + row.storeName}
-                  onClick={() =>
-                    navigate({ section: "restaurants", id: row.storeId })
-                  }
-                >
-                  <span className="block max-w-xs truncate">
-                    {row.name} · {row.storeName}
-                  </span>
-                </Button>,
-                fmt(row.quantity),
-              ])}
-            />
+            <ul className="divide-y divide-gray-100 dark:divide-gray-800">
+              {rank.items.slice(0, 5).map((row) => (
+                <li key={row.storeId + row.id} className="py-2">
+                  <Button
+                    variant="ghost"
+                    className="h-auto min-h-11 w-full justify-start px-0 text-start whitespace-normal"
+                    onClick={() =>
+                      navigate({ section: "restaurants", id: row.storeId })
+                    }
+                  >
+                    {row.name}
+                  </Button>
+                  <p className="text-sm text-gray-500">{row.storeName}</p>
+                  <p className="mt-1 text-sm">
+                    {h("quantity")}: <strong>{fmt(row.quantity)}</strong>
+                  </p>
+                </li>
+              ))}
+            </ul>
             {!rank.items.length && <Note>{h("empty")}</Note>}
-            <Note>{h("itemMethod")}</Note>
+            {notes(<Note>{h("itemMethod")}</Note>)}
             {rank.omittedItems > 0 && (
               <Note>{h("omitted", { count: rank.omittedItems })}</Note>
             )}
