@@ -13,11 +13,6 @@ import {
   DollarIcon,
   PieChartIcon,
   MovingBoxIcon,
-  TruckDeliveryIcon,
-  CartIcon,
-  ChatIcon,
-  StarIcon,
-  BarChartIcon,
 } from "@/icons";
 import SummaryCards from "../b-shell/summary-cards";
 import { metrics } from "../domain";
@@ -103,31 +98,6 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
       />
       {notes(<Note>{t("nativeScope")}</Note>)}
 
-      <nav
-        aria-label={ownerT("shortcuts")}
-        className="grid grid-cols-2 gap-2 sm:grid-cols-3"
-        data-testid="home-shortcuts"
-      >
-        {[
-          { section: "orders", label: t("tO"), Icon: BoxIcon },
-          { section: "drivers", label: t("tD"), Icon: TruckDeliveryIcon },
-          { section: "restaurants", label: t("tS"), Icon: CartIcon },
-          { section: "support", label: t("tH"), Icon: ChatIcon },
-          { section: "ratings", label: t("tR"), Icon: StarIcon },
-          { section: "reports", label: h("reports"), Icon: BarChartIcon },
-        ].map(({ section, label, Icon }) => (
-          <Button
-            key={section}
-            size="lg"
-            variant="outline"
-            className="h-auto min-h-11 justify-start gap-2 text-start whitespace-normal"
-            onClick={() => href("/" + section)}
-          >
-            <Icon className="shrink-0 text-brand-500" />
-            {label}
-          </Button>
-        ))}
-      </nav>
       <Card title={h("attention")} id="home-attention">
         <p className="text-lg font-semibold">
           {h("attentionCount", { count: attention.length })}

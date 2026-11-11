@@ -59,6 +59,26 @@ function Pair({
     </dl>
   );
 }
+function DetailSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <Card>
+      <Accordion>
+        <AccordionItem value="details">
+          <AccordionTrigger>{title}</AccordionTrigger>
+          <AccordionContent keepMounted>
+            <div className="space-y-3">{children}</div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </Card>
+  );
+}
 import {
   tables,
   text,
@@ -171,7 +191,7 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         )}
       </Card>
       <section data-testid="order-journey">
-        <Card title={ownerT("journey")}>
+        <DetailSection title={ownerT("journey")}>
           {events.length ? (
             <ol className="space-y-5 border-s-2 border-brand-500 ps-5">
               {events.map((e, i) => (
@@ -215,14 +235,14 @@ export default function OrderDetails({ order: o, t, back }: Props) {
               )}
             </Pair>
           )}
-        </Card>
+        </DetailSection>
       </section>
       <div className="grid gap-4 lg:grid-cols-3">
         {party(t("aStoreL"), store)}
         {party(t("aDrvL"), driver)}
         {party(t("aClient"), client)}
       </div>
-      <Card title={t("address")}>
+      <DetailSection title={t("address")}>
         <div className="flex items-start justify-between gap-3">
           <p className="min-w-0 font-medium break-words">
             {text(o, "address")}
@@ -264,9 +284,9 @@ export default function OrderDetails({ order: o, t, back }: Props) {
               : t("ySub_" + text(o, "substitution"))}
           </p>
         )}
-      </Card>
+      </DetailSection>
       <section data-testid="order-invoice">
-        <Card title={ownerT("invoice")}>
+        <DetailSection title={ownerT("invoice")}>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             {ownerT("amounts")} · #{text(o, "id")}
           </p>
@@ -363,9 +383,9 @@ export default function OrderDetails({ order: o, t, back }: Props) {
               {number(o, "points_earned")} · {money(number(o, "cashback"))}
             </Pair>
           )}
-        </Card>
+        </DetailSection>
       </section>
-      <Card title={t("uFinT")}>
+      <DetailSection title={t("uFinT")}>
         <Pair label={t("uFinM")}>{t(text(o, "payment"))}</Pair>
         <Pair
           label={
@@ -420,16 +440,26 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         {number(o, "tip") > 0 && (
           <Pair label={t("uFinTip")}>
             {money(number(o, "tip"))}
-            <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">{t(
-              f.delivered ? "uFinTipOk" : f.dead ? "uFinTipNo" : "uFinTipWait",
-            )}</span>
+            <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">
+              {t(
+                f.delivered
+                  ? "uFinTipOk"
+                  : f.dead
+                    ? "uFinTipNo"
+                    : "uFinTipWait",
+              )}
+            </span>
           </Pair>
         )}
         <Pair label={t("uFinCom") + " (" + number(o, "commission_pct") + "%)"}>
           {money(f.commission)}
-          <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">{t(f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait")}</span>
+          <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">
+            {t(
+              f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait",
+            )}
+          </span>
         </Pair>
-      </Card>
+      </DetailSection>
       <Card>
         <Accordion>
           <AccordionItem value="aChatL">

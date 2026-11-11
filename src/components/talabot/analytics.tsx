@@ -672,7 +672,7 @@ export default function AnalyticsDashboard({
           />
         </Card>
       </div>
-      {!overview && (
+      {
         <div className="col-span-12 xl:col-span-5">
           <Card title={t("target")} id="monthly-target">
             <Note>{t("example")}</Note>
@@ -699,7 +699,7 @@ export default function AnalyticsDashboard({
             />
           </Card>
         </div>
-      )}
+      }
     </div>
   );
 }

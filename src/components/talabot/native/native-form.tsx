@@ -177,14 +177,14 @@ export default function NativeForm({
       >
         <DialogContent
           showCloseButton={false}
-          className="max-h-[90vh] w-full overflow-hidden p-0 sm:max-w-2xl"
+          className="max-h-[90dvh] w-full overflow-hidden p-0 sm:max-w-2xl"
         >
           <DialogClose
             render={
               <Button
                 variant="ghost"
                 size="icon-lg"
-                className="absolute inset-e-3 top-3"
+                className="absolute inset-e-3 top-3 z-10 bg-white dark:bg-gray-900"
                 disabled={pending}
                 aria-label={t("aClose")}
               >
@@ -192,9 +192,13 @@ export default function NativeForm({
               </Button>
             }
           />
-          <ScrollArea scrollbars="vertical" className="max-h-[90vh]">
+          <ScrollArea
+            scrollbars="vertical"
+            className="min-h-0"
+            viewportClassName="max-h-[90dvh] overscroll-contain"
+          >
             <div className="p-6 sm:p-8">
-              <DialogHeader className="gap-1 sm:gap-2">
+              <DialogHeader className="gap-1 pe-12 sm:gap-2">
                 <DialogTitle className="text-xl font-semibold text-gray-800 sm:text-2xl dark:text-white/90">
                   {title}
                 </DialogTitle>

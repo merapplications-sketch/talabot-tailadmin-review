@@ -194,30 +194,37 @@ export default function NativeAdmin() {
                       {t("nativeSource")}
                     </h2>
                   </div>
-                  <AnalyticsDashboard />
                   <div className="col-span-12" data-testid="b-summary-scope">
                     <SummaryCards
                       cards={[
                         {
                           key: "orders",
+                          onClick: () =>
+                            navigate({ section: "orders", id: "" }),
                           label: bT("activeOrders"),
                           value: "24",
                           Icon: BoxIcon,
                         },
                         {
                           key: "drivers",
+                          onClick: () =>
+                            navigate({ section: "drivers", id: "" }),
                           label: bT("availableDrivers"),
                           value: "12",
                           Icon: TruckDeliveryIcon,
                         },
                         {
                           key: "restaurants",
+                          onClick: () =>
+                            navigate({ section: "restaurants", id: "" }),
                           label: bT("openRestaurants"),
                           value: "18",
                           Icon: CartIcon,
                         },
                         {
                           key: "customers",
+                          onClick: () =>
+                            navigate({ section: "customers", id: "" }),
                           label: bT("customers"),
                           value: "3,782",
                           Icon: UsersIcon,
@@ -225,6 +232,7 @@ export default function NativeAdmin() {
                       ]}
                     />
                   </div>
+                  <AnalyticsDashboard />
                 </section>
               </Shell>
             ) : state.section === "notifications" ? (

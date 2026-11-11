@@ -1,3 +1,8 @@
+import {
+  InputGroup,
+  InputGroupInput,
+  InputGroupAddon,
+} from "@/components/ui/input-group";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
@@ -180,31 +185,38 @@ export function OrdersPresentation({
               onSearch(query.trim());
             }}
           >
-            <label className="min-w-0 flex-1 text-sm sm:w-75">
-              {t("search")}
-              <input
-                className={input}
-                ref={inputRef}
-                type="search"
-                value={query}
-                onChange={(e) => onSearch(e.target.value)}
-                placeholder={nativeT("uOq")}
-              />
-            </label>
-            <Button type="submit" size="icon-lg" aria-label={t("search")}>
-              <SearchIcon aria-hidden="true" />
-            </Button>
-            <Button
-              type="button"
-              variant="outline"
-              size="icon-lg"
-              aria-label={t("moreFilters")}
-              aria-haspopup="dialog"
-              aria-expanded={filtersOpen}
-              onClick={() => setFiltersOpen(true)}
-            >
-              <FilterIcon aria-hidden="true" />
-            </Button>
+            <div className="min-w-0 flex-1 sm:w-96">
+              <label htmlFor="order-search" className="sr-only">
+                {t("search")}
+              </label>
+              <InputGroup>
+                <InputGroupAddon>
+                  <SearchIcon aria-hidden="true" />
+                </InputGroupAddon>
+                <InputGroupInput
+                  id="order-search"
+                  ref={inputRef}
+                  type="search"
+                  value={query}
+                  onChange={(e) => onSearch(e.target.value)}
+                  placeholder={nativeT("uOq")}
+                />
+                <InputGroupAddon align="inline-end" className="pe-0">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon-lg"
+                    className="shrink-0 text-brand-500 dark:text-brand-400"
+                    aria-label={t("moreFilters")}
+                    aria-haspopup="dialog"
+                    aria-expanded={filtersOpen}
+                    onClick={() => setFiltersOpen(true)}
+                  >
+                    <FilterIcon aria-hidden="true" />
+                  </Button>
+                </InputGroupAddon>
+              </InputGroup>
+            </div>
           </form>
         </div>
         {filterError && (

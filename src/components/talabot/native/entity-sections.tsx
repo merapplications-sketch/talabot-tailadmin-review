@@ -1,3 +1,4 @@
+import { IdentityImage } from "../integrated-review/identity";
 import { CallIcon, MapIcon, StarIcon, AlertIcon, BoxIcon } from "@/icons";
 import SummaryCards from "./b-shell/summary-cards";
 import {
@@ -593,7 +594,17 @@ export default function EntitySections({
       return (
         <div className="space-y-4">
           {back}
-          <Card title={text(row, "name")}>
+          <Card>
+            <div className="flex items-center gap-3">
+              <IdentityImage
+                name={text(row, "name")}
+                src={text(row, "avatar_url") || undefined}
+                person
+              />
+              <h2 className="min-w-0 flex-1 text-lg font-semibold text-gray-800 dark:text-white/90">
+                {text(row, "name")}
+              </h2>
+            </div>
             <p>
               <Badge color={entityStatus(section, row).color}>
                 {t(entityStatus(section, row).label)}
@@ -608,11 +619,14 @@ export default function EntitySections({
               )}
             </p>
             {!!row.phone && (
-              <>
-                <span>{text(row, "phone")}</span>
+              <div className="flex items-center justify-between gap-3">
+                <span className="min-w-0 font-medium">
+                  {text(row, "phone")}
+                </span>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   size="icon-lg"
+                  className="text-success-600 dark:text-success-400 shrink-0"
                   nativeButton={false}
                   aria-label={t("aCall") + ": " + text(row, "phone")}
                   title={t("aCall") + ": " + text(row, "phone")}
@@ -620,7 +634,7 @@ export default function EntitySections({
                 >
                   <CallIcon aria-hidden="true" />
                 </Button>
-              </>
+              </div>
             )}
             {!!row.accept_blocked && (
               <p className="text-error-500">{t("aBlocked")}</p>
@@ -640,45 +654,47 @@ export default function EntitySections({
             <p>
               {t("aSeenL")}: {formatDate(text(row, "last_seen"), locale)}
             </p>
-            <MutationAction
-              label={t("aDrvA")}
-              t={t}
-              operation={() => mutations.setDriverStatus(row.id, "approved")}
-            />
-            <MutationAction
-              label={t("aDrvS")}
-              t={t}
-              operation={() => mutations.setDriverStatus(row.id, "suspended")}
-            />
-            <MutationAction
-              label={t(row.accept_blocked ? "aAllow" : "aBlock")}
-              t={t}
-              operation={() =>
-                mutations.setDriverBlocked(row.id, !row.accept_blocked)
-              }
-            />
-            {syntheticCash[text(row, "id")] != null ? (
+            <div className="flex flex-wrap gap-2">
               <MutationAction
-                label={t("aSettle")}
-                confirm={
-                  t("aSettleQ") +
-                  " " +
-                  syntheticCash[text(row, "id")].toFixed(2) +
-                  " TJS?"
-                }
+                label={t("aDrvA")}
                 t={t}
-                operation={() => mutations.settleCash(row.id)}
+                operation={() => mutations.setDriverStatus(row.id, "approved")}
               />
-            ) : (
-              <Button
-                variant="outline"
-                disabled
-                title={t("nativeCashMissing")}
-                size="lg"
-              >
-                {t("aSettle")}
-              </Button>
-            )}
+              <MutationAction
+                label={t("aDrvS")}
+                t={t}
+                operation={() => mutations.setDriverStatus(row.id, "suspended")}
+              />
+              <MutationAction
+                label={t(row.accept_blocked ? "aAllow" : "aBlock")}
+                t={t}
+                operation={() =>
+                  mutations.setDriverBlocked(row.id, !row.accept_blocked)
+                }
+              />
+              {syntheticCash[text(row, "id")] != null ? (
+                <MutationAction
+                  label={t("aSettle")}
+                  confirm={
+                    t("aSettleQ") +
+                    " " +
+                    syntheticCash[text(row, "id")].toFixed(2) +
+                    " TJS?"
+                  }
+                  t={t}
+                  operation={() => mutations.settleCash(row.id)}
+                />
+              ) : (
+                <Button
+                  variant="outline"
+                  disabled
+                  title={t("nativeCashMissing")}
+                  size="lg"
+                >
+                  {t("aSettle")}
+                </Button>
+              )}
+            </div>
           </Card>
           <NativeForm
             title={t("aLimP")}
@@ -704,13 +720,26 @@ export default function EntitySections({
       return (
         <div className="space-y-4">
           {back}
-          <Card title={text(row, "name")}>
+          <Card>
+            <div className="flex items-center gap-3">
+              <IdentityImage
+                name={text(row, "name")}
+                src={text(row, "avatar_url") || undefined}
+                person
+              />
+              <h2 className="min-w-0 flex-1 text-lg font-semibold text-gray-800 dark:text-white/90">
+                {text(row, "name")}
+              </h2>
+            </div>
             {!!row.phone && (
-              <>
-                <span>{text(row, "phone")}</span>
+              <div className="flex items-center justify-between gap-3">
+                <span className="min-w-0 font-medium">
+                  {text(row, "phone")}
+                </span>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   size="icon-lg"
+                  className="text-success-600 dark:text-success-400 shrink-0"
                   nativeButton={false}
                   aria-label={t("aCall") + ": " + text(row, "phone")}
                   title={t("aCall") + ": " + text(row, "phone")}
@@ -718,9 +747,9 @@ export default function EntitySections({
                 >
                   <CallIcon aria-hidden="true" />
                 </Button>
-              </>
+              </div>
             )}
-            <p>{text(row, "email")}</p>
+
             <Pair label={t("xCuReg")}>
               {formatDate(text(row, "created_at"), locale)}
             </Pair>
@@ -745,39 +774,46 @@ export default function EntitySections({
                 </Pair>
               ))}
           </Card>
-          <NativeForm
-            title={t("xWalAdj")}
-            operation={(r) => mutations.walletAdjust(row.id, r.amount, r.note)}
-            validate={validateWallet}
-            fields={[
-              { key: "amount", label: "xWalAmt", type: "number" },
-              { key: "note", label: "xWalNote", maxLength: 200 },
-            ]}
-            t={t}
-          />
-          <NativeForm
-            title={t(row.banned_at ? "xUnban" : "xBan")}
-            operation={(r) =>
-              mutations.setBan(row.id, !row.banned_at, r.reason)
-            }
-            fields={reason}
-            validate={(r) =>
-              !row.banned_at && text(r, "reason").trim().length < 3
-                ? "err_note_required"
-                : null
-            }
-            confirm={row.banned_at ? undefined : t("xBanQ")}
-            t={t}
-          />
-          <NativeForm
-            title={t("xPhChg")}
-            operation={(r) =>
-              mutations.setCustomerPhone(row.id, r.phone, r.reason)
-            }
-            validate={validatePhone}
-            fields={[{ key: "phone", label: "xPhNew", type: "tel" }, ...reason]}
-            t={t}
-          />
+          <Card>
+            <NativeForm
+              title={t("xWalAdj")}
+              operation={(r) =>
+                mutations.walletAdjust(row.id, r.amount, r.note)
+              }
+              validate={validateWallet}
+              fields={[
+                { key: "amount", label: "xWalAmt", type: "number" },
+                { key: "note", label: "xWalNote", maxLength: 200 },
+              ]}
+              t={t}
+            />
+            <NativeForm
+              title={t(row.banned_at ? "xUnban" : "xBan")}
+              operation={(r) =>
+                mutations.setBan(row.id, !row.banned_at, r.reason)
+              }
+              fields={reason}
+              validate={(r) =>
+                !row.banned_at && text(r, "reason").trim().length < 3
+                  ? "err_note_required"
+                  : null
+              }
+              confirm={row.banned_at ? undefined : t("xBanQ")}
+              t={t}
+            />
+            <NativeForm
+              title={t("xPhChg")}
+              operation={(r) =>
+                mutations.setCustomerPhone(row.id, r.phone, r.reason)
+              }
+              validate={validatePhone}
+              fields={[
+                { key: "phone", label: "xPhNew", type: "tel" },
+                ...reason,
+              ]}
+              t={t}
+            />
+          </Card>
           {history(row, "customer_id")}
         </div>
       );
@@ -1216,7 +1252,7 @@ export default function EntitySections({
                     : section === "drivers"
                       ? [t("aStat"), t("aPhoneL"), t("aSeenL"), t("aCashH")]
                       : section === "customers"
-                        ? [t("aStat"), t("aPhoneL"), t("entityEmail")]
+                        ? [t("aStat"), t("aPhoneL"), t("xCuReg")]
                         : [t("aStat"), t("aPhoneL"), t("address")]
           }
           onDetails={(id) => navigate({ id })}
@@ -1321,7 +1357,7 @@ export default function EntitySections({
               values = [
                 badge,
                 text(r, "phone") || "—",
-                text(r, "email") || "—",
+                formatDate(text(r, "created_at"), locale),
               ];
             else
               values = [
