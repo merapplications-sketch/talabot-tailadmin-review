@@ -1,0 +1,21 @@
+{
+  "source_commit": "bc29472d1d326941dee652359dd37ed49231ba1b",
+  "artifact_commit": "9e55ef78de1cab04d6fde777e9b23ae2109ae404",
+  "deployment": {
+    "id": "appgdep_6af46cd37b7481918e991a6c870f4f2e",
+    "project_id": "appgprj_6af46bae3784819199ee675d8335f5cc",
+    "title": "TALABOT — Mobile corrections review",
+    "version_id": "appgprj_6af46bae3784819199ee675d8335f5cc~appgver_2cbd40601e188191a359892b4b78bafa",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://talabot-ux02-mobile-review.alwarikahtan.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6af46bae3784819199ee675d8335f5cc",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-11T13:26:02.992034+00:00"
+  },
+  "access": "Cloud browser observed Sign in required. Audience unchanged.",
+  "visual_status": "NOT TESTED at320/390/1440 or actual Safari; owner images before only. No after screenshots available."
+}
