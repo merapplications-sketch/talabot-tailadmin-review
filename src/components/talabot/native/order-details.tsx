@@ -181,7 +181,7 @@ export default function OrderDetails({
           </p>
         )}
         {!!o.scheduled_for && (
-          <Pair label={t("ySched")}>{text(o, "scheduled_for")}</Pair>
+          <Pair label={t("ySched")}>{formatDate(text(o, "scheduled_for"), locale)}</Pair>
         )}
         {!!o.group_id && <Pair label={t("yGrp")}>{text(o, "group_id")}</Pair>}
         {canAssign(o) ? (

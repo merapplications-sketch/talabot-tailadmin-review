@@ -1103,7 +1103,13 @@
     "disabled": "Operational notification delivery, payments and account permissions are unavailable in this preview.",
     "notfound": "Sample not found",
     "report": "Daily operational summary",
-    "return": "Back"
+    "return": "Back",
+    "notificationHeading": "Notification / order",
+    "merchantHeading": "Restaurant / store",
+    "lastSeen": "Last seen / location update",
+    "driverHeading": "Courier",
+    "phoneHeading": "Phone",
+    "cashHeading": "Cash on hand"
   },
   "nativeHome": {
     "title": "Home",

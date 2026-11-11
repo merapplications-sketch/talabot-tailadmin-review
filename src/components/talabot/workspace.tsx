@@ -1,4 +1,5 @@
 "use client";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
@@ -139,7 +140,9 @@ function Grid({
   headers,
   remember,
   firstHeader,
+  notificationActions = false,
 }: {
+  notificationActions?: boolean;
   firstHeader?: string;
   rows: Row[];
   headers: string[];
@@ -213,7 +216,7 @@ function Grid({
                 ))}
                 <td className="p-4">
                   <Link
-                    className="text-brand-500"
+                    className={notificationActions ? buttonVariants({variant: "ghost", size: "lg", className: "text-brand-700! dark:text-brand-400!"}) : "text-brand-500"}
                     href={r.href}
                     onClick={remember}
                   >
@@ -274,7 +277,7 @@ function Grid({
               ))}
             </dl>
             <Link
-              className="mt-5 inline-flex min-h-11 items-center text-brand-500"
+              className={notificationActions ? buttonVariants({variant: "ghost", size: "lg", className: "mt-5 text-brand-700! dark:text-brand-400!"}) : "mt-5 inline-flex min-h-11 items-center text-brand-500"}
               href={r.href}
               onClick={remember}
             >
@@ -800,15 +803,16 @@ export function NotificationsPage({
                 <p className="mb-4">
                   {c.noticeTime}: {item.order.updated}
                 </p>
-                <button
-                  className={button}
+                <Button
+                  size="lg"
+                  className="bg-brand-700! hover:bg-brand-800! dark:bg-brand-700! dark:hover:bg-brand-800!"
                   disabled={read.includes(id)}
                   onClick={() => mark(id)}
                 >
                   {read.includes(id) ? t("read") : t("mark")}
-                </button>
+                </Button>
                 <Link
-                  className="ms-4 text-brand-500"
+                  className={buttonVariants({variant: "ghost", size: "lg", className: "ms-4 text-brand-700! dark:text-brand-400!"})}
                   href={`/orders/${item.order.id}?returnTo=${encodeURIComponent(`/notifications/${id}?${qs}`)}`}
                   onClick={remember}
                 >
@@ -852,7 +856,9 @@ export function NotificationsPage({
           )}
           <section className={panel}>
             <Grid
-              headers={[t("name"), t("status")]}
+              notificationActions
+              firstHeader={t("notificationHeading")}
+              headers={[t("merchantHeading"), t("status")]}
               remember={remember}
               rows={filtered.slice((page - 1) * 8, page * 8).map((n) => ({
                 id: n.id,

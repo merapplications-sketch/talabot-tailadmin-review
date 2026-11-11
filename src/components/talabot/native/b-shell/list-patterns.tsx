@@ -396,8 +396,7 @@ export function OrdersPresentation({
       ) : (
         <>
           <div className="hidden overflow-x-auto rounded-2xl border border-gray-200 bg-white xl:block dark:border-gray-800 dark:bg-white/3">
-            {/* B basic-tables/table-three cell rhythm; retain full text and
-                existing 44px actions instead of truncating long locales. */}
+            {/* B bounded identity summary; full names remain in order details. */}
             <table
               className="w-full text-left text-sm"
               data-testid="orders-table"
@@ -447,13 +446,13 @@ export function OrdersPresentation({
                           promotedLabel={ownerT("activeBanner")}
                           onPromotedClick={() => onBanner(o.bannerId)}
                         />
-                        <span>{o.merchant}</span>
+                        <span className="line-clamp-2 w-40 shrink-0" title={o.merchant}>{o.merchant}</span>
                       </div>
                       <p className="mt-1 text-xs text-gray-500">
                         {t("merchant")}
                       </p>
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="min-w-40 px-4 py-3">
                       {o.pickup}
                       <span className="block text-gray-500">
                         → {o.deliveryZone}
@@ -466,7 +465,7 @@ export function OrdersPresentation({
                           person
                           src={o.driverImage || undefined}
                         />
-                        <span>{o.driver || t("unassigned")}</span>
+                        <span className="line-clamp-2 w-32 shrink-0" title={o.driver || t("unassigned")}>{o.driver || t("unassigned")}</span>
                       </div>
                     </td>
                     <td className="min-w-36 px-4 py-3">

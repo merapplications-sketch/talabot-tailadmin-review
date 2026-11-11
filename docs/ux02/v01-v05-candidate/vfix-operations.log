@@ -1,0 +1,18 @@
+PASS stale heartbeat excluded at 120 seconds
+PASS busy driver excluded without new business rules
+PASS eligible approved driver retained
+PASS unassigned alert only after original 90-second threshold
+PASS assigned or terminal orders not assignable
+PASS low rating resolved excluded
+PASS support reply rules
+PASS assignment preserves original RPC arguments; no success claimed
+PASS wallet zero never reaches transport
+PASS wallet amount rounding and trimmed note match source
+PASS customer phone normalization and reason match source
+PASS invalid staff permission rejected before transport
+PASS driver limit maximum preserved
+PASS negative refund rejected
+PASS rejected ticket requires reason
+PASS happy-hour overnight row contract preserved
+PASS native mutation service has no production transport
+17 new affected checks passed; no server RBAC or production success claim.

@@ -1432,7 +1432,7 @@ export default function EntitySections({
       )}
       <section className="min-w-0 xl:rounded-2xl xl:border xl:border-gray-200 xl:bg-white xl:p-6 dark:xl:border-gray-800 dark:xl:bg-white/3">
         <NativeGrid
-          firstHeader={t(
+          firstHeader={section === "drivers" ? wt("driverHeading") : t(
             section === "ratings"
               ? "aOpenO"
               : section === "banners"
@@ -1459,7 +1459,7 @@ export default function EntitySections({
                         t("aCourierRate"),
                       ]
                     : section === "drivers"
-                      ? [t("aStat"), t("aPhoneL"), t("aSeenL"), t("aCashH")]
+                      ? [wt("status"), wt("phoneHeading"), wt("lastSeen"), wt("cashHeading")]
                       : section === "customers"
                         ? [t("aStat"), t("aPhoneL"), t("xCuReg")]
                         : [t("aStat"), t("aPhoneL"), t("address")]
