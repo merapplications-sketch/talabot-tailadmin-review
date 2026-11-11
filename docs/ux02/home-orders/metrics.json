@@ -1,0 +1,49 @@
+{
+  "before_v11_saved_evidence": {
+    "bodyFont": "Outfit, sans-serif",
+    "first": {
+      "bottom": 891.09375,
+      "height": 164.5,
+      "y": 726.59375
+    },
+    "fonts": "loaded",
+    "fullyVisible": true,
+    "language": "en",
+    "outfit": true,
+    "overflow": false,
+    "scrollY": 0,
+    "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site/?section=orders",
+    "viewport": [
+      1363,
+      936
+    ]
+  },
+  "after_orders_fresh": {
+    "viewport": [
+      1363,
+      936
+    ],
+    "scrollY": 0,
+    "source_commit": "197fa24ab0f65a901d26008910a3c3f6e8d9a522",
+    "environment": "managed local Chromium",
+    "first": {
+      "y": 445,
+      "bottom": 609.5,
+      "height": 164.5
+    },
+    "second": {
+      "y": 609.5,
+      "bottom": 774.5
+    },
+    "third": {
+      "y": 774.5,
+      "bottom": 939.5
+    },
+    "complete_records": 2,
+    "home_full_order_lists": 0,
+    "orders_A_metrics": 0,
+    "orders_B_analytics": 0,
+    "bodyFont": "Outfit, sans-serif",
+    "outfit": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "source_commit": "197fa24ab0f65a901d26008910a3c3f6e8d9a522",
+  "branch": "review/ux02-home-orders-20261111",
+  "baseline_source": "48592032e774a965c33e0e7c00dce4c9ecb3f94f",
+  "baseline_evidence": "3dd3edfe49416b9d0099c666adc9fbd0eed128f0",
+  "scope": "Independent Home / Orders / full B Reports. Synthetic data only. Existing v11 unchanged.",
+  "viewport_tested": [
+    1363,
+    936
+  ],
+  "not_tested": [
+    "320",
+    "390",
+    "1440",
+    "Safari",
+    "iPhone"
+  ],
+  "assets": {
+    "index.html": "893b419a6e4fec0e6bc15b9e73a4657b8da3030770c5330178186e2eb7d83d27",
+    "assets/outfit-c8e7a734-D6ftewdU.woff2": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12",
+    "assets/outfit-f37fa50e-BMnJGVZj.woff2": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091",
+    "assets/react-apexcharts.esm-n4jaNY-b.js": "8cf7864e6811382ef6ef82db8fdb9c64d2adb6e127f2c24b9d39065824d42f8d",
+    "assets/talabot-original-MIjVQ1p2.png": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367",
+    "assets/index-PWk3ss1n.css": "fa53e34af8ccc36d38db3fe0a5f6692730abaadf05cfe8cc2b9a1b2cc8149f9f",
+    "assets/index-rKdRjMFn.js": "3e96e210a25bb86fc2316f5aa766fdd5032a5ae85cbec80329e45535ecb5067d"
+  }
+}

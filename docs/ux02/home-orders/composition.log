@@ -1,0 +1,9 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.

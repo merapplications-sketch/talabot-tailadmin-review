@@ -1,0 +1,8 @@
+PASS saved sample: 7 loaded, 1 delivered, 415 TJS, 2 units; historical records excluded
+PASS restaurant sales ranking differs from completed count and excludes other categories
+PASS quantity ranking uses sum, recorded name and store+item identity; no cancelled rows or catalog price
+PASS Dushanbe boundaries include full local day; creation date, not completion date
+PASS missing monetary values remain unknown and invalid item joins are counted, not fabricated
+PASS empty period shows no invented zero-valued rankings
+PASS period selector uses fixed sample date and validates custom ranges
+7 Home data checks passed (synthetic data, not HTTP/server QA).

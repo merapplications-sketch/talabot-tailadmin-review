@@ -1,0 +1,15 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS default Home contains exactly four A indicators, both rankings and no full Orders list or B analytics
+PASS Orders contains full management with search and filters, no Home cards or B analytics
+PASS Reports retains all original B analytics sections and B metrics without duplicating Orders
+PASS all twelve protected sections remain alongside Home and Reports
+PASS Home distinguishes completed count, saved totals and units, with explicit demo and snapshot labels
+5 route composition checks passed; SSR only.

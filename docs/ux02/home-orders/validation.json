@@ -1,0 +1,27 @@
+{
+  "source_commit": "197fa24ab0f65a901d26008910a3c3f6e8d9a522",
+  "build": "PASS",
+  "typescript": "PASS",
+  "affected_lint": "PASS",
+  "checks": {
+    "home_data": 7,
+    "navigation": 13,
+    "list_composition": 8,
+    "route_composition": 5,
+    "B_analytics_data": 12,
+    "operations_assignment_guards": 17
+  },
+  "total": 62,
+  "browser": "Chromium1363x936 local matching source/build",
+  "not_tested": [
+    "320",
+    "390",
+    "1440",
+    "Safari",
+    "iPhone",
+    "authenticated hosted runtime"
+  ],
+  "browser_custom_date_entry": "NOT VERIFIED: automation fill did not change displayed date; logic tested locally",
+  "prior_37_statuses_retained": true,
+  "FP16": "NOT STARTED"
+}
