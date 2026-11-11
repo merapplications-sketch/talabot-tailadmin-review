@@ -116,24 +116,24 @@ export default function OperationalAlerts({ t, navigate }: Props) {
         )
         .map((d) => (
           <Alert key={text(d, "id")} variant="warning">
-            <AlertTitle>{t("aOver")}</AlertTitle>
-            <AlertDescription>
-              <div className="flex flex-wrap justify-between gap-2">
-                <p>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <AlertTitle>{t("aOver")}</AlertTitle>
+                <AlertDescription>
                   {text(d, "name")} · {syntheticCash[text(d, "id")].toFixed(2)}{" "}
                   / {Number(d.cash_limit || 1000)} TJS
-                </p>
-                {d.accept_blocked ? (
-                  <p>{t("aBlocked")}</p>
-                ) : (
-                  <MutationAction
-                    label={t("aBlock")}
-                    t={t}
-                    operation={() => mutations.setDriverBlocked(d.id, true)}
-                  />
-                )}
+                </AlertDescription>
               </div>
-            </AlertDescription>
+              {d.accept_blocked ? (
+                <p>{t("aBlocked")}</p>
+              ) : (
+                <MutationAction
+                  label={t("aBlock")}
+                  t={t}
+                  operation={() => mutations.setDriverBlocked(d.id, true)}
+                />
+              )}
+            </div>
           </Alert>
         ))}
       {assignment && (

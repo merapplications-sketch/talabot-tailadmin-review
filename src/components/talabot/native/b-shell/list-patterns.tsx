@@ -141,35 +141,39 @@ export function OrdersPresentation({
       className="space-y-4 text-gray-800 dark:text-gray-200"
       data-testid="orders-list"
     >
-      <div>
-        <h1 className="mb-2 text-title-sm font-semibold">{t("title")}</h1>
-        <p role="status" data-testid="result-count" className="text-sm">
-          {t("results", { count: resultCount })}
-        </p>
-      </div>
       <section className={panel} aria-label={t("filters")}>
-        <form
-          className="tp-order-search flex items-end gap-3"
-          onSubmit={(e) => {
-            e.preventDefault();
-            onSearch(query.trim());
-          }}
-        >
-          <label className="min-w-0 flex-1 text-sm">
-            {t("search")}
-            <input
-              className={input}
-              ref={inputRef}
-              type="search"
-              value={query}
-              onChange={(e) => onSearch(e.target.value)}
-              placeholder={nativeT("uOq")}
-            />
-          </label>
-          <Button type="submit" size="lg">
-            {t("search")}
-          </Button>
-        </form>
+        {/* B basic-tables/table-three header: title and search share one row
+            when space allows; the existing B panel owns the padding. */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 className="mb-2 text-title-sm font-semibold">{t("title")}</h1>
+            <p role="status" data-testid="result-count" className="text-sm">
+              {t("results", { count: resultCount })}
+            </p>
+          </div>
+          <form
+            className="tp-order-search flex w-full items-end gap-3 sm:w-auto"
+            onSubmit={(e) => {
+              e.preventDefault();
+              onSearch(query.trim());
+            }}
+          >
+            <label className="min-w-0 flex-1 text-sm sm:w-75">
+              {t("search")}
+              <input
+                className={input}
+                ref={inputRef}
+                type="search"
+                value={query}
+                onChange={(e) => onSearch(e.target.value)}
+                placeholder={nativeT("uOq")}
+              />
+            </label>
+            <Button type="submit" size="lg">
+              {t("search")}
+            </Button>
+          </form>
+        </div>
         <div className="tp-quick" data-testid="order-quick-filters">
           {["all", "pending", "preparing", "delivered"].map((value) => (
             <Button
@@ -184,103 +188,110 @@ export function OrdersPresentation({
             </Button>
           ))}
         </div>
-        <details className="tp-secondary-filters mt-3">
-          <summary className="cursor-pointer py-2 text-sm font-medium text-brand-500">
-            <span>{t("moreFilters")}</span> · {t(filters.sort || "newest")}
-          </summary>
-          <div className="tp-filter-grid mt-4 grid gap-3">
-            {(["start", "end"] as const).map((key) => (
-              <label className="min-w-0 text-sm" key={key}>
-                {t(key)}
-                <input
+        <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <details className="tp-secondary-filters min-w-0 sm:flex-1">
+            <summary className="cursor-pointer py-2 text-sm font-medium text-brand-500">
+              <span>{t("moreFilters")}</span> · {t(filters.sort || "newest")}
+            </summary>
+            <div className="tp-filter-grid mt-4 grid gap-3">
+              {(["start", "end"] as const).map((key) => (
+                <label className="min-w-0 text-sm" key={key}>
+                  {t(key)}
+                  <input
+                    className={input}
+                    type="date"
+                    value={filters[key]}
+                    onChange={(e) =>
+                      onFilters({ ...filters, [key]: e.target.value })
+                    }
+                  />
+                </label>
+              ))}
+            </div>
+            <label className="w-full min-w-0 text-sm sm:w-56">
+              {t("sort")}
+              <select
+                className={`${input} pr-10`}
+                aria-label={t("sort")}
+                value={filters.sort}
+                onChange={(e) =>
+                  onFilters({ ...filters, sort: e.target.value })
+                }
+              >
+                <option value="">—</option>
+                <option value="newest">{t("newest")}</option>
+                <option value="oldest">{t("oldest")}</option>
+              </select>
+            </label>
+            <div className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <label className="min-w-0 text-sm">
+                {t("statusLabel")}
+                <select
                   className={input}
-                  type="date"
-                  value={filters[key]}
-                  onChange={(e) =>
-                    onFilters({ ...filters, [key]: e.target.value })
-                  }
-                />
+                  aria-label={t("statusLabel")}
+                  value={status}
+                  onChange={(e) => onStatus(e.target.value)}
+                >
+                  <option value="all">{t("all")}</option>
+                  {statuses.map((value) => (
+                    <option key={value} value={value}>
+                      {nativeT(value)}
+                    </option>
+                  ))}
+                </select>
               </label>
-            ))}
-          </div>
-          <label className="w-full min-w-0 text-sm sm:w-56">
-            {t("sort")}
-            <select
-              className={`${input} pr-10`}
-              aria-label={t("sort")}
-              value={filters.sort}
-              onChange={(e) => onFilters({ ...filters, sort: e.target.value })}
-            >
-              <option value="">—</option>
-              <option value="newest">{t("newest")}</option>
-              <option value="oldest">{t("oldest")}</option>
-            </select>
-          </label>
-          <div className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <label className="min-w-0 text-sm">
-              {t("statusLabel")}
-              <select
-                className={input}
-                aria-label={t("statusLabel")}
-                value={status}
-                onChange={(e) => onStatus(e.target.value)}
-              >
-                <option value="all">{t("all")}</option>
-                {statuses.map((value) => (
-                  <option key={value} value={value}>
-                    {nativeT(value)}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="min-w-0 text-sm">
-              {t("merchant")}
-              <select
-                className={input}
-                aria-label={t("merchant")}
-                value={filters.store}
-                onChange={(e) =>
-                  onFilters({ ...filters, store: e.target.value })
-                }
-              >
-                <option value="">{t("all")}</option>
-                {tables.stores.map((row) => (
-                  <option key={text(row, "id")} value={text(row, "id")}>
-                    {text(row, "name")}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="min-w-0 text-sm">
-              {nativeT("uFinM")}
-              <select
-                className={input}
-                aria-label={nativeT("uFinM")}
-                value={filters.payment}
-                onChange={(e) =>
-                  onFilters({ ...filters, payment: e.target.value })
-                }
-              >
-                <option value="">{t("all")}</option>
-                {["cash", "wallet", "apple"].map((value) => (
-                  <option key={value} value={value}>
-                    {nativeT(value)}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <p className="text-sm">
-            {locale === "en"
-              ? "Local sample only. Zone data is unavailable in A."
-              : "Только локальная выборка. Данные зон отсутствуют в A."}
-          </p>
-          {filterError && (
-            <p role="alert" className="w-full text-red-500">
-              {t("invalidRange")}
+              <label className="min-w-0 text-sm">
+                {t("merchant")}
+                <select
+                  className={input}
+                  aria-label={t("merchant")}
+                  value={filters.store}
+                  onChange={(e) =>
+                    onFilters({ ...filters, store: e.target.value })
+                  }
+                >
+                  <option value="">{t("all")}</option>
+                  {tables.stores.map((row) => (
+                    <option key={text(row, "id")} value={text(row, "id")}>
+                      {text(row, "name")}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="min-w-0 text-sm">
+                {nativeT("uFinM")}
+                <select
+                  className={input}
+                  aria-label={nativeT("uFinM")}
+                  value={filters.payment}
+                  onChange={(e) =>
+                    onFilters({ ...filters, payment: e.target.value })
+                  }
+                >
+                  <option value="">{t("all")}</option>
+                  {["cash", "wallet", "apple"].map((value) => (
+                    <option key={value} value={value}>
+                      {nativeT(value)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <p className="text-sm">
+              {locale === "en"
+                ? "Local sample only. Zone data is unavailable in A."
+                : "Только локальная выборка. Данные зон отсутствуют в A."}
             </p>
-          )}
-        </details>
+            {filterError && (
+              <p role="alert" className="w-full text-red-500">
+                {t("invalidRange")}
+              </p>
+            )}
+          </details>
+          <Button size="lg" variant="outline" onClick={onReset}>
+            {t("reset")}
+          </Button>
+        </div>
         <div
           className="tp-active-filters flex flex-wrap gap-2"
           aria-label={t("activeFilters")}
@@ -307,11 +318,6 @@ export function OrdersPresentation({
                 ×
               </button>
             ))}
-        </div>
-        <div className="mt-2 flex flex-wrap items-end justify-between gap-2">
-          <Button size="lg" variant="outline" onClick={onReset}>
-            {t("reset")}
-          </Button>
         </div>
       </section>
       {loading ? (
