@@ -728,13 +728,14 @@ export default function EntitySections({
               t={t}
               operation={() => mutations.reopenRating(row.order_id)}
             />
-          ) : null}
-          <NativeForm
-            title={t("aResolveT")}
-            operation={(r) => mutations.resolveRating(row.order_id, r.note)}
-            fields={[{ key: "note", label: "aResNote", maxLength: 300 }]}
-            t={t}
-          />
+          ) : (
+            <NativeForm
+              title={t("aResolveT")}
+              operation={(r) => mutations.resolveRating(row.order_id, r.note)}
+              fields={[{ key: "note", label: "aResNote", maxLength: 300 }]}
+              t={t}
+            />
+          )}
         </div>
       );
   }
