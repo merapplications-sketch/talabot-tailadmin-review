@@ -1,5 +1,7 @@
 # UX-02 — version5 continuation handoff
 
+Latest continuation: [version7 support/rating handoff](../support-continuation/HANDOFF.md). This version5 report is retained as historical evidence.
+
 Status: PARTIAL IMPLEMENTATION / NOT ACCEPTED. Visual acceptance, mobile proof and matrix37 completeness remain open.
 
 - Repo: https://github.com/merapplications-sketch/talabot-tailadmin-review

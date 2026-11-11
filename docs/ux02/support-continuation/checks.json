@@ -18,5 +18,18 @@
   "affected_lint": "PASS 0 errors 0 warnings",
   "full_lint": "NOT RERUN: prior 47 warnings retained, no new full lint claim",
   "ui_changes": false,
-  "transport_changes": false
+  "transport_changes": false,
+  "ratings_states": {
+    "pass": 4,
+    "fail": 0,
+    "before_fix_failed": 1,
+    "scope": "Actual B server render; handled/unhandled action exclusivity and retained fields"
+  },
+  "total_distinct_batch_checks": 55,
+  "ratings_followup": {
+    "build": "PASS",
+    "typescript": "PASS",
+    "affected_lint": "PASS 0 errors 0 warnings",
+    "composition_regression": "8 PASS, repeated because EntitySections changed"
+  }
 }

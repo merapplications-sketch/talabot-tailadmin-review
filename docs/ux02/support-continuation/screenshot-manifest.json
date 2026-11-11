@@ -1,0 +1,134 @@
+[
+  {
+    "file": "screenshots/local-refund-confirm.jpg",
+    "sha256": "60e7e5be1b2663ae69438b63627e9192afb13353d6691e7ee3b45f38432f2d7b",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "local connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/local-reply-error.jpg",
+    "sha256": "c916ace47c9488da226e28ffeca87409639776dee2abdf8ca77c047af7cd984a",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "local connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/local-reply-reload.jpg",
+    "sha256": "446a215fd25e0358894075ee93b462029d844998591670b45fa65146807b348d",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "local connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v5-support-before.jpg",
+    "sha256": "bea55db11c3aaa28344c974dd237929b8484f10210a8c7d23ffb3308581a608c",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "4297dee6ae2948db720d24f604f31e0214264e51",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v6-customer-draft.jpg",
+    "sha256": "7a00fdc3b366f22f035aca2ce87805c9dfb0636910e7b14cdc61967261351ae2",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v6-home.jpg",
+    "sha256": "2923869325a34b8978c1729a398e8b694df7b59ae5e78ddcada016d508f3f1a1",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v6-rating-before.jpg",
+    "sha256": "7cf4b973833b5cb6dafa66d307c5b1631b7655e27ba74177cff80223f9095744",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v6-reply-error.jpg",
+    "sha256": "07769189e8f823e70311dbca20728436f8e48c72f9497c6ac593fd9bb86173c5",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v6-support-after.jpg",
+    "sha256": "0fe3200623ae130d6ba0416cbffd7cdc6929aa8afccbb092537d4e69e577ddca",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v7-home.jpg",
+    "sha256": "c179138d6248a87c9733d43ddb6b92526e7c996f454b16b2ae98f1ff507f58d9",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "adf0d32c688eebf00e8e376bab7913def02aae76",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v7-rating-after.jpg",
+    "sha256": "8f75b4918fa9fd34eb0b23eb5ac89a8dc5b8b028c8db36dfefed78df49babac9",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "adf0d32c688eebf00e8e376bab7913def02aae76",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  },
+  {
+    "file": "screenshots/v7-rating-draft.jpg",
+    "sha256": "69e790a66a06b99de5603cb2d9ae90850c00b3afa29f3325cc3ad14a66daea7d",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "source_commit": "adf0d32c688eebf00e8e376bab7913def02aae76",
+    "environment": "published connected Chromium",
+    "note": "No mobile or Safari claim"
+  }
+]

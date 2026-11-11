@@ -1,0 +1,43 @@
+{
+  "source_commit": "adf0d32c688eebf00e8e376bab7913def02aae76",
+  "support_commit": "6fd5aaf307b6311c8132a518a00bf616b4dd30db",
+  "previous_source_commit": "4297dee6ae2948db720d24f604f31e0214264e51",
+  "version": {
+    "id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_64cdb7b1c3bc81918a5d3cd4d809dff2",
+    "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+    "version_number": 7,
+    "source": {
+      "commit_sha": "8a41da25145b7be405ee2b24b0ff6cea049ff559"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000d190820aa0109c0e927e5208",
+      "content_hash": "sha256:4a688e247212ba0445f50c570d2de24c526ea2d91e46ae41ba229cbb23d1e43b",
+      "size_bytes": 13045760,
+      "file_count": 20
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6af3f296c0488191819a38a5ab3e3a42",
+    "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+    "title": "TALABOT UX-02 — Native B / Partial Review",
+    "version_id": "appgprj_6af33addc50481918ebbc6ca01125d15~appgver_64cdb7b1c3bc81918a5d3cd4d809dff2",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://talabot-ux02-native-b-review.alwarikahtan.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6af33addc50481918ebbc6ca01125d15",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-11T04:44:19.868452+00:00"
+  },
+  "artifact": {
+    "project_id": "appgprj_6af33addc50481918ebbc6ca01125d15",
+    "checkout_path": "/workspace/sites/talabot-ux02-native-b-review/.sites-checkout",
+    "commit_sha": "8a41da25145b7be405ee2b24b0ff6cea049ff559",
+    "archive": "/workspace/scratch/0fa906dd96a7/ux02-ratings-v7.tar.gz"
+  }
+}

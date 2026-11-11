@@ -1,0 +1,90 @@
+[
+  {
+    "case": "v6-public-build",
+    "viewport": [
+      1363,
+      936
+    ],
+    "script": "assets/index-R8HSBvQ2.js",
+    "root": 1,
+    "iframe": 0,
+    "search": 1,
+    "dialog": 0,
+    "pageWidth": 1348
+  },
+  {
+    "case": "local-support-search-back",
+    "result": "q=t1 retained through list/detail/back"
+  },
+  {
+    "case": "local-refusal-note",
+    "result": "refuse with empty note showed Enter the reason for the refusal; handler test proves no mutation"
+  },
+  {
+    "case": "local-refund-limit",
+    "input": 107,
+    "synthetic_room": 106,
+    "result": "error: refund more than allowed"
+  },
+  {
+    "case": "local-refund-confirm",
+    "input": 10,
+    "result": "dialog showed customer and10; cancel kept draft; explicit confirm returned preview_readonly"
+  },
+  {
+    "case": "local-decision-reload",
+    "result": "note QA synthetic resolution and refund10 retained; no dialog automatically open"
+  },
+  {
+    "case": "local-reply-reload",
+    "result": "QA reply retained after isolated refusal remained after close/reload/explicit reopen"
+  },
+  {
+    "case": "v6-public-reply-reload",
+    "result": "QA version6 isolated reply retained after refused send/reload/explicit reopen; dialog closed on reload"
+  },
+  {
+    "case": "v6-public-customer-draft",
+    "result": "explicit phone edit; refused save; reload/explicit reopen retained reason QA v6 unchanged customer draft"
+  },
+  {
+    "case": "v6-rating-before",
+    "order": "ord5",
+    "result": "handled row incorrectly showed both Reopen and Mark as resolved"
+  },
+  {
+    "case": "v7-public-build",
+    "viewport": [
+      1363,
+      936
+    ],
+    "script": "assets/index-DraiSfhG.js",
+    "dialogs": 0
+  },
+  {
+    "case": "v7-handled-rating",
+    "order": "ord5",
+    "result": "Reopen only; stars1/2, comment, previous note and order link retained; click returned isolated refusal"
+  },
+  {
+    "case": "v7-unhandled-rating",
+    "order": "ord4",
+    "result": "Resolve only; stars3/4; existing dialog opened explicitly"
+  },
+  {
+    "case": "v7-rating-draft",
+    "result": "QA version7 rating draft retained after refused save/reload/explicit reopen; dialog initially closed"
+  },
+  {
+    "case": "animation-observation",
+    "result": "one duplicate-selector attempt and one deadline while dialog was closing; state re-observed and hidden condition awaited. Failed attempts not counted as passes"
+  },
+  {
+    "case": "network-logs",
+    "result": "returned error sample contained extension metadata errors; full network interception unavailable; no zero-failures claim"
+  },
+  {
+    "case": "mobile-safari",
+    "result": "NOT TESTED320/390/1440 and real Safari; connected API lacks viewport resize; previous DevTools policy block not retried"
+  }
+]
