@@ -398,9 +398,10 @@ export function OrdersPresentation({
           <div className="hidden overflow-x-auto rounded-2xl border border-gray-200 bg-white xl:block dark:border-gray-800 dark:bg-white/3">
             {/* B bounded identity summary; full names remain in order details. */}
             <table
-              className="w-full text-left text-sm"
+              className="w-full table-fixed text-left text-sm"
               data-testid="orders-table"
             >
+              <colgroup><col className="w-[24%]" /><col className="w-[13%]" /><col className="w-[19%]" /><col className="w-[18%]" /><col className="w-[18%]" /><col className="w-[8%]" /></colgroup>
               <caption className="sr-only">{t("title")}</caption>
               <thead className="border-b border-gray-200 text-gray-500 dark:border-gray-800 dark:text-gray-400">
                 <tr>
@@ -410,11 +411,9 @@ export function OrdersPresentation({
                     "merchant",
                     "route",
                     "driver",
-                    "statusLabel",
-                    "total",
                     "details",
                   ].map((k) => (
-                    <th scope="col" key={k} className="px-4 py-3 font-medium">
+                    <th scope="col" key={k} className="px-3 py-3 font-medium">
                       {t(k)}
                     </th>
                   ))}
@@ -427,17 +426,20 @@ export function OrdersPresentation({
                     className="align-top even:bg-gray-50/70 dark:even:bg-gray-900/50"
                   >
                     <td
-                      className={`min-w-32 border-s-4 px-4 py-3 ${accent[o.status] || "border-s-gray-300!"}`}
+                      className={`border-s-4 px-3 py-3 ${accent[o.status] || "border-s-gray-300!"}`}
                     >
                       <p className="font-semibold">{o.id}</p>
+                      <div className="mt-2" aria-label={t("statusLabel")}><OrderStatusBadge value={o.status} /></div>
+                      <p className="mt-2 font-semibold tabular-nums"><span className="sr-only">{t("total")}: </span>{money(o.total)}</p>
+                      <p className="mt-1 text-xs text-gray-500">{date(o.updated)}</p>
                       <p className="mt-1 text-xs text-gray-500">
                         {date(o.created)}
                       </p>
                       <p className="mt-1 text-xs text-gray-500">{o.extra}</p>
                     </td>
-                    <td className="min-w-36 px-4 py-3">{o.customer}</td>
-                    <td className="px-4 py-3">
-                      <div className="tp-identity">
+                    <td className="px-3 py-3"><span className="line-clamp-2 break-words" title={o.customer}>{o.customer}</span></td>
+                    <td className="px-3 py-3">
+                      <div className="flex min-w-0 flex-col items-start gap-2">
                         <NativeIdentity
                           name={o.merchant}
                           src={o.merchantImage}
@@ -446,38 +448,29 @@ export function OrdersPresentation({
                           promotedLabel={ownerT("activeBanner")}
                           onPromotedClick={() => onBanner(o.bannerId)}
                         />
-                        <span className="line-clamp-2 w-40 shrink-0" title={o.merchant}>{o.merchant}</span>
+                        <span className="line-clamp-2 w-full break-words" title={o.merchant}>{o.merchant}</span>
                       </div>
                       <p className="mt-1 text-xs text-gray-500">
                         {t("merchant")}
                       </p>
                     </td>
-                    <td className="min-w-40 px-4 py-3">
+                    <td className="px-3 py-3">
                       {o.pickup}
                       <span className="block text-gray-500">
                         → {o.deliveryZone}
                       </span>
                     </td>
-                    <td className="px-4 py-3">
-                      <div className="tp-identity">
+                    <td className="px-3 py-3">
+                      <div className="flex min-w-0 flex-col items-start gap-2">
                         <IdentityImage
                           name={o.driver || t("unassigned")}
                           person
                           src={o.driverImage || undefined}
                         />
-                        <span className="line-clamp-2 w-32 shrink-0" title={o.driver || t("unassigned")}>{o.driver || t("unassigned")}</span>
+                        <span className="line-clamp-2 w-full break-words" title={o.driver || t("unassigned")}>{o.driver || t("unassigned")}</span>
                       </div>
                     </td>
-                    <td className="min-w-36 px-4 py-3">
-                      <OrderStatusBadge value={o.status} />
-                      <p className="mt-2 text-xs text-gray-500">
-                        {date(o.updated)}
-                      </p>
-                    </td>
-                    <td className="px-4 py-3 font-semibold whitespace-nowrap tabular-nums">
-                      {money(o.total)}
-                    </td>
-                    <td className="px-4 py-3">{details(o)}</td>
+                    <td className="px-3 py-3">{details(o)}</td>
                   </tr>
                 ))}
               </tbody>

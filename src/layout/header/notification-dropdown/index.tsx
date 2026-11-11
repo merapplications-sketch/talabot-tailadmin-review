@@ -85,9 +85,9 @@ export default function NotificationDropdown({items = notifications}: {items?: N
           </h5>
           <Button
             variant="ghost"
-            size="icon-xs"
+            size="icon-lg"
             onClick={() => setIsOpen(false)}
-            className="size-"
+            className="shrink-0"
             aria-label={t("close")}
           >
             <XIcon className="size-5" />

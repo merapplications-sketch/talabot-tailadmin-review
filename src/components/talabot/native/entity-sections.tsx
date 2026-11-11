@@ -1420,7 +1420,7 @@ export default function EntitySections({
         />
       )}
       {["restaurants", "banners", "promotions"].includes(section) && (
-        <Button size="lg" onClick={() => navigate({ id: "new" })}>
+        <Button size="lg" className={section === "restaurants" ? "bg-brand-700! hover:bg-brand-800! dark:bg-brand-700! dark:hover:bg-brand-800!" : undefined} onClick={() => navigate({ id: "new" })}>
           {t(
             section === "restaurants"
               ? "aAddS"
