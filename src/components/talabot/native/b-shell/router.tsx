@@ -7,7 +7,7 @@ interface RouteBridge {
   href: (href: string, replace?: boolean, scroll?: boolean) => void;
 }
 export const NativeRouteContext = createContext<RouteBridge>({
-  section: "orders",
+  section: "home",
   search: "",
   go: () => {},
   href: () => {},

@@ -3,11 +3,15 @@ import { listState } from "./domain";
 import { nativeHref } from "./b-route";
 export function useNativeNavigation() {
   const [state, setState] = useState(() => listState(location.search));
-  const savePosition = () =>
+  const savePosition = () => {
     sessionStorage.setItem(
       "ux02-native:scroll:" + location.search,
       String(scrollY),
     );
+    const current = listState(location.search);
+    if (current.section === "orders" && !current.id)
+      sessionStorage.setItem("ux02-native:orders-list", location.search);
+  };
   const restorePosition = () =>
     requestAnimationFrame(() =>
       requestAnimationFrame(() =>
@@ -64,10 +68,19 @@ export function useNativeNavigation() {
   }, []);
   const href = (url: string, replace = false, scroll = true) => {
     savePosition();
-    const next = nativeHref(url);
+    const requested = nativeHref(url);
+    const saved = sessionStorage.getItem("ux02-native:orders-list");
+    const resume =
+      state.section !== "orders" &&
+      requested === "?section=orders" &&
+      saved?.startsWith("?") &&
+      listState(saved).section === "orders" &&
+      !listState(saved).id;
+    const next = resume && saved ? saved : requested;
     window.history[replace ? "replaceState" : "pushState"]({}, "", next);
     setState(listState(next));
-    if (scroll) window.scrollTo(0, 0);
+    if (resume) restorePosition();
+    else if (scroll) window.scrollTo(0, 0);
   };
   return { state, navigate, back, href };
 }

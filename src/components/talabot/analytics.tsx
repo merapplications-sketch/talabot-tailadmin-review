@@ -19,7 +19,7 @@ const card =
   "text-gray-800 dark:text-gray-200 min-w-0 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 dark:border-gray-800 dark:bg-white/3";
 const input =
   "min-w-0 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-base dark:border-gray-700";
-function Card({
+export function Card({
   title,
   children,
   id,
@@ -37,7 +37,7 @@ function Card({
     </section>
   );
 }
-function Note({ children }: { children: React.ReactNode }) {
+export function Note({ children }: { children: React.ReactNode }) {
   return (
     <p className="my-3 text-sm text-gray-500 dark:text-gray-400">{children}</p>
   );
@@ -69,12 +69,12 @@ function Choices({
     </div>
   );
 }
-function DataTable({
+export function DataTable({
   headers,
   rows,
 }: {
   headers: string[];
-  rows: (string | number)[][];
+  rows: React.ReactNode[][];
 }) {
   return (
     <div className="max-w-full overflow-x-auto">
@@ -196,6 +196,103 @@ function Plot({
     </div>
   );
 }
+interface AnalyticsPeriodProps {
+  period: string;
+  choosePeriod: (period: string) => void;
+  range: { start: string; end: string };
+  draft: { start: string; end: string };
+  setDraft: (range: { start: string; end: string }) => void;
+  setRange: (range: { start: string; end: string }) => void;
+  error: boolean;
+  setError: (error: boolean) => void;
+  rangeError?: string;
+  min?: string;
+  max?: string;
+  validate?: (start: string, end: string) => boolean;
+}
+// Original B period UI, shared without changing the Reports defaults or rules.
+export function AnalyticsPeriod({
+  period,
+  choosePeriod,
+  range,
+  draft,
+  setDraft,
+  setRange,
+  error,
+  setError,
+  rangeError,
+  min = "2026-10-01",
+  max = data.SNAPSHOT,
+  validate = data.validRange,
+}: AnalyticsPeriodProps) {
+  const t = useTranslations("talabotAnalytics");
+  return (
+    <>
+      <Choices
+        label={t("custom")}
+        values={["today", "week", "month", "custom"].map((v) => ({
+          value: v,
+          label: t(v),
+        }))}
+        value={period}
+        onChange={choosePeriod}
+      />
+      {period === "custom" && (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (validate(draft.start, draft.end)) {
+              setRange(draft);
+              setError(false);
+            } else setError(true);
+          }}
+          className="flex flex-wrap items-end gap-3"
+        >
+          <label className="grid gap-1 text-sm">
+            {t("start")}
+            <input
+              className={input}
+              type="date"
+              min={min}
+              max={max}
+              value={draft.start}
+              onChange={(e) => setDraft({ ...draft, start: e.target.value })}
+            />
+          </label>
+          <label className="grid gap-1 text-sm">
+            {t("end")}
+            <input
+              className={input}
+              type="date"
+              min={min}
+              max={max}
+              value={draft.end}
+              onChange={(e) => setDraft({ ...draft, end: e.target.value })}
+            />
+          </label>
+          <button
+            className="rounded-lg bg-brand-500 px-4 py-2 text-sm text-white"
+            type="submit"
+          >
+            {t("apply")}
+          </button>
+        </form>
+      )}
+      {error && (
+        <p role="alert" className="text-error-600 mt-2 text-sm">
+          {rangeError ?? t("rangeError")}
+        </p>
+      )}
+      <Note>
+        {t("current")}:{" "}
+        <span data-testid="period-range">
+          {range.start} — {range.end}
+        </span>
+      </Note>
+    </>
+  );
+}
+
 export default function AnalyticsDashboard() {
   const t = useTranslations("talabotAnalytics");
   const locale = useLocale();
@@ -281,69 +378,16 @@ export default function AnalyticsDashboard() {
         <Card title={t("title")}>
           <Note>{t("sample")}</Note>
           {locale === "tg" && <Note>{t("languageNote")}</Note>}
-          <Choices
-            label={t("custom")}
-            values={["today", "week", "month", "custom"].map((v) => ({
-              value: v,
-              label: t(v),
-            }))}
-            value={period}
-            onChange={choosePeriod}
+          <AnalyticsPeriod
+            period={period}
+            choosePeriod={choosePeriod}
+            range={range}
+            draft={draft}
+            setDraft={setDraft}
+            setRange={setRange}
+            error={error}
+            setError={setError}
           />
-          {period === "custom" && (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (data.validRange(draft.start, draft.end)) {
-                  setRange(draft);
-                  setError(false);
-                } else setError(true);
-              }}
-              className="flex flex-wrap items-end gap-3"
-            >
-              <label className="grid gap-1 text-sm">
-                {t("start")}
-                <input
-                  className={input}
-                  type="date"
-                  min="2026-10-01"
-                  max={data.SNAPSHOT}
-                  value={draft.start}
-                  onChange={(e) =>
-                    setDraft({ ...draft, start: e.target.value })
-                  }
-                />
-              </label>
-              <label className="grid gap-1 text-sm">
-                {t("end")}
-                <input
-                  className={input}
-                  type="date"
-                  min="2026-10-01"
-                  max={data.SNAPSHOT}
-                  value={draft.end}
-                  onChange={(e) => setDraft({ ...draft, end: e.target.value })}
-                />
-              </label>
-              <button
-                className="rounded-lg bg-brand-500 px-4 py-2 text-sm text-white"
-                type="submit"
-              >
-                {t("apply")}
-              </button>
-            </form>
-          )}
-          {error && (
-            <p role="alert" className="text-error-600 mt-2 text-sm">
-              {t("rangeError")}
-            </p>
-          )}
-          <Note>
-            {t("current")}:{" "}
-            <span data-testid="period-range">
-              {range.start} — {range.end}
-            </span>
-          </Note>
         </Card>
       </div>
       <div className="col-span-12 xl:col-span-7">

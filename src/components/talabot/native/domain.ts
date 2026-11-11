@@ -95,7 +95,7 @@ export function parseLocation(message: string) {
 export function listState(search: string) {
   const p = new URLSearchParams(search);
   return {
-    section: p.get("section") || "orders",
+    section: p.get("section") || "home",
     query: p.get("q") || "",
     status: p.get("status") || "all",
     id: p.get("id") || "",

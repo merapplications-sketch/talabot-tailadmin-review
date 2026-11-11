@@ -10,10 +10,15 @@ import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Card } from "./primitives";
 import AssignmentDialog from "./assignment-dialog";
 interface Props {
+  compact?: boolean;
   t: (key: string) => string;
   navigate: (patch: { section?: string; id?: string; query?: string }) => void;
 }
-export default function OperationalAlerts({ t, navigate }: Props) {
+export default function OperationalAlerts({
+  t,
+  navigate,
+  compact = false,
+}: Props) {
   const [assignment, setAssignment] = useState<Row | null>(null),
     alerts = operationalAlerts(),
     approved = tables.profiles.filter((d) => d.driver_status === "approved"),
@@ -49,29 +54,31 @@ export default function OperationalAlerts({ t, navigate }: Props) {
       </div>
       {alerts.unassigned.length > 0 && (
         <Card title={t("aNoCourier")}>
-          {alerts.unassigned.map((o) => (
-            <div
-              key={text(o, "id")}
-              className="flex flex-wrap justify-between gap-2"
-            >
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() =>
-                  navigate({ section: "orders", id: text(o, "id") })
-                }
+          {(compact ? alerts.unassigned.slice(0, 5) : alerts.unassigned).map(
+            (o) => (
+              <div
+                key={text(o, "id")}
+                className="flex flex-wrap justify-between gap-2"
               >
-                #{text(o, "id")}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => setAssignment(o)}
-              >
-                {t("aAssign")}
-              </Button>
-            </div>
-          ))}
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() =>
+                    navigate({ section: "orders", id: text(o, "id") })
+                  }
+                >
+                  #{text(o, "id")}
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => setAssignment(o)}
+                >
+                  {t("aAssign")}
+                </Button>
+              </div>
+            ),
+          )}
         </Card>
       )}
       {alerts.ratings.length > 0 && (

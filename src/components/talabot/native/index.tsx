@@ -9,15 +9,7 @@ import {
 
 import SummaryCards from "./b-shell/summary-cards";
 import { OrdersPresentation } from "./b-shell/list-patterns";
-import {
-  BoxIcon,
-  DollarIcon,
-  PieChartIcon,
-  MovingBoxIcon,
-  TruckDeliveryIcon,
-  CartIcon,
-  UsersIcon,
-} from "@/icons";
+import { BoxIcon, TruckDeliveryIcon, CartIcon, UsersIcon } from "@/icons";
 
 import { Button } from "@/components/ui/button";
 import AdminLayout from "./b-shell/admin-layout";
@@ -26,17 +18,11 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useNativeNavigation } from "./navigation";
 import ThemeToggleButton from "@/layout/header/theme-toggler";
-import {
-  metrics,
-  readOrders,
-  findOrder,
-  secondaryFilter,
-  type Row,
-} from "./domain";
+import { readOrders, findOrder, secondaryFilter, type Row } from "./domain";
 import dictionary from "./dictionary.json";
 
 import { Card } from "./primitives";
-import OperationalAlerts from "./operational-alerts";
+import HomeDashboard from "./home";
 import OrderDetails from "./order-details";
 import EntitySections from "./entity-sections";
 import AnalyticsDashboard from "../analytics";
@@ -110,6 +96,7 @@ const extra = {
 export default function NativeAdmin() {
   const locale = useLocale(),
     lang = locale === "en" ? "en" : "ru",
+    homeT = useTranslations("nativeHome"),
     dict = dictionary[lang] as Record<string, string>,
     copy = extra[lang] as Record<string, string>;
   const bT = useTranslations("talabot");
@@ -166,8 +153,7 @@ export default function NativeAdmin() {
     sessionStorage.setItem("ux02-native:filters", JSON.stringify(filters));
     sessionStorage.setItem("ux02-native:limit", String(limit));
   }, [filters, limit]);
-  const m = metrics(),
-    order = findOrder(state.id),
+  const order = findOrder(state.id),
     filtered = secondaryFilter(rows, filters),
     visible = filtered.rows.slice(0, limit);
   return (
@@ -192,7 +178,56 @@ export default function NativeAdmin() {
               {t("nativeNotice")}
               {locale === "tg" ? " · Тарҷумаи амалиёт нопурра: RU" : ""}
             </p>
-            {state.section === "notifications" ? (
+            {state.section === "home" ? (
+              <HomeDashboard t={t} navigate={navigate} href={href} />
+            ) : state.section === "reports" ? (
+              <Shell title={homeT("reports")}>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {homeT("reportsNote")}
+                </p>
+                <section
+                  id="native-analytics"
+                  className="grid grid-cols-12 gap-4 md:gap-6"
+                >
+                  <div className="col-span-12">
+                    <h2 className="text-lg font-semibold">
+                      {t("nativeSource")}
+                    </h2>
+                  </div>
+                  <AnalyticsDashboard />
+                  <div className="col-span-12" data-testid="b-summary-scope">
+                    <SummaryCards
+                      cards={[
+                        {
+                          key: "orders",
+                          label: bT("activeOrders"),
+                          value: "24",
+                          Icon: BoxIcon,
+                        },
+                        {
+                          key: "drivers",
+                          label: bT("availableDrivers"),
+                          value: "12",
+                          Icon: TruckDeliveryIcon,
+                        },
+                        {
+                          key: "restaurants",
+                          label: bT("openRestaurants"),
+                          value: "18",
+                          Icon: CartIcon,
+                        },
+                        {
+                          key: "customers",
+                          label: bT("customers"),
+                          value: "3,782",
+                          Icon: UsersIcon,
+                        },
+                      ]}
+                    />
+                  </div>
+                </section>
+              </Shell>
+            ) : state.section === "notifications" ? (
               <NotificationsPage
                 id={state.id || undefined}
                 records={notices.records}
@@ -214,36 +249,6 @@ export default function NativeAdmin() {
                 )
               ) : (
                 <>
-                  <SummaryCards
-                    cards={[
-                      {
-                        key: "orders",
-                        label: t("aKOrd"),
-                        value: m.orders,
-                        Icon: BoxIcon,
-                      },
-                      {
-                        key: "revenue",
-                        label: t("aKRev"),
-                        value: m.revenue.toFixed(2) + " TJS",
-                        Icon: DollarIcon,
-                      },
-                      {
-                        key: "commission",
-                        label: t("aKCom"),
-                        value: m.commission.toFixed(2) + " TJS",
-                        Icon: PieChartIcon,
-                      },
-                      {
-                        key: "active",
-                        label: t("aKAct"),
-                        value: m.active,
-                        Icon: MovingBoxIcon,
-                      },
-                    ]}
-                  />
-                  <p className="text-sm text-gray-500">{t("nativeScope")}</p>
-                  <OperationalAlerts t={t} navigate={navigate} />
                   <OrdersPresentation
                     rows={visible}
                     t={t}
@@ -275,47 +280,6 @@ export default function NativeAdmin() {
                       window.scrollTo(0, 0);
                     }}
                   />
-                  <section
-                    id="native-analytics"
-                    className="grid grid-cols-12 gap-4 md:gap-6"
-                  >
-                    <div className="col-span-12">
-                      <h2 className="text-lg font-semibold">
-                        {t("nativeSource")}
-                      </h2>
-                    </div>
-                    <AnalyticsDashboard />
-                    <div className="col-span-12" data-testid="b-summary-scope">
-                      <SummaryCards
-                        cards={[
-                          {
-                            key: "orders",
-                            label: bT("activeOrders"),
-                            value: "24",
-                            Icon: BoxIcon,
-                          },
-                          {
-                            key: "drivers",
-                            label: bT("availableDrivers"),
-                            value: "12",
-                            Icon: TruckDeliveryIcon,
-                          },
-                          {
-                            key: "restaurants",
-                            label: bT("openRestaurants"),
-                            value: "18",
-                            Icon: CartIcon,
-                          },
-                          {
-                            key: "customers",
-                            label: bT("customers"),
-                            value: "3,782",
-                            Icon: UsersIcon,
-                          },
-                        ]}
-                      />
-                    </div>
-                  </section>
                   {qaTools && (
                     <details className="mb-3">
                       <summary>{t("nativeTest")}</summary>

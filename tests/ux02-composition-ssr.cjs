@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const ts=require('typescript'),React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
 const {NextIntlClientProvider}=require('next-intl');
-const root=process.cwd(),cache=new Map();
+const root=process.cwd(),cache=new Map(),browserLocation={search:""};
 const icon=(props)=>React.createElement('svg',props);
 const icons=new Proxy({}, {get:(_,name)=>name==='__esModule'?true:icon});
 const stored=new Map();
@@ -24,11 +24,13 @@ function load(file){
   if(name.startsWith('.'))return load(path.resolve(path.dirname(file),name));
   return require(name);
  };
- vm.runInNewContext(code,{module:mod,exports:mod.exports,require:localRequire,console,URL,URLSearchParams,sessionStorage:storage,localStorage:storage,location:{search:''},setTimeout,clearTimeout},{filename:file});
+ vm.runInNewContext(code,{module:mod,exports:mod.exports,require:localRequire,console,URL,URLSearchParams,sessionStorage:storage,localStorage:storage,location:browserLocation,setTimeout,clearTimeout},{filename:file});
  return mod.exports;
 }
 const messages=require('../src/messages/en.json');
 const dict=require('../src/components/talabot/native/dictionary.json').en;
+for(const [section,key] of Object.entries({orders:'tO',restaurants:'tS',drivers:'tD',customers:'tU',support:'tH',texts:'tG',ratings:'tR',banners:'tB',promotions:'tP',loyalty:'tY',log:'tL',staff:'tF'}))messages.sidebar.items['native_'+section]=dict[key];
+messages.sidebar.items.native_home=messages.nativeHome.title;messages.sidebar.items.native_reports=messages.nativeHome.reports;
 const {TooltipProvider}=load('src/components/ui/tooltip');
 const wrap=component=>renderToStaticMarkup(React.createElement(NextIntlClientProvider,{locale:'en',messages,timeZone:'Asia/Dushanbe'},React.createElement(TooltipProvider,null,component)));
 const {OrdersPresentation}=load('src/components/talabot/native/b-shell/list-patterns');
@@ -56,4 +58,4 @@ fs.writeFileSync(path.join(outputDir,'rendered-D.html'),html);
 fs.writeFileSync(path.join(outputDir,'rendered-B.html'),b);
 console.log(`${checks} server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.`);
 
-module.exports={load,wrap,React,storage};
+module.exports={load,wrap,React,storage,browserLocation};
