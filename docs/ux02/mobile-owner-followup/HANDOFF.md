@@ -20,7 +20,7 @@ Owner explicitly chose access without ChatGPT login for this synthetic preview o
 Build and TypeScript PASS. Existing size/module warnings remain.
 SSR composition, mobile-round, Home composition, list journeys, native operations, audit data and Home data PASS. Tests exercise synthetic/local contracts only.
 Actual shared Chrome viewport: 1363×936. Four Reports links clicked and corresponding route observed; search ord0 / details / return preserves q=ord0; popup opens and closes; collapsed invoice opens to 120 - 10 + 10 + 5 = saved 125 (no formula changed).
-Loyalty close X worked. Dialog viewport 842px, content 951px; keyboard focus reached footer with scrollTop109 and Close/Save visible. Browser wheel attempts did not move viewport; touch dragging NOT VERIFIED. Do not label the owner iPhone scrolling defect finally resolved.
+Loyalty close X worked. Dialog viewport 842px, content 951px; keyboard focus reached footer with scrollTop109 and Close/Save visible. Mouse dragging the scroll thumb also reached scrollTop109. Browser wheel attempts did not move viewport; iPhone touch dragging NOT VERIFIED. Do not label the owner iPhone scrolling defect finally resolved.
 320/390/1440 and real Safari: NOT TESTED. Browser surface provides no viewport resizing capability. Owner iPhone images are before evidence, not candidate-after QA.
 
 ## Protected matrix37

@@ -1,0 +1,16 @@
+{
+  "source_commit": "260e400c9ef3973592a62ecbad8fc6ac40906916",
+  "artifact_commit": "692edf2e82a2165692547e4150c93a4829061a12",
+  "site_id": "appgprj_6af473dde5908191b3dbf9f1b430ea78",
+  "version_id": "appgprj_6af473dde5908191b3dbf9f1b430ea78~appgver_7d4edfd539748191af7ef9a3c07d9bd7",
+  "version_number": 1,
+  "deployment_id": "appgdep_6af47626aad0819195823b473908c938",
+  "status": "succeeded",
+  "url": "https://talabot-ux02-mobile-owner-review.alwarikahtan.chatgpt.site/",
+  "public_browser_verified": true,
+  "access_mode": "public",
+  "access_revision": 2,
+  "owner_authorized_no_login": true,
+  "mobile_safari": "NOT TESTED",
+  "screenshots_viewport": "1363x936 Chromium"
+}
