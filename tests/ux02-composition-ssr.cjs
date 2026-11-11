@@ -5,7 +5,8 @@ const {NextIntlClientProvider}=require('next-intl');
 const root=process.cwd(),cache=new Map();
 const icon=(props)=>React.createElement('svg',props);
 const icons=new Proxy({}, {get:(_,name)=>name==='__esModule'?true:icon});
-const storage={getItem:()=>null,setItem:()=>{}};
+const stored=new Map();
+const storage={getItem:k=>stored.get(k)??null,setItem:(k,v)=>stored.set(k,v),clear:()=>stored.clear()};
 function load(file){
  file=path.resolve(file);
  if(file.endsWith('.png?url'))return '/original-logo.png';
@@ -55,4 +56,4 @@ fs.writeFileSync(path.join(outputDir,'rendered-D.html'),html);
 fs.writeFileSync(path.join(outputDir,'rendered-B.html'),b);
 console.log(`${checks} server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.`);
 
-module.exports={load,wrap,React};
+module.exports={load,wrap,React,storage};

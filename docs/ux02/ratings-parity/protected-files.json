@@ -1,0 +1,47 @@
+[
+  {
+    "file": "package.json",
+    "unchanged": true,
+    "sha256": "6342c570b91f9a773e2c34d338599dcb57d1a8c5b3d77e8d788b060ec828fd67"
+  },
+  {
+    "file": "package-lock.json",
+    "unchanged": true,
+    "sha256": "7909efd89b29612783ae42bd51c7e3b5cd9f99b624928db9fbf0b50fc65c287e"
+  },
+  {
+    "file": "src/components/talabot/native/fixture.json",
+    "unchanged": true,
+    "sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5"
+  },
+  {
+    "file": "src/components/talabot/analytics.tsx",
+    "unchanged": true,
+    "sha256": "400e8c68133e039619a84fae9df48989a44837e3b24cd1b16d9b21c66d795108"
+  },
+  {
+    "file": "src/components/talabot/analytics-data.ts",
+    "unchanged": true,
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c"
+  },
+  {
+    "file": "src/components/talabot/native/mutation-service.js",
+    "unchanged": true,
+    "sha256": "7bb10e4f3a405d5b3162048c93861faa9aa6210e441eb063550170d0b6b44250"
+  },
+  {
+    "file": "src/components/talabot/native/ticket-details.tsx",
+    "unchanged": true,
+    "sha256": "085aff8af1e6cab383d54c45ef71d7d5b027d828e50157c75c7bf64a4940e4f3"
+  },
+  {
+    "file": "public/operations-source/admin.html",
+    "unchanged": true,
+    "sha256": "1003e231abc433d994189926db1de88792af0e351ad3d0aea63d09eca5910d6f"
+  },
+  {
+    "file": "public/operations-source/talabat-core.js",
+    "unchanged": true,
+    "sha256": "4c33a6df5bac39d27a47ec9b6c56495120ecf4d90a2d3e538dbcb68fe847350e"
+  }
+]

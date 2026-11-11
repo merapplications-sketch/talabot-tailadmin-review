@@ -1,0 +1,22 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS comment labelled consistently in desktop row and mobile card, never Phone
+PASS needs filter includes only existing <=3 unhandled values
+PASS handled filter excludes all unhandled values
+PASS default follows A needs filter; all retains missing and high ratings
+PASS summary averages/counts hand calculated: driver 15/5=3.0; store16/5=3.2; needs3,total8
+PASS summary scope unchanged across display filters and empty search
+PASS missing values do not create zero stars in detail
+PASS secondary detail retains store,date,tagged comment and available ratings
+PASS handled details retain date/note and expose only reopen
+PASS empty list uses original em dash and zero counts, never invented zero average
+PASS long comment remains intact in details and no markup is interpreted
+PASS rating logic matches original avg/lowOf/needR/cmtParts including null and tags
+12 ratings parity checks passed; 0 failed (plus8 shared SSR checks).

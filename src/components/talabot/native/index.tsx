@@ -354,6 +354,7 @@ export default function NativeAdmin() {
                 query={state.query}
                 t={t}
                 navigate={navigate}
+                onBack={back}
               />
             )}
           </section>

@@ -1,5 +1,5 @@
 // Full server render using original B components; no browser or backend claim.
-process.env.UX02_SSR_OUTPUT='docs/ux02/support-continuation';
+process.env.UX02_SSR_OUTPUT ||= 'docs/ux02/support-continuation';
 const {load,wrap,React}=require('./ux02-composition-ssr.cjs');
 const assert=require('node:assert/strict');
 const {tables}=load('src/components/talabot/native/domain');

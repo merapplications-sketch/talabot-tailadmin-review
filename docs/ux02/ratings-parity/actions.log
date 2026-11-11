@@ -1,0 +1,7 @@
+PASS explicit rating success closes dialog and clears saved resolution
+PASS preview refusal keeps rating note and dialog available
+PASS permission error preserves note and displays original error
+PASS cancel and explicit reopen retain note without submitting
+PASS missing success flag does not clear or close rating form
+PASS thrown rating error retains note and releases submit button
+6 rating action handler checks passed; 0 failed. Simulated responses, not HTTP/RBAC.

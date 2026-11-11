@@ -1,0 +1,11 @@
+PASS period includes Dushanbe day boundaries and excludes adjacent days
+PASS each period endpoint works independently
+PASS store and payment filters independently retain only matching rows
+PASS oldest and newest sorting preserve all rows and do not mutate source
+PASS supported date/store/payment/status/search intersection yields one correct order
+PASS invalid period returns explicit error, preserves filter inputs; correction applies
+PASS empty intersection does not mutate any inputs
+PASS order details/back preserves query,status and scroll; rehydrate preserves URL state
+PASS ratings linked order returns to exact rating context and list position remains saved
+PASS rating detail Back uses restoration handler rather than navigation-to-top
+10 list journey checks passed; 0 failed.

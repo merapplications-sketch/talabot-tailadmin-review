@@ -1,4 +1,10 @@
-import { CallIcon, MapIcon } from "@/icons";
+import { CallIcon, MapIcon, StarIcon, AlertIcon, BoxIcon } from "@/icons";
+import SummaryCards from "./b-shell/summary-cards";
+import {
+  ratingAverage,
+  needsRatingFollowup,
+  ratingComment,
+} from "./ratings-data";
 import { NativeGrid } from "./b-shell/entity-grid";
 import { SettingsPresentation } from "./b-shell/settings";
 import { Badge } from "@/components/ui/badge";
@@ -54,6 +60,7 @@ type Props = {
   query: string;
   id: string;
   t: (k: string) => string;
+  onBack?: () => void;
   navigate: (patch: { section?: string; id?: string; query?: string }) => void;
 };
 const tableNames: Record<string, string> = {
@@ -73,11 +80,14 @@ export default function EntitySections({
   id,
   t,
   navigate,
+  onBack,
 }: Props) {
   const locale = useLocale();
   const wt = useTranslations("workspace");
   const [filter, setFilter] = useState(
-      () => sessionStorage.getItem("ux02-native:filter:" + section) || "all",
+      () =>
+        sessionStorage.getItem("ux02-native:filter:" + section) ||
+        (section === "ratings" ? "need" : "all"),
     ),
     [limit, setLimit] = useState(30),
     [historyLimit, setHistoryLimit] = useState(
@@ -99,18 +109,37 @@ export default function EntitySections({
         .join(" ")
         .toLowerCase()
         .includes(query.toLowerCase()) &&
-      (filter === "all" ||
-        text(r, "status") === filter ||
-        (filter === "open"
-          ? !!r.is_open
-          : filter === "closed"
-            ? !r.is_open
-            : true)),
+      (section === "ratings"
+        ? filter === "need"
+          ? needsRatingFollowup(r)
+          : filter === "done"
+            ? !!r.handled_at
+            : true
+        : filter === "all" ||
+          text(r, "status") === filter ||
+          (filter === "open"
+            ? !!r.is_open
+            : filter === "closed"
+              ? !r.is_open
+              : true)),
   );
+  const driverAverage = ratingAverage(source, "driver_stars"),
+    storeAverage = ratingAverage(source, "store_stars"),
+    needsCount = source.filter(needsRatingFollowup).length,
+    handledCount = source.filter((r) => r.handled_at).length;
+  const ratingStatus = (r: Row) =>
+    r.handled_at ? "aHandled" : needsRatingFollowup(r) ? "aNeeds" : "uRNot";
+  const ratingStore = (r: Row) =>
+    text(tables.stores.find((s) => s.id === r.store_id) || {}, "name") || "—";
   const row = source.find((r) => String(r.id) === id);
   const write = () => setNotice(t("nativeWriteBlocked"));
   const back = (
-    <Button variant="outline" onClick={() => navigate({ id: "" })}>
+    <Button
+      variant="outline"
+      onClick={
+        section === "ratings" && onBack ? onBack : () => navigate({ id: "" })
+      }
+    >
       ← {t("aBack")}
     </Button>
   );
@@ -716,10 +745,36 @@ export default function EntitySections({
         <div className="space-y-4">
           {back}
           <Card title={t("tR")}>
-            <Pair label={t("aStoreL")}>{number(row, "store_stars")} ★</Pair>
-            <Pair label={t("aDrvL")}>{number(row, "driver_stars")} ★</Pair>
-            <p>{text(row, "comment")}</p>
-            <p>{text(row, "handled_note")}</p>
+            <Pair label={t("aStoreL")}>{ratingStore(row)}</Pair>
+            <Pair label={wt("date")}>
+              {formatDate(text(row, "created_at"), locale)}
+            </Pair>
+            {row.store_stars != null && (
+              <Pair label={t("aStoreRate2")}>{text(row, "store_stars")} ★</Pair>
+            )}
+            {row.driver_stars != null && (
+              <Pair label={t("aCourierRate")}>
+                {text(row, "driver_stars")} ★
+              </Pair>
+            )}
+            {ratingComment(row.comment).tags.map((tag, i) => (
+              <Badge key={i} color="gray">
+                {tag}
+              </Badge>
+            ))}
+            <Pair label={t("ratingComment")}>
+              {ratingComment(row.comment).text ||
+                (ratingComment(row.comment).tags.length ? "—" : t("aNoCmt"))}
+            </Pair>
+            <Pair label={t("aStat")}>{t(ratingStatus(row))}</Pair>
+            {!!row.handled_at && (
+              <Pair label={t("aHandled")}>
+                {formatDate(text(row, "handled_at"), locale)}
+              </Pair>
+            )}
+            {!!row.handled_note && (
+              <Pair label={t("aResNote")}>{text(row, "handled_note")}</Pair>
+            )}
             {linkOrder(row)}
           </Card>
           {row.handled_at ? (
@@ -731,6 +786,8 @@ export default function EntitySections({
           ) : (
             <NativeForm
               title={t("aResolveT")}
+              resetAfterSuccess
+              closeAfterSuccess
               operation={(r) => mutations.resolveRating(row.order_id, r.note)}
               fields={[{ key: "note", label: "aResNote", maxLength: 300 }]}
               t={t}
@@ -741,6 +798,36 @@ export default function EntitySections({
   }
   return (
     <div className="space-y-4">
+      {section === "ratings" && (
+        <SummaryCards
+          cards={[
+            {
+              key: "driver",
+              label: `${t("aRAvgD")} · ${driverAverage?.n || 0} ${t("aRCnt")}`,
+              value: driverAverage ? driverAverage.a.toFixed(1) + " ★" : "—",
+              Icon: StarIcon,
+            },
+            {
+              key: "store",
+              label: `${t("aRAvgS")} · ${storeAverage?.n || 0} ${t("aRCnt")}`,
+              value: storeAverage ? storeAverage.a.toFixed(1) + " ★" : "—",
+              Icon: StarIcon,
+            },
+            {
+              key: "need",
+              label: t("aRNeeds"),
+              value: needsCount,
+              Icon: AlertIcon,
+            },
+            {
+              key: "total",
+              label: t("aRCnt"),
+              value: source.length,
+              Icon: BoxIcon,
+            },
+          ]}
+        />
+      )}
       <Card>
         <label>
           {section === "customers"
@@ -784,6 +871,38 @@ export default function EntitySections({
                   )}
                 </SelectItem>
               ))}
+            </SelectContent>
+          </Select>
+        )}
+        {section === "ratings" && (
+          <Select
+            value={filter}
+            onValueChange={(value) => {
+              setFilter(value ?? "need");
+              sessionStorage.setItem(
+                "ux02-native:filter:" + section,
+                value ?? "need",
+              );
+            }}
+            items={[
+              { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
+              { value: "all", label: `${t("fAllK")} · ${source.length}` },
+              { value: "done", label: `${t("aRDone")} · ${handledCount}` },
+            ]}
+          >
+            <SelectTrigger aria-label={t("aStat")}>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="need">
+                {t("aRNeeds")} · {needsCount}
+              </SelectItem>
+              <SelectItem value="all">
+                {t("fAllK")} · {source.length}
+              </SelectItem>
+              <SelectItem value="done">
+                {t("aRDone")} · {handledCount}
+              </SelectItem>
             </SelectContent>
           </Select>
         )}
@@ -908,16 +1027,20 @@ export default function EntitySections({
         </Button>
       )}
       <NativeGrid
-        firstHeader={t("aName")}
+        firstHeader={t(section === "ratings" ? "aOpenO" : "aName")}
         headers={[
           t("aStat"),
-          t("aPhoneL"),
-          t("address"),
+          t(section === "ratings" ? "ratingComment" : "aPhoneL"),
+          t(section === "ratings" ? "aStoreL" : "address"),
           ...(section === "drivers" ? [t("aCashH")] : []),
         ]}
         onDetails={(id) => navigate({ id })}
         rows={rows.slice(0, limit).map((r) => ({
           id: text(r, "id"),
+          updated:
+            section === "ratings"
+              ? formatDate(text(r, "created_at"), locale)
+              : undefined,
           name:
             text(r, "name") ||
             text(r, "title") ||
@@ -928,28 +1051,32 @@ export default function EntitySections({
           values: [
             <>
               <Badge color={r.banned_at || r.accept_blocked ? "error" : "gray"}>
-                {section === "customers"
-                  ? r.banned_at
-                    ? t("xBanned")
-                    : "—"
-                  : text(r, "status")
-                    ? t(
-                        section === "support"
-                          ? "xs_" + text(r, "status")
-                          : text(r, "status"),
-                      )
-                    : text(r, "driver_status")
-                      ? t(text(r, "driver_status"))
-                      : r.is_active != null
-                        ? t(r.is_active ? "aOn" : "aOff")
-                        : "—"}
+                {section === "ratings"
+                  ? t(ratingStatus(r))
+                  : section === "customers"
+                    ? r.banned_at
+                      ? t("xBanned")
+                      : "—"
+                    : text(r, "status")
+                      ? t(
+                          section === "support"
+                            ? "xs_" + text(r, "status")
+                            : text(r, "status"),
+                        )
+                      : text(r, "driver_status")
+                        ? t(text(r, "driver_status"))
+                        : r.is_active != null
+                          ? t(r.is_active ? "aOn" : "aOff")
+                          : "—"}
               </Badge>
               {!!r.accept_blocked && (
                 <p className="text-error-500">{t("aBlocked")}</p>
               )}
             </>,
-            text(r, "phone") || text(r, "comment") || "—",
-            text(r, "address") || "—",
+            section === "ratings"
+              ? text(r, "comment") || t("aNoCmt")
+              : text(r, "phone") || text(r, "comment") || "—",
+            section === "ratings" ? ratingStore(r) : text(r, "address") || "—",
             ...(section === "drivers"
               ? [
                   (syntheticCash[text(r, "id")] ?? "—") +

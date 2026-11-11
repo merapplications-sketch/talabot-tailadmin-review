@@ -1,0 +1,342 @@
+{
+  "observations": [
+    {
+      "step": "ratings-default",
+      "viewport": {
+        "client": 1363,
+        "h": 936,
+        "scroll": 1363,
+        "w": 1363
+      },
+      "text": "Synthetic data · native React migration in progress\n\nCouriers · 11 ratings\n3.6 ★\nStores · 11 ratings\n3.5 ★\nNeed attention\n1\nratings\n11\nSearch\nNeed attention · 1\nOrder\tStatus\tComment\tStore\tView details\n\nord4\nNov 10, 2026, 15:16\n\tNeeds attention\tno comment\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t"
+    },
+    {
+      "step": "ratings-done",
+      "text": "Synthetic data · native React migration in progress\n\nCouriers · 11 ratings\n3.6 ★\nStores · 11 ratings\n3.5 ★\nNeed attention\n1\nratings\n11\nSearch\nResolved · 6\nOrder\tStatus\tComment\tStore\tView details\n\nord5\nNov 10, 2026, 15:15\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord6\nNov 10, 2026, 15:14\n\tResolved\tno comment\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord0\nNov 10, 2026, 15:13\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord1\nNov 10, 2026, 15:12\n\tResolved\tno comment\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord2\nNov 10, 2026, 15:11\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord3\nNov 10, 2026, 15:10\n\tResolved\tno comment\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t"
+    },
+    {
+      "step": "rating-linked-order",
+      "url": "http://127.0.0.1:4173/?return=%3Fsection%3Dratings%26q%3D%25D0%25A5%25D0%25BE%25D0%25BB%25D0%25BE%25D0%25B4%25D0%25BD%25D0%25B0%25D1%258F%26id%3D6&section=orders&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F&id=ord5",
+      "visible": "Synthetic data · native React migration in progress\n\n← Back\n#ord5\nStatus\nCancelled\n\nNov 10, 2026, 12:20\n\nAssign courier is unavailable: this order already has a courier.\n\nIsolated review. Financial and administrative writes are not connected.\n\nStore\n\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\n+992900000001\nCourier\n\n—\n\n+992900000009\nCustomer\n\nМуаммад ибни Абдуллоҳ аз Душанбе\n\n+992900000000\nAddress\n\nул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\nmissing dish → remove\n\nOrder items\n2 × Очень длинное название блюда с несколькими ингредиентами\n125.00 TJS\n\nСредний\n\nбез лука, пожалуйста, очень острый соус отдельно\n\nItems\n125.00 TJS\nDiscount\n−10.00 TJS\nPoints\n−1.00 TJS\nDelivery\n10.00 TJS\nTip\n5.00 TJS\nTotal\n129.00 TJS\nPoints\n1000\nPayment and settlement\nPayment method\nApple Pay\nMoney received\nCollection and refund not verified — no payment gateway is connected\nTaken from the wallet\n−20.00 TJS\nReturned to the customer’s wallet\n20.00 TJS · 2026-11-10T08:40:00.000Z\nPoints used\n1000 (1.00 TJS)\nPoints returned to the customer\n2026-11-10T08:40:00.000Z\n\nCollection and refund not verified — no payment gateway is connected\n\nTip\n5.00 TJS — not part of the app payouts: the order was not delivered\nCommission (10%)\n11.50 TJS — estimate only, not counted: app totals and payouts count delivered orders only\nTimeline\nChat"
+    },
+    {
+      "step": "rating-return-after-order-reload",
+      "url": "http://127.0.0.1:4173/?section=ratings&q=%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F",
+      "text": "Synthetic data · native React migration in progress\n\nCouriers · 11 ratings\n3.6 ★\nStores · 11 ratings\n3.5 ★\nNeed attention\n1\nratings\n11\nSearch\nResolved · 6\nOrder\tStatus\tComment\tStore\tView details\n\nord5\nNov 10, 2026, 15:15\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord0\nNov 10, 2026, 15:13\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t\n\n\nord2\nNov 10, 2026, 15:11\n\tResolved\t[Холодная еда] долго ждали\tРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\t"
+    },
+    {
+      "step": "rating-empty-preserves-search",
+      "text": "Synthetic data · native React migration in progress\n\nCouriers · 11 ratings\n3.6 ★\nStores · 11 ratings\n3.5 ★\nNeed attention\n1\nratings\n11\nSearch\nResolved · 6\nOrder\tStatus\tComment\tStore\tView details\n\nNo matching results\n\nNothing found"
+    },
+    {
+      "step": "rating-preview-refusal",
+      "text": "Mark as resolved\n\nIsolated review. Financial and administrative writes are not connected.\n\nWhat was done? (optional)\n\nIsolated review. Financial and administrative writes are not connected.\n\nIsolated review. Financial and administrative writes are not connected.\nClose\nSave\nClose"
+    },
+    {
+      "step": "rating-draft-reopen-after-reload",
+      "value": "V8 synthetic follow-up draft",
+      "dialogCount": 1
+    },
+    {
+      "step": "ratings-scroll-return",
+      "before": 538,
+      "after": 0
+    },
+    {
+      "step": "orders-invalid-range",
+      "text": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Newest first\nStart date\nEnd date\nSort\n—\nNewest first\nOldest first\nStatus\nAll\nWaiting for confirmation\nPreparing\nReady for courier pickup\nCourier on the way\nDelivered\nRejected by restaurant\nCancelled\nRestaurant / store\nAll\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\nАптека\nGul\nPayment method\nAll\nCash\nWallet\nApple Pay\n\nLocal sample only. Zone data is unavailable in A.\n\nReset filters"
+    },
+    {
+      "step": "invalid-range-verified",
+      "text": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Newest first\nStart date\nEnd date\nSort\n—\nNewest first\nOldest first\nStatus\nAll\nWaiting for confirmation\nPreparing\nReady for courier pickup\nCourier on the way\nDelivered\nRejected by restaurant\nCancelled\nRestaurant / store\nAll\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\nАптека\nGul\nPayment method\nAll\nCash\nWallet\nApple Pay\n\nLocal sample only. Zone data is unavailable in A.\n\nEnd date must be on or after start date.\n\nRestaurant / store: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино ×\nStart date: 2026-11-11 ×\nEnd date: 2026-11-10 ×\nReset filters"
+    },
+    {
+      "step": "orders-intersection-oldest",
+      "table": "Orders\nOrder\tCustomer\tRestaurant / store\tPickup → delivery\tDriver\tStatus\tOrder total\tView details\n\n\nord3\n\nNov 10, 2026, 14:00\n\nCash · 2 items · delivery 10 TJS\n\n\tМуаммад ибни Абдуллоҳ аз Душанбе\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nCourier on the way\n\n—\n\n\tTJS 128.00\t\n\n\n\nord1\n\nNov 10, 2026, 15:40\n\nCash · 2 items · delivery 10 TJS\n\n\tМуаммад ибни Абдуллоҳ аз Душанбе\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nPreparing\n\n—\n\n\tTJS 126.00\t",
+      "filters": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Oldest first\nStart date\nEnd date\nSort\n—\nNewest first\nOldest first\nStatus\nAll\nWaiting for confirmation\nPreparing\nReady for courier pickup\nCourier on the way\nDelivered\nRejected by restaurant\nCancelled\nRestaurant / store\nAll\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\nАптека\nGul\nPayment method\nAll\nCash\nWallet\nApple Pay\n\nLocal sample only. Zone data is unavailable in A.\n\nRestaurant / store: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) ×\nPayment method: Cash ×\nStart date: 2026-11-10 ×\nEnd date: 2026-11-10 ×\nSort: Oldest first ×\nReset filters"
+    },
+    {
+      "step": "orders-return-reload",
+      "url": "http://127.0.0.1:4173/?section=orders&status=preparing&q=%23ord1",
+      "result": "1 order",
+      "filters": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Oldest first\nSearch: #ord1 ×\nStatus: Preparing ×\nRestaurant / store: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) ×\nPayment method: Cash ×\nStart date: 2026-11-10 ×\nEnd date: 2026-11-10 ×\nSort: Oldest first ×\nReset filters"
+    },
+    {
+      "step": "clear-one-filter",
+      "text": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Oldest first\nStart date\nEnd date\nSort\n—\nNewest first\nOldest first\nStatus\nAll\nWaiting for confirmation\nPreparing\nReady for courier pickup\nCourier on the way\nDelivered\nRejected by restaurant\nCancelled\nRestaurant / store\nAll\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\nАптека\nGul\nPayment method\nAll\nCash\nWallet\nApple Pay\n\nLocal sample only. Zone data is unavailable in A.\n\nSearch: #ord1 ×\nStatus: Preparing ×\nRestaurant / store: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) ×\nStart date: 2026-11-10 ×\nEnd date: 2026-11-10 ×\nSort: Oldest first ×\nReset filters"
+    },
+    {
+      "step": "orders-empty-search",
+      "result": "0 orders",
+      "text": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Oldest first\nStart date\nEnd date\nSort\n—\nNewest first\nOldest first\nStatus\nAll\nWaiting for confirmation\nPreparing\nReady for courier pickup\nCourier on the way\nDelivered\nRejected by restaurant\nCancelled\nRestaurant / store\nAll\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) · Сино\nАптека\nGul\nPayment method\nAll\nCash\nWallet\nApple Pay\n\nLocal sample only. Zone data is unavailable in A.\n\nSearch: absent-order ×\nStatus: Preparing ×\nRestaurant / store: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки) ×\nStart date: 2026-11-10 ×\nEnd date: 2026-11-10 ×\nSort: Oldest first ×\nReset filters"
+    },
+    {
+      "step": "orders-reset-all",
+      "result": "7 orders",
+      "filters": "Search\nSearch\nAll\nWaiting for confirmation\nPreparing\nDelivered\nMore filters · Newest first\nReset filters"
+    },
+    {
+      "step": "ratings-scroll-restored-after-render",
+      "before": 538,
+      "after": 538,
+      "note": "Earlier immediate read at0 preceded the two requestAnimationFrame callbacks; final observation538."
+    },
+    {
+      "step": "support-decision-reload",
+      "value": null,
+      "dialogs": 0
+    },
+    {
+      "step": "support-reply-reopen",
+      "text": ""
+    },
+    {
+      "step": "support-back",
+      "url": "http://127.0.0.1:4173/?section=support",
+      "text": "Synthetic data · native React migration in progress\n\nSearch\nAll\nSupport contacts\nName\tStatus\tPhone\tAddress\tView details\n\nНе приехал заказ\n\tOpen\t—\t—\t"
+    }
+  ],
+  "logs": [
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:32:08.423Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:32:08.459Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:32:34.173Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:32:35.856Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:32:57.558Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:07.580Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:07.580Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:07.624Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:15.266Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:15.299Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Object",
+      "timestamp": "2026-11-11T05:33:15.982Z",
+      "url": "http://127.0.0.1:4173/@vite/client"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:15.988Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:15.988Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:16.608Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:16.609Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:16.670Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:16.671Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:26.417Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:26.779Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Object",
+      "timestamp": "2026-11-11T05:33:26.784Z",
+      "url": "http://127.0.0.1:4173/@vite/client"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:26.790Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:27.386Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:27.387Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:27.388Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:27.388Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:28.574Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:28.575Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:28.681Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:29.070Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:29.100Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:29.100Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:42.691Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:42.694Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:42.705Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:42.706Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:44.625Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:44.625Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:44.881Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:44.881Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-11-11T05:33:44.881Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    }
+  ],
+  "viewportScope": "1363x936 only; requested viewports not tested"
+}

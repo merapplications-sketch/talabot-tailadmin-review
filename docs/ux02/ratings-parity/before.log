@@ -1,0 +1,46 @@
+PASS one order search, inside original filter panel
+PASS four quick shortcuts and all statuses in closed secondary section
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and D shared composition hooks render with equal hierarchy
+8 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+FAIL comment labelled consistently in desktop row and mobile card, never Phone — The expression evaluated to a falsy value:
+
+  assert(!h.includes('>Phone<'))
+
+FAIL needs filter includes only existing <=3 unhandled values — both
+FAIL handled filter excludes all unhandled values — The expression evaluated to a falsy value:
+
+  assert(!h.includes('high-unhandled'))
+
+FAIL default follows A needs filter; all retains missing and high ratings — The expression evaluated to a falsy value:
+
+  assert(!list(render('',null)).includes('high-unhandled'))
+
+FAIL summary averages/counts hand calculated: driver 15/5=3.0; store16/5=3.2; needs3,total8 — Expected values to be strictly equal:
+
+0 !== 4
+
+FAIL summary scope unchanged across display filters and empty search — The expression evaluated to a falsy value:
+
+  assert(a)
+
+FAIL missing values do not create zero stars in detail — The expression evaluated to a falsy value:
+
+  assert(!h.includes('0 ★'))
+
+FAIL secondary detail retains store,date,tagged comment and available ratings — Ресторан
+FAIL handled details retain date/note and expose only reopen — The expression evaluated to a falsy value:
+
+  assert(h.includes('10:00'))
+
+FAIL empty list uses original em dash and zero counts, never invented zero average — Expected values to be strictly equal:
+
+0 !== 4
+
+PASS long comment remains intact in details and no markup is interpreted
+FAIL rating logic matches original avg/lowOf/needR/cmtParts including null and tags — source-derived rating functions not present
+1 ratings parity checks passed; 11 failed (plus8 shared SSR checks).

@@ -1,0 +1,58 @@
+[
+  {
+    "test": "ux02-ratings-parity",
+    "exit": 0,
+    "summary": [
+      "12 ratings parity checks passed; 0 failed (plus8 shared SSR checks)."
+    ]
+  },
+  {
+    "test": "ux02-rating-actions",
+    "exit": 0,
+    "summary": [
+      "6 rating action handler checks passed; 0 failed. Simulated responses, not HTTP/RBAC."
+    ]
+  },
+  {
+    "test": "ux02-list-journeys",
+    "exit": 0,
+    "summary": [
+      "10 list journey checks passed; 0 failed."
+    ]
+  },
+  {
+    "test": "ux02-ratings",
+    "exit": 0,
+    "summary": [
+      "4 rating state checks passed; 0 failed (plus8 shared SSR checks)."
+    ]
+  },
+  {
+    "test": "ux02-support",
+    "exit": 0,
+    "summary": [
+      "12 handler checks passed; 0 failed. No backend success, browser or mobile claim."
+    ]
+  },
+  {
+    "test": "ux02-native-operations",
+    "exit": 0,
+    "summary": [
+      "17 new affected checks passed; no server RBAC or production success claim."
+    ]
+  },
+  {
+    "test": "ux02-native-validation",
+    "exit": 0,
+    "summary": [
+      "14 validation checks passed. These validate client input constraints, not server authorization."
+    ]
+  },
+  {
+    "test": "ux02-native",
+    "exit": 0,
+    "summary": [
+      "14 checks passed"
+    ]
+  }
+]

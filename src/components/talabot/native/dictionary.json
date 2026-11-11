@@ -1,5 +1,6 @@
 {
   "ru": {
+    "ratingComment": "Комментарий",
     "pending": "Ожидание подтверждения",
     "preparing": "Готовится",
     "ready": "Готов к выдаче курьеру",
@@ -677,6 +678,7 @@
     "aNoCmt": "без комментария"
   },
   "en": {
+    "ratingComment": "Comment",
     "pending": "Waiting for confirmation",
     "preparing": "Preparing",
     "ready": "Ready for courier pickup",

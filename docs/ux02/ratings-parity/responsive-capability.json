@@ -1,0 +1,43 @@
+{
+  "required": [
+    [
+      320,
+      844
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      1440,
+      1000
+    ]
+  ],
+  "status": "BLOCKED_CAPABILITY",
+  "actual_browser": [
+    1363,
+    936
+  ],
+  "connected_browser": "No viewport resize API/capability advertised; no DevTools or socket retry. DOM evaluation read-only; no zoom or CSS size substitution.",
+  "alternative_browser": {
+    "provider": "TinyFish",
+    "run": "c4ed6540-7cef-4dc8-9708-f7a8ab5351e6",
+    "url": "https://agent.tinyfish.ai/runs/c4ed6540-7cef-4dc8-9708-f7a8ab5351e6",
+    "result": "Completed capability check: no supported viewport resize tool/API; unable to set320x844. No credentials or writes."
+  },
+  "ci": [
+    {
+      "path": ".github/workflows/verify-tailadmin-original.yml",
+      "decision": "NOT_RUN",
+      "reason": "No browser tests or viewport/screenshots. Runs npm ci, build and unpinned npx vinext check; does not supply requested test path."
+    },
+    {
+      "path": ".github/workflows/verify-vinext-build.yml",
+      "decision": "NOT_RUN",
+      "reason": "Changes dependencies/lock/config and pushes different branch. Outside authorized scope; no browser tests."
+    }
+  ],
+  "dependency_changes": false,
+  "real_safari": "NOT_TESTED",
+  "network_capture": "No full HAR/network instrumentation exposed. Console observed; no blanket failed-request PASS."
+}
