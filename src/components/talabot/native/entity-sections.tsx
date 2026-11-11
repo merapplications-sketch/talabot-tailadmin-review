@@ -979,106 +979,119 @@ export default function EntitySections({
             </label>
           )}
           {section === "restaurants" && (
-            <Select
-              value={filter}
-              onValueChange={(value) => {
-                setFilter(value ?? "");
-                sessionStorage.setItem(
-                  "ux02-native:filter:" + section,
-                  value ?? "",
-                );
-              }}
-              items={[
-                ...["all", "open", "closed"].map((k) => ({
-                  value: k,
-                  label: t(
-                    k === "all" ? "aAll" : k === "open" ? "aOpenS" : "aClosedS",
-                  ),
-                })),
-              ]}
-            >
-              <SelectTrigger aria-label={t("status")}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {["all", "open", "closed"].map((k) => (
-                  <SelectItem key={k} value={k}>
-                    {t(
+            <label className="block min-w-0 text-sm">
+              {t("aStat")}
+              <Select
+                value={filter}
+                onValueChange={(value) => {
+                  setFilter(value ?? "");
+                  sessionStorage.setItem(
+                    "ux02-native:filter:" + section,
+                    value ?? "",
+                  );
+                }}
+                items={[
+                  ...["all", "open", "closed"].map((k) => ({
+                    value: k,
+                    label: t(
                       k === "all"
                         ? "aAll"
                         : k === "open"
                           ? "aOpenS"
                           : "aClosedS",
-                    )}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                    ),
+                  })),
+                ]}
+              >
+                <SelectTrigger aria-label={t("status")}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {["all", "open", "closed"].map((k) => (
+                    <SelectItem key={k} value={k}>
+                      {t(
+                        k === "all"
+                          ? "aAll"
+                          : k === "open"
+                            ? "aOpenS"
+                            : "aClosedS",
+                      )}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </label>
           )}
           {section === "ratings" && (
-            <Select
-              value={filter}
-              onValueChange={(value) => {
-                setFilter(value ?? "need");
-                sessionStorage.setItem(
-                  "ux02-native:filter:" + section,
-                  value ?? "need",
-                );
-              }}
-              items={[
-                { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
-                { value: "all", label: `${t("fAllK")} · ${source.length}` },
-                { value: "done", label: `${t("aRDone")} · ${handledCount}` },
-              ]}
-            >
-              <SelectTrigger aria-label={t("aStat")}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="need">
-                  {t("aRNeeds")} · {needsCount}
-                </SelectItem>
-                <SelectItem value="all">
-                  {t("fAllK")} · {source.length}
-                </SelectItem>
-                <SelectItem value="done">
-                  {t("aRDone")} · {handledCount}
-                </SelectItem>
-              </SelectContent>
-            </Select>
+            <label className="block min-w-0 text-sm">
+              {t("aStat")}
+              <Select
+                value={filter}
+                onValueChange={(value) => {
+                  setFilter(value ?? "need");
+                  sessionStorage.setItem(
+                    "ux02-native:filter:" + section,
+                    value ?? "need",
+                  );
+                }}
+                items={[
+                  { value: "need", label: `${t("aRNeeds")} · ${needsCount}` },
+                  { value: "all", label: `${t("fAllK")} · ${source.length}` },
+                  { value: "done", label: `${t("aRDone")} · ${handledCount}` },
+                ]}
+              >
+                <SelectTrigger aria-label={t("aStat")}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="need">
+                    {t("aRNeeds")} · {needsCount}
+                  </SelectItem>
+                  <SelectItem value="all">
+                    {t("fAllK")} · {source.length}
+                  </SelectItem>
+                  <SelectItem value="done">
+                    {t("aRDone")} · {handledCount}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </label>
           )}
           {section === "support" && (
-            <Select
-              value={filter}
-              onValueChange={(value) => {
-                setFilter(value ?? "");
-                sessionStorage.setItem(
-                  "ux02-native:filter:" + section,
-                  value ?? "",
-                );
-              }}
-              items={[
-                ...["all", "open", "in_progress", "resolved", "rejected"].map(
-                  (k) => ({
-                    value: k,
-                    label: t(k === "all" ? "aAll" : "xs_" + k),
-                  }),
-                ),
-              ]}
-            >
-              <SelectTrigger aria-label={t("status")}>
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {["all", "open", "in_progress", "resolved", "rejected"].map(
-                  (k) => (
-                    <SelectItem key={k} value={k}>
-                      {t(k === "all" ? "aAll" : "xs_" + k)}
-                    </SelectItem>
+            <label className="block min-w-0 text-sm">
+              {t("aStat")}
+              <Select
+                value={filter}
+                onValueChange={(value) => {
+                  setFilter(value ?? "");
+                  sessionStorage.setItem(
+                    "ux02-native:filter:" + section,
+                    value ?? "",
+                  );
+                }}
+                items={[
+                  ...["all", "open", "in_progress", "resolved", "rejected"].map(
+                    (k) => ({
+                      value: k,
+                      label: t(k === "all" ? "aAll" : "xs_" + k),
+                    }),
                   ),
-                )}
-              </SelectContent>
-            </Select>
+                ]}
+              >
+                <SelectTrigger aria-label={t("status")}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {["all", "open", "in_progress", "resolved", "rejected"].map(
+                    (k) => (
+                      <SelectItem key={k} value={k}>
+                        {t(k === "all" ? "aAll" : "xs_" + k)}
+                      </SelectItem>
+                    ),
+                  )}
+                </SelectContent>
+              </Select>
+            </label>
           )}
         </div>
       </section>
