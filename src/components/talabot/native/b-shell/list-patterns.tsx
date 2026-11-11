@@ -1,10 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocale, useTranslations } from "next-intl";
 import { OrderStatusBadge } from "../../integrated-review/order-status";
 import type { OrderStatus } from "../../orders-data";
 import { IdentityImage } from "../../integrated-review/identity";
-import { Action } from "../primitives";
+import { ChevronRightIcon, FilterIcon, SearchIcon } from "@/icons";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { tables, text, number, statuses, contacts, type Row } from "../domain";
 import { formatDate } from "../format";
 const panel =
@@ -58,6 +65,8 @@ export function OrdersPresentation({
   t: (key: string) => string;
   onDetails: (id: string) => void;
 }) {
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const ownerT = useTranslations("ownerRound");
   const t = useTranslations("talabotOrders"),
     locale = useLocale();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -110,12 +119,25 @@ export function OrdersPresentation({
       " TJS",
   }));
   const details = (o: { id: string }) => (
-    <Action
-      kind="details"
-      label={nativeT("nativeDetails") + " " + o.id}
+    <Button
+      variant="ghost"
+      size="icon-lg"
+      aria-label={nativeT("nativeDetails") + " " + o.id}
+      title={nativeT("nativeDetails") + " " + o.id}
       onClick={() => onDetails(o.id)}
-    />
+    >
+      <ChevronRightIcon className="size-4" aria-hidden="true" />
+    </Button>
   );
+  const accent: Record<string, string> = {
+    pending: "border-s-yellow-500!",
+    preparing: "border-s-orange-500!",
+    ready: "border-s-blue-500!",
+    pickedup: "border-s-violet-500!",
+    delivered: "border-s-green-500!",
+    cancelled: "border-s-red-500!",
+    rejected: "border-s-red-500!",
+  };
   const filterValues = {
     q: query,
     status: status === "all" ? "" : status,
@@ -152,7 +174,7 @@ export function OrdersPresentation({
             </p>
           </div>
           <form
-            className="tp-order-search flex w-full items-end gap-3 sm:w-auto"
+            className="flex w-full items-end gap-2 sm:w-auto"
             onSubmit={(e) => {
               e.preventDefault();
               onSearch(query.trim());
@@ -169,129 +191,152 @@ export function OrdersPresentation({
                 placeholder={nativeT("uOq")}
               />
             </label>
-            <Button type="submit" size="lg">
-              {t("search")}
+            <Button type="submit" size="icon-lg" aria-label={t("search")}>
+              <SearchIcon aria-hidden="true" />
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              size="icon-lg"
+              aria-label={t("moreFilters")}
+              aria-haspopup="dialog"
+              aria-expanded={filtersOpen}
+              onClick={() => setFiltersOpen(true)}
+            >
+              <FilterIcon aria-hidden="true" />
             </Button>
           </form>
         </div>
-        <div className="tp-quick" data-testid="order-quick-filters">
-          {["all", "pending", "preparing", "delivered"].map((value) => (
-            <Button
-              variant="outline"
-              size={value === "all" ? "icon-lg" : "lg"}
-              type="button"
-              key={value}
-              aria-pressed={status === value}
-              onClick={() => onStatus(value)}
-            >
-              {value === "all" ? t("all") : t(`status.${value}`)}
-            </Button>
-          ))}
-        </div>
-        <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <details className="tp-secondary-filters min-w-0 sm:flex-1">
-            <summary className="cursor-pointer py-2 text-sm font-medium text-brand-500">
-              <span>{t("moreFilters")}</span> · {t(filters.sort || "newest")}
-            </summary>
-            <div className="tp-filter-grid mt-4 grid gap-3">
-              {(["start", "end"] as const).map((key) => (
-                <label className="min-w-0 text-sm" key={key}>
-                  {t(key)}
-                  <input
-                    className={input}
-                    type="date"
-                    value={filters[key]}
-                    onChange={(e) =>
-                      onFilters({ ...filters, [key]: e.target.value })
-                    }
-                  />
-                </label>
+                {filterError && (
+                  <p role="alert" className="w-full text-red-500">
+                    {t("invalidRange")}
+                  </p>
+                )}
+        <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
+          <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
+            <DialogTitle>{t("filters")}</DialogTitle>
+            <DialogDescription>
+              {t("results", { count: resultCount })}
+            </DialogDescription>
+            <div className="tp-quick" data-testid="order-quick-filters">
+              {["all", "pending", "preparing", "delivered"].map((value) => (
+                <Button
+                  variant="outline"
+                  size={value === "all" ? "icon-lg" : "lg"}
+                  type="button"
+                  key={value}
+                  aria-pressed={status === value}
+                  onClick={() => onStatus(value)}
+                >
+                  {value === "all" ? t("all") : t(`status.${value}`)}
+                </Button>
               ))}
             </div>
-            <label className="w-full min-w-0 text-sm sm:w-56">
-              {t("sort")}
-              <select
-                className={`${input} pr-10`}
-                aria-label={t("sort")}
-                value={filters.sort}
-                onChange={(e) =>
-                  onFilters({ ...filters, sort: e.target.value })
-                }
-              >
-                <option value="">—</option>
-                <option value="newest">{t("newest")}</option>
-                <option value="oldest">{t("oldest")}</option>
-              </select>
-            </label>
-            <div className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              <label className="min-w-0 text-sm">
-                {t("statusLabel")}
-                <select
-                  className={input}
-                  aria-label={t("statusLabel")}
-                  value={status}
-                  onChange={(e) => onStatus(e.target.value)}
-                >
-                  <option value="all">{t("all")}</option>
-                  {statuses.map((value) => (
-                    <option key={value} value={value}>
-                      {nativeT(value)}
-                    </option>
+            <div className="space-y-4">
+              <div className="min-w-0 space-y-4">
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  {(["start", "end"] as const).map((key) => (
+                    <label className="min-w-0 text-sm" key={key}>
+                      {t(key)}
+                      <input
+                        className={input}
+                        type="date"
+                        value={filters[key]}
+                        onChange={(e) =>
+                          onFilters({ ...filters, [key]: e.target.value })
+                        }
+                      />
+                    </label>
                   ))}
-                </select>
-              </label>
-              <label className="min-w-0 text-sm">
-                {t("merchant")}
-                <select
-                  className={input}
-                  aria-label={t("merchant")}
-                  value={filters.store}
-                  onChange={(e) =>
-                    onFilters({ ...filters, store: e.target.value })
-                  }
-                >
-                  <option value="">{t("all")}</option>
-                  {tables.stores.map((row) => (
-                    <option key={text(row, "id")} value={text(row, "id")}>
-                      {text(row, "name")}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="min-w-0 text-sm">
-                {nativeT("uFinM")}
-                <select
-                  className={input}
-                  aria-label={nativeT("uFinM")}
-                  value={filters.payment}
-                  onChange={(e) =>
-                    onFilters({ ...filters, payment: e.target.value })
-                  }
-                >
-                  <option value="">{t("all")}</option>
-                  {["cash", "wallet", "apple"].map((value) => (
-                    <option key={value} value={value}>
-                      {nativeT(value)}
-                    </option>
-                  ))}
-                </select>
-              </label>
+                </div>
+                <label className="w-full min-w-0 text-sm sm:w-56">
+                  {t("sort")}
+                  <select
+                    className={`${input} pe-10`}
+                    aria-label={t("sort")}
+                    value={filters.sort}
+                    onChange={(e) =>
+                      onFilters({ ...filters, sort: e.target.value })
+                    }
+                  >
+                    <option value="">—</option>
+                    <option value="newest">{t("newest")}</option>
+                    <option value="oldest">{t("oldest")}</option>
+                  </select>
+                </label>
+                <div className="mt-3 grid grid-cols-2 gap-4">
+                  <label className="min-w-0 text-sm">
+                    {t("statusLabel")}
+                    <select
+                      className={input}
+                      aria-label={t("statusLabel")}
+                      value={status}
+                      onChange={(e) => onStatus(e.target.value)}
+                    >
+                      <option value="all">{t("all")}</option>
+                      {statuses.map((value) => (
+                        <option key={value} value={value}>
+                          {nativeT(value)}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="min-w-0 text-sm">
+                    {t("merchant")}
+                    <select
+                      className={input}
+                      aria-label={t("merchant")}
+                      value={filters.store}
+                      onChange={(e) =>
+                        onFilters({ ...filters, store: e.target.value })
+                      }
+                    >
+                      <option value="">{t("all")}</option>
+                      {tables.stores.map((row) => (
+                        <option key={text(row, "id")} value={text(row, "id")}>
+                          {text(row, "name")}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="min-w-0 text-sm">
+                    {nativeT("uFinM")}
+                    <select
+                      className={input}
+                      aria-label={nativeT("uFinM")}
+                      value={filters.payment}
+                      onChange={(e) =>
+                        onFilters({ ...filters, payment: e.target.value })
+                      }
+                    >
+                      <option value="">{t("all")}</option>
+                      {["cash", "wallet", "apple"].map((value) => (
+                        <option key={value} value={value}>
+                          {nativeT(value)}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <p className="text-sm">
+                  {locale === "en"
+                    ? "Local sample only. Zone data is unavailable in A."
+                    : "Только локальная выборка. Данные зон отсутствуют в A."}
+                </p>
+
+              </div>
+              <Button size="lg" variant="outline" onClick={onReset}>
+                {t("reset")}
+              </Button>
             </div>
-            <p className="text-sm">
-              {locale === "en"
-                ? "Local sample only. Zone data is unavailable in A."
-                : "Только локальная выборка. Данные зон отсутствуют в A."}
-            </p>
-            {filterError && (
-              <p role="alert" className="w-full text-red-500">
-                {t("invalidRange")}
-              </p>
-            )}
-          </details>
-          <Button size="lg" variant="outline" onClick={onReset}>
-            {t("reset")}
-          </Button>
-        </div>
+
+            <DialogFooter>
+              <Button size="lg" onClick={() => setFiltersOpen(false)}>
+                {ownerT("done")}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
         <div
           className="tp-active-filters flex flex-wrap gap-2"
           aria-label={t("activeFilters")}
@@ -371,15 +416,20 @@ export function OrdersPresentation({
               </thead>
               <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
                 {rows.map((o) => (
-                  <tr key={o.id}>
-                    <td className="px-4 py-3">
-                      <p className="font-medium">{o.id}</p>
+                  <tr
+                    key={o.id}
+                    className="align-top even:bg-gray-50/70 dark:even:bg-gray-900/50"
+                  >
+                    <td
+                      className={`min-w-32 border-s-4 px-4 py-3 ${accent[o.status] || "border-s-gray-300!"}`}
+                    >
+                      <p className="font-semibold">{o.id}</p>
                       <p className="mt-1 text-xs text-gray-500">
                         {date(o.created)}
                       </p>
                       <p className="mt-1 text-xs text-gray-500">{o.extra}</p>
                     </td>
-                    <td className="px-4 py-3">{o.customer}</td>
+                    <td className="min-w-36 px-4 py-3">{o.customer}</td>
                     <td className="px-4 py-3">
                       <div className="tp-identity">
                         <IdentityImage
@@ -408,13 +458,15 @@ export function OrdersPresentation({
                         <span>{o.driver || t("unassigned")}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="min-w-36 px-4 py-3">
                       <OrderStatusBadge value={o.status} />
                       <p className="mt-2 text-xs text-gray-500">
                         {date(o.updated)}
                       </p>
                     </td>
-                    <td className="px-4 py-3 tabular-nums">{money(o.total)}</td>
+                    <td className="px-4 py-3 font-semibold whitespace-nowrap tabular-nums">
+                      {money(o.total)}
+                    </td>
                     <td className="px-4 py-3">{details(o)}</td>
                   </tr>
                 ))}
@@ -426,7 +478,10 @@ export function OrdersPresentation({
             data-testid="orders-cards"
           >
             {rows.map((o) => (
-              <article className={panel} key={o.id}>
+              <article
+                className={`${panel} border-s-4 ${accent[o.status] || "border-s-gray-300!"}`}
+                key={o.id}
+              >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <h2 className="text-lg font-semibold">{o.id}</h2>
                   <OrderStatusBadge value={o.status} />
@@ -448,11 +503,11 @@ export function OrdersPresentation({
                     [nativeT("uFinM"), o.extra],
                   ].map(([k, v]) => (
                     <div
-                      className="flex flex-wrap justify-between gap-2"
+                      className={`min-w-0 ${k === t("pickup") || k === t("delivery") ? "col-span-2" : ""}`}
                       key={k}
                     >
                       <dt className="text-gray-500 dark:text-gray-400">{k}</dt>
-                      <dd className="break-words">
+                      <dd className="font-medium break-words text-gray-800 dark:text-gray-200">
                         {k === t("driver") ? (
                           <span className="tp-identity">
                             <IdentityImage
@@ -469,7 +524,7 @@ export function OrdersPresentation({
                     </div>
                   ))}
                 </dl>
-                <div className="mt-4 border-t border-gray-100 pt-2 dark:border-gray-800">
+                <div className="mt-4 flex justify-end border-t border-gray-100 pt-2 dark:border-gray-800">
                   {details(o)}
                 </div>
               </article>

@@ -293,7 +293,10 @@ export function AnalyticsPeriod({
   );
 }
 
-export default function AnalyticsDashboard() {
+export default function AnalyticsDashboard({
+  overview = false,
+}: { overview?: boolean } = {}) {
+  const ownerT = useTranslations("ownerRound");
   const t = useTranslations("talabotAnalytics");
   const locale = useLocale();
   const [period, setPeriod] = useState("month");
@@ -372,10 +375,10 @@ export default function AnalyticsDashboard() {
   return (
     <div
       className="col-span-12 grid min-w-0 grid-cols-12 gap-4 md:gap-6"
-      data-testid="analytics"
+      data-testid={overview ? "home-analytics" : "analytics"}
     >
       <div className="col-span-12">
-        <Card title={t("title")}>
+        <Card title={overview ? ownerT("overview") : t("title")}>
           <Note>{t("sample")}</Note>
           {locale === "tg" && <Note>{t("languageNote")}</Note>}
           <AnalyticsPeriod
@@ -461,132 +464,143 @@ export default function AnalyticsDashboard() {
           />
         </Card>
       </div>
-      <div className="col-span-12 xl:col-span-5">
-        <Card title={t("regions")}>
-          <Note>
-            {t("allOrders")} · {t("zones")}
-          </Note>
-          {zones.map((zone, i) => {
-            const n = source.filter((o) => o.delivery === i).length;
-            return (
-              <div key={zone} className="mb-6">
-                <div className="mb-2 flex justify-between gap-3 text-sm">
-                  <span>{zone}</span>
-                  <span>
-                    {fmt(n)} ·{" "}
-                    {fmt(source.length ? (n / source.length) * 100 : 0)}%
-                  </span>
+      {!overview && (
+        <div className="col-span-12 xl:col-span-5">
+          <Card title={t("regions")}>
+            <Note>
+              {t("allOrders")} · {t("zones")}
+            </Note>
+            {zones.map((zone, i) => {
+              const n = source.filter((o) => o.delivery === i).length;
+              return (
+                <div key={zone} className="mb-6">
+                  <div className="mb-2 flex justify-between gap-3 text-sm">
+                    <span>{zone}</span>
+                    <span>
+                      {fmt(n)} ·{" "}
+                      {fmt(source.length ? (n / source.length) * 100 : 0)}%
+                    </span>
+                  </div>
+                  <div className="h-2 rounded-full bg-gray-100 dark:bg-gray-800">
+                    <div
+                      className="h-2 rounded-full bg-brand-500"
+                      style={{
+                        width: `${source.length ? (n / source.length) * 100 : 0}%`,
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="h-2 rounded-full bg-gray-100 dark:bg-gray-800">
-                  <div
-                    className="h-2 rounded-full bg-brand-500"
-                    style={{
-                      width: `${source.length ? (n / source.length) * 100 : 0}%`,
-                    }}
-                  />
-                </div>
-              </div>
-            );
-          })}
-        </Card>
-      </div>
-      <div className="col-span-12 xl:col-span-7">
-        <Card title={t("flows")}>
-          <Note>{t("allOrders")}</Note>
-          <DataTable
-            headers={[t("pickup"), t("delivery"), t("count")]}
-            rows={zones.flatMap((z, i) =>
-              zones.map((d, j) => [
-                z,
-                d,
-                source.filter((o) => o.pickup === i && o.delivery === j).length,
-              ]),
-            )}
-          />
-        </Card>
-      </div>
-      <div className="col-span-12">
-        <Card title={t("merchants")}>
-          <Choices
-            label={t("ranking")}
-            values={["completed", "sales"].map((v) => ({
-              value: v,
-              label: t(v),
-            }))}
-            value={ranking}
-            onChange={(v) => setRanking(v as typeof ranking)}
-          />
-          <DataTable
-            headers={[
-              t("name"),
-              t("type"),
-              t("area"),
-              t("completed"),
-              t("sales"),
-            ]}
-            rows={data.merchants
-              .map((m, i) => ({
-                ...m,
-                totals: data.totals(source.filter((o) => o.merchant === i)),
-              }))
-              .sort((a, b) => b.totals[ranking] - a.totals[ranking])
-              .map((m) => [
-                m.name,
-                t(m.type),
-                zones[m.zone],
-                fmt(m.totals.completed),
-                fmt(m.totals.sales),
-              ])}
-          />
-        </Card>
-      </div>
-      <div className="col-span-12">
-        <Card title={t("days")} id="weekday-orders">
-          <Note>{t("average")}</Note>
-          <Choices
-            label={t("days")}
-            values={[
-              { value: "all", label: t("allDays") },
-              ...weekdays.map((label, i) => ({ value: String(i), label })),
-            ]}
-            value={day === null ? "all" : String(day)}
-            onChange={(v) => setDay(v === "all" ? null : Number(v))}
-          />
-          <Plot
-            categories={weekdays}
-            series={[
-              {
-                name: t("count"),
-                data: data.weekdayMeans(range.start, range.end),
-              },
-            ]}
-            onSelect={setDay}
-          />
-        </Card>
-      </div>
-      <div className="col-span-12">
-        <Card
-          title={`${t("hours")} — ${day === null ? t("allDays") : weekdays[day]}`}
-          id="hourly-orders"
-        >
-          <Note>{t("hourNote")}</Note>
-          <Plot
-            categories={Array.from(
-              { length: 24 },
-              (_, i) => String(i).padStart(2, "0") + ":00",
-            )}
-            series={[{ name: t("count"), data: data.hours(source, day) }]}
-          />
-          <p
-            className="text-sm text-gray-500"
-            aria-live="polite"
-            data-testid="hourly-total"
+              );
+            })}
+          </Card>
+        </div>
+      )}
+      {!overview && (
+        <div className="col-span-12 xl:col-span-7">
+          <Card title={t("flows")}>
+            <Note>{t("allOrders")}</Note>
+            <DataTable
+              headers={[t("pickup"), t("delivery"), t("count")]}
+              rows={zones.flatMap((z, i) =>
+                zones.map((d, j) => [
+                  z,
+                  d,
+                  source.filter((o) => o.pickup === i && o.delivery === j)
+                    .length,
+                ]),
+              )}
+            />
+          </Card>
+        </div>
+      )}
+      {!overview && (
+        <div className="col-span-12">
+          <Card title={t("merchants")}>
+            <Choices
+              label={t("ranking")}
+              values={["completed", "sales"].map((v) => ({
+                value: v,
+                label: t(v),
+              }))}
+              value={ranking}
+              onChange={(v) => setRanking(v as typeof ranking)}
+            />
+            <DataTable
+              headers={[
+                t("name"),
+                t("type"),
+                t("area"),
+                t("completed"),
+                t("sales"),
+              ]}
+              rows={data.merchants
+                .map((m, i) => ({
+                  ...m,
+                  totals: data.totals(source.filter((o) => o.merchant === i)),
+                }))
+                .sort((a, b) => b.totals[ranking] - a.totals[ranking])
+                .map((m) => [
+                  m.name,
+                  t(m.type),
+                  zones[m.zone],
+                  fmt(m.totals.completed),
+                  fmt(m.totals.sales),
+                ])}
+            />
+          </Card>
+        </div>
+      )}
+      {!overview && (
+        <div className="col-span-12">
+          <Card title={t("days")} id="weekday-orders">
+            <Note>{t("average")}</Note>
+            <Choices
+              label={t("days")}
+              values={[
+                { value: "all", label: t("allDays") },
+                ...weekdays.map((label, i) => ({ value: String(i), label })),
+              ]}
+              value={day === null ? "all" : String(day)}
+              onChange={(v) => setDay(v === "all" ? null : Number(v))}
+            />
+            <Plot
+              categories={weekdays}
+              series={[
+                {
+                  name: t("count"),
+                  data: data.weekdayMeans(range.start, range.end),
+                },
+              ]}
+              onSelect={setDay}
+            />
+          </Card>
+        </div>
+      )}
+      {!overview && (
+        <div className="col-span-12">
+          <Card
+            title={`${t("hours")} — ${day === null ? t("allDays") : weekdays[day]}`}
+            id="hourly-orders"
           >
-            {t("count")}:{" "}
-            {fmt(data.hours(source, day).reduce((s, n) => s + n, 0))}
-          </p>
-        </Card>
-      </div>
+            <Note>{t("hourNote")}</Note>
+            <Plot
+              categories={Array.from(
+                { length: 24 },
+                (_, i) => String(i).padStart(2, "0") + ":00",
+              )}
+              series={[{ name: t("count"), data: data.hours(source, day) }]}
+            />
+            <p
+              className="text-sm text-gray-500"
+              aria-live="polite"
+              data-testid="hourly-total"
+            >
+              {t("count")}:{" "}
+              {fmt(data.hours(source, day).reduce((s, n) => s + n, 0))}
+            </p>
+          </Card>
+        </div>
+      )}
       <div className="col-span-12">
         <Card title={t("coverage")}>
           <Note>{t("coverageNote")}</Note>
@@ -658,32 +672,34 @@ export default function AnalyticsDashboard() {
           />
         </Card>
       </div>
-      <div className="col-span-12 xl:col-span-5">
-        <Card title={t("target")} id="monthly-target">
-          <Note>{t("example")}</Note>
-          <div className="max-h-45 overflow-hidden">
-            <Chart
-              options={targetOptions}
-              series={[
-                Math.min(100, (targetCompleted / data.EXAMPLE_TARGET) * 100),
+      {!overview && (
+        <div className="col-span-12 xl:col-span-5">
+          <Card title={t("target")} id="monthly-target">
+            <Note>{t("example")}</Note>
+            <div className="max-h-45 overflow-hidden">
+              <Chart
+                options={targetOptions}
+                series={[
+                  Math.min(100, (targetCompleted / data.EXAMPLE_TARGET) * 100),
+                ]}
+                type="radialBar"
+                height={330}
+              />
+            </div>
+            <Note>{t("independent")}</Note>
+            <DataTable
+              headers={[t("completed"), t("goal"), t("remaining")]}
+              rows={[
+                [
+                  fmt(targetCompleted),
+                  fmt(data.EXAMPLE_TARGET),
+                  fmt(Math.max(0, data.EXAMPLE_TARGET - targetCompleted)),
+                ],
               ]}
-              type="radialBar"
-              height={330}
             />
-          </div>
-          <Note>{t("independent")}</Note>
-          <DataTable
-            headers={[t("completed"), t("goal"), t("remaining")]}
-            rows={[
-              [
-                fmt(targetCompleted),
-                fmt(data.EXAMPLE_TARGET),
-                fmt(Math.max(0, data.EXAMPLE_TARGET - targetCompleted)),
-              ],
-            ]}
-          />
-        </Card>
-      </div>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }

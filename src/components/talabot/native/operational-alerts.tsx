@@ -24,7 +24,7 @@ export default function OperationalAlerts({
     approved = tables.profiles.filter((d) => d.driver_status === "approved"),
     activeStores = tables.stores.filter((s) => s.is_active);
   return (
-    <>
+    <div className="space-y-4">
       <div className="flex flex-wrap gap-2">
         <Button
           size="lg"
@@ -150,6 +150,6 @@ export default function OperationalAlerts({
           close={() => setAssignment(null)}
         />
       )}
-    </>
+    </div>
   );
 }

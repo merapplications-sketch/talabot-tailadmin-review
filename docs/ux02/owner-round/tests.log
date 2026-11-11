@@ -1,0 +1,77 @@
+{"status":"PASS","checks":12,"totals":{"orders":854,"completed":740,"sales":74850,"revenue":6316,"cancelled":66,"delayed":88},"weekdayMeans":[116.5,74,91,108,66,83,99.5]}
+✔ tests/talabot-analytics-data.cjs (277.963359ms)
+PASS compact search and accessible closed filter dialog trigger
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and native retain list, active chips and both responsive presentations
+7 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+✔ tests/ux02-composition-ssr.cjs (690.695045ms)
+PASS compact search and accessible closed filter dialog trigger
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and native retain list, active chips and both responsive presentations
+7 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS default Home contains exactly four A indicators, both rankings with B overview and no full Orders list
+PASS Orders contains full management with search and filters, no Home cards or B analytics
+PASS Reports retains all original B analytics sections and B metrics without duplicating Orders
+PASS all twelve protected sections remain alongside Home and Reports
+PASS Home distinguishes completed count, saved totals and units, with explicit demo and snapshot labels
+5 route composition checks passed; SSR only.
+✔ tests/ux02-home-composition.cjs (1179.389395ms)
+PASS saved sample: 7 loaded, 1 delivered, 415 TJS, 2 units; historical records excluded
+PASS restaurant sales ranking differs from completed count and excludes other categories
+PASS quantity ranking uses sum, recorded name and store+item identity; no cancelled rows or catalog price
+PASS Dushanbe boundaries include full local day; creation date, not completion date
+PASS missing monetary values remain unknown and invalid item joins are counted, not fabricated
+PASS empty period shows no invented zero-valued rankings
+PASS period selector uses fixed sample date and validates custom ranges
+7 Home data checks passed (synthetic data, not HTTP/server QA).
+✔ tests/ux02-home-data.cjs (333.824752ms)
+PASS period includes Dushanbe day boundaries and excludes adjacent days
+PASS each period endpoint works independently
+PASS store and payment filters independently retain only matching rows
+PASS oldest and newest sorting preserve all rows and do not mutate source
+PASS supported date/store/payment/status/search intersection yields one correct order
+PASS invalid period returns explicit error, preserves filter inputs; correction applies
+PASS empty intersection does not mutate any inputs
+PASS order details/back preserves query,status and scroll; rehydrate preserves URL state
+PASS ratings linked order returns to exact rating context and list position remains saved
+PASS rating detail Back uses restoration handler rather than navigation-to-top
+PASS Home is the default route; Orders and Reports have distinct B routes
+PASS Orders to Home and sidebar Orders restores search, status, secondary filters and exact scroll
+PASS Direct order detail from Home returns to Home; original list memory remains separate
+13 list journey checks passed; 0 failed.
+✔ tests/ux02-list-journeys.cjs (508.458606ms)
+PASS stale heartbeat excluded at 120 seconds
+PASS busy driver excluded without new business rules
+PASS eligible approved driver retained
+PASS unassigned alert only after original 90-second threshold
+PASS assigned or terminal orders not assignable
+PASS low rating resolved excluded
+PASS support reply rules
+PASS assignment preserves original RPC arguments; no success claimed
+PASS wallet zero never reaches transport
+PASS wallet amount rounding and trimmed note match source
+PASS customer phone normalization and reason match source
+PASS invalid staff permission rejected before transport
+PASS driver limit maximum preserved
+PASS negative refund rejected
+PASS rejected ticket requires reason
+PASS happy-hour overnight row contract preserved
+PASS native mutation service has no production transport
+17 new affected checks passed; no server RBAC or production success claim.
+✔ tests/ux02-native-operations.cjs (427.455294ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1193.304206

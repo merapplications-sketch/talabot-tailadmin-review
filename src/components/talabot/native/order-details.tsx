@@ -1,6 +1,6 @@
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { formatDate } from "./format";
-import { CallIcon, MapIcon } from "@/icons";
+import { CallIcon, MapIcon, ClockIcon } from "@/icons";
 import {
   Accordion,
   AccordionItem,
@@ -13,7 +13,52 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import AssignmentDialog from "./assignment-dialog";
 import { canAssign } from "./order-operations";
-import { Card, Pair } from "./primitives";
+import { Card } from "./primitives";
+import {
+  Card as BCard,
+  CardContent,
+  CardDescription,
+} from "@/components/ui/card";
+import type { ReactNode } from "react";
+// B invoice/description row: muted label, prominent saved value. No calculation changes.
+function Pair({
+  label,
+  children,
+  emphasis = false,
+}: {
+  label: string;
+  children: ReactNode;
+  emphasis?: boolean;
+}) {
+  return (
+    <dl
+      className={
+        emphasis
+          ? "mt-5 flex items-start justify-between gap-4 border-t border-gray-200 pt-5 text-lg dark:border-gray-800"
+          : "flex items-start justify-between gap-4 text-sm"
+      }
+    >
+      <dt
+        className={
+          emphasis
+            ? "font-semibold text-gray-800 dark:text-white/90"
+            : "text-gray-500 dark:text-gray-400"
+        }
+      >
+        {label}
+      </dt>
+      <dd
+        className={
+          emphasis
+            ? "font-bold text-brand-600 tabular-nums dark:text-brand-400"
+            : "min-w-0 text-end font-medium text-gray-800 tabular-nums dark:text-gray-200"
+        }
+      >
+        {children}
+      </dd>
+    </dl>
+  );
+}
 import {
   tables,
   text,
@@ -28,7 +73,8 @@ import {
 type Props = { order: Row; t: (key: string) => string; back: () => void };
 const money = (n: number) => n.toFixed(2) + " TJS";
 export default function OrderDetails({ order: o, t, back }: Props) {
-  const locale = useLocale();
+  const locale = useLocale(),
+    ownerT = useTranslations("ownerRound");
   const [assigning, setAssigning] = useState(false);
   const f = finance(o),
     store = tables.stores.find((s) => s.id === o.store_id),
@@ -45,28 +91,31 @@ export default function OrderDetails({ order: o, t, back }: Props) {
     );
   };
   const party = (label: string, row: Row | undefined, name?: string) => (
-    <Card title={label}>
-      <p className="font-medium break-words">
-        {name || text(row || {}, "name") || "—"}
-      </p>
-      {row?.phone ? (
-        <>
-          <span>{text(row, "phone")}</span>
+    <BCard className="rounded-2xl shadow-theme-xs">
+      <CardDescription>{label}</CardDescription>
+      <CardContent className="flex items-start justify-between gap-3">
+        <p className="min-w-0 text-base font-semibold break-words text-gray-800 dark:text-gray-200">
+          {name || text(row || {}, "name") || "—"}
+        </p>
+        {row?.phone ? (
           <Button
-            variant="outline"
+            variant="ghost"
             size="icon-lg"
             nativeButton={false}
+            className="shrink-0 text-green-600! hover:bg-green-50 dark:text-green-400! dark:hover:bg-green-500/15"
             aria-label={t("aCall") + ": " + text(row, "phone")}
             title={t("aCall") + ": " + text(row, "phone")}
             render={<a href={"tel:" + text(row, "phone")} />}
           >
             <CallIcon aria-hidden="true" />
           </Button>
-        </>
-      ) : (
-        <p>{t("aDrvNoPh")}</p>
-      )}
-    </Card>
+        ) : (
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            {t("aDrvNoPh")}
+          </span>
+        )}
+      </CardContent>
+    </BCard>
   );
   return (
     <div className="space-y-4">
@@ -121,31 +170,83 @@ export default function OrderDetails({ order: o, t, back }: Props) {
           </p>
         )}
       </Card>
+      <section data-testid="order-journey">
+        <Card title={ownerT("journey")}>
+          {events.length ? (
+            <ol className="space-y-5 border-s-2 border-brand-500 ps-5">
+              {events.map((e, i) => (
+                <li key={text(e, "id")} className="relative">
+                  <ClockIcon
+                    className="absolute -start-8 top-0 size-5 rounded-full bg-white text-brand-500 dark:bg-gray-900"
+                    aria-hidden="true"
+                  />
+                  <Pair
+                    label={
+                      eventLabels[text(e, "kind")]
+                        ? t(eventLabels[text(e, "kind")])
+                        : t("aeUnk") + ": " + text(e, "kind")
+                    }
+                  >
+                    {formatDate(text(e, "at"), locale)}
+                    {i > 0
+                      ? " (+" +
+                        duration(text(e, "at"), text(events[i - 1], "at")) +
+                        ")"
+                      : ""}
+                  </Pair>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div className="space-y-2">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {ownerT("noEvents")}
+              </p>
+              <Pair label={ownerT("created")}>
+                {formatDate(text(o, "created_at"), locale)}
+              </Pair>
+            </div>
+          )}
+          {events.length > 1 && (
+            <Pair label={t("aTotalT")}>
+              {duration(
+                text(events[events.length - 1], "at"),
+                text(events[0], "at"),
+              )}
+            </Pair>
+          )}
+        </Card>
+      </section>
       <div className="grid gap-4 lg:grid-cols-3">
         {party(t("aStoreL"), store)}
         {party(t("aDrvL"), driver)}
         {party(t("aClient"), client)}
       </div>
       <Card title={t("address")}>
-        <p className="break-words">{text(o, "address")}</p>
-        {o.lat != null && o.lng != null && (
-          <Button
-            variant="outline"
-            size="icon-lg"
-            nativeButton={false}
-            aria-label={t("aOnMap")}
-            title={t("aOnMap")}
-            render={
-              <a
-                href={`https://www.google.com/maps?q=${o.lat},${o.lng}`}
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
-          >
-            <MapIcon aria-hidden="true" />
-          </Button>
-        )}
+        <div className="flex items-start justify-between gap-3">
+          <p className="min-w-0 font-medium break-words">
+            {text(o, "address")}
+          </p>
+          {o.lat != null && o.lng != null && (
+            <Button
+              variant="ghost"
+              size="icon-lg"
+              className="shrink-0 text-brand-500"
+              nativeButton={false}
+              aria-label={t("aOnMap")}
+              title={t("aOnMap")}
+              render={
+                <a
+                  href={`https://www.google.com/maps?q=${o.lat},${o.lng}`}
+                  target="_blank"
+                  rel="noreferrer"
+                />
+              }
+            >
+              <MapIcon aria-hidden="true" />
+            </Button>
+          )}
+        </div>
         {!!o.leave_at_door && <p>{t("yDoor")}</p>}
         {!!o.is_gift && (
           <p>
@@ -158,85 +259,106 @@ export default function OrderDetails({ order: o, t, back }: Props) {
         )}
         {!!o.substitution && <p>{t("ySub_" + text(o, "substitution"))}</p>}
       </Card>
-      <Card title={t("aItemsL")}>
-        {items.map((i) => (
-          <div
-            key={text(i, "id")}
-            className="border-b border-gray-200 py-3 dark:border-gray-700"
-          >
-            <Pair label={number(i, "qty") + " × " + text(i, "name")}>
-              {money(number(i, "qty") * number(i, "price"))}
-            </Pair>
-            <p>
-              {((i.options as Row[]) || []).map((x) => text(x, "n")).join(", ")}
-            </p>
-            <p>{text(i, "note")}</p>
-          </div>
-        ))}
-        {[
-          ["subtotal", "aSub"],
-          ["discount", "aDisc"],
-          ["promo_discount", "aPromo"],
-          ["hh_discount", "yHhIn"],
-          ["points_value", "yPtsUsed"],
-        ]
-          .filter(
-            ([k]) =>
-              ["subtotal", "tip", "total"].includes(k) || number(o, k) > 0,
-          )
-          .map(([k, label]) => (
-            <Pair
-              key={k}
-              label={
-                t(label) +
-                (k === "promo_discount" ? " " + text(o, "promo_code") : "")
-              }
+      <section data-testid="order-invoice">
+        <Card title={ownerT("invoice")}>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            {ownerT("amounts")} · #{text(o, "id")}
+          </p>
+          {items.map((i) => (
+            <div
+              key={text(i, "id")}
+              className="border-b border-gray-200 py-3 dark:border-gray-700"
             >
-              {[
-                "discount",
-                "promo_discount",
-                "hh_discount",
-                "points_value",
-              ].includes(k)
-                ? "−"
-                : ""}
-              {money(number(o, k))}
-              {k === "delivery_extra" && number(o, "delivery_km") > 0
-                ? " (" + number(o, "delivery_km") + " km)"
-                : ""}
-            </Pair>
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <p className="font-medium text-gray-800 dark:text-gray-200">
+                    {text(i, "name")}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {number(i, "qty")} × {money(number(i, "price"))}
+                  </p>
+                </div>
+                <p className="shrink-0 font-semibold whitespace-nowrap tabular-nums">
+                  {money(number(i, "qty") * number(i, "price"))}
+                </p>
+              </div>
+              <p>
+                {((i.options as Row[]) || [])
+                  .map((x) => text(x, "n"))
+                  .join(", ")}
+              </p>
+              <p>{text(i, "note")}</p>
+            </div>
           ))}
-        {number(o, "fee_waived") > 0 ? (
-          <>
-            <Pair label={t("uDelCust")}>0.00 TJS</Pair>
-            <Pair label={t("uDelRest")}>{money(number(o, "fee_waived"))}</Pair>
-          </>
-        ) : null}
-        {number(o, "delivery_extra") > 0 ? (
-          <>
-            <Pair label={t("aDelBase")}>
-              {money(number(o, "delivery_base"))}
-            </Pair>
-            <Pair
-              label={t("aDelFar") + " (" + number(o, "delivery_km") + " km)"}
-            >
-              {money(number(o, "delivery_extra"))}
-            </Pair>
-          </>
-        ) : number(o, "fee_waived") === 0 ? (
-          <Pair label={t("aDelF")}>{money(number(o, "delivery_fee"))}</Pair>
-        ) : null}
-        <Pair label={t("aTip")}>{money(number(o, "tip"))}</Pair>
-        <Pair label={t("aTot")}>{money(number(o, "total"))}</Pair>
-        {number(o, "points_used") > 0 && (
-          <Pair label={t("yPtsUsed")}>{number(o, "points_used")}</Pair>
-        )}
-        {(number(o, "points_earned") > 0 || number(o, "cashback") > 0) && (
-          <Pair label={t("yGiven")}>
-            {number(o, "points_earned")} · {money(number(o, "cashback"))}
+          {[
+            ["subtotal", "aSub"],
+            ["discount", "aDisc"],
+            ["promo_discount", "aPromo"],
+            ["hh_discount", "yHhIn"],
+            ["points_value", "yPtsUsed"],
+          ]
+            .filter(
+              ([k]) =>
+                ["subtotal", "tip", "total"].includes(k) || number(o, k) > 0,
+            )
+            .map(([k, label]) => (
+              <Pair
+                key={k}
+                label={
+                  t(label) +
+                  (k === "promo_discount" ? " " + text(o, "promo_code") : "")
+                }
+              >
+                {[
+                  "discount",
+                  "promo_discount",
+                  "hh_discount",
+                  "points_value",
+                ].includes(k)
+                  ? "−"
+                  : ""}
+                {money(number(o, k))}
+                {k === "delivery_extra" && number(o, "delivery_km") > 0
+                  ? " (" + number(o, "delivery_km") + " km)"
+                  : ""}
+              </Pair>
+            ))}
+          {number(o, "fee_waived") > 0 ? (
+            <>
+              <Pair label={t("uDelCust")}>0.00 TJS</Pair>
+              <Pair label={t("uDelRest")}>
+                {money(number(o, "fee_waived"))}
+              </Pair>
+            </>
+          ) : null}
+          {number(o, "delivery_extra") > 0 ? (
+            <>
+              <Pair label={t("aDelBase")}>
+                {money(number(o, "delivery_base"))}
+              </Pair>
+              <Pair
+                label={t("aDelFar") + " (" + number(o, "delivery_km") + " km)"}
+              >
+                {money(number(o, "delivery_extra"))}
+              </Pair>
+            </>
+          ) : number(o, "fee_waived") === 0 ? (
+            <Pair label={t("aDelF")}>{money(number(o, "delivery_fee"))}</Pair>
+          ) : null}
+          <Pair label={t("aTip")}>{money(number(o, "tip"))}</Pair>
+          <Pair label={t("aTot")} emphasis>
+            {money(number(o, "total"))}
           </Pair>
-        )}
-      </Card>
+          {number(o, "points_used") > 0 && (
+            <Pair label={t("yPtsUsed")}>{number(o, "points_used")}</Pair>
+          )}
+          {(number(o, "points_earned") > 0 || number(o, "cashback") > 0) && (
+            <Pair label={t("yGiven")}>
+              {number(o, "points_earned")} · {money(number(o, "cashback"))}
+            </Pair>
+          )}
+        </Card>
+      </section>
       <Card title={t("uFinT")}>
         <Pair label={t("uFinM")}>{t(text(o, "payment"))}</Pair>
         <Pair label={t("uFinGot")}>
@@ -293,47 +415,6 @@ export default function OrderDetails({ order: o, t, back }: Props) {
           {money(f.commission)} —{" "}
           {t(f.delivered ? "uFinComOk" : f.dead ? "uFinComNo" : "uFinComWait")}
         </Pair>
-      </Card>
-      <Card>
-        <Accordion>
-          <AccordionItem value="aTimeL">
-            <AccordionTrigger>{t("aTimeL")}</AccordionTrigger>
-            <AccordionContent>
-              {events.length ? (
-                <ol className="space-y-6 border-l border-brand-500 pl-4">
-                  {events.map((e, i) => (
-                    <li key={text(e, "id")}>
-                      <Pair
-                        label={
-                          eventLabels[text(e, "kind")]
-                            ? t(eventLabels[text(e, "kind")])
-                            : t("aeUnk") + ": " + text(e, "kind")
-                        }
-                      >
-                        {formatDate(text(e, "at"), locale)}
-                        {i > 0
-                          ? " (+" +
-                            duration(text(e, "at"), text(events[i - 1], "at")) +
-                            ")"
-                          : ""}
-                      </Pair>
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                <p>{formatDate(text(o, "created_at"), locale)}</p>
-              )}
-              {events.length > 1 && (
-                <Pair label={t("aTotalT")}>
-                  {duration(
-                    text(events[events.length - 1], "at"),
-                    text(events[0], "at"),
-                  )}
-                </Pair>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
       </Card>
       <Card>
         <Accordion>

@@ -36,13 +36,13 @@ export function Card({
   children: ReactNode;
 }) {
   return (
-    <BCard>
+    <BCard className="rounded-2xl shadow-theme-xs">
       {title && (
         <CardHeader>
           <CardTitle>{title}</CardTitle>
         </CardHeader>
       )}
-      <CardContent>{children}</CardContent>
+      <CardContent className="space-y-4">{children}</CardContent>
     </BCard>
   );
 }

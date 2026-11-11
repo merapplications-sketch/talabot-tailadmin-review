@@ -173,7 +173,7 @@ export default function NativeAdmin() {
             controls: <ThemeToggleButton />,
           }}
         >
-          <section className="min-w-0 space-y-4">
+          <section className="min-w-0 space-y-6">
             <p className="text-sm text-gray-500">
               {t("nativeNotice")}
               {locale === "tg" ? " · Тарҷумаи амалиёт нопурра: RU" : ""}

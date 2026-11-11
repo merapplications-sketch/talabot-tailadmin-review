@@ -1,0 +1,35 @@
+PASS driver identity resolves one id for list/details/phone/image
+PASS missing contacts never borrow a fixed number
+PASS phone search isolates correct customer, normalizes digits
+PASS sample aliases are scoped; canonical false wins; source is immutable
+PASS known entity status semantics, unknown stays neutral
+PASS scheduled and expired banner meanings preserved
+PASS driver live/off filters use A freshness and sort online first
+PASS cash warning is inclusive at original limit; absent balance unknown
+8 audit adapter checks passed
+✔ tests/ux02-audit-data.cjs (407.530986ms)
+PASS compact search and accessible closed filter dialog trigger
+PASS filter panel closes before desktop table and phone cards
+PASS A list payment, item count, fee and parties retained
+PASS invalid dates and empty/error outcomes remain visible
+PASS SummaryCards remains informational and uses B four-card structure
+PASS header contains no duplicate search or generic search substitute
+PASS B and native retain list, active chips and both responsive presentations
+7 server-rendered composition checks passed; icons stubbed only for this nonvisual test; no viewport or interaction claim.
+PASS support/banner/promo columns describe actual fields, not phone/address
+PASS rating list retains comment and displays both actual star fields
+PASS driver filter has all/on/off, status and inclusive cash warning
+PASS canonical activation badge is shown on list and detail
+PASS real image reaches identity markup, missing image uses existing fallback
+PASS texts and loyalty show supplied summaries with details closed
+PASS pencil includes Edit and entity; nameless field groups do not create empty cards
+7 audit SSR checks passed (plus shared composition checks); no viewport claim
+✔ tests/ux02-audit-ssr.cjs (1204.109744ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1213.197319

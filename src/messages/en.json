@@ -1135,5 +1135,16 @@
     "details": "Details",
     "reportsNote": "Full original B analytics, with their separate synthetic dataset and original period rules.",
     "rangeError": "Choose a valid range between {start} and {end}."
+  },
+  "ownerRound": {
+    "overview": "Operations & finances",
+    "shortcuts": "Quick access",
+    "done": "Show results",
+    "invoice": "Order invoice",
+    "journey": "Order journey",
+    "noEvents": "No journey events are recorded in this sample.",
+    "created": "Created",
+    "contact": "Contact",
+    "amounts": "Saved amounts · TJS"
   }
 }

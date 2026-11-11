@@ -2,13 +2,28 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { BoxIcon, DollarIcon, PieChartIcon, MovingBoxIcon } from "@/icons";
+import {
+  BoxIcon,
+  DollarIcon,
+  PieChartIcon,
+  MovingBoxIcon,
+  TruckDeliveryIcon,
+  CartIcon,
+  ChatIcon,
+  StarIcon,
+  BarChartIcon,
+} from "@/icons";
 import SummaryCards from "../b-shell/summary-cards";
 import { metrics } from "../domain";
 import { operationalAlerts } from "../order-operations";
 import OperationalAlerts from "../operational-alerts";
 import { Shell } from "../../workspace";
-import { Card, Note, DataTable, AnalyticsPeriod } from "../../analytics";
+import AnalyticsDashboard, {
+  Card,
+  Note,
+  DataTable,
+  AnalyticsPeriod,
+} from "../../analytics";
 import {
   homeRankings,
   snapshot,
@@ -23,6 +38,7 @@ interface Props {
 }
 export default function HomeDashboard({ t, navigate, href }: Props) {
   const h = useTranslations("nativeHome"),
+    ownerT = useTranslations("ownerRound"),
     locale = useLocale();
   const [period, setPeriod] = useState("month"),
     [range, setRange] = useState(() => periodRange("month"));
@@ -74,14 +90,31 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
       />
       <p className="text-sm text-gray-500">{t("nativeScope")}</p>
 
-      <div className="flex flex-wrap gap-2">
-        <Button size="lg" onClick={() => href("/orders")}>
-          {h("allOrders")}
-        </Button>
-        <Button size="lg" variant="outline" onClick={() => href("/reports")}>
-          {h("allReports")}
-        </Button>
-      </div>
+      <nav
+        aria-label={ownerT("shortcuts")}
+        className="grid grid-cols-2 gap-3 sm:grid-cols-3"
+        data-testid="home-shortcuts"
+      >
+        {[
+          { section: "orders", label: t("tO"), Icon: BoxIcon },
+          { section: "drivers", label: t("tD"), Icon: TruckDeliveryIcon },
+          { section: "restaurants", label: t("tS"), Icon: CartIcon },
+          { section: "support", label: t("tH"), Icon: ChatIcon },
+          { section: "ratings", label: t("tR"), Icon: StarIcon },
+          { section: "reports", label: h("reports"), Icon: BarChartIcon },
+        ].map(({ section, label, Icon }) => (
+          <Button
+            key={section}
+            size="lg"
+            variant="outline"
+            className="h-auto min-h-14 justify-start gap-3 text-start whitespace-normal"
+            onClick={() => href("/" + section)}
+          >
+            <Icon className="shrink-0 text-brand-500" />
+            {label}
+          </Button>
+        ))}
+      </nav>
       <Card title={h("attention")} id="home-attention">
         <p className="text-lg font-semibold">
           {h("attentionCount", { count: attention.length })}
@@ -90,6 +123,7 @@ export default function HomeDashboard({ t, navigate, href }: Props) {
         {!attention.length && <Note>{h("attentionEmpty")}</Note>}
         <OperationalAlerts t={t} navigate={navigate} compact />
       </Card>
+      <AnalyticsDashboard overview />
       <Card title={h("rankings")} id="home-ranking-period">
         <Note>{h("source")}</Note>
         <Note>
