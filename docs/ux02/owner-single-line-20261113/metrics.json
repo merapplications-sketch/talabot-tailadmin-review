@@ -1,0 +1,8 @@
+{
+  "base": "621038ec960746d217a87f594eb8342aaa8200e6",
+  "source_blobs": {
+    "src/components/ui/button.tsx": "a08a28f9f786192697c301115c899fe5dbcc0f50",
+    "src/components/talabot/workspace.tsx": "06b428cbb50454d29b6a7b5d35012004c2e1f685"
+  },
+  "captures": []
+}

@@ -804,7 +804,7 @@ export function NotificationsPage({
                   {c.noticeTime}: {item.order.updated}
                 </p>
                 <Button
-                  size="lg-wrap"
+                  size="lg-single"
                   variant="brand-readable"
                   disabled={read.includes(id)}
                   onClick={() => mark(id)}

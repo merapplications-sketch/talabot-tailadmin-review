@@ -1,3 +1,7 @@
+# Latest — owner single-line choice / 2026-11-13
+
+[Current handoff](owner-single-line-20261113/HANDOFF.md): smaller regular white one-line notification action requested by owner. Prior large-text contrast qualification no longer applies; documented normal-text contrast shortfall. V04 preserved; GitHub only.
+
 # Latest — PM-UX02-01 / 2026-11-12
 
 [Correction and delta evidence](pm-ux02-01-fix-20261112/HANDOFF.md), source `990875403e5214538606966f5dae6ebe56062c4b`, based on PM evidence `30918835d72b90087c03c96ea635213b740ab0cf`. RU/TG narrow-dialog button clipping corrected without reducing font or changing approved color. V04 preserved; GitHub only, no deployment. Physical Safari remains untested. Older entries follow.
