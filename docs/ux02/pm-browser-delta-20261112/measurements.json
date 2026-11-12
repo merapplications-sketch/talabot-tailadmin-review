@@ -1,0 +1,1686 @@
+{
+  "source": "319006a420e12c23be2d3cc3baaa2532614280ae",
+  "executableSource": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+  "environment": "Desktop Chromium CSS iframe viewports; not Safari, device emulation or touch hardware",
+  "observations": [
+    {
+      "label": "stores-en-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 147.375,
+            "top": 487.53125,
+            "width": 131.375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-en-dark-320.jpg"
+    },
+    {
+      "label": "stores-en-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 147.375,
+            "top": 487.53125,
+            "width": 131.375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-en-light-320.jpg"
+    },
+    {
+      "label": "add-dialog-en-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 431.53125,
+            "height": 44,
+            "left": 16,
+            "right": 147.375,
+            "top": 387.53125,
+            "width": 131.375,
+            "x": 16,
+            "y": 387.53125
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants&id=new",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "add-dialog-en-light-320.jpg"
+    },
+    {
+      "kind": "interaction",
+      "action": "click Add store",
+      "locale": "en",
+      "width": 320,
+      "result": "Details dialog visible; no store created",
+      "dialogText": "Details\nAdd store"
+    },
+    {
+      "label": "stores-en-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 407.53125,
+            "height": 44,
+            "left": 16,
+            "right": 147.375,
+            "top": 363.53125,
+            "width": 131.375,
+            "x": 16,
+            "y": 363.53125
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-en-light-390.jpg"
+    },
+    {
+      "label": "stores-en-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 433,
+            "height": 44,
+            "left": 314,
+            "right": 445.375,
+            "top": 389,
+            "width": 131.375,
+            "x": 314,
+            "y": 389
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-en-light-1440.jpg"
+    },
+    {
+      "label": "mark-en-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 480.1875,
+            "top": 531.5,
+            "width": 162.1875,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-en-light-1440.jpg"
+    },
+    {
+      "label": "mark-en-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 591.5,
+            "height": 44,
+            "left": 38,
+            "right": 200.1875,
+            "top": 547.5,
+            "width": 162.1875,
+            "x": 38,
+            "y": 547.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-en-light-390.jpg"
+    },
+    {
+      "label": "mark-en-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 580.5,
+            "height": 44,
+            "left": 54,
+            "right": 216.1875,
+            "top": 536.5,
+            "width": 162.1875,
+            "x": 54,
+            "y": 536.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-en-light-320.jpg"
+    },
+    {
+      "label": "mark-focus-en-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": true,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 580.5,
+            "height": 44,
+            "left": 54,
+            "right": 216.1875,
+            "top": 536.5,
+            "width": 162.1875,
+            "x": 54,
+            "y": 536.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-focus-en-light-320.jpg"
+    },
+    {
+      "label": "stores-en-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 533,
+            "height": 44,
+            "left": 314,
+            "right": 445.375,
+            "top": 489,
+            "width": 131.375,
+            "x": 314,
+            "y": 489
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-en-dark-1440.jpg"
+    },
+    {
+      "label": "stores-en-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 129,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 507.53125,
+            "height": 44,
+            "left": 16,
+            "right": 147.375,
+            "top": 463.53125,
+            "width": 131.375,
+            "x": 16,
+            "y": 463.53125
+          },
+          "scrollWidth": 129,
+          "text": "Add store"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-en-dark-390.jpg"
+    },
+    {
+      "label": "mark-en-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 480.1875,
+            "top": 531.5,
+            "width": 162.1875,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-en-dark-1440.jpg"
+    },
+    {
+      "label": "mark-en-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 591.5,
+            "height": 44,
+            "left": 38,
+            "right": 200.1875,
+            "top": 547.5,
+            "width": 162.1875,
+            "x": 38,
+            "y": 547.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-en-dark-390.jpg"
+    },
+    {
+      "label": "mark-en-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 580.5,
+            "height": 44,
+            "left": 54,
+            "right": 216.1875,
+            "top": 536.5,
+            "width": 162.1875,
+            "x": 54,
+            "y": 536.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-en-dark-320.jpg"
+    },
+    {
+      "label": "stores-ru-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 533,
+            "height": 44,
+            "left": 314,
+            "right": 536.34375,
+            "top": 489,
+            "width": 222.34375,
+            "x": 314,
+            "y": 489
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-ru-dark-1440.jpg"
+    },
+    {
+      "label": "stores-ru-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 507.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 463.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 463.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-ru-dark-390.jpg"
+    },
+    {
+      "label": "stores-ru-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 487.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-ru-dark-320.jpg"
+    },
+    {
+      "label": "mark-ru-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 595.875,
+            "top": 531.5,
+            "width": 277.875,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-ru-dark-1440.jpg"
+    },
+    {
+      "label": "mark-ru-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 38,
+            "right": 315.875,
+            "top": 526.5,
+            "width": 277.875,
+            "x": 38,
+            "y": 526.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-ru-dark-390.jpg"
+    },
+    {
+      "label": "mark-ru-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 578.5,
+            "height": 44,
+            "left": 54,
+            "right": 331.875,
+            "top": 534.5,
+            "width": 277.875,
+            "x": 54,
+            "y": 534.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-ru-dark-320.jpg"
+    },
+    {
+      "label": "stores-ru-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 533,
+            "height": 44,
+            "left": 314,
+            "right": 536.34375,
+            "top": 489,
+            "width": 222.34375,
+            "x": 314,
+            "y": 489
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-ru-light-1440.jpg"
+    },
+    {
+      "label": "stores-ru-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 507.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 463.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 463.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-ru-light-390.jpg"
+    },
+    {
+      "label": "stores-ru-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 487.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-ru-light-320.jpg"
+    },
+    {
+      "kind": "finding",
+      "id": "PM-UX02-01",
+      "locale": "ru",
+      "theme": "dark",
+      "viewportWidth": 320,
+      "buttonRight": 331.875,
+      "dialogRight": 304,
+      "dialogOverflowX": "hidden",
+      "result": "Mark-as-read label and button clipped at dialog right edge",
+      "screenshot": "mark-ru-dark-320.jpg"
+    },
+    {
+      "label": "mark-ru-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 595.875,
+            "top": 531.5,
+            "width": 277.875,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-ru-light-1440.jpg"
+    },
+    {
+      "label": "mark-ru-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 38,
+            "right": 315.875,
+            "top": 526.5,
+            "width": 277.875,
+            "x": 38,
+            "y": 526.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-ru-light-390.jpg"
+    },
+    {
+      "label": "mark-ru-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 276,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 578.5,
+            "height": 44,
+            "left": 54,
+            "right": 331.875,
+            "top": 534.5,
+            "width": 277.875,
+            "x": 54,
+            "y": 534.5
+          },
+          "scrollWidth": 276,
+          "text": "Отметить прочитанным"
+        }
+      ],
+      "lang": "ru",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-ru-light-320.jpg"
+    },
+    {
+      "label": "stores-tg-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 533,
+            "height": 44,
+            "left": 314,
+            "right": 536.34375,
+            "top": 489,
+            "width": 222.34375,
+            "x": 314,
+            "y": 489
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-tg-light-1440.jpg"
+    },
+    {
+      "label": "stores-tg-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 507.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 463.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 463.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-tg-light-390.jpg"
+    },
+    {
+      "label": "stores-tg-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 487.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-tg-light-320.jpg"
+    },
+    {
+      "label": "mark-tg-light-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 670.203125,
+            "top": 531.5,
+            "width": 352.203125,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-tg-light-1440.jpg"
+    },
+    {
+      "label": "mark-tg-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 38,
+            "right": 390.203125,
+            "top": 526.5,
+            "width": 352.203125,
+            "x": 38,
+            "y": 526.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-tg-light-390.jpg"
+    },
+    {
+      "label": "mark-tg-light-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 54,
+            "right": 406.203125,
+            "top": 526.5,
+            "width": 352.203125,
+            "x": 54,
+            "y": 526.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-tg-light-320.jpg"
+    },
+    {
+      "kind": "finding",
+      "id": "PM-UX02-01",
+      "locale": "tg",
+      "theme": "light",
+      "viewportWidths": [
+        320,
+        390
+      ],
+      "buttonWidths": [
+        352.203125,
+        352.203125
+      ],
+      "result": "Mark-as-read button exceeds dialog/viewport; screenshots retained",
+      "screenshots": [
+        "mark-tg-light-320.jpg",
+        "mark-tg-light-390.jpg"
+      ]
+    },
+    {
+      "label": "stores-tg-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 533,
+            "height": 44,
+            "left": 314,
+            "right": 536.34375,
+            "top": 489,
+            "width": 222.34375,
+            "x": 314,
+            "y": 489
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 820,
+        "scrollWidth": 1425,
+        "width": 1440
+      },
+      "screenshot": "stores-tg-dark-1440.jpg"
+    },
+    {
+      "label": "stores-tg-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 507.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 463.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 463.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 375,
+        "height": 820,
+        "scrollWidth": 375,
+        "width": 390
+      },
+      "screenshot": "stores-tg-dark-390.jpg"
+    },
+    {
+      "label": "stores-tg-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 220,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 531.53125,
+            "height": 44,
+            "left": 16,
+            "right": 238.34375,
+            "top": 487.53125,
+            "width": 222.34375,
+            "x": 16,
+            "y": 487.53125
+          },
+          "scrollWidth": 220,
+          "text": "Добавить магазин"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=restaurants",
+      "viewport": {
+        "clientWidth": 305,
+        "height": 820,
+        "scrollWidth": 305,
+        "width": 320
+      },
+      "screenshot": "stores-tg-dark-320.jpg"
+    },
+    {
+      "label": "mark-tg-dark-1440",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 575.5,
+            "height": 44,
+            "left": 318,
+            "right": 670.203125,
+            "top": 531.5,
+            "width": 352.203125,
+            "x": 318,
+            "y": 531.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 1440,
+        "height": 820,
+        "scrollWidth": 1440,
+        "width": 1440
+      },
+      "screenshot": "mark-tg-dark-1440.jpg"
+    },
+    {
+      "label": "mark-tg-dark-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 38,
+            "right": 390.203125,
+            "top": 526.5,
+            "width": 352.203125,
+            "x": 38,
+            "y": 526.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-tg-dark-390.jpg"
+    },
+    {
+      "label": "mark-tg-dark-320",
+      "buttons": [
+        {
+          "active": false,
+          "background": "rgb(243, 104, 49)",
+          "clientWidth": 350,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": false,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 54,
+            "right": 406.203125,
+            "top": 526.5,
+            "width": 352.203125,
+            "x": 54,
+            "y": 526.5
+          },
+          "scrollWidth": 350,
+          "text": "Ҳамчун хондашуда қайд кардан"
+        }
+      ],
+      "lang": "tg",
+      "theme": "dark",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 320,
+        "height": 820,
+        "scrollWidth": 320,
+        "width": 320
+      },
+      "screenshot": "mark-tg-dark-320.jpg"
+    },
+    {
+      "label": "mark-hover-en-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "oklab(0.682374 0.14025 0.119016)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": true,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 54,
+            "right": 216.1875,
+            "top": 526.5,
+            "width": 162.1875,
+            "x": 54,
+            "y": 526.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-hover-en-light-390.jpg"
+    },
+    {
+      "label": "mark-keyboard-en-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "color(srgb 0.838588 0.358902 0.169098)",
+          "clientWidth": 160,
+          "color": "rgb(255, 255, 255)",
+          "disabled": false,
+          "focusVisible": true,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": true,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 570.5,
+            "height": 44,
+            "left": 54,
+            "right": 216.1875,
+            "top": 526.5,
+            "width": 162.1875,
+            "x": 54,
+            "y": 526.5
+          },
+          "scrollWidth": 160,
+          "text": "Mark as read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-keyboard-en-light-390.jpg"
+    },
+    {
+      "label": "mark-read-disabled-en-light-390",
+      "buttons": [
+        {
+          "active": false,
+          "background": "oklab(0.675017 0.108639 0.0927851)",
+          "clientWidth": 87,
+          "color": "rgb(225, 225, 225)",
+          "disabled": true,
+          "focusVisible": false,
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "hover": false,
+          "inHorizontalViewport": true,
+          "lineHeight": "20px",
+          "rect": {
+            "bottom": 591.5,
+            "height": 44,
+            "left": 54,
+            "right": 143.28125,
+            "top": 547.5,
+            "width": 89.28125,
+            "x": 54,
+            "y": 547.5
+          },
+          "scrollWidth": 87,
+          "text": "Read"
+        }
+      ],
+      "lang": "en",
+      "theme": "",
+      "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+      "viewport": {
+        "clientWidth": 390,
+        "height": 820,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "screenshot": "mark-read-disabled-en-light-390.jpg"
+    }
+  ]
+}
