@@ -1,0 +1,30 @@
+{
+  "base": "9fe131f8ef3e96204e8c693f3ea1d49af3e240fa",
+  "source": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+  "source_tree": "f5a9b87267b9bcb2ba72e53e9d50934f56ba9fce",
+  "changed_source": [
+    "src/components/ui/button.tsx"
+  ],
+  "protected": {
+    "src/components/talabot/native/order-details.tsx": {
+      "sha256": "776a9ba5413faa7a1557ad0e1de4cfd824b33134c16b111153457a176761b201",
+      "identical_to_accepted_delivery": true
+    },
+    "src/components/talabot/native/format.ts": {
+      "sha256": "af2de2f45973c9953f30eef80e23885ad33bf0dcd3be3b6f7d861756ed994c2c",
+      "identical_to_accepted_delivery": true
+    },
+    "src/app/globals.css": {
+      "sha256": "53bbe92f3abc48d1ba933c4ed15a04030eb9231ba4ef407b04dcf419c81f67c5",
+      "identical_to_accepted_delivery": true
+    },
+    "src/components/talabot/workspace.tsx": {
+      "sha256": "172a60e2e51d51c1c1d891edf1fbc3ddfdeba943f9e7083e30a0ff0b246d25a9",
+      "identical_to_accepted_delivery": true
+    },
+    "src/components/talabot/native/entity-sections.tsx": {
+      "sha256": "8556750f246f6255a32abb74ffc0b8d7ae2444f0fbc7b24739d67a395c4300c9",
+      "identical_to_accepted_delivery": true
+    }
+  }
+}

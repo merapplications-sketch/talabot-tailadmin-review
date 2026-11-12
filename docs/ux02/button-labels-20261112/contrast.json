@@ -1,0 +1,63 @@
+{
+  "method": "WCAG relative luminance, unrounded channels; (Lmax+0.05)/(Lmin+0.05)",
+  "reference": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum/",
+  "qualification": "20px / 700 >= 14pt bold; 3:1 large-text AA. White/orange does NOT meet 4.5:1 normal-text AA. Inactive controls exempt.",
+  "states": [
+    {
+      "state": "before normal",
+      "fg": [
+        23,
+        23,
+        23
+      ],
+      "bg": [
+        243,
+        104,
+        49
+      ],
+      "ratio": 5.835438007096788
+    },
+    {
+      "state": "after normal / focus / active without hover",
+      "fg": [
+        255,
+        255,
+        255
+      ],
+      "bg": [
+        243,
+        104,
+        49
+      ],
+      "ratio": 3.0722355770423055
+    },
+    {
+      "state": "hover / active with hover (source-derived, not directly captured)",
+      "fg": [
+        255,
+        255,
+        255
+      ],
+      "bg": [
+        213.84,
+        91.52,
+        43.12
+      ],
+      "ratio": 3.8861876104350963
+    },
+    {
+      "state": "disabled Read",
+      "fg": [
+        82,
+        82,
+        82
+      ],
+      "bg": [
+        252.6,
+        224.8,
+        213.8
+      ],
+      "ratio": 6.280488499337055
+    }
+  ]
+}

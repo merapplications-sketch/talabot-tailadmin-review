@@ -1,0 +1,254 @@
+[
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "height": 44,
+    "hover": false,
+    "label": "Add store",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 102.453125,
+    "file": "before-stores-light.jpg",
+    "source_commit": "9fe131f8ef3e96204e8c693f3ea1d49af3e240fa",
+    "sha256": "50c31d53fdbc58e648d1052a66cda20c1ec8523f5c559b3e573c270474911897",
+    "image_pixels": [
+      1348,
+      926
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "height": 44,
+    "hover": false,
+    "label": "Mark as read",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord5",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 123.71875,
+    "file": "before-mark-light.jpg",
+    "source_commit": "9fe131f8ef3e96204e8c693f3ea1d49af3e240fa",
+    "sha256": "0ba807145055b65ed71f3f8c1141033e504f7d4ff2eab117cdd8b7b0a046a1ad",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Mark as read",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord5",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 162.1875,
+    "file": "after-mark-light.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "b0e30c8702963a184119fb02163e7a6e915fc2457cce7d228afb187433ff6ee1",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": true,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Mark as read",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord5",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 162.1875,
+    "file": "after-mark-focus-light.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "79e02795ebf804b9c15a6ad9b76a7f434885302f31b13c84bb8e3f127a0ebd01",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Add store",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 131.375,
+    "file": "after-stores-dark.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "98e96eb60aaf8b3464dd95c5508140702f512c0bcf8b492ce02609e8d4cf862d",
+    "image_pixels": [
+      1348,
+      926
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Add store",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 131.375,
+    "file": "after-stores-light.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "0042a82505760dbe6532905fe141608ce77c01adf513e6f5d883d3e6d8f29b74",
+    "image_pixels": [
+      1348,
+      926
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": true,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Add store",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 131.375,
+    "file": "after-stores-focus-light.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "99f3bc167a33b81a1f288e8626eb21845512580c4a412589178f0b5a2d7e87a3",
+    "image_pixels": [
+      1348,
+      926
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focusVisible": false,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Mark as read",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord5",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 162.1875,
+    "file": "after-mark-dark.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "1a45f8f3a16a1e924bdb455d095d9fa80162480e897e07fa99273123e0539070",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  },
+  {
+    "background": "color(srgb 0.990588 0.881569 0.838431)",
+    "color": "rgb(82, 82, 82)",
+    "disabled": true,
+    "focusVisible": false,
+    "fontSize": "20px",
+    "fontWeight": "700",
+    "height": 44,
+    "hover": false,
+    "label": "Read",
+    "language": "en",
+    "lineHeight": "20px",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord5",
+    "viewport": [
+      1363,
+      936
+    ],
+    "width": 89.28125,
+    "file": "after-read-disabled-dark.jpg",
+    "source_commit": "4a36654cb4b45a01fe28ad5b91aad9b95d4654ac",
+    "sha256": "8cfb57ad06cbc931d97fa25b8e63d18b8e67b096b397c04fcf1bbdf870b9d30d",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "browser": "Cloud Chrome; desktop; local synthetic preview"
+  }
+]

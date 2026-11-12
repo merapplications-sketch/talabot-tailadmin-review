@@ -1,0 +1,27 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> free-nextjs-admin-dashboard@2.5.0 build:native
+> vite build --config native-preview/vite.config.ts
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../config/svg-components" without a file extension (native-preview/vite.config.ts:4:31). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 836 modules transformed.
+rendering chunks...
+computing gzip size...
+native-dist/index.html                                 0.67 kB │ gzip:   0.41 kB
+native-dist/assets/outfit-f37fa50e-BMnJGVZj.woff2     14.76 kB
+native-dist/assets/outfit-c8e7a734-D6ftewdU.woff2     32.22 kB
+native-dist/assets/talabot-original-MIjVQ1p2.png      42.26 kB
+native-dist/assets/index-BVjhzbXo.css                287.93 kB │ gzip:  38.10 kB
+native-dist/assets/react-apexcharts.esm-Dug04J9t.js  925.80 kB │ gzip: 264.76 kB
+native-dist/assets/index-Dy0jbf30.js                 981.79 kB │ gzip: 290.18 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.99s
