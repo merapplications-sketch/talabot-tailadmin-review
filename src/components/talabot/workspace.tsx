@@ -216,7 +216,7 @@ function Grid({
                 ))}
                 <td className="p-4">
                   <Link
-                    className={notificationActions ? buttonVariants({variant: "ghost", size: "lg", className: "text-brand-700! dark:text-brand-400!"}) : "text-brand-500"}
+                    className={notificationActions ? buttonVariants({variant: "notification-link", size: "lg"}) : "text-brand-500"}
                     href={r.href}
                     onClick={remember}
                   >
@@ -277,7 +277,7 @@ function Grid({
               ))}
             </dl>
             <Link
-              className={notificationActions ? buttonVariants({variant: "ghost", size: "lg", className: "mt-5 text-brand-700! dark:text-brand-400!"}) : "mt-5 inline-flex min-h-11 items-center text-brand-500"}
+              className={notificationActions ? buttonVariants({variant: "notification-link", size: "lg", className: "mt-5"}) : "mt-5 inline-flex min-h-11 items-center text-brand-500"}
               href={r.href}
               onClick={remember}
             >
@@ -805,14 +805,14 @@ export function NotificationsPage({
                 </p>
                 <Button
                   size="lg"
-                  className="bg-brand-700! hover:bg-brand-800! dark:bg-brand-700! dark:hover:bg-brand-800!"
+                  variant="brand-readable"
                   disabled={read.includes(id)}
                   onClick={() => mark(id)}
                 >
                   {read.includes(id) ? t("read") : t("mark")}
                 </Button>
                 <Link
-                  className={buttonVariants({variant: "ghost", size: "lg", className: "ms-4 text-brand-700! dark:text-brand-400!"})}
+                  className={buttonVariants({variant: "notification-link", size: "lg", className: "ms-4"})}
                   href={`/orders/${item.order.id}?returnTo=${encodeURIComponent(`/notifications/${id}?${qs}`)}`}
                   onClick={remember}
                 >
