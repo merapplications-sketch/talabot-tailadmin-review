@@ -9,9 +9,9 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-brand-500 text-white shadow-theme-xs hover:bg-brand-600 focus-visible:ring-3 focus-visible:ring-brand-500/20 disabled:bg-brand-200 disabled:text-white dark:bg-brand-500 dark:hover:bg-brand-600 dark:disabled:bg-brand-800 dark:disabled:text-brand-400",
-        // Q40 isolated proposal: original orange, readable neutral text. Opt-in only.
+        // Owner-approved orange; white large bold labels meet 3:1. Two opt-in actions only.
         "brand-readable":
-          "bg-brand-500 text-gray-950 shadow-theme-xs hover:bg-brand-600 focus-visible:ring-3 focus-visible:ring-brand-500/20 disabled:bg-brand-200 disabled:text-gray-600 dark:bg-brand-500 dark:text-gray-950 dark:hover:bg-brand-600 dark:disabled:bg-brand-200 dark:disabled:text-gray-600",
+          "bg-brand-500 text-white text-xl leading-5 font-bold shadow-theme-xs hover:bg-brand-600 focus-visible:ring-3 focus-visible:ring-brand-500/20 disabled:bg-brand-200 disabled:text-gray-600 dark:bg-brand-500 dark:text-white dark:hover:bg-brand-600 dark:disabled:bg-brand-200 dark:disabled:text-gray-600",
         "notification-link":
           "border-none bg-transparent text-gray-700 underline decoration-brand-500 underline-offset-4 hover:bg-gray-50 hover:text-gray-800 focus-visible:ring-3 focus-visible:ring-gray-300/50 dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-700/50 dark:hover:text-white",
         outline:
