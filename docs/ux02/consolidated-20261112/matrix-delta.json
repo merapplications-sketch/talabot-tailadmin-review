@@ -1,0 +1,51 @@
+{
+  "baseline": "docs/ux02/home-orders/coverage-37.json @ f28c80e78698137831d149ef4977126d16314048",
+  "changed_rows": [
+    "FP08",
+    "FP09",
+    "FP10",
+    "FP14",
+    "FP16",
+    "FP20",
+    "FP24",
+    "FP35",
+    "FP36"
+  ],
+  "unchanged_rows": [
+    "FP01",
+    "FP02",
+    "FP03",
+    "FP04",
+    "FP05",
+    "FP06",
+    "FP07",
+    "FP11",
+    "FP12",
+    "FP13",
+    "FP15",
+    "FP17",
+    "FP18",
+    "FP19",
+    "FP21",
+    "FP22",
+    "FP23",
+    "FP25",
+    "FP26",
+    "FP27",
+    "FP28",
+    "FP29",
+    "FP30",
+    "FP31",
+    "FP32",
+    "FP33",
+    "FP34",
+    "FP37"
+  ],
+  "status_counts": {
+    "VERIFIED SAMPLE": 4,
+    "PARTIAL": 32,
+    "NOT COMPLETE": 1
+  },
+  "all_statuses_preserved": true,
+  "unaffected_rows_deep_equal": true
+}

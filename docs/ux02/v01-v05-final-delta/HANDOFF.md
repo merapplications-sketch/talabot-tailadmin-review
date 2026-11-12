@@ -1,5 +1,7 @@
 # UX-02 final delta — isolated candidate v2
 
+> Historical v2 record. Current unified delivery: [consolidated-20261112/HANDOFF.md](../consolidated-20261112/HANDOFF.md). Q40 preserves the original orange; the brand-700 experiment below is NOT OWNER APPROVED. Its referenced JPEGs were not present in this commit tree. The current delivery saves new source-bound images and retains these JSON measurements as inherited evidence. No new deployment was made in the continuation.
+
 Status: READY FOR OWNER VISUAL REVIEW, then independent delta QA. No final color approval, merge, production publication, policy or permission change.
 
 Baseline remote HEAD checked: b331c489996b91706bd4567bb0ed01e3fc336c84.

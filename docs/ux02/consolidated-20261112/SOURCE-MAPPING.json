@@ -1,0 +1,14 @@
+{
+  "local_validated_source_commit": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+  "github_source_commit": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+  "local_source_tree": "e04888699021f59b26a14be4731b6b82c373b605",
+  "github_source_tree": "e04888699021f59b26a14be4731b6b82c373b605",
+  "exact_tree_match": true,
+  "local_pretransfer_handoff": "2f359eb17f574ef821fb6d4a6302b8097d4ce375",
+  "remote_parent": "f28c80e78698137831d149ef4977126d16314048",
+  "reason": "Git CLI had no write credential; authorized GitHub connector creates commit metadata while preserving exact Git trees/blobs. Evidence links map to the equivalent GitHub source; original capture-local SHA retained.",
+  "images": "All 24 SHA-256 values unchanged",
+  "deployment": false,
+  "force_push": false,
+  "owner_design_color_approval": false
+}

@@ -1,0 +1,71 @@
+{
+  "orders": {
+    "background": "rgb(23, 23, 23)",
+    "height": 936,
+    "table": [
+      {
+        "actions": [
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          },
+          {
+            "right": 1527.078125,
+            "x": 1483.078125
+          }
+        ],
+        "rows": [
+          116.5,
+          117,
+          117,
+          117,
+          117,
+          133,
+          132.5
+        ],
+        "scroll": 1228,
+        "viewport": 1008,
+        "width": 1228.078125
+      }
+    ],
+    "theme": "dark",
+    "width": 1363
+  },
+  "colors": {
+    "beforeLight": {
+      "background": "rgb(243, 104, 49)",
+      "foreground": "rgb(255, 255, 255)",
+      "theme": ""
+    },
+    "beforeDark": {
+      "background": "rgb(243, 104, 49)",
+      "foreground": "rgb(255, 255, 255)",
+      "theme": "dark"
+    }
+  },
+  "bellBefore": {
+    "height": 32,
+    "label": "Close",
+    "width": 32
+  }
+}

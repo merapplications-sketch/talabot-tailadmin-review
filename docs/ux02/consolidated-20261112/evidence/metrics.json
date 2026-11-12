@@ -1,0 +1,371 @@
+{
+  "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "addStoreDark": {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "rect": {
+      "bottom": 533,
+      "height": 44,
+      "left": 314,
+      "right": 416.453125,
+      "top": 489,
+      "width": 102.453125,
+      "x": 314,
+      "y": 489
+    }
+  },
+  "addStoreLight": {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "rect": {
+      "bottom": 533,
+      "height": 44,
+      "left": 314,
+      "right": 416.453125,
+      "top": 489,
+      "width": 102.453125,
+      "x": 314,
+      "y": 489
+    }
+  },
+  "addStoreAction": "opens existing Add store details; no form saved",
+  "orders": {
+    "containerWidth": 1008,
+    "rect": {
+      "bottom": 1463,
+      "height": 1247,
+      "left": 315,
+      "right": 1323,
+      "top": 216,
+      "width": 1008,
+      "x": 315,
+      "y": 216
+    },
+    "rows": [
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 341,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 293,
+              "width": 48,
+              "x": 701.203125,
+              "y": 293
+            }
+          },
+          {
+            "label": "Details ord0",
+            "rect": {
+              "bottom": 337,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 293,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 293
+            }
+          }
+        ],
+        "height": 168.5,
+        "text": "ord0\n\nWaiting for confirmation\n\nOrder total:\nTJS 125.00\n\n—\n\nNov 10, 2026, 16:30\n\nWallet · 2 items · delivery 10 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 510,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 462,
+              "width": 48,
+              "x": 701.203125,
+              "y": 462
+            }
+          },
+          {
+            "label": "Details ord1",
+            "rect": {
+              "bottom": 506,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 462,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 462
+            }
+          }
+        ],
+        "height": 169,
+        "text": "ord1\n\nPreparing\n\nOrder total:\nTJS 126.00\n\n—\n\nNov 10, 2026, 15:40\n\nCash · 2 items · delivery 10 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 679,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 631,
+              "width": 48,
+              "x": 701.203125,
+              "y": 631
+            }
+          },
+          {
+            "label": "Details ord2",
+            "rect": {
+              "bottom": 675,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 631,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 631
+            }
+          }
+        ],
+        "height": 169,
+        "text": "ord2\n\nReady for courier pickup\n\nOrder total:\nTJS 127.00\n\n—\n\nNov 10, 2026, 14:50\n\nWallet · 2 items · delivery 10 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 848,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 800,
+              "width": 48,
+              "x": 701.203125,
+              "y": 800
+            }
+          },
+          {
+            "label": "Details ord3",
+            "rect": {
+              "bottom": 844,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 800,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 800
+            }
+          }
+        ],
+        "height": 169,
+        "text": "ord3\n\nCourier on the way\n\nOrder total:\nTJS 128.00\n\n—\n\nNov 10, 2026, 14:00\n\nCash · 2 items · delivery 10 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 1017,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 969,
+              "width": 48,
+              "x": 701.203125,
+              "y": 969
+            }
+          },
+          {
+            "label": "Details ord4",
+            "rect": {
+              "bottom": 1013,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 969,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 969
+            }
+          }
+        ],
+        "height": 169,
+        "text": "ord4\n\nDelivered\n\nOrder total:\nTJS 415.00\n\n—\n\nNov 10, 2026, 13:10\n\nWallet · 2 items · delivery 0 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 1186,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 1138,
+              "width": 48,
+              "x": 701.203125,
+              "y": 1138
+            }
+          },
+          {
+            "label": "Details ord5",
+            "rect": {
+              "bottom": 1182,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 1138,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 1138
+            }
+          }
+        ],
+        "height": 169,
+        "text": "ord5\n\nCancelled\n\nOrder total:\nTJS 129.00\n\n—\n\nNov 10, 2026, 12:20\n\nApple Pay · 2 items · delivery 10 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      },
+      {
+        "buttons": [
+          {
+            "label": "Active banner: Ресторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)",
+            "rect": {
+              "bottom": 1355,
+              "height": 48,
+              "left": 701.203125,
+              "right": 749.203125,
+              "top": 1307,
+              "width": 48,
+              "x": 701.203125,
+              "y": 1307
+            }
+          },
+          {
+            "label": "Details ord6",
+            "rect": {
+              "bottom": 1351,
+              "height": 44,
+              "left": 1254.484375,
+              "right": 1298.484375,
+              "top": 1307,
+              "width": 44,
+              "x": 1254.484375,
+              "y": 1307
+            }
+          }
+        ],
+        "height": 168.5,
+        "text": "ord6\n\nRejected by restaurant\n\nOrder total:\nTJS 450.00\n\n—\n\nNov 10, 2026, 11:30\n\nApple Pay · 2 items · delivery 0 TJS\n\n\t\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t\nР«\nРесторан «Дар-ул-Хилоф Шарқи Бузург» (центральный филиал на проспекте Рудаки)\n\nRestaurant / store\n\n\t—\n→ ул. Рудаки 100, подъезд 2, этаж 5, кв. 45, Душанбе\n\t\nМи\nМуаммад ибни Абдуллоҳ аз Душанбе\n\t"
+      }
+    ],
+    "scrollWidth": 1008
+  },
+  "orderDetails": "ord0 full merchant, driver, customer names observed; V04 dates not evaluated",
+  "orderBack": "http://127.0.0.1:4173/?section=orders",
+  "bell": {
+    "header": {
+      "bottom": 141,
+      "height": 56,
+      "left": 916,
+      "right": 1251,
+      "top": 85,
+      "width": 335,
+      "x": 916,
+      "y": 85
+    },
+    "label": "Close",
+    "menu": {
+      "bottom": 603,
+      "height": 531,
+      "left": 903,
+      "right": 1264,
+      "top": 72,
+      "width": 361,
+      "x": 903,
+      "y": 72
+    },
+    "rect": {
+      "bottom": 129,
+      "height": 44,
+      "left": 1207,
+      "right": 1251,
+      "top": 85,
+      "width": 44,
+      "x": 1207,
+      "y": 85
+    }
+  },
+  "bellClosed": "false",
+  "notificationLinkDark": {
+    "background": "rgb(34, 34, 34)",
+    "color": "rgb(229, 229, 229)",
+    "decoration": "rgb(243, 104, 49)",
+    "rect": {
+      "bottom": 443,
+      "height": 44,
+      "left": 1191,
+      "right": 1305.96875,
+      "top": 399,
+      "width": 114.96875,
+      "x": 1191,
+      "y": 399
+    }
+  },
+  "notificationLinkLight": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(64, 64, 64)",
+    "decoration": "rgb(243, 104, 49)",
+    "rect": {
+      "bottom": 443,
+      "height": 44,
+      "left": 1191,
+      "right": 1305.96875,
+      "top": 399,
+      "width": 114.96875,
+      "x": 1191,
+      "y": 399
+    }
+  },
+  "markReadLight": {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "rect": {
+      "bottom": 634.5,
+      "height": 44,
+      "left": 279.5,
+      "right": 403.21875,
+      "top": 590.5,
+      "width": 123.71875,
+      "x": 279.5,
+      "y": 590.5
+    }
+  },
+  "markReadDark": {
+    "background": "rgb(243, 104, 49)",
+    "color": "rgb(23, 23, 23)",
+    "rect": {
+      "bottom": 634.5,
+      "height": 44,
+      "left": 279.5,
+      "right": 403.21875,
+      "top": 590.5,
+      "width": 123.71875,
+      "x": 279.5,
+      "y": 590.5
+    }
+  },
+  "markReadAction": "local demo state changed to Read and button disabled"
+}

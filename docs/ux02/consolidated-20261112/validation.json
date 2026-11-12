@@ -1,0 +1,27 @@
+{
+  "source_commit": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+  "build_native": "PASS",
+  "typecheck_source": "PASS",
+  "typecheck_default": "FAIL: pre-existing incomplete docs source-reference archive; diagnostic retained",
+  "v04": "ACCEPTED: source byte-identical to 12ca480; no date tests run",
+  "browser": "Chromium1363x936; no viewport resizing API advertised",
+  "320_390_1440": "NOT TESTED",
+  "real_safari_iphone": "NOT TESTED",
+  "matrix_rows_changed": [
+    "FP08",
+    "FP09",
+    "FP10",
+    "FP14",
+    "FP16",
+    "FP20",
+    "FP24",
+    "FP35",
+    "FP36"
+  ],
+  "matrix_status_upgrade": false,
+  "screenshots": 24,
+  "same_data_same_dimensions_q40_pairs": "PASS",
+  "protected_files": 25,
+  "new_deployment": false,
+  "backend_connection": false
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "path": "src/components/talabot/native/b-shell/list-patterns.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "2c7f3aa2ade2d63fe74e1fa5abb6d292d673d8f6afc5b2af13eddbb63ee42ba2",
+    "byte_identical": true
+  },
+  {
+    "path": "src/layout/header/notification-dropdown/index.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "99ce256f50c1518005b6ac637c34df653b4361e901d47308e3a6c6a69c405d69",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/order-details.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "776a9ba5413faa7a1557ad0e1de4cfd824b33134c16b111153457a176761b201",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/format.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "af2de2f45973c9953f30eef80e23885ad33bf0dcd3be3b6f7d861756ed994c2c",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/fixture.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/mutation-service.js",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "7bb10e4f3a405d5b3162048c93861faa9aa6210e441eb063550170d0b6b44250",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/order-operations.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "16e6bc4a9109857db6d63c11f7129d78f11742ed4e6acac9d23cbdd69caa1887",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/navigation.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "f4c8ccf3c6a1aa392fb73d52d1c7394617d964708b081702e7935988690f08b4",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/b-shell/summary-cards.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "f30dfb0a2daeaaa1dc27d511d3ca6d9f1c82a5567c99d268983e2b335b98ed37",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/b-shell/settings.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "f23f75d86fb0894960a770116b3699084c1aa097f9cc2eb97ecbcb20d1417c48",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/native/ratings-data.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "fb1914f689de9dba2b9c1f5fe26daa7447fd1e051f34e2e61a0295a2f4d0d0f5",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/analytics-data.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "70fca7a1a384be02f5198097c00f8e53a8527f4bf3e11e86027d0efef6ee692c",
+    "byte_identical": true
+  },
+  {
+    "path": "src/components/talabot/analytics.tsx",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "8955d07664f67a68a29ecd0ac4691fa1b39df9fcac33705bc2778c9d1c4880f6",
+    "byte_identical": true
+  },
+  {
+    "path": "src/app/globals.css",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "53bbe92f3abc48d1ba933c4ed15a04030eb9231ba4ef407b04dcf419c81f67c5",
+    "byte_identical": true
+  },
+  {
+    "path": "src/messages/en.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "5fa1d89e6b96a1173eb8129d8fbe736ec26a45e745b3ee0d9e92081088dccb56",
+    "byte_identical": true
+  },
+  {
+    "path": "src/messages/ru.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "55490ca7c1044deeec585e0b7649c6976a9dd393153d2c062c0997c8c3af39e3",
+    "byte_identical": true
+  },
+  {
+    "path": "src/messages/tg.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "2694e889652fcb143cbcd270faa6b9735d1086fc17ff70fb40b91a6c43af1ad8",
+    "byte_identical": true
+  },
+  {
+    "path": "public/operations-source/admin.html",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "1003e231abc433d994189926db1de88792af0e351ad3d0aea63d09eca5910d6f",
+    "byte_identical": true
+  },
+  {
+    "path": "package.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "6342c570b91f9a773e2c34d338599dcb57d1a8c5b3d77e8d788b060ec828fd67",
+    "byte_identical": true
+  },
+  {
+    "path": "package-lock.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "7909efd89b29612783ae42bd51c7e3b5cd9f99b624928db9fbf0b50fc65c287e",
+    "byte_identical": true
+  },
+  {
+    "path": ".openai/hosting.json",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "0672ecabbabb17f0a76765a1ae1cba828a68dd88f6e73024f9e847c7fc675123",
+    "byte_identical": true
+  },
+  {
+    "path": "native-preview/fonts/outfit-c8e7a734.woff2",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12",
+    "byte_identical": true
+  },
+  {
+    "path": "native-preview/fonts/outfit-f37fa50e.woff2",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091",
+    "byte_identical": true
+  },
+  {
+    "path": "native-preview/fonts/outfit.ts",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "4213fbef16b745dd2c847550c98f90d2302b68d3f9ff1a30e916b7e61076be30",
+    "byte_identical": true
+  },
+  {
+    "path": "public/images/logo/talabot-original.png",
+    "baseline": "f28c80e78698137831d149ef4977126d16314048",
+    "current_source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "sha256": "febf5356391e813b9abd549c67e4996aee93bdc63b2139098fdc8baa24ba9367",
+    "byte_identical": true
+  }
+]

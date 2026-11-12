@@ -1,0 +1,1026 @@
+[
+  {
+    "name": "q40-stores-before-light",
+    "source": "f28c80e78698137831d149ef4977126d16314048",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Name",
+      "Status",
+      "Phone",
+      "Address",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-stores-before-light.jpg",
+    "sha256": "2f949a43ba129dbde4f5ecb72b48cd7b880d358257b43501afa50d205126b97c",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        250,
+        250,
+        250
+      ]
+    }
+  },
+  {
+    "name": "q40-stores-before-dark",
+    "source": "f28c80e78698137831d149ef4977126d16314048",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Name",
+      "Status",
+      "Phone",
+      "Address",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-stores-before-dark.jpg",
+    "sha256": "fe46cd63c43f3b1f25cee21eba197c0fd3cfbdca1ef5f72d74eb69ef52330568",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        30,
+        30,
+        30
+      ]
+    }
+  },
+  {
+    "name": "notifications-before-dark",
+    "source": "f28c80e78698137831d149ef4977126d16314048",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-before-dark.jpg",
+    "sha256": "326a39d61a5756c189dcde86bc16f23c06cd9e4d9c3f04c88ce8acf81ee955ef",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    }
+  },
+  {
+    "name": "notifications-before-light",
+    "source": "f28c80e78698137831d149ef4977126d16314048",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-before-light.jpg",
+    "sha256": "e29163ead11c1815ebfe5e29ba66d3310449d96b6dd6f1df1e33df1a6172c1e5",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    }
+  },
+  {
+    "name": "q40-stores-after-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Name",
+      "Status",
+      "Phone",
+      "Address",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-stores-after-dark.jpg",
+    "sha256": "6420462d9198ce0ca27a4ca7aabfa3ba094ed4b094db1af376fe986130edb372",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        30,
+        30,
+        30
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "q40-stores-after-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Name",
+      "Status",
+      "Phone",
+      "Address",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=restaurants",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-stores-after-light.jpg",
+    "sha256": "046299181e0c19a343fd2f186436319043429cc55ed65e822d21f58d656d7711",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        250,
+        250,
+        250
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "orders-after-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Order",
+      "Customer",
+      "Restaurant / store",
+      "Pickup → delivery",
+      "Driver",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=orders",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/orders-after-light.jpg",
+    "sha256": "b3d29598d8f6204f16aa6c761d2fa6e0728d37c3e96acdcb97b4151b21132db5",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        249,
+        249,
+        249
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "orders-after-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Order",
+      "Customer",
+      "Restaurant / store",
+      "Pickup → delivery",
+      "Driver",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=orders",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/orders-after-dark.jpg",
+    "sha256": "cfccd7c1e4c1aa12f88537cf8b1fe9c5452c3657f41b2ea92c6ca2b21ab10db5",
+    "image_pixels": {
+      "width": 1348,
+      "height": 926
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        32,
+        32,
+        32
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "order-details-full-names-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Order",
+      "Customer",
+      "Restaurant / store",
+      "Pickup → delivery",
+      "Driver",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=orders&id=ord0",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/order-details-full-names-dark.jpg",
+    "sha256": "973723358517eaf046fe94fe57cd42104e3a0f451a9ed7e80dba8896ec049a55",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        38,
+        44,
+        56
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "bell-close-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Order",
+      "Customer",
+      "Restaurant / store",
+      "Pickup → delivery",
+      "Driver",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=orders",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/bell-close-dark.jpg",
+    "sha256": "a68af30540b74ace7bc16e6c3b53c8f93808cc0c85012165b8d150cccfff312f",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        32,
+        32,
+        32
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-after-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-after-dark.jpg",
+    "sha256": "142bf0b727f36505df9319f44496e981dea9ef4dc3b0d2f3997f758402185ddc",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-after-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-after-light.jpg",
+    "sha256": "ddd19c41a66c7eb958bb44e9d050681c759d647359e2293d27d19abd46946491",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "q40-notification-detail-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-notification-detail-light.jpg",
+    "sha256": "c9638ead94d479cc99a6d276769cf1b66738d04a337681201432d0e143efd364",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        135,
+        135,
+        135
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "q40-notification-detail-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Notification / order",
+      "Restaurant / store",
+      "Status",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications&id=native-ord3",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/q40-notification-detail-dark.jpg",
+    "sha256": "c066f15c26364c299e0f63b6b61b9dbbbfece8b51e2ea400a16cea631f586a07",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        22,
+        22,
+        22
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-en-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Courier",
+      "Status",
+      "Phone",
+      "Last seen / location update",
+      "Cash on hand",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-en-dark.jpg",
+    "sha256": "952280655330fd01e436aefd6688e988545094c7faac733d9bc8f04f0d3e3ac9",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-en-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Courier",
+      "Status",
+      "Phone",
+      "Last seen / location update",
+      "Cash on hand",
+      "View details"
+    ],
+    "language": "en",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-en-light.jpg",
+    "sha256": "531aaca8ce05328d52e4bd232d3378311494379cc72c67cdda1d6fac293984ff",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-ru-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Курьер",
+      "Статус",
+      "Телефон",
+      "Последняя активность / геопозиция",
+      "Наличные на руках",
+      "Подробнее"
+    ],
+    "language": "ru",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-ru-light.jpg",
+    "sha256": "c689324f324f969ceffaaa5cf10f854372d9a680eaf6fdbbc937a389c07d3f55",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-ru-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Курьер",
+      "Статус",
+      "Телефон",
+      "Последняя активность / геопозиция",
+      "Наличные на руках",
+      "Подробнее"
+    ],
+    "language": "ru",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-ru-dark.jpg",
+    "sha256": "9798333886b72f1dcc7f82380be97bf9d03b9731377b665497038ae304b93c02",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-ru-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Уведомление / заказ",
+      "Ресторан / магазин",
+      "Статус",
+      "Подробнее"
+    ],
+    "language": "ru",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-ru-dark.jpg",
+    "sha256": "1bca36b0b98978406c76381379e7401bae079106fdacb03cc299a52b7c418476",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-ru-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Уведомление / заказ",
+      "Ресторан / магазин",
+      "Статус",
+      "Подробнее"
+    ],
+    "language": "ru",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-ru-light.jpg",
+    "sha256": "2415167b0d78f5fa6d2d6fe117eef3514441f7ffdb89d9180060fd6794697842",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-tg-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Курьер",
+      "Ҳолат",
+      "Телефон",
+      "Фаъолияти охирин / ҷойгиршавӣ",
+      "Маблағи нақд дар даст",
+      "Тафсилот"
+    ],
+    "language": "tg",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-tg-light.jpg",
+    "sha256": "cf9e77443f77271b60cd6c6ca9ba156f3390590851bfc01896a18c98d228b6f4",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "drivers-tg-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Курьер",
+      "Ҳолат",
+      "Телефон",
+      "Фаъолияти охирин / ҷойгиршавӣ",
+      "Маблағи нақд дар даст",
+      "Тафсилот"
+    ],
+    "language": "tg",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=drivers",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/drivers-tg-dark.jpg",
+    "sha256": "57d5d5a7266787e8f34e2402223641fbb7e359a7bf49c080f2f34091993d00f7",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-tg-dark",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(23, 23, 23)",
+    "headers": [
+      "Огоҳӣ / фармоиш",
+      "Тарабхона / мағоза",
+      "Ҳолат",
+      "Тафсилот"
+    ],
+    "language": "tg",
+    "theme": "dark",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-tg-dark.jpg",
+    "sha256": "21ebdb30ab5e8a5b187cab91de66205e3a8a07db4d4183acb3fd54f6ac75c4a1",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        23,
+        23,
+        23
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  },
+  {
+    "name": "notifications-tg-light",
+    "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+    "background": "rgb(247, 247, 247)",
+    "headers": [
+      "Огоҳӣ / фармоиш",
+      "Тарабхона / мағоза",
+      "Ҳолат",
+      "Тафсилот"
+    ],
+    "language": "tg",
+    "theme": "light",
+    "url": "http://127.0.0.1:4173/?section=notifications",
+    "viewport": {
+      "height": 936,
+      "width": 1363
+    },
+    "file": "evidence/notifications-tg-light.jpg",
+    "sha256": "c6c2e7bfdaca6a220ce2fa2b44d64770dbf22bc17c620fba750772ee1b1325ea",
+    "image_pixels": {
+      "width": 1363,
+      "height": 936
+    },
+    "fixture_sha256": "01027f050f2d26f9ab39d33cc2b8a743d02d1e72e941eeb0c9a6802b864715e5",
+    "browser": "Chromium desktop / CUA",
+    "real_device": false,
+    "scope": "local isolated synthetic preview",
+    "capture_date": "2026-11-12",
+    "theme_pixel_check": {
+      "point": [
+        1000,
+        800
+      ],
+      "rgb": [
+        247,
+        247,
+        247
+      ]
+    },
+    "captured_local_source": "36a3d4e96930b325e96a2185d3ec11a6452b34d2",
+    "source_tree": "e04888699021f59b26a14be4731b6b82c373b605"
+  }
+]

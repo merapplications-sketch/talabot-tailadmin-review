@@ -1,0 +1,12 @@
+{
+  "source": "f0d723a7e2e8e7e4be259d952b5e7e7782e54918",
+  "method": "WCAG relative sRGB luminance ratio; default states only; exact DOM RGB in metrics.json",
+  "ratios": {
+    "original_white_on_orange": 3.0722355770423055,
+    "prior_trial_white_on_brand700": 4.998249909947089,
+    "q40_primary_both_themes": 5.835438007096788,
+    "q40_link_light": 10.368377760269818,
+    "q40_link_dark": 12.630069796644205
+  },
+  "hover_focus_disabled": "Source reviewed only; no browser contrast claim."
+}
