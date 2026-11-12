@@ -1,3 +1,7 @@
+# Latest — PM-UX02-01 / 2026-11-12
+
+[Correction and delta evidence](pm-ux02-01-fix-20261112/HANDOFF.md), source `990875403e5214538606966f5dae6ebe56062c4b`, based on PM evidence `30918835d72b90087c03c96ea635213b740ab0cf`. RU/TG narrow-dialog button clipping corrected without reducing font or changing approved color. V04 preserved; GitHub only, no deployment. Physical Safari remains untested. Older entries follow.
+
 # Latest continuation — white button labels / 2026-11-12
 
 [Current scoped handoff](button-labels-20261112/HANDOFF.md). Owner accepted orange and remaining appearance at `9fe131f`; only the two requested labels changed to white large bold text, source `4a36654cb4b45a01fe28ad5b91aad9b95d4654ac`. GitHub save only; no deployment. V04 preserved. FP16 remains NOT COMPLETE; matrix37 unchanged. Physical Safari and further state/language/size limits are explicit in the current handoff. Older entries below are historical and their pending-color wording is superseded by the owner's latest acceptance.

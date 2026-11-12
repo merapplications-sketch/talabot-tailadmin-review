@@ -1,0 +1,1061 @@
+[
+  {
+    "ancestors": [
+      {
+        "bottom": 659.5,
+        "left": 17,
+        "overflow": "scroll",
+        "right": 288,
+        "tag": "DIV",
+        "top": 221.5
+      },
+      {
+        "bottom": 660.5,
+        "left": 16,
+        "overflow": "hidden",
+        "right": 289,
+        "tag": "DIV",
+        "top": 159.5
+      },
+      {
+        "bottom": 1373.53125,
+        "left": 0,
+        "overflow": "hidden",
+        "right": 305,
+        "tag": "BODY",
+        "top": 0
+      }
+    ],
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 350,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "rect": {
+      "bottom": 570.5,
+      "height": 44,
+      "left": 54,
+      "right": 406.203125,
+      "top": 526.5,
+      "width": 352.203125
+    },
+    "scrollWidth": 350,
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "whiteSpace": "nowrap",
+    "file": "before-tg-light-320.jpg",
+    "sha256": "04184ee71105a08d49960854b756ce0d702da39ccc0bbd2abf472b7b679c48e0",
+    "image_pixels": [
+      320,
+      820
+    ],
+    "source": "30918835d72b90087c03c96ea635213b740ab0cf",
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 220,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Добавить магазин",
+    "lang": "tg",
+    "parent": {
+      "left": 16,
+      "right": 289
+    },
+    "rect": {
+      "height": 44,
+      "right": 238.34375,
+      "width": 222.34375,
+      "x": 16,
+      "y": 563.53125
+    },
+    "scrollWidth": 220,
+    "textRects": [
+      {
+        "bottom": 597.53125,
+        "left": 37,
+        "right": 217.34375,
+        "top": 572.53125
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "stores-tg-light-320.jpg",
+    "sha256": "cd6a3cbb77b56d2bc0c31d14e7cf3e27fc8682b34e9252c2d30fefe53aa70f2c",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "stores"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 210,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 82,
+      "right": 266,
+      "width": 212,
+      "x": 54,
+      "y": 525.5
+    },
+    "scrollWidth": 210,
+    "textRects": [
+      {
+        "bottom": 558.5,
+        "left": 122.953125,
+        "right": 197.03125,
+        "top": 533.5
+      },
+      {
+        "bottom": 578.5,
+        "left": 80.109375,
+        "right": 239.890625,
+        "top": 553.5
+      },
+      {
+        "bottom": 598.5,
+        "left": 125.625,
+        "right": 194.375,
+        "top": 573.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-light-320.jpg",
+    "sha256": "71448152d2e41aafaee297d0e65d5030b7bbd7fd35dd1148ad4343bb06546839",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 265,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 33,
+      "right": 342
+    },
+    "rect": {
+      "height": 62,
+      "right": 321,
+      "width": 267,
+      "x": 54,
+      "y": 525.5
+    },
+    "scrollWidth": 265,
+    "textRects": [
+      {
+        "bottom": 558.5,
+        "left": 93.625,
+        "right": 281.359375,
+        "top": 533.5
+      },
+      {
+        "bottom": 578.5,
+        "left": 128.15625,
+        "right": 246.84375,
+        "top": 553.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      390,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-light-390.jpg",
+    "sha256": "6a9179b5d963dcc28a2678af1d91660608a27fc4fa4e71363cfad811c4c7a97e",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 265,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 33,
+      "right": 342
+    },
+    "rect": {
+      "height": 62,
+      "right": 321,
+      "width": 267,
+      "x": 54,
+      "y": 525.5
+    },
+    "scrollWidth": 265,
+    "textRects": [
+      {
+        "bottom": 558.5,
+        "left": 93.625,
+        "right": 281.359375,
+        "top": 533.5
+      },
+      {
+        "bottom": 578.5,
+        "left": 128.15625,
+        "right": 246.84375,
+        "top": 553.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      390,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-dark-390.jpg",
+    "sha256": "36ace49ea2256e3493546ce1f4effb90ecd036c6f5245581fe8b27bd4e9d7c82",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 195,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 33,
+      "right": 272
+    },
+    "rect": {
+      "height": 82,
+      "right": 251,
+      "width": 197,
+      "x": 54,
+      "y": 535.5
+    },
+    "scrollWidth": 195,
+    "textRects": [
+      {
+        "bottom": 568.5,
+        "left": 115.453125,
+        "right": 189.53125,
+        "top": 543.5
+      },
+      {
+        "bottom": 588.5,
+        "left": 97.5625,
+        "right": 207.421875,
+        "top": 563.5
+      },
+      {
+        "bottom": 608.5,
+        "left": 93.15625,
+        "right": 211.84375,
+        "top": 583.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-dark-320.jpg",
+    "sha256": "32df504847216e4bcf7fa2a58a9fbeaaa2dee4912b553022296d02df03b779ae",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 350,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 285.5,
+      "right": 1139.5
+    },
+    "rect": {
+      "height": 44,
+      "right": 662.703125,
+      "width": 352.203125,
+      "x": 310.5,
+      "y": 531.5
+    },
+    "scrollWidth": 350,
+    "textRects": [
+      {
+        "bottom": 565.5,
+        "left": 331.5,
+        "right": 641.703125,
+        "top": 540.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-dark-1440.jpg",
+    "sha256": "59a997e0bb47596d9b3744f9e697ab759da0f46058bd60d328d1bbddbdd441ea",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 276,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 293,
+      "right": 1147
+    },
+    "rect": {
+      "height": 44,
+      "right": 595.875,
+      "width": 277.875,
+      "x": 318,
+      "y": 531.5
+    },
+    "scrollWidth": 276,
+    "textRects": [
+      {
+        "bottom": 565.5,
+        "left": 339,
+        "right": 574.875,
+        "top": 540.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-dark-1440.jpg",
+    "sha256": "38feb451aed2d30dd44d867948a06fe228133de58bfa7b08ea7a647f0b11269e",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 210,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 62,
+      "right": 266,
+      "width": 212,
+      "x": 54,
+      "y": 545.5
+    },
+    "scrollWidth": 210,
+    "textRects": [
+      {
+        "bottom": 578.5,
+        "left": 112.40625,
+        "right": 207.59375,
+        "top": 553.5
+      },
+      {
+        "bottom": 598.5,
+        "left": 91.5625,
+        "right": 228.4375,
+        "top": 573.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-dark-320.jpg",
+    "sha256": "34b59fe7da990f59cdeffef85ecca4befd4a6af4943934e7e837086720c3ad8c",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 276,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 357
+    },
+    "rect": {
+      "height": 44,
+      "right": 331.875,
+      "width": 277.875,
+      "x": 54,
+      "y": 534.5
+    },
+    "scrollWidth": 276,
+    "textRects": [
+      {
+        "bottom": 568.5,
+        "left": 75,
+        "right": 310.875,
+        "top": 543.5
+      }
+    ],
+    "theme": "dark",
+    "viewport": [
+      390,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-dark-390.jpg",
+    "sha256": "80d279c61298a2fe80a7149ca412afaffbb407298a4758a852c45786959a4854",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 276,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 293,
+      "right": 1147
+    },
+    "rect": {
+      "height": 44,
+      "right": 595.875,
+      "width": 277.875,
+      "x": 318,
+      "y": 531.5
+    },
+    "scrollWidth": 276,
+    "textRects": [
+      {
+        "bottom": 565.5,
+        "left": 339,
+        "right": 574.875,
+        "top": 540.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-light-1440.jpg",
+    "sha256": "6ce5cd1b5173bd0536a18afbd9bf9130ed2a444145311849ffd529a1783ac032",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 276,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 357
+    },
+    "rect": {
+      "height": 44,
+      "right": 331.875,
+      "width": 277.875,
+      "x": 54,
+      "y": 534.5
+    },
+    "scrollWidth": 276,
+    "textRects": [
+      {
+        "bottom": 568.5,
+        "left": 75,
+        "right": 310.875,
+        "top": 543.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      390,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-light-390.jpg",
+    "sha256": "d595872e32487b8dea62542e6f5df72267c87016a4c5780b2475af337009c1e8",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 210,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 62,
+      "right": 266,
+      "width": 212,
+      "x": 54,
+      "y": 545.5
+    },
+    "scrollWidth": 210,
+    "textRects": [
+      {
+        "bottom": 578.5,
+        "left": 112.40625,
+        "right": 207.59375,
+        "top": 553.5
+      },
+      {
+        "bottom": 598.5,
+        "left": 91.5625,
+        "right": 228.4375,
+        "top": 573.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "after-ru-light-320.jpg",
+    "sha256": "b60d023ff45d16ac6f9fee782c79fae140816cb72f817e5081b9b6f817580f3c",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 210,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": true,
+    "font": "20px",
+    "label": "Отметить прочитанным",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 62,
+      "right": 266,
+      "width": 212,
+      "x": 54,
+      "y": 545.5
+    },
+    "scrollWidth": 210,
+    "textRects": [
+      {
+        "bottom": 578.5,
+        "left": 112.40625,
+        "right": 207.59375,
+        "top": 553.5
+      },
+      {
+        "bottom": 598.5,
+        "left": 91.5625,
+        "right": 228.4375,
+        "top": 573.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "focus-ru-light-320.jpg",
+    "sha256": "b5faab656bbc3eb0d4301a562dc98c3c3502d32295a2105a1d4b338eec91f044",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "color(srgb 0.990588 0.881569 0.838431)",
+    "clientWidth": 147,
+    "color": "rgb(82, 82, 82)",
+    "disabled": true,
+    "focus": false,
+    "font": "20px",
+    "label": "Прочитано",
+    "lang": "ru",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 44,
+      "right": 203.4375,
+      "width": 149.4375,
+      "x": 54,
+      "y": 554.5
+    },
+    "scrollWidth": 147,
+    "textRects": [
+      {
+        "bottom": 588.5,
+        "left": 75,
+        "right": 182.4375,
+        "top": 563.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "disabled-ru-light-320.jpg",
+    "sha256": "5c9b35adb7be5f0ef3e80001de9dd0c288ef25cdfc4f6cc27329fad7d1749007",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord3"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 220,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Добавить магазин",
+    "lang": "ru",
+    "parent": {
+      "left": 314,
+      "right": 1401
+    },
+    "rect": {
+      "height": 44,
+      "right": 536.34375,
+      "width": 222.34375,
+      "x": 314,
+      "y": 489
+    },
+    "scrollWidth": 220,
+    "textRects": [
+      {
+        "bottom": 523,
+        "left": 335,
+        "right": 515.34375,
+        "top": 498
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "stores-ru-light-1440.jpg",
+    "sha256": "1324dd525cb2617132b4cdea0670812cdc0987e496ac36bd20c24ee38e060aeb",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "stores"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 129,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Add store",
+    "lang": "en",
+    "parent": {
+      "left": 314,
+      "right": 1401
+    },
+    "rect": {
+      "height": 44,
+      "right": 445.375,
+      "width": 131.375,
+      "x": 314,
+      "y": 489
+    },
+    "scrollWidth": 129,
+    "textRects": [
+      {
+        "bottom": 523,
+        "left": 335,
+        "right": 424.375,
+        "top": 498
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "stores-en-light-1440.jpg",
+    "sha256": "53c6db6be24183bf6f1481495a60528da77b22852598edb99cafe9f74ea843ea",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "stores"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 160,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Mark as read",
+    "lang": "en",
+    "parent": {
+      "left": 285.5,
+      "right": 1139.5
+    },
+    "rect": {
+      "height": 44,
+      "right": 472.6875,
+      "width": 162.1875,
+      "x": 310.5,
+      "y": 531.5
+    },
+    "scrollWidth": 160,
+    "textRects": [
+      {
+        "bottom": 565.5,
+        "left": 331.5,
+        "right": 451.6875,
+        "top": 540.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "after-en-light-1440.jpg",
+    "sha256": "931f09ceebec56074dc3df82779daba22630828fa9ecbcbdeb3605a82f8d09b5",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 160,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Mark as read",
+    "lang": "en",
+    "parent": {
+      "left": 33,
+      "right": 272
+    },
+    "rect": {
+      "height": 44,
+      "right": 216.1875,
+      "width": 162.1875,
+      "x": 54,
+      "y": 554.5
+    },
+    "scrollWidth": 160,
+    "textRects": [
+      {
+        "bottom": 588.5,
+        "left": 75,
+        "right": 195.1875,
+        "top": 563.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "after-en-light-320.jpg",
+    "sha256": "01feef1ee65ad6db83e6228366893fee6f9205b1a3bafb76862ce139a556ce2a",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 160,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Mark as read",
+    "lang": "en",
+    "parent": {
+      "left": 33,
+      "right": 342
+    },
+    "rect": {
+      "height": 44,
+      "right": 216.1875,
+      "width": 162.1875,
+      "x": 54,
+      "y": 526.5
+    },
+    "scrollWidth": 160,
+    "textRects": [
+      {
+        "bottom": 560.5,
+        "left": 75,
+        "right": 195.1875,
+        "top": 535.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      390,
+      820
+    ],
+    "weight": "700",
+    "file": "after-en-light-390.jpg",
+    "sha256": "28d7f65c76e8c1200f23c1ba68a3a30705312b32c7a762fe4c5ad6f7ac44837c",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  },
+  {
+    "bg": "rgb(243, 104, 49)",
+    "clientWidth": 350,
+    "color": "rgb(255, 255, 255)",
+    "disabled": false,
+    "focus": false,
+    "font": "20px",
+    "label": "Ҳамчун хондашуда қайд кардан",
+    "lang": "tg",
+    "parent": {
+      "left": 293,
+      "right": 1147
+    },
+    "rect": {
+      "height": 44,
+      "right": 670.203125,
+      "width": 352.203125,
+      "x": 318,
+      "y": 531.5
+    },
+    "scrollWidth": 350,
+    "textRects": [
+      {
+        "bottom": 565.5,
+        "left": 339,
+        "right": 649.203125,
+        "top": 540.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      820
+    ],
+    "weight": "700",
+    "file": "after-tg-light-1440.jpg",
+    "sha256": "c0a818c5541058a7bf7d16dbf05d57fb6e9f7d875ced87f029c690add6af60ba",
+    "image_pixels": [
+      1341,
+      921
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  },
+  {
+    "bg": "color(srgb 0.990588 0.881569 0.838431)",
+    "clientWidth": 152,
+    "color": "rgb(82, 82, 82)",
+    "disabled": true,
+    "focus": false,
+    "font": "20px",
+    "label": "Хондашуда",
+    "lang": "tg",
+    "parent": {
+      "left": 33,
+      "right": 287
+    },
+    "rect": {
+      "height": 44,
+      "right": 208.3125,
+      "width": 154.3125,
+      "x": 54,
+      "y": 544.5
+    },
+    "scrollWidth": 152,
+    "textRects": [
+      {
+        "bottom": 578.5,
+        "left": 75,
+        "right": 187.3125,
+        "top": 553.5
+      }
+    ],
+    "theme": "light",
+    "viewport": [
+      320,
+      820
+    ],
+    "weight": "700",
+    "file": "disabled-tg-light-320.jpg",
+    "sha256": "fcbfd22253b4465ef01479a0b973608de8cb7e5479d97d46acc49cb314a90059",
+    "image_pixels": [
+      1363,
+      936
+    ],
+    "source": "990875403e5214538606966f5dae6ebe56062c4b",
+    "fits": true,
+    "sample": "ord5"
+  }
+]

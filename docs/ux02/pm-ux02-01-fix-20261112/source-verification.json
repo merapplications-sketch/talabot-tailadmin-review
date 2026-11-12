@@ -1,0 +1,23 @@
+{
+  "base": "30918835d72b90087c03c96ea635213b740ab0cf",
+  "source": "990875403e5214538606966f5dae6ebe56062c4b",
+  "changed": [
+    "src/components/ui/button.tsx",
+    "src/components/talabot/workspace.tsx"
+  ],
+  "unchanged_sha256": {
+    "src/components/talabot/native/order-details.tsx": "776a9ba5413faa7a1557ad0e1de4cfd824b33134c16b111153457a176761b201",
+    "src/components/talabot/native/format.ts": "af2de2f45973c9953f30eef80e23885ad33bf0dcd3be3b6f7d861756ed994c2c",
+    "src/components/talabot/native/entity-sections.tsx": "8556750f246f6255a32abb74ffc0b8d7ae2444f0fbc7b24739d67a395c4300c9",
+    "src/app/globals.css": "53bbe92f3abc48d1ba933c4ed15a04030eb9231ba4ef407b04dcf419c81f67c5"
+  },
+  "harness": "Exact PM viewport-harness.html copied temporarily to native-preview; removed before build. Header source319006a is inherited harness text, NOT source identity; this receipt and per-image source govern.",
+  "viewport": "CSS iframe width320/390/1440 height820; desktop Chrome; not physical mobile or Safari",
+  "validation": {
+    "build": "PASS exit0",
+    "typecheck_source": "PASS exit0",
+    "diff_check": "PASS",
+    "geometry_checks": 21,
+    "geometry_failures": 0
+  }
+}
